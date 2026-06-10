@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏆 מונדיאל 2026 — כיתת א׳</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+  <script src="data.js"></script>
+</head>
+<body>
+
+<!-- ===== LOGIN SCREEN ===== -->
+<div id="login-screen" class="screen active">
+  <div class="login-card">
+    <div class="trophy-emoji">🏆</div>
+    <h1>מונדיאל 2026</h1>
+    <p class="subtitle">כיתת ________________________</p>
+    <input id="name-input" type="text" placeholder="מה השם שלך?" maxlength="20" />
+    <button id="login-btn" class="btn-primary">כניסה למשחק →</button>
+  </div>
+</div>
+
+<!-- ===== MAIN APP ===== -->
+<div id="app" class="screen">
+
+  <!-- Header -->
+  <header>
+    <div class="header-title">🏆 מונדיאל 2026</div>
+    <div class="header-user">
+      <span id="header-username"></span>
+      <span id="header-score" class="score-badge">0 נק'</span>
+    </div>
+  </header>
+
+  <!-- Nav Tabs -->
+  <nav class="tabs">
+    <button class="tab active" data-tab="matches">⚽ משחקים</button>
+    <button class="tab" data-tab="leaderboard">🏅 טבלה</button>
+    <button class="tab" data-tab="teams">🌍 קבוצות</button>
+    <button class="tab" data-tab="trivia">🎯 חידות</button>
+  </nav>
+
+  <!-- ===== TAB: MATCHES ===== -->
+  <section id="tab-matches" class="tab-content active">
+    <h2 class="section-title">⚽ משחקים וניחושים</h2>
+    <div id="matches-list"></div>
+  </section>
+
+  <!-- ===== TAB: LEADERBOARD ===== -->
+  <section id="tab-leaderboard" class="tab-content">
+    <h2 class="section-title">🏅 טבלת הכיתה</h2>
+    <div id="leaderboard-list"></div>
+    <div class="scoring-guide">
+      <h3>📋 איך מרוויחים נקודות?</h3>
+      <p>✅ ניחוש נכון של המנצח — <strong>3 נקודות</strong></p>
+      <p>🤝 ניחוש תיקו נכון — <strong>3 נקודות</strong></p>
+      <p>📊 ניחוש נכון של התוצאה המדויקת — <strong>+2 בונוס</strong></p>
+      <p>🎯 חידת יום נכון — <strong>1 נקודה</strong></p>
+    </div>
+  </section>
+
+  <!-- ===== TAB: TEAMS ===== -->
+  <section id="tab-teams" class="tab-content">
+    <h2 class="section-title">🌍 קבוצות המונדיאל</h2>
+    <div id="teams-grid"></div>
+  </section>
+
+  <!-- ===== TAB: TRIVIA ===== -->
+  <section id="tab-trivia" class="tab-content">
+    <h2 class="section-title">🎯 חידת היום</h2>
+    <div id="trivia-container"></div>
+  </section>
+
+</div>
+
+<!-- ===== MODAL: TEAM INFO ===== -->
+<div id="team-modal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<!-- ===== MODAL: PREDICTION ===== -->
+<div id="prediction-modal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closePredictionModal()">✕</button>
+    <div id="prediction-content"></div>
+  </div>
+</div>
+
+<script src="firebase-config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

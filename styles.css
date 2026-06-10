@@ -1,0 +1,292 @@
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #e94560;
+  --gold: #f5a623;
+  --silver: #b0b0b0;
+  --bronze: #cd7f32;
+  --green: #00b894;
+  --text: #f0f0f0;
+  --text-muted: #aaa;
+  --card-bg: rgba(255,255,255,0.07);
+  --card-border: rgba(255,255,255,0.12);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Arial Hebrew', Arial, sans-serif;
+  color: var(--text);
+  direction: rtl;
+}
+
+/* ===== SCREENS ===== */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* ===== LOGIN ===== */
+#login-screen {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; padding: 20px;
+}
+.login-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 48px 36px;
+  text-align: center;
+  max-width: 400px; width: 100%;
+  backdrop-filter: blur(12px);
+}
+.trophy-emoji { font-size: 72px; margin-bottom: 16px; }
+.login-card h1 { font-size: 2.2rem; margin-bottom: 6px; }
+.subtitle { color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; }
+#name-input {
+  width: 100%; padding: 14px 18px; font-size: 1.1rem;
+  border: 2px solid var(--card-border); border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.1); color: var(--text);
+  text-align: center; margin-bottom: 16px; outline: none;
+  transition: border-color 0.2s;
+}
+#name-input:focus { border-color: var(--accent); }
+#name-input::placeholder { color: var(--text-muted); }
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #c0392b);
+  color: white; border: none; border-radius: var(--radius-sm);
+  padding: 14px 32px; font-size: 1.1rem; font-weight: 700;
+  cursor: pointer; width: 100%; transition: transform 0.1s, opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: var(--text); border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 20px; font-size: 0.95rem; cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+/* ===== HEADER ===== */
+header {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  padding: 14px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid var(--card-border);
+}
+.header-title { font-size: 1.2rem; font-weight: 800; }
+.header-user { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+.score-badge {
+  background: var(--gold); color: #000;
+  padding: 4px 10px; border-radius: 20px; font-weight: 700; font-size: 0.85rem;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex; background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid var(--card-border); overflow-x: auto;
+}
+.tab {
+  flex: 1; padding: 14px 8px; background: none; border: none;
+  color: var(--text-muted); font-size: 0.9rem; cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 3px solid transparent; white-space: nowrap;
+}
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab:hover { color: var(--text); }
+
+.tab-content { display: none; padding: 20px 16px 80px; }
+.tab-content.active { display: block; }
+
+.section-title {
+  font-size: 1.3rem; font-weight: 700; margin-bottom: 20px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--card-border);
+}
+
+/* ===== MATCH CARDS ===== */
+.match-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 16px 18px; margin-bottom: 14px;
+  backdrop-filter: blur(6px);
+}
+.match-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 14px;
+}
+.match-meta { font-size: 0.78rem; color: var(--text-muted); }
+.match-group {
+  background: var(--accent); color: white;
+  padding: 3px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
+}
+.match-teams {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; margin-bottom: 14px;
+}
+.team-name {
+  font-size: 1.1rem; font-weight: 700; text-align: center; flex: 1;
+}
+.team-flag { font-size: 2rem; display: block; margin-bottom: 4px; }
+.match-vs {
+  font-size: 1.4rem; font-weight: 900; color: var(--text-muted);
+  flex-shrink: 0; padding: 0 6px;
+}
+.match-score {
+  font-size: 1.8rem; font-weight: 900; color: var(--gold);
+  flex-shrink: 0; padding: 0 6px; letter-spacing: 2px;
+}
+.prediction-bar {
+  display: flex; gap: 8px; align-items: center; justify-content: center;
+  flex-wrap: wrap;
+}
+.my-prediction {
+  font-size: 0.82rem; color: var(--text-muted); text-align: center; margin-top: 6px;
+}
+.my-prediction.correct { color: var(--green); }
+.prediction-count {
+  font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 4px;
+}
+
+/* ===== LEADERBOARD ===== */
+.leaderboard-entry {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 14px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.1s;
+}
+.leaderboard-entry:hover { transform: translateX(-2px); }
+.leaderboard-entry.me { border-color: var(--accent); background: rgba(233,69,96,0.12); }
+.rank { font-size: 1.4rem; font-weight: 900; min-width: 36px; text-align: center; }
+.rank.gold { color: var(--gold); }
+.rank.silver { color: var(--silver); }
+.rank.bronze { color: var(--bronze); }
+.player-info { flex: 1; }
+.player-name { font-size: 1rem; font-weight: 700; }
+.player-stats { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.player-score { font-size: 1.3rem; font-weight: 900; color: var(--gold); }
+
+.scoring-guide {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: var(--radius); padding: 18px; margin-top: 24px;
+}
+.scoring-guide h3 { margin-bottom: 12px; font-size: 1rem; }
+.scoring-guide p { margin-bottom: 8px; font-size: 0.9rem; color: var(--text-muted); }
+
+/* ===== TEAMS GRID ===== */
+.teams-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+.team-card {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: var(--radius); padding: 18px 12px;
+  text-align: center; cursor: pointer;
+  transition: transform 0.15s, border-color 0.2s;
+  backdrop-filter: blur(6px);
+}
+.team-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.team-card .flag { font-size: 2.6rem; margin-bottom: 8px; display: block; }
+.team-card .name { font-size: 0.9rem; font-weight: 700; }
+.strength-bar-wrap { margin-top: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; height: 5px; }
+.strength-bar { height: 5px; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--gold)); }
+
+/* ===== TRIVIA ===== */
+.trivia-card {
+  background: var(--card-bg); border: 1px solid var(--card-border);
+  border-radius: var(--radius); padding: 24px 20px;
+  backdrop-filter: blur(6px);
+}
+.trivia-question { font-size: 1.2rem; font-weight: 700; margin-bottom: 22px; line-height: 1.5; }
+.trivia-options { display: flex; flex-direction: column; gap: 10px; }
+.trivia-option {
+  background: rgba(255,255,255,0.08); border: 2px solid var(--card-border);
+  border-radius: var(--radius-sm); padding: 14px 18px;
+  cursor: pointer; font-size: 1rem; text-align: right;
+  transition: background 0.2s, border-color 0.2s;
+}
+.trivia-option:hover:not(.disabled) { background: rgba(255,255,255,0.16); border-color: var(--accent); }
+.trivia-option.correct { background: rgba(0,184,148,0.25); border-color: var(--green); color: var(--green); }
+.trivia-option.wrong { background: rgba(233,69,96,0.2); border-color: var(--accent); color: var(--accent); }
+.trivia-option.disabled { cursor: default; }
+.trivia-result { margin-top: 16px; text-align: center; font-size: 1.1rem; font-weight: 700; }
+.trivia-result.win { color: var(--green); }
+.trivia-result.lose { color: var(--accent); }
+.trivia-next-btn { margin-top: 16px; width: 100%; }
+.trivia-progress { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px; }
+.trivia-already { text-align: center; padding: 40px 20px; }
+.trivia-already p { font-size: 1rem; color: var(--text-muted); margin-top: 8px; }
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200; padding: 20px; backdrop-filter: blur(4px);
+}
+.modal-overlay.hidden { display: none; }
+.modal-card {
+  background: #1a1a2e; border: 1px solid var(--card-border);
+  border-radius: var(--radius); padding: 28px 24px;
+  max-width: 400px; width: 100%; position: relative;
+  max-height: 80vh; overflow-y: auto;
+}
+.modal-close {
+  position: absolute; top: 14px; left: 14px;
+  background: none; border: none; color: var(--text-muted);
+  font-size: 1.2rem; cursor: pointer;
+}
+.modal-close:hover { color: var(--accent); }
+
+/* Team modal content */
+.modal-flag { font-size: 4rem; text-align: center; margin-bottom: 10px; }
+.modal-team-name { font-size: 1.6rem; font-weight: 900; text-align: center; margin-bottom: 16px; }
+.modal-stat { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--card-border); }
+.modal-stat:last-child { border-bottom: none; }
+.modal-stat-label { color: var(--text-muted); font-size: 0.9rem; }
+.modal-stat-value { font-weight: 700; font-size: 0.9rem; }
+.modal-fact { margin-top: 16px; padding: 14px; background: rgba(245,166,35,0.12); border-radius: var(--radius-sm); border: 1px solid rgba(245,166,35,0.3); font-size: 0.9rem; line-height: 1.5; }
+
+/* Prediction modal */
+.prediction-teams {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 20px 0; text-align: center;
+}
+.pred-team { flex: 1; }
+.pred-team .flag { font-size: 2.5rem; display: block; }
+.pred-team .name { font-size: 1rem; font-weight: 700; margin-top: 6px; }
+.pred-vs { font-size: 1.2rem; color: var(--text-muted); font-weight: 700; }
+.pred-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+.pred-option {
+  background: rgba(255,255,255,0.08); border: 2px solid var(--card-border);
+  border-radius: var(--radius-sm); padding: 12px;
+  cursor: pointer; text-align: center; font-size: 0.95rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.pred-option:hover { background: rgba(255,255,255,0.14); }
+.pred-option.selected { border-color: var(--accent); background: rgba(233,69,96,0.15); }
+.score-inputs { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 16px 0; }
+.score-input {
+  width: 60px; padding: 10px; text-align: center; font-size: 1.4rem; font-weight: 700;
+  background: rgba(255,255,255,0.1); border: 2px solid var(--card-border);
+  border-radius: var(--radius-sm); color: var(--text); outline: none;
+}
+.score-input:focus { border-color: var(--accent); }
+.score-dash { font-size: 1.4rem; font-weight: 700; }
+.pred-submit { width: 100%; }
+
+/* ===== UTILS ===== */
+.empty-state { text-align: center; padding: 60px 20px; color: var(--text-muted); font-size: 1rem; }
+.empty-state .emoji { font-size: 3rem; margin-bottom: 12px; }
