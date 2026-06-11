@@ -1270,6 +1270,23 @@ html, body {
   border-radius: 50%;
   display: block;
 }
+.exact-score-btn {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  background: linear-gradient(135deg, rgba(0,200,255,.12), rgba(150,80,255,.12));
+  border: 1px dashed rgba(0,200,255,.45);
+  border-radius: 12px;
+  color: var(--blue, #4fc3f7);
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+}
+.exact-score-btn:active { transform: scale(.98); }
+.exact-score-btn:hover { background: rgba(0,200,255,.18); }
 .api-loading-banner {
   margin: 10px 16px;
   padding: 14px 16px;

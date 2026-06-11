@@ -234,6 +234,9 @@ function buildNextMatchCard(m) {
           <span class="nm-odd-val">${getPct(mp,'away')}%</span>
         </div>
       </div>
+      <button class="exact-score-btn" onclick="openPredModal('${m.id}')">
+        🎯 נחש תוצאה מדויקת — בונוס +2 נק'
+      </button>
       ${total>0?`<div class="nm-votes-count">👥 ${total} ניחושים מהכיתה</div>`:''}
     </div>`;
 }
@@ -440,7 +443,10 @@ function buildMatchRow(m, delay) {
         <button class="pib pib-away" onclick="event.stopPropagation();inlinePred('${m.id}','away',this)">
           ${ad.flag} ${m.away}
         </button>
-      </div>`;
+      </div>
+      <button class="exact-score-btn" onclick="event.stopPropagation();openPredModal('${m.id}')">
+        🎯 נחש תוצאה מדויקת — בונוס +2 נק'
+      </button>`;
   }
 
   return `
@@ -669,9 +675,9 @@ function openPredModal(matchId) {
         <div class="pred-team-side"><span class="flag">${ad.flag}</span><div class="name">${m.away}</div></div>
       </div>
       <div class="winner-opts">
-        <button class="w-opt ${existing?.result==='home'?'sel':''}" onclick="selW(this,'home')">${hd.flag} ניצחון ${m.home}</button>
-        <button class="w-opt ${existing?.result==='draw'?'sel':''}" onclick="selW(this,'draw')">🤝 תיקו</button>
-        <button class="w-opt ${existing?.result==='away'?'sel':''}" onclick="selW(this,'away')">${ad.flag} ניצחון ${m.away}</button>
+        <button class="w-opt ${existing?.result==='home'?'sel':''}" data-v="home" onclick="selW(this,'home')">${hd.flag} ניצחון ${m.home}</button>
+        <button class="w-opt ${existing?.result==='draw'?'sel':''}" data-v="draw" onclick="selW(this,'draw')">🤝 תיקו</button>
+        <button class="w-opt ${existing?.result==='away'?'sel':''}" data-v="away" onclick="selW(this,'away')">${ad.flag} ניצחון ${m.away}</button>
       </div>
       <div class="score-bonus-lbl">בונוס: נחש תוצאה מדויקת <span>(+2 נק')</span></div>
       <div class="score-inp-row">
@@ -694,11 +700,24 @@ function selW(el, v) {
 
 function submitPred() {
   const sel = document.querySelector('.w-opt.sel');
-  if (!sel) { alert('בחר מי ינצח!'); return; }
   const hs = document.getElementById('si-h').value;
   const as = document.getElementById('si-a').value;
-  const pred = { result:sel._v, name:currentUser.name, ts:Date.now(),
-    ...(hs!==''&&as!==''?{homeScore:+hs,awayScore:+as}:{}) };
+  const hasScore = hs !== '' && as !== '';
+
+  // קביעת התוצאה: מהכפתור שנבחר, או אוטומטית מהתוצאה המדויקת
+  let result = sel ? sel.dataset.v : null;
+  if (!result && hasScore) {
+    result = +hs > +as ? 'home' : +hs < +as ? 'away' : 'draw';
+  }
+  if (!result) { alert('ציין מה התוצאה — בחר מי ינצח או הזן תוצאה מדויקת'); return; }
+  // אם גם נבחר כפתור וגם הוזנה תוצאה שסותרת אותו — התוצאה המדויקת קובעת
+  if (hasScore) {
+    const fromScore = +hs > +as ? 'home' : +hs < +as ? 'away' : 'draw';
+    if (fromScore !== result) result = fromScore;
+  }
+
+  const pred = { result, name:currentUser.name, ts:Date.now(),
+    ...(hasScore?{homeScore:+hs,awayScore:+as}:{}) };
   if (db) db.ref(`predictions/${activePredMatchId}/${currentUser.id}`).set(pred);
   else allPredictions[activePredMatchId] = { ...(allPredictions[activePredMatchId]||{}), [currentUser.id]:pred };
   grantBadge('first_pred');
