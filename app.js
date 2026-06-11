@@ -525,9 +525,21 @@ function findSquadPlayer(squad, token) {
   return p || null;
 }
 
+// Firebase יכול להחזיר מחרוזת, מערך, או מפת אובייקטים — מנרמל הכל לטקסט
+function lineupToText(e) {
+  if (e == null) return '';
+  if (typeof e === 'string') return e;
+  if (Array.isArray(e)) return e.map(lineupToText).filter(Boolean).join('\n');
+  if (typeof e === 'object') {
+    if (typeof e.name === 'string') return e.name;  // אובייקט שחקן ישן
+    return Object.values(e).map(lineupToText).filter(Boolean).join('\n');
+  }
+  return String(e);
+}
+
 function parseLineupEntries(entries, teamKey) {
   const squad = WORLD_CUP_DATA.teams[teamKey]?.squad || [];
-  const text = (Array.isArray(entries) ? entries : [entries]).join('\n');
+  const text = lineupToText(entries);
   let curPos = null;
   const players = [];
   text.split(/[\n,.;]+/).forEach(tok => {
