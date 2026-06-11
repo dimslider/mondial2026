@@ -7,7 +7,10 @@
 
   function goToLogin() {
     screen.classList.add('hidden');
+    // אם המכשיר כבר מחובר ליוזר — דלג על מסך השם
+    if (typeof tryAutoLogin === 'function' && tryAutoLogin()) return;
     document.getElementById('login-screen').classList.add('active');
+    if (typeof showExistingUsers === 'function') showExistingUsers();
   }
 
   // Mute toggle button — browsers block audio without user gesture
@@ -61,14 +64,70 @@ const BADGE_DEFS = [
 document.getElementById('login-btn').addEventListener('click', doLogin);
 document.getElementById('name-input').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
 document.querySelectorAll('.nav-btn').forEach(b => b.addEventListener('click', () => switchPage(b.dataset.page)));
+document.getElementById('top-avatar').addEventListener('click', () => logoutUser());
 
-function doLogin() {
+const LS_USER_KEY = 'wc26_user';
+let pendingNewPin = null;
+
+// אתחול חיבור Firebase בלבד (בלי משתמש) — נדרש לאימות לפני כניסה
+function getDb() {
+  if (db) return db;
+  if (!window.firebaseConfig) return null;
+  try {
+    const fbApp = firebase.apps.length ? firebase.app() : firebase.initializeApp(window.firebaseConfig);
+    db = firebase.database(fbApp);
+    return db;
+  } catch(e) { console.error('Firebase init error:', e); return null; }
+}
+
+async function doLogin() {
   const name = document.getElementById('name-input').value.trim();
   if (!name) { document.getElementById('name-input').focus(); return; }
   const avatarIdx = Math.abs(hashStr(name)) % AVATARS.length;
   // Use hash-based id so Hebrew names get a stable unique id
   const userId = 'u' + Math.abs(hashStr(name)).toString(36);
+
+  // אימות מול Firebase: שם קיים דורש קוד סודי; שם חדש בוחר קוד
+  pendingNewPin = null;
+  const dbc = getDb();
+  if (dbc) {
+    try {
+      const snap = await dbc.ref('users/'+userId).once('value');
+      const existing = snap.val();
+      const savedLocal = JSON.parse(localStorage.getItem(LS_USER_KEY) || 'null');
+      const isMyDevice = savedLocal && savedLocal.id === userId;
+
+      if (existing && existing.pin && !isMyDevice) {
+        const pin = prompt(`השם "${name}" כבר רשום!\nאם זה אתה — הקלד את הקוד הסודי (4 ספרות):`);
+        if (pin === null) return;
+        if (pin !== existing.pin) { alert('קוד שגוי 😕 אם שכחת — בקש מהמורה (מנהל) עזרה'); return; }
+      } else if (!existing) {
+        let pin = '';
+        while (!/^\d{4}$/.test(pin)) {
+          pin = prompt('ברוך הבא! 🎉\nבחר קוד סודי של 4 ספרות —\nכך אף אחד לא יוכל להתחזות אליך:');
+          if (pin === null) return;
+        }
+        pendingNewPin = pin;
+      }
+    } catch(e) { console.warn('PIN check failed, continuing:', e.message); }
+  }
+
   currentUser = { name, id: userId, avatar: AVATARS[avatarIdx] };
+  localStorage.setItem(LS_USER_KEY, JSON.stringify(currentUser));
+  enterApp();
+}
+
+// כניסה אוטומטית — אם המכשיר הזה כבר מחובר ליוזר
+function tryAutoLogin() {
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(LS_USER_KEY) || 'null'); } catch(e) {}
+  if (!saved?.id || !saved?.name) return false;
+  currentUser = saved;
+  enterApp();
+  return true;
+}
+
+function enterApp() {
   document.getElementById('top-avatar').textContent = currentUser.avatar;
   document.getElementById('login-screen').classList.remove('active');
   document.getElementById('app').classList.add('active');
@@ -76,19 +135,46 @@ function doLogin() {
   switchPage('home');
 }
 
+// מציג את שמות התלמידים הקיימים — לחיצה ממלאת את השם (מונע שגיאות הקלדה)
+async function showExistingUsers() {
+  const box = document.getElementById('existing-users');
+  if (!box) return;
+  const dbc = getDb();
+  if (!dbc) return;
+  try {
+    const snap = await dbc.ref('users').once('value');
+    const users = snap.val() || {};
+    const names = Object.values(users)
+      .filter(u => u && typeof u === 'object' && u.name)
+      .map(u => ({ name:u.name, avatar:u.avatar||'⚽' }));
+    if (!names.length) return;
+    box.innerHTML = `
+      <div class="eu-title">כבר נרשמת? לחץ על השם שלך:</div>
+      <div class="eu-chips">
+        ${names.map(u => `<button class="eu-chip" onclick="document.getElementById('name-input').value='${u.name.replace(/'/g,"\\'")}';doLogin()">${u.avatar} ${u.name}</button>`).join('')}
+      </div>`;
+  } catch(e) { /* רשימה היא נוחות בלבד */ }
+}
+
+// החלפת משתמש — לחיצה על האווטר למעלה
+function logoutUser() {
+  if (!confirm(`אתה מחובר כ"${currentUser.name}". להחליף משתמש?`)) return;
+  localStorage.removeItem(LS_USER_KEY);
+  location.reload();
+}
+
 function slugify(s) { return s.toLowerCase().replace(/\s+/g,'_').replace(/[^\w]/g,''); }
 function hashStr(s) { return s.split('').reduce((a,c) => ((a<<5)-a)+c.charCodeAt(0)|0, 0); }
 
 // ===== FIREBASE =====
 function initFirebase() {
-  if (!window.firebaseConfig) { bootDemo(); return; }
+  if (!getDb()) { bootDemo(); return; }
   try {
-    const fbApp = firebase.apps.length ? firebase.app() : firebase.initializeApp(window.firebaseConfig);
-    db = firebase.database(fbApp);
 
   db.ref('users/'+currentUser.id).transaction(u =>
-    u ? { ...u, name:currentUser.name, avatar:currentUser.avatar }
-      : { name:currentUser.name, avatar:currentUser.avatar, score:0, correct:0, trivia:0, badges:[] }
+    u ? { ...u, name:currentUser.name, avatar:currentUser.avatar, ...(pendingNewPin?{pin:pendingNewPin}:{}) }
+      : { name:currentUser.name, avatar:currentUser.avatar, score:0, correct:0, trivia:0, badges:[],
+          ...(pendingNewPin?{pin:pendingNewPin}:{}) }
   );
 
   db.ref('predictions').on('value', snap => {

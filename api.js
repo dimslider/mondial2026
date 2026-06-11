@@ -199,13 +199,17 @@ function toLocalTime(utcStr) {
 }
 
 // ===== SYNC LIVE RESULTS (כולל משחקים חיים + דקה) =====
-// חישוב דקת משחק משעת הפתיחה (כולל הפסקת מחצית)
+// חישוב דקת משחק משוערת משעת הפתיחה הרשומה.
+// לא מדויק — פתיחה עשויה להתעכב ותוספות זמן משתנות, לכן מוצג עם ~
 function computeMinute(utcDate, status) {
   if (status === 'PAUSED') return 'מחצית';
   const elapsed = Math.floor((Date.now() - new Date(utcDate).getTime()) / 60000);
-  if (elapsed <= 45) return Math.max(1, elapsed) + "'";
-  if (elapsed <= 60) return 'מחצית';          // הפסקה (~15 דק')
-  return Math.min(90, elapsed - 15) + "'";
+  if (elapsed <= 0)  return "1'";
+  if (elapsed <= 45) return '~' + elapsed + "'";
+  if (elapsed <= 50) return "45'+";
+  if (elapsed <= 66) return 'מחצית';           // הפסקה + תוספת מחצית א'
+  const m2 = Math.min(90, 45 + (elapsed - 66)); // מחצית ב' (~דקה 66 של שעון = 45')
+  return m2 >= 90 ? "90'+" : '~' + m2 + "'";
 }
 
 async function syncLiveResults() {
@@ -305,9 +309,9 @@ async function startLivePolling() {
   if (!FD_API_KEY) return;
   // First: load the real schedule
   await syncMatchSchedule();
-  // Then: keep syncing results every minute (live scores + minute)
+  // Then: keep syncing results every 30s (live scores + minute)
   syncLiveResults();
-  pollingInterval = setInterval(syncLiveResults, 60 * 1000);
+  pollingInterval = setInterval(syncLiveResults, 30 * 1000);
   console.log('🔴 Live polling started');
 }
 function stopLivePolling() {

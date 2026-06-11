@@ -1270,6 +1270,20 @@ html, body {
   border-radius: 50%;
   display: block;
 }
+#existing-users { margin-top: 14px; }
+.eu-title { font-size: .8rem; color: var(--muted); margin-bottom: 8px; }
+.eu-chips { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; max-height: 120px; overflow-y: auto; }
+.eu-chip {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: .8rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.eu-chip:hover { background: rgba(255,255,255,.15); }
 .mscore-live { color: #ff5252; }
 .live-minute-badge {
   display: inline-block;
