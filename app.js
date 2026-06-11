@@ -1359,11 +1359,15 @@ function renderAdminLineups() {
 
 // ===== ADMIN NEWS — משיכת כותרות מ-RSS, אישור ופרסום =====
 const NEWS_FEEDS = [
-  // Google News — מאות כתבות מונדיאל מכל אתרי הספורט בעברית, כבר מסונן לפי החיפוש
+  // Bing News — כתבות מונדיאל עם תקציר אמיתי בעברית
+  { url:'https://www.bing.com/news/search?q=מונדיאל&format=rss&setmkt=he-IL', source:'', bing:true },
+  // פידים ישירים — מגיעים עם תקציר מלא
+  { url:'https://www.maariv.co.il/Rss/RssFeedsSport', source:'מעריב ספורט', filter:true },
+  { url:'https://rss.walla.co.il/feed/3',             source:'וואלה ספורט', filter:true },
+  // Google News — רוחב (כל האתרים) אבל בלי תקציר
   { url:'https://news.google.com/rss/search?q=מונדיאל&hl=he&gl=IL&ceid=IL:he', source:'', gnews:true },
-  { url:'https://rss.walla.co.il/feed/3', source:'וואלה ספורט', filter:true },
 ];
-const NEWS_KEYWORDS = ['מונדיאל','גביע העולם','World Cup','נבחרת'];
+const NEWS_KEYWORDS = ['מונדיאל','גביע העולם','World Cup'];
 
 // קיצור חכם — חותך בסוף משפט או מילה, לא באמצע
 function smartTrim(s, max = 240) {
@@ -1396,22 +1400,30 @@ async function fetchNewsCandidates() {
           source = item.querySelector('source')?.textContent?.trim() || 'חדשות';
           title  = title.replace(new RegExp('\\s*-\\s*' + source.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\s*$'), '');
         }
+        // ב-Bing הקישור הוא הפניה — המקור האמיתי בפרמטר url
+        if (feed.bing) {
+          source = 'חדשות ⚽';
+          try {
+            const real = new URL(link).searchParams.get('url');
+            if (real) source = new URL(real).hostname.replace(/^www\./,'').replace(/\.(co\.il|com|net)$/,'');
+          } catch(e) {}
+        }
         // תקציר — ניקוי HTML וקיצור חכם בגבול משפט/מילה
         let desc = item.querySelector('description')?.textContent || '';
         desc = desc.replace(/<[^>]*>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g,' ').trim();
         if (desc === title || desc.startsWith(title)) desc = '';
         desc = smartTrim(desc);
-        const relevant = feed.gnews || NEWS_KEYWORDS.some(k => title.includes(k) || desc.includes(k));
+        const relevant = feed.gnews || feed.bing || NEWS_KEYWORDS.some(k => title.includes(k) || desc.includes(k));
         if (relevant && title) {
           results.push({ title, desc, link, source, date: pub ? new Date(pub).getTime() : 0 });
         }
       });
     } catch(e) { console.warn('feed failed:', feed.source, e.message); }
   }
-  // חדש ראשון, בלי כפילויות
+  // עם תקציר ראשונים, אחר כך לפי תאריך; בלי כפילויות
   const seen = new Set();
   newsCandidates = results
-    .sort((a,b)=>b.date-a.date)
+    .sort((a,b) => (!!b.desc - !!a.desc) || (b.date - a.date))
     .filter(n => !seen.has(n.title) && seen.add(n.title))
     .slice(0, 40);
   newsFetching = false;
