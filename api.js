@@ -5,7 +5,7 @@
 
 const FD_API_KEY = window.FD_API_KEY || '';
 const FD_BASE    = 'https://api.football-data.org/v4';
-const WC_ID      = 2000;  // FIFA World Cup 2026
+let WC_ID        = null;  // נמצא דינמית ע"י findWC2026()
 
 // ===== ENGLISH → HEBREW TEAM NAME MAP =====
 const ENG_TO_HEB = {
@@ -51,12 +51,41 @@ async function fdFetch(path) {
   } catch(e) { console.warn('FD fetch failed:', e.message); return null; }
 }
 
+// ===== FIND WC2026 COMPETITION ID =====
+async function findWC2026() {
+  if (WC_ID) return WC_ID;
+  // Try known IDs: 2000 (used for WC2022 on fd.org), and scan competitions list
+  const knownIds = [2000, 2152, 2001];
+  for (const id of knownIds) {
+    const d = await fdFetch(`/competitions/${id}`);
+    if (d?.name?.includes('World Cup') && (d?.currentSeason?.startDate || '').startsWith('2026')) {
+      WC_ID = id;
+      console.log(`✅ WC2026 competition ID: ${id}`);
+      return id;
+    }
+  }
+  // Fallback: scan all competitions
+  const all = await fdFetch('/competitions?plan=TIER_ONE');
+  if (all?.competitions) {
+    const wc = all.competitions.find(c =>
+      c.name?.includes('World Cup') && (c.currentSeason?.startDate || '').startsWith('2026')
+    );
+    if (wc) { WC_ID = wc.id; return wc.id; }
+  }
+  WC_ID = 2000; // last-resort fallback
+  return WC_ID;
+}
+
 // ===== SYNC FULL MATCH SCHEDULE FROM API =====
-// מושך את כל המשחקים האמיתיים ומחליף את הנתונים הקשיחים
 async function syncMatchSchedule() {
-  const data = await fdFetch(`/competitions/${WC_ID}/matches?stage=GROUP_STAGE`);
+  const cid = await findWC2026();
+  // Try without stage filter first, then with
+  let data = await fdFetch(`/competitions/${cid}/matches`);
   if (!data?.matches?.length) {
-    console.warn('Could not load schedule from API');
+    data = await fdFetch(`/competitions/${cid}/matches?stage=GROUP_STAGE`);
+  }
+  if (!data?.matches?.length) {
+    console.warn('Could not load schedule from API — keeping hardcoded data');
     return false;
   }
 

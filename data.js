@@ -444,7 +444,7 @@ const WORLD_CUP_DATA = {
 
   // ⚠️ אלה נתוני גיבוי בלבד — האפליקציה מושכת את הלוח המלא מה-API באופן אוטומטי
   matches: [
-    { id:'m1',  date:'2026-06-11', time:'23:00', home:'מקסיקו',      away:'דרום אפריקה', group:'B', venue:'מקסיקו סיטי',  homeScore:null, awayScore:null },
+    { id:'m1',  date:'2026-06-11', time:'22:00', home:'מקסיקו',      away:'דרום אפריקה', group:'B', venue:'מקסיקו סיטי',  homeScore:null, awayScore:null },
     { id:'m2',  date:'2026-06-12', time:'21:00', home:'ארה"ב',        away:'קנדה',        group:'A', venue:'לוס אנג\'לס',  homeScore:null, awayScore:null },
     { id:'m3',  date:'2026-06-12', time:'18:00', home:'ארגנטינה',    away:'קנדה',        group:'C', venue:'מיאמי',        homeScore:null, awayScore:null },
     { id:'m4',  date:'2026-06-13', time:'21:00', home:'ספרד',        away:'מרוקו',       group:'D', venue:'ניו יורק',     homeScore:null, awayScore:null },

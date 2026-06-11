@@ -10,6 +10,16 @@
     document.getElementById('login-screen').classList.add('active');
   }
 
+  // Mute toggle button — browsers block audio without user gesture
+  const muteBtn = document.getElementById('intro-mute-btn');
+  if (muteBtn) {
+    muteBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      video.muted = !video.muted;
+      muteBtn.textContent = video.muted ? '🔇' : '🔊';
+    });
+  }
+
   // Progress bar
   video.addEventListener('timeupdate', () => {
     const pct = video.duration ? (video.currentTime / video.duration * 100) : 0;
@@ -18,7 +28,6 @@
 
   video.addEventListener('ended', goToLogin);
   video.addEventListener('error', goToLogin);
-  // If video stalls or won't load — skip after 4s
   setTimeout(() => { if (!video.ended) goToLogin(); }, 8000);
 
   window.skipIntro = goToLogin;
