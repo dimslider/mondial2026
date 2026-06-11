@@ -996,8 +996,11 @@ function renderAdminPanel(){
     <div class="admin-tabs">
       <button class="adm-tab${adminTab==='results'?' active':''}" onclick="setAdminTab('results')">תוצאות</button>
       <button class="adm-tab${adminTab==='lineups'?' active':''}" onclick="setAdminTab('lineups')">הרכבים</button>
+      <button class="adm-tab${adminTab==='users'?' active':''}" onclick="setAdminTab('users')">משתמשים</button>
     </div>
-    <div id="admin-tab-content">${adminTab==='results' ? renderAdminResults() : renderAdminLineups()}</div>`;
+    <div id="admin-tab-content">${
+      adminTab==='results' ? renderAdminResults() :
+      adminTab==='lineups' ? renderAdminLineups() : renderAdminUsers()}</div>`;
 }
 
 function setAdminTab(tab) {
@@ -1037,6 +1040,43 @@ function renderAdminLineups() {
         <button class="am-save" style="width:100%;margin-top:6px" onclick="saveLineup('${m.id}','${m.home}','${m.away}')">💾 שמור הרכב</button>
       </div>`;
   }).join('');
+}
+
+function renderAdminUsers() {
+  // רק משתמשים אמיתיים (מסנן שאריות מבאג ישן שכתב שדות לשורש)
+  const ids = Object.keys(allUsers).filter(uid =>
+    allUsers[uid] && typeof allUsers[uid] === 'object' && allUsers[uid].name);
+  if (!ids.length) return '<p style="color:var(--muted);text-align:center">אין משתמשים עדיין</p>';
+  return ids.map(uid => {
+    const u = allUsers[uid];
+    const predCount = Object.values(allPredictions).filter(mp => mp && mp[uid]).length;
+    return `
+      <div class="am-row">
+        <span class="am-name">${u.avatar||'👤'} ${u.name||uid} · ${u.score||0} נק' · ${predCount} הימורים</span>
+        <button class="am-save" style="background:var(--orange,#e67e22)" onclick="adminClearPreds('${uid}','${(u.name||'').replace(/'/g,'')}')" title="מחק הימורים">🗑</button>
+        <button class="am-save" style="background:#c0392b" onclick="adminDeleteUser('${uid}','${(u.name||'').replace(/'/g,'')}')" title="מחק משתמש">❌</button>
+      </div>`;
+  }).join('');
+}
+
+function adminClearPreds(uid, name) {
+  if (!confirm(`למחוק את כל ההימורים של ${name}? (הניקוד יתאפס)`)) return;
+  if (!db) return alert('אין חיבור ל-Firebase');
+  Object.keys(allPredictions).forEach(mid => {
+    if (allPredictions[mid] && allPredictions[mid][uid]) db.ref(`predictions/${mid}/${uid}`).remove();
+  });
+  db.ref('users/'+uid).update({ score:0, correct:0 });
+  setTimeout(renderAdminPanel, 500);
+}
+
+function adminDeleteUser(uid, name) {
+  if (!confirm(`למחוק לגמרי את המשתמש ${name} כולל כל ההימורים?`)) return;
+  if (!db) return alert('אין חיבור ל-Firebase');
+  Object.keys(allPredictions).forEach(mid => {
+    if (allPredictions[mid] && allPredictions[mid][uid]) db.ref(`predictions/${mid}/${uid}`).remove();
+  });
+  db.ref('users/'+uid).remove();
+  setTimeout(renderAdminPanel, 500);
 }
 
 function saveLineup(matchId, homeName, awayName) {
