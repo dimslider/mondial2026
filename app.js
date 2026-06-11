@@ -342,14 +342,16 @@ function buildFlagBadge(teamKey, size='md') {
   const t    = WORLD_CUP_DATA.teams[teamKey] || { color:'#444', secondColor:'#888' };
   const code = FLAG_CODES[teamKey];
   const sz   = size==='lg' ? 'flag-badge-lg' : size==='sm' ? 'flag-badge-sm' : 'flag-badge-md';
-  const imgSrc = code
-    ? `https://flagcdn.com/w80/${code}.png`
-    : '';
+  const short = abbrev(teamKey);
+  if (!code) {
+    return `<div class="flag-badge ${sz}" style="--fc1:${t.color};--fc2:${t.secondColor}"><span class="flag-badge-text">${short}</span></div>`;
+  }
   return `
     <div class="flag-badge ${sz}" style="--fc1:${t.color};--fc2:${t.secondColor}">
-      ${imgSrc
-        ? `<img class="flag-badge-img" src="${imgSrc}" alt="${teamKey}" loading="lazy" onerror="this.style.display='none'">`
-        : `<span class="flag-badge-emoji">${t.flag||'🏳'}</span>`}
+      <img class="flag-badge-img" src="https://flagcdn.com/w80/${code}.png"
+           alt="${short}" loading="eager"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <span class="flag-badge-text" style="display:none">${short}</span>
     </div>`;
 }
 
