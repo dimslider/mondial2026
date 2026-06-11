@@ -1282,7 +1282,9 @@ html, body {
 .news-item { padding: 8px 0; border-top: 1px solid rgba(255,255,255,.06); }
 .news-item:first-of-type { border-top: none; }
 .news-title { font-size: .88rem; line-height: 1.4; }
+.news-desc { font-size: .78rem; color: rgba(255,255,255,.75); line-height: 1.45; margin-top: 4px; }
 .news-meta { font-size: .7rem; color: var(--muted); margin-top: 3px; }
+.an-desc { font-size: .72rem; color: rgba(255,255,255,.65); line-height: 1.4; margin-top: 3px; }
 .news-more {
   display: block; width: 100%; margin-top: 8px; padding: 7px;
   background: none; border: none; color: var(--blue,#4fc3f7);

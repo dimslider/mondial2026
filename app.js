@@ -297,6 +297,7 @@ function buildNewsCard() {
       ${shown.map(n => `
         <div class="news-item">
           <div class="news-title">${n.title}</div>
+          ${n.desc ? `<div class="news-desc">${n.desc}</div>` : ''}
           <div class="news-meta">${n.source||''} · ${timeAgo(n.ts)}</div>
         </div>`).join('')}
       ${items.length > 3 ? `
@@ -1375,8 +1376,13 @@ async function fetchNewsCandidates() {
         const title = item.querySelector('title')?.textContent?.trim() || '';
         const link  = item.querySelector('link')?.textContent?.trim() || '';
         const pub   = item.querySelector('pubDate')?.textContent || '';
-        if (NEWS_KEYWORDS.some(k => title.includes(k))) {
-          results.push({ title, link, source:feed.source, date: pub ? new Date(pub).getTime() : 0 });
+        // תקציר הכתבה — ניקוי תגיות HTML וקיצור
+        let desc = item.querySelector('description')?.textContent || '';
+        desc = desc.replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, ' ').trim();
+        if (desc.length > 220) desc = desc.slice(0, 220).trim() + '…';
+        if (desc === title) desc = '';
+        if (NEWS_KEYWORDS.some(k => title.includes(k) || desc.includes(k))) {
+          results.push({ title, desc, link, source:feed.source, date: pub ? new Date(pub).getTime() : 0 });
         }
       });
     } catch(e) { console.warn('feed failed:', feed.source, e.message); }
@@ -1405,6 +1411,7 @@ function renderAdminNews() {
             <button class="am-save" onclick="publishNews(${i})">✅</button>
             <div class="an-row-txt">
               <div class="an-title">${n.title}</div>
+              ${n.desc ? `<div class="an-desc">${n.desc}</div>` : ''}
               <div class="an-src">${n.source}</div>
             </div>
           </div>`).join('')}` : ''}
@@ -1424,16 +1431,20 @@ function renderAdminNews() {
 function publishNews(idx) {
   const n = newsCandidates[idx];
   if (!n || !db) return;
-  db.ref('news').push({ title:n.title, source:n.source, ts:Date.now() });
+  db.ref('news').push({ title:n.title, desc:n.desc||'', source:n.source, ts:Date.now() });
   newsCandidates.splice(idx, 1);
   renderAdminPanel();
 }
 
 function publishManualNews() {
   const ta = document.getElementById('manual-news');
-  const title = ta?.value.trim();
-  if (!title || !db) return;
-  db.ref('news').push({ title, source:'המורה 👨‍🏫', ts:Date.now() });
+  const raw = ta?.value.trim();
+  if (!raw || !db) return;
+  // שורה ראשונה = כותרת, השאר = תקציר
+  const lines = raw.split('\n');
+  const title = lines[0].trim();
+  const desc  = lines.slice(1).join(' ').trim();
+  db.ref('news').push({ title, desc, source:'המורה 👨‍🏫', ts:Date.now() });
   ta.value = '';
   setTimeout(renderAdminPanel, 400);
 }
