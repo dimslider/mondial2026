@@ -1,98 +1,169 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🏆 מונדיאל 2026 — כיתת א׳</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Firebase CDN -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🏆 חוזה המונדיאל 2026</title>
+  <link rel="stylesheet" href="styles.css?v=6"/>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-  <script src="data.js"></script>
+  <script src="data.js?v=6"></script>
 </head>
 <body>
 
-<!-- ===== LOGIN SCREEN ===== -->
-<div id="login-screen" class="screen active">
+<!-- INTRO VIDEO -->
+<div id="intro-screen" class="screen active">
+  <video id="intro-video" class="intro-video" playsinline autoplay muted>
+    <source src="intro.mp4" type="video/mp4"/>
+  </video>
+  <div class="intro-overlay">
+    <div class="intro-logo">FIFA WORLD CUP 2026</div>
+    <div class="intro-sub">חוזה המונדיאל של הכיתה</div>
+  </div>
+  <button id="intro-skip-btn" class="intro-skip" onclick="skipIntro()">דלג ←</button>
+  <div class="intro-progress-bar"><div class="intro-progress-fill" id="intro-progress"></div></div>
+</div>
+
+<!-- LOGIN -->
+<div id="login-screen" class="screen">
+  <div class="login-bg"></div>
   <div class="login-card">
-    <div class="trophy-emoji">🏆</div>
-    <h1>מונדיאל 2026</h1>
-    <p class="subtitle">כיתת ________________________</p>
-    <input id="name-input" type="text" placeholder="מה השם שלך?" maxlength="20" />
-    <button id="login-btn" class="btn-primary">כניסה למשחק →</button>
+    <div class="login-trophy-wrap">
+      <div class="trophy-lightning trophy-l1"></div>
+      <div class="trophy-lightning trophy-l2"></div>
+      <div class="trophy-lightning trophy-l3"></div>
+      <div class="trophy-glow-ring"></div>
+      <svg class="trophy-svg" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- base -->
+        <rect x="35" y="138" width="50" height="8" rx="4" fill="#1a6b3c"/>
+        <rect x="42" y="128" width="36" height="12" rx="3" fill="#1e7a45"/>
+        <!-- stem -->
+        <rect x="52" y="108" width="16" height="22" rx="3" fill="url(#stemGrad)"/>
+        <!-- cup body -->
+        <path d="M28 30 Q24 70 40 95 Q50 108 60 108 Q70 108 80 95 Q96 70 92 30 Z" fill="url(#cupGrad)"/>
+        <!-- cup shine -->
+        <path d="M38 35 Q36 60 44 82" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- handles -->
+        <path d="M28 38 Q10 42 12 65 Q13 78 28 78" stroke="url(#handleGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <path d="M92 38 Q110 42 108 65 Q107 78 92 78" stroke="url(#handleGrad)" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <!-- top rim -->
+        <ellipse cx="60" cy="30" rx="33" ry="7" fill="url(#rimGrad)"/>
+        <!-- FIFA text area -->
+        <path d="M44 88 Q60 94 76 88" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+        <defs>
+          <linearGradient id="cupGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f5c842"/>
+            <stop offset="40%" stop-color="#ffe066"/>
+            <stop offset="70%" stop-color="#c8860a"/>
+            <stop offset="100%" stop-color="#f5c842"/>
+          </linearGradient>
+          <linearGradient id="stemGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c8860a"/>
+            <stop offset="50%" stop-color="#ffe066"/>
+            <stop offset="100%" stop-color="#c8860a"/>
+          </linearGradient>
+          <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c8860a"/>
+            <stop offset="50%" stop-color="#ffe899"/>
+            <stop offset="100%" stop-color="#c8860a"/>
+          </linearGradient>
+          <linearGradient id="handleGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffe066"/>
+            <stop offset="100%" stop-color="#c8860a"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="trophy-particles">
+        <span class="tp tp1">✦</span><span class="tp tp2">✦</span>
+        <span class="tp tp3">⭐</span><span class="tp tp4">✦</span>
+        <span class="tp tp5">✦</span>
+      </div>
+    </div>
+    <div class="login-brand">FIFA WORLD CUP 2026</div>
+    <h1 class="login-title">חוזה המונדיאל</h1>
+    <p class="login-sub">של הכיתה שלנו</p>
+    <input id="name-input" type="text" class="name-input" placeholder="מה השם שלך?" maxlength="16" autocomplete="off"/>
+    <button id="login-btn" class="login-btn">כניסה למשחק →</button>
+    <div class="login-feats">
+      <span>⚽ ניחושים</span><span>🏅 טבלה</span><span>🎯 חידות</span><span>🏆 עיטורים</span>
+    </div>
   </div>
 </div>
 
-<!-- ===== MAIN APP ===== -->
+<!-- APP -->
 <div id="app" class="screen">
-
-  <!-- Header -->
-  <header>
-    <div class="header-title">🏆 מונדיאל 2026</div>
-    <div class="header-user">
-      <span id="header-username"></span>
-      <span id="header-score" class="score-badge">0 נק'</span>
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="top-brand">
+      <span class="top-logo">⚽</span>
+      <span class="top-title">חוזה המונדיאל</span>
     </div>
-  </header>
+    <div class="top-right">
+      <span class="top-rank" id="top-rank">#–</span>
+      <div class="top-avatar" id="top-avatar">?</div>
+    </div>
+  </div>
 
-  <!-- Nav Tabs -->
-  <nav class="tabs">
-    <button class="tab active" data-tab="matches">⚽ משחקים</button>
-    <button class="tab" data-tab="leaderboard">🏅 טבלה</button>
-    <button class="tab" data-tab="teams">🌍 קבוצות</button>
-    <button class="tab" data-tab="trivia">🎯 חידות</button>
+  <!-- SCREENS -->
+  <div id="page-home"       class="page active"></div>
+  <div id="page-matches"    class="page"></div>
+  <div id="page-leaderboard" class="page"></div>
+  <div id="page-badges"     class="page"></div>
+
+  <!-- Bottom Nav -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-page="home">
+      <span class="nav-icon">🏠</span><span class="nav-label">בית</span>
+    </button>
+    <button class="nav-btn" data-page="matches">
+      <span class="nav-icon">⚽</span><span class="nav-label">משחקים</span>
+    </button>
+    <button class="nav-btn" data-page="leaderboard">
+      <span class="nav-icon">🏅</span><span class="nav-label">טבלה</span>
+    </button>
+    <button class="nav-btn" data-page="badges">
+      <span class="nav-icon">🎖️</span><span class="nav-label">עיטורים</span>
+    </button>
+    <button class="nav-btn" id="admin-nav-btn" onclick="toggleAdmin()" title="מנהל">
+      <span class="nav-icon">⚙️</span><span class="nav-label">מנהל</span>
+    </button>
   </nav>
-
-  <!-- ===== TAB: MATCHES ===== -->
-  <section id="tab-matches" class="tab-content active">
-    <h2 class="section-title">⚽ משחקים וניחושים</h2>
-    <div id="matches-list"></div>
-  </section>
-
-  <!-- ===== TAB: LEADERBOARD ===== -->
-  <section id="tab-leaderboard" class="tab-content">
-    <h2 class="section-title">🏅 טבלת הכיתה</h2>
-    <div id="leaderboard-list"></div>
-    <div class="scoring-guide">
-      <h3>📋 איך מרוויחים נקודות?</h3>
-      <p>✅ ניחוש נכון של המנצח — <strong>3 נקודות</strong></p>
-      <p>🤝 ניחוש תיקו נכון — <strong>3 נקודות</strong></p>
-      <p>📊 ניחוש נכון של התוצאה המדויקת — <strong>+2 בונוס</strong></p>
-      <p>🎯 חידת יום נכון — <strong>1 נקודה</strong></p>
-    </div>
-  </section>
-
-  <!-- ===== TAB: TEAMS ===== -->
-  <section id="tab-teams" class="tab-content">
-    <h2 class="section-title">🌍 קבוצות המונדיאל</h2>
-    <div id="teams-grid"></div>
-  </section>
-
-  <!-- ===== TAB: TRIVIA ===== -->
-  <section id="tab-trivia" class="tab-content">
-    <h2 class="section-title">🎯 חידת היום</h2>
-    <div id="trivia-container"></div>
-  </section>
-
 </div>
 
-<!-- ===== MODAL: TEAM INFO ===== -->
-<div id="team-modal" class="modal-overlay hidden">
-  <div class="modal-card">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modal-content"></div>
+<!-- MATCH CENTER MODAL -->
+<div id="match-modal" class="full-modal hidden">
+  <div class="full-modal-inner">
+    <button class="back-btn" onclick="closeMatchModal()">← חזרה</button>
+    <div id="match-modal-body"></div>
   </div>
 </div>
 
-<!-- ===== MODAL: PREDICTION ===== -->
-<div id="prediction-modal" class="modal-overlay hidden">
-  <div class="modal-card">
-    <button class="modal-close" onclick="closePredictionModal()">✕</button>
-    <div id="prediction-content"></div>
+<!-- PREDICTION MODAL -->
+<div id="pred-modal" class="overlay-modal hidden">
+  <div class="overlay-card">
+    <button class="overlay-close" onclick="closePredModal()">✕</button>
+    <div id="pred-modal-body"></div>
   </div>
 </div>
 
-<script src="firebase-config.js"></script>
-<script src="app.js"></script>
+<!-- TEAM MODAL -->
+<div id="team-modal" class="overlay-modal hidden">
+  <div class="overlay-card">
+    <button class="overlay-close" onclick="closeTeamModal()">✕</button>
+    <div id="team-modal-body"></div>
+  </div>
+</div>
+
+<!-- ADMIN MODAL -->
+<div id="admin-modal" class="overlay-modal hidden">
+  <div class="overlay-card" style="max-height:85vh">
+    <button class="overlay-close" onclick="closeAdminModal()">✕</button>
+    <div id="admin-panel"></div>
+  </div>
+</div>
+
+<script src="firebase-config.js?v=6"></script>
+<script src="api.js?v=6"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>
