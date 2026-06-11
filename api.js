@@ -5,7 +5,6 @@
 
 const FD_API_KEY = window.FD_API_KEY || '';
 const FD_BASE    = 'https://api.football-data.org/v4';
-let WC_ID        = null;  // נמצא דינמית ע"י findWC2026()
 
 // ===== ENGLISH → HEBREW TEAM NAME MAP =====
 const ENG_TO_HEB = {
@@ -27,6 +26,52 @@ const ENG_TO_HEB = {
   'Romania':'רומניה','Slovakia':'סלובקיה','Czech Republic':'צ\'כיה',
   'Panama':'פנמה','Costa Rica':'קוסטה ריקה','Honduras':'הונדורס',
   'El Salvador':'אל סלבדור','Jamaica':'ג\'מייקה','Haiti':'האיטי',
+  'Czechia':'צ\'כיה','Korea Republic':'דרום קוריאה',
+  'Bosnia-Herzegovina':'בוסניה','Bosnia and Herzegovina':'בוסניה',
+  'Norway':'נורבגיה','Sweden':'שוודיה','Italy':'איטליה','Greece':'יוון',
+  'Wales':'ויילס','Northern Ireland':'צפון אירלנד','Ireland':'אירלנד',
+  'Uzbekistan':'אוזבקיסטן','Jordan':'ירדן','Iraq':'עיראק',
+  'United Arab Emirates':'איחוד האמירויות','China':'סין','India':'הודו',
+  'Cabo Verde':'כף ורדה','Cape Verde':'כף ורדה','Curacao':'קוראסאו','Curaçao':'קוראסאו',
+  'Algeria':'אלג\'יריה','Benin':'בנין','Burkina Faso':'בורקינה פאסו',
+  'Gabon':'גבון','Guinea':'גינאה','Libya':'לוב','Madagascar':'מדגסקר',
+  'Mozambique':'מוזמביק','Namibia':'נמיביה','Niger':'ניז\'ר',
+  'Rwanda':'רואנדה','Sudan':'סודן','Tanzania':'טנזניה','Togo':'טוגו',
+  'Uganda':'אוגנדה','Zambia':'זמביה','Zimbabwe':'זימבבואה','Kenya':'קניה',
+  'Angola':'אנגולה','Botswana':'בוטסואנה','Gambia':'גמביה',
+  'Guatemala':'גואטמלה','Trinidad and Tobago':'טרינידד וטובגו','Suriname':'סורינאם',
+  'Cuba':'קובה','Nicaragua':'ניקרגואה','Bermuda':'ברמודה',
+  'New Caledonia':'קלדוניה החדשה','Fiji':'פיג\'י','Tahiti':'טהיטי',
+  'Bahrain':'בחריין','Kuwait':'כווית','Oman':'עומאן','Lebanon':'לבנון',
+  'Syria':'סוריה','Palestine':'פלסטין','Thailand':'תאילנד','Vietnam':'וייטנאם',
+  'Indonesia':'אינדונזיה','Malaysia':'מלזיה','North Korea':'צפון קוריאה',
+  'Finland':'פינלנד','Iceland':'איסלנד','North Macedonia':'מקדוניה',
+  'Montenegro':'מונטנגרו','Moldova':'מולדובה','Belarus':'בלארוס',
+  'Bulgaria':'בולגריה','Cyprus':'קפריסין','Israel':'ישראל',
+  'Estonia':'אסטוניה','Latvia':'לטביה','Lithuania':'ליטא',
+  'Luxembourg':'לוקסמבורג','Kosovo':'קוסובו','Georgia':'גיאורגיה',
+  'Armenia':'ארמניה','Azerbaijan':'אזרבייג\'ן','Kazakhstan':'קזחסטן',
+};
+
+// FIFA 3-letter codes → ISO 2-letter codes (for flagcdn.com)
+const TLA_TO_ISO = {
+  ARG:'ar',BRA:'br',ESP:'es',FRA:'fr',GER:'de',ENG:'gb-eng',POR:'pt',NED:'nl',
+  MEX:'mx',USA:'us',CAN:'ca',JPN:'jp',CRO:'hr',MAR:'ma',BEL:'be',AUS:'au',
+  TUR:'tr',COL:'co',ECU:'ec',URU:'uy',CHI:'cl',PER:'pe',PAR:'py',VEN:'ve',
+  BOL:'bo',RSA:'za',NGA:'ng',SEN:'sn',CMR:'cm',GHA:'gh',TUN:'tn',MLI:'ml',
+  CIV:'ci',COD:'cd',EGY:'eg',ALG:'dz',KSA:'sa',IRN:'ir',KOR:'kr',PRK:'kp',
+  NZL:'nz',QAT:'qa',SRB:'rs',SUI:'ch',DEN:'dk',POL:'pl',UKR:'ua',AUT:'at',
+  SCO:'gb-sct',WAL:'gb-wls',NIR:'gb-nir',IRL:'ie',ALB:'al',SVN:'si',HUN:'hu',
+  ROU:'ro',SVK:'sk',CZE:'cz',PAN:'pa',CRC:'cr',HON:'hn',SLV:'sv',JAM:'jm',
+  HAI:'ht',BIH:'ba',BOS:'ba',NOR:'no',SWE:'se',ITA:'it',GRE:'gr',FIN:'fi',
+  ISL:'is',MKD:'mk',MNE:'me',MDA:'md',BLR:'by',BUL:'bg',CYP:'cy',ISR:'il',
+  EST:'ee',LVA:'lv',LTU:'lt',LUX:'lu',KOS:'xk',GEO:'ge',ARM:'am',AZE:'az',
+  KAZ:'kz',UZB:'uz',JOR:'jo',IRQ:'iq',UAE:'ae',CHN:'cn',IND:'in',CPV:'cv',
+  CUW:'cw',BEN:'bj',BFA:'bf',GAB:'ga',GUI:'gn',LBY:'ly',MAD:'mg',MOZ:'mz',
+  NAM:'na',NIG:'ne',RWA:'rw',SDN:'sd',TAN:'tz',TOG:'tg',UGA:'ug',ZAM:'zm',
+  ZIM:'zw',KEN:'ke',ANG:'ao',BOT:'bw',GAM:'gm',GUA:'gt',TRI:'tt',SUR:'sr',
+  CUB:'cu',NCA:'ni',BER:'bm',NCL:'nc',FIJ:'fj',TAH:'pf',BHR:'bh',KUW:'kw',
+  OMA:'om',LBN:'lb',SYR:'sy',PLE:'ps',THA:'th',VIE:'vn',IDN:'id',MAS:'my',
 };
 
 // Extra FLAG_CODES additions for new teams
@@ -46,8 +91,11 @@ const CORS_PROXY = 'https://corsproxy.io/?';
 async function fdFetch(path) {
   if (!FD_API_KEY) return null;
   const target = `${FD_BASE}${path}`;
-  // Try direct first (works on localhost), fall back to proxy (works on GitHub Pages)
-  for (const url of [target, CORS_PROXY + encodeURIComponent(target)]) {
+  const isLocal = ['localhost','127.0.0.1'].includes(location.hostname);
+  // localhost: direct works. GitHub Pages: only the proxy works — skip direct to avoid CORS errors
+  const urls = isLocal ? [target, CORS_PROXY + encodeURIComponent(target)]
+                       : [CORS_PROXY + encodeURIComponent(target)];
+  for (const url of urls) {
     try {
       const res = await fetch(url, { headers: { 'X-Auth-Token': FD_API_KEY } });
       if (res.ok) return res.json();
@@ -88,14 +136,14 @@ async function syncMatchSchedule() {
     const homeHeb = ENG_TO_HEB[homeEng] || homeEng;
     const awayHeb = ENG_TO_HEB[awayEng] || awayEng;
 
-    // Add unknown teams to FLAG_CODES if needed
+    // Add unknown teams to FLAG_CODES — convert FIFA 3-letter code to ISO
     if (homeHeb && !FLAG_CODES[homeHeb] && !EXTRA_FLAG_CODES[homeHeb]) {
-      const code = m.homeTeam?.tla?.toLowerCase();
-      if (code) EXTRA_FLAG_CODES[homeHeb] = code;
+      const iso = TLA_TO_ISO[m.homeTeam?.tla];
+      if (iso) EXTRA_FLAG_CODES[homeHeb] = iso;
     }
     if (awayHeb && !FLAG_CODES[awayHeb] && !EXTRA_FLAG_CODES[awayHeb]) {
-      const code = m.awayTeam?.tla?.toLowerCase();
-      if (code) EXTRA_FLAG_CODES[awayHeb] = code;
+      const iso = TLA_TO_ISO[m.awayTeam?.tla];
+      if (iso) EXTRA_FLAG_CODES[awayHeb] = iso;
     }
 
     const dateStr  = m.utcDate ? m.utcDate.slice(0,10) : '';
@@ -140,7 +188,7 @@ function toLocalTime(utcStr) {
 
 // ===== SYNC LIVE RESULTS =====
 async function syncLiveResults() {
-  const data = await fdFetch(`/competitions/${WC_ID}/matches?status=FINISHED`);
+  const data = await fdFetch(`/competitions/WC/matches?status=FINISHED`);
   if (!data?.matches) return;
 
   data.matches.forEach(apiMatch => {
