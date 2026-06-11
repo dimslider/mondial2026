@@ -200,6 +200,12 @@ function initFirebase() {
     window.firebaseLineups = snap.val() || {};
   });
 
+  // עדכונים חמים שהמנהל פרסם
+  db.ref('news').on('value', snap => {
+    window.newsItems = snap.val() || {};
+    if (activePage === 'home') renderHome();
+  });
+
   // Start football-data.org live polling (only if API key set)
   if (typeof startLivePolling === 'function') startLivePolling();
   } catch(e) {
@@ -265,6 +271,7 @@ function renderHome() {
       </div>
     </div>
 
+    ${buildNewsCard()}
     ${nextMatch ? buildNextMatchCard(nextMatch) : '<div class="card"><p style="text-align:center;color:var(--muted)">כל המשחקים הסתיימו!</p></div>'}
 
     <div class="sec-head"><span class="sec-title">📊 ניתוח המשחק</span></div>
@@ -275,6 +282,36 @@ function renderHome() {
   `;
 
   if (nextMatch && !nextMatch.live) startCountdown(nextMatch);
+}
+
+// כרטיס עדכונים חמים — מציג את מה שהמנהל פרסם
+let newsExpanded = false;
+function toggleNewsExpand() { newsExpanded = !newsExpanded; renderHome(); }
+function buildNewsCard() {
+  const items = Object.values(window.newsItems || {}).sort((a,b)=>b.ts-a.ts);
+  if (!items.length) return '';
+  const shown = newsExpanded ? items : items.slice(0, 3);
+  return `
+    <div class="news-card">
+      <div class="news-head">🔥 עדכונים חמים</div>
+      ${shown.map(n => `
+        <div class="news-item">
+          <div class="news-title">${n.title}</div>
+          <div class="news-meta">${n.source||''} · ${timeAgo(n.ts)}</div>
+        </div>`).join('')}
+      ${items.length > 3 ? `
+        <button class="news-more" onclick="toggleNewsExpand()">${newsExpanded ? 'הצג פחות ▲' : `עוד ${items.length-3} עדכונים ▼`}</button>` : ''}
+    </div>`;
+}
+
+function timeAgo(ts) {
+  if (!ts) return '';
+  const mins = Math.floor((Date.now() - ts) / 60000);
+  if (mins < 1)   return 'עכשיו';
+  if (mins < 60)  return `לפני ${mins} דק'`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24)   return `לפני ${hrs} שע'`;
+  return `לפני ${Math.floor(hrs/24)} ימים`;
 }
 
 function buildNextMatchCard(m) {
@@ -1268,10 +1305,12 @@ function renderAdminPanel(){
       <button class="adm-tab${adminTab==='results'?' active':''}" onclick="setAdminTab('results')">תוצאות</button>
       <button class="adm-tab${adminTab==='lineups'?' active':''}" onclick="setAdminTab('lineups')">הרכבים</button>
       <button class="adm-tab${adminTab==='users'?' active':''}" onclick="setAdminTab('users')">משתמשים</button>
+      <button class="adm-tab${adminTab==='news'?' active':''}" onclick="setAdminTab('news')">🔥 חדשות</button>
     </div>
     <div id="admin-tab-content">${
       adminTab==='results' ? renderAdminResults() :
-      adminTab==='lineups' ? renderAdminLineups() : renderAdminUsers()}</div>`;
+      adminTab==='lineups' ? renderAdminLineups() :
+      adminTab==='news'    ? renderAdminNews()    : renderAdminUsers()}</div>`;
 }
 
 function setAdminTab(tab) {
@@ -1311,6 +1350,97 @@ function renderAdminLineups() {
         <button class="am-save" style="width:100%;margin-top:6px" onclick="saveLineup('${m.id}','${m.home}','${m.away}')">💾 שמור הרכב</button>
       </div>`;
   }).join('');
+}
+
+// ===== ADMIN NEWS — משיכת כותרות מ-RSS, אישור ופרסום =====
+const NEWS_FEEDS = [
+  { url:'https://www.ynet.co.il/Integration/StoryRss3.xml', source:'Ynet ספורט' },
+  { url:'https://rss.walla.co.il/feed/3',                   source:'וואלה ספורט' },
+  { url:'https://www.sport5.co.il/rss/rss.aspx?FolderID=403', source:'ספורט 5' },
+];
+const NEWS_KEYWORDS = ['מונדיאל','גביע העולם','World Cup','נבחרת'];
+let newsCandidates = [];
+let newsFetching = false;
+
+async function fetchNewsCandidates() {
+  newsFetching = true;
+  renderAdminPanel();
+  const results = [];
+  for (const feed of NEWS_FEEDS) {
+    try {
+      const res = await fetch('https://corsproxy.io/?' + encodeURIComponent(feed.url));
+      if (!res.ok) continue;
+      const xml = new DOMParser().parseFromString(await res.text(), 'text/xml');
+      xml.querySelectorAll('item').forEach(item => {
+        const title = item.querySelector('title')?.textContent?.trim() || '';
+        const link  = item.querySelector('link')?.textContent?.trim() || '';
+        const pub   = item.querySelector('pubDate')?.textContent || '';
+        if (NEWS_KEYWORDS.some(k => title.includes(k))) {
+          results.push({ title, link, source:feed.source, date: pub ? new Date(pub).getTime() : 0 });
+        }
+      });
+    } catch(e) { console.warn('feed failed:', feed.source, e.message); }
+  }
+  // חדש ראשון, בלי כפילויות
+  const seen = new Set();
+  newsCandidates = results
+    .sort((a,b)=>b.date-a.date)
+    .filter(n => !seen.has(n.title) && seen.add(n.title))
+    .slice(0, 25);
+  newsFetching = false;
+  renderAdminPanel();
+}
+
+function renderAdminNews() {
+  const published = Object.entries(window.newsItems || {}).sort((a,b)=>b[1].ts-a[1].ts);
+  return `
+    <div class="an-section">
+      <button class="am-save" style="width:100%" onclick="fetchNewsCandidates()" ${newsFetching?'disabled':''}>
+        ${newsFetching ? '⏳ מושך כותרות...' : '📡 משוך כותרות חדשות מאתרי ספורט'}
+      </button>
+      ${newsCandidates.length ? `
+        <div class="an-subtitle">לחץ ✅ כדי לפרסם לילדים:</div>
+        ${newsCandidates.map((n,i)=>`
+          <div class="an-row">
+            <button class="am-save" onclick="publishNews(${i})">✅</button>
+            <div class="an-row-txt">
+              <div class="an-title">${n.title}</div>
+              <div class="an-src">${n.source}</div>
+            </div>
+          </div>`).join('')}` : ''}
+      <div class="an-subtitle">או כתוב עדכון משלך:</div>
+      <textarea class="am-lineup-ta" id="manual-news" placeholder="לדוגמה: שמעתם?! מבאפה חזר להתאמן 🔥"></textarea>
+      <button class="am-save" style="width:100%;margin-top:6px" onclick="publishManualNews()">📣 פרסם עדכון</button>
+      ${published.length ? `
+        <div class="an-subtitle">עדכונים שפורסמו (לחץ 🗑 למחיקה):</div>
+        ${published.map(([id,n])=>`
+          <div class="an-row">
+            <button class="am-save" style="background:#c0392b" onclick="deleteNews('${id}')">🗑</button>
+            <div class="an-row-txt"><div class="an-title">${n.title}</div><div class="an-src">${n.source||''}</div></div>
+          </div>`).join('')}` : ''}
+    </div>`;
+}
+
+function publishNews(idx) {
+  const n = newsCandidates[idx];
+  if (!n || !db) return;
+  db.ref('news').push({ title:n.title, source:n.source, ts:Date.now() });
+  newsCandidates.splice(idx, 1);
+  renderAdminPanel();
+}
+
+function publishManualNews() {
+  const ta = document.getElementById('manual-news');
+  const title = ta?.value.trim();
+  if (!title || !db) return;
+  db.ref('news').push({ title, source:'המורה 👨‍🏫', ts:Date.now() });
+  ta.value = '';
+  setTimeout(renderAdminPanel, 400);
+}
+
+function deleteNews(id) {
+  if (db) db.ref('news/'+id).remove();
+  setTimeout(renderAdminPanel, 400);
 }
 
 function renderAdminUsers() {

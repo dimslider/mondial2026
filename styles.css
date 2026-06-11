@@ -1270,6 +1270,31 @@ html, body {
   border-radius: 50%;
   display: block;
 }
+/* ═══ HOT NEWS ═══ */
+.news-card {
+  margin: 10px 16px;
+  background: linear-gradient(135deg, rgba(255,120,0,.08), rgba(255,40,40,.06));
+  border: 1px solid rgba(255,120,0,.25);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.news-head { font-weight: 800; font-size: .95rem; margin-bottom: 8px; }
+.news-item { padding: 8px 0; border-top: 1px solid rgba(255,255,255,.06); }
+.news-item:first-of-type { border-top: none; }
+.news-title { font-size: .88rem; line-height: 1.4; }
+.news-meta { font-size: .7rem; color: var(--muted); margin-top: 3px; }
+.news-more {
+  display: block; width: 100%; margin-top: 8px; padding: 7px;
+  background: none; border: none; color: var(--blue,#4fc3f7);
+  font-family: inherit; font-size: .8rem; cursor: pointer;
+}
+.an-section { display: flex; flex-direction: column; gap: 8px; }
+.an-subtitle { font-size: .8rem; color: var(--muted); margin-top: 10px; }
+.an-row { display: flex; gap: 8px; align-items: flex-start; padding: 6px 0; border-top: 1px solid rgba(255,255,255,.06); }
+.an-row-txt { flex: 1; min-width: 0; }
+.an-title { font-size: .82rem; line-height: 1.35; }
+.an-src { font-size: .68rem; color: var(--muted); margin-top: 2px; }
+
 /* ═══ MATCHES VIEW TABS + GROUP STANDINGS ═══ */
 .mv-tabs {
   display: flex;
