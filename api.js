@@ -93,7 +93,9 @@ const CORS_PROXY = 'https://corsproxy.io/?';
 
 async function fdFetch(path) {
   if (!FD_API_KEY) return null;
-  const target = `${FD_BASE}${path}`;
+  // שובר-מטמון: בלעדיו ה-proxy מחזיר תשובות ישנות והתוצאה החיה מפגרת
+  const cb = (path.includes('?') ? '&' : '?') + '_cb=' + Date.now();
+  const target = `${FD_BASE}${path}${cb}`;
   const isLocal = ['localhost','127.0.0.1'].includes(location.hostname);
   // localhost: direct works. GitHub Pages: only the proxy works — skip direct to avoid CORS errors
   const urls = isLocal ? [target, CORS_PROXY + encodeURIComponent(target)]

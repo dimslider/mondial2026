@@ -284,24 +284,28 @@ function renderHome() {
   if (nextMatch && !nextMatch.live) startCountdown(nextMatch);
 }
 
-// כרטיס עדכונים חמים — מציג את מה שהמנהל פרסם
-let newsExpanded = false;
-function toggleNewsExpand() { newsExpanded = !newsExpanded; renderHome(); }
+// כרטיס עדכונים חמים — מכווץ כברירת מחדל, נפתח בלחיצה
+let newsOpen = localStorage.getItem('wc26_news_open') === '1';
+function toggleNewsOpen() {
+  newsOpen = !newsOpen;
+  localStorage.setItem('wc26_news_open', newsOpen ? '1' : '0');
+  renderHome();
+}
 function buildNewsCard() {
   const items = Object.values(window.newsItems || {}).sort((a,b)=>b.ts-a.ts);
   if (!items.length) return '';
-  const shown = newsExpanded ? items : items.slice(0, 3);
   return `
-    <div class="news-card">
-      <div class="news-head">🔥 עדכונים חמים</div>
-      ${shown.map(n => `
+    <div class="news-card ${newsOpen?'':'news-collapsed'}">
+      <button class="news-head-btn" onclick="toggleNewsOpen()">
+        <span>🔥 עדכונים חמים <span class="news-count">${items.length}</span></span>
+        <span class="news-arrow">${newsOpen ? '▲' : '▼'}</span>
+      </button>
+      ${newsOpen ? items.map(n => `
         <div class="news-item">
           <div class="news-title">${n.title}</div>
           ${n.desc ? `<div class="news-desc">${n.desc}</div>` : ''}
           <div class="news-meta">${n.source||''} · ${timeAgo(n.ts)}</div>
-        </div>`).join('')}
-      ${items.length > 3 ? `
-        <button class="news-more" onclick="toggleNewsExpand()">${newsExpanded ? 'הצג פחות ▲' : `עוד ${items.length-3} עדכונים ▼`}</button>` : ''}
+        </div>`).join('') : ''}
     </div>`;
 }
 
@@ -1355,11 +1359,20 @@ function renderAdminLineups() {
 
 // ===== ADMIN NEWS — משיכת כותרות מ-RSS, אישור ופרסום =====
 const NEWS_FEEDS = [
-  { url:'https://www.ynet.co.il/Integration/StoryRss3.xml', source:'Ynet ספורט' },
-  { url:'https://rss.walla.co.il/feed/3',                   source:'וואלה ספורט' },
-  { url:'https://www.sport5.co.il/rss/rss.aspx?FolderID=403', source:'ספורט 5' },
+  // Google News — מאות כתבות מונדיאל מכל אתרי הספורט בעברית, כבר מסונן לפי החיפוש
+  { url:'https://news.google.com/rss/search?q=מונדיאל&hl=he&gl=IL&ceid=IL:he', source:'', gnews:true },
+  { url:'https://rss.walla.co.il/feed/3', source:'וואלה ספורט', filter:true },
 ];
 const NEWS_KEYWORDS = ['מונדיאל','גביע העולם','World Cup','נבחרת'];
+
+// קיצור חכם — חותך בסוף משפט או מילה, לא באמצע
+function smartTrim(s, max = 240) {
+  if (!s || s.length <= max) return s;
+  const cut = s.slice(0, max);
+  const lastEnd = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '), cut.lastIndexOf('? '));
+  if (lastEnd > 80) return cut.slice(0, lastEnd + 1);
+  return cut.slice(0, cut.lastIndexOf(' ')) + '…';
+}
 let newsCandidates = [];
 let newsFetching = false;
 
@@ -1369,20 +1382,28 @@ async function fetchNewsCandidates() {
   const results = [];
   for (const feed of NEWS_FEEDS) {
     try {
-      const res = await fetch('https://corsproxy.io/?' + encodeURIComponent(feed.url));
+      const sep = feed.url.includes('?') ? '&' : '?';
+      const res = await fetch('https://corsproxy.io/?' + encodeURIComponent(feed.url + sep + '_cb=' + Date.now()));
       if (!res.ok) continue;
       const xml = new DOMParser().parseFromString(await res.text(), 'text/xml');
       xml.querySelectorAll('item').forEach(item => {
-        const title = item.querySelector('title')?.textContent?.trim() || '';
+        let title = item.querySelector('title')?.textContent?.trim() || '';
         const link  = item.querySelector('link')?.textContent?.trim() || '';
         const pub   = item.querySelector('pubDate')?.textContent || '';
-        // תקציר הכתבה — ניקוי תגיות HTML וקיצור
+        // ב-Google News המקור מגיע בתגית source ובסוף הכותרת ("כותרת - וואלה")
+        let source = feed.source;
+        if (feed.gnews) {
+          source = item.querySelector('source')?.textContent?.trim() || 'חדשות';
+          title  = title.replace(new RegExp('\\s*-\\s*' + source.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\s*$'), '');
+        }
+        // תקציר — ניקוי HTML וקיצור חכם בגבול משפט/מילה
         let desc = item.querySelector('description')?.textContent || '';
-        desc = desc.replace(/<[^>]*>/g, '').replace(/&[a-z]+;/gi, ' ').trim();
-        if (desc.length > 220) desc = desc.slice(0, 220).trim() + '…';
-        if (desc === title) desc = '';
-        if (NEWS_KEYWORDS.some(k => title.includes(k) || desc.includes(k))) {
-          results.push({ title, desc, link, source:feed.source, date: pub ? new Date(pub).getTime() : 0 });
+        desc = desc.replace(/<[^>]*>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g,' ').trim();
+        if (desc === title || desc.startsWith(title)) desc = '';
+        desc = smartTrim(desc);
+        const relevant = feed.gnews || NEWS_KEYWORDS.some(k => title.includes(k) || desc.includes(k));
+        if (relevant && title) {
+          results.push({ title, desc, link, source, date: pub ? new Date(pub).getTime() : 0 });
         }
       });
     } catch(e) { console.warn('feed failed:', feed.source, e.message); }
@@ -1392,7 +1413,7 @@ async function fetchNewsCandidates() {
   newsCandidates = results
     .sort((a,b)=>b.date-a.date)
     .filter(n => !seen.has(n.title) && seen.add(n.title))
-    .slice(0, 25);
+    .slice(0, 40);
   newsFetching = false;
   renderAdminPanel();
 }
@@ -1408,7 +1429,8 @@ function renderAdminNews() {
         <div class="an-subtitle">לחץ ✅ כדי לפרסם לילדים:</div>
         ${newsCandidates.map((n,i)=>`
           <div class="an-row">
-            <button class="am-save" onclick="publishNews(${i})">✅</button>
+            <button class="am-save" onclick="publishNews(${i})" title="פרסם כמו שזה">✅</button>
+            <button class="am-save" style="background:#555" onclick="editNewsToManual(${i})" title="ערוך לפני פרסום">✏️</button>
             <div class="an-row-txt">
               <div class="an-title">${n.title}</div>
               ${n.desc ? `<div class="an-desc">${n.desc}</div>` : ''}
@@ -1434,6 +1456,16 @@ function publishNews(idx) {
   db.ref('news').push({ title:n.title, desc:n.desc||'', source:n.source, ts:Date.now() });
   newsCandidates.splice(idx, 1);
   renderAdminPanel();
+}
+
+// מעתיק כותרת לתיבה הידנית לעריכה לפני פרסום
+function editNewsToManual(idx) {
+  const n = newsCandidates[idx];
+  const ta = document.getElementById('manual-news');
+  if (!n || !ta) return;
+  ta.value = n.title + '\n' + (n.desc || '');
+  ta.scrollIntoView({ behavior:'smooth', block:'center' });
+  ta.focus();
 }
 
 function publishManualNews() {
