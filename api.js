@@ -51,41 +51,14 @@ async function fdFetch(path) {
   } catch(e) { console.warn('FD fetch failed:', e.message); return null; }
 }
 
-// ===== FIND WC2026 COMPETITION ID =====
-async function findWC2026() {
-  if (WC_ID) return WC_ID;
-  // Try known IDs: 2000 (used for WC2022 on fd.org), and scan competitions list
-  const knownIds = [2000, 2152, 2001];
-  for (const id of knownIds) {
-    const d = await fdFetch(`/competitions/${id}`);
-    if (d?.name?.includes('World Cup') && (d?.currentSeason?.startDate || '').startsWith('2026')) {
-      WC_ID = id;
-      console.log(`✅ WC2026 competition ID: ${id}`);
-      return id;
-    }
-  }
-  // Fallback: scan all competitions
-  const all = await fdFetch('/competitions?plan=TIER_ONE');
-  if (all?.competitions) {
-    const wc = all.competitions.find(c =>
-      c.name?.includes('World Cup') && (c.currentSeason?.startDate || '').startsWith('2026')
-    );
-    if (wc) { WC_ID = wc.id; return wc.id; }
-  }
-  WC_ID = 2000; // last-resort fallback
-  return WC_ID;
-}
-
 // ===== SYNC FULL MATCH SCHEDULE FROM API =====
 async function syncMatchSchedule() {
-  const cid = await findWC2026();
-  // Try without stage filter first, then with
-  let data = await fdFetch(`/competitions/${cid}/matches`);
+  // football-data.org supports competition by code 'WC', season param optional
+  let data = await fdFetch('/competitions/WC/matches?season=2026');
+  if (!data?.matches?.length) data = await fdFetch('/competitions/WC/matches');
+  if (!data?.matches?.length) data = await fdFetch('/competitions/2000/matches');
   if (!data?.matches?.length) {
-    data = await fdFetch(`/competitions/${cid}/matches?stage=GROUP_STAGE`);
-  }
-  if (!data?.matches?.length) {
-    console.warn('Could not load schedule from API — keeping hardcoded data');
+    console.warn('⚠️ Could not load WC2026 schedule from API — keeping fallback data');
     return false;
   }
 
