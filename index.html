@@ -4,31 +4,23 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🏆 חוזה המונדיאל 2026</title>
-  <link rel="stylesheet" href="styles.css?v=6"/>
+  <link rel="stylesheet" href="styles.css?v=7"/>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-  <script src="data.js?v=6"></script>
+  <script src="data.js?v=7"></script>
 </head>
 <body>
 
 <!-- INTRO VIDEO -->
 <div id="intro-screen" class="screen active">
-  <video id="intro-video" class="intro-video" playsinline muted>
+  <video id="intro-video" class="intro-video" playsinline autoplay muted>
     <source src="intro.mp4" type="video/mp4"/>
   </video>
   <div class="intro-overlay">
     <div class="intro-logo">FIFA WORLD CUP 2026</div>
     <div class="intro-sub">חוזה המונדיאל של הכיתה</div>
   </div>
-  <!-- Tap to unmute overlay -->
-  <div id="intro-tap" class="intro-tap-overlay" onclick="introUnmute()">
-    <div class="intro-tap-card">
-      <div class="intro-tap-icon">🔊</div>
-      <div class="intro-tap-text">לחץ להפעלה עם קול</div>
-    </div>
-  </div>
-
-  <button id="intro-skip-btn" class="intro-skip hidden" onclick="skipIntro()">דלג ←</button>
+  <button id="intro-skip-btn" class="intro-skip" onclick="skipIntro()">דלג ←</button>
   <div class="intro-progress-bar"><div class="intro-progress-fill" id="intro-progress"></div></div>
 </div>
 
@@ -170,8 +162,8 @@
   </div>
 </div>
 
-<script src="firebase-config.js?v=6"></script>
-<script src="api.js?v=6"></script>
-<script src="app.js?v=6"></script>
+<script src="firebase-config.js?v=7"></script>
+<script src="api.js?v=7"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>

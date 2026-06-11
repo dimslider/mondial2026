@@ -3,43 +3,23 @@
   const video  = document.getElementById('intro-video');
   const screen = document.getElementById('intro-screen');
   const prog   = document.getElementById('intro-progress');
-  const tapOvl = document.getElementById('intro-tap');
-  const skipBtn= document.getElementById('intro-skip-btn');
   if (!video || !screen) return;
 
-  let progInterval = null;
-  let hardCapTimer = null;
-
   function goToLogin() {
-    clearInterval(progInterval);
-    clearTimeout(hardCapTimer);
     screen.classList.add('hidden');
     document.getElementById('login-screen').classList.add('active');
   }
 
-  // User taps → unmute and play with sound
-  window.introUnmute = function() {
-    tapOvl.style.display = 'none';
-    video.muted = false;
-    video.currentTime = 0;
-    video.play().catch(() => {});
-    if (skipBtn) skipBtn.classList.remove('hidden');
-    // Start hard cap only after user interaction
-    hardCapTimer = setTimeout(goToLogin, video.duration ? (video.duration * 1000 + 500) : 30000);
-  };
-
-  // Animate progress bar
+  // Progress bar
   video.addEventListener('timeupdate', () => {
-    const dur = video.duration || 1;
-    if (prog) prog.style.width = (video.currentTime / dur * 100) + '%';
+    const pct = video.duration ? (video.currentTime / video.duration * 100) : 0;
+    if (prog) prog.style.width = pct + '%';
   });
 
-  // Auto-advance when video ends
   video.addEventListener('ended', goToLogin);
-
-  // Fallbacks for load failures
   video.addEventListener('error', goToLogin);
-  video.addEventListener('stalled', () => { if (!tapOvl.style.display) setTimeout(goToLogin, 3000); });
+  // If video stalls or won't load — skip after 4s
+  setTimeout(() => { if (!video.ended) goToLogin(); }, 8000);
 
   window.skipIntro = goToLogin;
 })();
@@ -340,12 +320,36 @@ function quickPred(matchId, result) {
 }
 
 // ===== FLAG BADGE =====
+const FLAG_CODES = {
+  'ארגנטינה':'ar','ברזיל':'br','ספרד':'es','צרפת':'fr','גרמניה':'de',
+  'אנגליה':'gb-eng','פורטוגל':'pt','הולנד':'nl','מקסיקו':'mx','ארה"ב':'us',
+  'קנדה':'ca','קרואטיה':'hr','קולומביה':'co','בלגיה':'be','יפן':'jp',
+  'טורקיה':'tr',"צ'ילה":'cl','מרוקו':'ma','אוסטרליה':'au','יפן':'jp',
+  'סנגל':'sn','קמרון':'cm','גאנה':'gh','תוניסיה':'tn','מאלי':'ml',
+  'אקוודור':'ec','אורוגוואי':'uy','פרגוואי':'py','פרו':'pe','צ\'ילה':'cl',
+  'דנמרק':'dk','שוויץ':'ch','אוסטריה':'at','סקוטלנד':'gb-sct',
+  'אירלנד':'ie','פולין':'pl','צ\'כיה':'cz','סלובקיה':'sk',
+  'רומניה':'ro','הונגריה':'hu','סרביה':'rs','סלובניה':'si',
+  'אלבניה':'al','קוסובו':'xk','אוקראינה':'ua','גיאורגיה':'ge',
+  'דרום אפריקה':'za','ניגריה':'ng','חוף השנהב':'ci','קונגו':'cd',
+  'מצרים':'eg','ערב הסעודית':'sa','איראן':'ir','דרום קוריאה':'kr',
+  'קטאר':'qa','ניו זילנד':'nz','פנמה':'pa','קוסטה ריקה':'cr',
+  'הונדורס':'hn','ג\'מייקה':'jm','אל סלבדור':'sv','האיטי':'ht',
+  'ונצואלה':'ve','בוליביה':'bo',
+};
+
 function buildFlagBadge(teamKey, size='md') {
-  const t = WORLD_CUP_DATA.teams[teamKey] || { flag:'🏳', color:'#444', secondColor:'#888' };
-  const sz = size === 'lg' ? 'flag-badge-lg' : size === 'sm' ? 'flag-badge-sm' : 'flag-badge-md';
+  const t    = WORLD_CUP_DATA.teams[teamKey] || { color:'#444', secondColor:'#888' };
+  const code = FLAG_CODES[teamKey];
+  const sz   = size==='lg' ? 'flag-badge-lg' : size==='sm' ? 'flag-badge-sm' : 'flag-badge-md';
+  const imgSrc = code
+    ? `https://flagcdn.com/w80/${code}.png`
+    : '';
   return `
     <div class="flag-badge ${sz}" style="--fc1:${t.color};--fc2:${t.secondColor}">
-      <span class="flag-badge-emoji">${t.flag}</span>
+      ${imgSrc
+        ? `<img class="flag-badge-img" src="${imgSrc}" alt="${teamKey}" loading="lazy" onerror="this.style.display='none'">`
+        : `<span class="flag-badge-emoji">${t.flag||'🏳'}</span>`}
     </div>`;
 }
 

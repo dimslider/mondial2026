@@ -403,19 +403,57 @@ const WORLD_CUP_DATA = {
     ]
   },
 
+  'דרום אפריקה': {
+    flag:'🇿🇦', color:'#007A4D', secondColor:'#FFB81C', titles:0, group:'B', strength:62,
+    starPlayer:'פרסי טאו', coach:'הוגו ברוס', formation:'4-4-2',
+    funFact:'דרום אפריקה הייתה המדינה הראשונה באפריקה לארח את המונדיאל — ב-2010!',
+    squad:[
+      {name:'רונווין וויליאמס', pos:'שוער',  age:30, club:'מדסאן סיטי',     emoji:'🧤', caps:45,goals:0,  star:false},
+      {name:'פרסי טאו',         pos:'קדימה', age:30, club:'אל-אהלי',        emoji:'⭐', caps:65,goals:18, star:true },
+      {name:'תבו קישן',         pos:'קדימה', age:28, club:'שחפורד',         emoji:'⚡', caps:40,goals:12, star:false},
+      {name:'מוטהאלה מוסיאלגנג', pos:'קישור', age:26, club:'מיילנדרס',     emoji:'⚙️', caps:30,goals:3,  star:false},
+      {name:'גרנט קקאנה',       pos:'הגנה',  age:32, club:'נורת\' קסאונטי', emoji:'🛡️', caps:55,goals:2,  star:false},
+    ]
+  },
+  'מרוקו': {
+    flag:'🇲🇦', color:'#C1272D', secondColor:'#006233', titles:0, group:'D', strength:78,
+    starPlayer:'אשרף חכימי', coach:'ואליד רגרגי', formation:'4-3-3',
+    funFact:'מרוקו הגיעה לחצי גמר מונדיאל 2022 — הישג היסטורי לאפריקה!',
+    squad:[
+      {name:'יאסין בונו',       pos:'שוער',  age:33, club:'אל-הילאל',   emoji:'🧤', caps:60,goals:0,  star:false},
+      {name:'אשרף חכימי',       pos:'הגנה',  age:26, club:'פריז סן-ז\'רמן',emoji:'⭐',caps:75,goals:15, star:true },
+      {name:'הכים זיאש',        pos:'קישור', age:32, club:'גלאטסריי',    emoji:'🎨', caps:70,goals:20, star:false},
+      {name:'סופיאן אמרבאט',    pos:'קישור', age:28, club:'מנצ\'סטר יונייטד',emoji:'💪',caps:45,goals:1,star:false},
+      {name:'יוסף אן-נסירי',    pos:'קדימה', age:27, club:'ריאל בטיס',   emoji:'⚡', caps:55,goals:24, star:false},
+    ]
+  },
+  'סרביה': {
+    flag:'🇷🇸', color:'#C6363C', secondColor:'#0C4076', titles:0, group:'H', strength:72,
+    starPlayer:'דושאן ולאהוביץ', coach:'דרגאן סטויקוביץ', formation:'3-4-3',
+    funFact:'סרביה הכניסה את הכי הרבה שחקנים מליגת הפרמייר ליג לקבוצה אחת!',
+    squad:[
+      {name:'ורדן מילינקוביץ-סביץ', pos:'שוער', age:27, club:'ריאל ולדוליד',emoji:'🧤',caps:40,goals:0,star:false},
+      {name:'דושאן ולאהוביץ',       pos:'קדימה',age:24, club:'יובנטוס',    emoji:'⭐', caps:45,goals:30, star:true },
+      {name:'סרגיי מילינקוביץ-סביץ',pos:'קישור',age:29, club:'אל-הילאל',   emoji:'💪', caps:65,goals:12, star:false},
+      {name:'פיליפ קוסטיץ',         pos:'קישור',age:31, club:'יובנטוס',    emoji:'⚙️', caps:60,goals:8,  star:false},
+      {name:'ניקולה מילנקוביץ',     pos:'הגנה', age:27, club:'פיורנטינה',  emoji:'🛡️', caps:45,goals:3,  star:false},
+    ]
+  },
+
   }, // סגירת teams
 
+  // ⚠️ אלה נתוני גיבוי בלבד — האפליקציה מושכת את הלוח המלא מה-API באופן אוטומטי
   matches: [
-    { id:'m1',  date:'2026-06-11', time:'22:00', home:'מקסיקו',   away:'ארה"ב',    group:'B', venue:'לוס אנג\'לס',  homeScore:null, awayScore:null },
-    { id:'m2',  date:'2026-06-12', time:'19:00', home:'ארגנטינה', away:'קנדה',     group:'A', venue:'מיאמי',       homeScore:null, awayScore:null },
-    { id:'m3',  date:'2026-06-12', time:'22:00', home:'ספרד',     away:'קרואטיה',  group:'C', venue:'דאלאס',       homeScore:null, awayScore:null },
-    { id:'m4',  date:'2026-06-13', time:'19:00', home:'ברזיל',    away:'קולומביה', group:'G', venue:'סיאטל',       homeScore:null, awayScore:null },
-    { id:'m5',  date:'2026-06-13', time:'22:00', home:'צרפת',     away:'בלגיה',    group:'D', venue:'ניו יורק',    homeScore:null, awayScore:null },
-    { id:'m6',  date:'2026-06-14', time:'19:00', home:'גרמניה',   away:'יפן',      group:'E', venue:'שיקגו',       homeScore:null, awayScore:null },
-    { id:'m7',  date:'2026-06-14', time:'22:00', home:'אנגליה',   away:'הולנד',    group:'H', venue:'בוסטון',      homeScore:null, awayScore:null },
-    { id:'m8',  date:'2026-06-15', time:'19:00', home:'פורטוגל',  away:'טורקיה',   group:'F', venue:'פילדלפיה',    homeScore:null, awayScore:null },
-    { id:'m9',  date:'2026-06-16', time:'22:00', home:'ארגנטינה', away:'צ\'ילה',   group:'A', venue:'ניו יורק',    homeScore:null, awayScore:null },
-    { id:'m10', date:'2026-06-17', time:'19:00', home:'ברזיל',    away:'ארה"ב',    group:'G', venue:'לוס אנג\'לס', homeScore:null, awayScore:null },
+    { id:'m1',  date:'2026-06-11', time:'23:00', home:'מקסיקו',      away:'דרום אפריקה', group:'B', venue:'מקסיקו סיטי',  homeScore:null, awayScore:null },
+    { id:'m2',  date:'2026-06-12', time:'21:00', home:'ארה"ב',        away:'קנדה',        group:'A', venue:'לוס אנג\'לס',  homeScore:null, awayScore:null },
+    { id:'m3',  date:'2026-06-12', time:'18:00', home:'ארגנטינה',    away:'קנדה',        group:'C', venue:'מיאמי',        homeScore:null, awayScore:null },
+    { id:'m4',  date:'2026-06-13', time:'21:00', home:'ספרד',        away:'מרוקו',       group:'D', venue:'ניו יורק',     homeScore:null, awayScore:null },
+    { id:'m5',  date:'2026-06-13', time:'18:00', home:'צרפת',        away:'קנדה',        group:'E', venue:'טורונטו',      homeScore:null, awayScore:null },
+    { id:'m6',  date:'2026-06-14', time:'21:00', home:'גרמניה',      away:'יפן',         group:'F', venue:'שיקגו',        homeScore:null, awayScore:null },
+    { id:'m7',  date:'2026-06-14', time:'18:00', home:'ברזיל',       away:'קנדה',        group:'G', venue:'ונקובר',       homeScore:null, awayScore:null },
+    { id:'m8',  date:'2026-06-15', time:'21:00', home:'אנגליה',      away:'סרביה',       group:'H', venue:'בוסטון',       homeScore:null, awayScore:null },
+    { id:'m9',  date:'2026-06-15', time:'18:00', home:'פורטוגל',     away:'קרואטיה',    group:'I', venue:'פילדלפיה',     homeScore:null, awayScore:null },
+    { id:'m10', date:'2026-06-16', time:'21:00', home:'הולנד',       away:'קנדה',        group:'J', venue:'הוסטון',       homeScore:null, awayScore:null },
   ],
 
   trivia: [
