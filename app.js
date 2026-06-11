@@ -494,10 +494,92 @@ function quickPredSheet(matchId) {
   openPredModal(matchId);
 }
 
+// ===== LINEUP TEXT PARSER =====
+// מזהה שחקנים מטקסט חופשי שהמנהל הדביק ומצליב עם נתוני הסגל
+const POS_LABELS = { 'שוער':'שוער','שוערים':'שוער','הגנה':'הגנה','מגן':'הגנה','בלם':'הגנה',
+  'קישור':'קישור','קשר':'קישור','התקפה':'קדימה','קדימה':'קדימה','חלוץ':'קדימה','חלוצים':'קדימה' };
+
+function posEmojiHe(pos) {
+  return pos==='שוער' ? '🧤' : pos==='הגנה' ? '🛡️' : pos==='קישור' ? '⚙️' : pos==='קדימה' ? '⚡' : '⚽';
+}
+
+function findSquadPlayer(squad, token) {
+  const t = token.trim();
+  if (!t) return null;
+  // התאמה מדויקת
+  let p = squad.find(s => s.name === t);
+  if (p) return p;
+  // הכלה — "מסי" יתאים ל"ליאו מסי"
+  p = squad.find(s => s.name.includes(t) || t.includes(s.name));
+  if (p) return p;
+  // התאמה לפי שם משפחה (המילה האחרונה) — שם פרטי בלבד גורם לזיהויים שגויים
+  const words = t.split(/\s+/).filter(w => w.length > 2);
+  const lastWord = words[words.length - 1];
+  if (lastWord) {
+    p = squad.find(s => {
+      const sLast = s.name.split(/\s+/).pop();
+      return sLast === lastWord || (sLast.length > 3 && lastWord.length > 3 &&
+             (sLast.includes(lastWord) || lastWord.includes(sLast)));
+    });
+  }
+  return p || null;
+}
+
+function parseLineupEntries(entries, teamKey) {
+  const squad = WORLD_CUP_DATA.teams[teamKey]?.squad || [];
+  const text = (Array.isArray(entries) ? entries : [entries]).join('\n');
+  let curPos = null;
+  const players = [];
+  text.split(/[\n,.;]+/).forEach(tok => {
+    tok = tok.trim();
+    if (!tok) return;
+    // "שוער: ראול רנחל" — תווית עמדה בתחילת הקטע
+    const lbl = tok.match(/^([א-ת]+)\s*:\s*(.*)$/);
+    if (lbl && POS_LABELS[lbl[1]]) { curPos = POS_LABELS[lbl[1]]; tok = lbl[2].trim(); if (!tok) return; }
+    const sq = findSquadPlayer(squad, tok);
+    const pos = sq?.pos || curPos || '?';
+    players.push({
+      name:  sq?.name || tok,
+      pos,
+      emoji: sq?.emoji || posEmojiHe(pos),
+      star:  sq?.star || false,
+      club:  sq?.club || '',
+    });
+  });
+  return players.slice(0, 11);
+}
+
+// ===== SQUAD ON DEMAND =====
+// לקבוצה ללא סגל מוזן — שולף את הסגל האמיתי מה-API ומטמין אותו
+const squadFetchTried = {};
+async function ensureSquad(teamKey) {
+  const t = WORLD_CUP_DATA.teams[teamKey];
+  if (t?.squad?.length || squadFetchTried[teamKey]) return false;
+  squadFetchTried[teamKey] = true;
+  const apiId = window.TEAM_API_IDS?.[teamKey];
+  if (!apiId || typeof fetchSquadFromAPI !== 'function') return false;
+  const squad = await fetchSquadFromAPI(apiId);
+  if (!squad?.length) return false;
+  if (!WORLD_CUP_DATA.teams[teamKey]) {
+    WORLD_CUP_DATA.teams[teamKey] = { flag:'⚽', color:'#445', secondColor:'#778', titles:0, strength:65 };
+  }
+  WORLD_CUP_DATA.teams[teamKey].squad = squad.map(p => ({ ...p, caps:p.caps||0, star:false }));
+  return true;
+}
+
 // ===== MATCH CENTER =====
+let mcOpenMatchId = null;
 function openMatchCenter(matchId) {
   const m = WORLD_CUP_DATA.matches.find(x=>x.id===matchId);
   if (!m) return;
+  mcOpenMatchId = matchId;
+  // אם חסר סגל לאחת הקבוצות — נטען מה-API ונרענן את החלון
+  Promise.all([ensureSquad(m.home), ensureSquad(m.away)]).then(loaded => {
+    if (loaded.some(Boolean) && mcOpenMatchId === matchId &&
+        !document.getElementById('match-modal').classList.contains('hidden')) {
+      openMatchCenter(matchId);
+    }
+  });
   const hd = WORLD_CUP_DATA.teams[m.home] || { flag:'🏳', players:[] };
   const ad = WORLD_CUP_DATA.teams[m.away] || { flag:'🏳', players:[] };
   const mp = allPredictions[m.id] || {};
@@ -516,7 +598,7 @@ function openMatchCenter(matchId) {
   const fbLineup = (window.firebaseLineups || {})[m.id] || {};
   const getLineupPlayers = (teamKey) => {
     const saved = fbLineup[teamKey === m.home ? 'home' : 'away'];
-    if (saved && saved.length) return saved; // admin-entered names
+    if (saved && saved.length) return parseLineupEntries(saved, teamKey);
     const squad = WORLD_CUP_DATA.teams[teamKey]?.squad || [];
     // Pick starters: 1 GK + top 4 DEF + top 4 MID + top 3 FWD sorted by star/caps
     const byPos = (pos) => squad.filter(p=>p.pos===pos).sort((a,b)=>(b.star?1:0)-(a.star?1:0)||(b.caps||0)-(a.caps||0));

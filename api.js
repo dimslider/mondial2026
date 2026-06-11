@@ -5,7 +5,8 @@
 
 const FD_API_KEY = window.FD_API_KEY || '';
 const FD_BASE    = 'https://api.football-data.org/v4';
-window.TEAM_CRESTS = window.TEAM_CRESTS || {};  // דגלים רשמיים מה-API לכל קבוצה
+window.TEAM_CRESTS  = window.TEAM_CRESTS  || {};  // דגלים רשמיים מה-API לכל קבוצה
+window.TEAM_API_IDS = window.TEAM_API_IDS || {};  // מזהי קבוצות ב-API לשליפת סגלים
 
 // ===== ENGLISH → HEBREW TEAM NAME MAP =====
 const ENG_TO_HEB = {
@@ -143,6 +144,9 @@ async function syncMatchSchedule() {
     // Save official crest image from API — fallback flag for any team
     if (m.homeTeam?.crest) window.TEAM_CRESTS[homeHeb] = m.homeTeam.crest;
     if (m.awayTeam?.crest) window.TEAM_CRESTS[awayHeb] = m.awayTeam.crest;
+    // Save API team IDs — used to fetch real squads on demand
+    if (m.homeTeam?.id) window.TEAM_API_IDS[homeHeb] = m.homeTeam.id;
+    if (m.awayTeam?.id) window.TEAM_API_IDS[awayHeb] = m.awayTeam.id;
 
     // Add unknown teams to FLAG_CODES — convert FIFA 3-letter code to ISO
     if (homeHeb && !FLAG_CODES[homeHeb] && !EXTRA_FLAG_CODES[homeHeb]) {
