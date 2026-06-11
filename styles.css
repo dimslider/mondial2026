@@ -1270,6 +1270,27 @@ html, body {
   border-radius: 50%;
   display: block;
 }
+.mscore-live { color: #ff5252; }
+.live-minute-badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 10px;
+  background: rgba(255,60,60,.15);
+  border: 1px solid rgba(255,60,60,.4);
+  border-radius: 12px;
+  color: #ff6b6b;
+  font-size: .75rem;
+  font-weight: 800;
+  animation: livePulse 1.6s ease-in-out infinite;
+}
+.nm-live-score {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.nm-live-now { background: rgba(255,60,60,.2) !important; }
+@keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
 .exact-score-btn {
   display: block;
   width: 100%;

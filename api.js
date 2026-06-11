@@ -198,31 +198,59 @@ function toLocalTime(utcStr) {
   } catch(e) { return ''; }
 }
 
-// ===== SYNC LIVE RESULTS =====
+// ===== SYNC LIVE RESULTS (כולל משחקים חיים + דקה) =====
+// חישוב דקת משחק משעת הפתיחה (כולל הפסקת מחצית)
+function computeMinute(utcDate, status) {
+  if (status === 'PAUSED') return 'מחצית';
+  const elapsed = Math.floor((Date.now() - new Date(utcDate).getTime()) / 60000);
+  if (elapsed <= 45) return Math.max(1, elapsed) + "'";
+  if (elapsed <= 60) return 'מחצית';          // הפסקה (~15 דק')
+  return Math.min(90, elapsed - 15) + "'";
+}
+
 async function syncLiveResults() {
-  const data = await fdFetch(`/competitions/WC/matches?status=FINISHED`);
+  const data = await fdFetch(`/competitions/WC/matches`);
   if (!data?.matches) return;
+  let changed = false;
 
   data.matches.forEach(apiMatch => {
-    const homeEng = apiMatch.homeTeam?.name || '';
-    const awayEng = apiMatch.awayTeam?.name || '';
-    const homeHeb = ENG_TO_HEB[homeEng] || homeEng;
-    const awayHeb = ENG_TO_HEB[awayEng] || awayEng;
-
+    const homeHeb = ENG_TO_HEB[(apiMatch.homeTeam?.name||'').trim()] || apiMatch.homeTeam?.name;
+    const awayHeb = ENG_TO_HEB[(apiMatch.awayTeam?.name||'').trim()] || apiMatch.awayTeam?.name;
     const localMatch = WORLD_CUP_DATA.matches.find(m =>
-      m.home === homeHeb && m.away === awayHeb
-    );
+      m.home === homeHeb && m.away === awayHeb);
     if (!localMatch) return;
 
     const hs = apiMatch.score?.fullTime?.home;
     const as = apiMatch.score?.fullTime?.away;
-    if (hs === null || hs === undefined) return;
-    if (localMatch.homeScore === hs && localMatch.awayScore === as) return;
+    const isLive = apiMatch.status === 'IN_PLAY' || apiMatch.status === 'PAUSED';
 
+    if (isLive) {
+      // משחק חי — תוצאה שוטפת + דקה, בלי חלוקת נקודות
+      const minute = apiMatch.minute ? apiMatch.minute + "'" : computeMinute(apiMatch.utcDate, apiMatch.status);
+      if (localMatch.homeScore !== (hs??0) || localMatch.awayScore !== (as??0) || localMatch.minute !== minute) changed = true;
+      localMatch.live      = true;
+      localMatch.minute    = minute;
+      localMatch.homeScore = hs ?? 0;
+      localMatch.awayScore = as ?? 0;
+      return;
+    }
+
+    if (apiMatch.status !== 'FINISHED' || localMatch.finished) {
+      if (localMatch.live && apiMatch.status !== 'IN_PLAY' && apiMatch.status !== 'PAUSED') {
+        localMatch.live = false; localMatch.minute = null; changed = true;
+      }
+      return;
+    }
+    if (hs === null || hs === undefined) return;
+
+    // משחק שהסתיים — תוצאה סופית + חלוקת נקודות (פעם אחת בלבד)
+    localMatch.finished  = true;
+    localMatch.live      = false;
+    localMatch.minute    = null;
     localMatch.homeScore = hs;
     localMatch.awayScore = as;
+    changed = true;
 
-    // Award points
     if (window.db && window.allPredictions) {
       const mp = window.allPredictions[localMatch.id] || {};
       Object.entries(mp).forEach(([uid, pred]) => {
@@ -234,11 +262,13 @@ async function syncLiveResults() {
         }
       });
     }
-    console.log(`✅ Score updated: ${homeHeb} ${hs}–${as} ${awayHeb}`);
+    console.log(`✅ Final: ${homeHeb} ${hs}–${as} ${awayHeb}`);
   });
 
-  if (activePage === 'matches') renderMatches();
-  if (activePage === 'home')    renderHome();
+  if (changed) {
+    if (activePage === 'matches') renderMatches();
+    if (activePage === 'home')    renderHome();
+  }
 }
 
 // ===== LIVE SQUAD FROM API =====
@@ -275,9 +305,9 @@ async function startLivePolling() {
   if (!FD_API_KEY) return;
   // First: load the real schedule
   await syncMatchSchedule();
-  // Then: keep syncing results every 3 minutes
+  // Then: keep syncing results every minute (live scores + minute)
   syncLiveResults();
-  pollingInterval = setInterval(syncLiveResults, 3 * 60 * 1000);
+  pollingInterval = setInterval(syncLiveResults, 60 * 1000);
   console.log('🔴 Live polling started');
 }
 function stopLivePolling() {

@@ -162,7 +162,8 @@ function renderHome() {
   const me = allUsers[currentUser.id] || { score:0, correct:0 };
   const sorted = Object.entries(allUsers).sort((a,b)=>(b[1].score||0)-(a[1].score||0));
   const myRank = sorted.findIndex(([id])=>id===currentUser.id)+1;
-  const nextMatch = WORLD_CUP_DATA.matches.find(m => m.homeScore === null);
+  const nextMatch = WORLD_CUP_DATA.matches.find(m => m.live)
+                 || WORLD_CUP_DATA.matches.find(m => m.homeScore === null);
   const earnedBadges = (me.badges||[]).length;
 
   container.innerHTML = `
@@ -187,7 +188,7 @@ function renderHome() {
     ${buildFastFacts(nextMatch)}
   `;
 
-  if (nextMatch) startCountdown(nextMatch);
+  if (nextMatch && !nextMatch.live) startCountdown(nextMatch);
 }
 
 function buildNextMatchCard(m) {
@@ -200,15 +201,18 @@ function buildNextMatchCard(m) {
   const predSelected = myPred?.result;
   return `
     <div class="next-match-card">
-      <div class="nm-soon-badge"><span>🔴</span> LIVE SOON</div>
+      <div class="nm-soon-badge ${m.live?'nm-live-now':''}"><span>🔴</span> ${m.live?'LIVE עכשיו':'LIVE SOON'}</div>
       <div class="nm-teams-row">
         <div class="nm-team">
           ${buildFlagBadge(m.home,'lg')}
           <div class="nm-teamname">${m.home}</div>
         </div>
         <div class="nm-center">
-          <div class="nm-starts">מתחיל בעוד</div>
-          <div class="nm-countdown" id="home-countdown">--:--:--</div>
+          ${m.live
+            ? `<div class="nm-live-score">${m.homeScore} — ${m.awayScore}</div>
+               <div class="live-minute-badge">🔴 ${m.minute||'LIVE'}</div>`
+            : `<div class="nm-starts">מתחיל בעוד</div>
+               <div class="nm-countdown" id="home-countdown">--:--:--</div>`}
           <div class="nm-venue-lbl">${m.venue}</div>
         </div>
         <div class="nm-team">
@@ -402,7 +406,7 @@ async function retrySchedule() {
 function buildMatchRow(m, delay) {
   const hd = WORLD_CUP_DATA.teams[m.home] || { flag:'🏳', color:'#444' };
   const ad = WORLD_CUP_DATA.teams[m.away] || { flag:'🏳', color:'#444' };
-  const fin = m.homeScore !== null;
+  const fin = m.homeScore !== null && !m.live;
   const mp  = allPredictions[m.id] || {};
   const myPred = mp[currentUser.id];
   const total  = Object.keys(mp).length;
@@ -461,7 +465,10 @@ function buildMatchRow(m, delay) {
           <div class="match-team-name">${m.home}</div>
         </div>
         <div class="match-center-block" onclick="openMatchCenter('${m.id}')">
-          ${fin
+          ${m.live
+            ? `<div class="mscore-big mscore-live">${m.homeScore} <span class="mscore-dash">—</span> ${m.awayScore}</div>
+               <div class="live-minute-badge">🔴 ${m.minute||'LIVE'}</div>`
+            : fin
             ? `<div class="mscore-big">${m.homeScore} <span class="mscore-dash">—</span> ${m.awayScore}</div>`
             : `<div class="mvs-block"><div class="mvs">VS</div><div class="mtime">${m.time}</div></div>`}
           ${total>0 ? `<div class="vote-mini" style="margin-top:6px">
