@@ -1199,3 +1199,34 @@ input, textarea, select {
 .nm-odd-flag { display: block; font-size: 1rem; margin-bottom: 2px; }
 .nm-venue-lbl { font-size: .62rem; color: var(--muted); margin-top: 2px; }
 .nm-votes-count { text-align: center; font-size: .68rem; color: var(--muted); padding-bottom: 10px; }
+
+/* ===== INTRO TAP OVERLAY ===== */
+.intro-tap-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.intro-tap-card {
+  text-align: center;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+.intro-tap-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 20px rgba(245,200,66,.8));
+}
+.intro-tap-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: .03em;
+  text-shadow: 0 2px 8px rgba(0,0,0,.8);
+}
+.intro-skip.hidden { display: none; }

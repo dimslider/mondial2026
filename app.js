@@ -3,32 +3,44 @@
   const video  = document.getElementById('intro-video');
   const screen = document.getElementById('intro-screen');
   const prog   = document.getElementById('intro-progress');
+  const tapOvl = document.getElementById('intro-tap');
+  const skipBtn= document.getElementById('intro-skip-btn');
   if (!video || !screen) return;
 
   let progInterval = null;
+  let hardCapTimer = null;
 
   function goToLogin() {
     clearInterval(progInterval);
+    clearTimeout(hardCapTimer);
     screen.classList.add('hidden');
     document.getElementById('login-screen').classList.add('active');
   }
 
-  // Animate progress bar while video plays
-  video.addEventListener('loadedmetadata', () => {
-    const dur = video.duration || 10;
-    progInterval = setInterval(() => {
-      const pct = (video.currentTime / dur) * 100;
-      if (prog) prog.style.width = pct + '%';
-    }, 200);
+  // User taps → unmute and play with sound
+  window.introUnmute = function() {
+    tapOvl.style.display = 'none';
+    video.muted = false;
+    video.currentTime = 0;
+    video.play().catch(() => {});
+    if (skipBtn) skipBtn.classList.remove('hidden');
+    // Start hard cap only after user interaction
+    hardCapTimer = setTimeout(goToLogin, video.duration ? (video.duration * 1000 + 500) : 30000);
+  };
+
+  // Animate progress bar
+  video.addEventListener('timeupdate', () => {
+    const dur = video.duration || 1;
+    if (prog) prog.style.width = (video.currentTime / dur * 100) + '%';
   });
 
   // Auto-advance when video ends
   video.addEventListener('ended', goToLogin);
 
-  // Fallback: if video fails to load, skip after 1.5s
-  video.addEventListener('error', () => setTimeout(goToLogin, 1500));
+  // Fallbacks for load failures
+  video.addEventListener('error', goToLogin);
+  video.addEventListener('stalled', () => { if (!tapOvl.style.display) setTimeout(goToLogin, 3000); });
 
-  // Expose skip function globally
   window.skipIntro = goToLogin;
 })();
 
@@ -81,8 +93,9 @@ function hashStr(s) { return s.split('').reduce((a,c) => ((a<<5)-a)+c.charCodeAt
 // ===== FIREBASE =====
 function initFirebase() {
   if (!window.firebaseConfig) { bootDemo(); return; }
-  const fbApp = firebase.initializeApp(window.firebaseConfig);
-  db = firebase.database(fbApp);
+  try {
+    const fbApp = firebase.apps.length ? firebase.app() : firebase.initializeApp(window.firebaseConfig);
+    db = firebase.database(fbApp);
 
   db.ref('users/'+currentUser.id).transaction(u =>
     u ? { ...u, name:currentUser.name, avatar:currentUser.avatar }
@@ -114,6 +127,10 @@ function initFirebase() {
 
   // Start football-data.org live polling (only if API key set)
   if (typeof startLivePolling === 'function') startLivePolling();
+  } catch(e) {
+    console.error('Firebase init error:', e);
+    bootDemo();
+  }
 }
 
 function bootDemo() {
