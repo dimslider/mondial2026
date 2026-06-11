@@ -344,7 +344,10 @@ const FLAG_CODES = {
   'מצרים':'eg','ערב הסעודית':'sa','איראן':'ir','דרום קוריאה':'kr',
   'קטאר':'qa','ניו זילנד':'nz','פנמה':'pa','קוסטה ריקה':'cr',
   'הונדורס':'hn','ג\'מייקה':'jm','אל סלבדור':'sv','האיטי':'ht',
-  'ונצואלה':'ve','בוליביה':'bo',
+  'ונצואלה':'ve','בוליביה':'bo','בוסניה':'ba','נורבגיה':'no','שוודיה':'se',
+  'איטליה':'it','יוון':'gr','ויילס':'gb-wls','צפון אירלנד':'gb-nir',
+  'אוזבקיסטן':'uz','ירדן':'jo','עיראק':'iq','כף ורדה':'cv','קוראסאו':'cw',
+  'אלג\'יריה':'dz','פינלנד':'fi','איסלנד':'is','ישראל':'il',
 };
 
 function buildFlagBadge(teamKey, size='md') {
@@ -352,12 +355,16 @@ function buildFlagBadge(teamKey, size='md') {
   const code = FLAG_CODES[teamKey];
   const sz   = size==='lg' ? 'flag-badge-lg' : size==='sm' ? 'flag-badge-sm' : 'flag-badge-md';
   const short = abbrev(teamKey);
-  if (!code) {
+  // 1) flagcdn לפי קוד ISO  2) דגל רשמי מה-API  3) טקסט
+  const imgSrc = code
+    ? `https://flagcdn.com/w80/${code}.png`
+    : (window.TEAM_CRESTS && window.TEAM_CRESTS[teamKey]) || '';
+  if (!imgSrc) {
     return `<div class="flag-badge ${sz}" style="--fc1:${t.color};--fc2:${t.secondColor}"><span class="flag-badge-text">${short}</span></div>`;
   }
   return `
     <div class="flag-badge ${sz}" style="--fc1:${t.color};--fc2:${t.secondColor}">
-      <img class="flag-badge-img" src="https://flagcdn.com/w80/${code}.png"
+      <img class="flag-badge-img" src="${imgSrc}"
            alt="${short}" loading="eager"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <span class="flag-badge-text" style="display:none">${short}</span>
@@ -365,12 +372,28 @@ function buildFlagBadge(teamKey, size='md') {
 }
 
 // ===== MATCHES =====
+let scheduleLoading = false;
 function renderMatches() {
   const container = document.getElementById('page-matches');
   if (!container) return;
+  const needsLoad = WORLD_CUP_DATA.matches.length <= 1;
+  const loadingBanner = needsLoad ? `
+    <div class="api-loading-banner" id="api-loading-banner">
+      ${scheduleLoading
+        ? '<span class="api-spinner">⏳</span> טוען לוח משחקים מה-API...'
+        : '<span>⚠️ לוח המשחקים לא נטען עדיין</span><button class="retry-btn" onclick="retrySchedule()">🔄 נסה שוב</button>'}
+    </div>` : '';
   container.innerHTML = `
     <div class="sec-head"><span class="sec-title">⚽ כל המשחקים</span></div>
+    ${loadingBanner}
     ${WORLD_CUP_DATA.matches.map((m,i) => buildMatchRow(m,i*50)).join('')}`;
+}
+async function retrySchedule() {
+  scheduleLoading = true;
+  renderMatches();
+  const ok = await syncMatchSchedule();
+  scheduleLoading = false;
+  if (!ok) renderMatches();
 }
 
 function buildMatchRow(m, delay) {

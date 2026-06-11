@@ -5,6 +5,7 @@
 
 const FD_API_KEY = window.FD_API_KEY || '';
 const FD_BASE    = 'https://api.football-data.org/v4';
+window.TEAM_CRESTS = window.TEAM_CRESTS || {};  // דגלים רשמיים מה-API לכל קבוצה
 
 // ===== ENGLISH → HEBREW TEAM NAME MAP =====
 const ENG_TO_HEB = {
@@ -32,7 +33,8 @@ const ENG_TO_HEB = {
   'Wales':'ויילס','Northern Ireland':'צפון אירלנד','Ireland':'אירלנד',
   'Uzbekistan':'אוזבקיסטן','Jordan':'ירדן','Iraq':'עיראק',
   'United Arab Emirates':'איחוד האמירויות','China':'סין','India':'הודו',
-  'Cabo Verde':'כף ורדה','Cape Verde':'כף ורדה','Curacao':'קוראסאו','Curaçao':'קוראסאו',
+  'Cabo Verde':'כף ורדה','Cape Verde':'כף ורדה','Cape Verde Islands':'כף ורדה',
+  'Curacao':'קוראסאו','Curaçao':'קוראסאו','Congo DR':'קונגו',
   'Algeria':'אלג\'יריה','Benin':'בנין','Burkina Faso':'בורקינה פאסו',
   'Gabon':'גבון','Guinea':'גינאה','Libya':'לוב','Madagascar':'מדגסקר',
   'Mozambique':'מוזמביק','Namibia':'נמיביה','Niger':'ניז\'ר',
@@ -130,11 +132,17 @@ async function syncMatchSchedule() {
     'Estadio Akron':'גוודלחרה','Estadio BBVA':'מונטריי',
   };
 
-  const newMatches = data.matches.map((m, i) => {
-    const homeEng = m.homeTeam?.name || '';
-    const awayEng = m.awayTeam?.name || '';
+  // רק משחקים ששתי הקבוצות בהם ידועות (מדלג על נוקאאוט שטרם נקבע)
+  const known = data.matches.filter(m => m.homeTeam?.name && m.awayTeam?.name);
+  const newMatches = known.map((m, i) => {
+    const homeEng = (m.homeTeam?.name || '').trim();
+    const awayEng = (m.awayTeam?.name || '').trim();
     const homeHeb = ENG_TO_HEB[homeEng] || homeEng;
     const awayHeb = ENG_TO_HEB[awayEng] || awayEng;
+
+    // Save official crest image from API — fallback flag for any team
+    if (m.homeTeam?.crest) window.TEAM_CRESTS[homeHeb] = m.homeTeam.crest;
+    if (m.awayTeam?.crest) window.TEAM_CRESTS[awayHeb] = m.awayTeam.crest;
 
     // Add unknown teams to FLAG_CODES — convert FIFA 3-letter code to ISO
     if (homeHeb && !FLAG_CODES[homeHeb] && !EXTRA_FLAG_CODES[homeHeb]) {
