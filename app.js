@@ -466,6 +466,10 @@ function buildFlagBadge(teamKey, size='md') {
 
 // ===== MATCHES =====
 let scheduleLoading = false;
+let matchesView = 'list';   // 'list' | 'groups'
+
+function setMatchesView(v) { matchesView = v; renderMatches(); }
+
 function renderMatches() {
   const container = document.getElementById('page-matches');
   if (!container) return;
@@ -476,10 +480,71 @@ function renderMatches() {
         ? '<span class="api-spinner">⏳</span> טוען לוח משחקים מה-API...'
         : '<span>⚠️ לוח המשחקים לא נטען עדיין</span><button class="retry-btn" onclick="retrySchedule()">🔄 נסה שוב</button>'}
     </div>` : '';
+  const tabs = `
+    <div class="mv-tabs">
+      <button class="mv-tab ${matchesView==='list'?'active':''}" onclick="setMatchesView('list')">⚽ משחקים</button>
+      <button class="mv-tab ${matchesView==='groups'?'active':''}" onclick="setMatchesView('groups')">🏆 בתים</button>
+    </div>`;
   container.innerHTML = `
-    <div class="sec-head"><span class="sec-title">⚽ כל המשחקים</span></div>
+    ${tabs}
     ${loadingBanner}
-    ${WORLD_CUP_DATA.matches.map((m,i) => buildMatchRow(m,i*50)).join('')}`;
+    ${matchesView==='groups'
+      ? renderGroupStandings()
+      : WORLD_CUP_DATA.matches.map((m,i) => buildMatchRow(m,i*50)).join('')}`;
+}
+
+// ===== GROUP STANDINGS — מחושב מתוצאות המשחקים, מתעדכן חי =====
+function computeStandings() {
+  const groups = {};
+  WORLD_CUP_DATA.matches.forEach(m => {
+    if (!m.group || m.group.length > 2) return;   // רק שלב הבתים
+    if (!groups[m.group]) groups[m.group] = {};
+    [m.home, m.away].forEach(t => {
+      if (!groups[m.group][t]) groups[m.group][t] = { team:t, p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0, live:false };
+    });
+    if (m.homeScore === null || m.awayScore === null) return;
+    const h = groups[m.group][m.home], a = groups[m.group][m.away];
+    h.p++; a.p++;
+    h.gf += m.homeScore; h.ga += m.awayScore;
+    a.gf += m.awayScore; a.ga += m.homeScore;
+    if (m.homeScore > m.awayScore)      { h.w++; a.l++; h.pts += 3; }
+    else if (m.homeScore < m.awayScore) { a.w++; h.l++; a.pts += 3; }
+    else                                { h.d++; a.d++; h.pts++; a.pts++; }
+    if (m.live) { h.live = true; a.live = true; }
+  });
+  return groups;
+}
+
+function renderGroupStandings() {
+  const groups = computeStandings();
+  const keys = Object.keys(groups).sort();
+  if (!keys.length) return '<p style="text-align:center;color:var(--muted);padding:30px">הבתים יוצגו כשלוח המשחקים ייטען</p>';
+  return keys.map(g => {
+    const rows = Object.values(groups[g])
+      .sort((x,y) => y.pts-x.pts || (y.gf-y.ga)-(x.gf-x.ga) || y.gf-x.gf || x.team.localeCompare(y.team));
+    return `
+    <div class="group-card">
+      <div class="group-card-head">בית ${g}</div>
+      <table class="group-table">
+        <thead><tr>
+          <th class="gt-team">קבוצה</th><th>מש'</th><th>נ'</th><th>ת'</th><th>ה'</th><th>הפרש</th><th class="gt-pts">נק'</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map((r,i) => `
+          <tr class="${i<2?'gt-qualify':''}">
+            <td class="gt-team">
+              <span class="gt-rank">${i+1}</span>
+              ${buildFlagBadge(r.team,'sm')}
+              <span class="gt-name">${r.team}${r.live?' <span class="gt-live">🔴</span>':''}</span>
+            </td>
+            <td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td>
+            <td>${r.gf-r.ga>0?'+':''}${r.gf-r.ga}</td>
+            <td class="gt-pts">${r.pts}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`;
+  }).join('') + `<div class="gt-legend">🟢 שתי הראשונות בכל בית עולות לשלב הנוקאאוט</div>`;
 }
 async function retrySchedule() {
   scheduleLoading = true;
