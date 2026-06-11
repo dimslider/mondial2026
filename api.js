@@ -40,15 +40,24 @@ const EXTRA_FLAG_CODES = {
 };
 
 // ===== FETCH HELPER =====
+// football-data.org free tier only allows localhost — route through CORS proxy
+const CORS_PROXY = 'https://corsproxy.io/?';
+
 async function fdFetch(path) {
   if (!FD_API_KEY) return null;
-  try {
-    const res = await fetch(`${FD_BASE}${path}`, {
-      headers: { 'X-Auth-Token': FD_API_KEY }
-    });
-    if (!res.ok) { console.warn('FD API error:', res.status, path); return null; }
-    return res.json();
-  } catch(e) { console.warn('FD fetch failed:', e.message); return null; }
+  const target = `${FD_BASE}${path}`;
+  // Try direct first (works on localhost), fall back to proxy (works on GitHub Pages)
+  for (const url of [target, CORS_PROXY + encodeURIComponent(target)]) {
+    try {
+      const res = await fetch(url, { headers: { 'X-Auth-Token': FD_API_KEY } });
+      if (res.ok) return res.json();
+      if (res.status === 429) { console.warn('Rate limit hit'); return null; }
+    } catch(e) {
+      if (url === target) continue; // CORS blocked — try proxy
+      console.warn('FD fetch failed:', e.message);
+    }
+  }
+  return null;
 }
 
 // ===== SYNC FULL MATCH SCHEDULE FROM API =====
