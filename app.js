@@ -206,6 +206,12 @@ function initFirebase() {
     if (activePage === 'home') renderHome();
   });
 
+  // תוצאות סופיות שנשמרו ע"י מכשיר כלשהו — מקור אמת משותף
+  db.ref('results').on('value', snap => {
+    window.fbResults = snap.val() || {};
+    applyFbResults();
+  });
+
   // Start football-data.org live polling (only if API key set)
   if (typeof startLivePolling === 'function') startLivePolling();
   } catch(e) {
@@ -221,6 +227,30 @@ function bootDemo() {
     demo_sara: { name:'שרה', avatar:'🌟', score:9, correct:2, trivia:1, badges:['first_pred'] },
   };
   renderHome(); renderMatches(); renderLeaderboard(); renderBadges();
+}
+
+// מחיל תוצאות סופיות מ-Firebase על לוח המשחקים המקומי
+// מזהה לפי שמות הקבוצות (יציב גם אם סדר המשחקים מה-API משתנה)
+function applyFbResults() {
+  const res = window.fbResults || {};
+  let changed = false;
+  Object.values(res).forEach(r => {
+    if (!r || r.hs == null) return;
+    const m = WORLD_CUP_DATA.matches.find(x => x.home === r.home && x.away === r.away);
+    if (!m) return;
+    if (m.homeScore !== r.hs || m.awayScore !== r.as || !m.finished) {
+      m.homeScore = r.hs;
+      m.awayScore = r.as;
+      m.finished  = true;
+      m.live      = false;
+      m.minute    = null;
+      changed = true;
+    }
+  });
+  if (changed) {
+    if (activePage === 'matches') renderMatches();
+    if (activePage === 'home')    renderHome();
+  }
 }
 
 function updateTopBar() {

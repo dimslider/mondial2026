@@ -186,6 +186,9 @@ async function syncMatchSchedule() {
   WORLD_CUP_DATA.matches = newMatches;
   console.log(`✅ Loaded ${newMatches.length} real matches from API`);
 
+  // החלת תוצאות סופיות שכבר שמורות ב-Firebase (הלוח החדש דרס אותן)
+  if (typeof applyFbResults === 'function') applyFbResults();
+
   // Re-render if app is active
   if (typeof renderMatches === 'function' && activePage === 'matches') renderMatches();
   if (typeof renderHome    === 'function' && activePage === 'home')    renderHome();
@@ -214,8 +217,26 @@ function computeMinute(utcDate, status) {
   return m2 >= 90 ? "90'+" : '~' + m2 + "'";
 }
 
+// הפרוקסי מחזיר לפעמים תשובות ישנות מהמטמון — מנסה עד 3 פעמים ובוחר את הטרייה ביותר
+async function fetchFreshMatches() {
+  // מקסימום 2 ניסיונות — יותר מזה שורף את מכסת ה-API (10 בקשות/דקה)
+  let best = null, bestScore = -1;
+  for (let i = 0; i < 2; i++) {
+    const d = await fdFetch(`/competitions/WC/matches`);
+    if (!d?.matches) continue;
+    const score = d.matches.filter(m => m.score?.fullTime?.home != null).length;
+    if (score > bestScore) { best = d; bestScore = score; }
+    // תשובה "תקועה": משחק שהתחיל מזמן ועדיין עתידי, או הסתיים בלי תוצאה
+    const stale = d.matches.some(m =>
+      (m.status === 'TIMED' && Date.now() - new Date(m.utcDate).getTime() > 2.5 * 3600 * 1000) ||
+      (m.status === 'FINISHED' && m.score?.fullTime?.home == null));
+    if (!stale) break;
+  }
+  return best;
+}
+
 async function syncLiveResults() {
-  const data = await fdFetch(`/competitions/WC/matches`);
+  const data = await fetchFreshMatches();
   if (!data?.matches) return;
   let changed = false;
 
@@ -257,18 +278,30 @@ async function syncLiveResults() {
     localMatch.awayScore = as;
     changed = true;
 
-    if (window.db && window.allPredictions) {
-      const mp = window.allPredictions[localMatch.id] || {};
-      Object.entries(mp).forEach(([uid, pred]) => {
-        const pts = calcPoints(localMatch, pred);
-        if (pts > 0) {
-          window.db.ref('users/' + uid).transaction(u =>
-            u ? { ...u, score:(u.score||0)+pts, correct:(u.correct||0)+1 } : u
-          );
-        }
+    // חלוקת נקודות — פעם אחת בלבד לכל משחק, גם כשהרבה מכשירים מחוברים:
+    // נעילה משותפת ב-Firebase מבטיחה שרק המכשיר הראשון מחלק
+    // db ו-allPredictions מוגדרים ב-app.js כ-let גלובלי (לא על window!)
+    if (typeof db !== 'undefined' && db && typeof allPredictions !== 'undefined') {
+      // שמירת התוצאה הסופית ב-Firebase — כל המכשירים יקבלו אותה
+      // גם אם ה-proxy שלהם מחזיר נתונים ישנים
+      db.ref('results/' + localMatch.id).set({ hs, as, home: homeHeb, away: awayHeb });
+      db.ref('awarded/' + localMatch.id).transaction(cur => {
+        if (cur) return;            // כבר חולק — בטל
+        return { ts: Date.now(), score: `${hs}-${as}` };
+      }, (err, committed) => {
+        if (err || !committed) return;
+        const mp = allPredictions[localMatch.id] || {};
+        Object.entries(mp).forEach(([uid, pred]) => {
+          const pts = calcPoints(localMatch, pred);
+          if (pts > 0) {
+            db.ref('users/' + uid).transaction(u =>
+              u ? { ...u, score:(u.score||0)+pts, correct:(u.correct||0)+1 } : u
+            );
+          }
+        });
+        console.log(`🏅 Points awarded: ${homeHeb} ${hs}–${as} ${awayHeb}`);
       });
     }
-    console.log(`✅ Final: ${homeHeb} ${hs}–${as} ${awayHeb}`);
   });
 
   if (changed) {
@@ -311,9 +344,9 @@ async function startLivePolling() {
   if (!FD_API_KEY) return;
   // First: load the real schedule
   await syncMatchSchedule();
-  // Then: keep syncing results every 30s (live scores + minute)
+  // Then: keep syncing results every 60s (2 ניסיונות לסבב = עד 4 בקשות/דקה, בטוח במכסה)
   syncLiveResults();
-  pollingInterval = setInterval(syncLiveResults, 30 * 1000);
+  pollingInterval = setInterval(syncLiveResults, 60 * 1000);
   console.log('🔴 Live polling started');
 }
 function stopLivePolling() {
