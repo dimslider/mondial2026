@@ -359,7 +359,7 @@ function buildNextMatchCard(m) {
   const predSelected = myPred?.result;
   return `
     <div class="next-match-card">
-      <div class="nm-soon-badge ${m.live?'nm-live-now':''}"><span>🔴</span> ${m.live?'LIVE עכשיו':'LIVE SOON'}</div>
+      <div class="nm-soon-badge ${m.live?'nm-live-now':''}">${m.live?'<span>🔴</span> LIVE עכשיו':'⏰ המשחק הקרוב'}</div>
       <div class="nm-teams-row">
         <div class="nm-team">
           ${buildFlagBadge(m.home,'lg')}
@@ -470,7 +470,8 @@ function buildFastFacts(nextMatch) {
 
 function startCountdown(match) {
   if (countdownInterval) clearInterval(countdownInterval);
-  const target = new Date(match.date + 'T' + match.time + ':00');
+  // kickoff (UTC מלא) הוא מקור האמת; נופלים חזרה ל-date+time רק אם חסר
+  const target = match.kickoff ? new Date(match.kickoff) : new Date(match.date + 'T' + match.time + ':00');
   function tick() {
     const el = document.getElementById('home-countdown');
     if (!el) { clearInterval(countdownInterval); return; }
@@ -897,6 +898,7 @@ function openMatchCenter(matchId) {
     <div class="card">
       <div class="sec-head"><span class="sec-title">🗳️ ניחושי הכיתה</span></div>
       ${donut}
+      ${buildClassPredictions(m, mp)}
     </div>
 
     <div class="card">
@@ -926,7 +928,7 @@ function openMatchCenter(matchId) {
 
   document.getElementById('match-modal').classList.remove('hidden');
   if (!fin) {
-    const target = new Date(m.date + 'T' + m.time + ':00');
+    const target = m.kickoff ? new Date(m.kickoff) : new Date(m.date + 'T' + m.time + ':00');
     const mcInt = setInterval(() => {
       const el = document.getElementById('mc-countdown');
       if (!el) { clearInterval(mcInt); return; }
@@ -938,6 +940,43 @@ function openMatchCenter(matchId) {
       el.textContent = `${h}:${min}:${s}`;
     }, 1000);
   }
+}
+
+// רשימת מי ניחש מה — גלוי לכל המשתמשים
+function buildClassPredictions(m, mp) {
+  // רק ניחושים תקינים (מסנן רשומות פגומות מבאג ישן)
+  const entries = Object.entries(mp || {}).filter(([uid, p]) =>
+    p && typeof p === 'object' && ['home','draw','away'].includes(p.result));
+  if (!entries.length) return '';
+  const fin = m.homeScore !== null && !m.live;
+  // מיון: מנצחי בית, תיקו, מנצחי חוץ
+  const order = { home:0, draw:1, away:2 };
+  entries.sort((a,b) => (order[a[1].result]??9) - (order[b[1].result]??9));
+
+  const rows = entries.map(([uid, pred]) => {
+    const u = allUsers[uid] || {};
+    const name = u.name || pred.name || 'אנונימי';
+    const avatar = u.avatar || '⚽';
+    let label, cls;
+    if (pred.result === 'home')      { label = m.home; cls = 'cp-home'; }
+    else if (pred.result === 'away') { label = m.away; cls = 'cp-away'; }
+    else                             { label = 'תיקו'; cls = 'cp-draw'; }
+    const exact = (pred.homeScore != null && pred.awayScore != null)
+      ? ` <span class="cp-exact">${pred.homeScore}-${pred.awayScore}</span>` : '';
+    const mark = fin ? (isCorrect(m, pred) ? '<span class="cp-ok">✅</span>' : '<span class="cp-no">❌</span>') : '';
+    return `
+      <div class="cp-row">
+        <span class="cp-user">${avatar} ${name}</span>
+        <span class="cp-pick ${cls}">${label}${exact}</span>
+        ${mark}
+      </div>`;
+  }).join('');
+
+  return `
+    <div class="cp-list">
+      <div class="cp-head">👀 מי ניחש מה (${entries.length})</div>
+      ${rows}
+    </div>`;
 }
 
 function buildDonut(homeP, drawP, awayP, m) {

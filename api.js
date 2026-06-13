@@ -160,7 +160,7 @@ async function syncMatchSchedule() {
       if (iso) EXTRA_FLAG_CODES[awayHeb] = iso;
     }
 
-    const dateStr  = m.utcDate ? m.utcDate.slice(0,10) : '';
+    const dateStr  = m.utcDate ? toLocalDate(m.utcDate) : '';
     const timeStr  = m.utcDate ? toLocalTime(m.utcDate) : '';
     const venue    = VENUE_MAP[m.venue] || m.venue || '';
     const group    = m.group ? m.group.replace('GROUP_','') : '';
@@ -169,6 +169,7 @@ async function syncMatchSchedule() {
     return {
       id:        'm' + (i+1),
       apiId:     m.id,
+      kickoff:   m.utcDate || '',   // חותמת UTC מלאה — מקור אמת לספירה לאחור
       date:      dateStr,
       time:      timeStr,
       home:      homeHeb,
@@ -201,6 +202,14 @@ function toLocalTime(utcStr) {
     const d = new Date(utcStr);
     return d.toLocaleTimeString('he-IL', { hour:'2-digit', minute:'2-digit', timeZone:'Asia/Jerusalem' });
   } catch(e) { return ''; }
+}
+
+// התאריך המקומי (שעון ישראל) בפורמט YYYY-MM-DD — חייב להתאים לשעה המקומית,
+// אחרת משחק שמתחיל אחרי חצות יקבל תאריך UTC של היום הקודם והספירה לאחור תישבר
+function toLocalDate(utcStr) {
+  try {
+    return new Date(utcStr).toLocaleDateString('en-CA', { timeZone:'Asia/Jerusalem' });
+  } catch(e) { return utcStr ? utcStr.slice(0,10) : ''; }
 }
 
 // ===== SYNC LIVE RESULTS (כולל משחקים חיים + דקה) =====

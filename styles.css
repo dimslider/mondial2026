@@ -1270,6 +1270,24 @@ html, body {
   border-radius: 50%;
   display: block;
 }
+/* ═══ CLASS PREDICTIONS (מי ניחש מה) ═══ */
+.cp-list { margin-top: 14px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 10px; }
+.cp-head { font-size: .82rem; font-weight: 700; color: var(--muted); margin-bottom: 8px; }
+.cp-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 0; border-top: 1px solid rgba(255,255,255,.04);
+}
+.cp-row:first-of-type { border-top: none; }
+.cp-user { flex: 1; font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cp-pick {
+  font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; white-space: nowrap;
+}
+.cp-home { background: rgba(0,200,255,.15); color: #4fc3f7; }
+.cp-away { background: rgba(170,100,255,.15); color: #b388ff; }
+.cp-draw { background: rgba(255,255,255,.1); color: var(--muted); }
+.cp-exact { opacity: .8; font-weight: 800; }
+.cp-ok, .cp-no { font-size: .8rem; }
+
 /* ═══ HOT NEWS ═══ */
 .news-card {
   margin: 10px 16px;
