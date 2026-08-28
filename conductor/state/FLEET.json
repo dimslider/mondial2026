@@ -1,0 +1,345 @@
+{
+  "schema": 1,
+  "cycle": {
+    "id": "2026-W35",
+    "date": "2026-08-28",
+    "mode": "cloud",
+    "disk_scanned": false,
+    "sources": [
+      "ListSkills",
+      "list_triggers",
+      "skill-file grep"
+    ],
+    "note": "מחזור בסיס. סעיפי הדיסק לא נסרקו — הרצה בענן אין לה גישה ל-OneDrive."
+  },
+  "decision_budget": {
+    "total": 3,
+    "used_by_maestro": 2,
+    "left_for_compass": 1
+  },
+  "agents": [
+    {
+      "id": "hiro-compass",
+      "name": "מצפן HIRO",
+      "domain": "HIRO",
+      "level": "L2",
+      "status": "dormant",
+      "cadence": "שבועי — שלב אחרון במחזור המנצח",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "מכריז שהוא רץ בסוף מחזור מטא שבועי. אין Routine שמפעיל אותו."
+    },
+    {
+      "id": "hiro-forge",
+      "name": "HIRO Forge",
+      "domain": "HIRO",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "צינור 6 זרועות: Research → Pulse → Validation → Devil's Advocate → Writing → CEO."
+    },
+    {
+      "id": "hiro-lecture-forge",
+      "name": "Lecture Forge",
+      "domain": "HIRO",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי אירוע ביומן",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "PPTX 40+ שקפים עם הערות מרצה."
+    },
+    {
+      "id": "hiro-parent-mentor",
+      "name": "מדריך הורים",
+      "domain": "קליני",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי מקרה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "NVR · EFFT · SPACE · PMT/PCIT · HIRO-P."
+    },
+    {
+      "id": "psychology-editor",
+      "name": "עורך פסיכולוגי",
+      "domain": "כתיבה",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי טיוטה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "לומד דפוסי כתיבה בכל הרצה."
+    },
+    {
+      "id": "business-manager",
+      "name": "המנהל העסקי",
+      "domain": "עסקי",
+      "level": "L2",
+      "status": "broken",
+      "cadence": "יומי (A) + שבועי (B)",
+      "last_run": "2026-08-27",
+      "score": null,
+      "trend": null,
+      "note": "יתום — שני Routines קוראים לו ואינו מותקן. רץ על fallback inline מאז ההקמה."
+    },
+    {
+      "id": "llm-council",
+      "name": "מועצת היועצים",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי הכרעה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "5 יועצים + ביקורת עמיתים אנונימית."
+    },
+    {
+      "id": "skill-creator",
+      "name": "בונה הסוכנים",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי גיוס",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "הכלי שבו נבנים כל הגיוסים."
+    },
+    {
+      "id": "morning",
+      "name": "תדריך בוקר",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "dormant",
+      "cadence": "יומי אופציונלי",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "אין Routine."
+    },
+    {
+      "id": "rtl-hebrew-docs",
+      "name": "מסמכי RTL",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "duplicate",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "חופף ל-hebrew-document-generator. סותר אותו בקו האדום של חשבונית מס."
+    },
+    {
+      "id": "hebrew-document-generator",
+      "name": "מסמכים בעברית",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "duplicate",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "חופף ל-rtl-hebrew-docs. מציע חשבונית מס — מסמך חשבונאי מוסדר."
+    },
+    {
+      "id": "docx-pptx-pdf-xlsx",
+      "name": "docx · pptx · pdf · xlsx",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי פורמט",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "סוכני פורמט. אין חפיפה."
+    },
+    {
+      "id": "hiro-critic",
+      "name": "Critic",
+      "domain": "HIRO",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "מיוצר היום כסוכן-משנה בלי קובץ. המצפן קורא לתוצר שלו 'האות האמין ביותר במערכת'."
+    },
+    {
+      "id": "hiro-manuscript",
+      "name": "בעל הבית של כתב היד",
+      "domain": "כתיבה",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "מלאי פרקים · עקביות מונחים · חוסמי הגשה."
+    },
+    {
+      "id": "agent-maestro",
+      "name": "מנצח התזמורת",
+      "domain": "תשתית",
+      "level": "L2",
+      "status": "active",
+      "cadence": "שבועי — ראשון 06:15",
+      "last_run": "2026-08-28",
+      "score": null,
+      "trend": null,
+      "note": "הסוכן הזה. מנהל את הצי; לא מייצר תוכן."
+    }
+  ],
+  "routines": [
+    {
+      "name": "בדיקה עסקית יומית",
+      "id": "trig_013LGXpaXG4vykPQKZvy1RKG",
+      "cron": "30 4 * * 0-4",
+      "local": "07:30 א׳–ה׳",
+      "agent": "business-manager",
+      "last_run": "2026-08-27",
+      "last_status": "ABANDONED"
+    },
+    {
+      "name": "דוח מנהל עסקי שבועי",
+      "id": "trig_01Nf1CenLwkJfJdUnvH6rjN7",
+      "cron": "0 5 * * 0",
+      "local": "08:00 ראשון",
+      "agent": "business-manager",
+      "last_run": "2026-08-23",
+      "last_status": "SUCCEEDED"
+    },
+    {
+      "name": "מנצח התזמורת — מחזור שבועי",
+      "id": "trig_0181AdPkAMbtMTijijqRe2ZZ",
+      "cron": "15 3 * * 0",
+      "local": "06:15 ראשון",
+      "agent": "agent-maestro",
+      "last_run": null,
+      "last_status": null,
+      "next_run": "2026-08-30T03:15:00Z"
+    }
+  ],
+  "alerts": [
+    {
+      "sev": "high",
+      "agent": "business-manager",
+      "title": "יתום — שני Routines קוראים לסוכן שאינו מותקן",
+      "detail": "כל הידע העסקי חי בתוך שני פרומפטים של Routines: עמודי האתר, הקווים האדומים המשפטיים, project_id ב-Lovable, שמונה סוכני-משנה. ה-references שהפרומפט מבקש — ובראשם site-lead-engine.md — אינם קיימים.",
+      "fix": "לבנות ב-skill-creator מתוך שני הפרומפטים, ואז לקצר את שני ה-Routines לשורה אחת.",
+      "cost": "3 שעות"
+    },
+    {
+      "sev": "high",
+      "agent": "business-manager",
+      "title": "הבדיקה היומית ננטשה ב-27/8",
+      "detail": "ABANDONED = הסשן נפתח ומת באמצע. הבדיקה עצמה מגדירה שפנייה שלא נענתה תוך יום היא ליד אבוד — ושתיקה שלה נראית בדיוק כמו 'יום שקט'.",
+      "fix": "לוודא ידנית אם הבדיקה של 27/8 הגיעה. אם לא — לבדוק את המייל מאותו יום.",
+      "cost": "15 דקות"
+    },
+    {
+      "sev": "med",
+      "agent": "rtl-hebrew-docs · hebrew-document-generator",
+      "title": "כפילות עם סתירה בקו אדום",
+      "detail": "מפעילים כמעט זהים. הנזק הוא הפעלה בלתי צפויה. גרוע מכך: האחד אוסר הנפקת חשבונית מס והשני מציע אותה.",
+      "fix": "למזג לאחד על בסיס rtl-hebrew-docs; לבלוע ממנו את התבניות הישראליות.",
+      "cost": "2 שעות"
+    },
+    {
+      "sev": "med",
+      "agent": "hiro-compass",
+      "title": "המחזור המטא קיים בהוראות ולא בלוח הזמנים",
+      "detail": "המצפן מכריז שהוא רץ אחרי Critic/Pulse/Launch. לאף אחד מהארבעה אין Routine — המחזור רץ רק כשנזכרים בו ידנית.",
+      "fix": "נסגר מעצמו: המנצח מפעיל את המצפן כשלב אחרון בכל מחזור.",
+      "cost": "0 — כלול"
+    }
+  ],
+  "dispatch": {
+    "note": "המחזור הראשון רץ בראשון 06:15. זו התוכנית שהכללים מייצרים — היא תבוצע ותדווח שם.",
+    "planned": [
+      {
+        "agent": "hiro-compass",
+        "ask": "קרא את ארבעת קבצי _brain, דרג מחדש את הפנקס וכתוב PRIORITIES.md. פתח בטבלת בריאות המערכת.",
+        "why": "לא רץ מתוזמן מעולם · שלב אחרון בכל מחזור"
+      },
+      {
+        "agent": "תיקון: בניית business-manager",
+        "ask": "skill-creator, מקור: שני פרומפטי ה-Routines. ואז קיצור שניהם לשורה אחת.",
+        "why": "תקלה 🔴 — תיקון קודם להפעלה"
+      },
+      {
+        "agent": "— מקום פנוי —",
+        "ask": "נשמר לחובה חיצונית שתתגלה במפקד: דדליין ב-45 יום, פנייה ממתינה, או אירוע ביומן ב-21 יום.",
+        "why": "תקרה 3; לא ממלאים אותה מראש"
+      }
+    ],
+    "excluded": [
+      {
+        "agent": "business-manager (A+B)",
+        "why": "יש לו Routine משלו ב-07:30 וב-08:00 — הפעלה תייצר תוצר כפול"
+      },
+      {
+        "agent": "Critic · Pulse · Launch",
+        "why": "אין להם קובץ. אי אפשר לקרוא להם בשם — זו בדיוק הצעת הגיוס"
+      }
+    ]
+  },
+  "coaching": [],
+  "history": [
+    {
+      "cycle": "2026-W35",
+      "date": "2026-08-28",
+      "agents": 15,
+      "active": 7,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "מחזור בסיס. אין ציונים — קו הבסיס נקבע כאן."
+    }
+  ],
+  "recruits": [
+    {
+      "id": "hiro-critic",
+      "signal": "יתום עם ביקוש",
+      "cost": "3-4 שעות",
+      "mandate": "לתקוף כל טענה שזזה במודל HIRO ולהחזיר דוח בפורמט קבוע ש-EVIDENCE.md יכול לבלוע בלי פרשנות.",
+      "spec": "references/new-agent-pipeline.md#הצעה-1"
+    },
+    {
+      "id": "hiro-manuscript",
+      "signal": "תחום בלי בעלים",
+      "cost": "4-5 שעות",
+      "mandate": "להחזיק את מצב כתב היד — מלאי פרקים, שלב, אורך, עקביות מונחים והפניות צולבות.",
+      "spec": "references/new-agent-pipeline.md#הצעה-2"
+    }
+  ],
+  "waitlist": [
+    {
+      "id": "hiro-pulse · hiro-launch",
+      "signal": "יתום עם ביקוש",
+      "why": "ממתינים לתוצאת hiro-critic. שלושה סוכנים שנבנו יחד על הנחה שלא נבדקה הם שלוש טעויות."
+    },
+    {
+      "id": "סוגר הרצאות",
+      "signal": "תלות אנושית",
+      "why": "קיים כסוכן-משנה במנהל העסקי. פצל רק אם ייראה שנדחק שלושה מחזורים ברצף."
+    },
+    {
+      "id": "קוצר שיחות",
+      "signal": "חזרה ידנית",
+      "why": "⛔ דורש הרצה מקומית — ההרצה בענן לא רואה היסטוריית שיחות."
+    }
+  ],
+  "dashboard_url": "https://claude.ai/code/artifact/165bafe2-bfd9-44d0-8a2a-2e38dbd3c7de"
+}
