@@ -220,6 +220,11 @@
   <section>
     <div class="shead"><h2>אימון</h2><span>נוסף, לא מוחלף</span></div>
     <div class="callout" id="coach"></div>
+    <div class="panel" style="margin-top:16px">
+      <h3>מחזורים</h3>
+      <div class="sub">קו מגמה נפתח מהמחזור השלישי — שתי נקודות אינן מגמה</div>
+      <div id="hist"></div>
+    </div>
   </section>
 
   <div class="foot" id="foot"></div>
@@ -229,183 +234,552 @@
 document.documentElement.dir = "rtl";
 document.documentElement.lang = "he";
 
+/* FLEET-DATA-START — generated from state/FLEET.json by build_dashboard.py. Do not hand-edit. */
 const FLEET = {
-  cycle:{ id:"2026-W35", date:"28/08/2026", mode:"ענן", disk:false,
-          sources:"ListSkills · list_triggers · grep בקבצי סקילים",
-          next:"ראשון 06:15 · מחזור W36" },
-  budget:{ total:3, maestro:2, compass:1 },
-  agents:[
-    {id:"hiro-compass",n:"מצפן HIRO",dom:"HIRO",lvl:"L2",st:"dormant",cad:"שבועי — שלב אחרון במחזור",last:null,score:null,note:"מכריז שהוא רץ בסוף מחזור מטא. אין Routine שמפעיל אותו."},
-    {id:"hiro-forge",n:"HIRO Forge",dom:"HIRO",lvl:"L1",st:"active",cad:"לפי קריאה",last:null,score:null,note:"צינור 6 זרועות: Research → Pulse → Validation → Devil's → Writing → CEO."},
-    {id:"hiro-lecture-forge",n:"Lecture Forge",dom:"HIRO",lvl:"L1",st:"active",cad:"לפי אירוע ביומן",last:null,score:null,note:"PPTX 40+ שקפים עם הערות מרצה."},
-    {id:"hiro-parent-mentor",n:"מדריך הורים",dom:"קליני",lvl:"L1",st:"active",cad:"לפי מקרה",last:null,score:null,note:"NVR · EFFT · SPACE · PMT/PCIT · HIRO-P."},
-    {id:"psychology-editor",n:"עורך פסיכולוגי",dom:"כתיבה",lvl:"L1",st:"active",cad:"לפי טיוטה",last:null,score:null,note:"לומד דפוסי כתיבה בכל הרצה."},
-    {id:"business-manager",n:"המנהל העסקי",dom:"עסקי",lvl:"L2",st:"broken",cad:"יומי (A) + שבועי (B)",last:"27/08",score:null,note:"יתום — שני Routines קוראים לו ואינו מותקן. רץ על fallback מאז ההקמה."},
-    {id:"llm-council",n:"מועצת היועצים",dom:"תשתית",lvl:"L1",st:"active",cad:"לפי הכרעה",last:null,score:null,note:"5 יועצים + ביקורת עמיתים אנונימית."},
-    {id:"skill-creator",n:"בונה הסוכנים",dom:"תשתית",lvl:"L1",st:"active",cad:"לפי גיוס",last:null,score:null,note:"הכלי שבו נבנים כל הגיוסים."},
-    {id:"morning",n:"תדריך בוקר",dom:"תשתית",lvl:"L1",st:"dormant",cad:"יומי אופציונלי",last:null,score:null,note:"אין Routine."},
-    {id:"rtl-hebrew-docs",n:"מסמכי RTL",dom:"מסמכים",lvl:"L1",st:"duplicate",cad:"לפי קריאה",last:null,score:null,note:"חופף. סותר את השני בקו האדום של חשבונית מס."},
-    {id:"hebrew-document-generator",n:"מסמכים בעברית",dom:"מסמכים",lvl:"L1",st:"duplicate",cad:"לפי קריאה",last:null,score:null,note:"חופף. מציע חשבונית מס — מסמך חשבונאי מוסדר."},
-    {id:"docx · pptx · pdf · xlsx",n:"סוכני פורמט",dom:"מסמכים",lvl:"L1",st:"active",cad:"לפי פורמט",last:null,score:null,note:"אין חפיפה ביניהם."},
-    {id:"hiro-critic",n:"Critic",dom:"HIRO",lvl:"L0",st:"proposed",cad:"—",last:null,score:null,note:"רץ היום כסוכן-משנה בלי קובץ ובלי שם."},
-    {id:"hiro-manuscript",n:"בעל הבית של כתב היד",dom:"כתיבה",lvl:"L0",st:"proposed",cad:"—",last:null,score:null,note:"מלאי פרקים · עקביות מונחים · חוסמי הגשה."},
-    {id:"agent-maestro",n:"מנצח התזמורת",dom:"תשתית",lvl:"L2",st:"active",cad:"שבועי — ראשון 06:15",last:"28/08",score:null,note:"הסוכן הזה."}
+  "schema": 1,
+  "cycle": {
+    "id": "2026-W35",
+    "date": "29/08/2026",
+    "mode": "ענן",
+    "disk_scanned": false,
+    "sources": "ListSkills · list_triggers · ListConnectors · Calendar · Gmail · grep",
+    "next": "ראשון 06:15 · מחזור W36",
+    "note": "הרצה חיה. מקורות 1,2,4 + מייל ויומן בוצעו במלואם. סעיפי הדיסק ⛔ לא נסרקו."
+  },
+  "decision_budget": {
+    "total": 3,
+    "used_by_maestro": 2,
+    "left_for_compass": 1
+  },
+  "agents": [
+    {
+      "id": "hiro-compass",
+      "name": "מצפן HIRO",
+      "domain": "HIRO",
+      "level": "L2",
+      "status": "dormant",
+      "cadence": "שבועי — שלב אחרון במחזור המנצח",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "⛔ לא ניתן להרצה בענן — דורש _brain\\ בדיסק. זו תקלת תכנון שההרצה החיה חשפה."
+    },
+    {
+      "id": "hiro-forge",
+      "name": "HIRO Forge",
+      "domain": "HIRO",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "צינור 6 זרועות: Research → Pulse → Validation → Devil's Advocate → Writing → CEO."
+    },
+    {
+      "id": "hiro-lecture-forge",
+      "name": "Lecture Forge",
+      "domain": "HIRO",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי אירוע ביומן",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "PPTX 40+ שקפים. ⚠️ אפס הרצאות ביומן ב-21 יום הקרובים — לא הופעל, ולא מחוסר יכולת."
+    },
+    {
+      "id": "hiro-parent-mentor",
+      "name": "מדריך הורים",
+      "domain": "קליני",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי מקרה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "NVR · EFFT · SPACE · PMT/PCIT · HIRO-P."
+    },
+    {
+      "id": "psychology-editor",
+      "name": "עורך פסיכולוגי",
+      "domain": "כתיבה",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי טיוטה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "לומד דפוסי כתיבה בכל הרצה."
+    },
+    {
+      "id": "business-manager",
+      "name": "המנהל העסקי",
+      "domain": "עסקי",
+      "level": "L2",
+      "status": "broken",
+      "cadence": "יומי (A) + שבועי (B)",
+      "last_run": "2026-08-27",
+      "score": null,
+      "trend": null,
+      "note": "יתום — שני Routines קוראים לו ואינו מותקן. רץ על fallback inline מאז ההקמה."
+    },
+    {
+      "id": "llm-council",
+      "name": "מועצת היועצים",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי הכרעה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "5 יועצים + ביקורת עמיתים אנונימית."
+    },
+    {
+      "id": "skill-creator",
+      "name": "בונה הסוכנים",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי גיוס",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "הכלי שבו נבנים כל הגיוסים."
+    },
+    {
+      "id": "morning",
+      "name": "תדריך בוקר",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "dormant",
+      "cadence": "יומי אופציונלי",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "אין Routine."
+    },
+    {
+      "id": "rtl-hebrew-docs",
+      "name": "מסמכי RTL",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "duplicate",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "חופף ל-hebrew-document-generator. סותר אותו בקו האדום של חשבונית מס."
+    },
+    {
+      "id": "hebrew-document-generator",
+      "name": "מסמכים בעברית",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "duplicate",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "חופף ל-rtl-hebrew-docs. מציע חשבונית מס — מסמך חשבונאי מוסדר."
+    },
+    {
+      "id": "docx-pptx-pdf-xlsx",
+      "name": "docx · pptx · pdf · xlsx",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי פורמט",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "סוכני פורמט. אין חפיפה."
+    },
+    {
+      "id": "hiro-critic",
+      "name": "Critic",
+      "domain": "HIRO",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "מיוצר היום כסוכן-משנה בלי קובץ. המצפן קורא לתוצר שלו 'האות האמין ביותר במערכת'."
+    },
+    {
+      "id": "hiro-manuscript",
+      "name": "בעל הבית של כתב היד",
+      "domain": "כתיבה",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "מלאי פרקים · עקביות מונחים · חוסמי הגשה."
+    },
+    {
+      "id": "agent-maestro",
+      "name": "מנצח התזמורת",
+      "domain": "תשתית",
+      "level": "L2",
+      "status": "active",
+      "cadence": "שבועי — ראשון 06:15",
+      "last_run": "2026-08-28",
+      "score": null,
+      "trend": null,
+      "note": "הסוכן הזה. מנהל את הצי; לא מייצר תוכן."
+    },
+    {
+      "id": "committee-scribe",
+      "name": "כותב הוועדות",
+      "domain": "קליני",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "note": "שני פריטי ועדה בחלון המפקד ואף סוכן לא אחראי עליהם."
+    }
   ],
-  alerts:[
-    {sev:"high",who:"business-manager",t:"יתום — שני Routines קוראים לסוכן שאינו מותקן",
-     d:"כל הידע העסקי חי בתוך שני פרומפטים של Routines: רשימת עמודי האתר שנבנו, הקווים האדומים המשפטיים, ה-project_id ב-Lovable ושמונה סוכני-המשנה. שינוי מחייב עריכה בשני מקומות, וה-references שהפרומפט מבקש לקרוא — ובראשם site-lead-engine.md — אינם קיימים בשום מקום.",
-     f:"לבנות ב-skill-creator מתוך שני הפרומפטים כמקור, ואז לקצר את שני ה-Routines לשורה אחת.",c:"3 שעות"},
-    {sev:"high",who:"business-manager",t:"הבדיקה היומית ננטשה ב-27/08",
-     d:"ABANDONED פירושו שהסשן נפתח ומת באמצע. הבדיקה עצמה מגדירה שפנייה שלא נענתה תוך יום היא ליד אבוד — ושתיקה שלה נראית בדיוק כמו 'יום שקט'.",
-     f:"לוודא ידנית אם הבדיקה של 27/08 הגיעה. אם לא — לסרוק את המייל מאותו יום.",c:"15 דקות"},
-    {sev:"med",who:"rtl-hebrew-docs · hebrew-document-generator",t:"כפילות עם סתירה בקו אדום",
-     d:"מפעילים כמעט זהים. הנזק אינו בזבוז אלא הפעלה בלתי צפויה: המערכת בוחרת אחד מהם ואינך יודע איזו טיפוגרפיה תקבל. גרוע מכך — האחד אוסר הנפקת חשבונית מס והשני מציע אותה.",
-     f:"למזג לאחד על בסיס rtl-hebrew-docs, ולבלוע ממנו את התבניות הישראליות.",c:"2 שעות"},
-    {sev:"med",who:"hiro-compass",t:"המחזור המטא קיים בהוראות ולא בלוח הזמנים",
-     d:"המצפן מכריז שהוא רץ אחרי Critic/Pulse/Launch. לאף אחד מהארבעה אין Routine — המחזור רץ רק כשנזכרים בו. זו בדיוק המחלה שהמצפן מתעד אצל אחרים: 155 בקשות, 31% סגירה, חמש הזדמנויות שפגו.",
-     f:"נסגר מעצמו — המנצח מפעיל את המצפן כשלב אחרון בכל מחזור.",c:"0 · כלול"}
+  "routines": [
+    {
+      "name": "בדיקה עסקית יומית",
+      "id": "trig_013LGXpaXG4vykPQKZvy1RKG",
+      "cron": "30 4 * * 0-4",
+      "local": "07:30 א׳–ה׳",
+      "agent": "business-manager",
+      "last_run": "2026-08-27",
+      "last_status": "ABANDONED"
+    },
+    {
+      "name": "דוח מנהל עסקי שבועי",
+      "id": "trig_01Nf1CenLwkJfJdUnvH6rjN7",
+      "cron": "0 5 * * 0",
+      "local": "08:00 ראשון",
+      "agent": "business-manager",
+      "last_run": "2026-08-23",
+      "last_status": "SUCCEEDED"
+    },
+    {
+      "name": "מנצח התזמורת — מחזור שבועי",
+      "id": "trig_0181AdPkAMbtMTijijqRe2ZZ",
+      "cron": "15 3 * * 0",
+      "local": "06:15 ראשון",
+      "agent": "agent-maestro",
+      "last_run": null,
+      "last_status": null,
+      "next_run": "2026-08-30T03:15:00Z"
+    }
   ],
-  ladder:[
-    {l:"L0",t:"מוצע",d:"קיים כמפרט בלבד"},
-    {l:"L1",t:"בפיקוח",d:"רץ רק בקריאה בשם; כל תוצר עובר אישור"},
-    {l:"L2",t:"מתוזמן",d:"רץ בתזמון קבוע; פעולה חיצונית באישור"},
-    {l:"L3",t:"אוטונומי מוגדר",d:"פועל ביוזמתו בגדר חול. לא שולח החוצה."},
-    {l:"L4",t:"שותף",d:"מציע שיפורים לקובץ הסקיל של עצמו"}
+  "alerts": [
+    {
+      "sev": "high",
+      "agent": "business-manager",
+      "title": "יתום — שני Routines קוראים לסוכן שאינו מותקן",
+      "detail": "אומת שוב בהרצה החיה: ListSkills מחזיר 15 סקילים, business-manager אינו ביניהם, ושני Routines פעילים קוראים לו. כל הידע העסקי — עמודי האתר, הקווים האדומים המשפטיים, ה-project_id ב-Lovable, שמונת סוכני-המשנה — חי בתוך שני פרומפטים. site-lead-engine.md שהפרומפט מבקש לקרוא אינו קיים.",
+      "fix": "לבנות ב-skill-creator משני הפרומפטים כמקור, ואז לקצר את שני ה-Routines לשורה אחת.",
+      "cost": "3 שעות"
+    },
+    {
+      "sev": "high",
+      "agent": "agent-maestro",
+      "title": "סתירה בפרומפט השבועי שההרצה החיה חשפה",
+      "detail": "פרק 3 מורה 'הפעל את hiro-compass כשלב האחרון', והמצפן דורש את _brain\\ בדיסק — שאין לו גישה אליו בענן. ההוראה בלתי ניתנת לביצוע בדיוק במחזור שבו היא נכתבה. תוקן: המצפן מסומן כשלב מקומי בלבד.",
+      "fix": "בוצע — הפרומפט עודכן ב-update_trigger.",
+      "cost": "0 · בוצע"
+    },
+    {
+      "sev": "high",
+      "agent": "business-manager",
+      "title": "הבדיקה היומית ננטשה ב-27/08",
+      "detail": "ABANDONED — הסשן נפתח ומת באמצע. הבדיקה מגדירה שפנייה שלא נענתה תוך יום היא ליד אבוד, ושתיקתה נראית בדיוק כמו 'יום שקט'.",
+      "fix": "לוודא ידנית אם הבדיקה של 27/08 הגיעה.",
+      "cost": "15 דקות"
+    },
+    {
+      "sev": "med",
+      "agent": "מנוע הלידים",
+      "title": "אפס פניות נכנסות בחלון המפקד",
+      "detail": "⚠️ ממצא, לא שיפוט. יומן 29/08–19/09: 46 אירועים, כולם מטופלים קבועים ואירוע ועדה אחד — אפס הרצאות. מייל 10 ימים: אפס פניות להרצאה ואפס פניות מטופלים חדשים. היעד שהוגדר 'חשוב יותר מהכל' לא ייצר פנייה אחת בחלון שנבדק.",
+      "fix": "זו שאלה לדוח המנהל העסקי מחר ב-08:00, לא למנצח. המנצח רק מספר.",
+      "cost": "—"
+    },
+    {
+      "sev": "med",
+      "agent": "rtl-hebrew-docs · hebrew-document-generator",
+      "title": "כפילות עם סתירה בקו אדום",
+      "detail": "מפעילים כמעט זהים. הנזק הוא הפעלה בלתי צפויה. גרוע מכך — האחד אוסר הנפקת חשבונית מס והשני מציע אותה.",
+      "fix": "למזג לאחד על בסיס rtl-hebrew-docs, ולבלוע ממנו את התבניות הישראליות.",
+      "cost": "2 שעות"
+    },
+    {
+      "sev": "med",
+      "agent": "Atlassian",
+      "title": "קונקטור מותקן ולא מאומת",
+      "detail": "ListConnectors: installState \"unknown\", isAuthless false — מותקן ומופעל בצ'אט, אך לא עבר אימות. שבעת האחרים connected. קונקטור לא מאומת נכשל בשקט בדיוק ברגע שסוכן נשען עליו.",
+      "fix": "לאמת בהגדרות הקונקטורים ב-claude.ai, או להסיר אם אינו בשימוש.",
+      "cost": "5 דקות"
+    },
+    {
+      "sev": "med",
+      "agent": "hiro-compass",
+      "title": "המחזור המטא קיים בהוראות ולא בלוח הזמנים",
+      "detail": "המצפן מכריז שהוא רץ אחרי Critic/Pulse/Launch. לאף אחד מהארבעה אין Routine.",
+      "fix": "המנצח מפעיל את המצפן — אך רק בהרצה מקומית. ראה התראת הסתירה.",
+      "cost": "0 · כלול"
+    }
   ],
-  dispatchNote:"המחזור הראשון רץ בראשון 06:15. זו התוכנית שהכללים מייצרים — היא תבוצע ותדווח שם.",
-  dispatch:[
-    {n:"hiro-compass",ask:"קרא את ארבעת קבצי _brain, דרג מחדש את הפנקס וכתוב PRIORITIES.md. פתח בטבלת בריאות המערכת.",why:"לא רץ מתוזמן מעולם · שלב אחרון בכל מחזור"},
-    {n:"תיקון: בניית business-manager",ask:"skill-creator, מקור: שני פרומפטי ה-Routines. ואז קיצור שניהם לשורה אחת.",why:"תקלה 🔴 — תיקון קודם להפעלה"},
-    {n:"— מקום פנוי —",ask:"נשמר לחובה חיצונית שתתגלה במפקד: דדליין ב-45 יום, פנייה ממתינה, או אירוע ביומן ב-21 יום.",why:"תקרה 3; לא ממלאים אותה מראש"}
+  "dispatch": {
+    "note": "הרצה חיה 29/08. שתי הפעלות בוצעו, אחת נחסמה בנימוק. התקרה לא מולאה במכוון.",
+    "planned": [
+      {
+        "agent": "מפקד מלא — בוצע ✅",
+        "ask": "ListSkills · list_triggers · ListConnectors · יומן 21 יום · מייל 10 ימים · grep בקבצי הסקילים.",
+        "why": "החזיר שלוש תקלות חדשות: הסתירה בפרומפט, אפס פניות נכנסות, Atlassian לא מאומת"
+      },
+      {
+        "agent": "תיקון הפרומפט השבועי — בוצע ✅",
+        "ask": "update_trigger: סימון hiro-compass כשלב מקומי בלבד, כדי שלא יידרש לרוץ בלי גישה ל-_brain.",
+        "why": "תיקון תשתית — היוצא מן הכלל היחיד שבו המנצח פועל בעצמו"
+      },
+      {
+        "agent": "hiro-compass — נחסם ⛔",
+        "ask": "היה אמור לדרג מחדש את הפנקס ולכתוב PRIORITIES.md.",
+        "why": "דורש _brain\\ בדיסק. בענן אין גישה. יופעל בהרצה המקומית הראשונה — לא 'נשכח'"
+      }
+    ],
+    "excluded": [
+      {
+        "agent": "business-manager (A+B)",
+        "why": "Routine משלו ב-07:30 יומי וב-08:00 מחר — הפעלה תייצר תוצר כפול"
+      },
+      {
+        "agent": "hiro-lecture-forge",
+        "why": "אפס הרצאות ביומן ב-21 יום. אין חובה חיצונית — לא דחייה, פשוט אין עבודה"
+      },
+      {
+        "agent": "תיקון business-manager",
+        "why": "דורש התקנת סקיל בחשבון claude.ai — סשן מרוחק אינו יכול. ממתין לך"
+      }
+    ]
+  },
+  "coaching": [],
+  "history": [
+    {
+      "cycle": "2026-W35 · בסיס",
+      "date": "2026-08-28",
+      "agents": 15,
+      "active": 7,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "מחזור בסיס. קו הבסיס נקבע."
+    },
+    {
+      "cycle": "2026-W35 · הרצה חיה",
+      "date": "2026-08-29",
+      "agents": 16,
+      "active": 7,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 3,
+      "avg_score": null,
+      "note": "מייל ויומן נסרקו. שלוש תקלות חדשות. גיוס committee-scribe החליף את hiro-manuscript בתקרה."
+    }
   ],
-  excluded:[
-    {n:"business-manager (A+B)",why:"יש לו Routine משלו ב-07:30 וב-08:00 — הפעלה תייצר תוצר כפול"},
-    {n:"Critic · Pulse · Launch",why:"אין להם קובץ. אי אפשר לקרוא להם בשם — זו בדיוק הצעת הגיוס"}
+  "recruits": [
+    {
+      "id": "hiro-critic",
+      "signal": "יתום עם ביקוש",
+      "cost": "3-4 שעות",
+      "mandate": "לתקוף כל טענה שזזה במודל HIRO ולהחזיר דוח בפורמט קבוע ש-EVIDENCE.md יכול לבלוע בלי פרשנות.",
+      "evidence": "המצפן מגדיר את התוצר שלו כ\"האות האמין ביותר במערכת\" — ולסוכן אין קובץ ואי אפשר לקרוא לו בשם.",
+      "io": "טענה או פרק ← CRITIC-YYYY-MM-DD.md",
+      "test": "תקוף את ההבחנה Adaptive/Constrictive Flow. הצלחה = המצפן מעדכן נקודת מסלול ב-EVIDENCE.md בלי עריכת פורמט ידנית.",
+      "red": "לא כותב ל-_brain. \"לא מצאתי ראיה נגדית\" הוא ממצא לגיטימי — לא עילה להמציא אחת.",
+      "triggers": [
+        "הרץ ביקורת",
+        "run critic",
+        "תקוף את הטענה",
+        "מה החולשה כאן"
+      ]
+    },
+    {
+      "id": "committee-scribe",
+      "signal": "תחום בלי בעלים",
+      "cost": "3 שעות",
+      "mandate": "להכין את חומרי הוועדה — חוות דעת, מכתב עמדה, סיכום ממצאים — לפי הפורמט שוועדות זכאות ואפיון בישראל מצפות לו.",
+      "evidence": "שני פריטי ועדה בחלון המפקד: אירוע \"וועדה\" ביומן ב-15/09 14:00, ושרשור מייל על החלטת שיבוץ שעידו מכותב בו, שהודעתו האחרונה מ-28/08 היא \"זה המענה היחיד שיש לנו\". שני מקרים בלתי תלויים, אפס סוכנים אחראיים.",
+      "io": "מקרה + מסמכים ← חוות דעת מוכנה לחתימה",
+      "test": "הכן את חומרי הוועדה של 15/09. הצלחה = עידו חותם בלי לשכתב מבנה.",
+      "red": "לא שולח לאף גורם. לא ממציא ממצא, אבחנה או ציטוט מדוח. מה שלא במסמכים — נשאל, לא מולא.",
+      "triggers": [
+        "הכן ועדה",
+        "חוות דעת לוועדה",
+        "ועדת השמה",
+        "מכתב עמדה"
+      ]
+    }
   ],
-  recruits:[
-    {n:"hiro-critic",sig:"יתום עם ביקוש",
-     m:"לתקוף כל טענה שזזה במודל HIRO ולהחזיר דוח בפורמט קבוע ש-EVIDENCE.md יכול לבלוע בלי פרשנות.",
-     ev:"המצפן מגדיר את התוצר שלו כ‏\"האות האמין ביותר במערכת\" — ולסוכן אין קובץ, אין שם ואי אפשר לקרוא לו.",
-     io:"טענה או פרק ← CRITIC-YYYY-MM-DD.md",
-     test:"תקוף את ההבחנה Adaptive/Constrictive Flow. הצלחה = המצפן מעדכן נקודת מסלול ב-EVIDENCE.md בלי עריכת פורמט ידנית.",
-     cost:"3–4 שעות", red:"לא כותב ל-_brain. ‏\"לא מצאתי ראיה נגדית\" הוא ממצא לגיטימי — לא עילה להמציא אחת.",
-     trig:["הרץ ביקורת","run critic","תקוף את הטענה","מה החולשה כאן"]},
-    {n:"hiro-manuscript",sig:"תחום בלי בעלים",
-     m:"להחזיק את מצב כתב היד — מלאי פרקים, שלב, אורך, עקביות מונחים והפניות צולבות — ולהחזיר מה חוסם הגשה.",
-     ev:"Forge כותב, psychology-editor עורך, המצפן מתעדף — ואף סוכן לא מחזיק את מפת הספר עצמו.",
-     io:"תיקיית כתב היד ← MANUSCRIPT.md",
-     test:"סרוק את תשעת העוגנים הדו-לשוניים על פני כל הפרקים. הצלחה = דוח סתירות שאיש לא ידע עליו.",
-     cost:"4–5 שעות", red:"קורא ולא כותב לתוך פרקים. עריכה שייכת ל-psychology-editor, כתיבה ל-Forge.",
-     trig:["מצב הספר","מה מצב כתב היד","book status","בדוק עקביות מונחים"]}
+  "waitlist": [
+    {
+      "id": "hiro-manuscript",
+      "signal": "תחום בלי בעלים",
+      "why": "הצעה מובילה במחזור הבסיס, נדחקה השבוע בגלל שני פריטי הוועדה שהם בעלי שעון חיצוני. חוזרת ב-W36 — לא ירדה מהפנקס."
+    },
+    {
+      "id": "hiro-pulse · hiro-launch",
+      "signal": "יתום עם ביקוש",
+      "why": "ממתינים לתוצאת hiro-critic. שלושה סוכנים שנבנו יחד על הנחה שלא נבדקה הם שלוש טעויות."
+    },
+    {
+      "id": "קוצר שיחות",
+      "signal": "חזרה ידנית",
+      "why": "⛔ דורש הרצה מקומית — ההרצה בענן לא רואה היסטוריית שיחות."
+    }
   ],
-  waitlist:[
-    {n:"hiro-pulse · hiro-launch",s:"יתום עם ביקוש",w:"ממתינים לתוצאת hiro-critic. אם הפורמט הקבוע יוכיח את עצמו — שכפל. שלושה סוכנים שנבנו יחד על הנחה שלא נבדקה הם שלוש טעויות."},
-    {n:"סוגר הרצאות",s:"תלות אנושית",w:"קיים כסוכן-משנה במנהל העסקי. פצל רק אם הדוח השבועי יראה שהוא נדחק שלושה מחזורים ברצף."},
-    {n:"קוצר שיחות",s:"חזרה ידנית",w:"⛔ דורש הרצה מקומית. ההרצה בענן לא רואה היסטוריית שיחות — אי אפשר לספור חזרות, ולכן אי אפשר להצדיק."}
+  "dashboard_url": "https://claude.ai/code/artifact/165bafe2-bfd9-44d0-8a2a-2e38dbd3c7de",
+  "ladder": [
+    {
+      "l": "L0",
+      "t": "מוצע",
+      "d": "קיים כמפרט בלבד"
+    },
+    {
+      "l": "L1",
+      "t": "בפיקוח",
+      "d": "רץ רק בקריאה בשם; כל תוצר עובר אישור"
+    },
+    {
+      "l": "L2",
+      "t": "מתוזמן",
+      "d": "רץ בתזמון קבוע; פעולה חיצונית באישור"
+    },
+    {
+      "l": "L3",
+      "t": "אוטונומי מוגדר",
+      "d": "פועל ביוזמתו בגדר חול. לא שולח החוצה."
+    },
+    {
+      "l": "L4",
+      "t": "שותף",
+      "d": "מציע שיפורים לקובץ הסקיל של עצמו"
+    }
   ],
-  coaching:"<b>אף סוכן אינו מקבל ציון במחזור הבסיס.</b> ציון דורש תוצר שנקרא, והמחזור רץ בענן בלי גישה לתיקיות התוצרים. סוכן שלא הופעל מקבל ‏\"—\", לא אפס: אפס פירושו נכשל, ומקף פירושו לא רץ. ציון שמומצא כדי למלא טבלה הורס את קו הבסיס שכל המדידה העתידית נשענת עליו.<br><br>הערת האימון של המחזור מופנית <b>לצי כולו</b>: ארבעה מתוך חמישה־עשר הסוכנים אינם ניתנים למדידה היום — business-manager רץ מ-fallback שאי אפשר לגרסה, ו-Critic, Pulse ו-Launch מייצרים את מה שהמצפן מכנה האות האמין ביותר במערכת בלי שיהיה להם קובץ. <b>צי שרבע ממנו אינו ניתן להצבעה אינו צי — הוא הרגל.</b><br><br><b>הבקשה ל-W36, ניתנת למדידה:</b> שכל סוכן שרץ יהיה ישות בעלת שם וקובץ. המדד — <span class='ltr'>ListSkills</span> מחזיר את שמו. סוכן שרץ מתוך פרומפט של Routine נספר כלא-קיים."
+  "coaching_html": "<b>גם ההרצה החיה לא ייצרה ציונים — וזו התוצאה החשובה של המבחן.</b> ציון דורש קריאת התוצר, וההרצה בענן לא רואה את <span class='ltr'>agent-outputs\\</span>. המנהל העסקי רץ ב-23/08 והצליח, אבל התוצר שלו אינו נגיש מכאן — לכן <b>\"—\", לא ניחוש</b>. אפס פירושו נכשל; מקף פירושו לא נמדד.<br><br><b>מה ההרצה כן הוכיחה:</b> המפקד, ההתראות, ההפעלה והגיוס עובדים במלואם בענן — ושלוש מהתקלות בדשבורד הזה נמצאו רק משום שהוא רץ. אחת מהן היא <b>סתירה בפרומפט של המנצח עצמו</b>: הוא הורה להפעיל את המצפן בענן, שם המצפן אינו יכול לרוץ. תוקן באותה הרצה.<br><br><b>הבקשה ל-W36, ניתנת למדידה:</b> שכל סוכן שרץ יהיה ישות בעלת שם וקובץ — המדד הוא ש-<span class='ltr'>ListSkills</span> מחזיר את שמו. <b>ולפחות הרצה מקומית אחת בחודש</b>, אחרת ציר הצמיחה לעולם לא יימדד ו<b>סולם האוטונומיה יישאר קישוט</b>."
 };
+/* FLEET-DATA-END */
 
 const ST = {
   active:{t:"פעיל",c:"var(--st-active)"}, dormant:{t:"רדום",c:"var(--st-dormant)"},
   broken:{t:"שבור",c:"var(--st-broken)"}, duplicate:{t:"כפול",c:"var(--st-dup)"},
   proposed:{t:"מוצע",c:"var(--st-prop)"}
 };
-const esc = s => String(s).replace(/[&<>]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[m]));
-const el = (h) => { const t=document.createElement("template"); t.innerHTML=h.trim(); return t.content; };
+const esc = s => String(s ?? "").replace(/[&<>]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[m]));
+const el = h => { const t=document.createElement("template"); t.innerHTML=h.trim(); return t.content; };
+const ltr = s => `<span class="ltr">${esc(s)}</span>`;
 
-/* masthead */
-const c = FLEET.cycle;
+const c = FLEET.cycle, b = FLEET.decision_budget;
 document.getElementById("cyc").append(el(`
   <span class="tag brass">מחזור <b class="ltr">${esc(c.id)}</b></span>
   <span class="tag">עודכן <b class="ltr num">${esc(c.date)}</b></span>
-  <span class="tag">סריקה <b>${esc(c.mode)}</b> · דיסק ${c.disk?"נסרק":"⛔ לא נסרק"}</span>
-  <span class="tag">תקציב הכרעות <b class="num">${FLEET.budget.maestro}</b> מנצח · <b class="num">${FLEET.budget.compass}</b> מצפן</span>
+  <span class="tag">סריקה <b>${esc(c.mode)}</b> · דיסק ${c.disk_scanned?"נסרק":"⛔ לא נסרק"}</span>
+  <span class="tag">תקציב הכרעות <b class="num">${b.used_by_maestro}</b> מנצח · <b class="num">${b.left_for_compass}</b> מצפן</span>
   <span class="tag">הבא: <b>${esc(c.next)}</b></span>
 `));
 
-/* tiles */
 const order = ["active","dormant","broken","duplicate","proposed"];
-const counts = Object.fromEntries(order.map(k => [k, FLEET.agents.filter(a=>a.st===k).length]));
-let filter = null;
 const tiles = document.getElementById("tiles");
+let filter = null;
 tiles.append(el(`<button class="tile" data-f="" aria-pressed="true" style="--dot:var(--brass)">
   <div class="v num">${FLEET.agents.length}</div><div class="k">סוכנים בצי</div></button>`));
-order.forEach(k => tiles.append(el(`<button class="tile" data-f="${k}" aria-pressed="false" style="--dot:${ST[k].c}">
-  <div class="v num">${counts[k]}</div><div class="k">${ST[k].t}</div></button>`)));
+order.forEach(k => {
+  const n = FLEET.agents.filter(a=>a.status===k).length;
+  tiles.append(el(`<button class="tile" data-f="${k}" aria-pressed="false" style="--dot:${ST[k].c}">
+    <div class="v num">${n}</div><div class="k">${ST[k].t}</div></button>`));
+});
 
-/* alerts */
 document.getElementById("alerts").append(...FLEET.alerts.map(a => el(`
   <article class="alert" style="--sv:var(--sev-${a.sev})">
-    <h3><span class="sev">${a.sev==="high"?"חמור":"בינוני"}</span>${esc(a.t)}<span class="who ltr">${esc(a.who)}</span></h3>
-    <p>${esc(a.d)}</p>
-    <div class="fix"><b>התיקון</b><span>${esc(a.f)}</span><span class="cost">${esc(a.c)}</span></div>
+    <h3><span class="sev">${a.sev==="high"?"חמור":"בינוני"}</span>${esc(a.title)}<span class="who">${esc(a.agent)}</span></h3>
+    <p>${esc(a.detail)}</p>
+    <div class="fix"><b>התיקון</b><span>${esc(a.fix)}</span><span class="cost">${esc(a.cost)}</span></div>
   </article>`)));
 
-/* table */
 const tbody = document.getElementById("tbody"), tcount = document.getElementById("tblcount");
 function draw(){
-  const rows = FLEET.agents.filter(a => !filter || a.st === filter);
+  const rows = FLEET.agents.filter(a => !filter || a.status === filter);
   tbody.replaceChildren(...rows.map(a => el(`<tr>
-    <td><span class="nm">${esc(a.n)}</span><span class="id">${esc(a.id)}</span></td>
-    <td>${esc(a.dom)}</td>
-    <td><span class="lvl" data-l="${a.lvl}">${a.lvl}</span></td>
-    <td>${esc(a.cad)}</td>
-    <td class="num">${a.last ? `<span class="ltr">${esc(a.last)}</span>` : '<span class="dash">—</span>'}</td>
+    <td><span class="nm">${esc(a.name)}</span><span class="id">${esc(a.id)}</span></td>
+    <td>${esc(a.domain)}</td>
+    <td><span class="lvl" data-l="${esc(a.level)}">${esc(a.level)}</span></td>
+    <td>${esc(a.cadence)}</td>
+    <td class="num">${a.last_run ? ltr(a.last_run) : '<span class="dash">—</span>'}</td>
     <td class="num">${a.score ?? '<span class="dash">—</span>'}</td>
-    <td><span class="chip" style="--c:${ST[a.st].c}">${ST[a.st].t}</span></td>
+    <td><span class="chip" style="--c:${ST[a.status].c}">${ST[a.status].t}</span></td>
     <td class="note">${esc(a.note)}</td></tr>`)));
-  tcount.textContent = filter ? `${rows.length} מתוך ${FLEET.agents.length} · מסונן: ${ST[filter].t}` : `${FLEET.agents.length} סוכנים · ציון "—" = לא רץ, לא נכשל`;
+  tcount.textContent = filter
+    ? `${rows.length} מתוך ${FLEET.agents.length} · מסונן: ${ST[filter].t}`
+    : `${FLEET.agents.length} סוכנים · ציון "—" = לא נמדד, לא נכשל`;
 }
 tiles.addEventListener("click", e => {
-  const b = e.target.closest(".tile"); if(!b) return;
-  filter = b.dataset.f || null;
-  tiles.querySelectorAll(".tile").forEach(t => t.setAttribute("aria-pressed", String((t.dataset.f||"") === (filter||""))));
+  const t = e.target.closest(".tile"); if(!t) return;
+  filter = t.dataset.f || null;
+  tiles.querySelectorAll(".tile").forEach(x => x.setAttribute("aria-pressed", String((x.dataset.f||"") === (filter||""))));
   draw();
 });
 draw();
 
-/* ladder */
-const max = Math.max(...FLEET.ladder.map(r => FLEET.agents.filter(a=>a.lvl===r.l).length), 1);
+const max = Math.max(...FLEET.ladder.map(r => FLEET.agents.filter(a=>a.level===r.l).length), 1);
 document.getElementById("ladder").append(...FLEET.ladder.map(r => {
-  const n = FLEET.agents.filter(a=>a.lvl===r.l).length;
+  const n = FLEET.agents.filter(a=>a.level===r.l).length;
   return el(`<div class="rung">
-    <span class="l">${r.l}</span>
+    <span class="l">${esc(r.l)}</span>
     <span class="d"><b>${esc(r.t)}</b>${esc(r.d)}</span>
-    <span class="cnt"><span class="bar" style="width:${n?Math.round(n/max*70)+6:0}px;${n?'':'background:var(--line-2)'}"></span>${n}</span>
+    <span class="cnt"><span class="bar" style="width:${n?Math.round(n/max*70)+6:0}px;${n?"":"background:var(--line-2)"}"></span>${n}</span>
   </div>`);
 }));
 
-/* dispatch */
-document.getElementById("dsub").textContent = FLEET.dispatchNote;
+document.getElementById("dsub").textContent = FLEET.dispatch.note;
 const dp = document.getElementById("dispatch");
-dp.append(...FLEET.dispatch.map(d => el(`<div class="item">
-  <b>${esc(d.n)}</b><p>${esc(d.ask)}</p><div class="why">${esc(d.why)}</div></div>`)));
+dp.append(...FLEET.dispatch.planned.map(x => el(`<div class="item">
+  <b>${esc(x.agent)}</b><p>${esc(x.ask)}</p><div class="why">${esc(x.why)}</div></div>`)));
 dp.append(el(`<div class="item"><b>לא מופעלים במכוון</b>${
-  FLEET.excluded.map(x=>`<p><span class="ltr">${esc(x.n)}</span> — ${esc(x.why)}</p>`).join("")}</div>`));
+  FLEET.dispatch.excluded.map(x=>`<p>${ltr(x.agent)} — ${esc(x.why)}</p>`).join("")}</div>`));
 
-/* recruits */
 document.getElementById("recs").append(...FLEET.recruits.map(r => el(`
   <article class="rec">
-    <h3>${esc(r.n)} <span class="lvl" data-l="L0">L0</span></h3>
-    <p class="mandate">${esc(r.m)}</p>
+    <h3>${esc(r.id)} <span class="lvl" data-l="L0">L0</span></h3>
+    <p class="mandate">${esc(r.mandate)}</p>
     <dl class="kv">
-      <dt>האות</dt><dd><b>${esc(r.sig)}</b> — ${esc(r.ev)}</dd>
+      <dt>האות</dt><dd><b>${esc(r.signal)}</b> — ${esc(r.evidence)}</dd>
       <dt>קלט ← פלט</dt><dd class="ltr">${esc(r.io)}</dd>
       <dt>מבחן ראשון</dt><dd>${esc(r.test)}</dd>
       <dt>קו אדום</dt><dd>${esc(r.red)}</dd>
       <dt>עלות</dt><dd>${esc(r.cost)}</dd>
     </dl>
-    <div class="trig">${r.trig.map(t=>`<span>${esc(t)}</span>`).join("")}</div>
+    <div class="trig">${r.triggers.map(t=>`<span>${esc(t)}</span>`).join("")}</div>
   </article>`)));
 
 document.getElementById("wait").append(...FLEET.waitlist.map(w => el(`<div class="item">
-  <b>${esc(w.n)}</b><div class="why">אות: ${esc(w.s)}</div><p>${esc(w.w)}</p></div>`)));
+  <b>${esc(w.id)}</b><div class="why">אות: ${esc(w.signal)}</div><p>${esc(w.why)}</p></div>`)));
 
-document.getElementById("coach").innerHTML = FLEET.coaching;
+document.getElementById("coach").innerHTML = FLEET.coaching_html;
+
+document.getElementById("hist").append(...FLEET.history.map(h => el(`<div class="rung">
+  <span class="l num">${esc(h.date.slice(8,10))}/${esc(h.date.slice(5,7))}</span>
+  <span class="d"><b>${esc(h.cycle)}</b>${esc(h.note)}</span>
+  <span class="cnt">${h.agents} סוכנים · ציון ${h.avg_score ?? "—"}</span></div>`)));
 
 document.getElementById("foot").append(el(`
-  <span>מקורות המפקד: <span class="ltr">${esc(c.sources)}</span></span>
+  <span>מקורות המפקד: ${ltr(FLEET.cycle.sources)}</span>
   <span>המנצח לא מנגן · תקרות: 3 הפעלות · 2 גיוסים · עמוד אחד</span>
-  <span>הדשבורד מתעדכן באותו URL בכל מחזור · <span class="ltr">trig_0181AdPkAMbtMTijijqRe2ZZ</span></span>`));
+  <span>אותו URL בכל מחזור · ${ltr("trig_0181AdPkAMbtMTijijqRe2ZZ")}</span>`));
 </script>
