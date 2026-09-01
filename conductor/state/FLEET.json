@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "cycle": {
-    "id": "2026-W35",
-    "date": "29/08/2026",
+    "id": "2026-W36",
+    "date": "30/08/2026",
     "mode": "ענן",
     "disk_scanned": false,
-    "sources": "ListSkills · list_triggers · ListConnectors · Calendar · Gmail · grep",
-    "next": "ראשון 06:15 · מחזור W36",
-    "note": "הרצה חיה. הצי מוצג לפי מה שכל סוכן עושה בשבילך ולפי מה שהוא מכניס."
+    "sources": "ListSkills ✅ · ListConnectors ✅ · list_triggers ⚠️ לא זמין · יומן+מייל ⛔ לא פעילים",
+    "next": "ראשון הבא · W37",
+    "note": "שלושה סוכנים לא הוחזרו ע\"י ListSkills החי — יתומים בפועל. 0/3 הופעלו."
   },
   "decision_budget": {
     "total": 3,
@@ -20,7 +20,7 @@
       "name": "צייד ההרצאות",
       "domain": "עסקי",
       "level": "L1",
-      "status": "active",
+      "status": "broken",
       "cadence": "שבועי — לפי קריאה עד שיוכיח את עצמו",
       "last_run": null,
       "score": null,
@@ -230,13 +230,13 @@
       "name": "מנצח התזמורת",
       "domain": "תשתית",
       "level": "L2",
-      "status": "active",
+      "status": "broken",
       "cadence": "שבועי — ראשון 06:15",
       "last_run": "2026-08-28",
       "score": null,
       "trend": null,
       "track": "תשתית",
-      "does": "הסוכן הזה. פעם בשבוע עושה סדר בכולם ומגיש לך תדריך אחד.",
+      "does": "הסוכן הזה. פעם בשבוע עושה סדר בכולם ומגיש תדריך אחד. רץ מהפרומפט של ה-Routine — לא כסקיל מותקן.",
       "freeze_suggested": false
     }
   ],
@@ -373,6 +373,18 @@
       "proposed": 2,
       "avg_score": null,
       "note": "lecture-hunter נבנה ונכנס ב-L1. סוכני העסק: 2 ← 3, והראשון שיוצא החוצה."
+    },
+    {
+      "cycle": "2026-W36",
+      "date": "2026-08-30",
+      "agents": 16,
+      "active": 7,
+      "dormant": 2,
+      "broken": 3,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "0/3 הופעלו. שלושה סוכנים יתומים לפי ListSkills החי. יומן, מייל ו-list_triggers לא נגישים."
     }
   ],
   "recruits": [
