@@ -14,7 +14,8 @@ root = pathlib.Path(__file__).parent
 state_path, page_path = root / "state" / "BOARD.json", root / "board.html"
 
 data = json.loads(state_path.read_text(encoding="utf-8"))
-for field in ("updated", "alerts", "pipeline", "agents", "ideas", "note"):
+for field in ("updated", "cycle", "tracks", "statuses", "agents", "action",
+              "pipeline", "fixed", "ideas", "note"):
     if field not in data:
         sys.exit(f"BOARD.json חסר את השדה '{field}'.")
 
@@ -27,5 +28,6 @@ if n != 1:
     sys.exit("לא נמצא בלוק state יחיד ב-board.html.")
 
 page_path.write_text(html, encoding="utf-8")
-print(f"נבנה: {len(data['pipeline'])} פניות · {len(data['agents'])} סוכנים · "
-      f"{len(data['ideas'])} רעיונות · פתק: {'יש' if data['note'].strip() else 'ריק'}")
+print(f"נבנה: {len(data['agents'])} סוכנים · {len(data['action'])} פעולות · "
+      f"{len(data['pipeline'])} פניות · {len(data['fixed'])} תוקנו · "
+      f"פתק: {'יש' if data['note'].strip() else 'ריק'}")
