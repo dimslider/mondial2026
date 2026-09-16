@@ -1,5 +1,5 @@
 {
-  "updated": "15/09/2026",
+  "updated": "16/09/2026",
   "cycle": "מחזור W38",
   "tracks": [
     {
@@ -58,7 +58,8 @@
       "last": "13/09",
       "call": "צוד לי הרצאות",
       "score": "4.5",
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל lecture-hunter.\n\nלפני שאתה מחפש: קרא את PROSPECTS.md ואל תציע ארגון שכבר פנינו אליו ב-90 הימים האחרונים.\nכללים: מחוץ לראש העין ולעינת (גדר קלינית) · פרוספקטים ממחקר ולא מהמייל שלי · אונליין ללא הגבלה, עד 150 ק\"מ רק אם גדול או משלם היטב.\nבחר משפחת קונים אחת לפי לוח העונתיות והחזר עד חמישה ארגונים מאומתים, עם ערוץ הפנייה הנכון לכל אחד (טופס / לינקדאין / מייל) וטיוטה מוכנה.\nקודם כל: עבור על מי שכבר במעקב — מי עבר 7 ימים בלי מענה ומי עבר 21."
     },
     {
       "id": "business-manager",
@@ -72,7 +73,8 @@
       "last": "⚠️ לא מאומת",
       "call": "בדיקה יומית",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל business-manager במצב A — בדיקה יומית.\nסרוק מייל ויומן: פניות מטופלים שלא נענו, הזמנות להרצאה, שאלות מחיר, דדליינים.\nאם הסריקה נכשלה — אמור זאת במפורש. \"יום שקט\" נאמר רק אחרי סריקה שהצליחה.\nאל תשלח שום דבר. טיוטה בלבד."
     },
     {
       "id": "hiro-lecture-forge",
@@ -86,7 +88,8 @@
       "last": "—",
       "call": "בנה לי הרצאה על…",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל hiro-lecture-forge.\nנושא ההרצאה: [כתוב כאן את הנושא]\nקהל היעד: [הורים / צוות חינוכי / צוות רפואי / ארגון]\nאורך: [60 / 90 דקות]"
     },
     {
       "id": "hiro-compass",
@@ -100,7 +103,8 @@
       "last": "—",
       "call": "הרץ מצפן",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל hiro-compass.\n⚠️ דורש גישה לקבצים המקומיים ב-HIRO\\agent-outputs\\_brain — הרץ מ-Claude Code על המחשב שלך, לא מהענן.\nקרא את EVIDENCE, DECISIONS, OPPORTUNITIES ו-PRIORITIES, דרג מחדש, וכתוב PRIORITIES.md."
     },
     {
       "id": "hiro-forge",
@@ -114,7 +118,8 @@
       "last": "—",
       "call": "forge [מושג]",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל hiro-forge.\nהמושג או הפרק: [כתוב כאן]\nהעבר אותו בשש הזרועות: מחקר, Pulse, ולידציה, פרקליט השטן, כתיבה, סיכום מנכ\"ל."
     },
     {
       "id": "psychology-editor",
@@ -128,7 +133,8 @@
       "last": "—",
       "call": "ערוך לי את הקטע",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל psychology-editor.\nהקטע לעריכה: [הדבק כאן, או ציין את הקובץ והפרק]\nשמור על מונחי HIRO כפי שהם. אחרי העריכה — הסבר בקצרה מה שינית ולמה."
     },
     {
       "id": "hiro-critic",
@@ -142,7 +148,8 @@
       "last": "—",
       "call": "— (3–4 שעות בנייה)",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "בנה את הסוכן hiro-critic עם skill-creator.\nהמפרט המלא נמצא בריפו dimslider/mondial2026, בקובץ conductor/references/new-agent-pipeline.md, ענף claude/weekly-agents-organizer-nh1q2a.\nמנדט: לתקוף כל טענה שזזה במודל HIRO ולהחזיר דוח בפורמט קבוע ש-EVIDENCE.md בולע בלי פרשנות."
     },
     {
       "id": "hiro-manuscript",
@@ -156,7 +163,8 @@
       "last": "—",
       "call": "— (4–5 שעות בנייה)",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "בנה את הסוכן hiro-manuscript עם skill-creator.\nהמפרט המלא בריפו dimslider/mondial2026, conductor/references/new-agent-pipeline.md.\nמנדט: להחזיק את מפת כתב היד — מלאי פרקים, שלב, אורך, עקביות מונחים וחוסמי הגשה.\nקו אדום: קורא ולא כותב לתוך פרקים."
     },
     {
       "id": "hiro-parent-mentor",
@@ -170,7 +178,8 @@
       "last": "—",
       "call": "הרץ מדריך",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל hiro-parent-mentor.\nהמקרה: [גיל, הרכב משפחה, מה מביא אותם, מה כבר ניסו]\nמה אני צריך: [המשגה / תכנית התערבות / לצאת מתקיעות]\nבלי פרטים מזהים."
     },
     {
       "id": "llm-council",
@@ -184,7 +193,8 @@
       "last": "—",
       "call": "council this",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל llm-council.\nההחלטה: [נסח כאן את ההתלבטות, עם האפשרויות ומה מונח על הכף]"
     },
     {
       "id": "agent-maestro",
@@ -198,7 +208,8 @@
       "last": "13/09",
       "call": "הרץ מנצח",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל agent-maestro — מחזור מלא.\nקרא קודם את הלוח החי ומזג עליו; מה שערכתי בו מנצח.\nאם אתה רץ מהמחשב שלי — תן גם ציונים לסוכנים שרצו, כי בענן אי אפשר."
     },
     {
       "id": "skill-creator",
@@ -212,7 +223,8 @@
       "last": "01/09",
       "call": "בנה לי סוכן ש…",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל skill-creator.\nהסוכן שאני רוצה: [מה הוא עושה במשפט אחד]\nמפעילים: [מה אני אגיד כדי להריץ אותו]\nקווים אדומים: [מה אסור לו לעשות]"
     },
     {
       "id": "rtl-hebrew-docs",
@@ -226,7 +238,8 @@
       "last": "—",
       "call": "צור לי PDF בעברית",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "הרץ את הסקיל rtl-hebrew-docs.\nסוג המסמך: [חוזה / הצעת מחיר / פרוטוקול / מכתב רשמי / דוח]\nהתוכן: [הדבק כאן]\nפורמט: [PDF / Word / מצגת]"
     },
     {
       "id": "docx-pptx-pdf-xlsx",
@@ -240,7 +253,8 @@
       "last": "—",
       "call": "—",
       "score": null,
-      "frozen": false
+      "frozen": false,
+      "prompt": "[תאר מה אתה צריך — קובץ Word, מצגת, PDF או Excel — והדבק את התוכן או את הקובץ.]"
     },
     {
       "id": "morning",
@@ -254,7 +268,8 @@
       "last": "—",
       "call": "/morning",
       "score": null,
-      "frozen": true
+      "frozen": true,
+      "prompt": "/morning"
     },
     {
       "id": "hebrew-document-generator",
@@ -268,7 +283,8 @@
       "last": "—",
       "call": "—",
       "score": null,
-      "frozen": true
+      "frozen": true,
+      "prompt": ""
     }
   ],
   "action": [

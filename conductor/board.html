@@ -97,6 +97,23 @@
   .call{font-size:13.5px; color:var(--brass); background:var(--brass-wash);
     border:1px solid var(--brass-soft); border-radius:3px; padding:2px 10px}
   .score{font-size:13px; color:var(--mute); font-variant-numeric:tabular-nums}
+  .run{font:inherit; font-size:14px; font-weight:700; cursor:pointer; padding:5px 15px;
+    border-radius:3px; border:1px solid var(--brass); background:var(--brass); color:#fff;
+    display:inline-flex; align-items:center; gap:6px}
+  .run:hover{filter:brightness(1.09)}
+  .run:focus-visible{outline:2px solid var(--ink); outline-offset:2px}
+  .run[aria-expanded="true"]{background:var(--surface); color:var(--brass)}
+  .runbox{margin-top:12px; padding-top:12px; border-top:1px dashed var(--line)}
+  .runbox textarea{font:inherit; font-size:14px; width:100%; min-height:132px; resize:vertical;
+    padding:11px 13px; border:1px solid var(--line-2); border-radius:3px;
+    background:var(--surface-2); color:var(--ink); line-height:1.5}
+  .runbox .rb{display:flex; gap:8px; margin-top:9px; flex-wrap:wrap; align-items:center}
+  .runbox .hint{font-size:13px; color:var(--mute); margin-inline-start:auto}
+  .cpy{font:inherit; font-size:13.5px; font-weight:700; cursor:pointer; padding:6px 14px;
+    border-radius:3px; border:1px solid var(--brass); background:var(--brass); color:#fff}
+  .open{font:inherit; font-size:13.5px; padding:6px 14px; border-radius:3px; text-decoration:none;
+    border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2)}
+  .open:hover{border-color:var(--brass); color:var(--brass)}
   .fbtn{font:inherit; font-size:13px; cursor:pointer; padding:3px 11px; border-radius:3px;
     margin-inline-start:auto; border:1px solid var(--line-2); background:var(--surface); color:var(--mute)}
   .fbtn[aria-pressed="true"]{background:var(--mute); border-color:var(--mute); color:var(--surface)}
@@ -225,7 +242,7 @@
 
 <div id="root"></div>
 <script id="state" type="application/json">{
- "updated": "15/09/2026",
+ "updated": "16/09/2026",
  "cycle": "מחזור W38",
  "tracks": [
   {
@@ -284,7 +301,8 @@
    "last": "13/09",
    "call": "צוד לי הרצאות",
    "score": "4.5",
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל lecture-hunter.\n\nלפני שאתה מחפש: קרא את PROSPECTS.md ואל תציע ארגון שכבר פנינו אליו ב-90 הימים האחרונים.\nכללים: מחוץ לראש העין ולעינת (גדר קלינית) · פרוספקטים ממחקר ולא מהמייל שלי · אונליין ללא הגבלה, עד 150 ק\"מ רק אם גדול או משלם היטב.\nבחר משפחת קונים אחת לפי לוח העונתיות והחזר עד חמישה ארגונים מאומתים, עם ערוץ הפנייה הנכון לכל אחד (טופס / לינקדאין / מייל) וטיוטה מוכנה.\nקודם כל: עבור על מי שכבר במעקב — מי עבר 7 ימים בלי מענה ומי עבר 21."
   },
   {
    "id": "business-manager",
@@ -298,7 +316,8 @@
    "last": "⚠️ לא מאומת",
    "call": "בדיקה יומית",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל business-manager במצב A — בדיקה יומית.\nסרוק מייל ויומן: פניות מטופלים שלא נענו, הזמנות להרצאה, שאלות מחיר, דדליינים.\nאם הסריקה נכשלה — אמור זאת במפורש. \"יום שקט\" נאמר רק אחרי סריקה שהצליחה.\nאל תשלח שום דבר. טיוטה בלבד."
   },
   {
    "id": "hiro-lecture-forge",
@@ -312,7 +331,8 @@
    "last": "—",
    "call": "בנה לי הרצאה על…",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל hiro-lecture-forge.\nנושא ההרצאה: [כתוב כאן את הנושא]\nקהל היעד: [הורים / צוות חינוכי / צוות רפואי / ארגון]\nאורך: [60 / 90 דקות]"
   },
   {
    "id": "hiro-compass",
@@ -326,7 +346,8 @@
    "last": "—",
    "call": "הרץ מצפן",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל hiro-compass.\n⚠️ דורש גישה לקבצים המקומיים ב-HIRO\\agent-outputs\\_brain — הרץ מ-Claude Code על המחשב שלך, לא מהענן.\nקרא את EVIDENCE, DECISIONS, OPPORTUNITIES ו-PRIORITIES, דרג מחדש, וכתוב PRIORITIES.md."
   },
   {
    "id": "hiro-forge",
@@ -340,7 +361,8 @@
    "last": "—",
    "call": "forge [מושג]",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל hiro-forge.\nהמושג או הפרק: [כתוב כאן]\nהעבר אותו בשש הזרועות: מחקר, Pulse, ולידציה, פרקליט השטן, כתיבה, סיכום מנכ\"ל."
   },
   {
    "id": "psychology-editor",
@@ -354,7 +376,8 @@
    "last": "—",
    "call": "ערוך לי את הקטע",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל psychology-editor.\nהקטע לעריכה: [הדבק כאן, או ציין את הקובץ והפרק]\nשמור על מונחי HIRO כפי שהם. אחרי העריכה — הסבר בקצרה מה שינית ולמה."
   },
   {
    "id": "hiro-critic",
@@ -368,7 +391,8 @@
    "last": "—",
    "call": "— (3–4 שעות בנייה)",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "בנה את הסוכן hiro-critic עם skill-creator.\nהמפרט המלא נמצא בריפו dimslider/mondial2026, בקובץ conductor/references/new-agent-pipeline.md, ענף claude/weekly-agents-organizer-nh1q2a.\nמנדט: לתקוף כל טענה שזזה במודל HIRO ולהחזיר דוח בפורמט קבוע ש-EVIDENCE.md בולע בלי פרשנות."
   },
   {
    "id": "hiro-manuscript",
@@ -382,7 +406,8 @@
    "last": "—",
    "call": "— (4–5 שעות בנייה)",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "בנה את הסוכן hiro-manuscript עם skill-creator.\nהמפרט המלא בריפו dimslider/mondial2026, conductor/references/new-agent-pipeline.md.\nמנדט: להחזיק את מפת כתב היד — מלאי פרקים, שלב, אורך, עקביות מונחים וחוסמי הגשה.\nקו אדום: קורא ולא כותב לתוך פרקים."
   },
   {
    "id": "hiro-parent-mentor",
@@ -396,7 +421,8 @@
    "last": "—",
    "call": "הרץ מדריך",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל hiro-parent-mentor.\nהמקרה: [גיל, הרכב משפחה, מה מביא אותם, מה כבר ניסו]\nמה אני צריך: [המשגה / תכנית התערבות / לצאת מתקיעות]\nבלי פרטים מזהים."
   },
   {
    "id": "llm-council",
@@ -410,7 +436,8 @@
    "last": "—",
    "call": "council this",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל llm-council.\nההחלטה: [נסח כאן את ההתלבטות, עם האפשרויות ומה מונח על הכף]"
   },
   {
    "id": "agent-maestro",
@@ -424,7 +451,8 @@
    "last": "13/09",
    "call": "הרץ מנצח",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל agent-maestro — מחזור מלא.\nקרא קודם את הלוח החי ומזג עליו; מה שערכתי בו מנצח.\nאם אתה רץ מהמחשב שלי — תן גם ציונים לסוכנים שרצו, כי בענן אי אפשר."
   },
   {
    "id": "skill-creator",
@@ -438,7 +466,8 @@
    "last": "01/09",
    "call": "בנה לי סוכן ש…",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל skill-creator.\nהסוכן שאני רוצה: [מה הוא עושה במשפט אחד]\nמפעילים: [מה אני אגיד כדי להריץ אותו]\nקווים אדומים: [מה אסור לו לעשות]"
   },
   {
    "id": "rtl-hebrew-docs",
@@ -452,7 +481,8 @@
    "last": "—",
    "call": "צור לי PDF בעברית",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "הרץ את הסקיל rtl-hebrew-docs.\nסוג המסמך: [חוזה / הצעת מחיר / פרוטוקול / מכתב רשמי / דוח]\nהתוכן: [הדבק כאן]\nפורמט: [PDF / Word / מצגת]"
   },
   {
    "id": "docx-pptx-pdf-xlsx",
@@ -466,7 +496,8 @@
    "last": "—",
    "call": "—",
    "score": null,
-   "frozen": false
+   "frozen": false,
+   "prompt": "[תאר מה אתה צריך — קובץ Word, מצגת, PDF או Excel — והדבק את התוכן או את הקובץ.]"
   },
   {
    "id": "morning",
@@ -480,7 +511,8 @@
    "last": "—",
    "call": "/morning",
    "score": null,
-   "frozen": true
+   "frozen": true,
+   "prompt": "/morning"
   },
   {
    "id": "hebrew-document-generator",
@@ -494,7 +526,8 @@
    "last": "—",
    "call": "—",
    "score": null,
-   "frozen": true
+   "frozen": true,
+   "prompt": ""
   }
  ],
  "action": [
@@ -674,7 +707,7 @@ function render(){
 
   var nf = S.agents.filter(function(a){ return a.frozen; }).length;
   document.getElementById("fleetsub").textContent =
-    S.agents.length+" סוכנים · "+nf+" מוקפאים · מקובצים לפי מה שהם מכניסים";
+    S.agents.length+" סוכנים · "+nf+" מוקפאים · ▶ הרץ מכין את הפרומפט ופותח צ'אט";
 
   document.getElementById("tracks").innerHTML = S.tracks.map(function(t){
     var list = S.agents.filter(function(a){ return a.track===t.id; });
@@ -695,10 +728,19 @@ function render(){
           '<dt>תדירות</dt><dd>'+esc(a.cadence)+'</dd>' +
           '<dt>אחרון</dt><dd class="num">'+esc(a.last)+'</dd></dl>' +
           '<div class="agf">' +
+          (a.prompt && !a.frozen
+            ? '<button class="run" data-run aria-expanded="false">▶ '+
+              (a.status==="proposed" ? "בנה" : "הרץ")+'</button>' : '') +
           (a.call && a.call!=="—" ? '<span class="call">'+esc(a.call)+'</span>' : '') +
           (a.score ? '<span class="score">ציון '+esc(a.score)+'</span>' : '') +
           '<button class="fbtn" data-frz aria-pressed="'+(a.frozen?"true":"false")+'">' +
-          (a.frozen?"מוקפא":"הקפא")+'</button></div></div>';
+          (a.frozen?"מוקפא":"הקפא")+'</button></div>' +
+          (a.prompt && !a.frozen ? '<div class="runbox" hidden>' +
+            '<textarea readonly>'+esc(a.prompt)+'</textarea>' +
+            '<div class="rb"><button class="cpy">העתק</button>' +
+            '<a class="open" href="https://claude.ai/new" target="_blank" rel="noopener">פתח צ\'אט חדש ↗</a>' +
+            '<span class="hint">העתק, פתח צ\'אט, הדבק</span></div></div>' : '') +
+          '</div>';
       }).join("") + '</div></div>';
   }).join("");
 
@@ -755,8 +797,34 @@ document.addEventListener("change", function(e){
   if(e.target.tagName!=="SELECT") return;
   var o=find(S.pipeline,e.target,"p"); if(o){ o.status=e.target.value; render(); }
 });
+function copyFrom(ta, btn){
+  ta.focus(); ta.select(); ta.setSelectionRange(0, ta.value.length);
+  var done=false;
+  try{ done = document.execCommand("copy"); }catch(err){}
+  if(done){ flash(btn,"הועתק ✓"); return; }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(ta.value).then(function(){ flash(btn,"הועתק ✓"); },
+      function(){ flash(btn,"סמן והעתק ידנית"); });
+  } else flash(btn,"סמן והעתק ידנית");
+}
+function flash(btn, msg){
+  var old = btn.textContent; btn.textContent = msg;
+  setTimeout(function(){ btn.textContent = old; }, 1800);
+}
+
 document.addEventListener("click", function(e){
   var t=e.target;
+  if(t.classList && t.classList.contains("run")){
+    var box = t.closest(".ag").querySelector(".runbox");
+    var openNow = box.hidden;
+    box.hidden = !openNow;
+    t.setAttribute("aria-expanded", String(openNow));
+    if(openNow){ var ta = box.querySelector("textarea"); ta.focus(); ta.select(); }
+    return;
+  }
+  if(t.classList && t.classList.contains("cpy")){
+    copyFrom(t.closest(".runbox").querySelector("textarea"), t); return;
+  }
   if(t.hasAttribute&&t.hasAttribute("data-frz")){
     var a=find(S.agents,t,"a"); if(a){ a.frozen=!a.frozen; render(); } return; }
   if(t.hasAttribute&&t.hasAttribute("data-del")){
