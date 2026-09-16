@@ -1,0 +1,471 @@
+{
+  "schema": 1,
+  "cycle": {
+    "id": "2026-W36",
+    "date": "30/08/2026",
+    "mode": "ענן",
+    "disk_scanned": false,
+    "sources": "ListSkills ✅ · ListConnectors ✅ · list_triggers ⚠️ לא זמין · יומן+מייל ⛔ לא פעילים",
+    "next": "ראשון הבא · W37",
+    "note": "שלושה סוכנים לא הוחזרו ע\"י ListSkills החי — יתומים בפועל. 0/3 הופעלו."
+  },
+  "decision_budget": {
+    "total": 3,
+    "used_by_maestro": 2,
+    "left_for_compass": 1
+  },
+  "agents": [
+    {
+      "id": "lecture-hunter",
+      "name": "צייד ההרצאות",
+      "domain": "עסקי",
+      "level": "L1",
+      "status": "broken",
+      "cadence": "שבועי — לפי קריאה עד שיוכיח את עצמו",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "עסק",
+      "does": "מוצא כל שבוע 5 ארגונים שצריכים בדיוק את מה שאתה מרצה עליו, מאתר מי מחליט שם, וכותב לך פנייה מוכנה. רודף אחרי מי שלא ענה.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hiro-compass",
+      "name": "מצפן HIRO",
+      "domain": "HIRO",
+      "level": "L2",
+      "status": "dormant",
+      "cadence": "שבועי — שלב אחרון במחזור המנצח",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "ספר",
+      "does": "קורא את כל מה שהסוכנים ייצרו אי פעם ואומר לך מה הכי כדאי לקדם השבוע ולמה.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hiro-forge",
+      "name": "HIRO Forge",
+      "domain": "HIRO",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "ספר",
+      "does": "אתה נותן מושג — הוא מחזיר פרק כתוב: מחקר, ביקורת, פרקליט השטן, כתיבה.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hiro-lecture-forge",
+      "name": "Lecture Forge",
+      "domain": "HIRO",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי אירוע ביומן",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "עסק",
+      "does": "אתה נותן נושא — הוא מחזיר מצגת הרצאה שלמה, 40+ שקפים עם הערות מרצה.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hiro-parent-mentor",
+      "name": "מדריך הורים",
+      "domain": "קליני",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי מקרה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "קליני",
+      "does": "יועץ להדרכות הורים: המשגה למקרה, תכנית התערבות, ומה לעשות בתקיעות.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "psychology-editor",
+      "name": "עורך פסיכולוגי",
+      "domain": "כתיבה",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי טיוטה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "ספר",
+      "does": "מקבל קטע שכתבת ומחזיר אותו ברמת ספר מקצועי.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "business-manager",
+      "name": "המנהל העסקי",
+      "domain": "עסקי",
+      "level": "L2",
+      "status": "broken",
+      "cadence": "יומי (A) + שבועי (B)",
+      "last_run": "2026-08-27",
+      "score": null,
+      "trend": null,
+      "track": "עסק",
+      "does": "סורק לך כל בוקר מייל ויומן ומתריע אם מישהו פנה ולא ענית. פעם בשבוע כותב דוח מנכ\"ל ובונה באתר.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "llm-council",
+      "name": "מועצת היועצים",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי הכרעה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "מריץ החלטה שאתה מתלבט בה מול 5 יועצים ומחזיר פסק דין.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "skill-creator",
+      "name": "בונה הסוכנים",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי גיוס",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "הכלי שבונה ומתקן סוכנים. בלעדיו אי אפשר להוסיף אף אחד מהחדשים.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "morning",
+      "name": "תדריך בוקר",
+      "domain": "תשתית",
+      "level": "L1",
+      "status": "dormant",
+      "cadence": "יומי אופציונלי",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "תדריך בוקר מעוצב. אין לו תזמון ולא הופעל.",
+      "freeze_suggested": true
+    },
+    {
+      "id": "rtl-hebrew-docs",
+      "name": "מסמכי RTL",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "duplicate",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "מפיק מסמכים בעברית — PDF, Word, מצגות — עם יישור לימין תקין.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hebrew-document-generator",
+      "name": "מסמכים בעברית",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "duplicate",
+      "cadence": "לפי קריאה",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "אותו דבר בדיוק כמו rtl-hebrew-docs. שניהם נדלקים על אותן בקשות.",
+      "freeze_suggested": true
+    },
+    {
+      "id": "docx-pptx-pdf-xlsx",
+      "name": "docx · pptx · pdf · xlsx",
+      "domain": "מסמכים",
+      "level": "L1",
+      "status": "active",
+      "cadence": "לפי פורמט",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "ממירים בין פורמטים: Word, PowerPoint, PDF, Excel.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hiro-critic",
+      "name": "Critic",
+      "domain": "HIRO",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "ספר",
+      "does": "יתקוף כל טענה חדשה במודל ויחזיר את החולשה שלה. עוד לא נבנה.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "hiro-manuscript",
+      "name": "בעל הבית של כתב היד",
+      "domain": "כתיבה",
+      "level": "L0",
+      "status": "proposed",
+      "cadence": "—",
+      "last_run": null,
+      "score": null,
+      "trend": null,
+      "track": "ספר",
+      "does": "יחזיק את מפת כתב היד — אילו פרקים קיימים, מה חסר, מה חוסם הגשה. עוד לא נבנה.",
+      "freeze_suggested": false
+    },
+    {
+      "id": "agent-maestro",
+      "name": "מנצח התזמורת",
+      "domain": "תשתית",
+      "level": "L2",
+      "status": "broken",
+      "cadence": "שבועי — ראשון 06:15",
+      "last_run": "2026-08-28",
+      "score": null,
+      "trend": null,
+      "track": "תשתית",
+      "does": "הסוכן הזה. פעם בשבוע עושה סדר בכולם ומגיש תדריך אחד. רץ מהפרומפט של ה-Routine — לא כסקיל מותקן.",
+      "freeze_suggested": false
+    }
+  ],
+  "routines": [
+    {
+      "name": "בדיקה עסקית יומית",
+      "id": "trig_013LGXpaXG4vykPQKZvy1RKG",
+      "cron": "30 4 * * 0-4",
+      "local": "07:30 א׳–ה׳",
+      "agent": "business-manager",
+      "last_run": "2026-08-27",
+      "last_status": "ABANDONED"
+    },
+    {
+      "name": "דוח מנהל עסקי שבועי",
+      "id": "trig_01Nf1CenLwkJfJdUnvH6rjN7",
+      "cron": "0 5 * * 0",
+      "local": "08:00 ראשון",
+      "agent": "business-manager",
+      "last_run": "2026-08-23",
+      "last_status": "SUCCEEDED"
+    },
+    {
+      "name": "מנצח התזמורת — מחזור שבועי",
+      "id": "trig_0181AdPkAMbtMTijijqRe2ZZ",
+      "cron": "15 3 * * 0",
+      "local": "06:15 ראשון",
+      "agent": "agent-maestro",
+      "last_run": null,
+      "last_status": null,
+      "next_run": "2026-08-30T03:15:00Z"
+    }
+  ],
+  "alerts": [
+    {
+      "sev": "med",
+      "agent": "lecture-hunter",
+      "title": "נבנה — ממתין להרצה ראשונה",
+      "detail": "הפוקוס לשבוע הראשון הוא חינוך: בתי ספר, שפ\"ח ומתנ\"סים סוגרים תוכנית שנתית עכשיו, והחלון נסגר בספטמבר. בית ספר שסגר תוכנית לא ייפתח עד הקיץ הבא.",
+      "fix": "אמור \"צוד לי הרצאות\" והוא יחזיר 5 פניות מוכנות. הוא לא שולח — אתה לוחץ שלח.",
+      "cost": "—"
+    },
+    {
+      "sev": "high",
+      "agent": "האתר והשיווק",
+      "title": "אפס פניות נכנסות — שלושה שבועות קדימה, עשרה ימים אחורה",
+      "detail": "היומן עד 19/09: 46 פגישות, כולן מטופלים קבועים. אפס הרצאות. המייל בעשרה ימים: אפס פניות להרצאה ואפס מטופל חדש. ההכנסה שלך תלויה כולה בשעות שאתה יושב בחדר, ואין בצנרת שום דבר שלא דורש עוד שעה שלך.",
+      "fix": "אין היום סוכן שיוצא החוצה ומחפש עבודה. שלוש ההצעות למטה נועדו בדיוק לזה.",
+      "cost": "—"
+    },
+    {
+      "sev": "high",
+      "agent": "business-manager",
+      "title": "הסוכן שאמור לתפוס פניות לא קיים, והבדיקה שלו נפלה",
+      "detail": "שני תזמונים פעילים קוראים לסקיל business-manager והוא לא מותקן — הם רצים על הוראות מגובות בתוך התזמון עצמו. הבדיקה של 27/08 מתה באמצע. סוכן ששומר על פניות ושתיקתו נראית כמו 'יום שקט' הוא הכשל היקר ביותר כאן.",
+      "fix": "לבנות אותו כסקיל אמיתי מתוך שני הפרומפטים, ואז לקצר את שני התזמונים לשורה.",
+      "cost": "3 שעות"
+    },
+    {
+      "sev": "med",
+      "agent": "שני סוכני המסמכים",
+      "title": "כפילות — ואתה לא יודע מי מהם ענה לך",
+      "detail": "rtl-hebrew-docs ו-hebrew-document-generator נדלקים על אותן בקשות בדיוק. אחד מהם אוסר להנפיק חשבונית מס והשני מציע — סתירה בקו אדום, לא רק בזבוז.",
+      "fix": "להקפיא את hebrew-document-generator ולהשאיר אחד.",
+      "cost": "מיידי"
+    }
+  ],
+  "dispatch": {
+    "note": "נבנה הצייד. ההרצה הראשונה שלו היא הפריט היחיד שדחוף השבוע.",
+    "planned": [
+      {
+        "agent": "צייד ההרצאות — הרצה ראשונה",
+        "ask": "סגמנט חינוך: 5 ארגונים מאומתים, מי מחליט בכל אחד, ופנייה מוכנה לכל אחד.",
+        "why": "החלון של תוכניות שנתיות נסגר בספטמבר"
+      }
+    ],
+    "excluded": [
+      {
+        "agent": "המנהל העסקי",
+        "why": "רץ לבד בכל בוקר ובכל ראשון"
+      },
+      {
+        "agent": "סוכני הספר",
+        "why": "עובדים טוב, לא מכניסים כסף השבוע"
+      }
+    ]
+  },
+  "coaching": [],
+  "history": [
+    {
+      "cycle": "2026-W35 · בסיס",
+      "date": "2026-08-28",
+      "agents": 15,
+      "active": 7,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "מחזור בסיס. קו הבסיס נקבע."
+    },
+    {
+      "cycle": "2026-W35 · הרצה חיה",
+      "date": "2026-08-29",
+      "agents": 16,
+      "active": 7,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 3,
+      "avg_score": null,
+      "note": "מייל ויומן נסרקו. שלוש תקלות חדשות. גיוס committee-scribe החליף את hiro-manuscript בתקרה."
+    },
+    {
+      "cycle": "2026-W35 · מיקוד עסקי",
+      "date": "2026-08-29",
+      "agents": 15,
+      "active": 7,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "הצי סווג לפי מסלול. שלוש הצעות גיוס עסקיות החליפו את הצעות הספר."
+    },
+    {
+      "cycle": "2026-W35 · הצייד נבנה",
+      "date": "2026-08-29",
+      "agents": 16,
+      "active": 8,
+      "dormant": 2,
+      "broken": 1,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "lecture-hunter נבנה ונכנס ב-L1. סוכני העסק: 2 ← 3, והראשון שיוצא החוצה."
+    },
+    {
+      "cycle": "2026-W36",
+      "date": "2026-08-30",
+      "agents": 16,
+      "active": 7,
+      "dormant": 2,
+      "broken": 3,
+      "duplicate": 2,
+      "proposed": 2,
+      "avg_score": null,
+      "note": "0/3 הופעלו. שלושה סוכנים יתומים לפי ListSkills החי. יומן, מייל ו-list_triggers לא נגישים."
+    }
+  ],
+  "recruits": [
+    {
+      "id": "המזכירה",
+      "signal": "כל פנייה עוברת דרכך",
+      "cost": "5 שעות",
+      "rank": 1,
+      "mandate": "עונה על כל פנייה נכנסת תוך שעה בטיוטה מוכנה, מציעה שלושה מועדים מהיומן, שולחת תזכורת לפני פגישה ורודפת אחרי תשלום שלא נכנס.",
+      "evidence": "46 פגישות בשלושה שבועות, וכל תיאום, תזכורת וגבייה יושבים עליך. הבדיקה היומית שקיימת רק מתריעה — היא לא עונה ולא מתאמת.",
+      "io": "מייל ויומן ← תשובה מנוסחת + מועדים פנויים + רשימת גבייה",
+      "test": "שבוע שבו כל פנייה קיבלה טיוטה תוך שעה. הצליח = לא נגעת ביומן ידנית.",
+      "red": "לא שולחת בלי אישור. לא קובעת פגישה לבד. שום פרט מטופל לא יוצא החוצה.",
+      "triggers": [
+        "תעני לפניות",
+        "תאם לי",
+        "מי לא שילם"
+      ]
+    },
+    {
+      "id": "בונה יחידות ההוראה",
+      "signal": "אין מוצר שלא דורש שעה שלך",
+      "cost": "6 שעות",
+      "rank": 2,
+      "mandate": "הופך פרק מהספר ליחידת הוראה מוכנה למכירה: 90 דקות, מצגת, דף למשתתף, תרגיל, ומחיר.",
+      "evidence": "כל ההכנסה היום היא שעות שלך. יחידה נמכרת שוב ושוב לאותו מכון בלי שתשב בחדר.",
+      "io": "פרק או נושא ← חבילה שלמה מוכנה למכירה למכון או לבית ספר",
+      "test": "יחידה אחת מהנושא שאתה הכי חזק בו. הצליח = נמכרה פעמיים.",
+      "red": "לא מפרסם ולא מתמחר לבד — מציע מחיר, אתה מאשר.",
+      "triggers": [
+        "בנה יחידת הוראה",
+        "הפוך את זה למוצר",
+        "חבילה למכון"
+      ]
+    }
+  ],
+  "waitlist": [
+    {
+      "id": "hiro-critic · hiro-manuscript",
+      "signal": "תחום בלי בעלים",
+      "why": "סוכני ספר טובים. חוזרים כשיש צנרת — עכשיו הם לא הכאב."
+    },
+    {
+      "id": "כותב הוועדות",
+      "signal": "תחום בלי בעלים",
+      "why": "ירד. לא נוגע בהכנסה."
+    }
+  ],
+  "dashboard_url": "https://claude.ai/code/artifact/165bafe2-bfd9-44d0-8a2a-2e38dbd3c7de",
+  "ladder": [
+    {
+      "l": "L0",
+      "t": "מוצע",
+      "d": "קיים כמפרט בלבד"
+    },
+    {
+      "l": "L1",
+      "t": "בפיקוח",
+      "d": "רץ רק בקריאה בשם; כל תוצר עובר אישור"
+    },
+    {
+      "l": "L2",
+      "t": "מתוזמן",
+      "d": "רץ בתזמון קבוע; פעולה חיצונית באישור"
+    },
+    {
+      "l": "L3",
+      "t": "אוטונומי מוגדר",
+      "d": "פועל ביוזמתו בגדר חול. לא שולח החוצה."
+    },
+    {
+      "l": "L4",
+      "t": "שותף",
+      "d": "מציע שיפורים לקובץ הסקיל של עצמו"
+    }
+  ],
+  "coaching_html": "<b>שני סוכני העסק שהיו בצי לא ייצרו פנייה אחת.</b> אחד מהם — המנהל העסקי — אינו מותקן בכלל, והשני בונה מצגת רק אחרי שכבר הזמינו אותך. <b>אף אחד מהם לא יוצא החוצה.</b> הצייד הוא השלישי, והראשון שכן.<br><br><b>המדד שלו אינו כמה פניות נשלחו.</b> קל להעלות את המספר הזה ולא להרוויח שקל. המדד הוא <b>הרצאות שנסגרו</b>, וקו הבסיס הוא אפס פניות נכנסות ביומן של שלושה שבועות ובעשרה ימי מייל. הפנקס ב-<span class='ltr'>PROSPECTS.md</span> סופר את שניהם.<br><br><b>הצייד נכנס ב-L1 — בפיקוח.</b> הוא לא שולח שום דבר בעצמו, גם לא אחרי שיצליח. סוכן שיוצר קשר ראשון עם ארגון בשם פסיכולוג קליני בלי שראית את הטקסט מסכן את המוניטין שלך, לא חוסך לך זמן.",
+  "tracks": {
+    "עסק": "מכניס כסף",
+    "ספר": "בונה את המודל ואת הספר",
+    "קליני": "עבודה עם מטופלים",
+    "תשתית": "מריץ את השאר"
+  }
+}
