@@ -1,0 +1,4 @@
+tools/telegram_out/
+result.json
+**/result.json
+__pycache__/

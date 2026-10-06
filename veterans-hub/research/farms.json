@@ -1,0 +1,983 @@
+[
+ {
+  "name": "מרכז כלבי נחייה לעיוורים בישראל – כלבי שירות לפוסט טראומה (Israel Guide Dog Center)",
+  "category": "animal-therapy",
+  "description": "המרכז היחיד בישראל המוסמך בינלאומית לאילוף כלבי נחייה, ומאז 2017 מכשיר ומוסר כלבי שירות לוותיקי צה\"ל עם פוסט טראומה על רקע שירות. הכלבים מאומנים להרגיע בהתקפי חרדה, להעיר מסיוטים ולבצע פקודת 'חסימה' שיוצרת מרחב בטוח בציבור. כולל תהליך התאמה והכשרה משותפת של הלוחם והכלב.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "loneliness"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "הכלב נמסר ללא עלות (ממומן בתרומות); למוכרי משהב\"ט קיימת השתתפות חודשית בהוצאות הכלב",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "בית עובד (מרכז הארץ)",
+  "phone": "",
+  "email": "",
+  "website": "https://israelguidedog.org",
+  "how_to_apply": "פונים למרכז דרך האתר ומגישים בקשה לתוכנית כלבי שירות ל-PTSD; מוכרי אגף השיקום יכולים לתאם גם דרך עו\"ס/רכז השיקום לקבלת השתתפות במימון.",
+  "source_url": "https://israelguidedog.org/service-dogs/",
+  "confidence": "high"
+ },
+ {
+  "name": "מרכז כלבי נחייה – כלבי תמיכה רגשית למשפחות שנפגעו מהמלחמה",
+  "category": "animal-therapy",
+  "description": "בנוסף לכלבי השירות ללוחמים, המרכז מוסר כלבי תמיכה רגשית לילדים ולמשפחות שנפגעו מהמלחמה. מתאים למשפחות של לוחמים ומילואימניקים שהבית כולו מתמודד עם השלכות הטראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "civilians",
+   "bereaved"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן בתרומות; לבדוק תנאים מול המרכז",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "בית עובד",
+  "phone": "",
+  "email": "",
+  "website": "https://israelguidedog.org",
+  "how_to_apply": "פנייה למרכז דרך האתר ובירור התאמה לתוכנית כלבי תמיכה רגשית.",
+  "source_url": "https://israelguidedog.org/2025/12/the-ripple-effect-of-hope-and-empowerment-how-the-israel-guide-dog-center-transforms-lives-and-all-of-israel/",
+  "confidence": "medium"
+ },
+ {
+  "name": "כלב שירות לנכי צה\"ל עם פוסט טראומה – זכאות אגף השיקום",
+  "category": "financial-grants",
+  "description": "נכי צה\"ל וכוחות הביטחון שהוכרה להם נכות של 20% לפחות על פוסט טראומה זכאים לכלב שירות מאולף. הזכאות כוללת השתתפות חודשית בהוצאות הכלב (מזון, ציוד) בסך כ-396 ₪.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "security-forces",
+   "police"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "השתתפות חודשית של כ-396 ₪ בהוצאות הכלב",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פונים לרכז/ת השיקום באגף השיקום במשרד הביטחון ומבקשים מימון כלב שירות; נדרשת הכרה בנכות של 20% לפחות על PTSD.",
+  "source_url": "https://www.kolzchut.org.il/he/כלבי_שירות_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
+  "confidence": "high"
+ },
+ {
+  "name": "כלב שירות לנפגעי פעולות איבה עם פוסט טראומה – ביטוח לאומי",
+  "category": "financial-grants",
+  "description": "נפגעי פעולות איבה (כולל אזרחים, משתתפי נובה ותושבי העוטף) שהוכרה להם נכות על פוסט טראומה זכאים לכלב שירות בתנאים מסוימים, דרך הביטוח הלאומי. השירות כולל השתתפות בהוצאות הכלב.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "במימון ביטוח לאומי לפי תנאי הזכאות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פונים לאגף נפגעי פעולות איבה בביטוח הלאומי (או לעו\"ס המטפל) ומגישים בקשה לכלב שירות.",
+  "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "החווה של דני – חוות חוסן (קיבוץ סתריה)",
+  "category": "rehab-farm",
+  "description": "חווה טיפולית שהוקמה ב-2016 בקיבוץ סתריה ליד רחובות, והוכרה על ידי משרד הביטחון כ'חוות חוסן'. מציעה טיפולים אינטגרטיביים בעזרת בעלי חיים ובטבע ללוחמים המתמודדים עם פוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "loneliness"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "למוכרי אגף השיקום – במימון כחוות חוסן; לאחרים לברר",
+  "regions": [
+   "center"
+  ],
+  "location": "קיבוץ סתריה, ליד רחובות",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה דרך רכז/ת השיקום באגף השיקום (חוות חוסן מוכרת) או ישירות לחווה.",
+  "source_url": "https://www.ice.co.il/health/news/article/1042430",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות החוסן של ורטיגו – כפר האקו-ארט (Vertigo Resilience Farm)",
+  "category": "rehab-farm",
+  "description": "תוכנית שיקום אינטנסיבית שפותחה בפקולטה לפסיכולוגיה באוניברסיטת רייכמן ומופעלת בשיתוף משרד הביטחון, צה\"ל וארגון נכי צה\"ל. קבוצות מילואימניקים המוכרים עם PTSD מגיעים 3 ימים בשבוע, 8 שעות ביום, לטיפול קבוצתי ופרטני לצד צ'י קונג, מדיטציה, פיסול, בנייה אקולוגית, דיקור, ליצנות רפואית וטיפול בתנועה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [
+   "nature",
+   "mind-body",
+   "art",
+   "crafts"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון משרד הביטחון למוכרים",
+  "regions": [
+   "jerusalem",
+   "center"
+  ],
+  "location": "כפר האקו-ארט של ורטיגו, קיבוץ נתיב הל\"ה (עמק האלה)",
+  "phone": "",
+  "email": "",
+  "website": "https://vertigo.org.il/en/shikum-2/",
+  "how_to_apply": "ההפניה נעשית דרך אגף השיקום במשרד הביטחון / ארגון נכי צה\"ל; ניתן לפנות לוורטיגו דרך האתר לבירור מחזורים.",
+  "source_url": "https://vertigo.org.il/en/shikum-2/",
+  "confidence": "high"
+ },
+ {
+  "name": "חוות Back2Life – שדות ים",
+  "category": "rehab-farm",
+  "description": "חווה שיקומית בקיבוץ שדות ים שהוקמה לזכרו של לוחם יחידה מובחרת שסבל מ-PTSD. תוכנית ליבה של 12 שבועות: קבוצה טיפולית שבועית (8-10 משתתפים), ליווי פרטני, טיפול בבעלי חיים שניצלו מהתעללות (סוסים, חמורים, כלבים) ועבודות חווה. ללא אבחנות, ללא בירוקרטיה וללא עלות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness",
+   "depression"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "center",
+   "haifa"
+  ],
+  "location": "קיבוץ שדות ים (ליד קיסריה)",
+  "phone": "",
+  "email": "",
+  "website": "https://back2life.org.il",
+  "how_to_apply": "פנייה דרך האתר של העמותה להצטרפות למחזור הבא; פתוח גם לשורדי נובה ושבים מהשבי בסדנאות.",
+  "source_url": "https://israelgives.org/amuta/580808053",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות רימון – חוות להב (פוסט טראומה)",
+  "category": "rehab-farm",
+  "description": "חווה טיפולית של עמותת חוות רימון בקיבוץ להב בנגב, ייעודית למתמודדים עם פוסט טראומה. המודל משלב פסיכותרפיה קבוצתית, עבודה חקלאית (כולל טיפול בכבשים), דיקור להרגעת מערכת העצבים וחיי קהילה. תוכניות באורכים שונים – מיום אחד ועד שנתיים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "animals",
+   "mind-body"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "ממומן בעיקר מתרומות; לברר מול העמותה",
+  "regions": [
+   "south"
+  ],
+  "location": "קיבוץ להב, נגב",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת חוות רימון לבירור התאמה ומחזורים.",
+  "source_url": "https://www.icej.org/blog/icej-supports-israeli-farm-treating-war-trauma-victims/",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות רימון – חוות שקף (פוסט טראומה)",
+  "category": "rehab-farm",
+  "description": "חווה שנייה של עמותת חוות רימון המיועדת לטיפול בפוסט טראומה, במודל של טיפול קבוצתי, חקלאות, דיקור וקהילה. העמותה פועלת בשבעה אתרים בנגב וליוותה כ-10,000 משתתפים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "mind-body"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "ממומן בעיקר מתרומות; לברר",
+  "regions": [
+   "south"
+  ],
+  "location": "מושב שקף (חבל לכיש)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת חוות רימון.",
+  "source_url": "https://ejewishphilanthropy.com/an-israeli-nonprofit-sent-a-cold-email-to-a-banks-general-inbox-it-responded-with-1-7-million/",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות רימון – חוות אור הנר (שיקום קהילתי)",
+  "category": "rehab-farm",
+  "description": "חווה לשיקום קהילתי של עמותת חוות רימון, שהתרחבה אחרי 7 באוקטובר עבור מי שנפגע בעקיפין: נשות מילואימניקים, שוטרים, מורים, אחיות ותושבי העוטף. עבודה חקלאית משותפת עם תחושת משמעות, שייכות ומחויבות. העמותה מקימה חוות נוספות בחולית ובנחל עוז.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "police",
+   "civilians",
+   "terror-victims",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "volunteering"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "מבוסס תרומות",
+  "regions": [
+   "south"
+  ],
+  "location": "קיבוץ אור הנר (ליד שדרות)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת חוות רימון.",
+  "source_url": "https://aish.com/how-farming-is-healing-israelis-wounded-soldiers/",
+  "confidence": "medium"
+ },
+ {
+  "name": "החווה של רוקה – מושב חמד (Ruca's Farm)",
+  "category": "rehab-farm",
+  "description": "חווה חקלאית טיפולית על 20 דונם במושב חמד ליד אור יהודה. תוכנית אינטנסיבית של 8 שבועות בקבוצות של 10-15 ותיקים: חממות אורגניות, מטעים ועבודה בשטח לצד טיפול קבוצתי ברמה הגופנית, הרגשית והחברתית. קבוצות נפרדות ללוחמי 'חרבות ברזל' ולוותיקי מלחמות קודמות; המשתתפים נבחרים בשיתוף אגף השיקום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "depression",
+   "loneliness",
+   "employment"
+  ],
+  "interests": [
+   "nature",
+   "cooking"
+  ],
+  "cost": "free",
+  "cost_notes": "במימון תרומות ובשיתוף אגף השיקום",
+  "regions": [
+   "center"
+  ],
+  "location": "מושב חמד, ליד אור יהודה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "ההפניה בשיתוף אגף השיקום במשרד הביטחון – לפנות לרכז/ת השיקום או ישירות לחווה.",
+  "source_url": "https://www.goodpeoplefund.org/news/harvesting-healing/",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות רום – הר כמון (מרכז שיקום)",
+  "category": "rehab-farm",
+  "description": "חווה בפסגת הר כמון בגליל התחתון עם מרכז שיקום למתמודדי נפש ו-PTSD, שפתחה שעריה ללוחמים, מילואימניקים בין סבבים ובני משפחות שכולות. המשתתפים עובדים בשדות, ברפת, בגן האורגני, בייצור מוצרים ובאחזקה, במטרה לחזור לשוק העבודה; ניתן לשהות כמה שנדרש.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized",
+   "reservists",
+   "combat-soldiers",
+   "bereaved",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "employment",
+   "depression",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "animals",
+   "crafts"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "בחסות משרד הבריאות ומשרד העבודה (סל שיקום)",
+  "regions": [
+   "north"
+  ],
+  "location": "הר כמון, גליל תחתון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "למי שיש סל שיקום ממשרד הבריאות – דרך רכז/ת הסל; אחרים – פנייה ישירה לחווה.",
+  "source_url": "https://archive.israel21c.org/?p=153370",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות רותי – מרכז חוסן וטיפול (אלון)",
+  "category": "animal-therapy",
+  "description": "מרכז חוסן וטיפול הפועל מאז 2012 ביישוב אלון, המשלב רכיבה וטיפול בעזרת סוסים, ריפוי בטבע וגישות משלימות ללוחמים, ותיקים ובני משפחותיהם. מציע טיפול פרטני, סדנאות ותוכניות קבוצתיות בליווי מקצועי של פרופ' דוד רועה מאוניברסיטת חיפה. עמותת 'ישר לחייל' מממנת טיפולים לחיילים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "not-recognized",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "טיפולים לחיילים בחסות 'ישר לחייל'",
+  "regions": [
+   "judea-samaria",
+   "jerusalem"
+  ],
+  "location": "אלון (כביש 1, מזרחית לירושלים)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לחווה או דרך עמותת 'ישר לחייל' לבירור מימון.",
+  "source_url": "https://yasharlachayal.org/therapy-for-soldiers-with-ptsd-2/",
+  "confidence": "medium"
+ },
+ {
+  "name": "אחים של יונתן – פרויקט 'מעבר לטראומה' (Brothers of Jonathan)",
+  "category": "animal-therapy",
+  "description": "עמותה שהקימה ד\"ר אניטה שקדי, מחלוצות הרכיבה הטיפולית בישראל, אחרי 7 באוקטובר. מציעה טיפול בעזרת סוסים (כולל עבודה מהקרקע, ללא רכיבה) למילואימניקים, חיילים, ותיקים, שורדי נובה ובני משפחה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "mod-recognized",
+   "not-recognized",
+   "terror-victims",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "מבוסס תרומות",
+  "regions": [
+   "center"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותה (דרך דף הגיוס/תרומות או הפניה מטפל).",
+  "source_url": "https://archive.israel21c.org/?p=154392",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות מרפא רשפון – תוכנית למילואימניקים ובני זוג",
+  "category": "family-support",
+  "description": "חוות טיפולית ברשפון המובילה תוכניות ליווי מקצועי למשרתי מילואים ולבני משפחותיהם, בתמיכת קרן מתובענה ייצוגית. מארחת סדנאות גוף-נפש לזוגות מילואימניקים לגישור על פערים שנוצרו בתקופת השירות; כבר טופלו מעל 500 משרתי מילואים ובני משפחה.",
+  "provider_type": "private",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "mind-body"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "בתמיכת קרן תובענה ייצוגית",
+  "regions": [
+   "sharon"
+  ],
+  "location": "מושב רשפון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לחווה או דרך עמותת 'עוגן למשפחות המילואים'.",
+  "source_url": "https://www.maariv.co.il/breaking-news/article-1176043",
+  "confidence": "medium"
+ },
+ {
+  "name": "עוגן למשפחות המילואים – סדנאות זוגיות בחווה",
+  "category": "family-support",
+  "description": "ארגון המלווה משפחות מילואים; ארגן סדנאות גוף ונפש לכ-60 זוגות בחוות מרפא רשפון עם זמן איכות וכלים להתמודדות עם השלכות שירות מילואים ממושך.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "anxiety"
+  ],
+  "interests": [
+   "mind-body",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות למשתתפים (לברר)",
+  "regions": [
+   "sharon",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לארגון 'עוגן למשפחות המילואים'.",
+  "source_url": "https://www.maariv.co.il/breaking-news/article-1176043",
+  "confidence": "low"
+ },
+ {
+  "name": "בלב אחד – Dogs 4 Soldiers",
+  "category": "animal-therapy",
+  "description": "תוכנית של עמותת בלב אחד המשלבת טיפול בעזרת כלבים (לרוב כלבים מאומצים ממקלט) עם טיפולים נוספים ללוחמים פצועים עם PTSD. הכלב עוזר לצאת מהבית, לבנות אמון ולהפחית חרדה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "מבוסס תרומות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת בלב אחד; העמותה עובדת בשיתוף משרד הביטחון.",
+  "source_url": "https://www.jns.org/canine-therapy-helps-soldiers-cope-with-ptsd/",
+  "confidence": "medium"
+ },
+ {
+  "name": "בלב אחד – משלחת החלמה לניו יורק",
+  "category": "nature-retreats",
+  "description": "עמותת בלב אחד 'מאמצת' לוחמים פצועים ומספקת פיזיותרפיה, טיפול נפשי, ליווי רוחני והשמה בעבודה, ובשלב השני – מסע החלמה של כשבועיים בניו יורק עם הקהילה היהודית. מאז 7 באוקטובר טופלו מעל 2,000 לוחמים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "amputation",
+   "loneliness"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן בתרומות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "משלחת לניו יורק",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת בלב אחד; יש רשימת המתנה.",
+  "source_url": "https://www.jns.org/israel-news/new-york-trip-for-wounded-israeli-soldiers-boosts-mind-body-and-spirit",
+  "confidence": "medium"
+ },
+ {
+  "name": "אחים לחיים – משלחות החלמה לחו\"ל (Brothers for Life)",
+  "category": "peer-support",
+  "description": "עמותה של קצינים פצועים מיחידות מובחרות המלווים לוחמים שנפצעו לאחרונה. מפעילה מעל 25 תוכניות, ובהן משלחות שנתיות לקהילות יהודיות בארה\"ב, קנדה, בריטניה, אוסטרליה ודרום אפריקה עם משפחות מארחות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "amputation",
+   "loneliness"
+  ],
+  "interests": [
+   "travel",
+   "sport"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן בתרומות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת אחים לחיים.",
+  "source_url": "https://www.sajr.co.za/injured-idf-soldiers-find-healing-in-south-africa/",
+  "confidence": "medium"
+ },
+ {
+  "name": "שקט נפשי – Peace of Mind (מטיב)",
+  "category": "nature-retreats",
+  "description": "תוכנית טיפולית של כ-9 חודשים לקבוצות של 15-20 לוחמים ששירתו יחד ביחידה קרבית, בהובלת מטפלים ממטיב – המרכז הישראלי לפסיכוטראומה. כוללת שבוע מתארח בקהילה יהודית בחו\"ל לעיבוד חוויות הלחימה הרחק מהשגרה. מעל 3,500 משתתפים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן בידי הקהילות המארחות ותורמים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "מטיב, ירושלים; שבוע בחו\"ל",
+  "phone": "",
+  "email": "",
+  "website": "https://pomcanada.com/",
+  "how_to_apply": "פנייה כקבוצה/יחידה למטיב – תוכנית Peace of Mind.",
+  "source_url": "https://pomcanada.com/",
+  "confidence": "medium"
+ },
+ {
+  "name": "החברה להגנת הטבע – 'הטבע מרפא' למילואימניקים ומשפחותיהם",
+  "category": "nature-retreats",
+  "description": "סדרת תוכניות אקו-תרפיה של החברה להגנת הטבע אחרי 7 באוקטובר, בשיתוף רשויות, מועצות אזוריות וצה\"ל, עם פעילויות טבע טיפוליות ייעודיות למילואימניקים ולבני משפחותיהם.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "nature",
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "בחלק מהתוכניות ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "בתי ספר שדה ברחבי הארץ",
+  "phone": "",
+  "email": "",
+  "website": "https://natureisrael.org/natureheals",
+  "how_to_apply": "לברר באתר החברה להגנת הטבע / דרך הרשות המקומית או היחידה.",
+  "source_url": "https://natureisrael.org/natureheals",
+  "confidence": "medium"
+ },
+ {
+  "name": "ריטריט אקו-תרפיה לחיילים – בית ספר שדה אילת (החלה\"ט, שיבא ועיריית אילת)",
+  "category": "nature-retreats",
+  "description": "ריטריט טיפולי לחיילי צה\"ל בבית ספר שדה אילת על חוף ים סוף, שהוקם בשיתוף החברה להגנת הטבע, המרכז הרפואי שיבא ועיריית אילת. מומחי טראומה מעניקים טיפול פסיכולוגי מקצועי בסביבה טבעית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "sea"
+  ],
+  "cost": "free",
+  "cost_notes": "לברר",
+  "regions": [
+   "south"
+  ],
+  "location": "בית ספר שדה אילת",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לברר דרך החברה להגנת הטבע או המרכז הרפואי שיבא.",
+  "source_url": "https://natureisrael.org/natureheals",
+  "confidence": "medium"
+ },
+ {
+  "name": "החברה להגנת הטבע – מחנות מדבר לבני נוער מפונים",
+  "category": "family-support",
+  "description": "מחנות של שלושה ימים במדבר לבני נוער מפונים בני 16-18 המתמודדים עם חרדה, דיכאון ו-PTSD: טיפוס, טרקים ותצפית כוכבים, ללא עלות. רלוונטי לילדי משפחות מילואים מהצפון והדרום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "extreme"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "south"
+  ],
+  "location": "מדבר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לברר באתר החברה להגנת הטבע.",
+  "source_url": "https://natureisrael.org/natureheals",
+  "confidence": "medium"
+ },
+ {
+  "name": "בשביל המחר – ריטריטים למילואימניקים",
+  "category": "nature-retreats",
+  "description": "עמותה שמסייעת למשרתי מילואים לעבד את המחיר הנפשי והרגשי של הלחימה באמצעות ריטריטים אינטנסיביים בני שבוע בהנחיית מטפלים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury",
+   "anxiety"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "לברר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותה (לרוב כקבוצה/פלוגה).",
+  "source_url": "https://jewishlink.news/a-path-for-tomorr-bshvil-hamachar-and-the-healing-of-israeli-society/",
+  "confidence": "medium"
+ },
+ {
+  "name": "ריפוי בטבע (Healing in Nature)",
+  "category": "nature-retreats",
+  "description": "עמותה ישראלית המשלבת ריטריטים בטבע הפראי, טכנולוגיה וקבוצות תמיכה, ומעניקה לוותיקים טיפול נפשי וחוויית החלמה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "לברר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותה.",
+  "source_url": "https://www.jewishcolorado.org/event/voice-from-within-healing-in-nature-innovative-approaches-to-ptsd-recovery/",
+  "confidence": "low"
+ },
+ {
+  "name": "כלבים שעושים טוב (Dogs Do Good)",
+  "category": "animal-therapy",
+  "description": "עמותה המפתחת ומקדמת טיפול והתערבויות בסיוע כלבים לאוכלוסיות מיוחדות, כולל לוחמים המתמודדים עם PTSD.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "partial",
+  "cost_notes": "לברר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותה.",
+  "source_url": "https://www.jns.org/canine-therapy-helps-soldiers-cope-with-ptsd/",
+  "confidence": "low"
+ },
+ {
+  "name": "חוות חוסן – רשת חוות טיפוליות מוכרות באגף השיקום",
+  "category": "rehab-farm",
+  "description": "אגף השיקום במשרד הביטחון מכיר בחוות טיפוליות כ'חוות חוסן' ומפנה אליהן לוחמים עם פוסט טראומה; כ-30 חוות פועלות ברחבי הארץ ותוכננה רשת של עד 40 חוות. תוכנית 'חוות החוסן' בשיתוף צה\"ל, ארגון נכי צה\"ל ואוניברסיטת רייכמן כוללת מסגרת של 3 ימים בשבוע לטיפול רב-מקצועי.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "bureaucracy"
+  ],
+  "interests": [
+   "nature",
+   "animals"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון אגף השיקום למוכרים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פונים לרכז/ת השיקום או לקו של אגף השיקום ומבקשים הפניה לחוות חוסן באזור המגורים.",
+  "source_url": "https://www.mako.co.il/news-lifestyle/2024_q2/Article-7522dca3d89bf81026.htm",
+  "confidence": "medium"
+ },
+ {
+  "name": "Trauma4Good – סיוע בהכרה וליווי נפגעי פוסט טראומה",
+  "category": "rights-legal",
+  "description": "ארגון שהוקם לעזור לנפגעי פוסט טראומה מכוחות הביטחון וההצלה לקבל הכרה וסיוע, ולהשתתף באיתור, טיפול וליווי של הנפגעים ובני משפחותיהם בתהליך השיקום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "not-recognized",
+   "mod-in-process",
+   "security-forces",
+   "police",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "לברר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לארגון.",
+  "source_url": "https://www.ice.co.il/health/news/article/1042430",
+  "confidence": "low"
+ },
+ {
+  "name": "ישר לחייל – מימון טיפולים לחיילים עם PTSD",
+  "category": "financial-grants",
+  "description": "ארגון התמיכה בחיילים 'ישר לחייל' מממן טיפולים לחיילים המתמודדים עם PTSD, ובהם טיפול בסיוע סוסים וטבע בחוות רותי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "financial"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "מימון טיפולים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://yasharlachayal.org",
+  "how_to_apply": "פנייה לארגון דרך האתר.",
+  "source_url": "https://yasharlachayal.org/therapy-for-soldiers-with-ptsd-2/",
+  "confidence": "medium"
+ },
+ {
+  "name": "חוות דרך הלוחמים (Warriors Way Farm)",
+  "category": "rehab-farm",
+  "description": "חווה טיפולית ללוחמים שגייסה כספים בפלטפורמת IsraelGives; לא אומתו פרטי תוכנית ומיקום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "לא אומת",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לברר דרך דף הקמפיין.",
+  "source_url": "https://my.israelgives.org/en/campaign/way",
+  "confidence": "low"
+ }
+]

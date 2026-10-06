@@ -1,0 +1,1356 @@
+[
+ {
+  "name": "הגשת בקשה להכרה בנכות – אגף השיקום, משרד הביטחון (MoD Rehabilitation Division – disability claim)",
+  "category": "rights-legal",
+  "description": "הצעד הראשון לכל חייל חובה, קבע או מילואים (וכן שוטרים ואנשי כוחות הביטחון) שנפגע פיזית או נפשית במהלך השירות או בגללו. הבקשה נבדקת ע\"י קצין התגמולים, ואם הקשר לשירות מוכר – נקבעים אחוזי נכות בוועדה רפואית. ההכרה פותחת את כל סל הזכויות: תגמולים, טיפולים, שיקום תעסוקתי, לימודים, רכב, דיור ועוד.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "tbi",
+   "chronic-pain",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "ממלאים טופס בקשה להכרה באתר אגף השיקום (מקוון), מצרפים מסמכים רפואיים ותיעוד מהשירות; מומלץ להיעזר בסיוע משפטי חינם (ראו רשומות סיוע משפטי).",
+  "source_url": "https://shikum.mod.gov.il/recognition/request/apply",
+  "confidence": "high"
+ },
+ {
+  "name": "טיפול נפשי בזמן תהליך ההכרה – אגף השיקום (Mental treatment during the recognition process)",
+  "category": "mental-health",
+  "description": "מי שהגיש בקשה להכרה – גם אם הבקשה הוגשה בגין פגיעה פיזית בלבד – זכאי לקבל טיפול נפשי במימון אגף השיקום כבר בזמן תהליך ההכרה. משוחררי חובה ומילואים שהגישו בקשה בגין מצב נפשי יכולים לקבל אישור לטיפול רפואי כבר עם ההגשה ועד קבלת ההחלטה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep",
+   "anger",
+   "moral-injury"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון משרד הביטחון, לא תלוי בתוצאת ההכרה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "להגיש בקשה להכרה, ואז לפנות לאגף השיקום (או למוקד *6500 לפצועי המלחמה) ולבקש אישור למטפל/ת לפני תחילת הטיפול.",
+  "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/mental-treatment",
+  "confidence": "high"
+ },
+ {
+  "name": "היחידה לתגובות קרב – אגף השיקום (Combat Reaction Unit)",
+  "category": "mental-health",
+  "description": "טיפול בטראומה למשוחררים (חובה ומילואים) שחווים מצוקה בעקבות השתתפות בלחימה או בפעילות מבצעית. הטיפול ניתן ללא תשלום, ללא צורך בהכרה בנכות או בהוכחה כלשהי, וללא מגבלת זמן מאז האירוע. זהו השער המרכזי למי שעדיין לא מוכר ולא רוצה/לא הספיק להגיש תביעה.",
+  "provider_type": "government",
+  "eligibility": [
+   "not-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep",
+   "anger",
+   "moral-injury",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם, ללא תלות בהכרה",
+  "regions": [
+   "center",
+   "nationwide"
+  ],
+  "location": "רח' אפעל 6, פתח תקווה",
+  "phone": "03-6401400",
+  "email": "",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "לפנות בטלפון 03-6401400, דרך טופס הפנייה באתר אגף השיקום, או להגיע לרח' אפעל 6, פתח תקווה.",
+  "source_url": "https://shikum.mod.gov.il/ContactUs/CombatResponse",
+  "confidence": "high"
+ },
+ {
+  "name": "מוקד \"נפש אחת\" *8944 – קו תמיכה נפשית 24/7 (Nefesh Achat support line)",
+  "category": "hotlines",
+  "description": "קו תמיכה וסיוע טלפוני של אגף השיקום, הפועל 24 שעות ביממה, 7 ימים בשבוע, ומאויש ע\"י אנשי מקצוע ומתנדבי נט\"ל. מיועד לנכי צה\"ל המתמודדים עם פוסט טראומה וגם לחיילים משוחררים במצוקה נפשית – גם ללא הכרה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep",
+   "loneliness",
+   "anger"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "*8944",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לחייג *8944 בכל שעה.",
+  "source_url": "https://www.maariv.co.il/news/military/article-937035",
+  "confidence": "high"
+ },
+ {
+  "name": "מוקד *6500 לפצועי מלחמת התקומה (חרבות ברזל) – אגף השיקום",
+  "category": "hotlines",
+  "description": "מוקד טלפוני ייעודי שאגף השיקום פתח לפצועי מלחמת חרבות ברזל ובני משפחותיהם – לבירור זכויות, תהליך הכרה, טיפולים ואישורים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd",
+   "physical-disability"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "*6500",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לחייג *6500.",
+  "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/moked-harvot",
+  "confidence": "high"
+ },
+ {
+  "name": "תכנית תל\"ם – תמיכה, ליווי ומיצוי זכויות לפצועי המלחמה (TELEM program)",
+  "category": "rights-legal",
+  "description": "פרויקט משותף לאגף השיקום ולאגף נפגעים בצה\"ל: קציני תל\"ם מלווים אישית אלפי פצועי מלחמה, מבצעים ביקורי בית ומסייעים במיצוי זכויות ובהתנהלות מול המערכת.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "physical-disability",
+   "ptsd",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "דרך אגף השיקום / מוקד *6500 – לבקש שיבוץ קצין/ת תל\"ם.",
+  "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/telem",
+  "confidence": "medium"
+ },
+ {
+  "name": "מסלול מהיר (\"מסלול ירוק\") להכרה בפוסט טראומה",
+  "category": "rights-legal",
+  "description": "הליך הכרה מקוצר לנפגעי פוסט טראומה שנחשפו לאירוע מבצעי/קרבי מוכר או לאימון לקראת פעילות מבצעית, כשהאירוע התרחש בחמש השנים שקדמו להגשת הבקשה. קצין התגמולים מחליט אם להפנות למסלול המהיר (על סירוב ניתן לערער), ולאחר מכן ועדה רפואית קובעת את דרגת הנכות.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה להכרה באגף השיקום ולציין חשיפה לאירוע מבצעי; קצין התגמולים יבחן התאמה למסלול המהיר.",
+  "source_url": "https://www.kolzchut.org.il/he/מסלול_מהיר_להכרה_בנכות_לחיילי_צה%22ל_וכוחות_הביטחון_עם_פוסט_טראומה",
+  "confidence": "high"
+ },
+ {
+  "name": "תיקון 35 לחוק הנכים – הכרה חוקית ב\"הלם קרב\" וועדת סיוע לפנים משורת הדין (2026)",
+  "category": "rights-legal",
+  "description": "תיקון שאושר בכנסת ביולי 2026 מגדיר לראשונה \"הלם קרב\"/\"תגובת קרב\" כתגובת דחק לאירוע טראומטי בפעילות מבצעית או באימון, ומחייב את אגף השיקום לתת טיפול מותאם לנפגעי הלם קרב. התיקון מעגן גם את הוועדה למתן סיוע לפנים משורת הדין ומרחיב את סמכותה להעניק זכאויות ותגמולים גם לבני משפחה במקרים חריגים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "זכות סטטוטורית",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבירור הזכאות מכוח התיקון – לפנות לאגף השיקום או לארגון נכי צה\"ל; לבקשות חריגות – דרך הוועדה לפנים משורת הדין באגף השיקום.",
+  "source_url": "https://www.haaretz.co.il/news/politi/2026-07-15/ty-article/0000019f-6736-df91-a7df-ef3676910000",
+  "confidence": "medium"
+ },
+ {
+  "name": "הרפורמה בעקבות ועדת מור-יוסף – רשות שיקום, מנהל תיק אישי וזכויות \"בדחיפה\" (2026)",
+  "category": "rights-legal",
+  "description": "בעקבות המלצות הוועדה (יוני 2026) אישרה הכנסת ביולי 2026 רפורמה: הפיכת אגף השיקום לרשות עם תקציב נוסף של כ-2 מיליארד ₪ בשנה, איש קשר/מנהל תיק אישי לכל פצוע עד 5 שנים, מתן זכויות באופן יזום ללא טפסים, אפשרות בחירה בין טיפול בקופת חולים לטיפול צבאי, והרחבת טיפולים משלימים ותמיכה במשפחות. היישום הדרגתי – כדאי לבדוק מה כבר בתוקף.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "שינוי מערכתי, יישום הדרגתי",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "אין הגשה נפרדת; לברר מול אגף השיקום (*6500) או ארגון נכי צה\"ל אילו רכיבים כבר מיושמים.",
+  "source_url": "https://www.mako.co.il/news-israel/2026_q2/Article-c4d90de42b1ae91026.htm",
+  "confidence": "medium"
+ },
+ {
+  "name": "רפורמת \"נפש אחת\" באגף השיקום (One Soul reform)",
+  "category": "mental-health",
+  "description": "רפורמה ממשלתית לשיפור הטיפול בנכי צה\"ל עם פגיעה נפשית: הכפלת כוח האדם באגף, הסרת חסמים בירוקרטיים, טיפולים פסיכולוגיים במימון משרד הביטחון לילדי נפגעי פוסט טראומה ונפגעי נפש וראש, וסל טיפולים משלימים שנתי לנכים המוכרים בגין פוסט טראומה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון משרד הביטחון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעובד/ת השיקום האישי/ת באגף השיקום כדי לממש את רכיבי הרפורמה.",
+  "source_url": "https://www.ynet.co.il/news/article/H1EfwDrO00",
+  "confidence": "medium"
+ },
+ {
+  "name": "טיפול נפשי לנכי צה\"ל וכוחות הביטחון (Mental treatment for recognized disabled)",
+  "category": "mental-health",
+  "description": "נכים מוכרים (על פי כל זכות – 20% נכות ומעלה, או נכות נפשית מוכרת) זכאים למימון טיפולים נפשיים אצל פסיכולוגים, פסיכיאטרים, עובדים סוציאליים ומטפלים באמנויות שהוסמכו ע\"י משרד הבריאות/הרווחה. יש לקבל אישור למטפל לפני תחילת הטיפול.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep",
+   "anger",
+   "moral-injury"
+  ],
+  "interests": [
+   "art",
+   "music"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מימון מלא אצל מטפל מאושר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעובד/ת השיקום לפני תחילת הטיפול ולקבל אישור למטפל שבחרתם (ספק רשום של אגף השיקום).",
+  "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_לנכי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "סל טיפולים משלימים (אלטרנטיביים) לנכים עם פוסט טראומה",
+  "category": "yoga-mind-body",
+  "description": "נכה צה\"ל המוכר בגין פוסט טראומה זכאי לסל שנתי למימון טיפולים משלימים לבחירתו: אוסטאופתיה, כירופרקטיקה, דיקור, טווינא, עיסוי רפואי, פלדנקרייז, רפלקסולוגיה, שיאצו, שיטת אלכסנדר, רכיבה על סוסים, יוגה ו-וואטסו. הסל הוגדר במקור כ-5,000 ₪ לשנה ולפי מידע עדכני יותר עד 6,000 ₪ לשנה קלנדרית.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "chronic-pain",
+   "sleep",
+   "anxiety"
+  ],
+  "interests": [
+   "mind-body",
+   "animals",
+   "sea",
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "החזר עד 5,000–6,000 ₪ בשנה (לבדוק סכום עדכני)",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבצע טיפול אצל מטפל מוסמך ולהגיש בקשת החזר לאגף השיקום; לברר מראש מול עובד/ת השיקום את רשימת הטיפולים והסכום.",
+  "source_url": "https://www.hon.co.il/?p=137604",
+  "confidence": "medium"
+ },
+ {
+  "name": "כלב שירות לנכי צה\"ל וכוחות הביטחון עם פוסט טראומה",
+  "category": "animal-therapy",
+  "description": "מי שהוכרה לו נכות של 20% לפחות (או 10% לפני 1996) בגין פוסט טראומה זכאי לכלב שירות באמצעות ספקים של משרד הביטחון בעלי תו תקן בינלאומי, כולל מיון והתאמה. בנוסף משולם אוטומטית תשלום חודשי (כ-396 ₪) להוצאות מזון וציוד.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness",
+   "sleep"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "הכלב במימון + השתתפות חודשית בהוצאות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעובד/ת השיקום ולבקש הפניה לספק כלבי שירות מוכר של משרד הביטחון.",
+  "source_url": "https://www.kolzchut.org.il/he/כלבי_שירות_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
+  "confidence": "high"
+ },
+ {
+  "name": "פעילויות טרום-שיקום (לימודיות וחוויתיות) לנכים עם פוסט טראומה",
+  "category": "employment-education",
+  "description": "נכי צה\"ל וכוחות הביטחון שהוכרה להם נכות של 20% לפחות בגין פוסט טראומה זכאים למימון פעילות לימודית וחוויתית (חוגים, קורסים, פעילויות) כשלב ביניים לפני שיקום תעסוקתי. המימון ניתן לעד 4 שנים או עד השתלבות בתכנית שיקום – המוקדם מביניהם.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "employment",
+   "loneliness"
+  ],
+  "interests": [
+   "learning",
+   "art",
+   "music",
+   "sport",
+   "crafts",
+   "cooking"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מימון עד 4 שנים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לתאם עם עובד/ת השיקום את הפעילות ולקבל אישור מימון מראש.",
+  "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
+  "confidence": "high"
+ },
+ {
+  "name": "טיפול נפשי לבני משפחה של נכים ופצועים – אגף השיקום",
+  "category": "family-support",
+  "description": "אגף השיקום מממן טיפול נפשי ורגשי לבני משפחה של נכי צה\"ל ופצועים, ובכלל זה טיפולים פסיכולוגיים לילדי נפגעי פוסט טראומה ונפגעי נפש וראש (במסגרת רפורמת נפש אחת).",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון משרד הביטחון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעובד/ת השיקום של הנכה ולבקש אישור טיפול לבן/בת המשפחה.",
+  "source_url": "https://shikum.mod.gov.il/family/support/therapy",
+  "confidence": "high"
+ },
+ {
+  "name": "פורטל זכויות למתמודדים עם פגיעה נפשית – אגף השיקום",
+  "category": "rights-legal",
+  "description": "עמוד ריכוז רשמי של כל הזכויות לנכים עם פגיעה נפשית (פוסט טראומה, חרדה, דיכאון): תגמולים, טיפולים, שיקום תעסוקתי, לימודים, דיור, פעילויות ועוד.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מידע",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "לקרוא באתר אגף השיקום ולבדוק מול עובד/ת השיקום מה רלוונטי.",
+  "source_url": "https://shikum.mod.gov.il/rights/injury-type/mental",
+  "confidence": "high"
+ },
+ {
+  "name": "שיקום תעסוקתי ומימון לימודים לנכי צה\"ל – אגף השיקום",
+  "category": "employment-education",
+  "description": "אגף השיקום מציע אבחון, הכוונה מקצועית, הכשרה, מימון לימודים אקדמיים ומקצועיים וסיוע בהשתלבות בעבודה. מאז תחילת המלחמה קיבלו אלפי פצועים מימון וליווי מלאים ללימודים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd",
+   "physical-disability"
+  ],
+  "interests": [
+   "learning",
+   "tech"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מימון מלא בכפוף לאישור תכנית שיקום",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבנות תכנית שיקום עם עובד/ת השיקום ולהגיש בקשה למימון לימודים/הכשרה.",
+  "source_url": "https://www.bhol.co.il/news/1740932",
+  "confidence": "medium"
+ },
+ {
+  "name": "נכי משטרה – זכויות לפי חוק המשטרה (נכים ונספים) באמצעות אגף השיקום",
+  "category": "rights-legal",
+  "description": "חוק המשטרה (נכים ונספים) מחיל על שוטרים (כולל מג\"ב) את חוק הנכים (תגמולים ושיקום), כך ששוטר שנפגע בשירות מוכר ומטופל ע\"י אגף השיקום במשרד הביטחון בדומה לחייל, כולל אפשרות להכרה בפוסט טראומה. תהליך ההכרה עשוי להימשך חודשים רבים ודורש הוכחת קשר סיבתי לשירות.",
+  "provider_type": "government",
+  "eligibility": [
+   "police",
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה להכרה לאגף השיקום (כמו חיילים), עם מסמכי שירות משטרתי ורפואיים; מומלץ ייצוג משפטי.",
+  "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%9E%D7%A9%D7%98%D7%A8%D7%94_(%D7%A0%D7%9B%D7%99%D7%9D_%D7%95%D7%A0%D7%A1%D7%A4%D7%99%D7%9D)",
+  "confidence": "high"
+ },
+ {
+  "name": "כל זכות – פורטל נכי צה\"ל וכוחות הביטחון (Kol Zchut portal)",
+  "category": "rights-legal",
+  "description": "פורטל מידע מקיף ומעודכן על זכויות נכי צה\"ל, שוטרים, מג\"ב ואנשי כוחות ביטחון נוספים: תהליך ההכרה, תגמולים, טיפולים, תמיכה נפשית, פוסט טראומה, סיוע כלכלי, תעסוקה, דיור ולימודים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "police",
+   "security-forces",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.kolzchut.org.il",
+  "how_to_apply": "לגלוש לפורטל ולחפש לפי נושא.",
+  "source_url": "https://www.kolzchut.org.il/he/נכי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "כל זכות – מדריך למשרתי מילואים ובני משפחותיהם (חרבות ברזל והמלחמה מול איראן)",
+  "category": "rights-legal",
+  "description": "מדריך מרכז של כל הזכויות, המענקים וההטבות למשרתי מילואים, בני זוג וילדים: תגמולים, קרן הסיוע, טיפולים רגשיים, לימודים, תעסוקה ועוד.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לקרוא את המדריך באתר כל זכות.",
+  "source_url": "https://www.kolzchut.org.il/he/מדריך_למשרתי_מילואים_ובני_משפחותיהם_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
+  "confidence": "high"
+ },
+ {
+  "name": "ארגון נכי צה\"ל (Zahal Disabled Veterans Organization)",
+  "category": "peer-support",
+  "description": "הארגון היציג של נכי צה\"ל על פי חוק הנכים מאז 1965, עם למעלה מ-53,000 חברים, כולל נכי משטרה, מג\"ב וכוחות ביטחון נוספים. מסייע במידע על הכרה וזכויות, מייצג את הנכים מול המדינה ומפעיל את בתי הלוחם ושירותי תמיכה בפוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "police",
+   "security-forces",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd",
+   "loneliness",
+   "physical-disability"
+  ],
+  "interests": [
+   "sport",
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "חברות לנכים מוכרים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.inz.org.il",
+  "how_to_apply": "להצטרף כחבר/ה לאחר ההכרה ולפנות לסניף האזורי.",
+  "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
+  "confidence": "medium"
+ },
+ {
+  "name": "בית הלוחם – מרכזי ספורט שיקומי של ארגון נכי צה\"ל (Beit Halochem)",
+  "category": "sports",
+  "description": "מרכזי ספורט שיקומי ופנאי לחברי ארגון נכי צה\"ל ובני משפחותיהם: בריכות, חוגים, תחרויות, צעדות, הרצאות ומפגשים חברתיים, והרחבת שירותי תמיכה ושיקום בתחום הפוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces",
+   "families"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd",
+   "loneliness",
+   "amputation"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "sea"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "לחברי הארגון",
+  "regions": [
+   "center",
+   "haifa",
+   "jerusalem",
+   "south"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להצטרף לארגון נכי צה\"ל ולהירשם לבית הלוחם הקרוב (תל אביב, חיפה, ירושלים, באר שבע ועוד).",
+  "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
+  "confidence": "medium"
+ },
+ {
+  "name": "תגמולי מילואים – ביטוח לאומי (Reserve duty compensation)",
+  "category": "financial-grants",
+  "description": "ביטוח לאומי משלם תגמול על ימי מילואים לפי השכר לפני השירות (שכירים, עצמאים ולא עובדים), כולל תוספת, ובסכום מינימלי ליום. התשלום לשכירים עובר בדרך כלל דרך המעסיק.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "זכות כספית",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.btl.gov.il",
+  "how_to_apply": "שכירים – להעביר אישור מילואים (טופס 3010) למעסיק; עצמאים ולא עובדים – להגיש תביעה באתר ביטוח לאומי.",
+  "source_url": "https://www.btl.gov.il/HaravotBarzel1/KizbeotHB/MiloeimHB/Pages/MsrtimMiloeim.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "מענק לבני/בנות זוג של משרתי מילואים שיצאו לחל\"ת – ביטוח לאומי",
+  "category": "family-support",
+  "description": "מענק חד-פעמי לבן/בת זוג (או הורה לילד משותף) של משרת מילואים שיצא/ה לחופשה ללא תשלום בתקופת השירות, בחישוב של 70% מההכנסה. המענק נקבע לתקופות מוגדרות (בין היתר עד 31.12.2024) – יש לבדוק אם קיימת הארכה עדכנית.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מענק חד-פעמי, תלוי תקופה",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש תביעה באתר ביטוח לאומי, בעמוד המענק לבני זוג של משרתי מילואים.",
+  "source_url": "https://www.btl.gov.il/HaravotBarzel1/Pages/MankMiloeimHB.aspx",
+  "confidence": "medium"
+ },
+ {
+  "name": "סימולטור זכויות לחיילים ומשרתי מילואים – ביטוח לאומי",
+  "category": "rights-legal",
+  "description": "כלי מקוון של ביטוח לאומי לבדיקת זכויות חיילים ומשרתים, כולל מיצוי זכויות בתגמולי מילואים שלא נתבעו.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "*6050",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להיכנס לסימולטור באתר ביטוח לאומי ולענות על השאלות. מוקד ביטוח לאומי: *6050.",
+  "source_url": "https://www.btl.gov.il/Simulators/Soldiers/Pages/default.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "הכרה כנפגע/ת פעולות איבה – ביטוח לאומי (Victims of hostilities)",
+  "category": "rights-legal",
+  "description": "אזרחים שנפגעו בפעולת איבה (כולל פגיעה נפשית) יכולים להיות מוכרים ע\"י ביטוח לאומי ולקבל תגמולים חודשיים, טיפול רפואי ונפשי מלא ללא השתתפות עצמית, שיקום מקצועי והטבות בדיור ובחינוך. אחוזי הנכות נקבעים בוועדה רפואית.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "financial",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש טופס בל/580 (הודעה על פגיעה בפעולות איבה ותביעה) לביטוח לאומי, עם מסמכים רפואיים ופרטי האירוע.",
+  "source_url": "https://www.btl.gov.il/%D7%98%D7%A4%D7%A1%D7%99%D7%9D%20%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8%D7%99%D7%9D/Documents/t580.pdf",
+  "confidence": "high"
+ },
+ {
+  "name": "סיוע לנפגעי חרדה עקב פעולת איבה – ביטוח לאומי",
+  "category": "mental-health",
+  "description": "מי שנכח באירוע איבה וחווה חרדה זכאי לתמיכה טלפונית ראשונית ולסדרת טיפולים במרכזי חוסן ומוקדי טיפול (פרטני, משפחתי, קבוצתי ומותאם לילדים) ללא תשלום. בני זוג, הורים וילדים זכאים גם הם לתמיכה.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims",
+   "civilians",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם, ללא צורך בהגשת תביעה לפני הטיפול",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות ישירות למרכז החוסן/מוקד הטיפול שברשימת ביטוח לאומי.",
+  "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/MerkazeiSiua.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "טיפולים אלטרנטיביים לנפגעי פעולות איבה עם פוסט טראומה (נפש אחת) – ביטוח לאומי",
+  "category": "yoga-mind-body",
+  "description": "במסגרת \"נפש אחת\" בביטוח לאומי, נפגעי איבה המוכרים בגין פוסט טראומה זכאים להחזר על טיפולים משלימים/אלטרנטיביים, בדומה לסל של נכי צה\"ל.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "chronic-pain",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body",
+   "animals"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "החזר עד תקרה שנתית",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשת החזר לביטוח לאומי לפי ההנחיות בעמוד.",
+  "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
+  "confidence": "medium"
+ },
+ {
+  "name": "כלב שירות לנפגעי פעולות איבה עם פוסט טראומה – ביטוח לאומי",
+  "category": "animal-therapy",
+  "description": "נפגעי פעולות איבה שהוכרה להם נכות בגין פוסט טראומה זכאים לקבל כלב שירות לסיוע בהתמודדות, בתנאים המפורטים ע\"י ביטוח לאומי.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "במימון ביטוח לאומי",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לביטוח לאומי (תחום נפגעי איבה) ולהגיש בקשה לכלב שירות.",
+  "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "טיפולים נפשיים, רגשיים ומשלימים לחטופים שחזרו ובני משפחותיהם – ביטוח לאומי",
+  "category": "mental-health",
+  "description": "ביטוח לאומי מממן מגוון טיפולים נפשיים, רגשיים ומשלימים לחטופים ששבו ולבני משפחותיהם, כחלק מסל הזכויות הייעודי.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "במימון ביטוח לאומי",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "דרך הגורם המלווה בביטוח לאומי לחטופים ששבו.",
+  "source_url": "https://www.btl.gov.il/HaravotBarzel1/HtofimHazro/Pages/TipolNafsi.aspx",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכזי חוסן – משרד הבריאות (Resilience centers)",
+  "category": "mental-health",
+  "description": "מרכזים בפריסה ארצית המעניקים טיפול ממוקד טראומה ללא עלות לנפגעי חרדה על רקע ביטחוני, כולל מילואימניקים ובני משפחה – פרטני, קבוצתי או משפחתי, פנים אל פנים או מרחוק. הזכאות לפי כתובת המגורים, ומי שאין לו מרכז באזור יכול לפנות למרכז החוסן הארצי.",
+  "provider_type": "government",
+  "eligibility": [
+   "not-recognized",
+   "reservists",
+   "civilians",
+   "families",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.gov.il/he/Departments/DynamicCollectors/resilience-centers-list",
+  "how_to_apply": "לאתר את מרכז החוסן לפי יישוב המגורים ברשימה הממשלתית ולהתקשר ישירות.",
+  "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/public-care/community-treatment/resilience-center/",
+  "confidence": "high"
+ },
+ {
+  "name": "סל שיקום בקהילה למתמודדי נפש – משרד הבריאות",
+  "category": "medical-rehab",
+  "description": "סל שירותי שיקום (דיור מוגן, תעסוקה, השכלה, מועדונים חברתיים, חונכות) למתמודדים עם מוגבלות נפשית שאינם מוכרים בהכרח ע\"י משרד הביטחון – מתאים גם למי שנדחה או ממתין להכרה.",
+  "provider_type": "government",
+  "eligibility": [
+   "not-recognized",
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "depression",
+   "ptsd",
+   "loneliness",
+   "employment"
+  ],
+  "interests": [
+   "learning",
+   "volunteering"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "במימון משרד הבריאות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה לוועדת סל שיקום (נדרשת בדרך כלל נכות נפשית של 40% ומעלה מביטוח לאומי) דרך הגוף המטפל.",
+  "source_url": "https://www.gov.il/he/service/rehabilitation-support-package",
+  "confidence": "medium"
+ },
+ {
+  "name": "קופות החולים – מענה נפשי ומסלולים למשרתי מילואים",
+  "category": "mental-health",
+  "description": "כל קופות החולים (כללית, מכבי, מאוחדת, לאומית) מפעילות מוקדי סיוע רגשי ומסלולים מסובסדים לטיפול נפשי למשרתי מילואים ובני משפחותיהם (סדרות טיפולים בהשתתפות עצמית מופחתת, החזרים בביטוח משלים). הפרטים משתנים בין הקופות.",
+  "provider_type": "hmo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "not-recognized",
+   "civilians"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "depression",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "השתתפות עצמית מופחתת / החזר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.maccabi4u.co.il/maccabi_circles/mental_health",
+  "how_to_apply": "לפנות למוקד בריאות הנפש של הקופה שלכם ולציין שירות מילואים.",
+  "source_url": "https://www.kolzchut.org.il/he/מוקדים_לסיוע_ותמיכה_רגשית_מטעם_קופות_החולים_ומרכזי_חוסן_בעקבות_מלחמת_חרבות_ברזל",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכז להתערבות מוקדמת בטראומה – איכילוב ועמותת \"למענכם\"",
+  "category": "mental-health",
+  "description": "מרכז בבית החולים איכילוב המעניק טיפול נפשי חינם ומוקדם למשרתי מילואים, אנשי כוחות הביטחון ובני משפחותיהם, במטרה למנוע התפתחות פוסט טראומה כרונית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "security-forces",
+   "families",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "center"
+  ],
+  "location": "תל אביב (מרכז רפואי איכילוב)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למרכז באיכילוב (פרטי קשר בכתבה/אתר בית החולים).",
+  "source_url": "https://www.ynet.co.il/activism/article/bjglpzqpgx",
+  "confidence": "medium"
+ },
+ {
+  "name": "קרן הסיוע למשרתי המילואים (Reservists Assistance Fund)",
+  "category": "financial-grants",
+  "description": "הקרן ממשיכה לפעול ב-2026 ומעניקה סיוע כלכלי וחברתי למשרתי מילואים ומשפחותיהם: פיצוי לעצמאים על פגיעה בהכנסה, סיוע לסטודנטים, מימון טיפולים רגשיים ועוד. ב-2026 הזכאות אינה מוגבלת לצו 8 – גם שירות מילואים שוטף נספר.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "employment",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מענקים והחזרים לפי תקנון 2026",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.miluim.idf.il",
+  "how_to_apply": "להגיש בקשה דרך אתר המילואים (miluim.idf.il); בקשות חריגות – לוועדת החריגים של הקרן דרך האתר.",
+  "source_url": "https://www.miluim.idf.il/articles-list/%D7%A7%D7%A8%D7%9F-%D7%94%D7%A1%D7%99%D7%95%D7%A2-%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA%D7%99-%D7%94%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
+  "confidence": "high"
+ },
+ {
+  "name": "מעטפת טיפולים רגשיים למשרתי מילואים ומשפחותיהם (2026)",
+  "category": "family-support",
+  "description": "משרתי מילואים שביצעו מ-1.1.2026 לפחות 50 ימי שירות (מדרגים א'+, א', ב', בכל סוג צו) זכאים להחזר על טיפולים להם, לבני הזוג ולילדים עד 18: פסיכולוגיה, פסיכיאטריה, CBT, טיפול באמנות, טיפול זוגי והדרכת הורים, טיפולים משלימים, טיפול בבעלי חיים ורכיבה טיפולית, יוגה ומיינדפולנס ועוד. ההחזר כ-80% מעלות טיפול עד 240 ₪ לטיפול (לפי פרסומים, למי שאין ילדים – עד 15 טיפולים/3,600 ₪). אפשר להגיש עד סוף 2026.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations",
+   "sleep",
+   "depression"
+  ],
+  "interests": [
+   "mind-body",
+   "animals",
+   "art",
+   "fitness"
+  ],
+  "cost": "partial",
+  "cost_notes": "החזר 80% עד 240 ₪ לטיפול, עם תקרה",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשת החזר באתר המילואים (miluim.idf.il) / מרכז מילואים 360 עם קבלות, עד סוף 2026.",
+  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%A2%D7%98%D7%A4%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D-%D7%A8%D7%92%D7%A9%D7%99%D7%99%D7%9D/",
+  "confidence": "medium"
+ },
+ {
+  "name": "מדיניות תגמולים, מענקים והטבות למשרתי המילואים – 2026",
+  "category": "financial-grants",
+  "description": "מסמך המדיניות הרשמי של צה\"ל ל-2026: מענקים מיוחדים, תגמולים נוספים, הטבות, שוברים וזכאויות לפי מספר ימי שירות ומדרג.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "לפי ימי שירות",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק זכאות באזור האישי באתר המילואים; רוב התשלומים מועברים אוטומטית.",
+  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
+  "confidence": "high"
+ },
+ {
+  "name": "סיוע לסטודנטים משרתי מילואים – תגבור לימודי והחזר קורסים",
+  "category": "employment-education",
+  "description": "קרן הסיוע מממנת שיעורי תגבור וביטול קורסים לסטודנטים שביצעו לפחות 21 ימי מילואים בחפיפה לשנת הלימודים תשפ\"ו – עד 3,000 ₪ בשנה ללוחמים ועד 2,000 ₪ ביחידות אחרות.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "עד 3,000 ₪ (לוחמים) / 2,000 ₪",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה דרך אתר המילואים / המוקד המשולם של צה\"ל עם אישור לימודים וקבלות.",
+  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
+  "confidence": "medium"
+ },
+ {
+  "name": "נקודות זכות והתאמות אקדמיות למשרתי מילואים (הוראת שעה – כללי זכויות הסטודנט)",
+  "category": "employment-education",
+  "description": "מוסדות אקדמיים נותנים לסטודנטים משרתי מילואים (וגם לבני זוג ולהורים לילדים עד 13 של משרתים) התאמות: מועדי בחינה מיוחדים, הקלות בהגשות, והמרת ימי מילואים לנקודות זכות (למשל בבן-גוריון עד 8 נ\"ז לפי היקף השירות). הכללים משתנים בין המוסדות.",
+  "provider_type": "academic",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לדיקנט הסטודנטים / רכז/ת המילואים במוסד עם אישור שירות.",
+  "source_url": "https://Afeka.ac.il/media/h4zb5zpc/%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9C%D7%9B%D7%9C%D7%9C%D7%99-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98-%D7%94%D7%95%D7%A8%D7%90%D7%AA-%D7%A9%D7%A2%D7%94-%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9Ccleanedcleaned.pdf",
+  "confidence": "medium"
+ },
+ {
+  "name": "מוקד השירות של צה\"ל 1111",
+  "category": "hotlines",
+  "description": "מוקד פניות כללי של צה\"ל לשגרה ולחירום – כולל בירורים למשרתי מילואים ובני משפחותיהם, והכוונה לגורם המתאים (קרן הסיוע, טיפולים רגשיים ועוד).",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "1111",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לחייג 1111 ולבחור את השלוחה המתאימה (לפניות כלליות: שלוחה 5 ואז 4).",
+  "source_url": "https://www.kolzchut.org.il/he/מוקד_שירות_ארצי:מוקד_השירות_של_צה%22ל",
+  "confidence": "medium"
+ },
+ {
+  "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים ונכים בהליכי הכרה",
+  "category": "rights-legal",
+  "description": "פצועים ונכים מכוחות הביטחון זכאים לייצוג משפטי במימון המדינה בהליכי הכרה מול משרד הביטחון (כולל ערעורים וועדות), ללא מבחן הכנסה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא מבחן הכנסה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה לסיוע משפטי בלשכת הסיוע המשפטי המחוזית של משרד המשפטים (או מקוון).",
+  "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_חינם_לחיילי_צה%22ל_מטעם_משרד_המשפטים",
+  "confidence": "high"
+ },
+ {
+  "name": "סיוע משפטי לחיילי מילואים – צה\"ל",
+  "category": "rights-legal",
+  "description": "משרתי מילואים שנתקלים בבעיות משפטיות הקשורות לשירות (פגיעה בתעסוקה, תביעות אזרחיות בעקבות אירוע בשירות ועוד) יכולים לבקש סיוע משפטי באמצעות טופס ייעודי.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://api.miluim.idf.il/api/v1/Media/i5jlwnmt/%D7%98%D7%95%D7%A4%D7%A1-%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%A1%D7%99%D7%95%D7%A2-%D7%9E%D7%A9%D7%A4%D7%98%D7%99-%D7%9C%D7%97%D7%99%D7%99%D7%9C-%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D.pdf",
+  "how_to_apply": "למלא טופס בקשה לסיוע משפטי לחייל מילואים (באתר המילואים) ולשלוח לפי ההנחיות.",
+  "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_לחיילי_מילואים",
+  "confidence": "medium"
+ },
+ {
+  "name": "\"שדרה משפטית\" – ייעוץ וייצוג משפטי ללא עלות למילואימניקים (קהילת המילואימניקים)",
+  "category": "rights-legal",
+  "description": "מיזם שבו משרדי עורכי דין מובילים נותנים ייעוץ וייצוג משפטי ללא עלות למשרתי מילואים ובני משפחותיהם שנפגעו בעקבות השירות (תעסוקה, עסקים, משפחה ועוד).",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "employment",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "פרו-בונו",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://miluimnikim.org",
+  "how_to_apply": "למלא פנייה באתר קהילת המילואימניקים בעמוד הסיוע המשפטי.",
+  "source_url": "https://miluimnikim.org/mishpati/",
+  "confidence": "medium"
+ },
+ {
+  "name": "הקליניקה להכרה בנכות צבאית – הקריה האקדמית אונו",
+  "category": "rights-legal",
+  "description": "הקליניקה המשפטית הראשונה בארץ שמוקדשת לסיוע לחיילים עם נכות פיזית ו/או נפשית שנגרמה ממחלה או פגיעה בשירות, בתהליך ההכרה מול משרד הביטחון – ללא עלות.",
+  "provider_type": "academic",
+  "eligibility": [
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd",
+   "physical-disability"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "center"
+  ],
+  "location": "קריית אונו",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקליניקה דרך עמוד הקליניקה באתר הקריה האקדמית אונו.",
+  "source_url": "https://www.ono.ac.il/clinical-law/clinic-for-the-recognition-of-military-disability/",
+  "confidence": "high"
+ }
+]

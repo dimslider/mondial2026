@@ -1,0 +1,1471 @@
+[
+ {
+  "name": "מיזם עצמאימניקים – מענקים לעסקים של משרתי מילואים",
+  "category": "financial-grants",
+  "description": "קרן בהיקף כ-100 מיליון ש\"ח של הסוכנות היהודית והמערכת הבנקאית, לעצמאים משרתי מילואים שעסקם נפגע במלחמת חרבות ברזל. מענקים של 7,000–50,000 ש\"ח לעסק לפי ימי המילואים וגודל העסק, בתוספת ליווי עסקי חינם ע\"י אנשי מקצוע. מי ששירת 200 ימים ומעלה זכאי למענק מוגדל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "financial",
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "מענק חד-פעמי, ללא החזר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק באתר הסוכנות היהודית/בבנק שבו מתנהל חשבון העסק (הפועלים, דיסקונט, הבינלאומי, לאומי, מזרחי-טפחות, יהב, מסד, מרכנתיל) את חלון ההגשה הפעיל; להכין אישור ימי מילואים ונתוני מחזור.",
+  "source_url": "https://www.maariv.co.il/economy/israel/article-1122748",
+  "confidence": "medium"
+ },
+ {
+  "name": "קרן \"עסקים במילואים\" – מענקים לעסקים של בנות ובני זוג של מילואימניקים",
+  "category": "financial-grants",
+  "description": "קרן של הסוכנות היהודית וקרן תובענות ייצוגיות לעסקים קטנים שבבעלות בני/בנות זוג של משרתי מילואים שנפגעו כלכלית במלחמה. מענק חד-פעמי של 5,000–20,000 ש\"ח לפי גודל העסק והקריטריונים, לעיתים בשילוב ליווי עסקי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מענק עד 20,000 ש\"ח",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לעקוב אחר הודעות הסוכנות היהודית על פתיחת סבב הגשה; להגיש בקשה מקוונת עם אישור שירות המילואים של בן/בת הזוג ונתוני העסק.",
+  "source_url": "https://www.ynetnews.com/business/article/bjev5c8k11g",
+  "confidence": "medium"
+ },
+ {
+  "name": "פיצוי לעצמאים משרתי מילואים – רשות המסים",
+  "category": "financial-grants",
+  "description": "רשות המסים מפעילה מערכת מקוונת לתביעת פיצוי/מענק לעצמאים שעסקם נפגע בשל שירות מילואים במלחמה, בנוסף לתגמולי המילואים מביטוח לאומי. בעלי עסקים חדשים יכולים לעיתים להיות זכאים ללא הוכחת ירידה בהכנסות, ובני זוג עם עסקים נפרדים יכולים להגיש כל אחד.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "financial",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מענק ממשלתי",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש באזור האישי באתר רשות המסים (מערכת מענקי חרבות ברזל), בעצמך או דרך רואה חשבון.",
+  "source_url": "https://finance.walla.co.il/item/3682332",
+  "confidence": "medium"
+ },
+ {
+  "name": "תכנית הסיוע הממשלתית למשרתי המילואים 2026",
+  "category": "financial-grants",
+  "description": "הממשלה אישרה ל-2026 חבילה בהיקף 6.2 מיליארד ש\"ח למשרתי מילואים: מענקים כספיים עם עדיפות ללוחמים, הרחבת סיוע למשפחות, לסטודנטים ולבריאות הנפש. כוללת מענק משפחה מוגדל, הטבות נופש ותמיכה בבני זוג.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מענקים ממשלתיים, חלקם משולמים אוטומטית",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק זכאות באתר מילואים של צה\"ל ובכל-זכות; רוב המענקים משולמים אוטומטית לפי ימי השירות, חלקם דורשים הגשה מקוונת.",
+  "source_url": "https://www.mako.co.il/news-military/2026_q1/Article-536d6736f0ecb91026.htm",
+  "confidence": "medium"
+ },
+ {
+  "name": "מענק משפחה מוגדל למשרתי צו 8",
+  "category": "financial-grants",
+  "description": "משרתי מילואים שביצעו לפחות 40 ימי שירות ב-2026 ויש להם ילדים עד גיל 14 זכאים למענק משפחה מוגדל, המשולם לכל יום החל מהיום ה-41, בגובה 21–83 ש\"ח ליום לפי רמת הפעילות של היחידה.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "משולם לפי ימי שירות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "בדרך כלל משולם אוטומטית; לבדוק בכל-זכות ובאתר המילואים של צה\"ל אם נדרשת הגשה.",
+  "source_url": "https://www.kolzchut.org.il/he/מענק_משפחה_מוגדל_למי_ששירתו_בצו_8_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
+  "confidence": "high"
+ },
+ {
+  "name": "מענק למשרת מילואים שהוא הורה לילד עם צרכים מיוחדים",
+  "category": "financial-grants",
+  "description": "מענק ייעודי למשרתי מילואים במלחמת חרבות ברזל שהם הורים לילד עם צרכים מיוחדים, להקלת הנטל על המשפחה בזמן השירות.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מענק ממשלתי",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק תנאי זכאות ואופן הגשה בדף כל-זכות.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C_%D7%A9%D7%94%D7%95%D7%90_%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%9D_%D7%A6%D7%A8%D7%9B%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
+  "confidence": "high"
+ },
+ {
+  "name": "תשלומים והחזרי הוצאות בגין שירות מילואים",
+  "category": "financial-grants",
+  "description": "ריכוז ההחזרים והתשלומים למשרתי מילואים: תגמולי מילואים, החזרי הוצאות (כגון טיפול בילדים, בעלי חיים, טיפול רגשי לבני משפחה ועוד לפי התנאים) ומענקים נלווים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "החזרים לפי קבלות ותנאים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשות להחזר הוצאות דרך אתר המילואים של צה\"ל; לעיין במדריך בכל-זכות.",
+  "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
+  "confidence": "high"
+ },
+ {
+  "name": "כרטיס Fighter והטבות למשרתי מילואים",
+  "category": "financial-grants",
+  "description": "כרטיס דיגיטלי של אכ\"א, משרד הביטחון ומשרד האוצר ללוחמי מילואים, עם יתרה להטבות של עד 5,000 ש\"ח במסעדות, בתי קפה, ביגוד, הופעות, אטרקציות ופעילויות משפחתיות. בנוסף חולקה הטבת נופש לכ-270 אלף משרתי מילואים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "הטבה עד 5,000 ש\"ח לפי זכאות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "הזכאות נקבעת לפי ימי שירות; ההנפקה נעשית דרך מערכי המילואים – לבדוק בעמוד הטבות לחיילי מילואים בכל-זכות.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
+  "confidence": "medium"
+ },
+ {
+  "name": "מועדון \"בהצדעה\" – מועדון ההטבות של משרד הביטחון",
+  "category": "financial-grants",
+  "description": "מועדון צרכנות של משרד הביטחון המעניק הנחות והטבות למשתחררים משירות צה\"ל ולמשרתי מילואים פעילים: בילוי, נופש, מוצרים ושירותים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "הצטרפות ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי / מקוון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם באתר המועדון עם פרטי שירות; ההטבות ממומשות באתר ובבתי העסק השותפים.",
+  "source_url": "https://protocol.co.il/behatsdaa/",
+  "confidence": "medium"
+ },
+ {
+  "name": "סבסוד קייטנות ודמי אבטלה לבני זוג של משרתי מילואים",
+  "category": "family-support",
+  "description": "במסגרת החבילה הממשלתית מוקצים כספים לסבסוד קייטנות קיץ לילדי משרתי מילואים ולהקלות בדמי אבטלה לבני/בנות זוג של משרתים, לצד מענקים חודשיים ותמיכה נפשית.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "family-relations",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "סבסוד חלקי לפי תנאי השנה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק מול הרשות המקומית/משרד החינוך לגבי קייטנות, ומול ביטוח לאומי לגבי דמי אבטלה לבן/בת הזוג.",
+  "source_url": "https://www.timesofisrael.com/liveblog_entry/government-allocates-56-million-more-for-benefits-for-idf-reservists/",
+  "confidence": "low"
+ },
+ {
+  "name": "הקלות לחיילי מילואים שהם הורים עצמאיים",
+  "category": "rights-legal",
+  "description": "הורים יחידים שמגדלים לבדם ילד זכאים לשרת במילואים בתנאים המאפשרים יציאה יומיומית הביתה, ולהקלות נוספות בשיבוץ.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "זכות בחוק/פקודה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקצין הקישור/שלישות היחידה עם אישור הורה עצמאי ולבקש התאמת השירות.",
+  "source_url": "https://www.kolzchut.org.il/he/הקלות_לחיילי_מילואים_שהם_הורים_עצמאיים_(הורים_יחידים)",
+  "confidence": "high"
+ },
+ {
+  "name": "פעמונים – ליווי כלכלי משפחתי חינם",
+  "category": "financial-grants",
+  "description": "עמותה ארצית עם כ-3,000 מתנדבים המלווים משפחות בניהול תקציב, יציאה מחובות וחוסן כלכלי. מאז המלחמה מקיימת הרצאות ופגישות ייעוץ מיוחדות למילואימניקים, קבוצות וואטסאפ למיצוי זכויות (13,000+ משתתפים), ואף חילקה מענקי חג למשפחות במצוקה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "civilians",
+   "mod-recognized",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "financial",
+   "bureaucracy",
+   "family-relations"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ליווי בהתנדבות ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם לליווי באתר עמותת פעמונים; מתנדב/ת יוצרים קשר ומתחילים תהליך של כ-שנה.",
+  "source_url": "https://www.kipa.co.il/כדאי-לדעת/1223070-0/",
+  "confidence": "high"
+ },
+ {
+  "name": "פרו בונו – לשכת עורכי הדין",
+  "category": "rights-legal",
+  "description": "מערך ארצי של עורכי דין מתנדבים המעניקים ייעוץ ראשוני וייצוג בתיקים למעוטי אמצעים, דרך מרכזי זכויות ברחבי הארץ. רלוונטי גם לחובות, דיור, תעסוקה ודיני משפחה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "reservists",
+   "not-recognized",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ייעוץ חינם בכפוף למבחני הכנסה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "מרכזי זכויות ברחבי הארץ",
+  "phone": "",
+  "email": "",
+  "website": "https://www.israelbar.org.il/pro-bono",
+  "how_to_apply": "לבדוק רשימת מרכזי הזכויות באתר לשכת עורכי הדין (israelbar.org.il/pro-bono) ולקבוע פגישה.",
+  "source_url": "https://www.globes.co.il/news/article.aspx?did=508717",
+  "confidence": "medium"
+ },
+ {
+  "name": "לוחמים לחיים (Fighters for Life)",
+  "category": "rights-legal",
+  "description": "עמותה שהוקמה ב-2017 לסיוע ללוחמים משוחררים עם פוסט-טראומה בהליכים המשפטיים והרפואיים מול משרד הביטחון לשם הכרה. מממנת עורכי דין ורופאים מומחים ומלווה בשיקום והשתלבות בחברה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "not-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מימון ייצוג וחוות דעת לפי שיקול העמותה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותה דרך עמוד הגיוס/האתר ולתאר את מצב תהליך ההכרה.",
+  "source_url": "https://my.israelgives.org/en/fundme/PTSD",
+  "confidence": "medium"
+ },
+ {
+  "name": "מילואים להייטק – קהילת ליווי תעסוקתי",
+  "category": "employment-education",
+  "description": "קהילה שהקים איש ההייטק יובל קדרי, המעניקה למילואימניקים ליווי מקצועי, סדנאות הכנה לראיונות, שדרוג קורות חיים וחיבורים ישירים לעובדים ומנהלים בחברות הייטק.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "בהתנדבות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי / מקוון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להצטרף לקהילה דרך קבוצות הרשת החברתית/לינקדאין של \"מילואים להייטק\".",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1177875",
+  "confidence": "medium"
+ },
+ {
+  "name": "מסייעטק – מנטורים בכירים למילואימניקים",
+  "category": "employment-education",
+  "description": "מיזם התנדבותי של יזמים ומנהלים בכירים (אור בר-טל, ליאור וקסלר, אבישי קורקוס) המחבר מילואימניקים למנטורים אישיים מההייטק, \"אקדמיה\" להכשרה, מרכז קריירה וקהילה. ליווה אלפי מילואימניקים ומאות מצאו עבודה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "בהתנדבות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי / מקוון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם באתר/טופס המיזם \"מסייעטק\" ולהיות מותאם למנטור.",
+  "source_url": "https://finance.walla.co.il/item/3733572",
+  "confidence": "medium"
+ },
+ {
+  "name": "MiluimTech (מילואים טק)",
+  "category": "employment-education",
+  "description": "עמותה המסייעת למילואימניקים להשתלב בהייטק – גם למי שלא עבד בתחום וגם לעובדי הייטק שנפגעו או פוטרו בעקבות מילואים ממושכים. עבדה עם יותר מ-6,000 מילואימניקים וחיברה יותר מ-2,500 מהם ליותר מ-1,000 מנהלים בכירים (גוגל, אמזון, אינטל, מיקרוסופט ועוד) למשרות, מנטורינג והשקעות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "בהתנדבות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי / מקוון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם באתר MiluimTech ולהשתתף באירועי נטוורקינג ומנטורינג.",
+  "source_url": "https://www.jewishnews.co.uk/top-tech-companies-are-helping-reservists-catch-up-professionally/",
+  "confidence": "medium"
+ },
+ {
+  "name": "הכשרות AI למשרתי מילואים – רשות החדשנות",
+  "category": "employment-education",
+  "description": "תכניות ייעודיות של רשות החדשנות לכ-750 משרתי מילואים, המשלבות הכשרה מקצועית מתקדמת בבינה מלאכותית עם התנסות מעשית בחברות, לסגירת פערי ידע שנוצרו בשירות ממושך ולהקמת מיזמים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן ע\"י רשות החדשנות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "https://innovationisrael.org.il",
+  "how_to_apply": "לעקוב אחר מפעילי התכניות שנבחרו בקול הקורא באתר רשות החדשנות ולהירשם אצלם.",
+  "source_url": "https://innovationisrael.org.il/en/press_release/reservists-ai-training/",
+  "confidence": "medium"
+ },
+ {
+  "name": "תכנית יזמות טכנולוגית למשרתי מילואים ומשוחררים – רשות החדשנות ומשרד הביטחון",
+  "category": "employment-education",
+  "description": "תכנית בהיקף 10 מיליון ש\"ח להכשרה וקידום יזמות טכנולוגית בקרב משרתי מילואים וחיילים משוחררים: הכשרה, חממות לרעיונות והקמת סטארט-אפים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "https://innovationisrael.org.il",
+  "how_to_apply": "לבדוק באתר רשות החדשנות את מפעילי התכנית ומועדי ההרשמה.",
+  "source_url": "https://innovationisrael.org.il/en/press_release/innovation-authority-and-ministry-of-defense-launch-a-unique-10-million-nis-program-for-training-and-promoting-technological-entrepreneurship-for-reserve-and-discharged-soldiers/",
+  "confidence": "medium"
+ },
+ {
+  "name": "הזנק להייטק – התנסות מעשית למשרתי מילואים",
+  "category": "employment-education",
+  "description": "תכניות שנבחרו בקול קורא של רשות החדשנות להתנסות מעשית בחברות הייטק, המיועדות במיוחד למשרתי מילואים ובוגרי אקדמיה משוחררים, לכניסה למשרה הראשונה בתעשייה (כ-250 משתתפים).",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "מסובסד ע\"י רשות החדשנות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "https://innovationisrael.org.il",
+  "how_to_apply": "לפנות למפעילי התכניות הזוכות המפורסמים באתר רשות החדשנות.",
+  "source_url": "https://innovationisrael.org.il/kol_kore/practical-training-in-tech/",
+  "confidence": "medium"
+ },
+ {
+  "name": "שירות התעסוקה – תכניות ויריד תעסוקה למשרתי מילואים",
+  "category": "employment-education",
+  "description": "שירות התעסוקה מפעיל תכנית ליווי למשרתי מילואים (\"ממדים לתעסוקה\"), יריד תעסוקה ייעודי למילואימניקים ולבני/בנות זוגם בשיתוף אכ\"א ומשרד הביטחון, שוברים להכשרה מקצועית וסדנאות \"מחשבים מסלול מחדש\" (10 מפגשים, ליווי פרטני וקבוצתי).",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "לשכות שירות התעסוקה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם באתר שירות התעסוקה או בלשכה הקרובה ולבקש שיבוץ לתכנית למשרתי מילואים/שובר הכשרה.",
+  "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
+  "confidence": "medium"
+ },
+ {
+  "name": "היחידה להכוונת חיילים משוחררים (האגף לחיילים משוחררים ומילואים)",
+  "category": "employment-education",
+  "description": "יחידה של משרד הביטחון המעניקה ייעוץ והכוונה אישית בלימודים ותעסוקה, ומפעילה את הפיקדון האישי, סיוע בהשלמת בגרויות, השכלה גבוהה והכשרה מקצועית. לשכות בחיפה, תל השומר, ירושלים ובאר שבע.",
+  "provider_type": "government",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "חיפה, תל השומר, ירושלים, באר שבע",
+  "phone": "",
+  "email": "",
+  "website": "https://www.hachvana.mod.gov.il",
+  "how_to_apply": "לקבוע פגישת ייעוץ באתר hachvana.mod.gov.il או להגיע ללשכה.",
+  "source_url": "https://www.kolzchut.org.il/he/האגף_לחיילים_משוחררים_ומילואים",
+  "confidence": "high"
+ },
+ {
+  "name": "שיקום מקצועי לנכי צה\"ל וכוחות הביטחון – אגף השיקום",
+  "category": "employment-education",
+  "description": "נכים מוכרים זכאים לשיקום מקצועי ותעסוקתי: מימון לימודים אקדמיים ומקצועיים, ליווי בהשמה ובהשתלבות בעבודה, כלים לכתיבת קורות חיים וחיפוש עבודה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd",
+   "physical-disability"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "ממומן לפי אחוזי נכות ותכנית שיקום",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקצין/ת השיקום באגף השיקום ולבנות תכנית שיקום מקצועי.",
+  "source_url": "https://www.kolzchut.org.il/he/שיקום_מקצועי_לנכי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "הלוואה להקמת עסק לנכי צה\"ל וכוחות הביטחון",
+  "category": "employment-education",
+  "description": "נכים מוכרים בשיעור 20% ומעלה יכולים לקבל הלוואה להקמה או ביסוס עסק עצמאי (למשל כ-18 אלף ש\"ח ל-20%–24% ועד כ-115 אלף ש\"ח ל-50%–69% לעסק ראשון), וכן המלצות לרישיונות וזיכיונות.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "הלוואה בתנאים מועדפים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה דרך קצין השיקום באגף השיקום עם תכנית עסקית.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9B%D7%9C%D7%9B%D7%9C%D7%99_%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%9D_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F",
+  "confidence": "high"
+ },
+ {
+  "name": "הלוואה ומענק לכיסוי חובות לנכי צה\"ל",
+  "category": "financial-grants",
+  "description": "נכים מוכרים שצברו חובות עשויים לקבל הלוואה לכיסוי החובות, ובנסיבות מיוחדות עד 50% ממנה כמענק.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "הלוואה, חלק אפשרי כמענק",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעובד/ת הסוציאלי/ת או קצין השיקום באגף השיקום.",
+  "source_url": "https://www.kolzchut.org.il/he/הלוואה_ומענק_לכיסוי_חובות_של_נכי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "מימון פעילות לימודית וחוויתית לנפגעי פוסט-טראומה",
+  "category": "art-music",
+  "description": "נכי צה\"ל וכוחות הביטחון שהוכרה להם נכות של 20% לפחות על פוסט-טראומה זכאים למימון פעילות לימודית וחוויתית (חוגים, סדנאות יצירה ופעילויות פנאי) כחלק מהשיקום.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "art",
+   "music",
+   "learning",
+   "crafts"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מימון לפי תקרה שנתית",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקצין השיקום ולבקש אישור מימון לחוג/סדנה.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%98%D7%A8%D7%95%D7%9D_%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9C%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94",
+  "confidence": "high"
+ },
+ {
+  "name": "ארגון נכי צה\"ל – אגף תעסוקה והשכלה",
+  "category": "employment-education",
+  "description": "האגף מעניק לפצועי צה\"ל וכוחות הביטחון ליווי תעסוקתי פרטני, חיבור להזדמנויות עבודה, סיוע בחיפוש עבודה ועבודה מול מעסיקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "employment",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "לחברי הארגון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "https://www.inz.org.il",
+  "how_to_apply": "לפנות לסניף ארגון נכי צה\"ל הקרוב ולבקש מלווה תעסוקתי.",
+  "source_url": "https://www.drushim.co.il/job/37650783/aeba30dc/",
+  "confidence": "medium"
+ },
+ {
+  "name": "בתי הלוחם – ארגון נכי צה\"ל",
+  "category": "community-volunteer",
+  "description": "מרכזי ספורט ונופש שיקומיים של ארגון נכי צה\"ל (ארבעה מרכזים) הכוללים חוגים, אמנות ותרבות, בריכות, תחרויות, הרצאות ומפגשים חברתיים, ומחלקות לשיקום ולפוסט-טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces",
+   "families"
+  ],
+  "difficulties": [
+   "loneliness",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "sport",
+   "art",
+   "fitness",
+   "learning"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "דמי חבר מסובסדים לחברי הארגון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "תל אביב, חיפה, ירושלים, באר שבע",
+  "phone": "",
+  "email": "",
+  "website": "https://www.inz.org.il",
+  "how_to_apply": "להצטרף כחבר בארגון נכי צה\"ל ולהירשם בבית הלוחם הקרוב.",
+  "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
+  "confidence": "medium"
+ },
+ {
+  "name": "מלגת משרתי מילואים – משרד הביטחון/צה\"ל",
+  "category": "employment-education",
+  "description": "מלגה שנתית לסטודנטים משרתי מילואים: 7,000 ש\"ח לתואר ראשון ו-9,800 ש\"ח לתואר שני. מיועדת למי ששירת לפחות 20 ימים מצטברים ב-3 שנים, או למשוחררים טריים עם 14 ימי מילואים. ההגשה לשנה\"ל תשפ\"ז מאוגוסט עד 23.9.2026.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "מלגה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "מוסדות להשכלה גבוהה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש בקשה מקוונת בחלון ההגשה השנתי (אוגוסט–ספטמבר) דרך הקרן להכוונת חיילים משוחררים/דיקנאט הסטודנטים.",
+  "source_url": "https://wgalil.ac.il/wp-content/uploads/2026/08/august_hot_scholarships.pdf",
+  "confidence": "high"
+ },
+ {
+  "name": "\"ממילואים ללימודים\" – קצין המילואים הראשי",
+  "category": "employment-education",
+  "description": "סיוע חד-פעמי בשכר הלימוד למשרתי מילואים במוסדות מוכרים שביצעו לפחות 50 ימי מילואים: עד 100% משכר הלימוד למשרתי המערך הלוחם, ו-30% למשרתים ביחידות עורפיות.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "עד 100% שכר לימוד",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "מוסדות מוכרים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש דרך מערכת הבקשות של אגף המילואים/דיקנאט המוסד לפי הנחיות השנה.",
+  "source_url": "https://www.study.co.il/P47361/",
+  "confidence": "medium"
+ },
+ {
+  "name": "תוספת למלגת פר\"ח לסטודנטים משרתי מילואים",
+  "category": "employment-education",
+  "description": "סטודנטים חונכים בפרויקט פר\"ח המשרתים במילואים זכאים לתוספת למלגת פר\"ח, לצד החונכות ההתנדבותית לילדים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning",
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "תוספת מלגה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם לפר\"ח ולהציג אישור ימי מילואים לרכז/ת.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%95%D7%A1%D7%A4%D7%AA_%D7%9C%D7%9E%D7%9C%D7%92%D7%AA_%D7%A4%D7%A8%22%D7%97_%D7%9C%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D_%D7%91%D7%92%D7%99%D7%9F_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
+  "confidence": "high"
+ },
+ {
+  "name": "מלגת גראס למשרתי מילואים",
+  "category": "employment-education",
+  "description": "מלגה של קרן גראס לסטודנטים משרתי מילואים במוסדות להשכלה גבוהה (לדוגמה עזריאלי – מכללה אקדמית להנדסה ירושלים), בהתאם לתקנון השנתי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "מלגה",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "מוסדות משתתפים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק בדיקנאט הסטודנטים אם המוסד משתתף ולהגיש לפי התקנון.",
+  "source_url": "https://www.jce.ac.il/wp-content/uploads/2025/10/תקנון-מלגת-גראס-מילואים-תשפו.pdf",
+  "confidence": "medium"
+ },
+ {
+  "name": "מלגות בני ברית למשרתי מילואים בשריון",
+  "category": "employment-education",
+  "description": "ארגון בני ברית מעניק מלגות לימודים למשרתי מילואים בחיל השריון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "מלגה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לעקוב אחר פרסומי בני ברית ישראל ולהגיש בחלון ההגשה.",
+  "source_url": "https://www.maariv.co.il/news/military/Article-1124429",
+  "confidence": "low"
+ },
+ {
+  "name": "מלגת IMPACT! – ידידי צה\"ל (FIDF)",
+  "category": "employment-education",
+  "description": "מלגה לחיילים משוחררים מיחידות קרביות ותומכות לחימה העומדים בקריטריונים סוציו-אקונומיים: כ-5,000$ לשנה לכל התואר, בתמורה לכ-130 שעות התנדבות בקהילה, וליווי של תורם אישי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning",
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "מלגה מלאה בתמורה להתנדבות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "מוסדות אקדמיים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש דרך מדור המלגות של המוסד האקדמי בחלון ההגשה של FIDF.",
+  "source_url": "https://dekanat.haifa.ac.il/student-services/scholarship-department/scholarship-types/other-financial-aid-scholarships/impact-program-scholarships-of-friends-of-the-idf-usa/?lang=en",
+  "confidence": "high"
+ },
+ {
+  "name": "התאמות אקדמיות למשרתי מילואים ולבני/בנות זוג",
+  "category": "employment-education",
+  "description": "המוסדות להשכלה גבוהה מעניקים התאמות לסטודנטים במילואים ולבני/בנות זוג של מילואימניקים: מועדים מיוחדים, הארכת הגשות, השלמות ונקודות זכות לפי מתווה המל\"ג, לרוב דרך דיקנאט הסטודנטים.",
+  "provider_type": "academic",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "כל המוסדות",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לדיקנאט הסטודנטים/מדור מילואים במוסד עם אישור שירות.",
+  "source_url": "https://rector.huji.ac.il/sites/default/files/rector/files/bny_vbnvt_zvg_lmylvymnyqym.pdf",
+  "confidence": "high"
+ },
+ {
+  "name": "מימון לימודים לאחים שכולים",
+  "category": "employment-education",
+  "description": "אחים שכולים של חללי צה\"ל וכוחות הביטחון זכאים לסיוע במימון לימודי תעודה מקצועית ותואר ראשון עד גיל 40.",
+  "provider_type": "government",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "grief",
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מימון לפי תקנון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לאגף משפחות והנצחה במשרד הביטחון.",
+  "source_url": "https://www.kolzchut.org.il/he/מימון_לימודי_תעודה_מקצועית_ותואר_ראשון_לאחים_שכולים",
+  "confidence": "high"
+ },
+ {
+  "name": "הלוואה לעסק עצמאי לבני משפחה של חללי צה\"ל",
+  "category": "financial-grants",
+  "description": "בני משפחה של חללי צה\"ל וכוחות הביטחון זכאים להלוואה חד-פעמית להקמת עסק ראשון או ביסוס עסק קיים.",
+  "provider_type": "government",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "financial",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "הלוואה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לאגף משפחות והנצחה במשרד הביטחון עם תכנית עסקית.",
+  "source_url": "https://www.kolzchut.org.il/he/הלוואה_למימון_עסק_עצמאי_לבני_משפחה_של_חללי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "Soul Key – לימודי מוזיקה ללוחמים עם פוסט-טראומה",
+  "category": "art-music",
+  "description": "תכנית שיקום מוזיקלית בקונסרבטוריון הישראלי למוזיקה ע\"ש אריסון בתל אביב, פועלת מאז 2016. לוחמים ולוחמות לשעבר לומדים נגינה, שירה, כתיבת שירים והלחנה עם מורי הקונסרבטוריון בסביבה תומכת; כ-100 משתתפים מכל הדורות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-recognized",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "depression"
+  ],
+  "interests": [
+   "music",
+   "art",
+   "writing"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "בתמיכת תורמים",
+  "regions": [
+   "center"
+  ],
+  "location": "הקונסרבטוריון הישראלי למוזיקה, תל אביב",
+  "phone": "",
+  "email": "",
+  "website": "https://www.icm.org.il/en/soulkey/",
+  "how_to_apply": "לפנות לקונסרבטוריון דרך עמוד התכנית באתר ולתאם שיחת היכרות.",
+  "source_url": "https://www.icm.org.il/en/soulkey/",
+  "confidence": "high"
+ },
+ {
+  "name": "ייצור יין כשיקום ללוחמים עם פוסט-טראומה",
+  "category": "art-music",
+  "description": "תכנית שבה לוחמים עם פוסט-טראומה עוברים תהליך של בציר וייצור יין, ובסופו מציגים ומוזגים את היין בערבים מיוחדים במסעדות, תוך תמיכה וחיזוק הדדי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "cooking",
+   "crafts"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "center"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק פרטי הקשר בכתבה ולפנות למארגני התכנית.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1278435",
+  "confidence": "low"
+ },
+ {
+  "name": "\"חבר שלי לוחם\" – קהילת בנות זוג של לוחמים",
+  "category": "family-support",
+  "description": "קהילה שהוקמה ב-7 באוקטובר לבנות זוג (בעיקר לא נשואות) של לוחמים, להתמודדות עם בדידות ופחד. כ-5,000 נשים בקבוצות וואטסאפ, פייסבוק ואינסטגרם, עם מפגשים ותמיכה רגשית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "loneliness",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online"
+  ],
+  "location": "מקוון וארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להצטרף דרך עמוד האינסטגרם/פייסבוק של \"חבר שלי לוחם\".",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1089149",
+  "confidence": "medium"
+ },
+ {
+  "name": "עמותת \"אחותי\" – קהילה לבנות זוג של פצועי צה\"ל",
+  "category": "family-support",
+  "description": "קהילת נשים עצמאית התומכת בבנות זוג של לוחמים פצועים (גוף ונפש): מפגשים, קבוצות תמיכה ומרחב של הקשבה וחברות למי שחיות לצד טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "mod-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותה דרך הרשתות החברתיות של \"אחותי\".",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1230840",
+  "confidence": "medium"
+ },
+ {
+  "name": "יוגה טיפולית לנשות מילואימניקים",
+  "category": "family-support",
+  "description": "קבוצות יוגה מודעת-טראומה לבנות זוג של משרתי מילואים, המשלבות תרגול גוף-נפש עם קהילה נשית תומכת.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "sleep",
+   "family-relations"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למארגנות המוזכרות בכתבה.",
+  "source_url": "https://www.maariv.co.il/news/health/article-1162445",
+  "confidence": "low"
+ },
+ {
+  "name": "\"זמן אבא\" – אבות במילואים וילדיהם",
+  "category": "family-support",
+  "description": "תכנית קבוצתית של ארגון Early Starters בתמיכת קרן שוסטרמן וקרן גלייזר, לחידוש הקשר בין אבות משרתי מילואים לילדיהם הצעירים. כ-20 מוקדים בארץ, חמישה מפגשים של שעתיים וחצי עם גננות ואשת טיפול, בנושאי קשר הורה-ילד, שיח רגשי וחוסן.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "כ-20 מוקדים ברחבי הארץ",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם דרך Early Starters / הרשות המקומית בשאלה על מחזור קרוב.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1279396",
+  "confidence": "medium"
+ },
+ {
+  "name": "Campers2Gether – מחנות קיץ בחו\"ל לילדי מילואימניקים",
+  "category": "family-support",
+  "description": "יוזמה של הסוכנות היהודית שבה ילדי משרתי מילואים מיישובי הצפון משתתפים בתכנית חוסן במחנות הקיץ של קהילות יהודיות באירופה, להקלה על משפחות הנושאות בנטל הלחימה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "anxiety"
+  ],
+  "interests": [
+   "travel",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומן ע\"י הסוכנות",
+  "regions": [
+   "north"
+  ],
+  "location": "קהילות יהודיות באירופה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לעקוב אחר פרסומי הסוכנות היהודית והרשויות בצפון על מחזור הקיץ.",
+  "source_url": "https://www.maariv.co.il/news/world/article-1361340",
+  "confidence": "medium"
+ },
+ {
+  "name": "עיריית ירושלים – מערך תמיכה במילואימניקים ובמשפחותיהם",
+  "category": "family-support",
+  "description": "סדנאות חזרה לעבודה, מענה רגשי לילדים, טיפול זוגי, קבוצות וואטסאפ וקשר טלפוני אישי עם משפחות מילואימניקים תושבי ירושלים, וסיוע לפי צרכי המשפחה.",
+  "provider_type": "municipal",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "לתושבי ירושלים",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למוקד העירוני/מינהל הרווחה בעיריית ירושלים ולבקש את מערך המילואימניקים.",
+  "source_url": "https://www.kipa.co.il/כדאי-לדעת/1194386-0/",
+  "confidence": "medium"
+ },
+ {
+  "name": "\"תושייה\" – האגודה לבריאות הציבור",
+  "category": "family-support",
+  "description": "תכנית של האגודה לבריאות הציבור לתמיכה במשפחות שבהן \"שדה הקרב נכנס הביתה\" – משפחות לוחמים ומילואימניקים המתמודדות עם השלכות השירות על הבית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לאגודה לבריאות הציבור דרך פרטי התכנית בכתבה.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1316749",
+  "confidence": "low"
+ },
+ {
+  "name": "לב אחד (Lev Echad) – סיוע מתנדבים למשפחות",
+  "category": "community-volunteer",
+  "description": "ארגון סיוע אזרחי שגייס מעל 50,000 מתנדבים: בייביסיטר לילדים שהוריהם במילואים, שיעורים פרטיים מקוונים לילדי מילואימניקים, הסעות, משלוחי אוכל וציוד. מאפשר גם להתנדב.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבקש סיוע או להירשם להתנדבות באתר לב אחד.",
+  "source_url": "https://www.runi.ac.il/en/students/dean/community-service/lev-echad",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכז החייל הבודד ע\"ש מיכאל לוין",
+  "category": "family-support",
+  "description": "מעניק לחיילים בודדים ולמשוחררים: דיור, ארוחות שבת וחג, ציוד, ייעוץ, סמינרים, עזרה במציאת דירה, ייעוץ נפשי פרטני ומפגשי Wellness בזום לאור עלייה בפוסט-טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "loneliness",
+   "financial",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים ותל אביב",
+  "phone": "",
+  "email": "",
+  "website": "https://lonesoldiercenter.com",
+  "how_to_apply": "לפנות דרך אתר המרכז lonesoldiercenter.com.",
+  "source_url": "https://magazine.esra.org.il/posts/entry/never-alone-the-heart-and-mission-of-the-lone-soldier-center.html",
+  "confidence": "high"
+ },
+ {
+  "name": "אחים לחיים (Brothers for Life)",
+  "category": "peer-support",
+  "description": "ארגון של פצועי צה\"ל (כ-700 חברים) המעניק תמיכה בבריאות ובקריירה, מסעות קבוצתיים וחיבור בין פצועים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd",
+   "employment",
+   "loneliness"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לארגון דרך הרשתות החברתיות.",
+  "source_url": "https://jweekly.com/?p=138825",
+  "confidence": "low"
+ },
+ {
+  "name": "ארגון אלמנות ויתומי צה\"ל",
+  "category": "family-support",
+  "description": "הארגון היציג של אלמנות ויתומי צה\"ל וכוחות הביטחון: מלגות ליתומים, מענקים, סיוע פרטני, חופשות וטיולים, קורסים, סדנאות, ליווי וייעוץ, מחנות לילדים ומפגשים קהילתיים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "grief",
+   "loneliness",
+   "financial"
+  ],
+  "interests": [
+   "travel",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ארצי",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לארגון ולהירשם כחבר/ה.",
+  "source_url": "https://www.kolzchut.org.il/he/ארגון_אלמנות_ויתומי_צה%22ל",
+  "confidence": "high"
+ },
+ {
+  "name": "יד לבנים – תמיכה במשפחות שכולות",
+  "category": "family-support",
+  "description": "הארגון המייצג את המשפחות השכולות: חוגים והרצאות בסניפים, תמיכה לימודית לאחים צעירים (6–14), מחנות קיץ לאחים שכולים, סיוע במימון לימודים עד גיל 40, ונסיעות תרפויטיות למשפחות שכולות מחרבות ברזל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "grief",
+   "loneliness"
+  ],
+  "interests": [
+   "learning",
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "סניפים ברחבי הארץ",
+  "phone": "",
+  "email": "",
+  "website": "https://yadlabanim.org",
+  "how_to_apply": "לפנות לסניף יד לבנים הקרוב.",
+  "source_url": "https://yadlabanim.org/wp-content/uploads/2023/04/אגרת-מידע-לאחים-השכולים.pdf",
+  "confidence": "high"
+ }
+]

@@ -1,0 +1,1231 @@
+[
+ {
+  "name": "נט\"ל – קו הסיוע (נפגעי טראומה על רקע לאומי)",
+  "category": "hotlines",
+  "description": "קו סיוע טלפוני ובצ'אט 24/7 לנפגעי טראומה על רקע טרור ומלחמה – לוחמים, מילואימניקים, אזרחים ובני משפחה. הקו מומחה בטראומה לאומית, ניתן במגוון שפות וללא הגבלת זמן, ומשמש גם כשער כניסה לטיפול ארוך טווח בעמותה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "families",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep",
+   "anger",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "הקו חינמי וחסוי",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "רח' פנחס רוזן 72, תל אביב",
+  "phone": "1-800-363-363",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להתקשר ל-1-800-363-363 (24/7) או לפנות בצ'אט דרך אתר נט\"ל; אין צורך בהכרה ממשרד הביטחון.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%98%22%D7%9C",
+  "confidence": "high"
+ },
+ {
+  "name": "נט\"ל – טיפול נפשי מסובסד וקבוצות תמיכה ללוחמים משוחררים",
+  "category": "mental-health",
+  "description": "נט\"ל מעניקה טיפול נפשי פרטני וקבוצתי ללוחמים משוחררים, מילואימניקים ואזרחים עם פוסט טראומה, ללא תלות במצב סוציו-אקונומי. הטיפולים מסובסדים ועד ללא תמורה כספית, בדיסקרטיות מלאה, כולל לנפגעי \"מעגל שני\" שאינם זכאים למימון ממשלתי – מכספי תרומות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "not-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "terror-victims",
+   "civilians",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "moral-injury",
+   "loneliness",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "מסובסד עד חינם לפי מצב; מימון מתרומות למי שאינו זכאי ממשלתית",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "תל אביב (מטה) ופריסה ארצית",
+  "phone": "1-800-363-363",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקו הסיוע 1-800-363-363 ולבקש הפניה לטיפול/קבוצה; מתבצעת שיחת אינטייק ושיבוץ למטפל.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%A0%D7%98%22%D7%9C",
+  "confidence": "high"
+ },
+ {
+  "name": "נט\"ל – ליווי והדרכה להורים ובנות/בני זוג של לוחמים",
+  "category": "family-support",
+  "description": "כשליש מהפניות לקו נט\"ל בנושא התמודדות לוחמים מגיעות מהורים ובנות זוג. העמותה מציעה ייעוץ טלפוני, הדרכה והפניה לטיפול/קבוצות לבני משפחה של לוחמים המתמודדים עם טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists",
+   "combat-soldiers",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ייעוץ בקו חינם; טיפול המשך מסובסד",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "1-800-363-363",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להתקשר לקו הסיוע ולציין שמדובר בבן/בת משפחה של לוחם.",
+  "source_url": "https://www.maariv.co.il/news/israel/Article-697723",
+  "confidence": "medium"
+ },
+ {
+  "name": "ער\"ן – עזרה ראשונה נפשית בטלפון ובאינטרנט",
+  "category": "hotlines",
+  "description": "קו חם ארצי 24/7 לעזרה ראשונה נפשית, אנונימי וחסוי, הכולל קווים ייעודיים לחיילים בשיתוף צה\"ל. עוסק גם במשברי שירות צבאי, טראומה, דיכאון, בדידות ומחשבות אובדניות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "loneliness",
+   "family-relations",
+   "grief"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם ואנונימי",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "1201",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לחייג 1201 (24/7); ווטסאפ 052-8451201 (8:00–24:00); ערבית 1201 שלוחה 7.",
+  "source_url": "https://www.kolzchut.org.il/he/ער\"ן_-_עזרה_ראשונה_נפשית_בטלפון_ובאינטרנט",
+  "confidence": "high"
+ },
+ {
+  "name": "סה\"ר – סיוע והקשבה ברשת",
+  "category": "hotlines",
+  "description": "סיוע נפשי אנונימי בכתב – צ'אט, ווטסאפ ומייל – בעברית ובערבית, לכל מי שבמצוקה, מרגעי משבר זמניים ועד מצוקה קשה ומחשבות אובדניות. מתאים ללוחמים ומילואימניקים שמתקשים לדבר בטלפון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "depression",
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "writing"
+  ],
+  "cost": "free",
+  "cost_notes": "חינם ואנונימי",
+  "regions": [
+   "online",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://new.sahar.org.il",
+  "how_to_apply": "להיכנס לאתר סה\"ר ולפתוח צ'אט, או לכתוב במייל (מענה תוך 24 שעות).",
+  "source_url": "https://www.kolzchut.org.il/he/סהר_-_סיוע_והקשבה_ברשת",
+  "confidence": "high"
+ },
+ {
+  "name": "אחים לחיים (Brothers for Life)",
+  "category": "peer-support",
+  "description": "עמותה שהוקמה ב-2008 ומנוהלת בידי לוחמים פצועים, המלווה לוחמי צה\"ל פצועים בגוף ובנפש מרגע הפציעה ועד חזרה לחיים יצרניים. מפעילה יותר מ-25 תוכניות – קבוצות עמיתים במתכונת \"צוות\", סדנאות טיפוליות, ליווי שיקומי – וצוותי בית חולים שפגשו מעל 1,200 פצועים מאז 7 באוקטובר.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "loneliness",
+   "moral-injury",
+   "employment"
+  ],
+  "interests": [
+   "sport",
+   "travel",
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות ללוחמים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותה (דרך כל-זכות/אתר העמותה) או דרך צוות העמותה בבית החולים; מיועד ללוחמים שנפצעו בשירות.",
+  "source_url": "https://www.kolzchut.org.il/he/אחים_לחיים",
+  "confidence": "high"
+ },
+ {
+  "name": "שומר אחי",
+  "category": "mental-health",
+  "description": "עמותה ללא מטרות רווח המנגישה סיוע נפשי דיסקרטי וללא עלות למשוחררי צה\"ל הנמצאים על קשת הפוסט-טראומה, כולל מי שלא הוכר.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "not-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותה דרך אתרה או ברשתות החברתיות ולבקש שיבוץ למטפל.",
+  "source_url": "https://www.ice.co.il/social/news/article/979314",
+  "confidence": "medium"
+ },
+ {
+  "name": "אחותי – קהילת בנות זוג של פצועי צה\"ל",
+  "category": "family-support",
+  "description": "עמותה וקהילת נשים לבנות זוג של לוחמים פצועים ונפגעי טראומה: מפגשי תמיכה, חברות והקשבה, ומסגרת \"שמקשיבה ומחבקת\" למי שחיה לצד פוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות לחברות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "ליצור קשר עם העמותה דרך אתרה/רשתות חברתיות ולהצטרף לקהילה ולמפגשים.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1230840",
+  "confidence": "medium"
+ },
+ {
+  "name": "לוחמים לחיים",
+  "category": "rights-legal",
+  "description": "עמותה המסייעת ללוחמים פצועים ונפגעי פוסט טראומה במאבק לקבלת הכרה וזכויות ממשרד הביטחון, באמצעות מימון עורכי דין ורופאים מומחים (חוות דעת).",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-in-process",
+   "not-recognized",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מימון עו\"ד ומומחים על ידי העמותה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותה עם פרטי התביעה/הסירוב ממשרד הביטחון לבדיקת זכאות לליווי.",
+  "source_url": "https://www.ice.co.il/social/news/article/979314",
+  "confidence": "medium"
+ },
+ {
+  "name": "אחים ליוגה",
+  "category": "yoga-mind-body",
+  "description": "עמותה המעניקה יוגה טיפולית ללוחמים, לוחמות ואנשי כוחות ביטחון החווים הלם קרב ופוסט טראומה, ככלי להתמודדות עם חרדה, טראומה ולחץ מתמשך ולאורח חיים בריא.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces",
+   "not-recognized",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "anger"
+  ],
+  "interests": [
+   "mind-body",
+   "fitness"
+  ],
+  "cost": "free",
+  "cost_notes": "שיעורים ללא עלות ללוחמים (לפי פרסומי העמותה)",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם דרך אתר/רשתות העמותה לשיעור בסמוך למקום המגורים.",
+  "source_url": "https://www.ice.co.il/sport_news/news/article/1017611",
+  "confidence": "medium"
+ },
+ {
+  "name": "עמותת אמפא – סדנת InHeal ומרכז \"מדיקל קר\"",
+  "category": "mental-health",
+  "description": "עמותה לרפואה אינטגרטיבית המפעילה מרכז שיקומי \"מדיקל קר\" לטיפול בטראומה וכלי חוסן. סדנת InHeal להתמודדות עם פוסט טראומה מוכרת ע\"י משרד הביטחון, ומילואימניקים יכולים להשתתף בה ללא תשלום (כולל מסלול לרווקים).",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "anger"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "חינם למילואימניקים במימון תרומות; מוכר ע\"י משרד הביטחון",
+  "regions": [
+   "center"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותת אמפא ולהירשם לסדנת InHeal הקרובה.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1153088",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכזי החוסן – מוקד ארצי *5486",
+  "category": "mental-health",
+  "description": "רשת מרכזי חוסן ברחבי הארץ (בעיקר בצפון ובדרום) המעניקים טיפול רגשי ונפשי לנפגעי חרדה וטראומה בעקבות המלחמה – אזרחים, מילואימניקים ובני משפחה – ללא עלות וללא צורך בפנייה לביטוח לאומי.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "not-recognized",
+   "families",
+   "terror-victims",
+   "civilians",
+   "combat-soldiers",
+   "police"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות, ללא הכרה מוקדמת",
+  "regions": [
+   "nationwide",
+   "north",
+   "south",
+   "center",
+   "jerusalem",
+   "judea-samaria"
+  ],
+  "location": "",
+  "phone": "*5486",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למרכז החוסן ביישוב/באזור; אם אין – למוקד הארצי *5486 (א'–ה' 8:00–20:00).",
+  "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "הקואליציה הישראלית לטראומה (Israel Trauma Coalition)",
+  "category": "mental-health",
+  "description": "הגוף המתאם הארצי לטיפול בטראומה ומוכנות לחירום, המפעיל ומלווה את מרכזי החוסן ברחבי הארץ ובעיקר בעוטף עזה, במודל המשלב משרדי ממשלה, עמותות ורשויות. השירותים לציבור ניתנים ללא תשלום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "terror-victims",
+   "reservists",
+   "families",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "grief"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "השירותים חינם (מסובסדים ע\"י ממשלה ותורמים)",
+  "regions": [
+   "nationwide",
+   "south"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למרכז החוסן המקומי (או *5486) שפועל במסגרת הקואליציה.",
+  "source_url": "https://en.wikipedia.org/wiki/The_Israel_Coalition_for_Trauma",
+  "confidence": "medium"
+ },
+ {
+  "name": "המרכז להתערבות מוקדמת בטראומה – איכילוב ולמענכם",
+  "category": "mental-health",
+  "description": "מרכז חדש של המרכז הרפואי תל אביב (איכילוב) וארגון \"למענכם\" המציע טיפול נפשי חינם בשלב מוקדם של טראומה למילואימניקים, אנשי כוחות הביטחון ובני משפחותיהם (בני זוג, הורים, אחים וילדים), לפני שהתסמינים מתקבעים ל-PTSD.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "security-forces",
+   "police",
+   "families",
+   "not-recognized",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "טיפול חינם",
+  "regions": [
+   "center"
+  ],
+  "location": "המרכז הרפואי תל אביב (איכילוב)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לאיכילוב / לארגון למענכם ולבקש קביעת אינטייק במרכז להתערבות מוקדמת.",
+  "source_url": "https://www.maariv.co.il/news/health/article-1357590",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכז אסיף לטיפול בטראומה ופוסט טראומה – איכילוב",
+  "category": "mental-health",
+  "description": "מרכז שהוקם באיכילוב אחרי 7 באוקטובר לאבחון וטיפול בהפרעות הקשורות לטראומה ו-PTSD, בקרב חיילים, מילואימניקים ואזרחים.",
+  "provider_type": "government",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "civilians",
+   "terror-victims",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "partial",
+  "cost_notes": "בהתאם לזכאות (קופ\"ח/משרד הביטחון/ביטוח לאומי)",
+  "regions": [
+   "center"
+  ],
+  "location": "המרכז הרפואי תל אביב (איכילוב)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה דרך המרכז הרפואי תל אביב עם הפניה מרופא/קופת חולים או גורם מממן.",
+  "source_url": "https://www.jpost.com/health-and-wellness/article-906212",
+  "confidence": "medium"
+ },
+ {
+  "name": "הקליניקה של המרכז הלאומי לטראומה וחוסן – אוניברסיטת תל אביב",
+  "category": "mental-health",
+  "description": "הזרוע הטיפולית של המרכז הלאומי לטראומה וחוסן באוניברסיטת ת\"א, המשלבת מחקר, התמחות וטיפול. מטפלת במילואימניקים ואזרחים נפגעי פוסט טראומה מהמלחמה – מופנים ממשרד הביטחון ומביטוח לאומי וגם בפנייה פרטית ישירה.",
+  "provider_type": "academic",
+  "eligibility": [
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [],
+  "cost": "partial",
+  "cost_notes": "במימון משרד הביטחון/ביטוח לאומי למופנים; פנייה פרטית בעלות",
+  "regions": [
+   "center"
+  ],
+  "location": "אוניברסיטת תל אביב",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה ישירה לקליניקה באוניברסיטת ת\"א, או דרך הפניה מקצין השיקום/ביטוח לאומי.",
+  "source_url": "https://www.maariv.co.il/news/education/article-1063058",
+  "confidence": "medium"
+ },
+ {
+  "name": "מטיב – המרכז הישראלי לטיפול בפסיכוטראומה (הרצוג)",
+  "category": "mental-health",
+  "description": "מרכז טיפול בטראומה שהוקם ב-1989 במרכז הרפואי הרצוג בירושלים. פתח מסלול ייעודי ל\"דור 7 באוקטובר\" של לוחמים לטיפול מוקדם בטראומה ותמך בכ-2,000 חיילים מאז 2023.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized",
+   "mod-in-process",
+   "families",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "מסובסד בתרומות; תלוי תוכנית",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "מרכז רפואי הרצוג, ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "https://www.herzoghospital.org/metiv/",
+  "how_to_apply": "לפנות למטיב דרך אתר המרכז הרפואי הרצוג ולבקש שיבוץ למסלול לוחמים.",
+  "source_url": "https://www.herzoghospital.org/metiv/",
+  "confidence": "high"
+ },
+ {
+  "name": "מטיב – תוכנית Peace of Mind (POM) ללוחמים משוחררים",
+  "category": "peer-support",
+  "description": "תוכנית ללוחמים משוחררים בני 21–26 שמשרתים יחד באותה מחלקה/צוות: סדנאות בישראל וסמינר טיפולי של 8 ימים בחו\"ל אצל קהילות יהודיות ומשפחות מארחות, לעיבוד משותף של חוויות הקרב ומעבר לאזרחות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury",
+   "loneliness"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "מימון הקהילות והתורמים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.herzoghospital.org/metiv/",
+  "how_to_apply": "פנייה כצוות/מחלקה דרך מטיב (בדרך כלל ביוזמת מפקד או נציג הצוות).",
+  "source_url": "https://www.herzoghospital.org/metiv/",
+  "confidence": "medium"
+ },
+ {
+  "name": "ניסוי MDMA לפוסט טראומה במטיב (לאנשי כוחות הביטחון לשעבר)",
+  "category": "mental-health",
+  "description": "מאז 2024 מטיב מקיים מחקר קליני של פסיכותרפיה בסיוע MDMA לאנשי כוחות ביטחון לשעבר עם PTSD. הטיפול ניסיוני וזמין רק במסגרת המחקר, בכפוף לקריטריוני הכללה.",
+  "provider_type": "academic",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces",
+   "not-recognized",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "השתתפות במחקר ללא עלות (בכפוף לקבלה)",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "מרכז רפואי הרצוג, ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למטיב ולבקש בדיקת התאמה למחקר; נדרש אבחון PTSD ועמידה בקריטריונים רפואיים.",
+  "source_url": "https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/",
+  "confidence": "low"
+ },
+ {
+  "name": "מחקר טיפול בסיוע MDMA ללוחמים עם PTSD ופגיעה מוסרית – מרכז רפואי העמק (כללית)",
+  "category": "mental-health",
+  "description": "מחקר קליני (2023–2028) במרכז הרפואי העמק בעפולה של טיפול פרטני וקבוצתי בסיוע MDMA לוותיקי צבא ישראלים עם פוסט טראומה ופגיעה מוסרית. כ-80% מהמשלימים הראו ירידה משמעותית בתסמינים. ניסיוני – רק במסגרת המחקר.",
+  "provider_type": "hmo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "במסגרת מחקר",
+  "regions": [
+   "north"
+  ],
+  "location": "מרכז רפואי העמק, עפולה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבדוק את רישום המחקר NCT05732155 ולפנות לצוות המחקר בהעמק לבדיקת התאמה.",
+  "source_url": "https://clinicaltrials.gov/study/NCT05732155",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכז הלוחמים הבודדים ע\"ש מייקל לוין (Lone Soldier Center)",
+  "category": "mental-health",
+  "description": "ליווי חיילים בודדים מהגיוס ועד 5 שנים אחרי השחרור, כולל תמיכה נפשית וחוסן – ייעוץ ותוכניות רווחה ליותר מ-1,200 חיילים בסדיר ובמילואים המתמודדים עם PTSD בעקבות המלחמה, לצד דיור, סיוע כספי וליווי במיצוי זכויות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "financial",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות לחיילים בודדים",
+  "regions": [
+   "jerusalem",
+   "center",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://lonesoldiercenter.com/",
+  "how_to_apply": "לפנות דרך אתר המרכז ולהירשם כחייל/ה בודד/ה או משוחרר/ת עד 5 שנים.",
+  "source_url": "https://lonesoldiercenter.com/",
+  "confidence": "high"
+ },
+ {
+  "name": "קרן מייקל לוין לחיילים בודדים – מימון ייעוץ נפשי",
+  "category": "financial-grants",
+  "description": "הקרן מממנת ייעוץ נפשי פרטני לחיילים בודדים בשירות ומשוחררים הזקוקים לו, וכן תוכניות ושירותים נוספים לחיילים בודדים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מימון טיפול",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://michaellevinlonesoldier.org/about-us",
+  "how_to_apply": "לפנות דרך מרכז הלוחמים הבודדים או אתר הקרן לבקשת מימון ייעוץ.",
+  "source_url": "https://michaellevinlonesoldier.org/about-us",
+  "confidence": "medium"
+ },
+ {
+  "name": "תוכנית החיילים הבודדים של נפש בנפש (NBN Lone Soldiers Program)",
+  "category": "peer-support",
+  "description": "מרכז משאבים לחיילים בודדים עולים: ליווי, מידע על זכויות ותמיכה, ומרכז חוסן ייעודי לחיילים בודדים שנפתח לאחרונה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "loneliness",
+   "bureaucracy",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.nbn.org.il/lsrc",
+  "how_to_apply": "להיכנס לאתר התוכנית ולפנות לרכזי החיילים הבודדים.",
+  "source_url": "https://www.nbn.org.il/lsrc",
+  "confidence": "medium"
+ },
+ {
+  "name": "OneFamily – תוכניות טיפוליות לנפגעי טרור ומלחמה",
+  "category": "family-support",
+  "description": "ארגון התומך מאז 2001 בנפגעי טרור ומלחמה – אזרחים, חיילים ומשפחות – בתמיכה רגשית, מעשית וכספית. מציע תוכניות טיפוליות לפצועים עם PTSD, ליתומים, הורים ואחים שכולים ואלמנים/ות, כולל רטריטים טיפוליים מחוץ לישראל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "terror-victims",
+   "combat-soldiers",
+   "bereaved",
+   "families",
+   "civilians",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "grief",
+   "family-relations",
+   "financial"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://onefamilytogether.org/en/about-us/",
+  "how_to_apply": "לפנות לארגון דרך האתר ולבקש שיבוץ לעובדת/עובד סוציאלי ולתוכנית מתאימה.",
+  "source_url": "https://onefamilytogether.org/en/about-us/",
+  "confidence": "high"
+ },
+ {
+  "name": "סלע – מרכז ישראלי לניהול משברים לעולים (Selah)",
+  "category": "family-support",
+  "description": "רשת של כ-600 מתנדבים המסייעת לעולים חדשים שנפגעו מטרור, מלחמה או אסון: ביקורי בית ובית חולים, מענקי חירום, מימון הגעת קרובים מחו\"ל, וליווי משפטי ופסיכולוגי בשפת האם לאורך שנים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "terror-victims",
+   "families",
+   "bereaved",
+   "civilians",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "grief",
+   "financial",
+   "loneliness",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לארגון Selah (באמצעות אתר הארגון) – מיועד לעולים חדשים במשבר.",
+  "source_url": "https://jewishindependent.ca/oldsite/archives/oct03/archives03oct17-05.html",
+  "confidence": "low"
+ },
+ {
+  "name": "Healing Place – מרכז טיפול בבית יצחק",
+  "category": "nature-retreats",
+  "description": "מרכז טיפולי שהוקם בעקבות 7 באוקטובר (במימון חלקי של קרן וקסנר) בבית יצחק. החל בעזרה ראשונה נפשית לשורדי הנובה ולמפוני העוטף, וכיום מטפל גם בתושבי העוטף, משפחות שכולות, אלמנות, שבים מהשבי – ולפי דיווחים גם בשוטרים וחיילים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "terror-victims",
+   "bereaved",
+   "civilians",
+   "police",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "grief",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "מבוסס תרומות",
+  "regions": [
+   "sharon"
+  ],
+  "location": "בית יצחק",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למרכז (דרך פרסומי המרכז/רשתות) לבירור התאמה וזמינות.",
+  "source_url": "https://jpost.com/israel-news/article-825184",
+  "confidence": "low"
+ },
+ {
+  "name": "הגל שלי – גלישה טיפולית ללוחמים",
+  "category": "water-sports",
+  "description": "עמותה המשתמשת בגלישה כשיטה טיפולית, שקלטה מאות חיילים ומילואימניקים עם פוסט טראומה מאז המלחמה, במפגשים קבוצתיים בחוף בליווי מטפלים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "not-recognized",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות למשתתפים (לפי דיווח)",
+  "regions": [
+   "center",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להירשם דרך העמותה לקבוצת לוחמים בחוף הקרוב.",
+  "source_url": "https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/",
+  "confidence": "medium"
+ },
+ {
+  "name": "בית הלוחם (ארגון נכי צה\"ל)",
+  "category": "medical-rehab",
+  "description": "בתי לוחם בפריסה ארצית (בהם חיפה) המהווים מקום בטוח לשיקום פיזי ונפשי, ספורט, טיפולים וקהילה עם לוחמים פצועים אחרים, כולל נפגעי פוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "physical-disability",
+   "loneliness"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "sea"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "דמי חבר מסובסדים לנכי צה\"ל מוכרים",
+  "regions": [
+   "haifa",
+   "center",
+   "jerusalem",
+   "south",
+   "north"
+  ],
+  "location": "חיפה ובתי לוחם נוספים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להצטרף כחבר/ה בארגון נכי צה\"ל עם אישור הכרה ממשרד הביטחון, ולהירשם בבית הלוחם הקרוב.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1153088",
+  "confidence": "medium"
+ },
+ {
+  "name": "לצמוח כמנצחים + HackerU – הכשרת הייטק לנפגעי פוסט טראומה",
+  "category": "employment-education",
+  "description": "שיתוף פעולה המעניק קורסי הייטק חינם (250–600 שעות: סייבר, QA, ניתוח מערכות) לנפגעי טראומה ופוסט טראומה מאז 7 באוקטובר, כולל אבחון מקצועי, מנטורינג אישי, עזרה בקורות חיים וחיבור למעסיקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "not-recognized",
+   "mod-recognized",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "שווי התוכנית כ-2 מיליון ש\"ח – חינם למשתתפים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "להגיש מועמדות דרך עמותת לצמוח כמנצחים/HackerU; עוברים אבחון התאמה מקצועי.",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1193939",
+  "confidence": "medium"
+ },
+ {
+  "name": "\"חוזרים למסלול\" – חזרה לעבודה לנפגעי טראומה",
+  "category": "employment-education",
+  "description": "תוכנית למי שעבדו לפני המלחמה ונאלצו להפסיק עקב פגיעה מתמשכת (כולל טראומה), המסייעת בחזרה למעגל העבודה ומלווה גם מעסיקים בהעסקתם.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "not-recognized",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לתוכנית דרך הגורמים המפעילים שפורסמו בכתבה.",
+  "source_url": "https://www.maariv.co.il/economy/israel/article-1091651",
+  "confidence": "low"
+ },
+ {
+  "name": "רטורנו – גמילה מהתמכרויות",
+  "category": "mental-health",
+  "description": "מרכז גמילה ותיק להתמכרויות לסמים, אלכוהול והימורים במודל קהילה טיפולית; רלוונטי ללוחמים המתמודדים עם התמכרות לצד טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "reservists",
+   "combat-soldiers",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "addiction"
+  ],
+  "interests": [
+   "spiritual"
+  ],
+  "cost": "paid",
+  "cost_notes": "בעלות; לעיתים מימון חלקי דרך גורמי רווחה",
+  "regions": [
+   "center"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה ישירה למרכז לשיחת התאמה.",
+  "source_url": "https://www.kikar.co.il/386113.html",
+  "confidence": "low"
+ },
+ {
+  "name": "עמך – מרכזי סיוע נפשי",
+  "category": "mental-health",
+  "description": "עמותה שהוקמה לסיוע נפשי לניצולי שואה והרחיבה בשנים האחרונות את שירותי התמיכה הנפשית לאוכלוסיות נוספות בחברה הישראלית, כולל נפגעי טראומה מהמלחמה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "families",
+   "terror-victims",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "מסובסד",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לסניף עמך הקרוב לבירור זכאות.",
+  "source_url": "https://www.kolzchut.org.il/he/עמך",
+  "confidence": "low"
+ },
+ {
+  "name": "שותפות מגן ישראלית",
+  "category": "peer-support",
+  "description": "עמותה המוזכרת בכל-זכות בין הארגונים המסייעים לאנשים עם פוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לעמותה לבירור השירותים.",
+  "source_url": "https://www.kolzchut.org.il/he/הפרעת_דחק_פוסט_טראומתית_%28PTSD%29",
+  "confidence": "low"
+ },
+ {
+  "name": "ביטוח לאומי – קו חירום לפצועים ולמשפחות שכולות",
+  "category": "hotlines",
+  "description": "קו חירום לסיוע מיידי לפצועי פעולות איבה ולמשפחות שכולות – מידע על זכויות, הפניה לטיפול נפשי וסיוע ראשוני.",
+  "provider_type": "government",
+  "eligibility": [
+   "terror-victims",
+   "bereaved",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "grief",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חינם",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "02-6269999",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לחייג 02-6269999.",
+  "source_url": "https://www.btl.gov.il/HaravotBarzel1/Pages/KavHeromHB.aspx",
+  "confidence": "high"
+ },
+ {
+  "name": "מימון טיפול נפשי לנכי צה\"ל וכוחות הביטחון (אגף השיקום)",
+  "category": "mental-health",
+  "description": "נכי צה\"ל וכוחות הביטחון עם 20% נכות לפחות זכאים למימון טיפולים נפשיים כחלק מהשיקום – אצל מטפלים בהסדר עם אגף השיקום או אצל מטפל פרטי בהחזר.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "מימון מלא/החזר לפי תעריף",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקצין/ת השיקום באגף השיקום במשרד הביטחון ולבקש אישור טיפול.",
+  "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_לנכי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "טיפול נפשי לבני משפחה של נכי צה\"ל וכוחות הביטחון",
+  "category": "family-support",
+  "description": "משרד הביטחון מממן טיפול נפשי לבני משפחה של נכי צה\"ל וכוחות הביטחון בהתאם לתנאי זכאות.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "לפי תנאי זכאות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות לקצין השיקום של הנכה ולהגיש בקשה לטיפול לבן המשפחה.",
+  "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_לבני_משפחה_של_נכי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "high"
+ },
+ {
+  "name": "פעילויות טרום שיקום לנכי צה\"ל נפגעי פוסט טראומה",
+  "category": "nature-retreats",
+  "description": "נכי צה\"ל וכוחות הביטחון שהוכרה להם נכות של 20% לפחות על פוסט טראומה זכאים למימון פעילות לימודית וחוויתית כחלק מתהליך טרום-שיקום.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "employment"
+  ],
+  "interests": [
+   "learning",
+   "nature",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מימון משרד הביטחון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לבקש מקצין השיקום אישור לפעילות טרום-שיקום ולבחור מסגרת מאושרת.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%98%D7%A8%D7%95%D7%9D_%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9C%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94",
+  "confidence": "high"
+ },
+ {
+  "name": "מוקדי סיוע רגשי של קופות החולים",
+  "category": "mental-health",
+  "description": "כל קופות החולים הפעילו מוקדי תמיכה רגשית ומסלולים מקוצרים לטיפול נפשי בעקבות המלחמה, בתיאום עם מרכזי החוסן – זמין לכל מבוטח, כולל מילואימניקים שלא הוכרו.",
+  "provider_type": "hmo",
+  "eligibility": [
+   "reservists",
+   "not-recognized",
+   "civilians",
+   "families",
+   "combat-soldiers",
+   "police"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "depression",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "בסל הבריאות; לעיתים השתתפות עצמית",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לפנות למוקד בריאות הנפש של קופת החולים שלך או דרך האפליקציה.",
+  "source_url": "https://www.kolzchut.org.il/he/מוקדים_לסיוע_ותמיכה_רגשית_מטעם_קופות_החולים_ומרכזי_חוסן_בעקבות_מלחמת_חרבות_ברזל",
+  "confidence": "high"
+ }
+]
