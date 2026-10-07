@@ -605,7 +605,7 @@
           <button class="btn btn-ink btn-wide" type="submit">לשלוח</button>
           <p class="form-msg" id="add-msg" role="status"></p>
         </form>
-        <p class="note quiet">לא מפרסמים את הפרטים שלך. מה ששלחת נבדק לפני שמופיע במאגר.</p>
+        <p class="note quiet">לא מפרסמים את הפרטים שלך. מה ששלחת נבדק לפני שמופיע במאגר. <a href="#/privacy">פרטיות</a></p>
       </section>`;
     const f = document.getElementById("add");
     const msg = document.getElementById("add-msg");
@@ -628,6 +628,58 @@
         btn.disabled = false;
         msg.textContent = sendError(err);
       }
+    });
+  }
+
+  // ---------- פרטיות ----------
+  function viewPrivacy() {
+    $main.innerHTML = `
+      <section class="form-page privacy">
+        <h1 class="page-title">פרטיות</h1>
+        <p class="lead">בקצרה: אין הרשמה, אין פרסומות, ואין מעקב. אנחנו שומרים רק מה שבחרת לשלוח, ורק כדי שהאתר יעבוד.</p>
+
+        <h2 class="section-title">מה נשאר רק אצלך במכשיר</h2>
+        <p>התשובות לשאלון, הבחירה במצב עמום, ואילו שירותים המלצת עליהם. הכול נשמר בדפדפן או באפליקציה שלך בלבד, ולא נשלח אלינו. אפשר למחוק את זה בניקוי נתוני האתר בדפדפן.</p>
+
+        <h2 class="section-title">מה מגיע אלינו, ורק כשבחרת לשלוח</h2>
+        <ul class="ticks plain">
+          <li>${TICK}<span><strong>"שיחזרו אליי":</strong> השם, הטלפון או המייל, ומה שכתבת. משמש רק כדי שהגוף שבחרת יחזור אליך. אנחנו מעבירים לגוף הזה בלבד, ולא לאף אחד אחר.</span></li>
+          <li>${TICK}<span><strong>הוספת מקום ותיקון פרטים:</strong> מה שכתבת בטופס. פרטי קשר שלך הם לא חובה, ומשמשים רק אם נצטרך לשאול משהו. לא מתפרסמים.</span></li>
+          <li>${TICK}<span><strong>"ממליץ/ה":</strong> רק איזה שירות, וקוד אקראי של המכשיר כדי שלא ייספר פעמיים. בלי שם ובלי פרטים.</span></li>
+        </ul>
+
+        <h2 class="section-title">מי רואה, ולכמה זמן</h2>
+        <p>רק מנהל/ת האתר, בעמוד ניהול שנעול בסיסמה. פניות "שיחזרו אליי" נמחקות אוטומטית אחרי חצי שנה. אנחנו לא מוכרים מידע, לא משתמשים בו לפרסום, ולא משתפים אותו.</p>
+
+        <h2 class="section-title">טכני</h2>
+        <p>האתר מתארח ב-Cloudflare, והמידע שנשלח נשמר שם. כתובת ה-IP לא נשמרת: לצורך הגבלת הודעות ספאם שומרים רק קוד מוצפן שמתחלף כל יום. בטפסים יש בדיקה של Cloudflare (Turnstile) שמוודאת שלא מדובר ברובוט. הגופנים נטענים מ-Google Fonts. אין כלי מדידה, אין עוגיות פרסום.</p>
+
+        <h2 class="section-title">חשוב לדעת</h2>
+        <p>המידע באתר נאסף ממקורות פתוחים ונבדק מול האתרים הרשמיים כשאפשר. הוא לא תחליף לייעוץ רפואי, נפשי או משפטי. כדאי לוודא תנאים ועלויות ישירות מול הגוף. אם יש סכנה מיידית: מד״א <a href="tel:101">101</a>, משטרה <a href="tel:100">100</a>, ובכל שעה <a href="#/help">עזרה עכשיו</a>.</p>
+
+        <h2 class="section-title">לבקש מחיקה או לשאול</h2>
+        <p>שלחת פנייה ורוצה שנמחק אותה? כתבו כאן מה שלחתם ומתי (בערך), ואיך לחזור אליכם אם צריך.</p>
+        <form id="contact" class="form">
+          <label>מה לבקש<textarea name="text" rows="3" maxlength="1000" required></textarea></label>
+          <label>טלפון או מייל (לא חובה)<input name="contact" maxlength="120"></label>
+          <div class="ts" id="contact-ts"></div>
+          <button class="btn btn-ink" type="submit">לשלוח</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+        <p class="note quiet">עודכן: אוקטובר 2026</p>
+      </section>`;
+    const f = document.getElementById("contact");
+    let token = () => "";
+    captcha(document.getElementById("contact-ts")).then(g => { token = g; });
+    f.addEventListener("submit", async e => {
+      e.preventDefault();
+      const fd = new FormData(f), msg = f.querySelector(".form-msg");
+      const text = (fd.get("text") || "").trim();
+      if (text.length < 3) { msg.textContent = "כתבו כמה מילים."; return; }
+      try {
+        await Store.submit("fix", { text, contact: (fd.get("contact") || "").trim() }, { service_id: "_contact", token: token() });
+        f.innerHTML = `<p class="form-msg">התקבל. נטפל בזה בהקדם.</p>`;
+      } catch (err) { msg.textContent = sendError(err); }
     });
   }
 
@@ -679,7 +731,7 @@
           <label>שם<input name="name" required maxlength="80"></label>
           <label>טלפון או מייל<input name="contact" required maxlength="120"></label>
           <label>משהו שחשוב שידעו? (לא חובה)<textarea name="message" rows="2" maxlength="600"></textarea></label>
-          <label class="check"><input type="checkbox" name="consent" required> אני מסכים/ה שהפרטים יועברו ל${esc(s.name)} רק כדי ליצור איתי קשר.</label>
+          <label class="check"><input type="checkbox" name="consent" required> אני מסכים/ה שהפרטים יועברו ל${esc(s.name)} רק כדי ליצור איתי קשר. <a href="#/privacy">פרטיות</a></label>
           <button class="btn btn-ink">לשלוח</button>
           <p class="form-msg" role="status"></p>
         </form>
@@ -777,6 +829,7 @@
     else if (path === "/rights") viewRights(params);
     else if (path === "/area") viewArea(params);
     else if (path === "/help") viewHelp();
+    else if (path === "/privacy") viewPrivacy();
     else if (path === "/add" || path === "/provider") viewAdd(params);
     else if (path === "/admin") { location.href = "admin/"; return; }
     else viewHome();

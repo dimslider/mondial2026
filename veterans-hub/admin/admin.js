@@ -64,6 +64,10 @@
 
   const FIX_FIELDS = { phone: "טלפון", website: "אתר", cost_notes: "פירוט עלות", how_to_apply: "איך מתחילים", location: "מיקום", description: "תיאור" };
   function fixCard(g) {
+    if (g.service_id === "_contact") return `<article class="adm-card" data-key="${esc(g.key)}" data-sid="_contact">
+      <h2>פנייה כללית / בקשת פרטיות</h2>
+      ${g.items.map(i => `<p class="adm-quote">${esc(i.data.text)}${i.data.contact ? `\n— ליצירת קשר: ${esc(i.data.contact)}` : ""}\n(${day(i.created_at)})</p>`).join("")}
+      <form class="form"><div class="adm-actions"><button class="btn btn-ink" data-act="close" type="button">טופל</button></div></form></article>`;
     const s = S.find(x => x.id === g.service_id) || { name: "(שירות שנוסף ע״י הקהילה) " + g.service_id };
     return `<article class="adm-card" data-key="${esc(g.key)}" data-sid="${esc(g.service_id)}">
       <h2>${esc(s.name)}</h2>

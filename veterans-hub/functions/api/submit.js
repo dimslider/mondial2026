@@ -58,5 +58,10 @@ export async function onRequestPost({ request, env }) {
   }
   await d.prepare("INSERT INTO submissions (kind, service_id, dedupe, data, status, created_at, ip_hash) VALUES (?, ?, ?, ?, 'pending', ?, ?)")
     .bind(kind, sid, dedupe, JSON.stringify(data), now, ip).run();
+  // ניקוי: פניות "שיחזרו אליי" נמחקות אחרי חצי שנה (כפי שכתוב בעמוד הפרטיות), וניסיונות כניסה אחרי יום
+  await d.batch([
+    d.prepare("DELETE FROM submissions WHERE kind = 'lead' AND created_at < ?").bind(now - 182 * 864e5),
+    d.prepare("DELETE FROM logins WHERE at < ?").bind(now - 864e5)
+  ]);
   return json({ ok: true });
 }

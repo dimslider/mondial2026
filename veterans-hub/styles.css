@@ -302,3 +302,5 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .chip-btn[aria-pressed="true"] { border-style: solid; background: var(--t-home); color: #151515; }
 .chip-btn .star { width: 16px; height: 16px; }
 .form[hidden], [hidden] { display: none !important; }
+.privacy p { margin-top: 8px; }
+.ticks.plain li { align-items: flex-start; }
