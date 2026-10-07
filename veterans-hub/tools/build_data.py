@@ -6,9 +6,10 @@
   python3 tools/build_data.py --extra tools/telegram_out/candidates.json   # הוספה למאגר הקיים
 
 - מנרמל ערכים לפי data/taxonomy.js (ערך לא מוכר נזרק עם אזהרה)
-- מאחד כפילויות לפי שם מנורמל / דומיין של האתר
+- מאחד כפילויות לפי שם מנורמל / אותו עמוד מקור
 - נותן לכל שירות מזהה יציב (slug)
 """
+import difflib
 import hashlib
 import json
 import re
@@ -30,7 +31,7 @@ VALID = {k: keys_of(k) for k in ["categories", "eligibility", "difficulties", "i
 LIST_FIELDS = {"eligibility": "eligibility", "difficulties": "difficulties", "interests": "interests", "regions": "regions"}
 FIELDS = ["id", "name", "category", "description", "provider_type", "eligibility", "difficulties", "interests",
           "cost", "cost_notes", "regions", "location", "phone", "email", "website", "how_to_apply",
-          "source_url", "confidence"]
+          "source_url", "confidence", "reviewed_at"]
 
 
 def norm_name(n):
@@ -47,6 +48,12 @@ def host(u):
     if h in ("", "facebook.com", "instagram.com", "gov.il", "kolzchut.org.il", "linktr.ee", "t.me", "wa.me"):
         return ""
     return h
+
+
+def page_key(u):
+    """מפתח לעמוד מקור ספציפי; דף בית (בלי נתיב) לא נחשב."""
+    u = re.sub(r"^https?://(www\.)?", "", (u or "").strip().lower()).split("#")[0].rstrip("/")
+    return u if "/" in u else ""
 
 
 def slug(s):
@@ -73,7 +80,7 @@ def clean(s, warn):
         if bad:
             warn(f"{out['name']}: ערכים לא מוכרים ב-{f}: {bad}")
         out[f] = sorted(set(v for v in vals if v in VALID[tax]))
-    for f in ("phone", "email", "website", "source_url", "location", "cost_notes", "how_to_apply", "description"):
+    for f in ("phone", "email", "website", "source_url", "location", "cost_notes", "how_to_apply", "description", "reviewed_at"):
         out[f] = (out[f] or "").strip()
     if out["confidence"] not in ("high", "medium", "low"):
         out["confidence"] = "medium"
@@ -113,25 +120,25 @@ def main():
         data = json.loads(Path(f).read_text(encoding="utf-8"))
         items.extend(clean(s, warnings.append) for s in data if s.get("name"))
 
-    merged, by_name, by_host, by_phone = [], {}, {}, {}
+    # כפילות = אותו שם מנורמל, או אותו עמוד מקור (לא דף בית) עם שם דומה. לא לפי דומיין או טלפון:
+    # באתר אגף השיקום / ביטוח לאומי, ובקווים משותפים כמו *5486, יש הרבה שירותים שונים.
+    merged, by_name, by_src = [], {}, {}
     for s in items:
         if not s.get("id"):
             s["id"] = ""
-        n, h = norm_name(s["name"]), host(s["website"])
-        ph = re.sub(r"[^\d*]", "", re.split(r"\||או|,", s["phone"])[0]) if s["phone"] else ""
+        n, src = norm_name(s["name"]), page_key(s["source_url"])
         idx = by_name.get(n)
-        if idx is None and h:
-            idx = by_host.get((h, s["category"]))
-        if idx is None and ph:
-            idx = by_phone.get((ph, s["category"]))
+        if idx is None and src and src in by_src:
+            cand = by_src[src]
+            # עמוד אחד מפרט לפעמים כמה שירותים (רשימת חוות, מרכזי חוסן) — מאחדים רק אם גם השם דומה
+            if difflib.SequenceMatcher(None, n, norm_name(merged[cand]["name"])).ratio() >= 0.6:
+                idx = cand
         if idx is not None:
             merge(merged[idx], s)
             continue
         by_name[n] = len(merged)
-        if h:
-            by_host[(h, s["category"])] = len(merged)
-        if ph:
-            by_phone[(ph, s["category"])] = len(merged)
+        if src:
+            by_src[src] = len(merged)
         merged.append(s)
 
     seen = set()
@@ -147,7 +154,10 @@ def main():
     ver = {r["id"]: r for r in json.loads(ver_path.read_text(encoding="utf-8"))} if ver_path.exists() else {}
     for s in merged:
         r = ver.get(s["id"])
-        s["verified_at"] = r["checked_at"] if r and r.get("ok") else ""
+        # "מאומת" = התוכן נקרא ותוקן ידנית מול העמוד הרשמי (reviewed_at בקובץ המחקר).
+        # הבדיקה האוטומטית לבדה (עמוד חי, שם וטלפון מופיעים) לא מספיקה לרשומה ברמת ביטחון בינונית/נמוכה.
+        auto = r["checked_at"] if r and r.get("ok") and s["confidence"] == "high" else ""
+        s["verified_at"] = s.get("reviewed_at", "") or auto
 
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))

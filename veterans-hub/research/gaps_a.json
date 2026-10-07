@@ -37,7 +37,8 @@
   "website": "https://etgarim.org",
   "how_to_apply": "השארת פרטים בטופס באתר, או פנייה לניר לוי או ישירות לרכז/ת הקבוצה (הטלפונים מופיעים באתר)",
   "source_url": "https://etgarim.org/%d7%a4%d7%a2%d7%99%d7%9c%d7%95%d7%99%d7%95%d7%aa-%d7%9c%d7%a0%d7%a4%d7%92%d7%a2%d7%99-%d7%97%d7%a8%d7%91%d7%95%d7%aa-%d7%91%d7%a8%d7%96%d7%9c/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "הספינה שטה – שיט טיפולי לנפגעי פוסט טראומה (אתגרים)",
@@ -68,7 +69,8 @@
   "website": "https://etgarim.org",
   "how_to_apply": "פנייה לעובד/ת השיקום במשרד הביטחון",
   "source_url": "https://etgarim.org/2016/02/14/%d7%a1%d7%a4%d7%99%d7%a0%d7%94-%d7%a9%d7%98%d7%94/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "אחים לחיים",
@@ -103,7 +105,8 @@
   "website": "https://www.achimlachaim.org",
   "how_to_apply": "בקשת הצטרפות או טופס פנייה באתר העמותה",
   "source_url": "https://www.achimlachaim.org/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "Trauma4Good",
@@ -135,37 +138,8 @@
   "website": "https://www.trauma4good.org",
   "how_to_apply": "מילוי טופס פרטים באתר, או פנייה לקו עם מענה אנושי",
   "source_url": "https://www.trauma4good.org/",
-  "confidence": "high"
- },
- {
-  "name": "AMPHA – מדיקל קר וסדנת InHeal",
-  "category": "yoga-mind-body",
-  "description": "עמותת אמפא – ארגון מרפא אינטגרטיבי מפעילה במרכז השיקומי 'מדיקל קר' בבת ים סדנאות בשיטת InHeal, המשלבת טיפולים ברפואה אינטגרטיבית ופסיכותרפיה. סדנת 'מתחילים מחדש' מיועדת ללוחמי ולוחמות מילואים בני 24 ומעלה ששירתו תקופה ממושכת בלחימה: 5 ימים במלון עם פנסיון מלא, טיפולים אישיים וסדנה קבוצתית, ואחר כך תוכנית תמיכה המשכית.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "reservists"
-  ],
-  "difficulties": [
-   "ptsd",
-   "anxiety",
-   "sleep",
-   "chronic-pain"
-  ],
-  "interests": [
-   "mind-body"
-  ],
-  "cost": "free",
-  "cost_notes": "הסדנה למילואימניקים ללא עלות",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "מדיקל קר, אבא ברדיצ'ב 13, בת ים",
-  "phone": "03-5008899",
-  "email": "info@inheal.org",
-  "website": "https://www.inheal.org",
-  "how_to_apply": "השארת פרטים בטופס ההרשמה באתר. סדנה חדשה נפתחת בכל יום ראשון",
-  "source_url": "https://www.inheal.org/inheal-%D7%A1%D7%93%D7%A0%D7%AA-%D7%9E%D7%AA%D7%97%D7%99%D7%9C%D7%99%D7%9D-%D7%9E%D7%97%D7%93%D7%A9-%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99-%D7%95%D7%97%D7%99%D7%99%D7%9C%D7%95%D7%AA-%D7%9E%D7%99/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "פרויקט הד' – יצירה מוזיקלית ללוחמים",
@@ -197,7 +171,8 @@
   "website": "https://projecthed.org",
   "how_to_apply": "פנייה לדרור בלום, מנהל העמותה, בטלפון או במייל",
   "source_url": "https://projecthed.org/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "TERRA UMA – 'מסע היין' לשיקום לוחמים",
@@ -231,7 +206,8 @@
   "website": "https://www.terrauma.co.il",
   "how_to_apply": "ההרשמה למחזור הבא נפתחת כל שנה בסביבות פברואר. משאירים פרטים בטופס באתר, ואחר כך יש ריאיון אישי",
   "source_url": "https://www.terrauma.co.il/faq",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מרכזי היצירה השיקומיים לנכי צה\"ל (משרד הביטחון ואוניברסיטת בר-אילן)",
@@ -267,7 +243,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "פנייה לעובד/ת השיקום האישי/ת במחוז, או בקשה באזור האישי באתר אגף השיקום",
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "'גיבור לגיבור' – גדולים במדים",
@@ -298,71 +275,8 @@
   "website": "https://www.jnf.org/our-work/disabilities-special-needs/special-in-uniform",
   "how_to_apply": "פנייה לגדולים במדים",
   "source_url": "https://www.jnf.org/ways-to-help/jnf-donor-societies/women-for-israel/on-the-ground-in-israel-jnf-usa-affiliates-respond-to-mental-health-and-resilience-needs",
-  "confidence": "high"
- },
- {
-  "name": "'מסע שחרור' – עיבוד חוויות השירות ללוחמים משוחררים (מטיב)",
-  "category": "nature-retreats",
-  "description": "תוכנית 'מסע שחרור' של מטיב – המרכז הישראלי לטיפול בפסיכוטראומה, שפועל משנת 1989, ללוחמים משוחררים שרוצים לעבד את חוויות השירות הצבאי.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "combat-soldiers",
-   "reservists",
-   "not-recognized"
-  ],
-  "difficulties": [
-   "ptsd",
-   "loneliness",
-   "moral-injury"
-  ],
-  "interests": [
-   "nature",
-   "travel"
-  ],
-  "cost": "free",
-  "cost_notes": "",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "info@metiv.org",
-  "website": "https://metiv.org.il",
-  "how_to_apply": "פנייה למטיב",
-  "source_url": "https://metiv.org.il/",
-  "confidence": "high"
- },
- {
-  "name": "טרום שיקום לנכי צה\"ל עם פוסט טראומה – החזר עד 10,000 ש\"ח בשנה",
-  "category": "financial-grants",
-  "description": "תוכנית ביניים של אגף השיקום למי שמוכר/ת בגלל פוסט טראומה ועוד לא יכול/ה להשתלב בלימודים או בעבודה. אפשר לקבל החזר הוצאות על פעילות לימודית או חווייתית: קורס באוניברסיטה הפתוחה, צילום, ציור, מוזיקה, גלישה, חוגי העשרה ועוד. התנאים: 20% נכות לפחות (או 10% אם הפגיעה הוכרה לפני 1996), הכרה בגלל פוסט טראומה, ואין כרגע תוכנית שיקום או תעסוקה.",
-  "provider_type": "government",
-  "eligibility": [
-   "mod-recognized"
-  ],
-  "difficulties": [
-   "ptsd",
-   "employment"
-  ],
-  "interests": [
-   "art",
-   "music",
-   "learning",
-   "sea",
-   "sport"
-  ],
-  "cost": "mod-funded",
-  "cost_notes": "החזר עד 10,000 ש\"ח לכל שנה קלנדרית, עד 4 שנים או עד שמשתלבים בתוכנית שיקום. יתרה לא עוברת לשנה הבאה",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "*8150",
-  "email": "shikum_mokedTS@mod.gov.il",
-  "website": "https://shikum.mod.gov.il",
-  "how_to_apply": "פונים לעובד/ת השיקום במחוז ובונים יחד תוכנית. אחרי האישור שולחים פעם בחודש את הקבלות דרך האזור האישי באתר אגף השיקום או במייל",
-  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/trom",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "פעילויות טרום שיקום לנפגעי פעולות איבה עם פוסט טראומה",
@@ -428,7 +342,8 @@
   "website": "https://www.unitywarriors.org",
   "how_to_apply": "פנייה לעמותה במייל או דרך האתר",
   "source_url": "https://www.unitywarriors.org/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מרכז חוויות – טיפול בבעלי חיים ורכיבה לנכי צה\"ל ונפגעי איבה",
@@ -461,39 +376,8 @@
   "website": "https://www.havayot-center.co.il",
   "how_to_apply": "פנייה למשרד המרכז בטלפון או במייל",
   "source_url": "https://www.havayot-center.co.il/t-en-us/%D7%AA%D7%9B%D7%A0%D7%99%D7%95%D7%AA-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%95%D7%AA/%D7%A0%D7%9B%D7%99-%D7%A6%D7%94-%D7%9C-%D7%A0%D7%A4%D7%92%D7%A2%D7%99-%D7%98%D7%A8%D7%95%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%90%D7%99%D7%91%D7%94-%D7%95%D7%9E%D7%A9%D7%A4%D7%97%D7%95%D7%AA%D7%99%D7%94%D7%9D",
-  "confidence": "high"
- },
- {
-  "name": "החזר 1,500 ש\"ח לטיפולים רגשיים ומשלימים למשרתי מילואים ומשפחותיהם",
-  "category": "financial-grants",
-  "description": "משרתי מילואים ששירתו 30 יום ומעלה בצו 8 במלחמת חרבות ברזל ובמלחמה מול איראן, ובני זוגם וילדיהם, זכאים להחזר על טיפולים רגשיים, נפשיים ומשלימים: פסיכותרפיה, טיפול אלטרנטיבי, עיסוי, מיינדפולנס, טיפול בבעלי חיים, פסיכודרמה, הידרותרפיה וסדנאות. בשנת 2026 – זכאות למי ששירת לפחות 50 ימים מ-1.1.2026.",
-  "provider_type": "government",
-  "eligibility": [
-   "reservists",
-   "families"
-  ],
-  "difficulties": [
-   "ptsd",
-   "anxiety",
-   "family-relations",
-   "financial"
-  ],
-  "interests": [
-   "mind-body",
-   "animals"
-  ],
-  "cost": "subsidized",
-  "cost_notes": "החזר חד-שנתי עד 1,500 ש\"ח, ניתן לכלול כמה טיפולים",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "הגשת בקשת החזר עם קבלות פעם בשנה דרך אתר המילואים של צה\"ל",
-  "source_url": "https://www.kolzchut.org.il/he/סיוע_במימון_טיפולים_אישיים_ומשפחתיים_למשרתי_מילואים_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "רטורנו – פרויקט 'חיבוק ברזל' לשיקום לוחמים",
@@ -531,7 +415,8 @@
   "website": "https://retorno.org",
   "how_to_apply": "פנייה לרטורנו בטלפון, במייל או דרך האתר",
   "source_url": "https://retorno.org/the-iron-hug-project-rehabilitation-center-for-soldiers/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "PHOTO IS:RAEL – תוכנית PhotoVoice לנפגעי המלחמה",
@@ -562,7 +447,8 @@
   "website": "https://photoisrael.org",
   "how_to_apply": "פנייה לארגון במייל או דרך עמוד צור קשר באתר",
   "source_url": "https://photoisrael.org/%D7%97%D7%93%D7%A9%D7%95%D7%AA/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כלב שירות לנפגעי פוסט טראומה – נפש אחת (ביטוח לאומי)",
@@ -591,7 +477,8 @@
   "website": "https://www.btl.gov.il",
   "how_to_apply": "פנייה לעובד/ת הסוציאלי/ת של השיקום בביטוח לאומי שמלווה אותך",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כלבי שירות לנפגעי פוסט טראומה – אגף השיקום, משרד הביטחון",
@@ -620,37 +507,7 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "פנייה למחלקת השיקום במחוז שלך, או בקשה באזור האישי באתר אגף השיקום",
   "source_url": "https://shikum.mod.gov.il/medical/hospitalization/service-dog",
-  "confidence": "high"
- },
- {
-  "name": "מרכז השיקום גנדל – הדסה",
-  "category": "medical-rehab",
-  "description": "מרכז השיקום של הסתדרות מדיצינית הדסה בירושלים. בינואר 2024 החלה פתיחה מואצת שלו כדי לקלוט חיילים ופצועים מהמלחמה. יש בו פיזיותרפיה, ריפוי בעיסוק והידרותרפיה בבריכות מים חמים, אשפוז ומרפאת חוץ, לצד תמיכה נפשית.",
-  "provider_type": "academic",
-  "eligibility": [
-   "mod-recognized",
-   "combat-soldiers",
-   "reservists",
-   "civilians"
-  ],
-  "difficulties": [
-   "physical-disability",
-   "amputation",
-   "tbi",
-   "chronic-pain"
-  ],
-  "interests": [],
-  "cost": "mod-funded",
-  "cost_notes": "",
-  "regions": [
-   "jerusalem"
-  ],
-  "location": "הדסה, ירושלים",
-  "phone": "",
-  "email": "",
-  "website": "https://www.hadassah.org/page/gandel",
-  "how_to_apply": "בהפניה רפואית",
-  "source_url": "https://www.hadassah.org/page/gandel",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  }
 ]

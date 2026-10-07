@@ -42,7 +42,8 @@
   "website": "https://hagalsheli.co.il",
   "how_to_apply": "להיכנס לעמוד התוכניות באתר העמותה וללחוץ על 'הצטרפו לתוכניות הטיפוליות', או להתקשר ל-03-6029293. מוכרים/ות באגף השיקום יכולים לשאול גם את רכז/ת השיקום על התוכנית.",
   "source_url": "https://hagalsheli.co.il/programs/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ימטוב – גלישה ושיט טיפולי ללוחמים (YamTov)",
@@ -78,7 +79,8 @@
   "website": "https://www.yamtov.com",
   "how_to_apply": "למלא את הטופס בעמוד 'נפש אחת' באתר ימטוב, או לכתוב ל-info@yamtov.org.",
   "source_url": "https://www.yamtov.com/our-activities",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפול ימי במסגרת 'נפש אחת' (אגף השיקום, משרד הביטחון)",
@@ -110,88 +112,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "למלא את הטופס בעמוד 'נפש אחת' באתר ימטוב, או לפנות לאגף השיקום (קו התמיכה של נפש אחת: *8944).",
   "source_url": "https://www.yamtov.com/one-soul",
-  "confidence": "high"
- },
- {
-  "name": "אחים ליוגה – יוגה רגישה לטראומה ללוחמים (Brothers in Yoga)",
-  "category": "yoga-mind-body",
-  "description": "עמותה שמסייעת למתמודדים/ות עם טראומה על רקע ביטחוני דרך תהליך קבוצתי ארוך. בתוכנית 'מסע לחיים' יש ריטריט פתיחה של 3 ימים, מפגש תרגול שבועי בזום, וריטריט סיכום של 3 ימים. התרגול כולל יוגה רגישה לטראומה, נשימה, הרפיה ומדיטציה, בליווי צוות טיפולי קליני. מאז חרבות ברזל יש גם תוכניות ליחידות בצה\"ל, לשורדי נובה ולמשפחות מהעוטף. יש גם שיעורי יוגה פתוחים בזום.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "mod-recognized",
-   "mod-in-process",
-   "not-recognized",
-   "reservists",
-   "combat-soldiers",
-   "terror-victims",
-   "families"
-  ],
-  "difficulties": [
-   "ptsd",
-   "anxiety",
-   "sleep",
-   "anger",
-   "moral-injury"
-  ],
-  "interests": [
-   "mind-body",
-   "nature",
-   "spiritual"
-  ],
-  "cost": "free",
-  "cost_notes": "שיעורי הזום הפתוחים ללא עלות; עלות 'מסע לחיים' לא מפורטת באתר – כדאי לברר",
-  "regions": [
-   "nationwide",
-   "jerusalem",
-   "online"
-  ],
-  "location": "ריטריטים באשרם במושב מטע ובמרכזים ברחבי הארץ, ומפגשי זום",
-  "phone": "050-2688240",
-  "email": "contact@brothersin.yoga",
-  "website": "https://www.brothersin.yoga",
-  "how_to_apply": "להירשם דרך אתר העמותה, להתקשר ל-050-2688240 או לכתוב ל-contact@brothersin.yoga.",
-  "source_url": "https://www.brothersin.yoga/%D7%A2%D7%9C-%D7%94%D7%AA%D7%9B%D7%A0%D7%99%D7%AA",
-  "confidence": "high"
- },
- {
-  "name": "בית הלוחם – מרכזי ספורט ושיקום לנכי צה\"ל (ארגון נכי צה\"ל)",
-  "category": "sports",
-  "description": "מרכזי שיקום, ספורט ופנאי של ארגון נכי צה\"ל לנכי צה\"ל ולבני המשפחה, עם דגש על ספורט ככלי שיקום, לצד פעילות חברתית ותרבותית. יש מרכזים בתל אביב, ירושלים, חיפה ובאר שבע, והוחלט להקים מרכז חמישי באשדוד. במרכזים יש בריכות, אולמות ספורט, חדרי כושר והידרותרפיה, ובחלקם גם פיזיותרפיה.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "mod-recognized",
-   "families"
-  ],
-  "difficulties": [
-   "physical-disability",
-   "amputation",
-   "ptsd",
-   "loneliness",
-   "chronic-pain",
-   "family-relations"
-  ],
-  "interests": [
-   "sport",
-   "fitness",
-   "sea",
-   "art",
-   "music"
-  ],
-  "cost": "subsidized",
-  "cost_notes": "לחברי ארגון נכי צה\"ל ובני משפחותיהם; העלות לא מפורטת באתר",
-  "regions": [
-   "center",
-   "jerusalem",
-   "haifa",
-   "south"
-  ],
-  "location": "תל אביב, ירושלים, חיפה, באר שבע (אשדוד בתכנון)",
-  "phone": "03-6461603",
-  "email": "",
-  "website": "https://zdvo.org",
-  "how_to_apply": "לפנות לבית הלוחם הקרוב או לארגון נכי צה\"ל ולשאול על חברות ועל החוגים.",
-  "source_url": "https://zdvo.org/a-second-home-beit-halochem-centers/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "נבחרת ישראל במשחקי האינוויקטוס (Invictus Games)",
@@ -222,7 +144,8 @@
   "website": "https://invictusgamesfoundation.org/invictus-community-nations/israel",
   "how_to_apply": "לשאול בבית הלוחם הקרוב או באגף השיקום על הנבחרת.",
   "source_url": "https://invictusgamesfoundation.org/invictus-community-nations/israel",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "המרכז הישראלי לספורט נכים ע\"ש ספיבק – אילן (Israel ParaSport Center)",
@@ -259,7 +182,8 @@
   "website": "https://israelparasport.org",
   "how_to_apply": "לפנות למרכז ברמת גן (03-5754444) ולשאול על תוכנית ששק או על ענף ספורט מותאם.",
   "source_url": "https://israelparasport.org/the-shesek-program/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ההתאחדות הישראלית לספורט נכים – הכוונה לספורט פראלימפי לפצועי מלחמה",
@@ -291,7 +215,8 @@
   "website": "https://isad.org.il",
   "how_to_apply": "למלא את טופס 'מעוניינים לעשות ספורט?' באתר ההתאחדות, או להתקשר ל-03-6493132.",
   "source_url": "https://isad.org.il/information/%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9C/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "רצים עם רמי – קבוצות ריצה והליכה למתמודדי טראומה (נט\"ל)",
@@ -333,7 +258,8 @@
   "website": "https://www.natal.org.il",
   "how_to_apply": "למלא את טופס ההרשמה בעמוד 'רצים עם רמי' באתר נט\"ל ולבחור את העיר.",
   "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/running-with-rami/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "בשביל המחר – מסעות בטבע לעיבוד חוויות לחימה (Bshvil Hamachar)",
@@ -366,7 +292,8 @@
   "website": "https://www.bshvil.org",
   "how_to_apply": "ללחוץ על 'הצטרפות למסע' באתר העמותה, או להתקשר ל-058-6484030.",
   "source_url": "https://www.bshvil.org/masa/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "נט\"ל – איינגאר יוגה מודעת טראומה (NATAL)",
@@ -400,6 +327,7 @@
   "website": "https://www.natal.org.il",
   "how_to_apply": "להתקשר לקו הסיוע של נט\"ל ב-*3362 או למלא את הטופס בעמוד היוגה באתר נט\"ל.",
   "source_url": "https://www.natal.org.il/%D7%AA%D7%9E%D7%99%D7%9B%D7%94-%D7%95%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%A0%D7%A4%D7%A9%D7%99/%D7%A7%D7%91%D7%95%D7%A6%D7%95%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%95%D7%AA-%D7%95%D7%A7%D7%91%D7%95%D7%A6%D7%95%D7%AA-%D7%AA%D7%9E%D7%99%D7%9B%D7%94/%D7%90%D7%99%D7%99%D7%A0%D7%92%D7%90%D7%A8-%D7%99%D7%95%D7%92%D7%94-%D7%9E%D7%95%D7%93%D7%A2%D7%AA-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  }
 ]

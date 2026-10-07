@@ -30,7 +30,8 @@
   "website": "https://www.israelguidedog.org.il",
   "how_to_apply": "פונים למרכז. נדרשת אבחנה רשמית של פוסט טראומה, ופסיכולוג/ית של המרכז בודק/ת אם כלב יכול לעזור ואם אפשר לטפל בו.",
   "source_url": "https://israelguidedog.org/ptsd-service-dogs/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מרכז כלבי נחייה – כלבי תמיכה רגשית למשפחות שנפגעו מהמלחמה",
@@ -61,7 +62,8 @@
   "website": "https://www.israelguidedog.org.il",
   "how_to_apply": "פונים למרכז ובודקים התאמה לתוכנית כלבי תמיכה רגשית.",
   "source_url": "https://israelguidedog.org/emotional-support-dogs/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כלב שירות לנכי צה\"ל עם פוסט טראומה – זכאות אגף השיקום",
@@ -90,7 +92,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "תנאים: 20% נכות לפחות (או 10% אם הפגיעה הוכרה עד 31.12.1995) והפגיעה הוכרה בגלל פוסט טראומה. פונים למחלקת השיקום במחוז או בפנייה מקוונת באזור האישי של אגף השיקום.",
   "source_url": "https://shikum.mod.gov.il/medical/hospitalization/service-dog",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כלב שירות לנפגעי פעולות איבה עם פוסט טראומה – ביטוח לאומי",
@@ -120,7 +123,8 @@
   "website": "https://www.btl.gov.il",
   "how_to_apply": "תנאים: 20% נכות לפחות (או 10% אם הפגיעה הוכרה עד 31.12.1995) בגלל פוסט טראומה. פונים לעובד/ת הסוציאלי/ת של השיקום שמלווה אתכם. קו סיוע לנפגעי פוסט טראומה: 1-800-363-363 שלוחה 2.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "החווה של דני – חוות חוסן (סתריה)",
@@ -154,7 +158,8 @@
   "website": "https://dannysfarm.org.il",
   "how_to_apply": "דרך איש/אשת הקשר האישי/ת באגף השיקום או העובד/ת הסוציאלי/ת במחוז, או פנייה ישירה לחווה.",
   "source_url": "https://dannysfarm.org.il/ptsd/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות החוסן של ורטיגו – כפר האקו-ארט (Vertigo Resilience Farm)",
@@ -190,7 +195,8 @@
   "website": "https://vertigo.org.il/shikum/",
   "how_to_apply": "פונים לחווה בטלפון, בוואטסאפ או בטופס באתר, או דרך העובד/ת הסוציאלי/ת באגף השיקום.",
   "source_url": "https://vertigo.org.il/shikum/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות חוזרים לחיות ע\"ש אמיר (דני) ירדנאי – שדות ים (Back2Life)",
@@ -230,7 +236,8 @@
   "website": "https://back2life.org.il",
   "how_to_apply": "פשוט מגיעים או פונים לחווה (חן: 052-4624524). אין צורך במסמכים או בהכרה.",
   "source_url": "https://back2life.org.il/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות רימון – חוות להב (פוסט טראומה)",
@@ -267,7 +274,8 @@
   "website": "https://www.rimon-farm.org.il",
   "how_to_apply": "מוכרי אגף השיקום – דרך העובד/ת הסוציאלי/ת במחוז. קבוצות עיבוד: ענבר, 055-8870462. מידע כללי: 050-2229072.",
   "source_url": "https://www.rimon-farm.org.il/חוות-להב",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות רימון – חוות שקף (פוסט טראומה)",
@@ -300,7 +308,8 @@
   "website": "https://www.rimon-farm.org.il",
   "how_to_apply": "פונים לעמותת חוות רימון בטלפון, במייל או בוואטסאפ.",
   "source_url": "https://www.rimon-farm.org.il/חוות-שקף",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות רימון – חוות אור הנר (שיקום קהילתי)",
@@ -333,7 +342,8 @@
   "website": "https://www.rimon-farm.org.il",
   "how_to_apply": "פונים לעמותת חוות רימון.",
   "source_url": "https://www.rimon-farm.org.il/חוות-אור-הנר",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות רום – חווה שיקומית ליד כרמיאל",
@@ -365,7 +375,8 @@
   "website": "https://havatrom.co.il",
   "how_to_apply": "דרך איש/אשת הקשר האישי/ת באגף השיקום או העובד/ת הסוציאלי/ת במחוז.",
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/farms-therapy",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "אחים של יונתן – פרויקט 'מעבר לטראומה' (Brothers of Jonathan)",
@@ -399,7 +410,8 @@
   "website": "",
   "how_to_apply": "פנייה לעמותה דרך דף הקמפיין שלה.",
   "source_url": "https://my.givingtech.org/en/fundme/BrothersOfJonathan_Oct_2024",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות מרפא רשפון – צמיחה מטראומה (Healing Space Rishpon)",
@@ -437,40 +449,8 @@
   "website": "https://healingspace.co.il",
   "how_to_apply": "לקבוצות וימי טיפול – פונים במייל groups@healingspace.co.il או בטופס באתר. לערב הפתוח מגיעים בימי חמישי.",
   "source_url": "https://healingspace.co.il/תוכניות-צמיחה/",
-  "confidence": "high"
- },
- {
-  "name": "מסע שחרור – Peace of Mind (מטיב)",
-  "category": "nature-retreats",
-  "description": "תוכנית של מטיב, בשיתוף משרד הביטחון, לקבוצות אורגניות של לוחמים משוחררים, לעיבוד משותף של חוויות הלחימה בליווי מטפלים מוסמכים. במסלול בחו\"ל: סדנה קבוצתית של 9 חודשים ו-4 מפגשים, עם סדנה מרכזית של 8 ימים בקהילה יהודית בחו\"ל. יש גם מסלול בארץ (5 ימים במקום מבודד) ומסע קצר. מאז ההקמה השתתפו יותר מ-3,500 לוחמים.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "combat-soldiers",
-   "reservists",
-   "not-recognized",
-   "mod-recognized"
-  ],
-  "difficulties": [
-   "ptsd",
-   "moral-injury",
-   "anxiety",
-   "loneliness"
-  ],
-  "interests": [
-   "travel"
-  ],
-  "cost": "free",
-  "cost_notes": "העלות למשתתפים לא מפורטת באתר; לברר",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "בארץ ובחו\"ל",
-  "phone": "",
-  "email": "",
-  "website": "https://peaceofmind.org.il",
-  "how_to_apply": "פונים כקבוצה (צוות/מחלקה) דרך האתר וממלאים שאלון קצר. מתאים לכל משוחרר/ת ששירת/ה כלוחם/ת.",
-  "source_url": "https://peaceofmind.org.il/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "החברה להגנת הטבע – 'הטבע מרפא' למילואימניקים ומשפחותיהם",
@@ -501,7 +481,8 @@
   "website": "https://natureisrael.org/natureheals",
   "how_to_apply": "לברר מול הרשות המקומית/המועצה האזורית או מול החברה להגנת הטבע.",
   "source_url": "https://natureisrael.org/natureheals",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "החברה להגנת הטבע – מסעות חוסן לבני נוער אחרי טראומה",
@@ -532,38 +513,8 @@
   "website": "",
   "how_to_apply": "לברר מול החברה להגנת הטבע.",
   "source_url": "https://natureisrael.org/natureheals",
-  "confidence": "high"
- },
- {
-  "name": "בשביל המחר – ריטריטים למילואימניקים",
-  "category": "nature-retreats",
-  "description": "עמותה שמסייעת ללוחמות וללוחמים משוחררים להתמודד עם השפעות אירועי הלחימה מהשירות. המסע כולל פגישת היכרות, מפגש פתיחה של יומיים, פרק מרכזי בטבע (6 ימים בארץ או 8 ימים בחו\"ל) בהנחיית אנשי מקצוע, מפגש סיכום ועוד 2-4 מפגשי המשך. יש קבוצות של צוות שלחם יחד וגם קבוצות מעורבות מיחידות שונות.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "reservists",
-   "combat-soldiers",
-   "not-recognized"
-  ],
-  "difficulties": [
-   "ptsd",
-   "moral-injury",
-   "anxiety"
-  ],
-  "interests": [
-   "nature"
-  ],
-  "cost": "free",
-  "cost_notes": "העלות לא מפורטת באתר; לברר",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "משרד העמותה: בית ברל; המסעות בארץ ובחו\"ל",
-  "phone": "058-6484030",
-  "email": "office@bshvil.org",
-  "website": "https://www.bshvil.org",
-  "how_to_apply": "נרשמים דרך האתר (\"הצטרפות למסע\") – אפשר כצוות או לבד לקבוצה מעורבת.",
-  "source_url": "https://www.bshvil.org/masa/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ריפוי בטבע (Healing in Nature)",
@@ -594,7 +545,8 @@
   "website": "",
   "how_to_apply": "דף העמותה לא מפרט דרך הרשמה; לברר מול העמותה.",
   "source_url": "https://web.causematch.com/donate/healinginnature",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות שיקומיות של אגף השיקום (חוות חוסן)",
@@ -628,38 +580,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "מתאים למי שהוכר/ה בגלל מצב נפשי, או שעוד לא השלים/ה את ההכרה אבל אובחן/ה עם תסמינים פוסט טראומטיים. פונים לאיש/אשת הקשר האישי/ת באגף השיקום או לעובד/ת הסוציאלי/ת במחוז.",
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/farms-therapy",
-  "confidence": "high"
- },
- {
-  "name": "Trauma4Good – סיוע בהכרה וליווי נפגעי פוסט טראומה",
-  "category": "rights-legal",
-  "description": "עמותה לנפגעי פוסט טראומה והלם קרב בצה\"ל, בכוחות הביטחון ובצוותי ההצלה, שהוקמה ב-2018. מאתרת נפגעים, מפנה לטיפול אצל אנשי מקצוע, מלווה אותם ואת משפחותיהם, ובחלק מהמקרים מסייעת גם בצוות משפטי בתהליך ההכרה.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "not-recognized",
-   "mod-in-process",
-   "combat-soldiers",
-   "security-forces",
-   "police",
-   "families"
-  ],
-  "difficulties": [
-   "ptsd",
-   "bureaucracy"
-  ],
-  "interests": [],
-  "cost": "free",
-  "cost_notes": "לא מפורט באתר; לברר",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "052-6417641",
-  "email": "",
-  "website": "https://trauma4good.org",
-  "how_to_apply": "ממלאים טופס פרטים באתר העמותה או מתקשרים.",
-  "source_url": "https://trauma4good.org/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ישר לחייל – מימון טיפולים לחיילים עם PTSD",
@@ -691,7 +613,8 @@
   "website": "https://yasharlachayal.org",
   "how_to_apply": "פונים לארגון דרך טופס יצירת הקשר באתר, בטלפון או במייל.",
   "source_url": "https://yasharlachayal.org/therapy-for-soldiers-with-ptsd-2/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות דרך הלוחם ע\"ש אמיר ירדנאי (Warriors Way Farm)",
@@ -720,6 +643,7 @@
   "website": "",
   "how_to_apply": "דף העמותה לא מפרט דרך פנייה; לברר דרך דף הקמפיין.",
   "source_url": "https://my.israelgives.org/en/campaign/way",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  }
 ]

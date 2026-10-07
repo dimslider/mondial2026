@@ -32,7 +32,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "ממלאים את הטופס הדיגיטלי להכרה בנכות (recognition.mod.gov.il) ומצרפים צילום ת\"ז עם ספח, מסמכים רפואיים ומסמכים רשמיים על הפגיעה. יש מידע מסווג? אפשר להגיש טופס ידני במשרדי האגף, ז'בוטינסקי 94 פתח תקווה. לעזרה חינם במילוי: מרכז \"בידיים טובות\" *3757. שאלות: מוקד אגף השיקום *8150.",
   "source_url": "https://shikum.mod.gov.il/recognition/request/apply",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפול נפשי בזמן תהליך ההכרה – אגף השיקום (Mental treatment during the recognition process)",
@@ -64,7 +65,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "אחרי הגשת הבקשה להכרה: בפגיעה נפשית – פונים ליועץ/ת לטיפול נפשי במחוז. בפגיעה פיזית בלבד – יישלח אליך מכתב עם רשימת מכונים בהסדר; פונים למכון עם המכתב, והאגף משלם ישירות. שאלות: מוקד 6500*.",
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/mental-treatment",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "היחידה לתגובות קרב – אגף השיקום (Combat Reaction Unit)",
@@ -99,7 +101,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לפנות בטלפון 03-6401400 (א'–ה', 09:00–17:00), דרך טופס הפנייה באתר אגף השיקום, או ברח' אפעל 6, פתח תקווה.",
   "source_url": "https://shikum.mod.gov.il/ContactUs/CombatResponse",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מוקד \"נפש אחת\" *8944 – קו תמיכה נפשית 24/7 (Nefesh Achat support line)",
@@ -136,7 +139,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לחייג 8944* בכל שעה.",
   "source_url": "https://shikum.mod.gov.il/contactus/helpline",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מוקד *6500 לפצועי מלחמת התקומה (חרבות ברזל) – אגף השיקום",
@@ -167,7 +171,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לחייג 6500* או 03-7776777, בימים א'–ה' בין 8:00 ל-18:00.",
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/moked-harvot",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "תכנית תל\"ם – תמיכה, ליווי ומיצוי זכויות לפצועי המלחמה (TELEM program)",
@@ -198,7 +203,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "האגף פונה בעצמו ומציע להצטרף. אם לא פנו אליך ורוצים להצטרף – לפנות לנציגה האישית שלך במחוז.",
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/telem",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מסלול מהיר (\"מסלול ירוק\") להכרה בפוסט טראומה",
@@ -229,7 +235,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "להגיש בקשה להכרה באגף השיקום, לפרט את האירוע המבצעי ולצרף את האבחנה והתיעוד הרפואי.",
   "source_url": "https://shikum.mod.gov.il/recognition/request/fast",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "המלצות ועדת מור-יוסף להרחבת המענים לפצועי צה\"ל (2026)",
@@ -260,7 +267,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "אין הגשה. לבירור מה כבר בתוקף – לפנות לאגף השיקום (6500* לפצועי המלחמה).",
   "source_url": "https://shikum.mod.gov.il/updates/11614",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "רפורמת \"נפש אחת\" באגף השיקום (One Soul reform)",
@@ -289,7 +297,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לפנות לעובד/ת השיקום במחוז (דרך האזור האישי באתר אגף השיקום) כדי לבדוק אילו רכיבים רלוונטיים לך.",
   "source_url": "https://shikum.mod.gov.il/about/one-soul",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפול נפשי לנכי צה\"ל וכוחות הביטחון (Mental treatment for recognized disabled)",
@@ -325,7 +334,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לפנות לעובד/ת השיקום במחוז כדי לבחור מטפל/ת ולקבל התחייבות (הפניה). אפשר לחפש מטפלים במנוע החיפוש באזור האישי.",
   "source_url": "https://shikum.mod.gov.il/medical/treatment/therapy",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "סל טיפולים משלימים (אלטרנטיביים) לנכים עם פוסט טראומה",
@@ -358,7 +368,8 @@
   "website": "https://shikumme.co.il/",
   "how_to_apply": "להוריד את אפליקציית Shikum.Me ולהזמין טיפול. זכאי/ת ולא קיבלת הודעת הצטרפות? מוקד האפליקציה: 074-7174830.",
   "source_url": "https://shikum.mod.gov.il/medical/treatment/alternative",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כלב שירות לנכי צה\"ל וכוחות הביטחון עם פוסט טראומה",
@@ -390,12 +401,13 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לפנות למחלקת השיקום במחוז (פנייה לעובד/ת השיקום באזור האישי).",
   "source_url": "https://shikum.mod.gov.il/medical/hospitalization/service-dog",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "פעילויות טרום-שיקום (לימודיות וחוויתיות) לנכים עם פוסט טראומה",
   "category": "employment-education",
-  "description": "תכנית ביניים למי שעוד לא מסוגל/ת להשתלב בלימודים או בעבודה. זכאים: מי שנקבעו לו/ה 20% נכות לפחות (או 10% אם הוכר לפני 1996) בגלל פוסט טראומה, ואין לו/ה כרגע תכנית שיקום או תעסוקה. אפשר לקבל החזר של עד 10,000 ₪ בשנה קלנדרית על פעילויות טרום שיקום. יתרה לא עוברת לשנה הבאה.",
+  "description": "תכנית ביניים למי שעוד לא מסוגל/ת להשתלב בלימודים או בעבודה. זכאים: מי שנקבעו לו/ה 20% נכות לפחות (או 10% אם הוכר לפני 1996) בגלל פוסט טראומה, ואין לו/ה כרגע תכנית שיקום או תעסוקה. אפשר לקבל החזר של עד 10,000 ₪ בשנה קלנדרית, לכל היותר 4 שנים על פעילויות טרום שיקום. יתרה לא עוברת לשנה הבאה.",
   "provider_type": "government",
   "eligibility": [
    "mod-recognized",
@@ -426,7 +438,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לפנות לעובד/ת השיקום במחוז ולבנות יחד תכנית. אחרי שהתכנית מאושרת – לשלוח פעם בחודש קבלות דרך האזור האישי או למייל shikum_mokedTS@mod.gov.il.",
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/trom",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפול נפשי לבני משפחה של נכים ופצועים – אגף השיקום",
@@ -455,7 +468,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לבחור מטפל/ת מוסמך/ת (או מכון בהסדר), ואחרי הטיפול לשלוח קבלות וטופס בקשה דרך האזור האישי או למייל shikum_mokedtipulim@mod.gov.il.",
   "source_url": "https://shikum.mod.gov.il/family/support/therapy",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "פורטל זכויות למתמודדים עם פגיעה נפשית – אגף השיקום",
@@ -484,7 +498,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לקרוא באתר אגף השיקום ולבדוק מול עובד/ת השיקום מה רלוונטי.",
   "source_url": "https://shikum.mod.gov.il/rights/injury-type/mental",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "שיקום תעסוקתי ומימון לימודים לנכי צה\"ל – אגף השיקום",
@@ -517,7 +532,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לבנות תכנית עם עובד/ת השיקום במחוז ולהגיש טופס בקשה לאישור תכנית לימודים.",
   "source_url": "https://shikum.mod.gov.il/rehabilitation/study/tuition",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "נכי משטרה – זכויות לפי חוק המשטרה (נכים ונספים) באמצעות אגף השיקום",
@@ -546,7 +562,8 @@
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "להגיש בקשה להכרה לאגף השיקום (טופס דיגיטלי). לעזרה באיסוף מסמכים: מדור נפגעים במשטרה, 02-5428584 או 02-5428764.",
   "source_url": "https://shikum.mod.gov.il/recognition/terms/list",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כל זכות – פורטל נכי צה\"ל וכוחות הביטחון (Kol Zchut portal)",
@@ -641,44 +658,6 @@
   "confidence": "medium"
  },
  {
-  "name": "בית הלוחם – מרכזי ספורט שיקומי של ארגון נכי צה\"ל (Beit Halochem)",
-  "category": "sports",
-  "description": "מרכזי ספורט שיקומי ופנאי לחברי ארגון נכי צה\"ל ובני משפחותיהם: בריכות, חוגים, תחרויות, צעדות, הרצאות ומפגשים חברתיים, והרחבת שירותי תמיכה ושיקום בתחום הפוסט טראומה.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "mod-recognized",
-   "police",
-   "security-forces",
-   "families"
-  ],
-  "difficulties": [
-   "physical-disability",
-   "ptsd",
-   "loneliness",
-   "amputation"
-  ],
-  "interests": [
-   "sport",
-   "fitness",
-   "sea"
-  ],
-  "cost": "subsidized",
-  "cost_notes": "לחברי הארגון",
-  "regions": [
-   "center",
-   "haifa",
-   "jerusalem",
-   "south"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "להצטרף לארגון נכי צה\"ל ולהירשם לבית הלוחם הקרוב (תל אביב, חיפה, ירושלים, באר שבע ועוד).",
-  "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
-  "confidence": "medium"
- },
- {
   "name": "תגמולי מילואים – ביטוח לאומי (Reserve duty compensation)",
   "category": "financial-grants",
   "description": "ביטוח לאומי משלם תגמול על ימי מילואים לפי ההכנסה לפני השירות – לשכירים, לעצמאים ולמי שלא עובד/ת (כולל סטודנטים) – בסכום מינימלי ליום. בתקופת המלחמה משולמת גם תוספת לימי השירות. שכירים ממשיכים לקבל משכורת והתגמול עובר למעסיק.",
@@ -702,7 +681,8 @@
   "website": "https://www.btl.gov.il",
   "how_to_apply": "שכירים – המעסיק מגיש את התביעה. עצמאים ומי שלא עובד – התשלום אוטומטי בתחילת כל חודש, בלי תביעה. אפשר לחשב את התגמול במחשבון באתר ולראות מה שולם באתר האישי. מוקד: *6050.",
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/KizbeotHB/MiloeimHB/Pages/MsrtimMiloeim.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "הכרה כנפגע/ת פעולות איבה – ביטוח לאומי (Victims of hostilities)",
@@ -732,7 +712,8 @@
   "website": "",
   "how_to_apply": "למלא טופס 580 (הודעה על פגיעה והכרה כנפגע/ת פעולות איבה) ולצרף את המסמכים. קו לסיוע מיידי: 02-6269999.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/default.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "סיוע לנפגעי חרדה עקב פעולת איבה – ביטוח לאומי",
@@ -762,7 +743,8 @@
   "website": "",
   "how_to_apply": "להתקשר ישירות למרכז החוסן לפי אזור המגורים (רשימה בעמוד). אם אין מרכז באזור – מרכז החוסן הארצי *5486.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/MerkazeiSiua.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפולים אלטרנטיביים לנפגעי פעולות איבה עם פוסט טראומה (נפש אחת) – ביטוח לאומי",
@@ -792,7 +774,8 @@
   "website": "",
   "how_to_apply": "לתאם ולשלם לבד, ואז להגיש בקשת החזר מקוונת באתר ביטוח לאומי עם קבלה (שם ות\"ז של המטופל/ת, תאריכים, פרטי המטפל/ת ומספר עוסק).",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כלב שירות לנפגעי פעולות איבה עם פוסט טראומה – ביטוח לאומי",
@@ -821,7 +804,8 @@
   "website": "",
   "how_to_apply": "לפנות לעובד/ת הסוציאלי/ת של השיקום בביטוח לאומי שמלווה אותך.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפולים נפשיים, רגשיים ומשלימים לחטופים שחזרו ובני משפחותיהם – ביטוח לאומי",
@@ -853,7 +837,8 @@
   "website": "",
   "how_to_apply": "לפנות לעובדת השיקום בביטוח לאומי. אפשר גם למוקד \"נפש אחת\": 03-5127118.",
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/HtofimHazro/Pages/TipolNafsi.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מרכזי חוסן – משרד הבריאות (Resilience centers)",
@@ -886,7 +871,8 @@
   "website": "https://me.health.gov.il/mental-health/therapy-rehabilitation/public-care/community-treatment/resilience-center/",
   "how_to_apply": "לפנות ישירות למרכז החוסן לפי יישוב המגורים, או לקבל הפניה מהרווחה, קופת החולים וכו'. אין מרכז באזור? מרכז החוסן הארצי *5486.",
   "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/public-care/community-treatment/resilience-center/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "סל שיקום בקהילה למתמודדי נפש – משרד הבריאות",
@@ -919,7 +905,8 @@
   "website": "",
   "how_to_apply": "לבקש הפניה לוועדת סל שיקום במרפאת בריאות הנפש של קופת החולים (שם גם יעזרו בטפסים). בערך חודש אחרי ההגשה מזמנים לוועדה אזורית.",
   "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/rehabilitation/rehabilitation-basket/about/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "קרן הסיוע למשרתי המילואים (Reservists Assistance Fund)",
@@ -1068,34 +1055,8 @@
   "website": "",
   "how_to_apply": "לפנות לדיקנט הסטודנטים / רכז/ת המילואים במוסד עם אישור שירות.",
   "source_url": "https://Afeka.ac.il/media/h4zb5zpc/%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9C%D7%9B%D7%9C%D7%9C%D7%99-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98-%D7%94%D7%95%D7%A8%D7%90%D7%AA-%D7%A9%D7%A2%D7%94-%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9Ccleanedcleaned.pdf",
-  "confidence": "high"
- },
- {
-  "name": "מוקד השירות של צה\"ל 1111",
-  "category": "hotlines",
-  "description": "מוקד השירות של צה\"ל. בשלוחה 6 – מוקד \"קשר עד\" של מערך הנפגעים, שעוזר להשיג פרטים, מסמכים ומידע לבקשת הכרה בנכות.",
-  "provider_type": "government",
-  "eligibility": [
-   "reservists",
-   "combat-soldiers",
-   "families"
-  ],
-  "difficulties": [
-   "bureaucracy"
-  ],
-  "interests": [],
-  "cost": "free",
-  "cost_notes": "חינם",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "1111",
-  "email": "",
-  "website": "",
-  "how_to_apply": "לחייג 1111, שלוחה 6 (מערך הנפגעים).",
-  "source_url": "https://shikum.mod.gov.il/recognition/request/help",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים ונכים בהליכי הכרה",
@@ -1180,7 +1141,8 @@
   "website": "https://miluimnikim.org",
   "how_to_apply": "למלא את הטופס הדיגיטלי בעמוד הסיוע המשפטי באתר ולצרף אישור מילואים (3010).",
   "source_url": "https://miluimnikim.org/mishpati/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "הקליניקה להכרה בנכות צבאית – הקריה האקדמית אונו",
@@ -1211,6 +1173,7 @@
   "website": "https://www.ono.ac.il/clinical-law/clinic-for-the-recognition-of-military-disability/",
   "how_to_apply": "לפנות במייל Vered.mo@ono.ac.il או בטלפון 03-5311930.",
   "source_url": "https://www.ono.ac.il/clinical-law/clinic-for-the-recognition-of-military-disability/",
-  "confidence": "high"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  }
 ]

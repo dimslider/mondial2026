@@ -21,6 +21,7 @@ import html
 import json
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 from datetime import date
@@ -37,6 +38,16 @@ def load_services():
 
 
 def _get(url):
+    for wait in (3, 8, 0):
+        status, final, body = _get_once(url)
+        if status in (429, 502, 503, 504) or (status is None and "reset" in body):
+            time.sleep(wait)
+            continue
+        break
+    return status, final, body
+
+
+def _get_once(url):
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "he,en"})
         with urllib.request.urlopen(req, timeout=25) as r:
@@ -89,12 +100,30 @@ def to_text(body):
 
 
 def digits(s):
-    return re.sub(r"[^\d*]", "", s or "")
+    return re.sub(r"\D", "", s or "")
+
+
+PHONE_RE = r"\*\s?\d{4}|\d{4}\s?\*|1-?[78]00-?\d{2,3}-?\d{3,4}|0\d{1,2}-?\d{3}-?\d{4}|0\d{1,2}-?\d{7}|\b1\d{3}\b"
+
+
+def phone_on_page(phone, page):
+    """האם אחד המספרים שבשדה הטלפון מופיע בעמוד. קוד מקוצר (*8944) נכתב בעמודים בעברית גם כ-8944*."""
+    flat = digits(page)
+    for num in re.findall(PHONE_RE, phone):
+        d = digits(num)
+        if len(d) == 4:
+            if re.search(rf"\*\s?{d}(?!\d)|(?<!\d){d}\s?\*", page) or (num == d and re.search(rf"(?<!\d){d}(?!\d)", page)):
+                return True
+        elif d in flat:
+            return True
+    return False
 
 
 def name_tokens(name):
-    name = re.sub(r"\(.*?\)", "", name)
-    return [w for w in re.split(r"[\s\-–—\"״'׳:,.]+", name) if len(w) >= 3][:4]
+    """מילים מהשם בעברית ומהשם הלועזי שבסוגריים (לעמודים באנגלית)."""
+    paren = " ".join(re.findall(r"\((.*?)\)", name))
+    words = lambda t: [w for w in re.split(r"[\s\-–—\"״'׳:,.!()]+", t) if len(w) >= 3]
+    return words(re.sub(r"\(.*?\)", "", name))[:4] + words(paren)[:3]
 
 
 def check(s):
@@ -117,13 +146,12 @@ def check(s):
         PAGES.mkdir(parents=True, exist_ok=True)
         (PAGES / f"{s['id']}.txt").write_text(page[:200_000], encoding="utf-8")
         toks = name_tokens(s["name"])
-        hits = sum(1 for t in toks if t in page)
+        low = page.lower()
+        hits = sum(1 for t in toks if t.lower() in low)
         if toks and hits == 0:
             res["issues"].append("שם הגוף לא מופיע בעמוד")
-        if s.get("phone"):
-            first = digits(re.split(r"\||או|,", s["phone"])[0])
-            if first and first not in digits(page):
-                res["issues"].append("הטלפון במאגר לא מופיע בעמוד")
+        if s.get("phone") and not phone_on_page(s["phone"], page):
+            res["issues"].append("הטלפון במאגר לא מופיע בעמוד")
         found = sorted(set(re.findall(r"(?<!\d)(?:\*\d{4}|1-?[78]00-?\d{2,3}-?\d{3,4}|0\d{1,2}-?\d{7}|0\d{1,2}-\d{3}-\d{4})(?!\d)", page)))
         res["phones_on_page"] = found[:8]
     else:
