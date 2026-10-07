@@ -27,6 +27,7 @@ const SCHEMA = [
   `CREATE INDEX IF NOT EXISTS sub_status ON submissions(status, kind)`,
   `CREATE TABLE IF NOT EXISTS live_services (id TEXT PRIMARY KEY, data TEXT NOT NULL, created_at INTEGER NOT NULL)`,
   `CREATE TABLE IF NOT EXISTS overrides (service_id TEXT PRIMARY KEY, patch TEXT NOT NULL, updated_at INTEGER NOT NULL)`,
+  `CREATE TABLE IF NOT EXISTS logins (ip_hash TEXT NOT NULL, at INTEGER NOT NULL)`,
   `CREATE TABLE IF NOT EXISTS recs (service_id TEXT NOT NULL, device TEXT NOT NULL, ip_hash TEXT, created_at INTEGER NOT NULL, PRIMARY KEY (service_id, device))`
 ];
 let schemaReady = false;
@@ -119,4 +120,28 @@ export async function adminEmail(request, env) {
     const email = String(claims.email || "").toLowerCase();
     return allowed.includes(email) ? email : null;
   } catch (e) { return null; }
+}
+
+// כניסה בסיסמה (בלי Zero Trust): הסיסמה נשמרת רק כסוד ADMIN_PASSWORD ב-Cloudflare.
+// אחרי כניסה מקבלים עוגייה חתומה ל-12 שעות. החתימה נעשית עם הסיסמה עצמה, כך שהחלפת סיסמה מנתקת את כולם.
+const enc = new TextEncoder();
+async function hmac(key, msg) {
+  const k = await crypto.subtle.importKey("raw", enc.encode(key), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  return [...new Uint8Array(await crypto.subtle.sign("HMAC", k, enc.encode(msg)))].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+export async function sameSecret(a, b) {
+  // השוואה בזמן קבוע: משווים חתימות ולא את המחרוזות עצמן
+  const salt = crypto.randomUUID();
+  return (await hmac(salt, String(a))) === (await hmac(salt, String(b)));
+}
+export async function sessionCookie(env) {
+  const exp = Date.now() + 12 * 3600e3;
+  const sig = await hmac(env.ADMIN_PASSWORD, "admin:" + exp);
+  return `adm=${exp}.${sig}; Path=/api/admin; HttpOnly; Secure; SameSite=Strict; Max-Age=43200`;
+}
+export async function sessionOk(request, env) {
+  if (!env.ADMIN_PASSWORD) return false;
+  const m = (request.headers.get("Cookie") || "").match(/(?:^|;\s*)adm=(\d+)\.([0-9a-f]{64})/);
+  if (!m || Number(m[1]) < Date.now()) return false;
+  return sameSecret(m[2], await hmac(env.ADMIN_PASSWORD, "admin:" + m[1]));
 }

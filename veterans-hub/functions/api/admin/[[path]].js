@@ -1,12 +1,28 @@
-// /api/admin/* — רק אחרי כניסה דרך Cloudflare Access, ורק למיילים שב-ADMIN_EMAILS
-import { json, db, adminEmail } from "../../_lib.js";
+// /api/admin/* — רק אחרי כניסה: סיסמת מנהל (ADMIN_PASSWORD) או Cloudflare Access למיילים שב-ADMIN_EMAILS
+import { json, db, adminEmail, ipHash, sameSecret, sessionCookie, sessionOk } from "../../_lib.js";
 
 export async function onRequest({ request, env, params }) {
-  const who = await adminEmail(request, env);
-  if (!who) return json({ error: "forbidden" }, 403);
   let d;
   try { d = await db(env); } catch (e) { return json({ error: "no-db" }, 503); }
   const path = (params.path || []).join("/");
+
+  // כניסה בסיסמה: עד 8 ניסיונות בשעה לכל רשת
+  if (path === "login" && request.method === "POST") {
+    if (!env.ADMIN_PASSWORD) return json({ error: "no-password-set" }, 503);
+    const ip = await ipHash(request), now = Date.now();
+    const tries = await d.prepare("SELECT COUNT(*) AS n FROM logins WHERE ip_hash = ? AND at > ?").bind(ip, now - 3600e3).first("n");
+    if (tries >= 8) return json({ error: "rate" }, 429);
+    const { password } = await request.json().catch(() => ({}));
+    if (!(await sameSecret(password || "", env.ADMIN_PASSWORD))) {
+      await d.prepare("INSERT INTO logins (ip_hash, at) VALUES (?, ?)").bind(ip, now).run();
+      return json({ error: "wrong-password" }, 403);
+    }
+    return json({ ok: true }, 200, { "Set-Cookie": await sessionCookie(env) });
+  }
+  if (path === "logout") return json({ ok: true }, 200, { "Set-Cookie": "adm=; Path=/api/admin; HttpOnly; Secure; SameSite=Strict; Max-Age=0" });
+
+  const who = (await adminEmail(request, env)) || ((await sessionOk(request, env)) ? "סיסמה" : null);
+  if (!who) return json({ error: "forbidden" }, 403);
   const now = Date.now();
   const body = request.method === "POST" ? await request.json().catch(() => ({})) : {};
   const ids = Array.isArray(body.ids) ? body.ids.map(Number).filter(Number.isFinite).slice(0, 200) : [];

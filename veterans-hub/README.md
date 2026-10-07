@@ -35,7 +35,8 @@ python3 -m http.server 8000
    Root directory: `veterans-hub` · Build command: `sh tools/build_site.sh` · Build output: `dist`.
 2. **D1:** ליצור מסד `magia-lecha`, ובפרויקט Pages ← Settings ← Bindings ← D1 בשם `DB`. הטבלאות נוצרות לבד.
 3. **Turnstile (ספאם):** Site key ב-`config.js` (ציבורי). Secret key כמשתנה מוצפן `TURNSTILE_SECRET` ב-Pages.
-4. **ניהול:** Zero Trust ← Access ← Self-hosted app על `admin*` ו-`api/admin*`, מדיניות לפי מייל.
+4. **ניהול:** הכי פשוט: סוד `ADMIN_PASSWORD` ב-Worker (Settings ← Variables and Secrets), ונכנסים ב-`/admin/` עם הסיסמה.
+   חלופה: Zero Trust ← Access ← Self-hosted app על `admin*` ו-`api/admin*`, מדיניות לפי מייל.
    משתנים ב-Pages: `ADMIN_EMAILS` (מיילים מורשים), `ACCESS_TEAM` (למשל `myteam.cloudflareaccess.com`),
    `ACCESS_AUD` (ה-Application Audience Tag של האפליקציה ב-Access). השרת מאמת את החתימה של Access.
 5. **אפליקציה:** לשים את כתובת האתר ב-`android/app/src/main/res/values/strings.xml` (`site_url`).

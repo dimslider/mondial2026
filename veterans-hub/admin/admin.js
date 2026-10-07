@@ -87,17 +87,34 @@
   async function load() {
     try {
       Q = await api("queue");
-      document.getElementById("who").textContent = Q.who || "";
+      document.getElementById("who").innerHTML = `${esc(Q.who || "")} · <a href="#" id="logout">יציאה</a>`;
+      document.getElementById("logout").onclick = async ev => { ev.preventDefault(); await fetch("../api/admin/logout", { credentials: "include" }); loginForm(); };
     } catch (e) {
-      $m.innerHTML = e.message === "forbidden"
-        ? `<div class="callout">אין הרשאה. הכניסה לעמוד הזה היא דרך Cloudflare Access, עם המייל שהוגדר ב-ADMIN_EMAILS.</div>`
-        : `<div class="callout">השרת לא זמין (${esc(e.message)}). בדקו שה-D1 מחובר בשם DB.</div>`;
+      if (e.message === "forbidden") return loginForm();
+      $m.innerHTML = `<div class="callout">השרת לא זמין (${esc(e.message)}). בדקו שה-D1 מחובר בשם DB.</div>`;
       return;
     }
     const nNew = Q.groups.filter(g => g.kind === "new").length, nFix = Q.groups.filter(g => g.kind === "fix").length;
     document.getElementById("n-new").textContent = nNew || "";
     document.getElementById("n-fix").textContent = nFix || "";
     render();
+  }
+
+  function loginForm() {
+    $m.innerHTML = `<section class="form-page"><h1 class="page-title">כניסה לניהול</h1>
+      <form class="form" id="login"><label>סיסמה<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="btn btn-ink" type="submit">כניסה</button><p class="form-msg" id="login-msg" role="status"></p></form></section>`;
+    const f = document.getElementById("login");
+    f.querySelector("input").focus();
+    f.onsubmit = async e => {
+      e.preventDefault();
+      const r = await fetch("../api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, credentials: "include",
+        body: JSON.stringify({ password: new FormData(f).get("password") }) });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok) return load();
+      document.getElementById("login-msg").textContent = j.error === "rate" ? "יותר מדי ניסיונות. לנסות שוב בעוד שעה."
+        : j.error === "no-password-set" ? "עוד לא הוגדרה סיסמה (ADMIN_PASSWORD ב-Cloudflare)." : "סיסמה שגויה.";
+    };
   }
 
   async function render() {
