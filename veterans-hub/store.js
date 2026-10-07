@@ -35,7 +35,11 @@
     // kind: new | fix | lead
     async submit(kind, data, extra) {
       const payload = Object.assign({ kind, data }, extra || {});
-      if (Store.mode === "cloud") return api("submit", payload);
+      // תמיד מנסים את השרת (גם אם בטעינה הוא לא ענה). רק כשאין שרת בכלל, או שאין רשת, שומרים במכשיר.
+      if (base !== null) {
+        try { const r = await api("submit", payload); Store.mode = "cloud"; return r; }
+        catch (e) { if (e.code && e.code !== "unavailable") throw e; }   // השרת ענה עם שגיאה (ספאם, הגבלה): מציגים אותה
+      }
       const s = read();
       (s.outbox = s.outbox || []).push(Object.assign({ at: Date.now() }, payload));
       write(s);
@@ -45,7 +49,7 @@
     async recommend(id) {
       const s = read();
       if ((s.recommended || {})[id]) return { ok: true, already: true };
-      if (Store.mode === "cloud") await api("submit", { kind: "recommend", service_id: id, device: device() });
+      if (base !== null) await api("submit", { kind: "recommend", service_id: id, device: device() }).catch(e => { if (e.code && e.code !== "unavailable") throw e; });
       const s2 = read();
       (s2.recommended = s2.recommended || {})[id] = Date.now();
       write(s2);
