@@ -210,14 +210,15 @@
     if (prof) return viewReturning(prof);
     $main.innerHTML = `
       <section class="welcome">
-        <div class="lockup">${LOGO(96)}<div><div class="wordmark">אזימוט</div><div class="tagline">הכיוון הבא שלך</div></div></div>
-        <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
-        <p class="welcome-sub">טיפול, חוות, ים, ספורט, מענקים וזכויות. לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. רובו בלי עלות.</p>
-        <ol class="route lined">
-          ${HAND_LINE}
-          <li><span class="st-node area-soul">1</span><strong>מספרים קצת</strong><span>מה המצב, מה קשה, מה מדבר אליך</span></li>
-          <li><span class="st-node area-sea">2</span><strong>מקבלים 3 תחנות</strong><span>מקומות שמתאימים לך, מתחומים שונים</span></li>
-          <li><span class="st-node area-land">3</span><strong>פונים</strong><span>מתקשרים ישר, או מבקשים שיחזרו אליך</span></li>
+        <div class="glass hero">
+          <div class="lockup">${LOGO(84)}<div><div class="wordmark">אזימוט</div><div class="tagline">הכיוון הבא שלך</div></div></div>
+          <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
+          <p class="welcome-sub">טיפול, חוות, ים, ספורט, מענקים וזכויות. לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. רובו בלי עלות.</p>
+        </div>
+        <ol class="route">
+          <li class="glass-sm"><span class="st-node area-soul">1</span><span><strong>מספרים קצת</strong><span>מה המצב, מה קשה, מה מדבר אליך</span></span></li>
+          <li class="glass-sm"><span class="st-node area-sea">2</span><span><strong>מקבלים 3 תחנות</strong><span>מקומות שמתאימים לך, מתחומים שונים</span></span></li>
+          <li class="glass-sm"><span class="st-node area-land">3</span><span><strong>פונים</strong><span>מתקשרים ישר, או מבקשים שיחזרו אליך</span></span></li>
         </ol>
         <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות · דקה · אפשר לדלג</span></a>
         <p class="welcome-alt">או <a class="link-u" href="#/explore">לחפש לבד</a> · <a class="link-u" href="#/rights">מה מגיע לי</a></p>
