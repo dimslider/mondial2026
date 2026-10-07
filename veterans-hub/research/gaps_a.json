@@ -571,9 +571,9 @@
   "confidence": "high"
  },
  {
-  "name": "'גיבור לגיבור' – גדולים במדים ומרכז גאלופ",
-  "category": "animal-therapy",
-  "description": "תוכנית של עמותת יד לילד המיוחד (גדולים במדים) בשיתוף JNF USA לפצועי מלחמת חרבות ברזל, המשלבת טיפול באמצעות סוסים וכלבים. פצועים ובני נוער עם צרכים מיוחדים תומכים זה בזה. מובלת על ידי אביבית מלכה בן גאון, מייסדת מרכז גאלופ לשיקום טראומה עם סוסים.",
+  "name": "'גיבור לגיבור' – גדולים במדים",
+  "category": "peer-support",
+  "description": "תוכנית של 'גדולים במדים' (Special in Uniform, בשותפות JNF-USA) שהחלה במלחמה, ומפגישה חיילי גדולים במדים עם לוחמי צה\"ל פצועים שעוברים שיקום פיזי ונפשי מורכב. במפגשים טיפוליים משותפים שתי הקבוצות מוצאות כוח, ריפוי וחברות.",
   "provider_type": "ngo",
   "eligibility": [
    "mod-recognized",
@@ -582,10 +582,10 @@
   ],
   "difficulties": [
    "ptsd",
+   "physical-disability",
    "loneliness"
   ],
   "interests": [
-   "animals",
    "volunteering"
   ],
   "cost": "free",
@@ -596,10 +596,10 @@
   "location": "",
   "phone": "",
   "email": "",
-  "website": "",
-  "how_to_apply": "",
-  "source_url": "https://www.maariv.co.il/news/israel/article-1130843",
-  "confidence": "medium"
+  "website": "https://www.jnf.org/our-work/disabilities-special-needs/special-in-uniform",
+  "how_to_apply": "פנייה לגדולים במדים",
+  "source_url": "https://www.jnf.org/ways-to-help/jnf-donor-societies/women-for-israel/on-the-ground-in-israel-jnf-usa-affiliates-respond-to-mental-health-and-resilience-needs",
+  "confidence": "high"
  },
  {
   "name": "מרכז 'אסיף' באיכילוב ולמענכם – התערבות מוקדמת בטראומה",
@@ -696,9 +696,9 @@
   "confidence": "high"
  },
  {
-  "name": "'להיות רגילים' – מסעות צוותים מבצעיים (מטב)",
+  "name": "'מסע שחרור' – עיבוד חוויות השירות ללוחמים משוחררים (מטיב)",
   "category": "nature-retreats",
-  "description": "מיזם של מטב – המרכז הישראלי לטיפול בפסיכוטראומה, שבו לוחמים משוחררים לומדים יחד לעבד את חוויותיהם במסע מיוחד בתוך הצוות האורגני שלהם. המיזם החל לפני כשמונה שנים בפנייה של לוחמי יחידה 669, ומתבסס על הרעות כתרופה נגד הבידוד שיוצרת הטראומה.",
+  "description": "תוכנית 'מסע שחרור' של מטיב – המרכז הישראלי לטיפול בפסיכוטראומה, שפועל משנת 1989, ללוחמים משוחררים שרוצים לעבד את חוויות השירות הצבאי.",
   "provider_type": "ngo",
   "eligibility": [
    "combat-soldiers",
@@ -721,10 +721,10 @@
   ],
   "location": "",
   "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה של הצוות דרך מטב",
-  "source_url": "https://www.makorrishon.co.il/news/336643/",
+  "email": "info@metiv.org",
+  "website": "https://metiv.org.il",
+  "how_to_apply": "פנייה למטיב",
+  "source_url": "https://metiv.org.il/",
   "confidence": "high"
  },
  {
@@ -788,14 +788,12 @@
   "confidence": "low"
  },
  {
-  "name": "פעילויות טרום שיקום לנכי צה\"ל נפגעי פוסט טראומה – מימון עד 10,000 ש\"ח",
+  "name": "טרום שיקום לנכי צה\"ל עם פוסט טראומה – החזר עד 10,000 ש\"ח בשנה",
   "category": "financial-grants",
-  "description": "נכי צה\"ל וכוחות הביטחון שהוכרה להם נכות של 20% לפחות בסעיף פוסט טראומה זכאים למימון פעילות לימודית וחוויתית: קורסים באוניברסיטה הפתוחה, קורסי אמנות (צילום, ציור, מוזיקה), פעילות חווייתית כמו גלישה וחוגי העשרה. המימון עד 10,000 ש\"ח לשנה קלנדרית, עד 4 שנים או עד שילוב בתוכנית שיקום.",
+  "description": "תוכנית ביניים של אגף השיקום למי שמוכר/ת בגלל פוסט טראומה ועוד לא יכול/ה להשתלב בלימודים או בעבודה. אפשר לקבל החזר הוצאות על פעילות לימודית או חווייתית: קורס באוניברסיטה הפתוחה, צילום, ציור, מוזיקה, גלישה, חוגי העשרה ועוד. התנאים: 20% נכות לפחות (או 10% אם הפגיעה הוכרה לפני 1996), הכרה בגלל פוסט טראומה, ואין כרגע תוכנית שיקום או תעסוקה.",
   "provider_type": "government",
   "eligibility": [
-   "mod-recognized",
-   "police",
-   "security-forces"
+   "mod-recognized"
   ],
   "difficulties": [
    "ptsd",
@@ -809,16 +807,16 @@
    "sport"
   ],
   "cost": "mod-funded",
-  "cost_notes": "עד 10,000 ש\"ח בשנה, עד 4 שנים",
+  "cost_notes": "החזר עד 10,000 ש\"ח לכל שנה קלנדרית, עד 4 שנים או עד שמשתלבים בתוכנית שיקום. יתרה לא עוברת לשנה הבאה",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לעובד/ת השיקום במחוז לגיבוש תוכנית טרום שיקום, רישום ותשלום ושמירת קבלות להחזר",
-  "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%98%D7%A8%D7%95%D7%9D_%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9C%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94",
+  "phone": "*8944",
+  "email": "shikum_mokedTS@mod.gov.il",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "פונים לעובד/ת השיקום במחוז ובונים יחד תוכנית. אחרי האישור שולחים פעם בחודש את הקבלות דרך האזור האישי באתר אגף השיקום או במייל",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/trom",
   "confidence": "high"
  },
  {
@@ -849,19 +847,20 @@
   "website": "",
   "how_to_apply": "פנייה לעובד/ת השיקום",
   "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנפגעי_פעולות_איבה_עם_פוסט_טראומה",
-  "confidence": "high"
+  "confidence": "medium"
  },
  {
   "name": "חוות נעלה – Unity Warriors Na'aleh Therapy Farm",
   "category": "rehab-farm",
-  "description": "חווה טיפולית בהרים שמדרום לירושלים שבה לוחמי צה\"ל ונפגעי טרור המתמודדים עם פוסט טראומה מטפלים בבעלי חיים שחולצו מהתעללות (סוסים, חמורים, עזים וכבשים) ועוסקים בחקלאות ונטיעה. יותר מ-700 לוחמים ביקרו בחווה, וגם בני נוער בסיכון מתנדבים בה.",
+  "description": "חווה טיפולית בגבעות שמדרום לירושלים, בתוך קהילה, שבה לוחמי צה\"ל, בני משפחותיהם ונפגעי טרור שמתמודדים עם טראומה ופוסט טראומה מטפלים בבעלי חיים שחולצו מהזנחה והתעללות (סוסים, חמורים, עזים וכבשים) ועובדים בחקלאות ובנטיעת עצים. בחווה יש גם תוכנית התנדבות לבני נוער.",
   "provider_type": "ngo",
   "eligibility": [
    "combat-soldiers",
    "reservists",
    "terror-victims",
    "mod-recognized",
-   "not-recognized"
+   "not-recognized",
+   "families"
   ],
   "difficulties": [
    "ptsd",
@@ -874,18 +873,17 @@
    "volunteering"
   ],
   "cost": "free",
-  "cost_notes": "ממומן מתרומות",
+  "cost_notes": "",
   "regions": [
-   "jerusalem",
-   "judea-samaria"
+   "jerusalem"
   ],
-  "location": "דרום ירושלים / גוש עציון",
+  "location": "הגבעות מדרום לירושלים",
   "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "",
-  "source_url": "https://donorbox.org/na-aleh-therapy-farms-where-heroes-and-animals-heal-together",
-  "confidence": "medium"
+  "email": "info@unitywarriors.org",
+  "website": "https://www.unitywarriors.org",
+  "how_to_apply": "פנייה לעמותה במייל או דרך האתר",
+  "source_url": "https://www.unitywarriors.org/",
+  "confidence": "high"
  },
  {
   "name": "מרכז חוויות – טיפול בבעלי חיים ורכיבה לנכי צה\"ל ונפגעי איבה",
