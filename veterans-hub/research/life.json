@@ -1056,34 +1056,6 @@
   "confidence": "medium"
  },
  {
-  "name": "\"תושייה\" – האגודה לבריאות הציבור",
-  "category": "family-support",
-  "description": "תכנית של האגודה לבריאות הציבור למשפחות של מתמודדים עם פוסט-טראומה (הלם קרב): קבוצות העצמה וחוסן להורים, לבנות זוג ולילדים בגילאי 10–14, בירושלים ובאשקלון. (קבוצת האחים והאחיות לא פעילה כרגע.)",
-  "provider_type": "ngo",
-  "eligibility": [
-   "families"
-  ],
-  "difficulties": [
-   "family-relations",
-   "ptsd"
-  ],
-  "interests": [],
-  "cost": "free",
-  "cost_notes": "",
-  "regions": [
-   "jerusalem",
-   "south"
-  ],
-  "location": "ירושלים ואשקלון",
-  "phone": "050-8469548",
-  "email": "",
-  "website": "https://www.aguda.co.il",
-  "how_to_apply": "לפנות לשירלי לוי, מנהלת התכנית: 050-8469548.",
-  "source_url": "https://www.aguda.co.il/services/%d7%aa%d7%9b%d7%a0%d7%99%d7%aa-%d7%aa%d7%95%d7%a9%d7%99%d7%99%d7%94-%d7%94%d7%a2%d7%a6%d7%9e%d7%94-%d7%95%d7%97%d7%95%d7%a1%d7%9f-%d7%9c%d7%9e%d7%a9%d7%a4%d7%97%d7%95%d7%aa-%d7%94%d7%9c%d7%95/",
-  "confidence": "high",
-  "reviewed_at": "2026-10-07"
- },
- {
   "name": "לב אחד (Lev Echad) – סיוע מתנדבים למשפחות",
   "category": "community-volunteer",
   "description": "ארגון סיוע אזרחי בחירום עם מאות אלפי מתנדבים, שפועל מאז 2005. במלחמת חרבות ברזל מסייע בין השאר למשפחות של משרתי מילואים וחיילים להתמודד עם ההיעדרות הארוכה, ולפצועי צה\"ל ובני משפחותיהם. אפשר גם להתנדב.",

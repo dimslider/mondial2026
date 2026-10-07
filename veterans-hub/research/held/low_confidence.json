@@ -35,39 +35,6 @@
   "_from": "new_ngos"
  },
  {
-  "name": "CMBM ישראל – קבוצות מיומנויות גוף-נפש לנפגעי טראומה",
-  "category": "yoga-mind-body",
-  "description": "סניף ישראלי של המרכז לרפואת גוף-נפש (Center for Mind-Body Medicine), הפועל בישראל יותר מ-20 שנה ומפעיל קבוצות קטנות המלמדות מיומנויות ויסות כמו נשימה, מדיטציה, תנועה וביטוי יצירתי. מאז 7 באוקטובר הארגון מפעיל מענים לאוכלוסיות שנחשפו לטראומה ומכשיר אנשי מקצוע בשיטה.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "civilians",
-   "families",
-   "reservists",
-   "terror-victims"
-  ],
-  "difficulties": [
-   "ptsd",
-   "anxiety",
-   "sleep"
-  ],
-  "interests": [
-   "mind-body"
-  ],
-  "cost": "",
-  "cost_notes": "יש לברר את מסגרות הקבוצות הפעילות ואת עלותן.",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "https://cmbm.org/communities/community/israel/",
-  "how_to_apply": "פנייה דרך אתר CMBM.",
-  "source_url": "https://cmbm.org/communities/community/israel/",
-  "confidence": "low",
-  "_from": "new_body"
- },
- {
   "name": "החווה של רותי – רכיבה וטיפול בבעלי חיים, אלון (Ruthy's Ranch)",
   "category": "animal-therapy",
   "description": "חווה טיפולית ליד היישוב אלון שבמדבר יהודה, מזרחית לירושלים, שמנהלת רותי מן, מטפלת מוסמכת בעזרת בעלי חיים. החווה מיועדת בעיקר לילדים ולבני נוער שעברו טראומה, ואחרי 7 באוקטובר החלו להגיע אליה גם חיילים ופצועי מלחמה לטיפול בעזרת סוסים.",
@@ -98,43 +65,6 @@
   "source_url": "https://cbn.com/news/israel/israeli-ranch-near-biblical-good-samaritan-road-ministers-healing-through-horses",
   "confidence": "low",
   "_from": "new_farms"
- },
- {
-  "name": "בית מאזן לנפגעי טראומה במגדל העמק",
-  "category": "mental-health",
-  "description": "בית החלמה לנפגעי פוסט טראומה במגדל העמק, המשמש חיילים, ניצולי פסטיבל נובה, תושבי קיבוצי העוטף ולוחמים ממלחמות קודמות. לצד טיפול פרטני וקבוצתי משולבים בו טיפולים יצירתיים, גינון, טיפול בעזרת כלבים ובניית חוסן. השיפוץ מומן על ידי השגרירות הנוצרית הבינלאומית, וטיפולים ממומנים בחלקם על ידי קופות החולים וזכאויות נכות.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "combat-soldiers",
-   "reservists",
-   "not-recognized",
-   "civilians",
-   "terror-victims"
-  ],
-  "difficulties": [
-   "ptsd",
-   "anxiety",
-   "depression"
-  ],
-  "interests": [
-   "art",
-   "music",
-   "animals",
-   "nature"
-  ],
-  "cost": "",
-  "cost_notes": "לפי הדיווח, עלות הטיפול מכוסה בחלקה על ידי קופות החולים וקצבאות נכות. יש לברר מול המקום.",
-  "regions": [
-   "north"
-  ],
-  "location": "מגדל העמק",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "",
-  "source_url": "https://www.icej.org/blog/icej-funds-new-trauma-recovery-home-for-israelis-in-galilee/",
-  "confidence": "low",
-  "_from": "new_homes"
  },
  {
   "name": "מרכז השיקום של המרכז הרפואי שיבא",
