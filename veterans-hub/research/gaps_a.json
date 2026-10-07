@@ -2,14 +2,13 @@
  {
   "name": "אתגרים – ספורטאי אתגרים לפצועי חרבות ברזל",
   "category": "sports",
-  "description": "עמותה שהוקמה ב-1995 על ידי נכי צה\"ל ואנשי שיקום, ומפעילה ספורט אתגרי מותאם בטבע: אופניים, קיאקים, צלילה, טיפוס, סקי מים, גלשני רוח, שחייה בים פתוח וטיולים. מאז מלחמת חרבות ברזל פועלות קבוצות ייעודיות 'ספורטאי אתגרים' לשיקום פצועי המלחמה.",
+  "description": "עמותה שנוסדה ב-1995 על ידי נכי צה\"ל ואנשי שיקום, ומפעילה ספורט אתגרי בטבע המותאם לכל מגבלה: קיאקים, שיט, אופניים, ריצה, צלילה, סקי מים ועוד. לפצועי ופצועות מלחמת חרבות ברזל נפתחו קבוצות מיוחדות ברחבי הארץ, בבתי החולים השיקומיים ובקהילה, בהדרכת צוות מקצועי ועם ציוד מותאם.",
   "provider_type": "ngo",
   "eligibility": [
    "mod-recognized",
    "mod-in-process",
    "combat-soldiers",
-   "reservists",
-   "civilians"
+   "reservists"
   ],
   "difficulties": [
    "physical-disability",
@@ -24,29 +23,29 @@
    "extreme",
    "fitness"
   ],
-  "cost": "subsidized",
-  "cost_notes": "פעילות מסובסדת בעזרת מתנדבים ותורמים",
+  "cost": "free",
+  "cost_notes": "ההשתתפות בקבוצות לנפגעי המלחמה ללא תשלום",
   "regions": [
-   "nationwide"
+   "north",
+   "center",
+   "jerusalem",
+   "south"
   ],
-  "location": "סניפים ברחבי הארץ",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לעמותה דרך אתר אתגרים",
-  "source_url": "https://www.kipa.co.il/כדאי-לדעת/1159161-0/",
+  "location": "קבוצות בצפון (מכמורת, כנרת, ימינה), במרכז (מרינה תל אביב), בירושלים ובאילת",
+  "phone": "052-9256672",
+  "email": "frontdesk@etgarim.org",
+  "website": "https://etgarim.org",
+  "how_to_apply": "השארת פרטים בטופס באתר, או פנייה לניר לוי או ישירות לרכז/ת הקבוצה (הטלפונים מופיעים באתר)",
+  "source_url": "https://etgarim.org/%d7%a4%d7%a2%d7%99%d7%9c%d7%95%d7%99%d7%95%d7%aa-%d7%9c%d7%a0%d7%a4%d7%92%d7%a2%d7%99-%d7%97%d7%a8%d7%91%d7%95%d7%aa-%d7%91%d7%a8%d7%96%d7%9c/",
   "confidence": "high"
  },
  {
-  "name": "הסירה שטה – שיט טיפולי לנפגעי פוסט טראומה (אתגרים)",
+  "name": "הספינה שטה – שיט טיפולי לנפגעי פוסט טראומה (אתגרים)",
   "category": "water-sports",
-  "description": "פרויקט 'הסירה שטה' של עמותת אתגרים, שפיתח יואב בן דוד, שבוי במלחמת יום הכיפורים, משקם נפגעי פוסט טראומה דרך שיט קבוצתי. הקבוצות מפליגות מדי שבוע ומתמודדות עם אתגרי עבודת צוות ולקיחת אחריות; המודל נועד לתת לגיטימציה לתסמינים ולמנף אותם למקום יצרני. מחקר של משרד הביטחון (2009) הצביע על יעילותו.",
+  "description": "פרויקט שיקומי של עמותת אתגרים בשיתוף משרד הביטחון, לנכי צה\"ל עם פוסט טראומה שחוו אירוע טראומטי בשירות הצבאי. המשתתפים לומדים להשיט יאכטות ולעבוד כצוות, לצד אנשי צוות שחוו חוויות דומות. הפעילות מתקיימת בעיקר במרכזי השייט בחיפה ובהרצליה, ויש גם קהילת בוגרים והפלגות ארוכות.",
   "provider_type": "ngo",
   "eligibility": [
-   "mod-recognized",
-   "mod-in-process",
-   "combat-soldiers",
-   "reservists"
+   "mod-recognized"
   ],
   "difficulties": [
    "ptsd",
@@ -60,21 +59,21 @@
   "cost": "subsidized",
   "cost_notes": "",
   "regions": [
-   "center",
-   "haifa"
+   "haifa",
+   "sharon"
   ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה דרך אתר העמותה",
-  "source_url": "https://www.israelhayom.co.il/article/388197",
+  "location": "מרכזי השייט של אתגרים בחיפה ובהרצליה",
+  "phone": "03-5613585",
+  "email": "frontdesk@etgarim.org",
+  "website": "https://etgarim.org",
+  "how_to_apply": "פנייה לעובד/ת השיקום במשרד הביטחון",
+  "source_url": "https://etgarim.org/2016/02/14/%d7%a1%d7%a4%d7%99%d7%a0%d7%94-%d7%a9%d7%98%d7%94/",
   "confidence": "high"
  },
  {
   "name": "אחים לחיים",
   "category": "peer-support",
-  "description": "עמותה שהוקמה ב-2007 על ידי פצועי צה\"ל, ומלווה פצועים בתהליך השיקום הפיזי והנפשי עם דגש על פעילות חברתית של עמיתים. מעניקה סיוע רפואי, ייעוץ משפטי, מלגות לימודים וסיוע כספי, וכן סדנאות, קורסי העשרה והרצאות.",
+  "description": "עמותה שהוקמה ב-2008 על ידי לוחמים שנפצעו, ומלווה לוחמים פצועים בשיקום הפיזי והנפשי, עם דגש על פעילות חברתית של עמיתים. 'בית האחים' בכפר טרומן פתוח לחברים בימים א'-ה'. העמותה מציעה גם ליווי בקריירה ובלימודים, הדרכה כלכלית, פרויקט רפואי, מלגות לימודים, סיוע כלכלי ומשפטי, משלחות וחוגים קבועים.",
   "provider_type": "ngo",
   "eligibility": [
    "mod-recognized",
@@ -98,12 +97,12 @@
   "regions": [
    "nationwide"
   ],
-  "location": "רח' החלה 115, כפר טרומן",
-  "phone": "03-5622789",
+  "location": "בית האחים, האלה 115, כפר טרומן",
+  "phone": "",
   "email": "",
-  "website": "https://achimlachaim.org",
-  "how_to_apply": "פנייה טלפונית או דרך האתר",
-  "source_url": "https://www.kolzchut.org.il/he/אחים_לחיים",
+  "website": "https://www.achimlachaim.org",
+  "how_to_apply": "בקשת הצטרפות או טופס פנייה באתר העמותה",
+  "source_url": "https://www.achimlachaim.org/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/",
   "confidence": "high"
  },
  {
@@ -228,7 +227,7 @@
  {
   "name": "Trauma4Good",
   "category": "peer-support",
-  "description": "ארגון שהקים אורן אור ביטון, לוחם ומפקד לשעבר ביחידת הסיור של מג\"ב שלקה בהלם קרב. מסייע להלומי קרב ונפגעי פוסט טראומה מכוחות הביטחון וההצלה לקבל הכרה וסיוע מהמדינה, ומלווה אותם ואת משפחותיהם בדרך לשיקום.",
+  "description": "עמותה שנוסדה ב-2018 למען נפגעי פוסט טראומה והלם קרב מצה\"ל, מכוחות הביטחון ומצוותי ההצלה. מסייעת בהליך ההכרה, מפנה לטיפול אצל אנשי מקצוע ולפעמים גם לצוות המשפטי של העמותה, ומחברת בין תורמים להלומי קרב ובני משפחותיהם שנמצאים במצוקה כלכלית.",
   "provider_type": "ngo",
   "eligibility": [
    "not-recognized",
@@ -249,23 +248,21 @@
   "regions": [
    "nationwide"
   ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לארגון",
-  "source_url": "https://israelgives.org/amuta/580664266",
-  "confidence": "medium"
+  "location": "המנופים 11, הרצליה פיתוח",
+  "phone": "052-6417641",
+  "email": "office@trauma4good.org",
+  "website": "https://www.trauma4good.org",
+  "how_to_apply": "מילוי טופס פרטים באתר, או פנייה לקו עם מענה אנושי",
+  "source_url": "https://www.trauma4good.org/",
+  "confidence": "high"
  },
  {
   "name": "AMPHA – מדיקל קר וסדנת InHeal",
   "category": "yoga-mind-body",
-  "description": "עמותה לקידום רפואה משלימה המפעילה מאז 2022 מרכז שיקום רפואי אינטגרטיבי 'מדיקל קר'. סדנת InHeal שפותחה להתמודדות עם פוסט טראומה משלבת טיפולי רפואה משלימה עם תהליך רגשי בהנחיית מטפלים בפיקוח פסיכולוג, וכן סדנה חדשה למילואימניקים בודדים ללא עלות.",
+  "description": "עמותת אמפא – ארגון מרפא אינטגרטיבי מפעילה במרכז השיקומי 'מדיקל קר' בבת ים סדנאות בשיטת InHeal, המשלבת טיפולים ברפואה אינטגרטיבית ופסיכותרפיה. סדנת 'מתחילים מחדש' מיועדת ללוחמי ולוחמות מילואים בני 24 ומעלה ששירתו תקופה ממושכת בלחימה: 5 ימים במלון עם פנסיון מלא, טיפולים אישיים וסדנה קבוצתית, ואחר כך תוכנית תמיכה המשכית.",
   "provider_type": "ngo",
   "eligibility": [
-   "reservists",
-   "combat-soldiers",
-   "mod-recognized"
+   "reservists"
   ],
   "difficulties": [
    "ptsd",
@@ -277,17 +274,17 @@
    "mind-body"
   ],
   "cost": "free",
-  "cost_notes": "סדנה למילואימניקים בודדים ללא עלות",
+  "cost_notes": "הסדנה למילואימניקים ללא עלות",
   "regions": [
    "nationwide"
   ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לעמותה",
-  "source_url": "https://finance.walla.co.il/item/3664398",
-  "confidence": "medium"
+  "location": "מדיקל קר, אבא ברדיצ'ב 13, בת ים",
+  "phone": "03-5008899",
+  "email": "info@inheal.org",
+  "website": "https://www.inheal.org",
+  "how_to_apply": "השארת פרטים בטופס ההרשמה באתר. סדנה חדשה נפתחת בכל יום ראשון",
+  "source_url": "https://www.inheal.org/inheal-%D7%A1%D7%93%D7%A0%D7%AA-%D7%9E%D7%AA%D7%97%D7%99%D7%9C%D7%99%D7%9D-%D7%9E%D7%97%D7%93%D7%A9-%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99-%D7%95%D7%97%D7%99%D7%99%D7%9C%D7%95%D7%AA-%D7%9E%D7%99/",
+  "confidence": "high"
  },
  {
   "name": "מיזם נהיגת שטח לפצועי צה\"ל – 'להפוך את הטראומה לכוח'",
@@ -413,13 +410,11 @@
  {
   "name": "פרויקט הד' – יצירה מוזיקלית ללוחמים",
   "category": "art-music",
-  "description": "מיזם שהקים דרור בלום, לוחם משוחרר, המעניק ללוחמים ולוחמות מרחב בטוח לעבד חוויות לחימה דרך יצירה מוזיקלית. במשך שלושה חודשים, בליווי מטפלים ומוזיקאים, כל משתתף כותב, מלחין ומפיק שיר משלו. לא נדרש ניסיון מוזיקלי קודם.",
+  "description": "עמותה שהקים דרור בלום, לוחם מילואים, שנותנת ללוחמים וללוחמות, יוצאי מערכת הביטחון, דרך לעבד חוויות שירות ולחימה דרך יצירה מוזיקלית. בתהליך של שלושה חודשים, בליווי מטפלים ומוזיקאים, כל משתתף/ת כותב/ת, מלחין/ה ומקליט/ה שיר אישי. לא צריך ניסיון מוזיקלי, ולא חייבים לספר מה עברתם.",
   "provider_type": "ngo",
   "eligibility": [
    "combat-soldiers",
-   "reservists",
-   "mod-recognized",
-   "not-recognized"
+   "reservists"
   ],
   "difficulties": [
    "ptsd",
@@ -437,12 +432,12 @@
    "nationwide"
   ],
   "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "",
-  "source_url": "https://www.maariv.co.il/news/israel/article-1349782",
-  "confidence": "medium"
+  "phone": "054-6683533",
+  "email": "dror@projecthed.org",
+  "website": "https://projecthed.org",
+  "how_to_apply": "פנייה לדרור בלום, מנהל העמותה, בטלפון או במייל",
+  "source_url": "https://projecthed.org/",
+  "confidence": "high"
  },
  {
   "name": "להקת 'חטיבת השמחה' ומיזם 'לב גן העדן'",
@@ -507,13 +502,12 @@
  },
  {
   "name": "TERRA UMA – 'מסע היין' לשיקום לוחמים",
-  "category": "art-music",
-  "description": "עמותה המסייעת להלומי קרב לחזור לחייהם דרך תהליך שנתי של ייצור יין ('וינותרפיה') בין כרמים ויקבים, סביב חבית אישית המסמלת תהליך התחדשות. פועלת בכרם שיקומי בבת שלמה וביקבים דלתון, היוגב 8 ואנדרדוג.",
+  "category": "rehab-farm",
+  "description": "עמותה שמפעילה תוכנית וינותרפיה ללוחמים וללוחמות שמתמודדים עם פוסט טראומה בעקבות שירות צבאי או ביטחוני. שנה של 35 מפגשים שבועיים של עבודה בכרם וביקב, בליווי צוות טיפולי-רגשי ואנשי יין, וכל משתתף/ת יוצר/ת סדרת יין אישית. לא צריך ידע קודם ביין או בחקלאות.",
   "provider_type": "ngo",
   "eligibility": [
-   "combat-soldiers",
    "mod-recognized",
-   "reservists"
+   "mod-in-process"
   ],
   "difficulties": [
    "ptsd",
@@ -526,30 +520,31 @@
    "cooking"
   ],
   "cost": "free",
-  "cost_notes": "",
+  "cost_notes": "אין עלות למשתתפים",
   "regions": [
    "north",
    "haifa",
-   "center"
+   "jerusalem"
   ],
-  "location": "בת שלמה, דלתון, היוגב, גבעת ישעיהו",
-  "phone": "",
+  "location": "הכרם בבת שלמה; פעילות באזור עמק יזרעאל, הגליל, חוף הכרמל ועמק האלה",
+  "phone": "050-4363035",
   "email": "",
-  "website": "",
-  "how_to_apply": "",
-  "source_url": "https://www.maariv.co.il/news/israel/article-1278435",
+  "website": "https://www.terrauma.co.il",
+  "how_to_apply": "ההרשמה למחזור הבא נפתחת כל שנה בסביבות פברואר. משאירים פרטים בטופס באתר, ואחר כך יש ריאיון אישי",
+  "source_url": "https://www.terrauma.co.il/faq",
   "confidence": "high"
  },
  {
   "name": "מרכזי היצירה השיקומיים לנכי צה\"ל (משרד הביטחון ואוניברסיטת בר-אילן)",
   "category": "art-music",
-  "description": "מרכזי יצירה שיקומיים של אגף השיקום בשיתוף אוניברסיטת בר-אילן, המשמשים מקום ליצירה ו'בית בטוח' עם צוות קשוב לנכי צה\"ל. הפעילות הורחבה גם לנפגעי מלחמת חרבות ברזל, במסגרת שירותי השיקום המקצועי והתעסוקתי.",
+  "description": "מרכזי יצירה שיקומיים של אגף השיקום שאוניברסיטת בר-אילן מפעילה (בית הספר לעבודה סוציאלית). מסגרת קהילתית, חברתית ויצירתית למי שמתקשים להשתלב בעבודה בשוק החופשי: ציור, פיסול, קרמיקה, פסיפס, מוזיקה, נגרות ועוד, וגם מחשבים ואנגלית. תשעה מרכזים בצפון, במרכז ובדרום, בימים א'-ה' בשעות הבוקר.",
   "provider_type": "government",
   "eligibility": [
    "mod-recognized"
   ],
   "difficulties": [
    "ptsd",
+   "tbi",
    "loneliness",
    "employment"
   ],
@@ -558,16 +553,21 @@
    "crafts"
   ],
   "cost": "mod-funded",
-  "cost_notes": "במסגרת אגף השיקום",
+  "cost_notes": "חלק מתוכנית השיקום של אגף השיקום",
   "regions": [
-   "nationwide"
+   "north",
+   "haifa",
+   "sharon",
+   "center",
+   "jerusalem",
+   "south"
   ],
-  "location": "",
-  "phone": "",
+  "location": "גן שמואל, עין המפרץ, טבריה, ירושלים, תל אביב, כפר סבא, גני תקווה, באר שבע ואשדוד",
+  "phone": "*8944",
   "email": "",
-  "website": "",
-  "how_to_apply": "דרך קצין השיקום באגף השיקום",
-  "source_url": "https://www.maariv.co.il/news/israel/article-1184427",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "פנייה לעובד/ת השיקום האישי/ת במחוז, או בקשה באזור האישי באתר אגף השיקום",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
   "confidence": "high"
  },
  {
