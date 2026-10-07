@@ -10,7 +10,7 @@ window.GUIDES = {
         { text: "קו \"נפש אחת\" *8944: תמיכה נפשית 24/7, גם בחגים. פתוח לכולם: למי שלא הגיש/ה בקשה, למי ששירתו בצה\"ל, במשטרה, בשב\"ס וביחידות הביטחון, ולבני משפחה. בלי אישורים ובלי עלות.", url: "https://shikum.mod.gov.il/contactus/helpline" },
         { text: "תכנית עמית של משרד הביטחון: 12 טיפולים נפשיים חינם, וגם טיפולים משלימים וספורט. למי שהשתחרר/ה מסדיר מ-7 באוקטובר 2023 והלאה, ולמי ששירת/ה במילואים במלחמת התקומה 30 ימים לפחות.", url: "https://shikum.mod.gov.il/medical/mental-therapy/before-recognition" },
         { text: "מרכזי החוסן של משרד הבריאות: טיפול ממוקד טראומה חינם, פרטני, זוגי, משפחתי או קבוצתי, למי שנחשף/ה ישירות לאירוע ביטחוני. פונים לפי כתובת המגורים. מי שאין מרכז חוסן באזור שלו/ה פונה למרכז החוסן הארצי *5486 (א'–ה', 8:00–20:00).", url: "https://me.health.gov.il/mental-health/therapy-rehabilitation/public-care/community-treatment/resilience-center/" },
-        { text: "נט\"ל (1-800-363-363), ער\"ן (1201), סה\"ר (צ'אט אנונימי), ועמותות רבות במאגר פתוחות לכולם.", url: "https://shikum.mod.gov.il/medical/mental-therapy/before-recognition" },
+        { text: "נט\"ל (*3362, 24/7), ער\"ן (1201), סה\"ר (צ'אט אנונימי), ועמותות רבות במאגר פתוחות לכולם.", url: "https://shikum.mod.gov.il/medical/mental-therapy/before-recognition" },
         { text: "קופות החולים נותנות תמיכה רגשית בשיחות עם אנשי מקצוע: כללית *8703, לאומית *507, מכבי *3555, מאוחדת *3833.", url: "https://shikum.mod.gov.il/medical/mental-therapy/before-recognition" }
       ]},
       { title: "אם מחליטים להגיש בקשה להכרה", items: [
