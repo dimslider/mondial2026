@@ -1,0 +1,3411 @@
+[
+ {
+  "id": "1202-org-il-0bf488",
+  "name": "1202 – איגוד מרכזי הסיוע לנפגעות ולנפגעי תקיפה מינית",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://1202.org.il/education-and-trainings/",
+  "website_status": 200,
+  "website_redirect": "https://1202.org.il/",
+  "phones_on_page": [
+   "02-5328000",
+   "04-6566813",
+   "052-8361202"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-3f6563",
+  "name": "ביטוח לאומי – קו חירום לפצועים ולמשפחות שכולות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "02-6269999",
+   "04-8812345",
+   "1-800-363-363"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-892406",
+  "name": "כללית – מוקד תמיכה נפשית במצב הביטחוני",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-63f7ea",
+  "name": "לאומית – סיוע נפשי דרך מוקד האחיות (*507)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-783dcd",
+  "name": "מאוחדת – קו סיוע לתמיכה נפשית 24/7 (*3833)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-cd9956",
+  "name": "מוקד \"נפש אחת\" *8944 – קו תמיכה נפשית 24/7 (Nefesh Achat support line)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "הטלפון במאגר לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7472010",
+   "03-7619056",
+   "051-2266275",
+   "055-3063863",
+   "072-2212788",
+   "08-6611150",
+   "08-6775598"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-cbf1f7",
+  "name": "מוקד *6500 לפצועי מלחמת התקומה (חרבות ברזל) – אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "הטלפון במאגר לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-9b7f6c",
+  "name": "מוקד השירות של צה\"ל (כולל פניות מילואים)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-8909d4",
+  "name": "מוקד השירות של צה\"ל 1111",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "maccabi4u-co-il-f0f2ec",
+  "name": "מכבי – קו תמיכה רגשית של עובדים סוציאליים (*3555)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)"
+  ],
+  "source_url_status": 403,
+  "website_status": 200,
+  "phones_on_page": [
+   "*3555",
+   "02-5374505",
+   "02-5470775",
+   "02-5631942",
+   "02-5633759",
+   "02-5900761",
+   "02-5954571",
+   "02-6434377"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-b3abee",
+  "name": "מרכז החוסן הארצי הטיפולי *5486",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "הטלפון במאגר לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "02-5645024",
+   "02-6269999",
+   "02-6778153",
+   "03-7472010",
+   "04-6111891",
+   "04-6900603",
+   "04-7702649"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-e49db4",
+  "name": "נט\"ל – קו סיוע לנפגעי טראומה על רקע לאומי (NATAL)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "new-sahar-org-il-50ed06",
+  "name": "סה\"ר – סיוע והקשבה ברשת",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)"
+  ],
+  "source_url_status": 403,
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-bde6af",
+  "name": "עזר מציון – האגף לבריאות הנפש וקו 'ידידי נפש'",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-4f39e6",
+  "name": "ער\"ן – עזרה ראשונה נפשית בטלפון ובאינטרנט",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-865acc",
+  "name": "'גיבור לגיבור' – גדולים במדים ומרכז גאלופ",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-7acfcf",
+  "name": "אחים של יונתן – פרויקט 'מעבר לטראומה' (Brothers of Jonathan)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://archive.israel21c.org/horses-help-oct-7-survivors-and-vets-transcend-trauma/",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-26fa24",
+  "name": "בלב אחד – Dogs 4 Soldiers",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.jns.org/feature/canine-therapy-helps-soldiers-cope-with-ptsd",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-ab8b91",
+  "name": "חוות רותי – מרכז חוסן וטיפול (אלון)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-7a1ef5",
+  "name": "כלב שירות לנכי צה\"ל וכוחות הביטחון עם פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-cdae7a",
+  "name": "כלב שירות לנפגעי פוסט טראומה – נפש אחת (ביטוח לאומי)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345",
+   "1-800-363-363"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-e17597",
+  "name": "כלבי שירות לנכי צה\"ל וכוחות הביטחון עם פוסט-טראומה – אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-4e4e65",
+  "name": "כלבי שירות לנפגעי פוסט טראומה – אגף השיקום, משרד הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-52db99",
+  "name": "כלבים שעושים טוב (Dogs Do Good)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.jns.org/feature/canine-therapy-helps-soldiers-cope-with-ptsd",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "havayot-center-co-il-f2df8f",
+  "name": "מרכז חוויות – טיפול בבעלי חיים ורכיבה לנכי צה\"ל ונפגעי איבה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "02-9931988",
+   "054-3022260",
+   "1-800-705-1626"
+  ],
+  "ok": true
+ },
+ {
+  "id": "israelguidedog-org-49be3a",
+  "name": "מרכז כלבי נחייה לעיוורים בישראל – כלבי שירות לפוסט טראומה (Israel Guide Dog Center)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (404)",
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 404,
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-830752",
+  "name": "'יומן משא' – הצגה של לוחמי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.srugim.co.il/1254486-%D7%99%D7%95%D7%9E%D7%9F-%D7%9E%D7%A9%D7%90-%D7%9E%D7%97%D7%96%D7%94-%D7%97%D7%93%D7%A9-%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA-%D7%94%D7%AA%D7%9E%D7%95%D7%93%D7%93%D7%95%D7%AA-%D7%A9%D7%9C-%D7%9E",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "photoisrael-org-b11f66",
+  "name": "PHOTO IS:RAEL – תוכנית PhotoVoice לנפגעי המלחמה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "icm-org-il-5c59e7",
+  "name": "Soul Key – לימודי מוזיקה ללוחמים עם פוסט-טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.icm.org.il/soulkey/",
+  "phones_on_page": [
+   "03-5460524",
+   "03-5466228",
+   "03-6055169"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-19fac6",
+  "name": "TERRA UMA – 'מסע היין' לשיקום לוחמים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-0c18b1",
+  "name": "ייצור יין כשיקום ללוחמים עם פוסט-טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-0b73a8",
+  "name": "להקת 'חטיבת השמחה' ומיזם 'לב גן העדן'",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.srugim.co.il/1239046-%D7%A8%D7%92%D7%A2-%D7%9E%D7%A8%D7%92%D7%A9-%D7%91%D7%90%D7%9E%D7%A4%D7%99-%D7%A9%D7%95%D7%A0%D7%99-%D7%9C%D7%94%D7%A7%D7%AA-%D7%9C%D7%95%D7%97%D7%9E%D7%99-%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-fe99ed",
+  "name": "מימון פעילות לימודית וחוויתית לנפגעי פוסט-טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-2f4310",
+  "name": "מרכזי היצירה השיקומיים לנכי צה\"ל (משרד הביטחון ואוניברסיטת בר-אילן)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-613929",
+  "name": "סדנת כתיבה לביטוי רגשי למשתתפי המלחמה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-3fc558",
+  "name": "פרויקט הד' – יצירה מוזיקלית ללוחמים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-685cf3",
+  "name": "שף פקטורי – קורס קונדיטוריה ללוחמים בשיקום ומבוגרים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "inz-org-il-b68995",
+  "name": "בתי הלוחם – ארגון נכי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "website לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "website_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-73dd3b",
+  "name": "לב אחד (Lev Echad) – סיוע מתנדבים למשפחות",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 247,
+  "ok": false
+ },
+ {
+  "id": "s-071f71",
+  "name": "מרכז מענה הלכתי וליווי רוחני לפצועי צה\"ל – איגוד רבני הקהילות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-884706",
+  "name": "\"חוזרים למסלול\" – חזרה לעבודה לנפגעי טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-6de9e7",
+  "name": "\"ממילואים ללימודים\" – קצין המילואים הראשי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "08-6199226",
+   "086776032"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-b7e8c7",
+  "name": "'האפוד האקדמי' – אוניברסיטת בר-אילן לסטודנטים במילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-06d5ab",
+  "name": "MiluimTech (מילואים טק)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "inz-org-il-c2788c",
+  "name": "ארגון נכי צה\"ל – אגף תעסוקה והשכלה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (410)",
+   "website לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 410,
+  "website_status": 403,
+  "ok": false
+ },
+ {
+  "id": "hachvana-mod-gov-il-543dde",
+  "name": "היחידה להכוונת חיילים משוחררים (האגף לחיילים משוחררים ומילואים)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)"
+  ],
+  "source_url_status": 403,
+  "website_status": 200,
+  "website_redirect": "https://www.hachvana.mod.gov.il/Pages/default.aspx",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "innovationisrael-org-il-c39e04",
+  "name": "הכשרות AI למשרתי מילואים – רשות החדשנות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "*8041",
+   "052-4189734"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-86fc20",
+  "name": "הלוואה להקמת עסק לנכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-439179",
+  "name": "התאמות אקדמיות למשרתי מילואים ולבני/בנות זוג",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-576196",
+  "name": "לצמוח כמנצחים + HackerU – הכשרת הייטק לנפגעי פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-8cc91c",
+  "name": "מילואים להייטק – קהילת ליווי תעסוקתי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-cf3a6e",
+  "name": "מימון לימודים לאחים שכולים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-cc3e83",
+  "name": "מלגות בני ברית למשרתי מילואים בשריון",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.maariv.co.il/news/military/article-1124429",
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-46d014",
+  "name": "מלגת IMPACT! – ידידי צה\"ל (FIDF)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-fea95d",
+  "name": "מלגת גראס למשרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.jce.ac.il/wp-content/uploads/2025/10/%D7%AA%D7%A7%D7%A0%D7%95%D7%9F-%D7%9E%D7%9C%D7%92%D7%AA-%D7%92%D7%A8%D7%90%D7%A1-%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D-%D7%AA%D7%A9%D7%A4%D7%95.pdf",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-924578",
+  "name": "מלגת משרתי מילואים – משרד הביטחון/צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-35f9cf",
+  "name": "מסייעטק – מנטורים בכירים למילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-a8cf52",
+  "name": "נקודות זכות והתאמות אקדמיות למשרתי מילואים (הוראת שעה – כללי זכויות הסטודנט)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.Afeka.ac.il/media/h4zb5zpc/%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9C%D7%9B%D7%9C%D7%9C%D7%99-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98-%D7%94%D7%95%D7%A8%D7%90%D7%AA-%D7%A9%D7%A2%D7%94-%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9Ccleanedcleaned.pdf",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-410036",
+  "name": "סיוע לסטודנטים משרתי מילואים – תגבור לימודי והחזר קורסים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ce9f44",
+  "name": "פעילויות טרום-שיקום (לימודיות וחוויתיות) לנכים עם פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-d7fcbc",
+  "name": "שיקום מקצועי ותעסוקתי לנכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-1685e6",
+  "name": "שיקום מקצועי לנכי צה\"ל וכוחות הביטחון – אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-6b9358",
+  "name": "שיקום תעסוקתי ומימון לימודים לנכי צה\"ל – אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-31a611",
+  "name": "שירות התעסוקה – תכניות ויריד תעסוקה למשרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.maariv.co.il/business/carrier/article-1110134",
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-89242c",
+  "name": "תוספת למלגת פר\"ח לסטודנטים משרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-916d67",
+  "name": "\"זמן אבא\" – אבות במילואים וילדיהם",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-c27dad",
+  "name": "\"חבר שלי לוחם\" – קהילת בנות זוג של לוחמים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-ae4041",
+  "name": "\"תושייה\" – האגודה לבריאות הציבור",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-8adf2f",
+  "name": "Campers2Gether – מחנות קיץ בחו\"ל לילדי מילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "onefamilytogether-org-7a58af",
+  "name": "OneFamily – תוכניות טיפוליות לנפגעי טרור ומלחמה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://onefamilytogether.org/about-us-2/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f3e035",
+  "name": "אחותי – קהילת בנות זוג של פצועי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-486bf2",
+  "name": "אחותי – קהילת נשות ובנות זוג של פצועי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-fa0927",
+  "name": "ארגון אלמנות ויתומי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-9989e0",
+  "name": "החברה להגנת הטבע – מחנות מדבר לבני נוער מפונים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "1-800-411-0966"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-204716",
+  "name": "חוות מרפא רשפון – תוכנית למילואימניקים ובני זוג",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-9bea4c",
+  "name": "טיפול נפשי לבני משפחה של נכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-7dfee1",
+  "name": "טיפול נפשי לבני משפחה של נכים ופצועים – אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-c95315",
+  "name": "טיפול פסיכולוגי מסובסד למשפחות מילואימניקים – שבע פלוס ופורום נשות המילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "yadlabanim-org-14efc9",
+  "name": "יד לבנים – תמיכה במשפחות שכולות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://yadlabanim.org/wp-content/uploads/2023/04/%D7%90%D7%92%D7%A8%D7%AA-%D7%9E%D7%99%D7%93%D7%A2-%D7%9C%D7%90%D7%97%D7%99%D7%9D-%D7%94%D7%A9%D7%9B%D7%95%D7%9C%D7%99%D7%9D.pdf",
+  "website_status": 200,
+  "phones_on_page": [
+   "0000000000",
+   "0000000009",
+   "0000000010",
+   "0000000015",
+   "0000000904",
+   "0000034957",
+   "0000035023",
+   "0000035239"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-a1241c",
+  "name": "יוגה טיפולית לנשות מילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-4b36e4",
+  "name": "מעטפת טיפולים רגשיים למשרתי מילואים ומשפחותיהם (2026)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b24e1c",
+  "name": "מענק לבני/בנות זוג של משרתי מילואים שיצאו לחל\"ת – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345"
+  ],
+  "ok": true
+ },
+ {
+  "id": "lonesoldiercenter-com-801633",
+  "name": "מרכז החייל הבודד ע\"ש מיכאל לוין",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (503)"
+  ],
+  "source_url_status": 503,
+  "website_status": 200,
+  "phones_on_page": [
+   "02-502-2211",
+   "03-560-1931"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-f3e9cb",
+  "name": "נט\"ל – ליווי והדרכה להורים ובנות/בני זוג של לוחמים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.maariv.co.il/news/israel/article-697723",
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056",
+   "1800-363-363"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-fc20bd",
+  "name": "סבסוד קייטנות ודמי אבטלה לבני זוג של משרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-f20142",
+  "name": "סיוע במימון טיפול זוגי למשרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-08c8d9",
+  "name": "סלע – מרכז ישראלי לניהול משברים לעולים (Selah)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (404)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 404,
+  "ok": false
+ },
+ {
+  "id": "s-23fb72",
+  "name": "עוגן למשפחות המילואים – סדנאות זוגיות בחווה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-11279f",
+  "name": "עיריית ירושלים – מערך תמיכה במילואימניקים ובמשפחותיהם",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.kipa.co.il/%D7%9B%D7%93%D7%90%D7%99-%D7%9C%D7%93%D7%A2%D7%AA/1194386-0/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-abf8ab",
+  "name": "עמותת \"אחותי\" – קהילה לבנות זוג של פצועי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-0581e0",
+  "name": "ריטריט לאחים ואחיות שכולים מילואימניקים – משפחה אחת",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-fb1e3b",
+  "name": "החזר 1,500 ש\"ח לטיפולים רגשיים ומשלימים למשרתי מילואים ומשפחותיהם",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b5c953",
+  "name": "הלוואה ומענק לכיסוי חובות לנכי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ac4a8b",
+  "name": "הלוואה לעסק עצמאי לבני משפחה של חללי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-cf90e9",
+  "name": "הנחה במס רכישה לנכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "yasharlachayal-org-c8a54e",
+  "name": "ישר לחייל – מימון טיפולים לחיילים עם PTSD",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-66adbb",
+  "name": "כלב שירות לנכי צה\"ל עם פוסט טראומה – זכאות אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "btl-gov-il-7e5880",
+  "name": "כלב שירות לנפגעי פעולות איבה עם פוסט טראומה – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345",
+   "1-800-363-363"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-bedbcf",
+  "name": "כרטיס Fighter והטבות למשרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-62e3dc",
+  "name": "מדיניות תגמולים, מענקים והטבות למשרתי המילואים – 2026",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b27ba7",
+  "name": "מועדון \"בהצדעה\" – מועדון ההטבות של משרד הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "072-2585685"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-1f8e0a",
+  "name": "מיזם עצמאימניקים – מענקים לעסקים של משרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-cf9d05",
+  "name": "מימון פעילות לימודית וחוויתית לנכי פוסט טראומה (משרד הביטחון)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-52f696",
+  "name": "מענק למשרת מילואים שהוא הורה לילד עם צרכים מיוחדים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-26de9b",
+  "name": "מענק משפחה מוגדל למשרתי צו 8",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ebf556",
+  "name": "סיוע במימון טיפולים נפשיים אישיים ומשפחתיים למשרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b92b34",
+  "name": "סיוע ברכישת רכב רפואי לנפגעי פעולות איבה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345"
+  ],
+  "ok": true
+ },
+ {
+  "id": "israelgives-org-3cf00d",
+  "name": "עמותת הלומי קרב",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://israelgives.org/amuta?id=580651271",
+  "phones_on_page": [
+   "03-5184052"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-677d83",
+  "name": "פיצוי לעצמאים משרתי מילואים – רשות המסים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f71dd3",
+  "name": "פעילויות טרום שיקום לנכי צה\"ל נפגעי פוסט טראומה – מימון עד 10,000 ש\"ח",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-e8adff",
+  "name": "פעילויות טרום שיקום לנפגעי פעולות איבה עם פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-9e02b4",
+  "name": "פעמונים – ליווי כלכלי משפחתי חינם",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.kipa.co.il/%D7%9B%D7%93%D7%90%D7%99-%D7%9C%D7%93%D7%A2%D7%AA/1223070-0/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f15e80",
+  "name": "קרן \"עסקים במילואים\" – מענקים לעסקים של בנות ובני זוג של מילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "miluim-idf-il-c6491b",
+  "name": "קרן הסיוע למשרתי המילואים (Reservists Assistance Fund)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "website לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "website_status": 403,
+  "ok": false
+ },
+ {
+  "id": "michaellevinlonesoldier--303e34",
+  "name": "קרן מייקל לוין לחיילים בודדים – מימון ייעוץ נפשי",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "btl-gov-il-60a11f",
+  "name": "תגמולי מילואים – ביטוח לאומי (Reserve duty compensation)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "website_redirect": "https://www.btl.gov.il:443/Pages/default.aspx",
+  "phones_on_page": [
+   "*2496",
+   "*6050",
+   "02-6269999",
+   "04-8812345"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-96d265",
+  "name": "תכנית הסיוע הממשלתית למשרתי המילואים 2026",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (ERROR: URLError: <urlopen error [Errno 104] Connection reset by peer>)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": "ERROR: URLError: <urlopen error [Errno 104] Connection reset by peer>",
+  "ok": false
+ },
+ {
+  "id": "s-efa6f3",
+  "name": "תשלומים והחזרי הוצאות בגין שירות מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-d21a7f",
+  "name": "הלוואה לרכישת דירה ראשונה לנכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-97ae96",
+  "name": "הלוואה לשיפוץ/התאמת דירה לנכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-5245fa",
+  "name": "השכרת דירות של משרד הביטחון לנכים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b9b962",
+  "name": "ועדה להתאמת רכב ואביזרי נהיגה לאנשים עם מוגבלות",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-bc4772",
+  "name": "יד שרה – השאלת ציוד רפואי ושיקומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-52dc28",
+  "name": "כמעיין המתגבר – השאלת ציוד רפואי ושיקומי",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-7589af",
+  "name": "מענק להחלפת דירה לנכי צה\"ל וכוחות הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-f2f87a",
+  "name": "מענק לנכים השוכרים דירה בדיור הציבורי",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-bfb545",
+  "name": "\"חוזרים לחיים\" – מרכז שיקום פצועי מלחמה, שיבא תל השומר",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.maariv.co.il/news/military/article-1070989",
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-ce2c69",
+  "name": "בית הלוחם (ארגון נכי צה\"ל)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "hospitals-clalit-co-il-2b9fa3",
+  "name": "בית לוינשטיין – מרכז רפואי לשיקום (כללית), רעננה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "website לא נגיש (403)"
+  ],
+  "source_url_status": 200,
+  "website_status": 403,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-5e31b1",
+  "name": "המכון הלאומי לשיקום נוירופסיכולוגי (שיקומיל)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-9a6f3c",
+  "name": "המכון הרפואי לבטיחות בדרכים – הערכת כשירות נהיגה לאנשים עם מוגבלות",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-171d6e",
+  "name": "וילה באלאנס – מרכז שיקום לפוסט-טראומה והתמכרויות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-af69f6",
+  "name": "טיפול TMS עמוק (קסדה מגנטית) לפוסט-טראומה – בתי חולים ומימון משרד הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-76e4e8",
+  "name": "טיפול בחמצן בתא לחץ (HBOT) לפוסט טראומה – מרכז סגול, שמיר (אסף הרופא)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.aftau.org/news_item/ptsd-related-brain-damage-responds-to-a-special-protocol-of-hyperbaric-therapy/",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-e680e9",
+  "name": "מילב\"ת – ייעוץ והתאמת טכנולוגיה מסייעת",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-677525",
+  "name": "מרכז השיקום גנדל – הדסה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-d65cd7",
+  "name": "מרכז השיקום ע\"ש גנדל – הדסה הר הצופים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-3ec3b2",
+  "name": "מרכז שיקום יום לפצועי צה\"ל – הבית הספרדי, נווה שאנן חיפה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-f90767",
+  "name": "מרכז שיקום ייעודי לוותיקי צה\"ל עם פגיעות מוח טראומטיות – תל אביב (FIDF ומשרד הביטחון)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-1c0994",
+  "name": "מרפאות קטועים ותותבות – איכילוב ושיבא (זכאות נכי צה\"ל)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-0fc55e",
+  "name": "סל שיקום בקהילה למתמודדי נפש – משרד הבריאות",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-352bd3",
+  "name": "קנביס רפואי לנכי צה\"ל וכוחות הביטחון – מימון משרד הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-fee0a6",
+  "name": "רישיון קנביס רפואי ל-PTSD – משרד הבריאות (היק\"ר)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-545599",
+  "name": "רעות – מרכז רפואי לשיקום, תל אביב (מסלול שיקום לנפגעי טראומה)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-2244d7",
+  "name": "תותבות לנפגעי פעולות איבה קטועי גפיים (ביטוח לאומי)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "crossroadsjerusalem-org-c183e3",
+  "name": "Crossroads Jerusalem – Israeli Warrior Wellness Program",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f64b53",
+  "name": "המרכז הישראלי להתמכרויות ובריאות הנפש",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-5254c6",
+  "name": "המרכז הלאומי לבריאות הנפש וחוסן – בית פלדמן נתניה (האגודה למען החייל)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "icc-haifa-ac-il-aa368e",
+  "name": "המרכז הקליני הבין-תחומי – אוניברסיטת חיפה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://staff.haifa.ac.il/images/231220_%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%A8%D7%92%D7%A9%D7%99_%D7%9C%D7%97%D7%91%D7%A8%D7%99_%D7%A1%D7%92%D7%9C.pdf",
+  "website_status": 200,
+  "website_redirect": "https://icc.haifa.ac.il/",
+  "phones_on_page": [
+   "0000000000",
+   "0000000016",
+   "0000001856",
+   "0000002197",
+   "0000002336",
+   "0000002385",
+   "0000002428",
+   "0000003010"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-3c362c",
+  "name": "המרכז להתערבות מוקדמת בטראומה – איכילוב ולמענכם",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-c9ab2a",
+  "name": "הקואליציה הישראלית לטראומה (Israel Trauma Coalition)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-ff99e5",
+  "name": "הקליניקה של המרכז הלאומי לטראומה וחוסן – אוניברסיטת תל אביב",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-aaf3bf",
+  "name": "זק\"א – מחלקת חוסן למתנדבים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.srugim.co.il/1053355-%D7%9B%D7%A9%D7%9E%D7%A0%D7%9B%D7%9C-%D7%96%D7%A7%D7%90-%D7%91%D7%9B%D7%94-%D7%91%D7%A1%D7%9C%D7%95%D7%9F-%D7%A9%D7%9C-%D7%90%D7%91%D7%A8%D7%94%D7%9D-%D7%98%D7%9C-%D7%A6%D7%A4%D7%95",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-957b03",
+  "name": "טיפול חינם בדיכאון – מחקר המחלקה לפסיכולוגיה, אוניברסיטת חיפה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "shikum-mod-gov-il-f802c3",
+  "name": "טיפול נפשי בזמן תהליך ההכרה – אגף השיקום (Mental treatment during the recognition process)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "הטלפון במאגר לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-61bb79",
+  "name": "טיפול נפשי לנכי צה\"ל וכוחות הביטחון (Mental treatment for recognized disabled)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ae2f06",
+  "name": "טיפולים נפשיים, רגשיים ומשלימים לחטופים שחזרו ובני משפחותיהם – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "03-5127118",
+   "04-8812345"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-88b3ca",
+  "name": "מוקדי סיוע רגשי של קופות החולים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-0bfef9",
+  "name": "מוקדי תמיכה רגשית של קופות החולים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-6b87af",
+  "name": "מחקר טיפול בסיוע MDMA ללוחמים עם PTSD ופגיעה מוסרית – מרכז רפואי העמק (כללית)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "herzoghospital-org-62ab60",
+  "name": "מטיב – המרכז הישראלי לטיפול בפסיכוטראומה (הרצוג)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-649cbe",
+  "name": "מימון טיפול נפשי לנכי צה\"ל וכוחות הביטחון (אגף השיקום)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ca1087",
+  "name": "מענים טיפוליים של אגף השיקום (חוות שיקום, גלישה, שיט, EMDR, נוירופידבק)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.kipa.co.il/%D7%97%D7%93%D7%A9%D7%95%D7%AA/1211705-0/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-854fe2",
+  "name": "מערך בריאות הנפש של כבאות והצלה לישראל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-a9fa23",
+  "name": "מרכז 'אסיף' באיכילוב ולמענכם – התערבות מוקדמת בטראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-e92888",
+  "name": "מרכז אסיף לטיפול בטראומה ופוסט טראומה – איכילוב",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "lonesoldiercenter-com-6cbf32",
+  "name": "מרכז הלוחמים הבודדים ע\"ש מייקל לוין (Lone Soldier Center)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "02-502-2211",
+   "03-560-1931"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-800178",
+  "name": "מרכז חוסן מועצה אזורית אשכול",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-dcb81a",
+  "name": "מרכז חוסן מועצה אזורית שער הנגב",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-fd7702",
+  "name": "מרכז חוסן שדרות",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-5f9fa6",
+  "name": "מרכז להתערבות מוקדמת בטראומה – איכילוב ועמותת \"למענכם\"",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f16b8d",
+  "name": "מרכזי החוסן המשולבים – פריסה ארצית",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "02-5645024",
+   "02-6269999",
+   "02-6778153",
+   "03-7472010",
+   "04-6111891",
+   "04-6900603",
+   "04-7702649"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-f5bb54",
+  "name": "מרכזי החוסן – מוקד ארצי *5486",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "הטלפון במאגר לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "02-5645024",
+   "02-6269999",
+   "02-6778153",
+   "03-7472010",
+   "04-6111891",
+   "04-6900603",
+   "04-7702649"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-cc17e9",
+  "name": "מרכזי חוסן – משרד הבריאות (Resilience centers)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "website לא נגיש (403)"
+  ],
+  "source_url_status": 200,
+  "website_status": 403,
+  "phones_on_page": [
+   "08-6241010"
+  ],
+  "ok": false
+ },
+ {
+  "id": "fidf-org-fe5188",
+  "name": "מרפאת סטיבן א. כהן לוותיקים ומשפחות – שיבא מודיעין (Cohen Veterans Network)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-478b5f",
+  "name": "נט\"ל – טיפול לשוטרים נפגעי טראומה (הסכם עם המשטרה)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-fd5b53",
+  "name": "ניסוי MDMA לפוסט טראומה במטיב (לאנשי כוחות הביטחון לשעבר)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "clinicaltrials-gov-b9eb82",
+  "name": "ניסוי קליני: טיפול בסיוע MDMA (פרטני וקבוצתי) ללוחמים ישראלים עם PTSD ופגיעה מוסרית",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-bfaaca",
+  "name": "סיוע לנפגעי חרדה עקב פעולת איבה – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "02-5848600",
+   "02-9969560",
+   "04-6900603",
+   "04-7702649",
+   "04-7702651",
+   "04-8812345",
+   "050-5727378"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-6548ee",
+  "name": "עמותת EMDR ישראל – מוקד טיפול פרו-בונו",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-e78796",
+  "name": "עמותת אמפא – סדנת InHeal ומרכז \"מדיקל קר\"",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-aa11a3",
+  "name": "עמך – מרכזי סיוע נפשי",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "maccabi4u-co-il-7fcc4b",
+  "name": "קופות החולים – מענה נפשי ומסלולים למשרתי מילואים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)"
+  ],
+  "source_url_status": 403,
+  "website_status": 200,
+  "phones_on_page": [
+   "*3555"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-a0c306",
+  "name": "רטורנו – גמילה מהתמכרויות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.kikar.co.il/haredim/386113",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "retorno-org-df937f",
+  "name": "רטורנו – פרויקט 'חיבוק ברזל' לשיקום לוחמים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "053-840-0374"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-d71edb",
+  "name": "רפורמת \"נפש אחת\" באגף השיקום (One Soul reform)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-4d0929",
+  "name": "שומר אחי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "apps-apple-com-abd84b",
+  "name": "תכנית עמית – משרד הביטחון",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.kipa.co.il/%D7%97%D7%93%D7%A9%D7%95%D7%AA/1194992-0/",
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-24d44a",
+  "name": "'דרך השטח' – מסע שטח טיפולי של נט\"ל וגרוטראלי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-afe716",
+  "name": "'להיות רגילים' – מסעות צוותים מבצעיים (מטב)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-aefd24",
+  "name": "Healing Place – מרכז טיפול בבית יצחק",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.jpost.com:443/israel-news/article-825184",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-40d731",
+  "name": "בלב אחד – משלחת החלמה לניו יורק",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-0d6eec",
+  "name": "בשביל המחר – ריטריטים למילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-1aa986",
+  "name": "בשביל המחר – ריטריטים לעיבוד חוויות קרב למילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-785494",
+  "name": "דרך השטח – מסע שטח לנפגעי טראומה (נט\"ל)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "natureisrael-org-2582ca",
+  "name": "החברה להגנת הטבע – 'הטבע מרפא' למילואימניקים ומשפחותיהם",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "1-800-411-0966"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-530658",
+  "name": "לפרוש כנף",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-28d1f6",
+  "name": "פעילויות טרום שיקום לנכי צה\"ל נפגעי פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-f1fd41",
+  "name": "קבוצת טבע לנפגעי פוסט טראומה – רמב\"ם ואתגרים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.walla.co.il/news/israel/3414543",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-aad8a5",
+  "name": "ריטריט אקו-תרפיה לחיילים – בית ספר שדה אילת (החלה\"ט, שיבא ועיריית אילת)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "1-800-411-0966"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-909d23",
+  "name": "ריטריט ללוחמים ולוחמות – קבוצת המ\"מ",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-94ba7f",
+  "name": "ריפוי בטבע (Healing in Nature)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-61e072",
+  "name": "ריפוי בטבע – HiN (Healing in Nature) למילואימניקים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "pomcanada-com-f32425",
+  "name": "שקט נפשי – Peace of Mind (מטיב)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.pomcanada.com/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-224b2a",
+  "name": "\"בתים חמים\" של אגף השיקום לנפגעי פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-4b83e9",
+  "name": "Derech Ami – תכנית תמיכה למילואימניקים חוזרים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.jpost.com:443/health-and-wellness/mind-and-spirit/article-846910",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-76179f",
+  "name": "SOS ISRAEL – חונכות עמיתים לנפגעי פוסט-טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-8d93cb",
+  "name": "Trauma4Good",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://israelgives.org/amuta?id=580664266",
+  "phones_on_page": [
+   "03-5184052"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-a42eb8",
+  "name": "אגף פוסט טראומה בבית הלוחם ירושלים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (410)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 410,
+  "ok": false
+ },
+ {
+  "id": "achimlachaim-org-dd5002",
+  "name": "אחים לחיים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "הטלפון במאגר לא מופיע בעמוד"
+  ],
+  "source_url_status": 403,
+  "website_status": 200,
+  "website_redirect": "https://www.achimlachaim.org/",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-a938b1",
+  "name": "אחים לחיים – משלחות החלמה לחו\"ל (Brothers for Life)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-b734c3",
+  "name": "אחיעד – לוחמים עם פוסט טראומה (ארגון נכי צה\"ל)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.maariv.co.il/journalists/article-835578",
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "inz-org-il-a865b4",
+  "name": "ארגון נכי צה\"ל (Zahal Disabled Veterans Organization)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "website לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "website_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-341116",
+  "name": "דרור לפצוע",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-400f45",
+  "name": "יד עזר לחבר",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-06c792",
+  "name": "לא מפקירים פצועים בשטח",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-771f95",
+  "name": "מד\"א – מפגשי חוסן לצוותים ולמתנדבים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "herzoghospital-org-5af7da",
+  "name": "מטיב – תוכנית Peace of Mind (POM) ללוחמים משוחררים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "maglan-org-216650",
+  "name": "מרכז התמיכה לבוגרי מגלן – עמותת ידידי מגלן",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "02-6250634",
+   "03-6401400",
+   "03-6406900",
+   "050-2874955",
+   "052-477-9895",
+   "052-540-8983",
+   "054-292-2120",
+   "1-800-363-363"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-d0f0b2",
+  "name": "קהילת אור – לאנשים עם פגיעה מוחית ובני משפחותיהם",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-1e4a02",
+  "name": "קהילת אור – תמיכה לנפגעי פגיעות מוח ומשפחותיהם",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "novaexhibition-com-aca212",
+  "name": "שבט נובה – בית נובה (Tribe of Nova Foundation)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://jnf.org.au/pu-beitnova/",
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-2a6322",
+  "name": "שותפות מגן ישראלית",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "nbn-org-il-61e022",
+  "name": "תוכנית החיילים הבודדים של נפש בנפש (NBN Lone Soldiers Program)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.nbn.org.il/lsp-resilience/",
+  "phones_on_page": [
+   "02-302-7007",
+   "02-659-5800"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-0ca12f",
+  "name": "החווה של דני – חוות חוסן (קיבוץ סתריה)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-d383d0",
+  "name": "החווה של רוקה – מושב חמד (Ruca's Farm)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "back2life-org-il-2f1d97",
+  "name": "חוות Back2Life – שדות ים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://israelgives.org/amuta?id=580808053",
+  "website_status": 200,
+  "phones_on_page": [
+   "03-5184052"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-f762d0",
+  "name": "חוות דרך הלוחמים (Warriors Way Farm)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "vertigo-org-il-a2394e",
+  "name": "חוות החוסן של ורטיגו – כפר האקו-ארט (Vertigo Resilience Farm)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://vertigo.org.il/en/vertigo-from-emergency-to-rehabilitation-3/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-0a23ca",
+  "name": "חוות חוסן – רשת חוות טיפוליות מוכרות באגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f03450",
+  "name": "חוות נעלה – Unity Warriors Na'aleh Therapy Farm",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-50ec05",
+  "name": "חוות רום – הר כמון (מרכז שיקום)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://archive.israel21c.org/farm-helping-soldiers-with-ptsd-under-shadow-of-war/",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-cf1296",
+  "name": "חוות רימון – חוות אור הנר (שיקום קהילתי)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-c84ffb",
+  "name": "חוות רימון – חוות להב (פוסט טראומה)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-b2586a",
+  "name": "חוות רימון – חוות שקף (פוסט טראומה)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "miluimnikim-org-6bb62c",
+  "name": "\"שדרה משפטית\" – ייעוץ וייצוג משפטי ללא עלות למילואימניקים (קהילת המילואימניקים)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "050-6581893"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-e19098",
+  "name": "'צו 8 חברתי' – ההסתדרות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*9518",
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-272116",
+  "name": "Trauma4Good – סיוע בהכרה וליווי נפגעי פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "shikum-umb-mod-gov-il-9c0739",
+  "name": "אגף השיקום במשרד הביטחון – הגשת תביעה והכרה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "website לא נגיש (404)",
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "website_status": 404,
+  "phones_on_page": [
+   "*6789",
+   "0000000000",
+   "0000000016",
+   "0000001096",
+   "0000002028",
+   "0000002156",
+   "0000003443",
+   "0000003557"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-40b69b",
+  "name": "ארגון נשות השוטרים והסוהרים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "shikum-mod-gov-il-22016b",
+  "name": "הגשת בקשה להכרה בנכות – אגף השיקום, משרד הביטחון (MoD Rehabilitation Division – disability claim)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-147588",
+  "name": "הכרה וסיוע לנפגעי חרדה – ביטוח לאומי (נפגעי פעולות איבה)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "02-5848600",
+   "02-9969560",
+   "04-6900603",
+   "04-7702649",
+   "04-7702651",
+   "04-8812345",
+   "050-5727378"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-855b96",
+  "name": "הכרה כנפגע/ת פעולות איבה – ביטוח לאומי (Victims of hostilities)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-12749c",
+  "name": "הקלות לחיילי מילואים שהם הורים עצמאיים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ad829a",
+  "name": "הקליניקה להכרה בנכות צבאית – הקריה האקדמית אונו",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5311930"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-648185",
+  "name": "הרפורמה בעקבות ועדת מור-יוסף – רשות שיקום, מנהל תיק אישי וזכויות \"בדחיפה\" (2026)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (404)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 404,
+  "ok": false
+ },
+ {
+  "id": "s-d8fd54",
+  "name": "זכויות נפגעי פגיעה מוחית טראומטית (TBI)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ecf25e",
+  "name": "כל זכות – מדריך למשרתי מילואים ובני משפחותיהם (חרבות ברזל והמלחמה מול איראן)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-253d8d",
+  "name": "כל זכות – פורטל נכי צה\"ל וכוחות הביטחון (Kol Zchut portal)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "website לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "website_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-ebbd3e",
+  "name": "לוחמים לחיים (Fighters for Life)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "source_url_redirect": "https://my.israelgives.org/en/applicationerror?sqs=SUenRryee2q0GyWKQoPv9w%3d%3d",
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-ff9abe",
+  "name": "מדריך זכויות לפצועי חרבות ברזל – אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6789",
+   "0000000000",
+   "0000000016",
+   "0000001096",
+   "0000002028",
+   "0000002156",
+   "0000003443",
+   "0000003557"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-c3ea9e",
+  "name": "מסלול מהיר (\"מסלול ירוק\") להכרה בפוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-45dfba",
+  "name": "מרכז 'בידיים טובות' – ליווי חינם בהגשת בקשה להכרה ולוועדה רפואית",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-5af3f4",
+  "name": "נכי משטרה – זכויות לפי חוק המשטרה (נכים ונספים) באמצעות אגף השיקום",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-b105bf",
+  "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים ונכים בהליכי הכרה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "api-miluim-idf-il-575bbf",
+  "name": "סיוע משפטי לחיילי מילואים – צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "website לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "website_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-8a997d",
+  "name": "סימולטור זכויות לחיילים ומשרתי מילואים – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345"
+  ],
+  "ok": true
+ },
+ {
+  "id": "israelbar-org-il-ddeda0",
+  "name": "פרו בונו – לשכת עורכי הדין",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "website לא נגיש (403)"
+  ],
+  "source_url_status": 200,
+  "website_status": 403,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "btl-gov-il-5fe861",
+  "name": "רפורמת 'נפש אחת' לנפגעי איבה – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/default.aspx",
+  "phones_on_page": [
+   "*6050",
+   "03-5127118",
+   "04-8812345",
+   "1-800-363-363"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-bdea6b",
+  "name": "תיקון 35 לחוק הנכים – הכרה חוקית ב\"הלם קרב\" וועדת סיוע לפנים משורת הדין (2026)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-712f66",
+  "name": "תכנית תל\"ם – תמיכה, ליווי ומיצוי זכויות לפצועי המלחמה (TELEM program)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f34aa0",
+  "name": "תכנית תל\"מ – תמיכה, ליווי ומיצוי זכויות לפצועים",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.walla.co.il/news/military/3722630",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-7af9a1",
+  "name": "אתגרים – ספורטאי אתגרים לפצועי חרבות ברזל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.kipa.co.il/%D7%9B%D7%93%D7%90%D7%99-%D7%9C%D7%93%D7%A2%D7%AA/1159161-0/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-955aae",
+  "name": "בית הלוחם – מרכזי ספורט ושיקום לנכי צה\"ל (ארגון נכי צה\"ל)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-1e7d9b",
+  "name": "בית הלוחם – מרכזי ספורט שיקומי של ארגון נכי צה\"ל (Beit Halochem)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b94979",
+  "name": "בתי הלוחם – מרכזי ספורט ושיקום של ארגון נכי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "ilan-israel-co-il-9f2f5c",
+  "name": "המרכז הישראלי לספורט נכים ע\"ש ספיבק – אילן (Israel ParaSport Center)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "03-5248141",
+   "03-5249828"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-e50f8a",
+  "name": "הצעד הבא – הבית לקטועי גפיים בישראל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-ac2b6b",
+  "name": "מיזם נהיגת שטח לפצועי צה\"ל – 'להפוך את הטראומה לכוח'",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-0bdbc4",
+  "name": "מעבר לגבולות ומעל למגבלות – שיקום פצועי מלחמה בספורט פראלימפי (איגוד הספורט לנכים)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-406d76",
+  "name": "מעזה ללוס אנג'לס – מסלול פראלימפי לפצועי צה\"ל (הוועד הפראלימפי הישראלי)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-791369",
+  "name": "נבחרת בית הלוחם במשחקי האינוויקטוס (Invictus Games)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-b529fd",
+  "name": "עננים – טיסות חווייתיות לנכי צה\"ל",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-aae858",
+  "name": "רצים עם רמי – קבוצות ריצה והליכה למתמודדי טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-4d3d69",
+  "name": "'מים חיים' – סדנת שחייה לשורדי הנובה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-985b93",
+  "name": "בוחרים בחיים – 'מעגנת הבית' שייט טיפולי להלומי קרב",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-5613699",
+   "03-7619056"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-225e7f",
+  "name": "הגל שלי – גלישה טיפולית ללוחמים",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "hagalsheli-co-il-4025b1",
+  "name": "הגל שלי – גלישה טיפולית לנפגעי פוסט טראומה (HaGal Sheli / My Wave)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "03-6029293"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-a67a33",
+  "name": "הסירה שטה – שיט טיפולי לנפגעי פוסט טראומה (אתגרים)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-5d40b9",
+  "name": "טיפול ימי במימון אגף השיקום – תוכנית 'נפש אחת' (משרד הביטחון)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "03-6029293"
+  ],
+  "ok": false
+ },
+ {
+  "id": "yamtov-com-79f4ce",
+  "name": "ימטוב – גלישה ושיט טיפולי ללוחמים (YamTov)",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "website לא נגיש (429)",
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "website_status": 429,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "s-aef511",
+  "name": "קורסי צלילה וצלילה חופשית באילת לנפגעי טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (403)",
+   "אין אף עמוד נגיש לאימות"
+  ],
+  "source_url_status": 403,
+  "ok": false
+ },
+ {
+  "id": "s-52b530",
+  "name": "AMPHA – מדיקל קר וסדנת InHeal",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": false
+ },
+ {
+  "id": "brothersin-yoga-2335d6",
+  "name": "אחים ביוגה – יוגה רגישת טראומה ללוחמים (Brothers in Yoga)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "website_status": 200,
+  "phones_on_page": [
+   "050-2688240",
+   "050-341-2349",
+   "052-397-0287",
+   "058-552-5234"
+  ],
+  "ok": true
+ },
+ {
+  "id": "s-51f33e",
+  "name": "אחים ואחיות ליוגה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-b85612",
+  "name": "אחים ליוגה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-4ce228",
+  "name": "טיפולי רפואה משלימה למילואימניקים – לאומית שירותי בריאות",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-890574",
+  "name": "טיפולים אלטרנטיביים לנפגעי פעולות איבה עם פוסט טראומה (נפש אחת) – ביטוח לאומי",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345",
+   "1-800-363-363"
+  ],
+  "ok": true
+ },
+ {
+  "id": "natal-org-il-b9297c",
+  "name": "נט\"ל – תוכנית יוגה לנשים בעוטף עזה",
+  "checked_at": "2026-10-07",
+  "issues": [
+   "source_url לא נגיש (404)",
+   "שם הגוף לא מופיע בעמוד"
+  ],
+  "source_url_status": 404,
+  "website_status": 200,
+  "phones_on_page": [
+   "*3362"
+  ],
+  "ok": false
+ },
+ {
+  "id": "s-2c0e2a",
+  "name": "סל טיפולים משלימים (אלטרנטיביים) לנכים עם פוסט טראומה",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "source_url_redirect": "https://www.hon.co.il/%d7%a8%d7%a4%d7%95%d7%a8%d7%9e%d7%aa-%d7%a0%d7%a4%d7%a9-%d7%90%d7%97%d7%aa-%d7%90%d7%92%d7%a3-%d7%94%d7%a9%d7%99%d7%a7%d7%95%d7%9d-%d7%99%d7%a2%d7%a0%d7%99%d7%a7-%d7%9c%d7%a0%d7%9b%d7%99-%d7%a6/",
+  "phones_on_page": [],
+  "ok": true
+ },
+ {
+  "id": "s-f3200d",
+  "name": "קבוצת טיפול בתנועה לנשים נפגעות הלם קרב (ביטוח לאומי – קהילה)",
+  "checked_at": "2026-10-07",
+  "issues": [],
+  "source_url_status": 200,
+  "phones_on_page": [
+   "*6050",
+   "04-8812345"
+  ],
+  "ok": true
+ }
+]
