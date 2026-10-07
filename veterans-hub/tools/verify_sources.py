@@ -55,7 +55,28 @@ def fetch(url):
     if not re.match(r"https?://", url):
         url = "https://" + url
     url = urllib.parse.quote(url, safe=":/?&=%#+@,;~!$'()*[]")
-    return _get(url)
+    status, final, body = _get(url)
+    # אתר אגף השיקום מרנדר את הטקסט ב-JavaScript; התוכן עצמו זמין ב-API של האתר לפי pageId
+    m = re.search(r'"pageId":(\d+)', body)
+    if m and "shikum" in (final or url):
+        base = re.match(r"https?://[^/]+", final or url).group(0)
+        _, _, api = _get(f"{base}/api/Umbraco/getDynamicPage/?pageId={m.group(1)}")
+        try:
+            vals = []
+            def walk(o):
+                if isinstance(o, dict):
+                    for v in o.values():
+                        walk(v)
+                elif isinstance(o, list):
+                    for v in o:
+                        walk(v)
+                elif isinstance(o, str):
+                    vals.append(o)
+            walk(json.loads(api))
+            body += "\n" + " ".join(vals)
+        except ValueError:
+            pass
+    return status, final, body
 
 
 def to_text(body):
