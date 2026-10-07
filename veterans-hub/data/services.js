@@ -464,6 +464,41 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "zeffy-com-b960ba",
+  "name": "Pawz 4 Heroes – כלבי שירות ללוחמים פצועים",
+  "category": "animal-therapy",
+  "description": "עמותה אמריקאית שהקים מאלף כלבים ישראלי יוצא צה\"ל, המאמנת כלבים מבתי מחסה ככלבי שירות וכלבי טיפול ומעבירה אותם ללוחמים פצועים בישראל ובארה\"ב ולנפגעי טרור. הפעילות בישראל נעשית בשיתוף בית ספר לאילוף כלבים בישראל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-recognized",
+   "reservists",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי העמותה, הכלבים ניתנים ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.zeffy.com/en-US/organizations/pawz4heroes-inc",
+  "how_to_apply": "פנייה לעמותה דרך דף העמותה",
+  "source_url": "https://gotowncrier.com/?p=830156",
+  "confidence": "low",
+  "reviewed_at": "",
+  "verified_at": ""
+ },
+ {
   "id": "s-7acfcf",
   "name": "אחים של יונתן – פרויקט 'מעבר לטראומה' (Brothers of Jonathan)",
   "category": "animal-therapy",
@@ -2405,6 +2440,41 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "israelgives-org-625fcb",
+  "name": "עמותת הלומי קרב בישראל (ע\"ר 580651271)",
+  "category": "financial-grants",
+  "description": "עמותה רשומה המסייעת להלומי קרב ולנפגעי פוסט טראומה על רקע שירות. מעניקה סיוע כלכלי, תרופות, הסעות לטיפולים, מזון וסיוע נוסף לפי בקשה, ופועלת גם בהסברה ובמאבק למען זכויות הלומי הקרב.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "סיוע ללא עלות למקבלים; העמותה ממומנת מתרומות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://israelgives.org/amuta/580651271",
+  "how_to_apply": "פנייה לעמותה דרך פרטי הקשר בדף העמותה ב-IsraelGives או ב-GuideStar (מספר עמותה 580651271)",
+  "source_url": "https://israelgives.org/amuta/580651271",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "verified_at": ""
+ },
+ {
   "id": "s-677d83",
   "name": "פיצוי לעצמאים משרתי מילואים – רשות המסים",
   "category": "financial-grants",
@@ -2911,6 +2981,40 @@ window.SERVICES = [
   "how_to_apply": "הפניה דרך בית החולים המאשפז, אגף השיקום או קופת החולים.",
   "source_url": "https://www.maariv.co.il/news/military/Article-1070989",
   "confidence": "medium",
+  "reviewed_at": "",
+  "verified_at": ""
+ },
+ {
+  "id": "moya-cbd-com-e1d0da",
+  "name": "Moya CBD",
+  "category": "medical-rehab",
+  "description": "חברה ישראלית למכירת מוצרי CBD עם שירות בעברית ומשלוחים בישראל. מוצרי CBD אינם קנאביס רפואי מרשמי; מומלץ להתייעץ עם רופא לפני שימוש.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "paid",
+  "cost_notes": "מוצרים בתשלום",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://moya-cbd.com",
+  "how_to_apply": "הזמנה דרך האתר",
+  "source_url": "https://electric-selenium-6f9.notion.site/CBD-1f4bf84cf7d280ee8b1bd55bde0e0ae1",
+  "confidence": "low",
   "reviewed_at": "",
   "verified_at": ""
  },
@@ -4283,6 +4387,44 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "israel-stellacenter-com-356694",
+  "name": "סטלה ישראל (Stella) – טיפול SGB לפוסט טראומה",
+  "category": "mental-health",
+  "description": "מרכז פרטי המציע טיפול SGB (חסימת הגנגליון הכוכבי) – הזרקת חומר הרדמה מקומי לצוואר בהנחיית אולטרסאונד, שמטרתה להפחית את פעילות היתר של מערכת 'הילחם או ברח'. הטיפול מיועד לבני 18 ומעלה שאובחנו עם PTSD; הרשת מתמחה בטיפול בלוחמים ויוצאי צבא.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "לפי דיווח, משרדי הבריאות והביטחון אינם מממנים את הטיפול; סטלה ישראל סבסדה טיפולים באמצעות שותפויות פילנתרופיות. יש לברר מול המרכז את המצב העדכני.",
+  "regions": [
+   "center"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://israel.stellacenter.com",
+  "how_to_apply": "פנייה דרך אתר סטלה ישראל לתיאום הערכה",
+  "source_url": "https://www.maariv.co.il/news/health/article-1246296",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "verified_at": ""
+ },
+ {
   "id": "s-bfaaca",
   "name": "סיוע לנפגעי חרדה עקב פעולת איבה – ביטוח לאומי",
   "category": "mental-health",
@@ -4631,6 +4773,41 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "s-8c9628",
+  "name": "מעגל של דוד (David's Circle) – מרחב החלמה בקופנגן, תאילנד",
+  "category": "nature-retreats",
+  "description": "מרחב תמיכה לא-קליני באי קופנגן בתאילנד, שהוקם לזכרו של דוד ניומן, לישראלים צעירים שחוו טראומה – שורדי הנובה ולוחמי מילואים צעירים. בראשו עומדת מטפלת בטראומה, והוא מציע מעגלי שיתוף וליווי רגשי בסביבה מרוחקת.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "reservists",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "spiritual",
+   "travel"
+  ],
+  "cost": "partial",
+  "cost_notes": "עלות הטיסה והשהייה בתאילנד אינה מפורטת במקורות; יש לברר",
+  "regions": [],
+  "location": "קופנגן, תאילנד",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לא נמצא אתר רשמי; פרטים בכתבות",
+  "source_url": "https://cris.bgu.ac.il/en/publications/the-war-induced-impact-of-trauma-israelis-aon-qualitative-examina/",
+  "confidence": "low",
+  "reviewed_at": "",
+  "verified_at": ""
+ },
+ {
   "id": "s-94ba7f",
   "name": "ריפוי בטבע (Healing in Nature)",
   "category": "nature-retreats",
@@ -4776,6 +4953,42 @@ window.SERVICES = [
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "inz-org-il-7a3d4b",
+  "name": "אחיעד – קבוצות תמיכה להלומי קרב (ארגון נכי צה\"ל)",
+  "category": "peer-support",
+  "description": "קבוצות עמיתים של ארגון נכי צה\"ל לנכי צה\"ל המתמודדים עם פוסט טראומה. הקבוצות נפגשות באופן קבוע ומקיימות גם פעילויות משותפות ויציאות לפריקת לחץ, למשל קבוצת אחיעד ירושלים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "לחברי ארגון נכי צה\"ל",
+  "regions": [
+   "jerusalem",
+   "nationwide"
+  ],
+  "location": "סניפי ארגון נכי צה\"ל",
+  "phone": "03-6461600",
+  "email": "irgun@inz.org.il",
+  "website": "https://www.inz.org.il",
+  "how_to_apply": "פנייה לארגון נכי צה\"ל או לסניף האזורי",
+  "source_url": "https://www.inz.org.il/wp-content/uploads/2020/10/yedion-october_2020.pdf",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "verified_at": ""
  },
  {
   "id": "inz-org-il-a865b4",
@@ -5822,6 +6035,40 @@ window.SERVICES = [
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "shikum-mod-gov-il-bdc027",
+  "name": "מערך תל\"ם – תמיכה, ליווי ומיצוי זכויות (אגף השיקום ואגף כוח אדם בצה\"ל)",
+  "category": "rights-legal",
+  "description": "מערך של קציני מילואים שהוכשרו לליווי אישי של פצועי צה\"ל וכוחות הביטחון לאחר שחרורם מאשפוז מלא. המלווים מסייעים במיצוי זכויות, בחזרה הביתה ובהשלמת הליווי של אגף השיקום ברוח 'שיקום לפני בירוקרטיה'.",
+  "provider_type": "government",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "שירות ממשלתי ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/about/harvot-barzel/telem",
+  "how_to_apply": "דרך אגף השיקום במשרד הביטחון / קצין השיקום המטפל",
+  "source_url": "https://news.walla.co.il/item/3722630",
+  "confidence": "high",
+  "reviewed_at": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-45dfba",

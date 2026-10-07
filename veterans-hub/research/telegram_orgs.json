@@ -1,0 +1,228 @@
+[
+ {
+  "name": "עמותת הלומי קרב בישראל (ע\"ר 580651271)",
+  "category": "financial-grants",
+  "description": "עמותה רשומה המסייעת להלומי קרב ולנפגעי פוסט טראומה על רקע שירות. מעניקה סיוע כלכלי, תרופות, הסעות לטיפולים, מזון וסיוע נוסף לפי בקשה, ופועלת גם בהסברה ובמאבק למען זכויות הלומי הקרב.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "combat-soldiers",
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "financial",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "סיוע ללא עלות למקבלים; העמותה ממומנת מתרומות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://israelgives.org/amuta/580651271",
+  "how_to_apply": "פנייה לעמותה דרך פרטי הקשר בדף העמותה ב-IsraelGives או ב-GuideStar (מספר עמותה 580651271)",
+  "source_url": "https://israelgives.org/amuta/580651271",
+  "confidence": "medium"
+ },
+ {
+  "name": "אחיעד – קבוצות תמיכה להלומי קרב (ארגון נכי צה\"ל)",
+  "category": "peer-support",
+  "description": "קבוצות עמיתים של ארגון נכי צה\"ל לנכי צה\"ל המתמודדים עם פוסט טראומה. הקבוצות נפגשות באופן קבוע ומקיימות גם פעילויות משותפות ויציאות לפריקת לחץ, למשל קבוצת אחיעד ירושלים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "לחברי ארגון נכי צה\"ל",
+  "regions": [
+   "nationwide",
+   "jerusalem"
+  ],
+  "location": "סניפי ארגון נכי צה\"ל",
+  "phone": "03-6461600",
+  "email": "irgun@inz.org.il",
+  "website": "https://www.inz.org.il",
+  "how_to_apply": "פנייה לארגון נכי צה\"ל או לסניף האזורי",
+  "source_url": "https://www.inz.org.il/wp-content/uploads/2020/10/yedion-october_2020.pdf",
+  "confidence": "medium"
+ },
+ {
+  "name": "מערך תל\"ם – תמיכה, ליווי ומיצוי זכויות (אגף השיקום ואגף כוח אדם בצה\"ל)",
+  "category": "rights-legal",
+  "description": "מערך של קציני מילואים שהוכשרו לליווי אישי של פצועי צה\"ל וכוחות הביטחון לאחר שחרורם מאשפוז מלא. המלווים מסייעים במיצוי זכויות, בחזרה הביתה ובהשלמת הליווי של אגף השיקום ברוח 'שיקום לפני בירוקרטיה'.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "שירות ממשלתי ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/about/harvot-barzel/telem",
+  "how_to_apply": "דרך אגף השיקום במשרד הביטחון / קצין השיקום המטפל",
+  "source_url": "https://news.walla.co.il/item/3722630",
+  "confidence": "high"
+ },
+ {
+  "name": "סטלה ישראל (Stella) – טיפול SGB לפוסט טראומה",
+  "category": "mental-health",
+  "description": "מרכז פרטי המציע טיפול SGB (חסימת הגנגליון הכוכבי) – הזרקת חומר הרדמה מקומי לצוואר בהנחיית אולטרסאונד, שמטרתה להפחית את פעילות היתר של מערכת 'הילחם או ברח'. הטיפול מיועד לבני 18 ומעלה שאובחנו עם PTSD; הרשת מתמחה בטיפול בלוחמים ויוצאי צבא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "security-forces",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "depression"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "לפי דיווח, משרדי הבריאות והביטחון אינם מממנים את הטיפול; סטלה ישראל סבסדה טיפולים באמצעות שותפויות פילנתרופיות. יש לברר מול המרכז את המצב העדכני.",
+  "regions": [
+   "center"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://israel.stellacenter.com",
+  "how_to_apply": "פנייה דרך אתר סטלה ישראל לתיאום הערכה",
+  "source_url": "https://www.maariv.co.il/news/health/article-1246296",
+  "confidence": "medium"
+ },
+ {
+  "name": "Pawz 4 Heroes – כלבי שירות ללוחמים פצועים",
+  "category": "animal-therapy",
+  "description": "עמותה אמריקאית שהקים מאלף כלבים ישראלי יוצא צה\"ל, המאמנת כלבים מבתי מחסה ככלבי שירות וכלבי טיפול ומעבירה אותם ללוחמים פצועים בישראל ובארה\"ב ולנפגעי טרור. הפעילות בישראל נעשית בשיתוף בית ספר לאילוף כלבים בישראל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "combat-soldiers",
+   "reservists",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי העמותה, הכלבים ניתנים ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.zeffy.com/en-US/organizations/pawz4heroes-inc",
+  "how_to_apply": "פנייה לעמותה דרך דף העמותה",
+  "source_url": "https://gotowncrier.com/?p=830156",
+  "confidence": "low"
+ },
+ {
+  "name": "מעגל של דוד (David's Circle) – מרחב החלמה בקופנגן, תאילנד",
+  "category": "nature-retreats",
+  "description": "מרחב תמיכה לא-קליני באי קופנגן בתאילנד, שהוקם לזכרו של דוד ניומן, לישראלים צעירים שחוו טראומה – שורדי הנובה ולוחמי מילואים צעירים. בראשו עומדת מטפלת בטראומה, והוא מציע מעגלי שיתוף וליווי רגשי בסביבה מרוחקת.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "spiritual",
+   "travel"
+  ],
+  "cost": "partial",
+  "cost_notes": "עלות הטיסה והשהייה בתאילנד אינה מפורטת במקורות; יש לברר",
+  "regions": [],
+  "location": "קופנגן, תאילנד",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לא נמצא אתר רשמי; פרטים בכתבות",
+  "source_url": "https://cris.bgu.ac.il/en/publications/the-war-induced-impact-of-trauma-israelis-aon-qualitative-examina/",
+  "confidence": "low"
+ },
+ {
+  "name": "Moya CBD",
+  "category": "medical-rehab",
+  "description": "חברה ישראלית למכירת מוצרי CBD עם שירות בעברית ומשלוחים בישראל. מוצרי CBD אינם קנאביס רפואי מרשמי; מומלץ להתייעץ עם רופא לפני שימוש.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "reservists",
+   "combat-soldiers",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "sleep",
+   "anxiety",
+   "chronic-pain"
+  ],
+  "interests": [],
+  "cost": "paid",
+  "cost_notes": "מוצרים בתשלום",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://moya-cbd.com",
+  "how_to_apply": "הזמנה דרך האתר",
+  "source_url": "https://electric-selenium-6f9.notion.site/CBD-1f4bf84cf7d280ee8b1bd55bde0e0ae1",
+  "confidence": "low"
+ }
+]
