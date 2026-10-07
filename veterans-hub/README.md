@@ -29,7 +29,7 @@ python3 -m http.server 8000
 ## אירוח ושרת (Cloudflare Workers + D1, חינמי)
 
 האתר רץ כ-Worker עם קבצים סטטיים (`worker.js`, `wrangler.jsonc`). ב-Workers & Pages ← Create application ← GitHub:
-שם `magia-lecha`, Root directory `veterans-hub`, Deploy `npx wrangler deploy`. אפשר גם כ-Pages (התיקייה `functions/` עובדת שם כמו שהיא):
+שם `magia-lecha`, Root directory `veterans-hub`, Deploy `npx wrangler deploy`, Branch control: `ccr-d452e790-ntiise`. אפשר גם כ-Pages (התיקייה `functions/` עובדת שם כמו שהיא):
 
 1. **Pages:** Workers & Pages ← Create ← Pages ← Connect to Git ← המאגר.
    Root directory: `veterans-hub` · Build command: `sh tools/build_site.sh` · Build output: `dist`.
