@@ -5,5 +5,5 @@
 window.APP_CONFIG = {
   apiBase: "",
   siteUrl: "https://magia-lecha.idomayraz.workers.dev",
-  turnstileSiteKey: ""
+  turnstileSiteKey: "0x4AAAAAAFQqvLC4WbtkKz4o"
 };
