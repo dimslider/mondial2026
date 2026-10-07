@@ -135,5 +135,67 @@
   "source_url": "https://www.icej.org/blog/icej-funds-new-trauma-recovery-home-for-israelis-in-galilee/",
   "confidence": "low",
   "_from": "new_homes"
+ },
+ {
+  "name": "מרכז השיקום של המרכז הרפואי שיבא",
+  "category": "medical-rehab",
+  "description": "בית החולים לשיקום של המרכז הרפואי שיבא בתל השומר, המציע שירותי שיקום אשפוזיים ואמבולטוריים, כולל תוכניות שיקום מרחוק. המרכז מטפל בין היתר בפצועי צה\"ל וכוחות הביטחון.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "security-forces",
+   "civilians"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "amputation",
+   "tbi",
+   "chronic-pain"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "מימון לפי הזכאות (אגף השיקום או קופת חולים)",
+  "regions": [
+   "center"
+  ],
+  "location": "המרכז הרפואי שיבא, תל השומר",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.sheba.co.il",
+  "how_to_apply": "הפניה רפואית דרך הגורם המממן",
+  "source_url": "https://shikum.sheba.co.il/",
+  "confidence": "low",
+  "_from": "new_tgdomains"
+ },
+ {
+  "name": "מלגת התנדבות לסטודנטים נכי צה\"ל – אגף צעירים בסוכנות היהודית",
+  "category": "employment-education",
+  "description": "אגף הצעירים של הסוכנות היהודית פרסם קול קורא למלגת התנדבות לסטודנטים נכי צה\"ל. המלגה ניתנת בתמורה לפעילות התנדבותית בקהילה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "financial",
+   "employment"
+  ],
+  "interests": [
+   "volunteering",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "מלגה; גובה ותנאים לפי הקול הקורא העדכני",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://yad-jafi.org",
+  "how_to_apply": "לפי הקול הקורא באתר",
+  "source_url": "https://yad-jafi.org/2025/05/28/idf/",
+  "confidence": "low",
+  "_from": "new_tgdomains"
  }
 ]

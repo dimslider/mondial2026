@@ -83,6 +83,7 @@
     const el = arr(s.eligibility).filter(x => p.statuses.includes(x));
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
     if (s.confidence === "low") sc -= 1;
+    if (starred(s)) { sc += 1; why.push("מומלץ בקהילה"); }
     return { sc, why };
   }
   function match(p) {
@@ -105,6 +106,11 @@
   const HAND_LINE = `<svg class="hand-line" viewBox="0 0 24 400" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M12 0 C 4 40, 20 70, 12 110 C 4 150, 22 180, 12 220 C 2 260, 20 300, 12 340 C 6 370, 16 390, 12 400" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
   const WAVE = `<svg class="wave" viewBox="0 0 346 18" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M2 9 Q 22 1 43 9 T 86 9 T 129 9 T 172 9 T 215 9 T 258 9 T 301 9 T 344 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
   const TICK = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 13 C 7 15, 8 17, 10 19 C 13 13, 16 8, 21 4"/></svg>`;
+  // כוכב: כמה אנשים שונים מקהילת הנכים והלוחמים המליצו על השירות (מינימום 2 כדי שיוצג)
+  const STAR_MIN = 2;
+  const starred = s => (s.community_recs || 0) >= STAR_MIN;
+  const STAR = `<svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 C 12.8 7, 14 9.6, 21.5 10.2 C 16 13, 15.6 15, 17.6 21.5 C 13.8 18, 10.4 18, 6.4 21.5 C 8.4 15, 8 13, 2.5 10.2 C 10 9.6, 11.2 7, 12 2.5 Z"/></svg>`;
+  const starTag = s => starred(s) ? `<span class="star-tag">${STAR}מומלץ בקהילה</span>` : "";
   const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
 
   function chip(group, key, label, checked) {
@@ -121,7 +127,7 @@
           <h3>${esc(s.name)}</h3>
           <p class="teaser">${esc(shortDesc(s.description, 110))}</p>
           ${why && why.length ? `<span class="why">← ${esc(why[0])}</span>` : ""}
-          <span class="meta-line">${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
+          <span class="meta-line">${starTag(s)}${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
         </div>
         <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M15 4 C 11 8, 9 10, 8 12 C 10 14, 12 17, 15 20"/></svg>
       </article>`;
@@ -184,6 +190,7 @@
         ${top ? `
           <article class="sheet" style="margin-top: 16px">
             <span class="note highlight">${p ? "הכי מתאים לך" : "כדאי להתחיל כאן"} · ${esc(costLabel(top.cost))}</span>
+            ${starTag(top)}
             <h2>${esc(top.name)}</h2>
             <p class="clamp-2">${esc(shortDesc(top.description, 140))}</p>
             <div class="actions">
@@ -308,7 +315,7 @@
               const s = r.s;
               return `<li>
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
-                <div class="tag-row">${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
+                <div class="tag-row">${starTag(s)}${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
                 <h2 data-open="${esc(s.id)}" tabindex="0" role="button">${esc(s.name)}</h2>
                 <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
                 ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך").slice(0, 1).join("") || r.why[0])}</span>` : ""}
@@ -685,6 +692,7 @@
           <span class="verify">${s.verified_at ? "✓ נבדק " + esc(s.verified_at) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
         </div>
         <h2 id="modal-title">${esc(s.name)}</h2>
+        ${starred(s) ? `<p class="community">${STAR}<span><strong>${s.community_recs} אנשים מהקהילה המליצו</strong>${s.community_note ? " · " + esc(s.community_note) : ""}</span></p>` : ""}
         <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
         ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
         ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${esc(s.cost_notes)}</span></p>` : ""}

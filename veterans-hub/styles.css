@@ -275,3 +275,7 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .folds-svc { margin-top: 18px; border-top: 2px dashed var(--ink); }
 .folds-svc .fold { border-bottom: 2px dashed var(--ink); }
 .read-more { margin-top: 4px; font-size: 15px; }
+.star-tag { display: inline-flex; align-items: center; gap: 4px; font-family: var(--hand); font-weight: 800; font-size: 13px; padding: 0 8px; border: 2px solid var(--ink); border-radius: var(--r-blob); background: var(--t-home); color: var(--ink); }
+.star-tag .star { width: 13px; height: 13px; }
+.svc .community { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; padding: 8px 12px; background: var(--t-home); border: 2px solid var(--ink); border-radius: var(--r-hand); font-size: 15px; color: #151515; }
+.svc .community .star { flex: none; margin-top: 2px; }

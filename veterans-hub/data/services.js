@@ -32,6 +32,8 @@ window.SERVICES = [
   "source_url": "https://www.1202.org.il/education-and-trainings",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -65,6 +67,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/Pages/KavHeromHB.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -98,6 +102,8 @@ window.SERVICES = [
   "source_url": "https://www.clalit.co.il/he/myrights/mental-health/Pages/call-center.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -130,6 +136,8 @@ window.SERVICES = [
   "source_url": "https://www.leumit.co.il/mental-health-arena/mental-health-services/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -170,6 +178,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/contactus/helpline",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -200,6 +210,8 @@ window.SERVICES = [
   "source_url": "https://shikum-umb.mod.gov.il/media/0tzbkekn/haravot-barzel-guide-2024.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -234,6 +246,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/moked-harvot",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -267,6 +281,8 @@ window.SERVICES = [
   "source_url": "https://www.maccabi4u.co.il/eligibilites/2124/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -302,6 +318,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -343,6 +361,8 @@ window.SERVICES = [
   "source_url": "https://www.natal.org.il/%d7%a7%d7%95-%d7%94%d7%a1%d7%99%d7%95%d7%a2-%d7%a9%d7%9c-%d7%a0%d7%98%d7%9c/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -385,6 +405,8 @@ window.SERVICES = [
   "source_url": "https://sahar.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -428,6 +450,8 @@ window.SERVICES = [
   "source_url": "https://www.eran.org.il/online-emotional-help/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -461,6 +485,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/KavSiyua.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -496,6 +522,8 @@ window.SERVICES = [
   "source_url": "https://gotowncrier.com/?p=830156",
   "confidence": "low",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -533,6 +561,8 @@ window.SERVICES = [
   "source_url": "https://my.givingtech.org/en/fundme/BrothersOfJonathan_Oct_2024",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -568,6 +598,8 @@ window.SERVICES = [
   "source_url": "https://nocamels.com/2023/04/idf-veterans-best-friend-dogs-ease-pain-of-ptsd/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -604,6 +636,8 @@ window.SERVICES = [
   "source_url": "https://www.havayot-center.co.il/t-en-us/%D7%AA%D7%9B%D7%A0%D7%99%D7%95%D7%AA-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%95%D7%AA/%D7%A0%D7%9B%D7%99-%D7%A6%D7%94-%D7%9C-%D7%A0%D7%A4%D7%92%D7%A2%D7%99-%D7%98%D7%A8%D7%95%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%90%D7%99%D7%91%D7%94-%D7%95%D7%9E%D7%A9%D7%A4%D7%97%D7%95%D7%AA%D7%99%D7%94%D7%9D",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -640,6 +674,8 @@ window.SERVICES = [
   "source_url": "https://israelguidedog.org/ptsd-service-dogs/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -674,6 +710,8 @@ window.SERVICES = [
   "source_url": "https://israelguidedog.org/emotional-support-dogs/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -708,6 +746,8 @@ window.SERVICES = [
   "source_url": "https://photoisrael.org/%D7%97%D7%93%D7%A9%D7%95%D7%AA/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -742,6 +782,8 @@ window.SERVICES = [
   "source_url": "https://www.sos-israel.org/registerforcourses",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -779,6 +821,8 @@ window.SERVICES = [
   "source_url": "https://www.icm.org.il/en/soulkey/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -820,6 +864,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -855,6 +901,8 @@ window.SERVICES = [
   "source_url": "https://projecthed.org/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -893,6 +941,8 @@ window.SERVICES = [
   "source_url": "https://zdvo.org/a-second-home-beit-halochem-centers/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -926,6 +976,8 @@ window.SERVICES = [
   "source_url": "https://www.levechad.org/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -957,6 +1009,8 @@ window.SERVICES = [
   "source_url": "https://www.study.co.il/P47361/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -989,6 +1043,8 @@ window.SERVICES = [
   "source_url": "https://www.jewishnews.co.uk/israeli-reservists-launch-150-startups-through-new-entrepreneurship-initiative/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1022,6 +1078,8 @@ window.SERVICES = [
   "source_url": "https://www.ice.co.il/career/news/article/1044081",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1053,6 +1111,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/israel/article-1169403",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1084,6 +1144,8 @@ window.SERVICES = [
   "source_url": "https://www.miluimtech.com/our-initiatives",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1115,6 +1177,8 @@ window.SERVICES = [
   "source_url": "https://www.biu.ac.il/article/311894",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1147,6 +1211,8 @@ window.SERVICES = [
   "source_url": "https://www.drushim.co.il/job/37650783/aeba30dc/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1181,6 +1247,8 @@ window.SERVICES = [
   "source_url": "https://sites.biu.ac.il/arazim-idf-veterans/page/10306",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1213,6 +1281,8 @@ window.SERVICES = [
   "source_url": "https://innovationisrael.org.il/en/press_release/reservists-ai-training/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1244,6 +1314,8 @@ window.SERVICES = [
   "source_url": "https://www.hachvana.mod.gov.il/ConsultationAndDirection/Consultation/Pages/default.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1276,6 +1348,8 @@ window.SERVICES = [
   "source_url": "https://innovationisrael.org.il/en/press_release/reservists-ai-training/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1307,6 +1381,8 @@ window.SERVICES = [
   "source_url": "https://shikum-umb.mod.gov.il/media/beueaclb/6001.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1338,6 +1414,8 @@ window.SERVICES = [
   "source_url": "https://www.netanya.ac.il/wp-content/uploads/2025/10/%D7%9E%D7%AA%D7%95%D7%95%D7%94-%D7%AA%D7%A9%D7%A4%D7%95-1.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1372,6 +1450,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/economy/israel/article-1091651",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1407,6 +1487,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/israel/article-1193939",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1440,6 +1522,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/military/article-1311901",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1472,6 +1556,8 @@ window.SERVICES = [
   "source_url": "https://mishpahot-hantzaha.mod.gov.il/studies-and-employment/studies-and-professional-training",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1503,6 +1589,8 @@ window.SERVICES = [
   "source_url": "https://dekanat.haifa.ac.il/student-services/scholarship-department/scholarship-types/other-financial-aid-scholarships/impact-program-scholarships-of-friends-of-the-idf-usa/?lang=en",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1534,6 +1622,8 @@ window.SERVICES = [
   "source_url": "https://www.jce.ac.il/wp-content/uploads/2025/10/תקנון-מלגת-גראס-מילואים-תשפו.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1566,6 +1656,8 @@ window.SERVICES = [
   "source_url": "https://www.study.co.il/P47538/",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1597,6 +1689,8 @@ window.SERVICES = [
   "source_url": "https://www.ice.co.il/consumerism/news/article/1124337",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1627,6 +1721,8 @@ window.SERVICES = [
   "source_url": "https://wgalil.ac.il/wp-content/uploads/2026/08/august_hot_scholarships.pdf",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1658,6 +1754,8 @@ window.SERVICES = [
   "source_url": "https://Afeka.ac.il/media/h4zb5zpc/%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9C%D7%9B%D7%9C%D7%9C%D7%99-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98-%D7%94%D7%95%D7%A8%D7%90%D7%AA-%D7%A9%D7%A2%D7%94-%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9Ccleanedcleaned.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1690,6 +1788,8 @@ window.SERVICES = [
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1729,6 +1829,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/trom",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1764,6 +1866,8 @@ window.SERVICES = [
   "source_url": "https://www.mako.co.il/pzm-soldiers/Article-cae7a07a3e3f381027.htm",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1800,6 +1904,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rehabilitation/study/tuition",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1831,6 +1937,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -1862,6 +1970,8 @@ window.SERVICES = [
   "source_url": "https://www.perach.org.il/%D7%A2%D7%9C-%D7%94%D7%9E%D7%9C%D7%92%D7%94",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1894,6 +2004,8 @@ window.SERVICES = [
   "source_url": "https://innovationisrael.org.il/en/press_release/innovation-authority-and-ministry-of-defense-launch-a-unique-10-million-nis-program-for-training-and-promoting-technological-entrepreneurship-for-reserve-and-discharged-soldiers/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1923,6 +2035,8 @@ window.SERVICES = [
   "source_url": "https://www.earlystarters.org.il/community-programs",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1953,6 +2067,8 @@ window.SERVICES = [
   "source_url": "https://www.aguda.co.il/services/%d7%aa%d7%9b%d7%a0%d7%99%d7%aa-%d7%aa%d7%95%d7%a9%d7%99%d7%99%d7%94-%d7%94%d7%a2%d7%a6%d7%9e%d7%94-%d7%95%d7%97%d7%95%d7%a1%d7%9f-%d7%9c%d7%9e%d7%a9%d7%a4%d7%97%d7%95%d7%aa-%d7%94%d7%9c%d7%95/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -1986,6 +2102,8 @@ window.SERVICES = [
   "source_url": "https://www.jewishagency.org/cornerstone-laid-for-major-israel-housing-expansion-project-2/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2024,6 +2142,8 @@ window.SERVICES = [
   "source_url": "https://onefamilytogether.org/en/about-us/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2057,6 +2177,8 @@ window.SERVICES = [
   "source_url": "https://jewishlink.news/our-family-first-supports-idf-reservist-families-under-wartime-strain/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2087,6 +2209,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/israel/article-1230840",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2125,6 +2249,8 @@ window.SERVICES = [
   "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/%d7%90%d7%99%d7%99%d7%a0%d7%92%d7%90%d7%a8-%d7%99%d7%95%d7%92%d7%94-%d7%9e%d7%95%d7%93%d7%a2%d7%aa-%d7%98%d7%a8%d7%90%d7%95%d7%9e%d7%94/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2159,6 +2285,8 @@ window.SERVICES = [
   "source_url": "https://www.idfwo.org/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2190,6 +2318,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%95%D7%AA%D7%99%D7%A8_%D7%90%D7%97%D7%A8%D7%99%D7%95_%D7%97%D7%91%D7%A8%D7%94",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2224,6 +2354,8 @@ window.SERVICES = [
   "source_url": "https://natureisrael.org/natureheals",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2259,6 +2391,8 @@ window.SERVICES = [
   "source_url": "https://vertigo.org.il/en/?p=20236",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2291,6 +2425,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/family/support/therapy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2324,6 +2460,8 @@ window.SERVICES = [
   "source_url": "https://yadlabanim.org/wp-content/uploads/2023/04/אגרת-מידע-לאחים-השכולים.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2363,6 +2501,8 @@ window.SERVICES = [
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%A2%D7%98%D7%A4%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D-%D7%A8%D7%92%D7%A9%D7%99%D7%99%D7%9D/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2397,6 +2537,8 @@ window.SERVICES = [
   "source_url": "https://www.natal.org.il/%d7%94%d7%99%d7%97%d7%99%d7%93%d7%94-%d7%94%d7%a7%d7%9c%d7%99%d7%a0%d7%99%d7%aa/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2428,6 +2570,8 @@ window.SERVICES = [
   "source_url": "https://www.timesofisrael.com/liveblog_entry/government-allocates-56-million-more-for-benefits-for-idf-reservists/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2458,6 +2602,8 @@ window.SERVICES = [
   "source_url": "https://www.kipa.co.il/כדאי-לדעת/1194386-0/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2490,6 +2636,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/israel/Article-1057094",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2527,6 +2675,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/israel/article-1316749",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2557,6 +2707,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/payments/debt",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2587,6 +2739,8 @@ window.SERVICES = [
   "source_url": "https://mishpahot-hantzaha.mod.gov.il/studies-and-employment/establishing-a-business",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2617,6 +2771,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/housing/discount/apartment-tax",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2648,6 +2804,8 @@ window.SERVICES = [
   "source_url": "https://www.jewishagency.org/il/miluim/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2683,6 +2841,8 @@ window.SERVICES = [
   "source_url": "https://yasharlachayal.org/therapy-for-soldiers-with-ptsd-2/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2718,6 +2878,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/hospitalization/service-dog",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2752,6 +2914,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2784,6 +2948,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2814,6 +2980,8 @@ window.SERVICES = [
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -2845,6 +3013,8 @@ window.SERVICES = [
   "source_url": "https://www.hachvana.mod.gov.il/ConsultationAndDirection/Pages/hazdaaClub.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2875,6 +3045,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C_%D7%A9%D7%94%D7%95%D7%90_%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%9D_%D7%A6%D7%A8%D7%9B%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2905,6 +3077,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/מענק_משפחה_מוגדל_למי_ששירתו_בצו_8_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2937,6 +3111,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/סיוע_במימון_טיפולים_אישיים_ומשפחתיים_למשרתי_מילואים_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -2968,6 +3144,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Casualties_benefits/%D7%94%D7%98%D7%91%D7%95%D7%AA%20%D7%95%D7%9E%D7%A2%D7%A0%D7%A7%D7%99%D7%9D/Pages/%D7%A1%D7%99%D7%95%D7%A2%20%D7%91%D7%A8%D7%9B%D7%99%D7%A9%D7%AA%20%D7%A8%D7%9B%D7%91%20%D7%A8%D7%A4%D7%95%D7%90%D7%99.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3003,6 +3181,8 @@ window.SERVICES = [
   "source_url": "https://israelgives.org/amuta/580651271",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3032,6 +3212,8 @@ window.SERVICES = [
   "source_url": "https://finance.walla.co.il/item/3682332",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3065,6 +3247,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנפגעי_פעולות_איבה_עם_פוסט_טראומה",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3101,7 +3285,40 @@ window.SERVICES = [
   "source_url": "https://www.paamonim.org/he/%d7%a9%d7%a2%d7%aa-%d7%97%d7%99%d7%a8%d7%95%d7%9d/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "ogen-org-9f492f",
+  "name": "קרן המילואים של עוגן – הלוואות לעסקים של משרתי מילואים",
+  "category": "financial-grants",
+  "description": "עוגן, גוף אשראי חברתי ללא מטרות רווח, השיק קרן הלוואות לעסקים קטנים ולעצמאים בבעלות משרתי מילואים. ההלוואות ניתנות בריבית מסובסדת, לצד הלוואות ללא ריבית למשקי בית ותוכניות מנטורינג לבעלי עסקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "לפי פרסום: הלוואות עד 650 אלף ש\"ח בריבית פריים מינוס 2% לחמש שנים; התנאים עשויים להשתנות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://ogen.org",
+  "how_to_apply": "הגשת בקשה דרך אתר עוגן",
+  "source_url": "https://www.funder.co.il/article/163816",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "miluim-idf-il-c6491b",
@@ -3133,6 +3350,8 @@ window.SERVICES = [
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%A7%D7%A8%D7%9F-%D7%94%D7%A1%D7%99%D7%95%D7%A2-%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA%D7%99-%D7%94%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3165,6 +3384,8 @@ window.SERVICES = [
   "source_url": "https://michaellevinlonesoldier.org/about-us",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3195,6 +3416,8 @@ window.SERVICES = [
   "source_url": "https://www.israelhayom.co.il/military-life/article/19152146",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3224,6 +3447,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/KizbeotHB/MiloeimHB/Pages/MsrtimMiloeim.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3255,6 +3480,8 @@ window.SERVICES = [
   "source_url": "https://www.mako.co.il/news-military/2026_q1/Article-536d6736f0ecb91026.htm",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3285,6 +3512,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3317,6 +3546,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/housing/renovation",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3349,6 +3580,8 @@ window.SERVICES = [
   "source_url": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3383,6 +3616,8 @@ window.SERVICES = [
   "source_url": "https://www.inn.co.il/news/281456",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3412,7 +3647,41 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/housing/renting-apartments",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "idf-nadlan-co-il-8e6257",
+  "name": "מועדון הנדל\"ן והפיננסים של פצועי צה\"ל",
+  "category": "housing-daily",
+  "description": "מועדון שהקימו שני פצועי צה\"ל, אלירן קטש ושקד רוזנברג, המעניק לפצועי צה\"ל כלים לרכישת דירה, השקעות ובניית עתיד כלכלי. המועדון מציע מדריכים, פרויקטים בתנאים לחברים ושיתוף פעולה עם בנק לאומי.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "partial",
+  "cost_notes": "מסגרת מסחרית; רכישת דירות והלוואות בתשלום. לפי פרסום, חברים שמצטרפים כלקוחות בנק לאומי מקבלים הלוואה בתנאים מיוחדים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://idf-nadlan.co.il",
+  "how_to_apply": "פנייה דרך עמוד צור קשר באתר",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1341181",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "s-f2f87a",
@@ -3442,6 +3711,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/מענק_לנכי_צה%22ל_וכוחות_הביטחון_ששוכרים_דירה_בדיור_הציבורי",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3474,6 +3745,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/housing/buying/exchange",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3504,6 +3777,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/housing/buying/first",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3543,6 +3818,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/military/Article-1070989",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3577,6 +3854,8 @@ window.SERVICES = [
   "source_url": "https://electric-selenium-6f9.notion.site/CBD-1f4bf84cf7d280ee8b1bd55bde0e0ae1",
   "confidence": "low",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3614,6 +3893,8 @@ window.SERVICES = [
   "source_url": "https://hospitals.clalit.co.il/loewenstein/he/Pages/default.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3649,6 +3930,8 @@ window.SERVICES = [
   "source_url": "https://www.shikumil.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3679,6 +3962,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/transportation/medical-vehicle/examination",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3708,6 +3993,8 @@ window.SERVICES = [
   "source_url": "https://www.brainsway.com/?p=14182",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3741,6 +4028,8 @@ window.SERVICES = [
   "source_url": "https://shamirfriends.shamir.org/en/proj/the-center-for-ptsd-treatment/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3777,6 +4066,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/מילבת",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3814,6 +4105,8 @@ window.SERVICES = [
   "source_url": "https://hadassahinternational.org/hadassah-medical-organization-opens-new-advanced-rehabilitation-center-in-israel/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3850,6 +4143,8 @@ window.SERVICES = [
   "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/rehabilitation/rehabilitation-basket/about/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3884,6 +4179,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/health/article-1300676",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -3914,6 +4211,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/medicine/cannabis-buy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3948,6 +4247,8 @@ window.SERVICES = [
   "source_url": "https://www.gov.il/he/service/cannabis-ptsd",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -3981,6 +4282,8 @@ window.SERVICES = [
   "source_url": "https://www.reuth.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4012,6 +4315,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/equipment/prostheses",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4042,6 +4347,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/תותבות_יד_ורגל_לנפגעי_פעולות_איבה_קטועי_גפיים",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4077,6 +4384,8 @@ window.SERVICES = [
   "source_url": "https://seven-plus.org.il/%d7%90%d7%95%d7%93%d7%95%d7%aa/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4110,6 +4419,8 @@ window.SERVICES = [
   "source_url": "https://www.crossroadsjerusalem.org/programs-services/israeli-warrior-wellness-program/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4141,6 +4452,8 @@ window.SERVICES = [
   "source_url": "https://www.crossroadsjerusalem.org/mental-wellness-on-the-move/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4176,6 +4489,8 @@ window.SERVICES = [
   "source_url": "https://ica.org.il/adult-clinic",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4209,7 +4524,86 @@ window.SERVICES = [
   "source_url": "https://www.inheal.org/inheal-%d7%a1%d7%93%d7%a0%d7%aa-%d7%9e%d7%aa%d7%97%d7%99%d7%9c%d7%99%d7%9d-%d7%9e%d7%97%d7%93%d7%a9-%d7%9c%d7%97%d7%99%d7%99%d7%9c%d7%99-%d7%95%d7%97%d7%99%d7%99%d7%9c%d7%95%d7%aa-%d7%9e%d7%99/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "rising-heroes-org-2a53a6",
+  "name": "Rising Heroes – ריטריטים ותמיכה מותאמת טראומה ללוחמים",
+  "category": "mental-health",
+  "description": "ארגון ללא מטרות רווח המעניק תמיכה מותאמת טראומה ללוחמים ולאזרחים בישראל. הפעילות כוללת ריטריטים מותאמים, טיפול קליני, חיזוק לכידות צוותית ותוכניות התאוששות מתמשכות, במטרה למנוע פגיעה נפשית ארוכת טווח ולבנות חוסן.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ארגון הממומן מתרומות; יש לברר את תנאי ההשתתפות מול הארגון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://rising-heroes.org",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://www.rising-heroes.org/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
+  "id": "bait-bateva-co-il-c511d0",
+  "name": "בית מאזן בטבע – קיבוץ מטע",
+  "category": "mental-health",
+  "description": "בית טיפולי קהילתי בקיבוץ מטע, המתמחה בטיפול בפוסט טראומה כולל טראומת קרב ונפגעי פעולות איבה. הבית משמש חלופה לאשפוז פסיכיאטרי ומסגרת שיקומית, עם צוות פסיכיאטרים, פסיכולוגים ועובדים סוציאליים ושיטות כמו EMDR ו-CBT.",
+  "provider_type": "private",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists",
+   "security-forces",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "לפי האתר, ללא תשלום לזכאי אגף השיקום; בפיקוח משרד הבריאות",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "קיבוץ מטע, סמוך לצור הדסה ובית שמש",
+  "phone": "",
+  "email": "",
+  "website": "https://bait-bateva.co.il",
+  "how_to_apply": "לפי הליך הקליטה המפורט באתר",
+  "source_url": "https://bait-bateva.co.il/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-a17284",
@@ -4240,6 +4634,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/updates/3692",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -4271,6 +4667,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -4303,6 +4701,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/military/article-953472",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -4336,6 +4736,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/בית_מאזן_עבור_מתמודדי_נפש",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -4368,6 +4770,8 @@ window.SERVICES = [
   "source_url": "https://www.kipa.co.il/חדשות/1127250-0/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -4406,6 +4810,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/ContactUs/CombatResponse",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4439,6 +4845,8 @@ window.SERVICES = [
   "source_url": "https://icc.haifa.ac.il/%d7%94%d7%9e%d7%9b%d7%95%d7%9f-%d7%9c%d7%a4%d7%a1%d7%99%d7%9b%d7%95%d7%aa%d7%a8%d7%a4%d7%99%d7%94/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4474,6 +4882,8 @@ window.SERVICES = [
   "source_url": "https://israeltraumacoalition.org/%d7%9e%d7%a8%d7%9b%d7%96%d7%99-%d7%97%d7%95%d7%a1%d7%9f/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4509,6 +4919,8 @@ window.SERVICES = [
   "source_url": "https://socsci4.tau.ac.il/mu2/nc-tsr-heb/treatment/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4540,6 +4952,8 @@ window.SERVICES = [
   "source_url": "https://zaka.org.il/news/17-07-26/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4569,6 +4983,8 @@ window.SERVICES = [
   "source_url": "https://psychotherapy.haifa.ac.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4604,6 +5020,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/mental-treatment",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4643,6 +5061,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/treatment/therapy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4678,6 +5098,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/HtofimHazro/Pages/TipolNafsi.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4712,6 +5134,8 @@ window.SERVICES = [
   "source_url": "https://www.meuhedet.co.il/en/customer-information/mental-health-services",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4750,6 +5174,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4785,6 +5211,8 @@ window.SERVICES = [
   "source_url": "https://metiv.org/%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%9d-%d7%9c%d7%9c%d7%90-%d7%a2%d7%9c%d7%95%d7%aa-%d7%93%d7%a8%d7%9a-%d7%9e%d7%98%d7%99%d7%91/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4823,6 +5251,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/treatment/therapy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4859,6 +5289,8 @@ window.SERVICES = [
   "source_url": "https://www.tasmc.org.il/unit-index-page/psychiatr/assif/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4894,6 +5326,8 @@ window.SERVICES = [
   "source_url": "https://lonesoldiercenter.com/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4927,6 +5361,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MercazeiOsenDaromHB.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4960,6 +5396,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MercazeiOsenDaromHB.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -4992,6 +5430,8 @@ window.SERVICES = [
   "source_url": "https://www.lev-hasharon.co.il/?clinic=%D7%9E%D7%A8%D7%9B%D7%96-%D7%A2%D7%95%D7%92%D7%9F-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%99%D7%95%D7%9D-%D7%9C%D7%A0%D7%A4%D7%92%D7%A2%D7%99-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -5028,6 +5468,8 @@ window.SERVICES = [
   "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/public-care/community-treatment/resilience-center/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5065,6 +5507,8 @@ window.SERVICES = [
   "source_url": "https://www.cohenveteransnetwork.org/wp-content/uploads/2025/12/2025-CVN-Israel-Clinic-Press-Release_CVN_FIDF_UJA_FINAL.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5105,6 +5549,8 @@ window.SERVICES = [
   "source_url": "https://www.natal.org.il/%d7%94%d7%99%d7%97%d7%99%d7%93%d7%94-%d7%94%d7%a7%d7%9c%d7%99%d7%a0%d7%99%d7%aa/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5138,6 +5584,8 @@ window.SERVICES = [
   "source_url": "https://metiv.org/sea-it-mdma/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5170,6 +5618,8 @@ window.SERVICES = [
   "source_url": "https://clinicaltrials.gov/study/NCT05732155",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5208,6 +5658,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/health/article-1246296",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -5241,6 +5693,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/MerkazeiSiua.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5275,6 +5729,8 @@ window.SERVICES = [
   "source_url": "https://ezermizion.org/mental-health-services/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5307,6 +5763,8 @@ window.SERVICES = [
   "source_url": "https://www.emdr.org.il/trauma-aid-mental-support/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5341,6 +5799,8 @@ window.SERVICES = [
   "source_url": "https://www.amcha.org/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5374,6 +5834,8 @@ window.SERVICES = [
   "source_url": "https://retorno.org.il/%d7%97%d7%95%d7%95%d7%aa-%d7%94%d7%97%d7%95%d7%a1%d7%9f/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5415,6 +5877,8 @@ window.SERVICES = [
   "source_url": "https://retorno.org/the-iron-hug-project-rehabilitation-center-for-soldiers/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5447,6 +5911,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/about/one-soul",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5486,6 +5952,8 @@ window.SERVICES = [
   "source_url": "https://apps.apple.com/il/app/%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA-%D7%A2%D7%9E%D7%99%D7%AA/id6692622144",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5522,6 +5990,8 @@ window.SERVICES = [
   "source_url": "https://www.bshvil.org/masa/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5556,6 +6026,8 @@ window.SERVICES = [
   "source_url": "https://natureisrael.org/natureheals",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5591,6 +6063,8 @@ window.SERVICES = [
   "source_url": "https://cris.bgu.ac.il/en/publications/the-war-induced-impact-of-trauma-israelis-aon-qualitative-examina/",
   "confidence": "low",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -5625,6 +6099,8 @@ window.SERVICES = [
   "source_url": "https://web.causematch.com/donate/healinginnature",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5659,6 +6135,8 @@ window.SERVICES = [
   "source_url": "https://www.jnf.org/ways-to-help/jnf-donor-societies/women-for-israel/on-the-ground-in-israel-jnf-usa-affiliates-respond-to-mental-health-and-resilience-needs",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5695,6 +6173,8 @@ window.SERVICES = [
   "source_url": "https://www.trauma4good.org/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5738,6 +6218,8 @@ window.SERVICES = [
   "source_url": "https://www.achimlachaim.org/%d7%90%d7%95%d7%93%d7%95%d7%aa%d7%99%d7%a0%d7%95/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5774,6 +6256,8 @@ window.SERVICES = [
   "source_url": "https://www.inz.org.il/wp-content/uploads/2020/10/yedion-october_2020.pdf",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -5813,7 +6297,49 @@ window.SERVICES = [
   "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "ha-gesher-co-il-81299b",
+  "name": "הגשר – פודקאסט וסדרה תיעודית על פוסט טראומה",
+  "category": "peer-support",
+  "description": "פודקאסט וסדרת רשת תיעודית ובה ראיונות עם אנשי כוחות הביטחון שנחשפו לאירועים טראומטיים ועם מומחי טראומה. הפרויקט, בהנחיית הדר כהן, מציג כלים מעשיים להתמודדות ופועל להפחתת הסטיגמה, ובאתר יש עמוד הפניות לגורמי סיוע.",
+  "provider_type": "private",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "loneliness",
+   "moral-injury",
+   "ptsd"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "תוכן חופשי להאזנה",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://ha-gesher.co.il",
+  "how_to_apply": "האזנה חופשית דרך האתר",
+  "source_url": "https://ha-gesher.co.il/about-us/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "israelgives-org-e1caeb",
@@ -5851,6 +6377,8 @@ window.SERVICES = [
   "source_url": "https://www.thejewishnews.com/community/cover-local-jewish-detroiters-partner-with-israel-heart2heart-to-support-idf-veterans-with-ptsd/article_25437d92-b503-49f9-be51-6dc246bb0295.html",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -5885,6 +6413,8 @@ window.SERVICES = [
   "source_url": "https://metiv.org/%d7%9e%d7%a1%d7%a2-%d7%a9%d7%97%d7%a8%d7%95%d7%a8/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5918,6 +6448,8 @@ window.SERVICES = [
   "source_url": "https://maglan.org/alumni-support-center/?lang=en",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5951,6 +6483,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/updates/6202",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -5985,6 +6519,8 @@ window.SERVICES = [
   "source_url": "https://www.kehilat-or.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6019,6 +6555,8 @@ window.SERVICES = [
   "source_url": "https://www.jns.org/organization/friends-of-duvdevan",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -6055,6 +6593,8 @@ window.SERVICES = [
   "source_url": "https://www.tribeofnova.com/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6088,6 +6628,8 @@ window.SERVICES = [
   "source_url": "https://www.nbn.org.il/lsp-resilience/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6126,6 +6668,8 @@ window.SERVICES = [
   "source_url": "https://www.goodpeoplefund.org/news/harvesting-healing/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -6163,6 +6707,8 @@ window.SERVICES = [
   "source_url": "https://www.terrauma.co.il/faq",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6200,6 +6746,8 @@ window.SERVICES = [
   "source_url": "https://dannysfarm.org.il/ptsd/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6232,6 +6780,8 @@ window.SERVICES = [
   "source_url": "https://my.israelgives.org/en/campaign/way",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6271,6 +6821,8 @@ window.SERVICES = [
   "source_url": "https://vertigo.org.il/shikum/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6313,6 +6865,8 @@ window.SERVICES = [
   "source_url": "https://jerusalemfoundation.org/?p=24604",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -6356,6 +6910,8 @@ window.SERVICES = [
   "source_url": "https://back2life.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6395,6 +6951,8 @@ window.SERVICES = [
   "source_url": "https://www.unitywarriors.org/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6430,6 +6988,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/farms-therapy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6466,6 +7026,8 @@ window.SERVICES = [
   "source_url": "https://www.rimon-farm.org.il/חוות-אור-הנר",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6506,6 +7068,8 @@ window.SERVICES = [
   "source_url": "https://www.rimon-farm.org.il/חוות-להב",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6542,6 +7106,8 @@ window.SERVICES = [
   "source_url": "https://www.rimon-farm.org.il/חוות-שקף",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6579,7 +7145,49 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/farms-therapy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "kfarsarah-com-b02de6",
+  "name": "כפר שרה – מרחב ריפוי וצמיחה מטראומה בחוות אהרנסון",
+  "category": "rehab-farm",
+  "description": "מרחב לריפוי ולצמיחה למתמודדים עם טראומה בסביבה טבעית בחוות אהרנסון בעתלית. התוכניות משלבות טיפול פסיכולוגי ממוקד טראומה (EMDR, CBT), סדנאות כמו קשתות וצילום טיפולי, יוגה ואומנויות לחימה וגינון טיפולי, וכן קבוצות שחרור וסדנאות לבנות זוג של אנשי מילואים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [
+   "crafts",
+   "mind-body",
+   "nature",
+   "writing"
+  ],
+  "cost": "partial",
+  "cost_notes": "עלות משתנה לפי תוכנית; יש לברר מול המקום",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חוות אהרנסון, עתלית",
+  "phone": "",
+  "email": "",
+  "website": "https://kfarsarah.com",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://www.kfarsarah.com/en",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-22016b",
@@ -6617,6 +7225,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/recognition/request/apply",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6647,6 +7257,8 @@ window.SERVICES = [
   "source_url": "https://www.histadrut.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6680,6 +7292,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/default.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6714,6 +7328,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/updates/11614",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6744,6 +7360,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/הקלות_לחיילי_מילואים_שהם_הורים_עצמאיים_(הורים_יחידים)",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6778,6 +7396,8 @@ window.SERVICES = [
   "source_url": "https://www.ono.ac.il/clinical-law/clinic-for-the-recognition-of-military-disability/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6811,6 +7431,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/פגיעה_מוחית_טראומטית_(TBI)",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6843,6 +7465,8 @@ window.SERVICES = [
   "source_url": "https://miluimnikim.org/mishpati/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6873,6 +7497,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/מדריך_למשרתי_מילואים_ובני_משפחותיהם_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -6906,7 +7532,44 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/נכי_צה%22ל_וכוחות_הביטחון",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "lohamim-org-il-77ef22",
+  "name": "לוחמים לחיים (Fighters for Life) – מימון הליך ההכרה ללוחמים עם פוסט טראומה",
+  "category": "rights-legal",
+  "description": "עמותה שהוקמה ב-2017 ותומכת בלוחמים עם פוסט טראומה בתהליך ההכרה מול המדינה. העמותה מממנת את ההליך המשפטי והרפואי ומעמידה רשת מומחים לליווי שיקום והשתלבות מחדש בחברה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "העמותה מממנת את ההליך המשפטי והרפואי לפי דיווחה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://lohamim.org.il",
+  "how_to_apply": "פנייה דרך עמוד צור קשר באתר",
+  "source_url": "https://lohamim.org.il/about-us/?lang=en",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "s-ff9abe",
@@ -6938,7 +7601,42 @@ window.SERVICES = [
   "source_url": "https://shikum-umb.mod.gov.il/media/0tzbkekn/haravot-barzel-guide-2024.pdf",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "miluim-helper-com-23803d",
+  "name": "מחשבון זכויות מילואים (Miluim Helper)",
+  "category": "rights-legal",
+  "description": "מחשבון מקוון לבדיקת זכויות משרתי מילואים לפי מספר ימי השירות ורמת הפעילות. הכלי מסייע להעריך מענקים והטבות שמשרת המילואים עשוי להיות זכאי להם.",
+  "provider_type": "private",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://miluim-helper.com",
+  "how_to_apply": "שימוש ישיר באתר",
+  "source_url": "https://miluim-helper.com/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-c3ea9e",
@@ -6972,6 +7670,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/recognition/request/fast",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7006,6 +7706,8 @@ window.SERVICES = [
   "source_url": "https://news.walla.co.il/item/3722630",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -7040,6 +7742,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/contactus/goodhands",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7072,6 +7776,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/recognition/terms/list",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7102,6 +7808,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_חינם_לחיילי_צה%22ל_מטעם_משרד_המשפטים",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -7131,6 +7839,8 @@ window.SERVICES = [
   "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_לחיילי_מילואים",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7163,6 +7873,8 @@ window.SERVICES = [
   "source_url": "https://www.timesofisrael.com/fired-during-war-reservists-wives-band-together-to-battle-for-job-security/amp/",
   "confidence": "high",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -7195,6 +7907,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rights/injury-type/mental",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7227,6 +7941,8 @@ window.SERVICES = [
   "source_url": "https://www.globes.co.il/news/article.aspx?did=508717",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -7259,7 +7975,46 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Pages/Nefes.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "shikum-app-ca9a4f",
+  "name": "שיקום אפ (Shikum App) – מערכת הכוונה למיצוי זכויות נכי צה\"ל",
+  "category": "rights-legal",
+  "description": "מערכת הכוונה מקוונת לנכי צה\"ל, פצועי משטרה ונפגעי כוחות הביטחון. המערכת מציעה מידע על זכויות מול אגף השיקום, הכנה לוועדות רפואיות, מחשבונים, מדריכים, אינדקס עורכי דין לפי סוג פגיעה ואזור, ומידע על בתי שיקום.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-in-process",
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "תנאי השימוש ועלויות אפשריות מפורטים באתר",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.app",
+  "how_to_apply": "שימוש דרך האתר",
+  "source_url": "https://shikum.app/agaf-hashikum",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-72767d",
@@ -7294,6 +8049,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/telem",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7337,6 +8094,8 @@ window.SERVICES = [
   "source_url": "https://etgarim.org/%d7%a4%d7%a2%d7%99%d7%9c%d7%95%d7%99%d7%95%d7%aa-%d7%9c%d7%a0%d7%a4%d7%92%d7%a2%d7%99-%d7%97%d7%a8%d7%91%d7%95%d7%aa-%d7%91%d7%a8%d7%96%d7%9c/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7372,6 +8131,8 @@ window.SERVICES = [
   "source_url": "https://isad.org.il/information/%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9C/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7412,6 +8173,8 @@ window.SERVICES = [
   "source_url": "https://israelparasport.org/the-shesek-program/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7449,6 +8212,8 @@ window.SERVICES = [
   "source_url": "https://www.thenextstep.org.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7483,6 +8248,8 @@ window.SERVICES = [
   "source_url": "https://invictusgamesfoundation.org/invictus-community-nations/israel",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7528,6 +8295,8 @@ window.SERVICES = [
   "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/running-with-rami/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7577,6 +8346,8 @@ window.SERVICES = [
   "source_url": "https://hagalsheli.co.il/programs/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7611,6 +8382,8 @@ window.SERVICES = [
   "source_url": "https://etgarim.org/2016/02/14/%d7%a1%d7%a4%d7%99%d7%a0%d7%94-%d7%a9%d7%98%d7%94/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7646,6 +8419,8 @@ window.SERVICES = [
   "source_url": "https://www.yamtov.com/one-soul",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7685,6 +8460,8 @@ window.SERVICES = [
   "source_url": "https://www.yamtov.com/our-activities",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7718,6 +8495,8 @@ window.SERVICES = [
   "source_url": "https://jewishstandard.timesofisrael.com/chayals-angels-bring-relief/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -7756,6 +8535,8 @@ window.SERVICES = [
   "source_url": "https://www.brothersin.yoga/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7793,6 +8574,8 @@ window.SERVICES = [
   "source_url": "https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/",
   "confidence": "medium",
   "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": ""
  },
  {
@@ -7834,6 +8617,8 @@ window.SERVICES = [
   "source_url": "https://healingspace.co.il/תוכניות-צמיחה/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7867,6 +8652,8 @@ window.SERVICES = [
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  },
  {
@@ -7903,6 +8690,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/medical/treatment/alternative",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
   "verified_at": "2026-10-07"
  }
 ];
