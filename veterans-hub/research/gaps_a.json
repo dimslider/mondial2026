@@ -281,7 +281,7 @@
  {
   "name": "פעילויות טרום שיקום לנפגעי פעולות איבה עם פוסט טראומה",
   "category": "financial-grants",
-  "description": "נפגעי פעולות איבה שהוכרה להם נכות של 20% לפחות על פוסט טראומה זכאים למימון פעילות לימודית וחוויתית במסגרת טרום שיקום, בדומה לזכות של נכי צה\"ל.",
+  "description": "נפגעי פעולות איבה עם נכות של 20% לפחות על סעיף פוסט טראומה זכאים למימון פעילויות טרום שיקום (קורסים, חוגים ופעילויות) מביטוח לאומי.",
   "provider_type": "government",
   "eligibility": [
    "terror-victims"
@@ -295,18 +295,19 @@
    "art",
    "sport"
   ],
-  "cost": "mod-funded",
-  "cost_notes": "מימון ע\"י המוסד לביטוח לאומי לפי הזכאות",
+  "cost": "free",
+  "cost_notes": "במימון ביטוח לאומי, עד 10,000 ₪ לשנה קלנדרית",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*6050",
   "email": "",
   "website": "",
   "how_to_apply": "פנייה לעובד/ת השיקום",
   "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנפגעי_פעולות_איבה_עם_פוסט_טראומה",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "חוות נעלה – Unity Warriors Na'aleh Therapy Farm",

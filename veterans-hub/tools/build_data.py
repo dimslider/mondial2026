@@ -113,7 +113,8 @@ def load_existing():
 def main():
     args = sys.argv[1:]
     extra = "--extra" in args
-    files = [a for a in args if a != "--extra"]
+    # verification.json הוא דוח של verify_sources.py, לא קובץ מחקר — מדלגים עליו גם כשהוא נכנס ב-research/*.json
+    files = [a for a in args if a != "--extra" and Path(a).name != "verification.json"]
     warnings = []
     items = load_existing() if extra else []
     for f in files:

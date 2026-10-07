@@ -85,7 +85,7 @@
  {
   "name": "מענק משפחה מוגדל למשרתי צו 8",
   "category": "financial-grants",
-  "description": "משרתי מילואים שביצעו לפחות 40 ימי שירות ב-2026 ויש להם ילדים עד גיל 14 זכאים למענק משפחה מוגדל, המשולם לכל יום החל מהיום ה-41, בגובה 21–83 ש\"ח ליום לפי רמת הפעילות של היחידה.",
+  "description": "מענק משפחה מוגדל למי ששירת לפחות 40 ימים ב-2026 והוא הורה לילד עד גיל 14. התשלום מתחיל מהיום ה-41 לשירות.",
   "provider_type": "government",
   "eligibility": [
    "reservists",
@@ -97,22 +97,23 @@
   ],
   "interests": [],
   "cost": "free",
-  "cost_notes": "משולם לפי ימי שירות",
+  "cost_notes": "21–83 ₪ ליום מהיום ה-41, לפי המדרג",
   "regions": [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111 שלוחה 4",
   "email": "",
   "website": "",
   "how_to_apply": "בדרך כלל משולם אוטומטית; לבדוק בכל-זכות ובאתר המילואים של צה\"ל אם נדרשת הגשה.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_משפחה_מוגדל_למי_ששירתו_בצו_8_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "מענק למשרת מילואים שהוא הורה לילד עם צרכים מיוחדים",
   "category": "financial-grants",
-  "description": "מענק ייעודי למשרתי מילואים במלחמת חרבות ברזל שהם הורים לילד עם צרכים מיוחדים, להקלת הנטל על המשפחה בזמן השירות.",
+  "description": "מענק למשרת מילואים שהוא הורה לילד עם צרכים מיוחדים בגילאי 3–21. גובה המענק 2,000 ₪, ועוד 2,000 ₪ למי ששירת 45 ימים ומעלה ב-2026.",
   "provider_type": "government",
   "eligibility": [
    "reservists",
@@ -124,17 +125,18 @@
   ],
   "interests": [],
   "cost": "free",
-  "cost_notes": "מענק ממשלתי",
+  "cost_notes": "2,000 ₪, ועוד 2,000 ₪ למי ששירת 45 ימים ומעלה ב-2026",
   "regions": [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111 שלוחה 4",
   "email": "",
   "website": "",
   "how_to_apply": "לבדוק תנאי זכאות ואופן הגשה בדף כל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C_%D7%A9%D7%94%D7%95%D7%90_%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%9D_%D7%A6%D7%A8%D7%9B%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "תשלומים והחזרי הוצאות בגין שירות מילואים",
@@ -161,12 +163,13 @@
   "website": "",
   "how_to_apply": "להגיש בקשות להחזר הוצאות דרך אתר המילואים של צה\"ל; לעיין במדריך בכל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כרטיס Fighter והטבות למשרתי מילואים",
   "category": "financial-grants",
-  "description": "כרטיס דיגיטלי של אכ\"א, משרד הביטחון ומשרד האוצר ללוחמי מילואים, עם יתרה להטבות של עד 5,000 ש\"ח במסעדות, בתי קפה, ביגוד, הופעות, אטרקציות ופעילויות משפחתיות. בנוסף חולקה הטבת נופש לכ-270 אלף משרתי מילואים.",
+  "description": "הטבות למשרתי מילואים. הסכום וכרטיס ה-Fighter לא מופיעים בעמוד של כל זכות, ולכן צריך לבדוק במקור אחר.",
   "provider_type": "government",
   "eligibility": [
    "reservists",
@@ -180,7 +183,7 @@
    "travel"
   ],
   "cost": "free",
-  "cost_notes": "הטבה עד 5,000 ש\"ח לפי זכאות",
+  "cost_notes": "",
   "regions": [
    "nationwide"
   ],
@@ -222,9 +225,9 @@
   "reviewed_at": "2026-10-07"
  },
  {
-  "name": "סבסוד קייטנות ודמי אבטלה לבני זוג של משרתי מילואים",
+  "name": "סבסוד קייטנות למשרתי מילואים, ומענק לבני זוג שיצאו לחל\"ת",
   "category": "family-support",
-  "description": "במסגרת החבילה הממשלתית מוקצים כספים לסבסוד קייטנות קיץ לילדי משרתי מילואים ולהקלות בדמי אבטלה לבני/בנות זוג של משרתים, לצד מענקים חודשיים ותמיכה נפשית.",
+  "description": "משרתי מילואים זכאים לסבסוד קייטנות לילדים. לבני זוג שיצאו לחופשה ללא תשלום בתקופת השירות יש מענק נפרד. אין דמי אבטלה מיוחדים לבני זוג.",
   "provider_type": "government",
   "eligibility": [
    "reservists",
@@ -237,7 +240,7 @@
   ],
   "interests": [],
   "cost": "subsidized",
-  "cost_notes": "סבסוד חלקי לפי תנאי השנה",
+  "cost_notes": "עד 500 ₪ לילד אחד, ועוד 250 ₪ לכל ילד נוסף",
   "regions": [
    "nationwide"
   ],
@@ -269,12 +272,13 @@
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111",
   "email": "",
   "website": "",
   "how_to_apply": "לפנות לקצין הקישור/שלישות היחידה עם אישור הורה עצמאי ולבקש התאמת השירות.",
   "source_url": "https://www.kolzchut.org.il/he/הקלות_לחיילי_מילואים_שהם_הורים_עצמאיים_(הורים_יחידים)",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "פעמונים – ליווי כלכלי משפחתי חינם",
@@ -611,10 +615,7 @@
   "description": "האגף מעניק לפצועי צה\"ל וכוחות הביטחון ליווי תעסוקתי פרטני, חיבור להזדמנויות עבודה, סיוע בחיפוש עבודה ועבודה מול מעסיקים.",
   "provider_type": "ngo",
   "eligibility": [
-   "mod-recognized",
-   "mod-in-process",
-   "police",
-   "security-forces"
+   "mod-recognized"
   ],
   "difficulties": [
    "employment",
@@ -625,17 +626,18 @@
    "learning"
   ],
   "cost": "free",
-  "cost_notes": "לחברי הארגון",
+  "cost_notes": "ללא עלות או בעלות סמלית. לבעלי 20% נכות ומעלה, או למוכרים במעמד 03.",
   "regions": [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "03-6461600",
   "email": "",
   "website": "https://www.inz.org.il",
   "how_to_apply": "לפנות לסניף ארגון נכי צה\"ל הקרוב ולבקש מלווה תעסוקתי.",
   "source_url": "https://www.drushim.co.il/job/37650783/aeba30dc/",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "בתי הלוחם – ארגון נכי צה\"ל",

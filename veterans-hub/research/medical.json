@@ -474,18 +474,19 @@
    "chronic-pain"
   ],
   "interests": [],
-  "cost": "paid",
-  "cost_notes": "הקנביס בתשלום עצמי למי שאינו מוכר",
+  "cost": "partial",
+  "cost_notes": "העמוד לא מציין עלות, כדאי לברר",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "08-6268000",
   "email": "",
   "website": "https://www.gov.il/he/service/cannabis-ptsd",
   "how_to_apply": "לפנות לפסיכיאטר מטפל שימלא את נספח ה-PTSD, ולהגיש בקשה לרישיון דרך רופא מוסמך/היק\"ר.",
   "source_url": "https://www.gov.il/he/service/cannabis-ptsd",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "טיפול בחמצן בתא לחץ (HBOT) לפוסט טראומה – מרכז סגול, שמיר (אסף הרופא)",
@@ -704,12 +705,13 @@
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*6050",
   "email": "",
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף נפגעי פעולות איבה בביטוח הלאומי בצירוף מרשם רפואי.",
   "source_url": "https://www.kolzchut.org.il/he/תותבות_יד_ורגל_לנפגעי_פעולות_איבה_קטועי_גפיים",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "יד שרה – השאלת ציוד רפואי ושיקומי",
@@ -762,18 +764,19 @@
   "interests": [
    "tech"
   ],
-  "cost": "subsidized",
-  "cost_notes": "ייעוץ בעלות מסובסדת; לעיתים במימון גורם מממן",
+  "cost": "partial",
+  "cost_notes": "העלות לא מפורטת בעמוד, כדאי לברר מולם",
   "regions": [
    "center"
   ],
   "location": "מרכז רפואי שיבא, תל השומר",
-  "phone": "",
+  "phone": "072-2230007",
   "email": "",
   "website": "",
   "how_to_apply": "לתאם פגישת ייעוץ במרכז מילב\"ת בתל השומר.",
   "source_url": "https://www.kolzchut.org.il/he/מילבת",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "זכויות נפגעי פגיעה מוחית טראומטית (TBI)",
@@ -803,7 +806,8 @@
   "website": "",
   "how_to_apply": "לקרוא את המדריך בכל-זכות ולפנות לגורם המממן הרלוונטי (אגף השיקום/ביטוח לאומי/קופה).",
   "source_url": "https://www.kolzchut.org.il/he/פגיעה_מוחית_טראומטית_(TBI)",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ארגון נכי צה\"ל (כולל נכי משטרה, שב\"ס ושב\"כ)",
@@ -1057,22 +1061,23 @@
   ],
   "interests": [],
   "cost": "mod-funded",
-  "cost_notes": "מענק חד-פעמי",
+  "cost_notes": "מענק חד-פעמי של 8,973 ₪ (נכון לאוגוסט 2023, צמוד למדד). נדרשת נכות של 20% לפחות.",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*8150",
   "email": "",
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף השיקום עם חוזה השכירות בדיור הציבורי.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_לנכי_צה%22ל_וכוחות_הביטחון_ששוכרים_דירה_בדיור_הציבורי",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ועדה להתאמת רכב ואביזרי נהיגה לאנשים עם מוגבלות",
   "category": "housing-daily",
-  "description": "שירות ממשלתי שבו ועדה מקצועית ממליצה על רכב ואביזרי נהיגה מותאמים (מעלון, הגה ודוושות מותאמות ועוד) לזכאים לגמלת ניידות ולנהגים עם מוגבלות.",
+  "description": "בדיקה והתאמה של רכב ואביזרי נהיגה לאנשים עם מוגבלות, למי שהופנה ממחלקת הניידות בביטוח לאומי.",
   "provider_type": "government",
   "eligibility": [
    "mod-recognized",
@@ -1085,18 +1090,19 @@
    "amputation"
   ],
   "interests": [],
-  "cost": "subsidized",
-  "cost_notes": "לפי זכאות",
+  "cost": "free",
+  "cost_notes": "ללא עלות. אגרה רק לנהגים שנבדקים במכון הרפואי.",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*5400 או 08-6241010",
   "email": "",
   "website": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
   "how_to_apply": "להגיש בקשה דרך עמוד השירות באתר gov.il בצירוף מסמכים רפואיים.",
   "source_url": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "סיוע ברכישת רכב רפואי לנפגעי פעולות איבה",

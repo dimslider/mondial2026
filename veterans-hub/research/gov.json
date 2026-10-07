@@ -593,7 +593,8 @@
   "website": "https://www.kolzchut.org.il",
   "how_to_apply": "לגלוש לפורטל ולחפש לפי נושא.",
   "source_url": "https://www.kolzchut.org.il/he/נכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "כל זכות – מדריך למשרתי מילואים ובני משפחותיהם (חרבות ברזל והמלחמה מול איראן)",
@@ -620,7 +621,8 @@
   "website": "",
   "how_to_apply": "לקרוא את המדריך באתר כל זכות.",
   "source_url": "https://www.kolzchut.org.il/he/מדריך_למשרתי_מילואים_ובני_משפחותיהם_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ארגון נכי צה\"ל (Zahal Disabled Veterans Organization)",
@@ -1059,16 +1061,13 @@
   "reviewed_at": "2026-10-07"
  },
  {
-  "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים ונכים בהליכי הכרה",
+  "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים בשירות חובה",
   "category": "rights-legal",
-  "description": "פצועים ונכים מכוחות הביטחון זכאים לייצוג משפטי במימון המדינה בהליכי הכרה מול משרד הביטחון (כולל ערעורים וועדות), ללא מבחן הכנסה.",
+  "description": "ייצוג משפטי במימון המדינה לחיילים בשירות חובה, כולל ערעורים על החלטות קצין תגמולים. אין מבחן הכנסה.",
   "provider_type": "government",
   "eligibility": [
-   "mod-in-process",
-   "not-recognized",
-   "reservists",
    "combat-soldiers",
-   "mod-recognized"
+   "mod-in-process"
   ],
   "difficulties": [
    "bureaucracy",
@@ -1081,7 +1080,7 @@
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "050-6216366 (וואטסאפ)",
   "email": "",
   "website": "",
   "how_to_apply": "להגיש בקשה לסיוע משפטי בלשכת הסיוע המשפטי המחוזית של משרד המשפטים (או מקוון).",
@@ -1089,9 +1088,9 @@
   "confidence": "medium"
  },
  {
-  "name": "סיוע משפטי לחיילי מילואים – צה\"ל",
+  "name": "סיוע משפטי למשרתי מילואים שנתבעו על אירוע מהשירות – משרד הביטחון",
   "category": "rights-legal",
-  "description": "משרתי מילואים שנתקלים בבעיות משפטיות הקשורות לשירות (פגיעה בתעסוקה, תביעות אזרחיות בעקבות אירוע בשירות ועוד) יכולים לבקש סיוע משפטי באמצעות טופס ייעודי.",
+  "description": "משרד הביטחון נותן סיוע משפטי לחיילי מילואים שהוגשה נגדם תביעה אזרחית על אירוע שקרה בזמן השירות.",
   "provider_type": "government",
   "eligibility": [
    "reservists"
@@ -1101,8 +1100,8 @@
    "bureaucracy"
   ],
   "interests": [],
-  "cost": "free",
-  "cost_notes": "חינם",
+  "cost": "partial",
+  "cost_notes": "העמוד לא מציין אם הסיוע בתשלום, כדאי לברר",
   "regions": [
    "nationwide"
   ],
@@ -1112,7 +1111,8 @@
   "website": "https://api.miluim.idf.il/api/v1/Media/i5jlwnmt/%D7%98%D7%95%D7%A4%D7%A1-%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%A1%D7%99%D7%95%D7%A2-%D7%9E%D7%A9%D7%A4%D7%98%D7%99-%D7%9C%D7%97%D7%99%D7%99%D7%9C-%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D.pdf",
   "how_to_apply": "למלא טופס בקשה לסיוע משפטי לחייל מילואים (באתר המילואים) ולשלוח לפי ההנחיות.",
   "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_לחיילי_מילואים",
-  "confidence": "medium"
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "ייעוץ וייצוג משפטי ללא עלות למילואימניקים – קהילת המילואימניקים ו\"לתת עו\"ד\"",

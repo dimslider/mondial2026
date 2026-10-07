@@ -993,10 +993,7 @@ window.SERVICES = [
   "description": "האגף מעניק לפצועי צה\"ל וכוחות הביטחון ליווי תעסוקתי פרטני, חיבור להזדמנויות עבודה, סיוע בחיפוש עבודה ועבודה מול מעסיקים.",
   "provider_type": "ngo",
   "eligibility": [
-   "mod-in-process",
-   "mod-recognized",
-   "police",
-   "security-forces"
+   "mod-recognized"
   ],
   "difficulties": [
    "employment",
@@ -1007,19 +1004,19 @@ window.SERVICES = [
    "learning"
   ],
   "cost": "free",
-  "cost_notes": "לחברי הארגון",
+  "cost_notes": "ללא עלות או בעלות סמלית. לבעלי 20% נכות ומעלה, או למוכרים במעמד 03.",
   "regions": [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "03-6461600",
   "email": "",
   "website": "https://www.inz.org.il",
   "how_to_apply": "לפנות לסניף ארגון נכי צה\"ל הקרוב ולבקש מלווה תעסוקתי.",
   "source_url": "https://www.drushim.co.il/job/37650783/aeba30dc/",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "innovationisrael-org-il-726b58",
@@ -1909,10 +1906,10 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
-  "id": "s-fc20bd",
-  "name": "סבסוד קייטנות ודמי אבטלה לבני זוג של משרתי מילואים",
+  "id": "s-a0f475",
+  "name": "סבסוד קייטנות למשרתי מילואים, ומענק לבני זוג שיצאו לחל\"ת",
   "category": "family-support",
-  "description": "במסגרת החבילה הממשלתית מוקצים כספים לסבסוד קייטנות קיץ לילדי משרתי מילואים ולהקלות בדמי אבטלה לבני/בנות זוג של משרתים, לצד מענקים חודשיים ותמיכה נפשית.",
+  "description": "משרתי מילואים זכאים לסבסוד קייטנות לילדים. לבני זוג שיצאו לחופשה ללא תשלום בתקופת השירות יש מענק נפרד. אין דמי אבטלה מיוחדים לבני זוג.",
   "provider_type": "government",
   "eligibility": [
    "families",
@@ -1925,7 +1922,7 @@ window.SERVICES = [
   ],
   "interests": [],
   "cost": "subsidized",
-  "cost_notes": "סבסוד חלקי לפי תנאי השנה",
+  "cost_notes": "עד 500 ₪ לילד אחד, ועוד 250 ₪ לכל ילד נוסף",
   "regions": [
    "nationwide"
   ],
@@ -1935,35 +1932,6 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק מול הרשות המקומית/משרד החינוך לגבי קייטנות, ומול ביטוח לאומי לגבי דמי אבטלה לבן/בת הזוג.",
   "source_url": "https://www.timesofisrael.com/liveblog_entry/government-allocates-56-million-more-for-benefits-for-idf-reservists/",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
- },
- {
-  "id": "s-f20142",
-  "name": "סיוע במימון טיפול זוגי למשרתי מילואים",
-  "category": "family-support",
-  "description": "הטבה ממשלתית למימון טיפול זוגי למשרתי מילואים ששירתו במלחמת 'חרבות ברזל', כחלק מחבילת התמיכה האישית והמשפחתית במשרתי המילואים ובבני זוגם.",
-  "provider_type": "government",
-  "eligibility": [
-   "families",
-   "reservists"
-  ],
-  "difficulties": [
-   "family-relations"
-  ],
-  "interests": [],
-  "cost": "subsidized",
-  "cost_notes": "",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "לפי ההנחיות בכל-זכות",
-  "source_url": "https://www.kolzchut.org.il/he/%D7%A1%D7%99%D7%95%D7%A2_%D7%91%D7%9E%D7%99%D7%9E%D7%95%D7%9F_%D7%98%D7%99%D7%A4%D7%95%D7%9C_%D7%96%D7%95%D7%92%D7%99_%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C",
   "confidence": "medium",
   "reviewed_at": "",
   "verified_at": ""
@@ -2227,7 +2195,7 @@ window.SERVICES = [
   "id": "s-bedbcf",
   "name": "כרטיס Fighter והטבות למשרתי מילואים",
   "category": "financial-grants",
-  "description": "כרטיס דיגיטלי של אכ\"א, משרד הביטחון ומשרד האוצר ללוחמי מילואים, עם יתרה להטבות של עד 5,000 ש\"ח במסעדות, בתי קפה, ביגוד, הופעות, אטרקציות ופעילויות משפחתיות. בנוסף חולקה הטבת נופש לכ-270 אלף משרתי מילואים.",
+  "description": "הטבות למשרתי מילואים. הסכום וכרטיס ה-Fighter לא מופיעים בעמוד של כל זכות, ולכן צריך לבדוק במקור אחר.",
   "provider_type": "government",
   "eligibility": [
    "combat-soldiers",
@@ -2241,7 +2209,7 @@ window.SERVICES = [
    "travel"
   ],
   "cost": "free",
-  "cost_notes": "הטבה עד 5,000 ש\"ח לפי זכאות",
+  "cost_notes": "",
   "regions": [
    "nationwide"
   ],
@@ -2320,7 +2288,7 @@ window.SERVICES = [
   "id": "s-52f696",
   "name": "מענק למשרת מילואים שהוא הורה לילד עם צרכים מיוחדים",
   "category": "financial-grants",
-  "description": "מענק ייעודי למשרתי מילואים במלחמת חרבות ברזל שהם הורים לילד עם צרכים מיוחדים, להקלת הנטל על המשפחה בזמן השירות.",
+  "description": "מענק למשרת מילואים שהוא הורה לילד עם צרכים מיוחדים בגילאי 3–21. גובה המענק 2,000 ₪, ועוד 2,000 ₪ למי ששירת 45 ימים ומעלה ב-2026.",
   "provider_type": "government",
   "eligibility": [
    "families",
@@ -2332,25 +2300,25 @@ window.SERVICES = [
   ],
   "interests": [],
   "cost": "free",
-  "cost_notes": "מענק ממשלתי",
+  "cost_notes": "2,000 ₪, ועוד 2,000 ₪ למי ששירת 45 ימים ומעלה ב-2026",
   "regions": [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111 שלוחה 4",
   "email": "",
   "website": "",
   "how_to_apply": "לבדוק תנאי זכאות ואופן הגשה בדף כל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C_%D7%A9%D7%94%D7%95%D7%90_%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%9D_%D7%A6%D7%A8%D7%9B%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "s-26de9b",
   "name": "מענק משפחה מוגדל למשרתי צו 8",
   "category": "financial-grants",
-  "description": "משרתי מילואים שביצעו לפחות 40 ימי שירות ב-2026 ויש להם ילדים עד גיל 14 זכאים למענק משפחה מוגדל, המשולם לכל יום החל מהיום ה-41, בגובה 21–83 ש\"ח ליום לפי רמת הפעילות של היחידה.",
+  "description": "מענק משפחה מוגדל למי ששירת לפחות 40 ימים ב-2026 והוא הורה לילד עד גיל 14. התשלום מתחיל מהיום ה-41 לשירות.",
   "provider_type": "government",
   "eligibility": [
    "families",
@@ -2362,25 +2330,25 @@ window.SERVICES = [
   ],
   "interests": [],
   "cost": "free",
-  "cost_notes": "משולם לפי ימי שירות",
+  "cost_notes": "21–83 ₪ ליום מהיום ה-41, לפי המדרג",
   "regions": [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111 שלוחה 4",
   "email": "",
   "website": "",
   "how_to_apply": "בדרך כלל משולם אוטומטית; לבדוק בכל-זכות ובאתר המילואים של צה\"ל אם נדרשת הגשה.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_משפחה_מוגדל_למי_ששירתו_בצו_8_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
-  "id": "s-ebf556",
-  "name": "סיוע במימון טיפולים נפשיים אישיים ומשפחתיים למשרתי מילואים",
+  "id": "s-757f5b",
+  "name": "סיוע במימון טיפולים נפשיים, זוגיים ומשפחתיים למשרתי מילואים",
   "category": "financial-grants",
-  "description": "החזר של עד 80% מעלות טיפול פסיכולוגי (עד 240 ש\"ח למפגש) למשרתי מילואים ולבני משפחותיהם – בני זוג וילדים עד 18. ללא ילדים: עד 15 טיפולים (עד 3,600 ש\"ח); עם ילדים עד 18: עד 22 טיפולים (עד 5,280 ש\"ח). ניתן לממש מינואר 2025 ועד 31.12.2026.",
+  "description": "החזר על טיפולים נפשיים למשרתי מילואים ולבני המשפחה, כולל טיפול זוגי: 80% מעלות הטיפול, עד 240 ₪ למפגש. מועד המימוש תלוי בשנת הזכאות: זכאות 2024 עד 31.12.2026, וזכאות 2025 עד 31.12.2027. ב-2026 נדרשים לפחות 50 ימי שירות במדרגים א'+, א' ו-ב', והמימוש יתחיל רק אחרי שקרן הסיוע תפרסם מדיניות.",
   "provider_type": "government",
   "eligibility": [
    "families",
@@ -2394,19 +2362,19 @@ window.SERVICES = [
   ],
   "interests": [],
   "cost": "subsidized",
-  "cost_notes": "החזר עד 80%, תקרה 240 ש\"ח למפגש; בתוקף עד 31.12.2026",
+  "cost_notes": "החזר 80% עד 240 ₪ למפגש. זכאות 2024: עד 31.12.2026. זכאות 2025: עד 31.12.2027. ב-2026 נדרשים לפחות 50 ימי שירות במדרגים א'+, א' ו-ב', והמימוש יתחיל לאחר פרסום מדיניות קרן הסיוע.",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "052-3964584 (וואטסאפ)",
   "email": "",
   "website": "https://www.kolzchut.org.il/he/סיוע_במימון_טיפולים_אישיים_ומשפחתיים_למשרתי_מילואים_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "how_to_apply": "הגשת בקשת החזר לפי ההנחיות בכל-זכות / אתר המילואים",
+  "how_to_apply": "לפי ההנחיות בעמוד של כל זכות ובאתר המילואים. שאלות בוואטסאפ: 052-3964584.",
   "source_url": "https://www.kolzchut.org.il/he/סיוע_במימון_טיפולים_אישיים_ומשפחתיים_למשרתי_מילואים_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "btl-gov-il-b92b34",
@@ -2507,7 +2475,7 @@ window.SERVICES = [
   "id": "s-e8adff",
   "name": "פעילויות טרום שיקום לנפגעי פעולות איבה עם פוסט טראומה",
   "category": "financial-grants",
-  "description": "נפגעי פעולות איבה שהוכרה להם נכות של 20% לפחות על פוסט טראומה זכאים למימון פעילות לימודית וחוויתית במסגרת טרום שיקום, בדומה לזכות של נכי צה\"ל.",
+  "description": "נפגעי פעולות איבה עם נכות של 20% לפחות על סעיף פוסט טראומה זכאים למימון פעילויות טרום שיקום (קורסים, חוגים ופעילויות) מביטוח לאומי.",
   "provider_type": "government",
   "eligibility": [
    "terror-victims"
@@ -2521,20 +2489,20 @@ window.SERVICES = [
    "learning",
    "sport"
   ],
-  "cost": "mod-funded",
-  "cost_notes": "מימון ע\"י המוסד לביטוח לאומי לפי הזכאות",
+  "cost": "free",
+  "cost_notes": "במימון ביטוח לאומי, עד 10,000 ₪ לשנה קלנדרית",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*6050",
   "email": "",
   "website": "",
   "how_to_apply": "פנייה לעובד/ת השיקום",
   "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנפגעי_פעולות_איבה_עם_פוסט_טראומה",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "paamonim-org-9e02b4",
@@ -2722,9 +2690,9 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשות להחזר הוצאות דרך אתר המילואים של צה\"ל; לעיין במדריך בכל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "shikum-mod-gov-il-bd7788",
@@ -2762,7 +2730,7 @@ window.SERVICES = [
   "id": "s-b9b962",
   "name": "ועדה להתאמת רכב ואביזרי נהיגה לאנשים עם מוגבלות",
   "category": "housing-daily",
-  "description": "שירות ממשלתי שבו ועדה מקצועית ממליצה על רכב ואביזרי נהיגה מותאמים (מעלון, הגה ודוושות מותאמות ועוד) לזכאים לגמלת ניידות ולנהגים עם מוגבלות.",
+  "description": "בדיקה והתאמה של רכב ואביזרי נהיגה לאנשים עם מוגבלות, למי שהופנה ממחלקת הניידות בביטוח לאומי.",
   "provider_type": "government",
   "eligibility": [
    "civilians",
@@ -2775,20 +2743,20 @@ window.SERVICES = [
    "physical-disability"
   ],
   "interests": [],
-  "cost": "subsidized",
-  "cost_notes": "לפי זכאות",
+  "cost": "free",
+  "cost_notes": "ללא עלות. אגרה רק לנהגים שנבדקים במכון הרפואי.",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*5400 או 08-6241010",
   "email": "",
   "website": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
   "how_to_apply": "להגיש בקשה דרך עמוד השירות באתר gov.il בצירוף מסמכים רפואיים.",
   "source_url": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "s-bc4772",
@@ -2869,19 +2837,19 @@ window.SERVICES = [
   ],
   "interests": [],
   "cost": "mod-funded",
-  "cost_notes": "מענק חד-פעמי",
+  "cost_notes": "מענק חד-פעמי של 8,973 ₪ (נכון לאוגוסט 2023, צמוד למדד). נדרשת נכות של 20% לפחות.",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*8150",
   "email": "",
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף השיקום עם חוזה השכירות בדיור הציבורי.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_לנכי_צה%22ל_וכוחות_הביטחון_ששוכרים_דירה_בדיור_הציבורי",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "shikum-mod-gov-il-4e3d8f",
@@ -3203,20 +3171,20 @@ window.SERVICES = [
   "interests": [
    "tech"
   ],
-  "cost": "subsidized",
-  "cost_notes": "ייעוץ בעלות מסובסדת; לעיתים במימון גורם מממן",
+  "cost": "partial",
+  "cost_notes": "העלות לא מפורטת בעמוד, כדאי לברר מולם",
   "regions": [
    "center"
   ],
   "location": "מרכז רפואי שיבא, תל השומר",
-  "phone": "",
+  "phone": "072-2230007",
   "email": "",
   "website": "",
   "how_to_apply": "לתאם פגישת ייעוץ במרכז מילב\"ת בתל השומר.",
   "source_url": "https://www.kolzchut.org.il/he/מילבת",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "s-d65cd7",
@@ -3340,20 +3308,20 @@ window.SERVICES = [
    "sleep"
   ],
   "interests": [],
-  "cost": "paid",
-  "cost_notes": "הקנביס בתשלום עצמי למי שאינו מוכר",
+  "cost": "partial",
+  "cost_notes": "העמוד לא מציין עלות, כדאי לברר",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "08-6268000",
   "email": "",
   "website": "https://www.gov.il/he/service/cannabis-ptsd",
   "how_to_apply": "לפנות לפסיכיאטר מטפל שימלא את נספח ה-PTSD, ולהגיש בקשה לרישיון דרך רופא מוסמך/היק\"ר.",
   "source_url": "https://www.gov.il/he/service/cannabis-ptsd",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "reuth-org-il-545599",
@@ -3440,14 +3408,14 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*6050",
   "email": "",
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף נפגעי פעולות איבה בביטוח הלאומי בצירוף מרשם רפואי.",
   "source_url": "https://www.kolzchut.org.il/he/תותבות_יד_ורגל_לנפגעי_פעולות_איבה_קטועי_גפיים",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "seven-plus-org-il-435acd",
@@ -5799,14 +5767,14 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111",
   "email": "",
   "website": "",
   "how_to_apply": "לפנות לקצין הקישור/שלישות היחידה עם אישור הורה עצמאי ולבקש התאמת השירות.",
   "source_url": "https://www.kolzchut.org.il/he/הקלות_לחיילי_מילואים_שהם_הורים_עצמאיים_(הורים_יחידים)",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "ono-ac-il-ad829a",
@@ -5871,9 +5839,9 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לקרוא את המדריך בכל-זכות ולפנות לגורם המממן הרלוונטי (אגף השיקום/ביטוח לאומי/קופה).",
   "source_url": "https://www.kolzchut.org.il/he/פגיעה_מוחית_טראומטית_(TBI)",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "miluimnikim-org-069933",
@@ -5933,9 +5901,9 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לקרוא את המדריך באתר כל זכות.",
   "source_url": "https://www.kolzchut.org.il/he/מדריך_למשרתי_מילואים_ובני_משפחותיהם_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "s-253d8d",
@@ -5966,9 +5934,9 @@ window.SERVICES = [
   "website": "https://www.kolzchut.org.il",
   "how_to_apply": "לגלוש לפורטל ולחפש לפי נושא.",
   "source_url": "https://www.kolzchut.org.il/he/נכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "s-ff9abe",
@@ -6137,17 +6105,14 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
-  "id": "s-b105bf",
-  "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים ונכים בהליכי הכרה",
+  "id": "s-9993b4",
+  "name": "סיוע משפטי חינם מטעם משרד המשפטים לחיילים בשירות חובה",
   "category": "rights-legal",
-  "description": "פצועים ונכים מכוחות הביטחון זכאים לייצוג משפטי במימון המדינה בהליכי הכרה מול משרד הביטחון (כולל ערעורים וועדות), ללא מבחן הכנסה.",
+  "description": "ייצוג משפטי במימון המדינה לחיילים בשירות חובה, כולל ערעורים על החלטות קצין תגמולים. אין מבחן הכנסה.",
   "provider_type": "government",
   "eligibility": [
    "combat-soldiers",
-   "mod-in-process",
-   "mod-recognized",
-   "not-recognized",
-   "reservists"
+   "mod-in-process"
   ],
   "difficulties": [
    "bureaucracy",
@@ -6160,7 +6125,7 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "050-6216366 (וואטסאפ)",
   "email": "",
   "website": "",
   "how_to_apply": "להגיש בקשה לסיוע משפטי בלשכת הסיוע המשפטי המחוזית של משרד המשפטים (או מקוון).",
@@ -6170,10 +6135,10 @@ window.SERVICES = [
   "verified_at": ""
  },
  {
-  "id": "api-miluim-idf-il-575bbf",
-  "name": "סיוע משפטי לחיילי מילואים – צה\"ל",
+  "id": "api-miluim-idf-il-6f6e29",
+  "name": "סיוע משפטי למשרתי מילואים שנתבעו על אירוע מהשירות – משרד הביטחון",
   "category": "rights-legal",
-  "description": "משרתי מילואים שנתקלים בבעיות משפטיות הקשורות לשירות (פגיעה בתעסוקה, תביעות אזרחיות בעקבות אירוע בשירות ועוד) יכולים לבקש סיוע משפטי באמצעות טופס ייעודי.",
+  "description": "משרד הביטחון נותן סיוע משפטי לחיילי מילואים שהוגשה נגדם תביעה אזרחית על אירוע שקרה בזמן השירות.",
   "provider_type": "government",
   "eligibility": [
    "reservists"
@@ -6183,8 +6148,8 @@ window.SERVICES = [
    "employment"
   ],
   "interests": [],
-  "cost": "free",
-  "cost_notes": "חינם",
+  "cost": "partial",
+  "cost_notes": "העמוד לא מציין אם הסיוע בתשלום, כדאי לברר",
   "regions": [
    "nationwide"
   ],
@@ -6194,9 +6159,9 @@ window.SERVICES = [
   "website": "https://api.miluim.idf.il/api/v1/Media/i5jlwnmt/%D7%98%D7%95%D7%A4%D7%A1-%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%A1%D7%99%D7%95%D7%A2-%D7%9E%D7%A9%D7%A4%D7%98%D7%99-%D7%9C%D7%97%D7%99%D7%99%D7%9C-%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D.pdf",
   "how_to_apply": "למלא טופס בקשה לסיוע משפטי לחייל מילואים (באתר המילואים) ולשלוח לפי ההנחיות.",
   "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_לחיילי_מילואים",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "verified_at": ""
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "verified_at": "2026-10-07"
  },
  {
   "id": "shikum-mod-gov-il-368e37",
