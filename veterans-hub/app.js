@@ -91,6 +91,9 @@
       .filter(s => eligible(s, p.statuses) && regionOk(s, p.regions))
       .map(s => Object.assign({ s }, score(s, p)))
       .filter(x => x.sc > 1.5 || (!p.difficulties.length && !p.interests.length))
+      // שירות שפתוח לכולם (ולא ספציפית לסטטוס שסימנת) מוצג רק אם הוא עונה על קושי או תחום עניין שבחרת
+      .filter(x => !p.statuses.length || arr(x.s.eligibility).some(e => p.statuses.includes(e)) ||
+        arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i)))
       .sort((a, b) => b.sc - a.sc);
   }
 
@@ -236,28 +239,96 @@
     const res = match(p);
     const byCat = {};
     res.forEach(r => { (byCat[r.s.category] = byCat[r.s.category] || []).push(r); });
-    const order = Object.keys(byCat).sort((a, b) => byCat[b][0].sc - byCat[a][0].sc);
+    // סדר הקבוצות לפי שתי ההתאמות הטובות בכל קבוצה, כדי שקבוצה עם התאמה אחת מקרית לא תקפוץ לראש
+    const depth = c => byCat[c].slice(0, 2).reduce((t, r) => t + r.sc, 0);
+    const order = Object.keys(byCat).sort((a, b) => depth(b) - depth(a));
+    // שלושה צעדים ראשונים: ההתאמות הכי טובות, כל אחת מתחום אחר
+    const first = [];
+    for (const r of res) { if (first.length < 3 && !first.some(f => f.s.category === r.s.category)) first.push(r); }
+    const firstIds = new Set(first.map(r => r.s.id));
     const crisis = p.difficulties.some(d => ["ptsd", "depression", "addiction", "moral-injury"].includes(d));
+    const gentle = !crisis && p.difficulties.some(d => ["anxiety", "loneliness", "sleep", "anger", "grief"].includes(d));
+    const noInput = !p.difficulties.length && !p.interests.length;
+    const SHOW = 2;
     const guideKeys = p.statuses.filter(s => window.GUIDES && GUIDES[s]);
     $main.innerHTML = `
       <section class="results-head">
-        <h1>מצאנו ${res.length} דברים שיכולים להתאים לך</h1>
-        <p class="lead">מסודר לפי תחומים, הכי מתאים קודם. כל כרטיס נפתח לפרטים, טלפון, ואפשרות להשאיר פנייה.</p>
+        <h1>${first.length ? "מאיפה להתחיל" : "לא מצאנו התאמה מדויקת"}</h1>
+        <p class="lead">${res.length} אפשרויות מתאימות לך. כאן למטה שלוש שכדאי להתחיל מהן, ואחריהן השאר לפי תחום.</p>
         <div class="actions"><a class="btn" href="#/match">לשנות תשובות</a>${canPrint ? ` <button class="btn" id="print">להדפיס / לשמור PDF</button>` : ""}</div>
       </section>
+      ${noInput ? `<div class="callout callout-info">כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין. <a href="#/match">לסמן עכשיו</a></div>` : ""}
+      ${gentle ? `<div class="callout callout-soft">כשקשה, לא חייבים להתמודד לבד. אפשר לדבר עם מישהו כבר היום, גם בלילה: ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:*3362">*3362</a>, נפש אחת <a href="tel:*8944">*8944</a>.</div>` : ""}
+      ${first.length ? `
+        <section class="first-steps" aria-label="צעדים ראשונים">
+          <ol>${first.map((r, n) => `<li>${card(r.s, r.why)}</li>`).join("")}</ol>
+        </section>` : ""}
       ${crisis ? `<div class="callout">אם קשה במיוחד עכשיו, לא צריך לחכות לאף תוכנית: <a href="tel:*8944">*8944</a> (נפש אחת, 24/7, גם ללא הכרה), ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:*3362">*3362</a>. זמינים גם בלילה.</div>` : ""}
       ${guideKeys.length ? `<div class="callout callout-info"><strong>חשוב לדעת על הזכויות שלך:</strong> ${guideKeys.map(k => `<a href="#/rights?s=${k}">${esc(GUIDES[k].title)}</a>`).join(" · ")}</div>` : ""}
-      ${order.map(c => `
+      ${order.length ? `<h2 class="more-title">עוד אפשרויות לפי תחום</h2>` : ""}
+      ${order.map(c => { const rest = byCat[c].filter(r => !firstIds.has(r.s.id)); return rest.length ? `
         <section class="res-group">
-          <h2>${catIcon(c)} ${esc(catLabel(c))} <small>${byCat[c].length}</small></h2>
-          <div class="grid">${byCat[c].slice(0, 6).map(r => card(r.s, r.why)).join("")}</div>
-          ${byCat[c].length > 6 ? `<details><summary>עוד ${byCat[c].length - 6}</summary><div class="grid">${byCat[c].slice(6).map(r => card(r.s, r.why)).join("")}</div></details>` : ""}
-        </section>`).join("")}
+          <h3 class="group-title">${catIcon(c)} ${esc(catLabel(c))} <small>${rest.length}</small></h3>
+          <div class="grid">${rest.slice(0, SHOW).map(r => card(r.s, r.why)).join("")}</div>
+          ${rest.length > SHOW ? `<details><summary>להציג עוד ${rest.length - SHOW}</summary><div class="grid">${rest.slice(SHOW).map(r => card(r.s, r.why)).join("")}</div></details>` : ""}
+        </section>` : ""; }).join("")}
       ${!res.length ? `<p class="empty">לא מצאנו התאמה מדויקת. נסו לסמן פחות סינונים, או <a href="#/browse">לדפדף בכל השירותים</a>.</p>` : ""}`;
     if (canPrint) document.getElementById("print").onclick = () => {
       document.querySelectorAll("details").forEach(d => d.open = true);
       window.print();
     };
+  }
+
+  // מילים נרדפות לחיפוש. כל מילה בשאילתה נחשבת כנמצאה אם אחת מהנרדפות שלה מופיעה.
+  const SYNONYMS = [
+    ["ptsd", "פוסט טראומה", "פוסט-טראומה", "פוסטטראומה", "הלם קרב"],
+    ["כסף", "מענק", "מענקים", "כלכלי", "כספי", "תגמול", "החזר", "מימון", "הלוואה"],
+    ["עורך דין", "עו\"ד", "עורכי דין", "משפטי", "ייצוג", "ערעור", "תביעה"],
+    ["שוטר", "שוטרים", "משטרה", "נכי משטרה", "מג\"ב", "משמר הגבול"],
+    ["הכרה", "ועדה רפואית", "אחוזי נכות", "קצין תגמולים"],
+    ["גלישה", "גלישת", "גולשים", "סאפ"],
+    ["ים", "שיט", "צלילה", "קיאק", "גלישה"],
+    ["סוס", "סוסים", "רכיבה"],
+    ["כלב", "כלבים", "כלב שירות", "כלבי"],
+    ["יוגה", "מדיטציה", "מיינדפולנס", "נשימה"],
+    ["פסיכולוג", "פסיכולוגי", "טיפול נפשי", "פסיכותרפיה"],
+    ["זוגי", "זוגיות", "בני זוג", "בת זוג", "בן זוג"],
+    ["ילדים", "ילד", "ילדיהם", "קייטנות", "קייטנה"],
+    ["עבודה", "תעסוקה", "קריירה", "משרה", "הייטק"],
+    ["לימודים", "מלגה", "מלגות", "סטודנט", "סטודנטים", "השכלה"],
+    ["חוות", "חקלאות", "חקלאי"],
+    ["דירה", "דיור", "שכירות", "משכנתא"],
+    ["רכב", "נהיגה", "ניידות"]
+  ];
+  const PREFIXES = ["וה", "שה", "בה", "לה", "מה", "ה", "ב", "ל", "ו", "מ", "ש", "כ"];
+  function expand(word) {
+    const out = new Set([word]);
+    for (const p of PREFIXES) if (word.length > p.length + 2 && word.startsWith(p)) out.add(word.slice(p.length));
+    for (const w of [...out]) for (const g of SYNONYMS) if (g.includes(w)) g.forEach(x => out.add(x));
+    return [...out];
+  }
+  const REGION_WORDS = { "צפון": "north", "בצפון": "north", "חיפה": "haifa", "בחיפה": "haifa", "קריות": "haifa", "מרכז": "center", "במרכז": "center",
+    "שרון": "sharon", "בשרון": "sharon", "ירושלים": "jerusalem", "בירושלים": "jerusalem", "דרום": "south", "בדרום": "south", "באר שבע": "south" };
+  function searchScore(s, words) {
+    const name = (s.name || "").toLowerCase();
+    const tags = [catLabel(s.category), ...arr(s.interests).map(x => T.interests[x]), ...arr(s.difficulties).map(x => T.difficulties[x]),
+      ...arr(s.regions).map(x => T.regions[x]), ...arr(s.eligibility).map(x => T.eligibility[x])].join(" ").toLowerCase();
+    const body = [s.description, s.location, s.cost_notes, s.how_to_apply].join(" ").toLowerCase();
+    // מילה קצרה (כמו "ים") נחשבת רק כמילה שלמה, אחרת היא נמצאת בתוך "מילואימניקים"
+    // מחפשים רק בתחילת מילה (מותר לפניה ה/ב/ל/ו/מ/ש/כ), כדי ש"חוות" לא יימצא באמצע מילה אחרת
+    const escRe = x => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const has = (text, f) => new RegExp(`(^|[^א-תa-z0-9])(ו|ה|ב|ל|מ|ש|כ|וה|שה|בה|לה|מה|וב|ול)?${escRe(f)}` + (f.length <= 2 ? "([^א-תa-z]|$)" : "")).test(text);
+    let total = 0, matched = 0;
+    for (const w of words) {
+      if (REGION_WORDS[w]) { if (regionOk(s, [REGION_WORDS[w]])) { matched++; total += arr(s.regions).includes(REGION_WORDS[w]) ? 2 : 0; } continue; }
+      const forms = expand(w);
+      // המילה עצמה שווה יותר ממילה נרדפת, כדי ש"גלישה" יעלה קודם את מה שבאמת כתוב בו גלישה
+      const own = forms.slice(0, PREFIXES.filter(p => w.length > p.length + 2 && w.startsWith(p)).length + 1);
+      const hit = own.some(f => has(name, f)) ? 8 : forms.some(f => has(name, f)) ? 5 : forms.some(f => has(tags, f)) ? 3 : forms.some(f => has(body, f)) ? 1 : 0;
+      if (hit) matched++;
+      total += hit;
+    }
+    return { total, matched };
   }
 
   function viewBrowse(params) {
@@ -287,21 +358,26 @@
     const run = () => {
       const fd = new FormData(form);
       const q = (fd.get("q") || "").trim().toLowerCase();
-      const words = q.split(/\s+/).filter(Boolean);
-      const out = SERVICES.filter(s => {
+      // ביטוי שלם שמופיע ברשימת הנרדפות ("עורך דין", "כלב שירות") נחפש כיחידה אחת
+      const words = SYNONYMS.some(g => g.includes(q)) ? [q] : q.split(/\s+/).filter(Boolean);
+      const pool = SERVICES.filter(s => {
         if (fd.get("cat") && s.category !== fd.get("cat")) return false;
         if (fd.get("el") && !eligible(s, [fd.get("el")])) return false;
         if (fd.get("region") && !regionOk(s, [fd.get("region")])) return false;
         if (fd.get("cost") && s.cost !== fd.get("cost")) return false;
-        if (words.length) {
-          const hay = [s.name, s.description, s.location, s.cost_notes, catLabel(s.category),
-            ...arr(s.interests).map(x => T.interests[x]), ...arr(s.difficulties).map(x => T.difficulties[x])
-          ].join(" ").toLowerCase();
-          return words.every(w => hay.includes(w));
-        }
         return true;
       });
-      document.getElementById("count").textContent = `${out.length} תוצאות`;
+      let out = pool, partial = false;
+      if (words.length) {
+        const scored = pool.map(s => Object.assign({ s }, searchScore(s, words)));
+        let hits = scored.filter(x => x.matched === words.length);
+        // אין התאמה לכל המילים: מציגים את מה שמתאים לחלק מהן, עם הסבר
+        if (!hits.length) { hits = scored.filter(x => x.matched > 0); partial = hits.length > 0; }
+        out = hits.sort((a, b) => b.matched - a.matched || b.total - a.total).map(x => x.s);
+      }
+      document.getElementById("count").textContent = partial
+        ? `לא מצאנו התאמה לכל המילים. אלה ${out.length} תוצאות שמתאימות לחלק מהן:`
+        : `${out.length} תוצאות`;
       document.getElementById("list").innerHTML = out.map(s => card(s)).join("") ||
         `<p class="empty">אין תוצאות. נסו חיפוש אחר.</p>`;
       const qs = new URLSearchParams();

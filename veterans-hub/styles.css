@@ -214,3 +214,36 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .verify-ok { background: var(--info-bg); color: var(--free); font-weight: 700; }
 .verify-no { background: var(--surface-2); color: var(--muted); }
 .tag-ok { background: var(--info-bg); color: var(--free); font-weight: 700; }
+
+/* ---- צעדים ראשונים ותוצאות מקוצרות ---- */
+.first-steps ol { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 12px; counter-reset: step; }
+.first-steps > ol > li { counter-increment: step; position: relative; padding-inline-start: 44px; }
+.first-steps > ol > li::before {
+  content: counter(step); position: absolute; inset-inline-start: 0; top: 14px;
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--primary); color: var(--primary-ink); font-weight: 800;
+}
+.first-steps .card { border-color: var(--primary); }
+.more-title { margin-top: 8px; font-size: 1.15rem; color: var(--muted); }
+.group-title { font-size: 1.05rem; margin: 0 0 10px; }
+.group-title small { color: var(--muted); font-weight: 400; }
+.res-group { margin-bottom: 22px; }
+.callout-soft { background: var(--surface-2); color: var(--text); }
+.callout-soft a { color: var(--primary); }
+
+/* ---- נייד: כפתור המשך תמיד גלוי, תפריט שלא נחתך, פס מצוקה קומפקטי ---- */
+.wizard-nav {
+  position: sticky; bottom: 0; z-index: 5; background: var(--bg);
+  padding-block: 12px calc(12px + env(safe-area-inset-bottom, 0px)); margin-top: 16px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .crisis-bar { font-size: .88rem; padding: 6px 12px; gap: 4px 8px; }
+  .crisis-bar .cb-long { display: none; }
+  .topbar { position: static; }
+  .nav { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; overflow: visible; }
+  .nav a { white-space: normal; text-align: center; padding: 8px 6px; background: var(--surface-2); }
+  .nav a.active { background: var(--primary); color: var(--primary-ink); }
+  .first-steps > ol > li { padding-inline-start: 0; padding-top: 6px; }
+  .first-steps > ol > li::before { inset-inline-start: auto; inset-inline-end: 10px; top: 0; width: 28px; height: 28px; z-index: 1; }
+}
