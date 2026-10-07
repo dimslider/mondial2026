@@ -16,6 +16,7 @@
 """
 import concurrent.futures as cf
 import csv
+import gzip
 import html
 import json
 import re
@@ -40,6 +41,8 @@ def _get(url):
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "he,en"})
         with urllib.request.urlopen(req, timeout=25) as r:
             raw = r.read(3_000_000)
+            if raw[:2] == b"\x1f\x8b":  # יש שרתים ששולחים gzip גם בלי שביקשנו
+                raw = gzip.decompress(raw)
             charset = r.headers.get_content_charset() or "utf-8"
             body = raw.decode(charset, errors="replace")
             return r.status, r.geturl(), body

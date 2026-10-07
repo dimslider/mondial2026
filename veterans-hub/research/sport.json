@@ -1,17 +1,405 @@
 [
-{"name":"הגל שלי – גלישה טיפולית לנפגעי פוסט טראומה (HaGal Sheli / My Wave)","category":"water-sports","description":"עמותה שמפעילה גלישה טיפולית בקבוצות בהנחיית מדריכי גלישה, פסיכולוגים קליניים ועובדים סוציאליים. מפעילה תוכנית ייעודית ללוחמים משוחררים עם פוסט טראומה בשיתוף אגף השיקום במשרד הביטחון, ומאז 7.10 גם ללוחמי סדיר ומילואים, מפונים, שורדי הנובה ושבים מהשבי. פועלת בכ-10 מרכזי גלישה ובמסגרת תוכנית החירום 'כלים מהגלים'.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process","reservists","combat-soldiers","terror-victims","civilians"],"difficulties":["ptsd","anxiety","sleep","depression","loneliness"],"interests":["sea","sport","fitness"],"cost":"free","cost_notes":"התוכנית ללוחמים פועלת בשיתוף אגף השיקום; תרומות מקבלות מימון תואם ממשרד הרווחה","regions":["nationwide","center","south","sharon","haifa"],"location":"כ-10 מרכזי גלישה לאורך החוף, כולל זיקים","phone":"","email":"","website":"https://hagalsheli.co.il","how_to_apply":"להיכנס לאתר העמותה (עמוד 'למי זה מתאים') ולהשאיר פרטים, או לפנות לרכז/ת השיקום באגף השיקום ולבקש הפניה לתוכנית הגלישה הטיפולית של הגל שלי.","source_url":"https://www.jpost.com/israel-news/article-787878","confidence":"high"},
-{"name":"SURF TRUCK – מרכז גלישה טיפולי נייד (הגל שלי ו-וולוו ישראל)","category":"water-sports","description":"משאית שהוסבה למרכז גלישה טיפולי נייד, עם כיתה ממוזגת, ציוד וחליפות גלישה, שמגיעה לחופים שונים. משמשת מרכז חירום נייד בתוכנית הטיפולית של הגל שלי לנפגעי טראומה ופוסט טראומה מאז 7.10.","provider_type":"ngo","eligibility":["reservists","combat-soldiers","terror-victims","civilians"],"difficulties":["ptsd","anxiety"],"interests":["sea","sport"],"cost":"free","cost_notes":"חלק מהתוכנית הטיפולית של העמותה","regions":["nationwide"],"location":"נייד – חופים שונים","phone":"","email":"","website":"https://hagalsheli.co.il","how_to_apply":"דרך עמותת הגל שלי: להשאיר פרטים באתר ולשאול על מועדי הפעילות של המרכז הנייד באזור שלך.","source_url":"https://sport1.maariv.co.il/other-industries/article/1254272","confidence":"medium"},
-{"name":"ימטוב – גלישה ושיט טיפולי ללוחמים (YamTov)","category":"water-sports","description":"עמותה שהוקמה ב-2017 ומשלבת גלישה ושיט מפרשיות בשיקום חיילים שעברו טראומה גופנית ונפשית בשירות. קבוצות שבועיות באשקלון, הרצליה ושדות ים. השיטה מוכרת כטיפול ימי מאושר ללוחמים משוחררים במסגרת תוכנית 'נפש אחת' של משרד הביטחון; המדריכים מתנדבים.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process","reservists","combat-soldiers"],"difficulties":["ptsd","anxiety","physical-disability","loneliness","chronic-pain"],"interests":["sea","sport"],"cost":"free","cost_notes":"מדריכים מתנדבים; מוכר בתוכנית נפש אחת של משרד הביטחון","regions":["south","sharon","haifa"],"location":"אשקלון, הרצליה, שדות ים","phone":"","email":"","website":"https://www.yamtov.com","how_to_apply":"לפנות לעמותה דרך האתר, או לבקש מרכז/ת השיקום באגף השיקום הפניה לטיפול ימי של ימטוב.","source_url":"https://www.worldsurfleague.com/posts/498015/meet-yamtov-an-ngo-that-uses-surfing-for-good","confidence":"high"},
-{"name":"טיפול ימי במימון אגף השיקום – תוכנית 'נפש אחת' (משרד הביטחון)","category":"water-sports","description":"במסגרת הרפורמה 'נפש אחת' אגף השיקום מכיר בטיפולים משלימים כמו גלישה ושיט טיפולי לנכי צה\"ל עם פוסט טראומה, ומפעיל שיתופי פעולה עם עמותות כמו הגל שלי וימטוב. אפשר לבקש שיבוץ בקבוצת ים כחלק מתוכנית השיקום.","provider_type":"government","eligibility":["mod-recognized","mod-in-process"],"difficulties":["ptsd","anxiety","depression","bureaucracy"],"interests":["sea","sport"],"cost":"mod-funded","cost_notes":"במימון אגף השיקום למוכרים או למי שבתהליך הכרה","regions":["nationwide"],"location":"","phone":"","email":"","website":"","how_to_apply":"לפנות לרכז/ת השיקום או לקצין/ת הטיפול באגף השיקום ולבקש הפניה לטיפול ימי (גלישה או שיט) במסגרת נפש אחת.","source_url":"https://www.jpost.com/israel-news/article-787878","confidence":"medium"},
-{"name":"אחים ביוגה – יוגה רגישת טראומה ללוחמים (Brothers in Yoga)","category":"yoga-mind-body","description":"עמותה שמפעילה תהליך קבוצתי של ארבעה חודשים ללוחמים משוחררים עם הלם קרב ופוסט טראומה. התהליך כולל יוגה רגישת טראומה, מדיטציה וחקירה עצמית, ונפתח בריטריט של שלושה ימים בטבע עם לינה. לאחר מכן יש מפגשי תרגול ושיתוף בזום, והתהליך נסגר בריטריט של יום. יש גם תוכניות לשורדי הנובה, למפונים ולמשפחות.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process","not-recognized","reservists","combat-soldiers","terror-victims","families"],"difficulties":["ptsd","anxiety","sleep","anger","moral-injury"],"interests":["mind-body","nature","spiritual"],"cost":"free","cost_notes":"ממומן מתרומות (לפי הדיווחים, ללא עלות למשתתפים – כדאי לוודא)","regions":["nationwide","online"],"location":"ריטריטים בטבע ומפגשי זום","phone":"","email":"","website":"https://www.brothersin.yoga","how_to_apply":"להירשם למחזור הבא דרך אתר העמותה.","source_url":"https://www.brothersin.yoga/en/about","confidence":"high"},
-{"name":"בית הלוחם – מרכזי ספורט ושיקום לנכי צה\"ל (ארגון נכי צה\"ל)","category":"sports","description":"מרכזי שיקום, ספורט ופנאי לנכי צה\"ל ולבני משפחותיהם בתל אביב, ירושלים, חיפה ובאר שבע, ובקרוב גם באשדוד. במרכזים יש בריכות, חדרי כושר, אולמות ספורט, פיזיותרפיה וריפוי בעיסוק. מוצעים יותר מ-450 חוגים ותוכניות: ספורט מותאם ולא מותאם, אמנות, מוזיקה, הרצאות וטיולים. פצועי חרבות ברזל משתתפים בפעילות כמה פעמים בשבוע.","provider_type":"ngo","eligibility":["mod-recognized","families"],"difficulties":["physical-disability","amputation","ptsd","loneliness","chronic-pain","family-relations"],"interests":["sport","fitness","sea","art","music"],"cost":"subsidized","cost_notes":"לחברי ארגון נכי צה\"ל; רוב הפעילויות ללא עלות או בדמי חבר סמליים","regions":["center","jerusalem","haifa","south"],"location":"תל אביב, ירושלים, חיפה, באר שבע (אשדוד בהקמה)","phone":"","email":"","website":"","how_to_apply":"להצטרף לארגון נכי צה\"ל (נדרשת הכרה באגף השיקום) ולהירשם לחוגים בבית הלוחם הקרוב.","source_url":"https://www.timesofisrael.com/wounded-idf-veterans-find-a-home-in-israels-state-of-the-art-rehabilitation-centers/","confidence":"high"},
-{"name":"נבחרת בית הלוחם במשחקי האינוויקטוס (Invictus Games)","category":"sports","description":"נבחרת של נכי צה\"ל שמתחרה במשחקי האינוויקטוס הבינלאומיים לפצועי צבא, בענפים כמו כדורסל בכיסאות גלגלים, שחייה, אתלטיקה ועוד. בהשתתפות הראשונה זכתה הנבחרת ב-14 מדליות. זה מסלול תחרותי למי שהספורט הפך עבורו למטרה.","provider_type":"ngo","eligibility":["mod-recognized"],"difficulties":["physical-disability","amputation","ptsd"],"interests":["sport","fitness","travel"],"cost":"free","cost_notes":"דרך בית הלוחם","regions":["nationwide"],"location":"","phone":"","email":"","website":"","how_to_apply":"לפנות למחלקת הספורט בבית הלוחם הקרוב ולשאול על מיונים לנבחרת.","source_url":"https://www.timesofisrael.com/idf-disabled-veteran-athletes-bring-home-14-medals-from-first-invictus-games/","confidence":"medium"},
-{"name":"המרכז הישראלי לספורט נכים ע\"ש ספיבק – אילן (Israel ParaSport Center)","category":"sports","description":"מרכז הספורט הגדול בארץ לאנשים עם מוגבלות פיזית. יש בו אימוני ספורט פראלימפי, הידרותרפיה וסדנה להתאמת ציוד ספורט. במסגרת תוכנית 'ששק' המרכז מספק שיקום ומענים נפשיים לפצועי מלחמה, למפונים ולשורדי הנובה, ומארח גם פצועי צה\"ל.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process","not-recognized","terror-victims","civilians"],"difficulties":["physical-disability","amputation","tbi","chronic-pain","ptsd"],"interests":["sport","fitness","sea"],"cost":"subsidized","cost_notes":"תוכנית ששק לנפגעי המלחמה ממומנת מתרומות","regions":["center"],"location":"רמת גן","phone":"","email":"","website":"https://ilan-israel.co.il/en/sports","how_to_apply":"לפנות לאילן או ישירות למרכז ברמת גן ולבקש שיבוץ בתוכנית ששק או בענף ספורט מותאם.","source_url":"https://en.wikipedia.org/wiki/Israel_Sports_Center_for_the_Disabled","confidence":"high"},
-{"name":"מעבר לגבולות ומעל למגבלות – שיקום פצועי מלחמה בספורט פראלימפי (איגוד הספורט לנכים)","category":"sports","description":"פרויקט של איגוד הספורט לנכים בתמיכת בזן. ספורטאים פראלימפיים מגיעים לבתי חולים, למרכזי שיקום ולבתי הלוחם, ומציגים לפצועים את הספורט ככלי שיקום וכמסלול קריירה. הפרויקט מפעיל עמדות מידע והכוונה לענפי ספורט.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process","combat-soldiers","reservists"],"difficulties":["physical-disability","amputation"],"interests":["sport","fitness"],"cost":"free","cost_notes":"","regions":["nationwide"],"location":"בתי חולים ומרכזי שיקום","phone":"","email":"","website":"","how_to_apply":"לבקש בבית החולים או במרכז השיקום מפגש עם נציגי איגוד הספורט לנכים, או לפנות לאיגוד ישירות.","source_url":"https://www.maariv.co.il/economy/israel/article-1202536","confidence":"medium"},
-{"name":"מעזה ללוס אנג'לס – מסלול פראלימפי לפצועי צה\"ל (הוועד הפראלימפי הישראלי)","category":"sports","description":"תוכנית של הוועד הפראלימפי לאיתור פצועי צה\"ל עם פוטנציאל ספורטיבי וליווי שלהם לקראת אולימפיאדת הנכים בלוס אנג'לס 2028. כמאה לוחמים מתאמנים במסגרת התוכנית. ספורטאים ומאמנים מגיעים למרכזי השיקום.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process"],"difficulties":["physical-disability","amputation"],"interests":["sport","fitness","travel"],"cost":"free","cost_notes":"ספורטאים בנבחרות זכאים לתמיכה מקצועית, ציוד ומענקים","regions":["nationwide"],"location":"","phone":"","email":"","website":"","how_to_apply":"לפנות לוועד הפראלימפי או לאיגוד הספורט לנכים, או לבקש הפניה מצוות מרכז השיקום.","source_url":"https://unitedwithisrael.org/wounded-idf-soldiers-train-to-become-future-paralympic-champions/","confidence":"medium"},
-{"name":"רצים עם רמי – קבוצות ריצה והליכה למתמודדי טראומה","category":"sports","description":"קבוצות ריצה והליכה ברחבי הארץ למתמודדים עם טראומה ממלחמה ומטרור. הפרויקט פועל יותר מ-11 שנה, והקים אותו רמי יולזרי, נכה צה\"ל עם פוסט טראומה ממלחמת לבנון הראשונה. מאז המלחמה נפתחו קבוצות נוספות, כולל קבוצות ייעודיות ללוחמים, קבוצה לעדה הדרוזית וקבוצת קרוספיט.","provider_type":"ngo","eligibility":["mod-recognized","mod-in-process","not-recognized","reservists","combat-soldiers","terror-victims"],"difficulties":["ptsd","loneliness","depression","anxiety"],"interests":["sport","fitness","nature"],"cost":"free","cost_notes":"","regions":["nationwide"],"location":"קבוצות ברחבי הארץ","phone":"","email":"","website":"","how_to_apply":"לחפש את 'רצים עם רמי' ברשתות החברתיות וליצור קשר כדי להצטרף לקבוצה הקרובה.","source_url":"https://sports.walla.co.il/item/3689260","confidence":"medium"},
-{"name":"בשביל המחר – ריטריטים לעיבוד חוויות קרב למילואימניקים","category":"nature-retreats","description":"ריטריטים רב-יומיים לריפוי ועיבוד חוויות קרב ללוחמי מילואים. העמותה פועלת כ-16 שנה, ליוותה כ-4,800 לוחמי מילואים בעזרת כ-120 פסיכולוגים ויועצים, והמודל שלה אומץ על ידי צה\"ל ומשרד הביטחון.","provider_type":"ngo","eligibility":["reservists","combat-soldiers","not-recognized"],"difficulties":["ptsd","moral-injury","anger","family-relations"],"interests":["nature","mind-body"],"cost":"free","cost_notes":"","regions":["nationwide"],"location":"","phone":"","email":"","website":"","how_to_apply":"לפנות לעמותה ולהירשם, או להירשם כיחידה או פלוגה דרך מפקד או קצין ת\"ש.","source_url":"https://themedialine.org/life-lines/from-war-zone-to-wilderness-how-some-israeli-soldiers-are-healing-after-gaza/","confidence":"medium"},
-{"name":"ריפוי בטבע – HiN (Healing in Nature) למילואימניקים","category":"nature-retreats","description":"תוכנית ריפוי במרחב הטבע ללוחמי מילואים אחרי הלחימה בעזה. התחילה עם 15 מילואימניקים, גדלה ליותר מ-100 משתתפים, ויש לה רשימת המתנה של יותר מ-600 איש.","provider_type":"ngo","eligibility":["reservists","combat-soldiers","not-recognized"],"difficulties":["ptsd","anxiety","loneliness"],"interests":["nature","mind-body","extreme"],"cost":"free","cost_notes":"יש רשימת המתנה","regions":["nationwide"],"location":"","phone":"","email":"","website":"","how_to_apply":"להירשם לרשימת ההמתנה (פרטי קשר לא אומתו – לפי כתבה ב-The Media Line).","source_url":"https://themedialine.org/life-lines/from-war-zone-to-wilderness-how-some-israeli-soldiers-are-healing-after-gaza/","confidence":"low"},
-{"name":"נט\"ל – תוכנית יוגה לנשים בעוטף עזה","category":"yoga-mind-body","description":"נט\"ל (מרכז טראומה וחוסן) מפעילה תוכנית יוגה לנשים שגרות לאורך הגבול עם עזה, ככלי להפחתת מתח טראומטי. מתאימה לנשות לוחמים ולתושבות העוטף.","provider_type":"ngo","eligibility":["civilians","terror-victims","families"],"difficulties":["ptsd","anxiety","sleep"],"interests":["mind-body"],"cost":"free","cost_notes":"","regions":["south"],"location":"יישובי עוטף עזה","phone":"","email":"","website":"https://www.natal.org.il","how_to_apply":"לפנות לנט\"ל דרך האתר ולשאול על מחזור היוגה הקרוב.","source_url":"https://www.natal.org.il/en/?p=3076","confidence":"medium"},
-{"name":"טיפולי רפואה משלימה למילואימניקים – לאומית שירותי בריאות","category":"yoga-mind-body","description":"לפי דיווח, לאומית הציעה ללקוחות מילואימניקים ולבני/בנות הזוג הטבה לטיפולי רפואה משלימה: עיסוי רפואי, שיאצו, דיקור סיני, רפלקסולוגיה וכירופרקטיקה. ההרשמה דרך אתר לאומית.","provider_type":"hmo","eligibility":["reservists","families"],"difficulties":["chronic-pain","anxiety","sleep"],"interests":["mind-body"],"cost":"subsidized","cost_notes":"הטבה ללקוחות לאומית; לוודא שההטבה עדיין בתוקף","regions":["nationwide"],"location":"","phone":"","email":"","website":"","how_to_apply":"להיכנס לאתר לאומית, למלא את הפרטים בעמוד ההטבה למילואימניקים ולקבוע טיפול.","source_url":"https://finance.walla.co.il/item/3636716","confidence":"low"}
+ {
+  "name": "הגל שלי – גלישה טיפולית לנפגעי פוסט טראומה (HaGal Sheli / My Wave)",
+  "category": "water-sports",
+  "description": "עמותה שמשתמשת בים ובגלישת גלים לחיזוק החוסן הרגשי. התוכניות הטיפוליות מלוות על ידי פסיכולוגים קליניים, עובדים סוציאליים ומדריכי גלישה מוסמכים, ומשלבות גלישה עם שיח קבוצתי. אחרי 7 באוקטובר העמותה התאימה את התוכניות לטיפול בטראומה של נפגעי המלחמה, וכיום היא פועלת בשותפות עם אגף השיקום במשרד הביטחון, ארגון נכי צה\"ל, נט\"ל ועוד. יש גם תוכנית לטיפול בטראומה בשם 'כלים מהגלים' בשיתוף משרד הביטחון. העמותה פועלת ב-12 מרכזים לאורך החוף, כולל מרכז חדש בחוף זיקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "security-forces",
+   "terror-victims",
+   "civilians",
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "depression",
+   "loneliness"
+  ],
+  "interests": [
+   "sea",
+   "sport",
+   "fitness"
+  ],
+  "cost": "free",
+  "cost_notes": "העלות לא מפורטת באתר – כדאי לברר מול העמותה או מול אגף השיקום",
+  "regions": [
+   "nationwide",
+   "center",
+   "south",
+   "sharon",
+   "haifa"
+  ],
+  "location": "12 מרכזים לאורך החוף, ביניהם זיקים, אשקלון, בת ים, תל אביב, הרצליה, נתניה ושדות ים",
+  "phone": "03-6029293",
+  "email": "office@hagalsheli.co.il",
+  "website": "https://hagalsheli.co.il",
+  "how_to_apply": "להיכנס לעמוד התוכניות באתר העמותה וללחוץ על 'הצטרפו לתוכניות הטיפוליות', או להתקשר ל-03-6029293. מוכרים/ות באגף השיקום יכולים לשאול גם את רכז/ת השיקום על התוכנית.",
+  "source_url": "https://hagalsheli.co.il/programs/",
+  "confidence": "high"
+ },
+ {
+  "name": "ימטוב – גלישה ושיט טיפולי ללוחמים (YamTov)",
+  "category": "water-sports",
+  "description": "מיזם שפועל מ-2017 לשיקום לוחמי ולוחמות צה\"ל דרך ספורט ימי בקהילה. יש מפגש ימי שבועי במועדוני גלישה ושייט, לצד עיבוד רגשי ועבודה בקבוצה. קבוצות הגלישה נפגשות לאימון שבועי באשקלון, בהרצליה ובשדות ים, ומפגשי השייט מתקיימים במרינה הרצליה עם סקיפרים מתנדבים. במסגרת רפורמת 'נפש אחת' של משרד הביטחון אפשר להצטרף גם למפגשי גלישה פרטניים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "physical-disability",
+   "loneliness"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "free",
+  "cost_notes": "העלות לא מפורטת באתר; יש מסלול במסגרת 'נפש אחת' של משרד הביטחון",
+  "regions": [
+   "south",
+   "sharon",
+   "haifa"
+  ],
+  "location": "אשקלון, הרצליה (כולל מרינה הרצליה), שדות ים",
+  "phone": "",
+  "email": "info@yamtov.org",
+  "website": "https://www.yamtov.com",
+  "how_to_apply": "למלא את הטופס בעמוד 'נפש אחת' באתר ימטוב, או לכתוב ל-info@yamtov.org.",
+  "source_url": "https://www.yamtov.com/our-activities",
+  "confidence": "high"
+ },
+ {
+  "name": "טיפול ימי במסגרת 'נפש אחת' (אגף השיקום, משרד הביטחון)",
+  "category": "water-sports",
+  "description": "במסגרת רפורמת 'נפש אחת' של משרד הביטחון אפשר לנסות מגוון טיפולים חדשים, וגם הים נוסף לרשימה. למשל, דרך ימטוב אפשר להשתתף במפגשי גלישת גלים פרטניים במועדון קרוב, עם מדריכים מוסמכים. גם עמותת הגל שלי פועלת בשותפות עם אגף השיקום.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "bureaucracy"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במסגרת 'נפש אחת'; את פרטי הזכאות והמימון כדאי לברר מול אגף השיקום",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "*8944",
+  "email": "",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "למלא את הטופס בעמוד 'נפש אחת' באתר ימטוב, או לפנות לאגף השיקום (קו התמיכה של נפש אחת: *8944).",
+  "source_url": "https://www.yamtov.com/one-soul",
+  "confidence": "high"
+ },
+ {
+  "name": "אחים ליוגה – יוגה רגישה לטראומה ללוחמים (Brothers in Yoga)",
+  "category": "yoga-mind-body",
+  "description": "עמותה שמסייעת למתמודדים/ות עם טראומה על רקע ביטחוני דרך תהליך קבוצתי ארוך. בתוכנית 'מסע לחיים' יש ריטריט פתיחה של 3 ימים, מפגש תרגול שבועי בזום, וריטריט סיכום של 3 ימים. התרגול כולל יוגה רגישה לטראומה, נשימה, הרפיה ומדיטציה, בליווי צוות טיפולי קליני. מאז חרבות ברזל יש גם תוכניות ליחידות בצה\"ל, לשורדי נובה ולמשפחות מהעוטף. יש גם שיעורי יוגה פתוחים בזום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "terror-victims",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep",
+   "anger",
+   "moral-injury"
+  ],
+  "interests": [
+   "mind-body",
+   "nature",
+   "spiritual"
+  ],
+  "cost": "free",
+  "cost_notes": "שיעורי הזום הפתוחים ללא עלות; עלות 'מסע לחיים' לא מפורטת באתר – כדאי לברר",
+  "regions": [
+   "nationwide",
+   "jerusalem",
+   "online"
+  ],
+  "location": "ריטריטים באשרם במושב מטע ובמרכזים ברחבי הארץ, ומפגשי זום",
+  "phone": "050-2688240",
+  "email": "contact@brothersin.yoga",
+  "website": "https://www.brothersin.yoga",
+  "how_to_apply": "להירשם דרך אתר העמותה, להתקשר ל-050-2688240 או לכתוב ל-contact@brothersin.yoga.",
+  "source_url": "https://www.brothersin.yoga/%D7%A2%D7%9C-%D7%94%D7%AA%D7%9B%D7%A0%D7%99%D7%AA",
+  "confidence": "high"
+ },
+ {
+  "name": "בית הלוחם – מרכזי ספורט ושיקום לנכי צה\"ל (ארגון נכי צה\"ל)",
+  "category": "sports",
+  "description": "מרכזי שיקום, ספורט ופנאי של ארגון נכי צה\"ל לנכי צה\"ל ולבני המשפחה, עם דגש על ספורט ככלי שיקום, לצד פעילות חברתית ותרבותית. יש מרכזים בתל אביב, ירושלים, חיפה ובאר שבע, והוחלט להקים מרכז חמישי באשדוד. במרכזים יש בריכות, אולמות ספורט, חדרי כושר והידרותרפיה, ובחלקם גם פיזיותרפיה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "families"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "amputation",
+   "ptsd",
+   "loneliness",
+   "chronic-pain",
+   "family-relations"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "sea",
+   "art",
+   "music"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "לחברי ארגון נכי צה\"ל ובני משפחותיהם; העלות לא מפורטת באתר",
+  "regions": [
+   "center",
+   "jerusalem",
+   "haifa",
+   "south"
+  ],
+  "location": "תל אביב, ירושלים, חיפה, באר שבע (אשדוד בתכנון)",
+  "phone": "03-6461603",
+  "email": "",
+  "website": "https://zdvo.org",
+  "how_to_apply": "לפנות לבית הלוחם הקרוב או לארגון נכי צה\"ל ולשאול על חברות ועל החוגים.",
+  "source_url": "https://zdvo.org/a-second-home-beit-halochem-centers/",
+  "confidence": "high"
+ },
+ {
+  "name": "נבחרת ישראל במשחקי האינוויקטוס (Invictus Games)",
+  "category": "sports",
+  "description": "נבחרת של פצועי ונכי צה\"ל שמתחרה במשחקי האינוויקטוס הבינלאומיים לפצועי צבא. ישראל הצטרפה לקהילת האינוויקטוס ב-2022 בהובלת אגף השיקום, ומתחרים בה ספורטאים שמתאמנים בבית הלוחם. זה מסלול תחרותי למי שהספורט הפך עבורו למטרה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "amputation",
+   "ptsd"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://invictusgamesfoundation.org/invictus-community-nations/israel",
+  "how_to_apply": "לשאול בבית הלוחם הקרוב או באגף השיקום על הנבחרת.",
+  "source_url": "https://invictusgamesfoundation.org/invictus-community-nations/israel",
+  "confidence": "high"
+ },
+ {
+  "name": "המרכז הישראלי לספורט נכים ע\"ש ספיבק – אילן (Israel ParaSport Center)",
+  "category": "sports",
+  "description": "מרכז ספורט ותיק ברמת גן לאנשים עם מוגבלות פיזית, שמופעל על ידי איל\"ן. יש בו ספורט מותאם ותחרותי, כמו כדורסל בכיסאות גלגלים, שחייה וטניס שולחן, וגם הידרותרפיה. אחרי 7 באוקטובר המרכז הפעיל את תוכנית 'ששק' (שיקום, ספורט, קהילה) לישראלים שמתמודדים עם הפצעים הנסתרים של מלחמה וטרור: פעילות גופנית מותאמת לטראומה (הידרותרפיה, שחייה, כושר, פילאטיס, כדורסל, אומנויות לחימה, ריצה) ואחריה קבוצה טיפולית. גם בני משפחה יכולים להשתתף.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "amputation",
+   "tbi",
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "sea"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "העלות לא מפורטת באתר – כדאי לברר מול המרכז",
+  "regions": [
+   "center"
+  ],
+  "location": "רחוב רוקח 123, רמת גן",
+  "phone": "03-5754444",
+  "email": "info@israelparasport.org",
+  "website": "https://israelparasport.org",
+  "how_to_apply": "לפנות למרכז ברמת גן (03-5754444) ולשאול על תוכנית ששק או על ענף ספורט מותאם.",
+  "source_url": "https://israelparasport.org/the-shesek-program/",
+  "confidence": "high"
+ },
+ {
+  "name": "ההתאחדות הישראלית לספורט נכים – הכוונה לספורט פראלימפי לפצועי מלחמה",
+  "category": "sports",
+  "description": "ההתאחדות לספורט נכים והוועד הפראלימפי עוזרים לאנשים עם מוגבלות פיזית קבועה (למשל קטיעה או ירידה בטווח התנועה אחרי כוויה) או לקות ראייה למצוא ענף ספורט ומועדון מתאים. באתר יש עמוד ייעודי לפצועי חרבות ברזל. בודקים יחד את סוג המגבלה, את הענפים שמעניינים אותך ומה יש באזור המגורים. ארגון נכי צה\"ל חבר בהתאחדות, ויש מועדונים בבתי הלוחם.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "amputation"
+  ],
+  "interests": [
+   "sport",
+   "fitness"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "משרדי ההתאחדות: רחוב שטרית 10, תל אביב",
+  "phone": "03-6493132",
+  "email": "office@isad.org.il",
+  "website": "https://isad.org.il",
+  "how_to_apply": "למלא את טופס 'מעוניינים לעשות ספורט?' באתר ההתאחדות, או להתקשר ל-03-6493132.",
+  "source_url": "https://isad.org.il/information/%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9C/",
+  "confidence": "high"
+ },
+ {
+  "name": "רצים עם רמי – קבוצות ריצה והליכה למתמודדי טראומה (נט\"ל)",
+  "category": "sports",
+  "description": "קבוצות ריצה והליכה של נט\"ל למי שנפגעו באירועי טרור ומלחמה ומתמודדים עם סימפטומים פוסט טראומטיים: משוחררי צה\"ל, אנשי מילואים, כוחות הביטחון וכל מי שחווה אירוע טרור. הקבוצות נפגשות פעם בשבוע בערב לאימון לפי היכולת של כל אחד, עם מאמן ריצה ומלווה רגשי, ובסוף יש קפה ושיחה. אלה לא קבוצות טיפוליות. מוביל את הפרויקט רמי יולזרי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "reservists",
+   "combat-soldiers",
+   "security-forces",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "depression",
+   "anxiety"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ההשתתפות בחינם; צריך אישור רפואי לפעילות ספורטיבית",
+  "regions": [
+   "center",
+   "jerusalem",
+   "south",
+   "judea-samaria",
+   "north"
+  ],
+  "location": "תל אביב, ירושלים, מודיעין, באר שבע, אריאל, רמת הגולן",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "למלא את טופס ההרשמה בעמוד 'רצים עם רמי' באתר נט\"ל ולבחור את העיר.",
+  "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/running-with-rami/",
+  "confidence": "high"
+ },
+ {
+  "name": "בשביל המחר – מסעות בטבע לעיבוד חוויות לחימה (Bshvil Hamachar)",
+  "category": "nature-retreats",
+  "description": "עמותה שעוזרת ללוחמות וללוחמים אחרי השחרור להתמודד עם אירועי לחימה מהשירות. העמותה מקיימת מסעות קבוצתיים בטבע בהנחיית אנשי מקצוע, עם מעגלי שיח ולמידה של מודל לחיזוק החוסן. יש קבוצות של צוות או מחלקה שלחמו יחד, ויש קבוצות מעורבות מיחידות שונות. המסע כולל מפגש היכרות, מפגש פתיחה של יומיים, פרק מרכזי (6 ימים בארץ או 8 ימים בחו\"ל), מפגש סיכום ועוד כמה מפגשי המשך.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "moral-injury",
+   "anger",
+   "family-relations"
+  ],
+  "interests": [
+   "nature",
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "העלות לא מפורטת באתר – כדאי לברר מול העמותה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "מסעות בארץ ובחו\"ל; משרדי העמותה בבית ברל",
+  "phone": "058-6484030",
+  "email": "office@bshvil.org",
+  "website": "https://www.bshvil.org",
+  "how_to_apply": "ללחוץ על 'הצטרפות למסע' באתר העמותה, או להתקשר ל-058-6484030.",
+  "source_url": "https://www.bshvil.org/masa/",
+  "confidence": "high"
+ },
+ {
+  "name": "נט\"ל – איינגאר יוגה מודעת טראומה (NATAL)",
+  "category": "yoga-mind-body",
+  "description": "קבוצות יוגה של נט\"ל לנפגעי טראומה ממלחמה וטרור, פתוחות לגברים ולנשים בכל גיל ובכל יכולת גופנית. הקבוצות מונחות על ידי מורים מוסמכים לאיינגאר יוגה בפריסה ארצית, ויש קבוצות למילואימניקים ולבנות הזוג, למשפחות שכולות, לנפגעי פעולות איבה ולשורדי המסיבות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "families",
+   "bereaved",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "העלות לא מפורטת באתר – כדאי לברר מול נט\"ל",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "קבוצות בפריסה ארצית",
+  "phone": "*3362",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "להתקשר לקו הסיוע של נט\"ל ב-*3362 או למלא את הטופס בעמוד היוגה באתר נט\"ל.",
+  "source_url": "https://www.natal.org.il/%D7%AA%D7%9E%D7%99%D7%9B%D7%94-%D7%95%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%A0%D7%A4%D7%A9%D7%99/%D7%A7%D7%91%D7%95%D7%A6%D7%95%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%95%D7%AA-%D7%95%D7%A7%D7%91%D7%95%D7%A6%D7%95%D7%AA-%D7%AA%D7%9E%D7%99%D7%9B%D7%94/%D7%90%D7%99%D7%99%D7%A0%D7%92%D7%90%D7%A8-%D7%99%D7%95%D7%92%D7%94-%D7%9E%D7%95%D7%93%D7%A2%D7%AA-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94/",
+  "confidence": "high"
+ }
 ]
