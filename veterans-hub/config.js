@@ -4,6 +4,6 @@
 // turnstileSiteKey: המפתח הציבורי של Cloudflare Turnstile (הגנה מספאם). ציבורי, מותר שיהיה כאן.
 window.APP_CONFIG = {
   apiBase: "",
-  siteUrl: "",
+  siteUrl: "https://magia-lecha.idomayraz.workers.dev",
   turnstileSiteKey: ""
 };

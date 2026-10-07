@@ -2,5 +2,5 @@
 <resources>
     <string name="app_name">מגיע לך</string>
     <!-- כתובת האתר החי (Cloudflare Pages). ריק = רק העותק שבתוך האפליקציה -->
-    <string name="site_url" translatable="false"></string>
+    <string name="site_url" translatable="false">https://magia-lecha.idomayraz.workers.dev/</string>
 </resources>
