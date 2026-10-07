@@ -20,6 +20,7 @@ import html
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -34,11 +35,7 @@ def load_services():
     return json.loads(re.search(r"window\.SERVICES\s*=\s*(\[.*\]);", txt, re.S).group(1))
 
 
-def fetch(url):
-    if not url:
-        return None, "", ""
-    if not re.match(r"https?://", url):
-        url = "https://" + url
+def _get(url):
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "he,en"})
         with urllib.request.urlopen(req, timeout=25) as r:
@@ -50,6 +47,15 @@ def fetch(url):
         return e.code, url, ""
     except Exception as e:  # DNS, TLS, timeout
         return None, url, f"ERROR: {e.__class__.__name__}: {e}"
+
+
+def fetch(url):
+    if not url:
+        return None, "", ""
+    if not re.match(r"https?://", url):
+        url = "https://" + url
+    url = urllib.parse.quote(url, safe=":/?&=%#+@,;~!$'()*[]")
+    return _get(url)
 
 
 def to_text(body):
