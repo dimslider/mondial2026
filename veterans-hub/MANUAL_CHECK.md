@@ -205,3 +205,156 @@
 46. [ ] **קנאביס.com**  
    איפה לבדוק: [https://xn--4dbcyzi5a.com](https://xn--4dbcyzi5a.com)  
    מה כתוב אצלנו: בתשלום — בתשלום · **עוד לא במאגר: קודם לוודא מה העסק הזה עושה**
+
+## סריקה נוספת 2026-10-07: נוספו למאגר, מסומנים "עוד לא נבדק" (32)
+
+47. [ ] **לב אל לב ישראל (Israel Heart2Heart)** (high)  
+   איפה לבדוק: [https://www.israelgives.org/amuta/580746352](https://www.israelgives.org/amuta/580746352)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+48. [ ] **Our Family First – סופי שבוע זוגיים למשפחות מילואימניקים** (medium)  
+   איפה לבדוק: [https://ourfamilyfirst.org](https://ourfamilyfirst.org)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+49. [ ] **פורום נשות המילואימניקים** (high)  
+   איפה לבדוק: [https://www.timesofisrael.com/fired-during-war-reservists-wives-band-together-to-battle-for-job-security/amp/](https://www.timesofisrael.com/fired-during-war-reservists-wives-band-together-to-battle-for-job-security/amp/)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+50. [ ] **אחותי – קהילה לבנות זוג של פצועי צה"ל** (high)  
+   איפה לבדוק: [https://www.maariv.co.il/news/israel/article-1230840](https://www.maariv.co.il/news/israel/article-1230840)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+51. [ ] **הותיר אחריו חבר.ה – תמיכה בבני ובנות זוג שכולים שלא היו נשואים** (high)  
+   איפה לבדוק: [https://www.kolzchut.org.il/he/%D7%94%D7%95%D7%AA%D7%99%D7%A8_%D7%90%D7%97%D7%A8%D7%99%D7%95_%D7%97%D7%91%D7%A8%D7%94](https://www.kolzchut.org.il/he/%D7%94%D7%95%D7%AA%D7%99%D7%A8_%D7%90%D7%97%D7%A8%D7%99%D7%95_%D7%97%D7%91%D7%A8%D7%94)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+52. [ ] **קרן דובדבן (Friends of Duvdevan) – תמיכה בבוגרי יחידת דובדבן** (medium)  
+   איפה לבדוק: [https://www.jns.org/organization/friends-of-duvdevan](https://www.jns.org/organization/friends-of-duvdevan)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+53. [ ] **בית מאזן לנכי צה"ל ברחובות (אגף השיקום ואנוש)** (high)  
+   איפה לבדוק: [https://shikum.mod.gov.il/medical/mental-therapy/balancing-house](https://shikum.mod.gov.il/medical/mental-therapy/balancing-house)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+54. [ ] **בית מאזן לנכי צה"ל בבאר שבע (אגף השיקום)** (medium)  
+   איפה לבדוק: [https://shikum.mod.gov.il/medical/mental-therapy/balancing-house](https://shikum.mod.gov.il/medical/mental-therapy/balancing-house)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+55. [ ] **בית מאזן לנכי צה"ל באזור עפולה (אגף השיקום)** (medium)  
+   איפה לבדוק: [https://shikum.mod.gov.il/updates/3692](https://shikum.mod.gov.il/updates/3692)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+56. [ ] **הבית הבטוח לנכי צה"ל במשבר נפשי – אגף השיקום ושיבא** (medium)  
+   איפה לבדוק: [https://shikum.mod.gov.il/medical/hospitalization/safehouse](https://shikum.mod.gov.il/medical/hospitalization/safehouse)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+57. [ ] **בתים מאזנים דרך קופות החולים (בפיקוח משרד הבריאות)** (high)  
+   איפה לבדוק: [https://www.gov.il/he/Departments/DynamicCollectors/ballancing-homes-db](https://www.gov.il/he/Departments/DynamicCollectors/ballancing-homes-db)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+58. [ ] **מרכז עוגן – טיפול יום לנפגעי טראומה (המרכז לבריאות הנפש לב השרון)** (medium)  
+   איפה לבדוק: [https://www.lev-hasharon.co.il/?clinic=%D7%9E%D7%A8%D7%9B%D7%96-%D7%A2%D7%95%D7%92%D7%9F-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%99%D7%95%D7%9D-%D7%9C%D7%A0%D7%A4%D7%92%D7%A2%D7%99-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94](https://www.lev-hasharon.co.il/?clinic=%D7%9E%D7%A8%D7%9B%D7%96-%D7%A2%D7%95%D7%92%D7%9F-%D7%98%D7%99%D7%A4%D7%95%D7%9C-%D7%99%D7%95%D7%9D-%D7%9C%D7%A0%D7%A4%D7%92%D7%A2%D7%99-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+59. [ ] **עדי נגב – נחלת ערן: מרכז שיקום לפצועי צה"ל** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/news/health/article-1300676](https://www.maariv.co.il/news/health/article-1300676)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+60. [ ] **Ruca's Farm – חווה שיקומית במושב חמד** (medium)  
+   איפה לבדוק: [https://www.goodpeoplefund.org/news/harvesting-healing/](https://www.goodpeoplefund.org/news/harvesting-healing/)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+61. [ ] **חוות החוסן של יעלים – מרכז הטיפול בטבע עין יעל, ירושלים (Ya'elim Resilience Farm)** (medium)  
+   איפה לבדוק: [https://jerusalemfoundation.org/?p=24604](https://jerusalemfoundation.org/?p=24604)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+62. [ ] **בלב אחד – Dogs 4 Soldiers, אילוף כלבים לוותיקים עם פוסט טראומה (Belev Echad)** (medium)  
+   איפה לבדוק: [https://nocamels.com/2023/04/idf-veterans-best-friend-dogs-ease-pain-of-ptsd/](https://nocamels.com/2023/04/idf-veterans-best-friend-dogs-ease-pain-of-ptsd/)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+63. [ ] **ריסטארט (Restart) – ליווי, מנטורינג ויזמות לפצועי צה"ל** (medium)  
+   איפה לבדוק: [https://www.mako.co.il/pzm-soldiers/Article-cae7a07a3e3f381027.htm](https://www.mako.co.il/pzm-soldiers/Article-cae7a07a3e3f381027.htm)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+64. [ ] **תושייה – קבוצות תמיכה למשפחות של לוחמים עם פוסט טראומה (האגודה לבריאות הציבור)** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/news/israel/article-1316749](https://www.maariv.co.il/news/israel/article-1316749)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+65. [ ] **קרן מענקים לעסקים של בני/בנות זוג של משרתי מילואים – הסוכנות היהודית** (medium)  
+   איפה לבדוק: [https://www.israelhayom.co.il/military-life/article/19152146](https://www.israelhayom.co.il/military-life/article/19152146)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+66. [ ] **Chayal's Angels – טיפולי גוף ונפש בהתנדבות למשרתי מילואים** (medium)  
+   איפה לבדוק: [https://jewishstandard.timesofisrael.com/chayals-angels-bring-relief/](https://jewishstandard.timesofisrael.com/chayals-angels-bring-relief/)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+67. [ ] **בשבילנו (Bishvilenu) – אפליקציית החלמה לחיילים ולמשפחות** (medium)  
+   איפה לבדוק: [https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/](https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+68. [ ] **מלגת ממדים ללימודים – האגף לחיילים משוחררים** (high)  
+   איפה לבדוק: [https://www.hachvana.mod.gov.il](https://www.hachvana.mod.gov.il)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+69. [ ] **מלגת משפיעים בלימודים – האגודה למען החייל וקרן אדמונד דה רוטשילד** (high)  
+   איפה לבדוק: [https://www.ice.co.il/consumerism/news/article/1124337](https://www.ice.co.il/consumerism/news/article/1124337)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+70. [ ] **ורטיגו – תוכניות 'שבים' ו'שניים כאחד' למשרתי מילואים ובני זוג** (medium)  
+   איפה לבדוק: [https://vertigo.org.il](https://vertigo.org.il)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+71. [ ] **לצמוח כמנצחים ו-HackerU – הכשרות הייטק לנפגעי טראומה** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/news/israel/article-1193939](https://www.maariv.co.il/news/israel/article-1193939)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+72. [ ] **ארזים – תוכנית הכשרה טכנולוגית ותעסוקה לפצועי צה"ל (אוניברסיטת בר-אילן)** (high)  
+   איפה לבדוק: [https://sites.biu.ac.il/arazim-idf-veterans](https://sites.biu.ac.il/arazim-idf-veterans)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+73. [ ] **Infinity Labs, עתידים ואלביט – מסלול פיתוח תוכנה לפצועי המלחמה** (medium)  
+   איפה לבדוק: [https://www.ice.co.il/career/news/article/1044081](https://www.ice.co.il/career/news/article/1044081)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+74. [ ] **מהכשרה לתעסוקה – התעשייה האווירית ואורט לפצועי צה"ל** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/news/military/article-1311901](https://www.maariv.co.il/news/military/article-1311901)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+75. [ ] **חוזרים למסלול – ליווי תעסוקתי מודע טראומה (ג'וינט-תבת)** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/economy/israel/article-1091651](https://www.maariv.co.il/economy/israel/article-1091651)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+76. [ ] **Jobify – לוח משרות ייעודי לנכי צה"ל וכוחות הביטחון** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/news/israel/article-1169403](https://www.maariv.co.il/news/israel/article-1169403)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+77. [ ] **18x Elite Impact – תוכנית יזמות למשרתי מילואים** (medium)  
+   איפה לבדוק: [https://www.jewishnews.co.uk/israeli-reservists-launch-150-startups-through-new-entrepreneurship-initiative/](https://www.jewishnews.co.uk/israeli-reservists-launch-150-startups-through-new-entrepreneurship-initiative/)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+78. [ ] **צל"ש – מערך 'אשת חיל' לתמיכה בנשות לוחמים ומשרתי מילואים** (medium)  
+   איפה לבדוק: [https://www.maariv.co.il/news/israel/Article-1057094](https://www.maariv.co.il/news/israel/Article-1057094)  
+   לבדוק: שפעיל, טלפון/אתר רשמי, למי זה מיועד ועלות
+
+## לא נכנסו למאגר: מקור אחד בלבד, לבדוק לפני שמוסיפים
+
+79. [ ] **מרחב נשימה בעמק (Breathing Space in the Valley)**  
+   איפה לבדוק: [https://my.israelgives.org/en/campaign/BreathingSpace](https://my.israelgives.org/en/campaign/BreathingSpace)
+
+80. [ ] **CMBM ישראל – קבוצות מיומנויות גוף-נפש לנפגעי טראומה**  
+   איפה לבדוק: [https://cmbm.org/communities/community/israel/](https://cmbm.org/communities/community/israel/)
+
+81. [ ] **החווה של רותי – רכיבה וטיפול בבעלי חיים, אלון (Ruthy's Ranch)**  
+   איפה לבדוק: [https://cbn.com/news/israel/israeli-ranch-near-biblical-good-samaritan-road-ministers-healing-through-horses](https://cbn.com/news/israel/israeli-ranch-near-biblical-good-samaritan-road-ministers-healing-through-horses)
+
+82. [ ] **בית מאזן לנפגעי טראומה במגדל העמק**  
+   איפה לבדוק: [https://www.icej.org/blog/icej-funds-new-trauma-recovery-home-for-israelis-in-galilee/](https://www.icej.org/blog/icej-funds-new-trauma-recovery-home-for-israelis-in-galilee/)
+
+## רמזים שעלו בחיפוש ולא אומתו (לחפש ידנית)
+
+- שומר אחי: ליווי נפשי דיסקרטי ללא הכרה
+- חווה שיקומית בשומרון ע"ש סרן אלעד סימן טוב (ynet, 22.11.25)
+- בית מאזן "גומא" (רחובות / ירושלים לנשים), בית מאזן בחופית, bait-bateva.co.il, the-farm.co.il
+- Tech You Back (ארגון נכי צה"ל), עוז ורוח (Portland Trust), שקופות
+- אתרים נוספים של חוות רימון בנגב (יש במאגר 3 מתוך 7)
+- רשימת מרכזי החוסן האזוריים: gov.il/he/departments/dynamiccollectors/resilience-centers-list
