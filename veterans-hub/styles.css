@@ -21,12 +21,14 @@
     --line: #33403f; --primary: #6fb8a5; --primary-ink: #0d1514; --accent: #e0a463;
     --danger-bg: #3a1f19; --danger-ink: #f3b4a3; --info-bg: #1d302c; --free: #6fb8a5;
     --shadow: 0 1px 2px rgba(0,0,0,.3);
+    color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #141a1c; --surface: #1c2427; --surface-2: #232d31; --text: #e8ecea; --muted: #a2adaa;
   --line: #33403f; --primary: #6fb8a5; --primary-ink: #0d1514; --accent: #e0a463;
   --danger-bg: #3a1f19; --danger-ink: #f3b4a3; --info-bg: #1d302c; --free: #6fb8a5;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -56,7 +58,7 @@ section { margin-bottom: 40px; }
 .crisis-bar a { color: inherit; font-weight: 700; }
 
 .topbar {
-  position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line);
   display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; flex-wrap: wrap;
 }
 .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.3rem; }

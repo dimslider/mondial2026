@@ -4,6 +4,8 @@
   const $modal = document.getElementById("modal");
   const $modalBody = document.getElementById("modal-body");
   const PROFILE_KEY = "vh-profile-v1";
+  // בתוך מסגרת (iframe) הדפדפן לא תמיד מאפשר להדפיס, אז לא מציגים את הכפתור
+  const canPrint = (() => { try { return window.self === window.top; } catch (e) { return false; } })();
 
   let SERVICES = (window.SERVICES || []).map(s => Object.assign({ source: "research" }, s));
   let approvedLoaded = false;
@@ -241,7 +243,7 @@
       <section class="results-head">
         <h1>מצאנו ${res.length} דברים שיכולים להתאים לך</h1>
         <p class="lead">מסודר לפי תחומים, הכי מתאים קודם. כל כרטיס נפתח לפרטים, טלפון, ואפשרות להשאיר פנייה.</p>
-        <div class="actions"><a class="btn" href="#/match">לשנות תשובות</a> <button class="btn" id="print">להדפיס / לשמור PDF</button></div>
+        <div class="actions"><a class="btn" href="#/match">לשנות תשובות</a>${canPrint ? ` <button class="btn" id="print">להדפיס / לשמור PDF</button>` : ""}</div>
       </section>
       ${crisis ? `<div class="callout">אם קשה במיוחד עכשיו, לא צריך לחכות לאף תוכנית: <a href="tel:*8944">*8944</a> (נפש אחת, 24/7, גם ללא הכרה), ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:*3362">*3362</a>. זמינים גם בלילה.</div>` : ""}
       ${guideKeys.length ? `<div class="callout callout-info"><strong>חשוב לדעת על הזכויות שלך:</strong> ${guideKeys.map(k => `<a href="#/rights?s=${k}">${esc(GUIDES[k].title)}</a>`).join(" · ")}</div>` : ""}
@@ -252,7 +254,7 @@
           ${byCat[c].length > 6 ? `<details><summary>עוד ${byCat[c].length - 6}</summary><div class="grid">${byCat[c].slice(6).map(r => card(r.s, r.why)).join("")}</div></details>` : ""}
         </section>`).join("")}
       ${!res.length ? `<p class="empty">לא מצאנו התאמה מדויקת. נסו לסמן פחות סינונים, או <a href="#/browse">לדפדף בכל השירותים</a>.</p>` : ""}`;
-    document.getElementById("print").onclick = () => {
+    if (canPrint) document.getElementById("print").onclick = () => {
       document.querySelectorAll("details").forEach(d => d.open = true);
       window.print();
     };

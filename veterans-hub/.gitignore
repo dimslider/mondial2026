@@ -4,3 +4,4 @@ result.json
 __pycache__/
 veterans-hub/research/pages/
 research/pages/
+.artifact/
