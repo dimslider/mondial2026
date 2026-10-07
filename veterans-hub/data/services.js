@@ -601,6 +601,81 @@ window.SERVICES = [
   "verified_at": ""
  },
  {
+  "id": "s-d4ba17",
+  "name": "חוות הרי יהודה – רכיבה טיפולית בצור הדסה",
+  "category": "animal-therapy",
+  "description": "חוות סוסים, מועדון ובית ספר לרכיבה ספורטיבית וטיפולית ביישוב צור הדסה, כרבע שעה מירושלים. החווה מציעה רכיבה טיפולית וטיפול בעזרת בעלי חיים לילדים ולמבוגרים. לא נמצא תיעוד לתוכנית ייעודית לנכי צה\"ל, ויש לברר מול החווה התאמה ומימון.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "paid",
+  "cost_notes": "מחיר לפי פנייה; ייתכן מימון רכיבה טיפולית דרך אגף השיקום או קופת החולים, יש לברר",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "צור הדסה",
+  "phone": "02-5791355",
+  "email": "office@hyr.co.il",
+  "website": "https://www.instagram.com/harei.yehuda.stables/",
+  "how_to_apply": "פנייה טלפונית או במייל לחווה; לבירור מימון לפנות לרכז השיקום באגף השיקום",
+  "source_url": "https://www.mayhorse.com/cm-business/%D7%97%D7%95%D7%95%D7%AA-%D7%94%D7%A8%D7%99-%D7%99%D7%94%D7%95%D7%93%D7%94/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
+  "id": "afikimdogs-co-il-195ca4",
+  "name": "כלביית אפיקים – כלבי תמיכה רגשית ללוחמים",
+  "category": "animal-therapy",
+  "description": "מרכז לגידול ואילוף כלבים בקיבוץ אפיקים, ספק מורשה של משרד הביטחון. הכלבייה מגדלת ומכשירה גורי לברדור וגולדן רטריבר ככלבי תמיכה רגשית ללוחמים מיחידות שונות ולמשפחות שכולות, כחלק מתהליך שיקום רגשי וחברתי, עם ליווי והדרכה של מאלפים. הכלבייה מקיימת גם קורס להכשרת מאלפי כלבי שירות.",
+  "provider_type": "private",
+  "eligibility": [
+   "bereaved",
+   "combat-soldiers",
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "ספק מורשה של משרד הביטחון; זכאות לכלב שירות לפוסט טראומה דרך אגף השיקום לפי תנאי הזכאות",
+  "regions": [
+   "north"
+  ],
+  "location": "קיבוץ אפיקים, עמק הירדן",
+  "phone": "04-6754572",
+  "email": "office@afikimdogs.co.il",
+  "website": "https://afikimdogs.co.il/emitional-support-dogs/",
+  "how_to_apply": "פנייה לכלבייה; למימון כלב שירות יש לפנות למחוז אגף השיקום",
+  "source_url": "https://afikimdogs.co.il/emitional-support-dogs/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "havayot-center-co-il-f2df8f",
   "name": "מרכז חוויות – טיפול בבעלי חיים ורכיבה לנכי צה\"ל ונפגעי איבה",
   "category": "animal-therapy",
@@ -711,6 +786,44 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "s-3c3137",
+  "name": "מרכז רכיבה טיפולית העמק (כפר הנוער ויצו ניר העמק)",
+  "category": "animal-therapy",
+  "description": "עמותה הפועלת משנת 1989 בכפר הנוער ויצו ניר העמק ומעניקה רכיבה טיפולית על סוסים שאולפו לכך. המרכז מטפל בילדים, בני נוער ומבוגרים מהצפון עם פגיעות מוטוריות, פגיעות ראש ומוגבלויות שונות. המרכז פועל בהסדר עם קופות החולים ועם משרד הביטחון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "physical-disability",
+   "ptsd",
+   "tbi"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "בהסדר עם משרד הביטחון ועם קופות החולים (כללית, מכבי, מאוחדת, לאומית); זכאות לפי אישור הגורם המממן",
+  "regions": [
+   "north"
+  ],
+  "location": "כפר הנוער ויצו ניר העמק, עפולה",
+  "phone": "04-6527065",
+  "email": "",
+  "website": "https://www.facebook.com/rechivanirhaemek/",
+  "how_to_apply": "פנייה טלפונית למרכז; לנכי צה\"ל ולבני משפחה יש לבקש אישור מימון מרכז השיקום באגף השיקום",
+  "source_url": "https://www.guidestar.org.il/organization/580160901",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "photoisrael-org-b11f66",
@@ -3274,6 +3387,38 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "s-210d1d",
+  "name": "קרנות השוטרים – גוף רווחה לשוטרים, גמלאים וסוהרים",
+  "category": "financial-grants",
+  "description": "קרנות השוטרים החלה בשנות ה-50 כקרן למימון טיפול רפואי דחוף לשוטר, והתפתחה לגוף שמטפל ברווחת השוטרים. כיום היא חברה פרטית שחבריה הם כ-37 אלף שוטרים פעילים וגמלאים, ומעניקה הטבות ושירותי רווחה גם לשוטרי מג\"ב, סוהרים ומתנדבים.",
+  "provider_type": "private",
+  "eligibility": [
+   "families",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "השירותים ניתנים לחברי הקרן. פירוט הסיוע הייעודי לנכי משטרה לא פורסם במקורות שנבדקו.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לקרנות השוטרים כחבר/ה; אתר החברה מופעל בידי החברה ולא בידי משטרת ישראל.",
+  "source_url": "https://www.calcalist.co.il/articles/0,7340,L-3732934,00.html",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "btl-gov-il-60a11f",
   "name": "תגמולי מילואים – ביטוח לאומי (Reserve duty compensation)",
   "category": "financial-grants",
@@ -3712,6 +3857,44 @@ window.SERVICES = [
   "verified_at": ""
  },
  {
+  "id": "beitissie-org-il-8ef365",
+  "name": "Tech for Heroes – טכנולוגיה מסייעת לפצועי צה\"ל (בית איזי שפירא, ג'וינט וריסטארט)",
+  "category": "medical-rehab",
+  "description": "שיתוף פעולה של בית איזי שפירא, הג'וינט וריסטארט שמתאים לפצועי צה\"ל עם פגיעה גופנית או נפשית מאז 7 באוקטובר טכנולוגיה מסייעת: בית חכם, מערכות קוליות, אמצעי ניידות, עזרי תקשורת וכלים קוגניטיביים. ההתאמה נעשית בעזרת פלטפורמת AI, וכל משתתף מקבל רכז טכנולוגי שמלווה אותו בהתאמה ובהדרכה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "amputation",
+   "physical-disability",
+   "ptsd",
+   "tbi"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "התוכנית ממומנת בידי השותפים; מעל 160 פצועים כבר קיבלו סיוע.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://beitissie.org.il/en/30303/",
+  "how_to_apply": "פנייה לבית איזי שפירא או לריסטארט.",
+  "source_url": "https://beitissie.org.il/en/30303/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "hospitals-clalit-co-il-2b9fa3",
   "name": "בית לוינשטיין – מרכז רפואי לשיקום (כללית), רעננה",
   "category": "medical-rehab",
@@ -3749,6 +3932,45 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "b-k-inz-org-il-68f1d2",
+  "name": "בית קיי נהריה – מרכז שיקום של ארגון נכי צה\"ל",
+  "category": "medical-rehab",
+  "description": "מרכז שיקום של ארגון נכי צה\"ל בנהריה, שהוקם מתרומתו של אברהם קיי. במקום פועלים פיזיותרפיה, הידרותרפיה וריפוי בעיסוק לנכי צה\"ל, וכן פעילות חברתית ואירועים לנכים ולבני משפחותיהם. המרכז משרת גם חיילים, נפגעי פעולות איבה ומשפחות שכולות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "families",
+   "mod-recognized",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "loneliness",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "sea",
+   "sport"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "לחברי ארגון נכי צה\"ל; טיפולי שיקום במימון אגף השיקום לפי זכאות",
+  "regions": [
+   "north"
+  ],
+  "location": "שד' קיי אברהם 11, נהריה",
+  "phone": "",
+  "email": "",
+  "website": "https://b-k.inz.org.il/",
+  "how_to_apply": "פנייה לבית קיי דרך האתר או דרך ארגון נכי צה\"ל",
+  "source_url": "https://b-k.inz.org.il/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikumil-org-il-5e31b1",
@@ -3961,6 +4183,79 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "tasmc-org-il-d5ca4c",
+  "name": "מרפאה לשיקום פגיעות ראש קלות (mTBI) – בית החולים השיקומי איכילוב",
+  "category": "medical-rehab",
+  "description": "מרפאה ייעודית בבית החולים השיקומי של המרכז הרפואי תל אביב (איכילוב) לחיילים ולמשרתי מילואים עם השלכות של פגיעות ראש קלות וזעזוע מוח, למשל מפציעות הדף. הקבלה כוללת רופא שיקום ומרפא בעיסוק, ובהמשך שילוב בשיקום יום רב-תחומי. השירות פועל בשיתוף אגף השיקום של משרד הביטחון.",
+  "provider_type": "government",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "sleep",
+   "tbi"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "בשיתוף אגף השיקום; נדרשים הפניה רפואית וטופס 17 לאשפוז יום שיקומי",
+  "regions": [
+   "center"
+  ],
+  "location": "המרכז הרפואי תל אביב (איכילוב), תל אביב",
+  "phone": "03-6973111",
+  "email": "",
+  "website": "https://www.tasmc.org.il/rehabilitation/units/mtbi/",
+  "how_to_apply": "פנייה בוואטסאפ 052-2401730 או בטלפון, עם פרטי הפונה, הפניה רפואית וטופס 17 לאשפוז יום שיקומי",
+  "source_url": "https://www.tasmc.org.il/rehabilitation/units/mtbi/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
+  "id": "s-b0d63b",
+  "name": "נקודת מפנה – מרכז שיקום יום לפצועי צה\"ל בשוהם",
+  "category": "medical-rehab",
+  "description": "מרכז שיקום יום חדש בשוהם לפצועי צה\"ל, בדגש על פצועי מלחמת חרבות ברזל, שנחנך בסוף 2025 ומתואר כגדול מסוגו בישראל. במרכז עשרות עמדות ומכשירי שיקום מתקדמים וצוות של פיזיותרפיסטים, מרפאים בעיסוק, קלינאי תקשורת, פסיכולוגים, אחיות ורופאים. המרכז הוקם מתרומה של יוסי שיינפלד על קרקע שהקצתה המועצה המקומית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "amputation",
+   "chronic-pain",
+   "physical-disability",
+   "tbi"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "לא נמצא פירוט מימון רשמי; יש לברר מול המרכז ואגף השיקום",
+  "regions": [
+   "center"
+  ],
+  "location": "שכונת הדרים, שוהם (סמוך למתחם בית לחיים)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לברר דרך רכז השיקום באגף השיקום או מול המועצה המקומית שוהם",
+  "source_url": "https://www.israelhayom.co.il/news/local/article/19509894",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "s-0fc55e",
@@ -4385,6 +4680,43 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "clinicaltrials-gov-1ea216",
+  "name": "NeuroBrave – Mental Gym: אימון ביופידבק עם שעון Garmin לפוסט טראומה",
+  "category": "mental-health",
+  "description": "NeuroBrave היא חברת בריאות דיגיטלית ישראלית שפיתחה את תוכנית Mental Gym: תרגול יומי של ביופידבק HRV (שונות דופק) בעזרת שעון Garmin ואפליקציה ייעודית, לצד מפגשי הנחיה קבוצתיים שבועיים. החברה מריצה מחקר קליני מבוקר (NCT07462312) לבדיקת יעילות התוכנית בהפחתת תסמיני פוסט טראומה אצל לוחמים משוחררים.",
+  "provider_type": "private",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body",
+   "tech"
+  ],
+  "cost": "",
+  "cost_notes": "לפי המלצות בקהילה ניתן לקבל החזר מתקציב הטיפולים המשלימים של אגף השיקום, אך הדבר לא אומת במקורות רשמיים. יש לברר מול רכז/ת השיקום לפני רכישה. המשתתפים במחקר הקליני אינם משלמים.",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "מרחוק (אתר המחקר רשום בירושלים)",
+  "phone": "",
+  "email": "",
+  "website": "https://clinicaltrials.gov/study/NCT07462312",
+  "how_to_apply": "פנייה לחברה לגבי השתתפות בתוכנית או במחקר; לבדיקת מימון יש לפנות לרכז/ת השיקום באגף השיקום.",
+  "source_url": "https://clinicaltrials.gov/study/NCT07462312",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": 9,
+  "community_note": "רבים קיבלו החזר כטיפול משלים; לבדוק מראש מול רכז/ת השיקום",
+  "verified_at": ""
  },
  {
   "id": "rising-heroes-org-2a53a6",
@@ -5791,6 +6123,42 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "s-1a9249",
+  "name": "שומר אחי – סיוע נפשי דיסקרטי ללוחמים משוחררים שאינם מוכרים",
+  "category": "mental-health",
+  "description": "עמותה ללא מטרות רווח שמנגישה סיוע נפשי דיסקרטי וללא עלות למשוחררים ומשוחררות מצה\"ל על קשת הפוסט טראומה שאינם מאובחנים ומטופלים במשרד הביטחון, בגלל הדחקה, בושה, פחד לבקש עזרה או קושי מול הבירוקרטיה. העמותה פועלת גם בהעלאת מודעות וקידום ההכרה של אגף השיקום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "bureaucracy",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה ישירה לעמותה.",
+  "source_url": "https://www.ice.co.il/social/news/article/979314",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "apps-apple-com-abd84b",
   "name": "תכנית עמית – משרד הביטחון",
   "category": "mental-health",
@@ -6373,6 +6741,42 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "s-78adbb",
+  "name": "עמותת העטלף – עמותת בוגרי שייטת 13",
+  "category": "peer-support",
+  "description": "עמותת בוגרי שייטת 13 שמקיימת קהילת חברים תומכת ומסייעת לחבריה להשתלב בחברה הישראלית. העמותה בונה רשת ביטחון לנפגעי השירות ביחידה (נפגעי גוף, נפגעי נפש ונפגעי הקישון) ולמשפחות השכולות, ומעניקה מענקי סיוע פרטניים בתחום הכלכלי, הרפואי והאישי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "combat-soldiers",
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "financial",
+   "loneliness",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מיועד לבוגרי שייטת 13 ולמשפחותיהם.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותה דרך קהילת בוגרי היחידה.",
+  "source_url": "https://www.hamichlol.org.il/%D7%A2%D7%9E%D7%95%D7%AA%D7%AA_%D7%94%D7%A2%D7%98%D7%9C%D7%A3",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-d5816c",
@@ -7066,6 +7470,40 @@ window.SERVICES = [
   "website": "https://kfarsarah.com",
   "how_to_apply": "פנייה דרך האתר",
   "source_url": "https://www.kfarsarah.com/en",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
+  "id": "s-40b69b",
+  "name": "ארגון נשות השוטרים והסוהרים",
+  "category": "rights-legal",
+  "description": "ארגון שהוקם ב-1982 ופועל כגוף המייצג את השוטרים והסוהרים, שאסור להם להתאגד בארגון עובדים, ומופעל בידי בני משפחותיהם, בעיקר נשותיהם. הארגון פועל לשיפור מעמדם ורווחתם של שוטרים וסוהרים ומסייע לשוטרים וסוהרים במצוקה משפטית, כלכלית, בריאותית, משפחתית או אישית, כולל נכי משטרה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "family-relations",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "לפי המלצות בקהילה, נכי משטרה יכולים לקבל דרך הארגון סיוע משפטי בעלות מוזלת. היקף ההנחה לא פורסם ויש לברר מול הארגון. הארגון מבוסס על חברות (כ-16 אלף חברים).",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה ישירה לארגון והצטרפות כחבר/ה.",
+  "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%A9%D7%95%D7%AA_%D7%94%D7%A9%D7%95%D7%98%D7%A8%D7%99%D7%9D",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -8418,6 +8856,43 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "mindfultinnitusrelief-co-d97fed",
+  "name": "MindfulTinnitusRelief – קורס מיינדפולנס מקוון לטנטון",
+  "category": "yoga-mind-body",
+  "description": "קורס מקוון בן 8 שבועות ללמידה עצמית שפיתחה ד\"ר ג'ניפר גאנס, פסיכולוגית קלינית, להתמודדות עם טנטון (צפצופים באוזניים) בשיטת הפחתת מתח מבוססת מיינדפולנס. הקורס כולל שיעורים שבועיים מוקלטים, תרגול יומי, יוגה ונשימות, וריטריט מקוון. הקורס באנגלית, ויעילותו נבדקה במחקר שפורסם בכתב עת לאודיולוגיה.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-recognized",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "paid",
+  "cost_notes": "קורס בתשלום; שיעור היכרות חינם",
+  "regions": [
+   "online"
+  ],
+  "location": "מקוון (באנגלית)",
+  "phone": "",
+  "email": "",
+  "website": "https://www.mindfultinnitusrelief.com",
+  "how_to_apply": "הרשמה באתר הקורס",
+  "source_url": "https://hearinghealthmatters.org/hearing-news-watch/2023/mindfulness-tinnitus-relief-study",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "brothersin-yoga-b85612",
