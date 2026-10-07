@@ -3290,6 +3290,37 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "ogen-org-9f492f",
+  "name": "קרן המילואים של עוגן – הלוואות לעסקים של משרתי מילואים",
+  "category": "financial-grants",
+  "description": "עוגן, גוף אשראי חברתי ללא מטרות רווח, השיק קרן הלוואות לעסקים קטנים ולעצמאים בבעלות משרתי מילואים. ההלוואות ניתנות בריבית מסובסדת, לצד הלוואות ללא ריבית למשקי בית ותוכניות מנטורינג לבעלי עסקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "לפי פרסום: הלוואות עד 650 אלף ש\"ח בריבית פריים מינוס 2% לחמש שנים; התנאים עשויים להשתנות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://ogen.org",
+  "how_to_apply": "הגשת בקשה דרך אתר עוגן",
+  "source_url": "https://www.funder.co.il/article/163816",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "miluim-idf-il-c6491b",
   "name": "קרן הסיוע למשרתי המילואים (Reservists Assistance Fund)",
   "category": "financial-grants",
@@ -3619,6 +3650,38 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "idf-nadlan-co-il-8e6257",
+  "name": "מועדון הנדל\"ן והפיננסים של פצועי צה\"ל",
+  "category": "housing-daily",
+  "description": "מועדון שהקימו שני פצועי צה\"ל, אלירן קטש ושקד רוזנברג, המעניק לפצועי צה\"ל כלים לרכישת דירה, השקעות ובניית עתיד כלכלי. המועדון מציע מדריכים, פרויקטים בתנאים לחברים ושיתוף פעולה עם בנק לאומי.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "partial",
+  "cost_notes": "מסגרת מסחרית; רכישת דירות והלוואות בתשלום. לפי פרסום, חברים שמצטרפים כלקוחות בנק לאומי מקבלים הלוואה בתנאים מיוחדים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://idf-nadlan.co.il",
+  "how_to_apply": "פנייה דרך עמוד צור קשר באתר",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1341181",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "s-f2f87a",
@@ -4464,6 +4527,83 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "rising-heroes-org-2a53a6",
+  "name": "Rising Heroes – ריטריטים ותמיכה מותאמת טראומה ללוחמים",
+  "category": "mental-health",
+  "description": "ארגון ללא מטרות רווח המעניק תמיכה מותאמת טראומה ללוחמים ולאזרחים בישראל. הפעילות כוללת ריטריטים מותאמים, טיפול קליני, חיזוק לכידות צוותית ותוכניות התאוששות מתמשכות, במטרה למנוע פגיעה נפשית ארוכת טווח ולבנות חוסן.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ארגון הממומן מתרומות; יש לברר את תנאי ההשתתפות מול הארגון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://rising-heroes.org",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://www.rising-heroes.org/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
+  "id": "bait-bateva-co-il-c511d0",
+  "name": "בית מאזן בטבע – קיבוץ מטע",
+  "category": "mental-health",
+  "description": "בית טיפולי קהילתי בקיבוץ מטע, המתמחה בטיפול בפוסט טראומה כולל טראומת קרב ונפגעי פעולות איבה. הבית משמש חלופה לאשפוז פסיכיאטרי ומסגרת שיקומית, עם צוות פסיכיאטרים, פסיכולוגים ועובדים סוציאליים ושיטות כמו EMDR ו-CBT.",
+  "provider_type": "private",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists",
+   "security-forces",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "לפי האתר, ללא תשלום לזכאי אגף השיקום; בפיקוח משרד הבריאות",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "קיבוץ מטע, סמוך לצור הדסה ובית שמש",
+  "phone": "",
+  "email": "",
+  "website": "https://bait-bateva.co.il",
+  "how_to_apply": "לפי הליך הקליטה המפורט באתר",
+  "source_url": "https://bait-bateva.co.il/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-a17284",
@@ -6162,6 +6302,46 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "ha-gesher-co-il-81299b",
+  "name": "הגשר – פודקאסט וסדרה תיעודית על פוסט טראומה",
+  "category": "peer-support",
+  "description": "פודקאסט וסדרת רשת תיעודית ובה ראיונות עם אנשי כוחות הביטחון שנחשפו לאירועים טראומטיים ועם מומחי טראומה. הפרויקט, בהנחיית הדר כהן, מציג כלים מעשיים להתמודדות ופועל להפחתת הסטיגמה, ובאתר יש עמוד הפניות לגורמי סיוע.",
+  "provider_type": "private",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "loneliness",
+   "moral-injury",
+   "ptsd"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "תוכן חופשי להאזנה",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://ha-gesher.co.il",
+  "how_to_apply": "האזנה חופשית דרך האתר",
+  "source_url": "https://ha-gesher.co.il/about-us/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "israelgives-org-e1caeb",
   "name": "לב אל לב ישראל (Israel Heart2Heart)",
   "category": "peer-support",
@@ -6970,6 +7150,46 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "kfarsarah-com-b02de6",
+  "name": "כפר שרה – מרחב ריפוי וצמיחה מטראומה בחוות אהרנסון",
+  "category": "rehab-farm",
+  "description": "מרחב לריפוי ולצמיחה למתמודדים עם טראומה בסביבה טבעית בחוות אהרנסון בעתלית. התוכניות משלבות טיפול פסיכולוגי ממוקד טראומה (EMDR, CBT), סדנאות כמו קשתות וצילום טיפולי, יוגה ואומנויות לחימה וגינון טיפולי, וכן קבוצות שחרור וסדנאות לבנות זוג של אנשי מילואים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [
+   "crafts",
+   "mind-body",
+   "nature",
+   "writing"
+  ],
+  "cost": "partial",
+  "cost_notes": "עלות משתנה לפי תוכנית; יש לברר מול המקום",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חוות אהרנסון, עתלית",
+  "phone": "",
+  "email": "",
+  "website": "https://kfarsarah.com",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://www.kfarsarah.com/en",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "shikum-mod-gov-il-22016b",
   "name": "הגשת בקשה להכרה בנכות – אגף השיקום, משרד הביטחון (MoD Rehabilitation Division – disability claim)",
   "category": "rights-legal",
@@ -7317,6 +7537,41 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "lohamim-org-il-77ef22",
+  "name": "לוחמים לחיים (Fighters for Life) – מימון הליך ההכרה ללוחמים עם פוסט טראומה",
+  "category": "rights-legal",
+  "description": "עמותה שהוקמה ב-2017 ותומכת בלוחמים עם פוסט טראומה בתהליך ההכרה מול המדינה. העמותה מממנת את ההליך המשפטי והרפואי ומעמידה רשת מומחים לליווי שיקום והשתלבות מחדש בחברה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "העמותה מממנת את ההליך המשפטי והרפואי לפי דיווחה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://lohamim.org.il",
+  "how_to_apply": "פנייה דרך עמוד צור קשר באתר",
+  "source_url": "https://lohamim.org.il/about-us/?lang=en",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "s-ff9abe",
   "name": "מדריך זכויות לפצועי חרבות ברזל – אגף השיקום",
   "category": "rights-legal",
@@ -7349,6 +7604,39 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "miluim-helper-com-23803d",
+  "name": "מחשבון זכויות מילואים (Miluim Helper)",
+  "category": "rights-legal",
+  "description": "מחשבון מקוון לבדיקת זכויות משרתי מילואים לפי מספר ימי השירות ורמת הפעילות. הכלי מסייע להעריך מענקים והטבות שמשרת המילואים עשוי להיות זכאי להם.",
+  "provider_type": "private",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://miluim-helper.com",
+  "how_to_apply": "שימוש ישיר באתר",
+  "source_url": "https://miluim-helper.com/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-c3ea9e",
@@ -7690,6 +7978,43 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "shikum-app-ca9a4f",
+  "name": "שיקום אפ (Shikum App) – מערכת הכוונה למיצוי זכויות נכי צה\"ל",
+  "category": "rights-legal",
+  "description": "מערכת הכוונה מקוונת לנכי צה\"ל, פצועי משטרה ונפגעי כוחות הביטחון. המערכת מציעה מידע על זכויות מול אגף השיקום, הכנה לוועדות רפואיות, מחשבונים, מדריכים, אינדקס עורכי דין לפי סוג פגיעה ואזור, ומידע על בתי שיקום.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-in-process",
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "תנאי השימוש ועלויות אפשריות מפורטים באתר",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.app",
+  "how_to_apply": "שימוש דרך האתר",
+  "source_url": "https://shikum.app/agaf-hashikum",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-72767d",
