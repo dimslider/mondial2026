@@ -9,6 +9,7 @@
 
 הרצה:
   python3 tools/telegram_import.py path/to/result.json
+  python3 tools/telegram_import.py path/to/ChatExport_2026-10-07     # תיקיית ייצוא HTML או JSON
 
 פלט (בתיקייה tools/telegram_out/):
   candidates.csv   — רשימת מועמדים לבדיקה ידנית (אחד לשורה): שם משוער, קישורים, טלפונים,
@@ -24,6 +25,7 @@ import csv
 import json
 import re
 import sys
+from html.parser import HTMLParser
 from collections import defaultdict
 from pathlib import Path
 
@@ -33,7 +35,7 @@ ORG_HINT_RE = re.compile(r"(עמותת|עמותה|ארגון|חוות|מרכז|�
 
 # מילות מפתח לכל קטגוריה — לניחוש ראשוני בלבד
 CATEGORY_KEYWORDS = {
-    "water-sports": ["גלישה", "גולשים", "צלילה", "שיט", "קיאק", "סאפ", "ים "],
+    "water-sports": ["גלישה", "גולשים", "צלילה", "שיט", "קיאק", "סאפ", " ים ", "בים"],
     "rehab-farm": ["חווה", "חוות", "חקלאות", "גינון", "משק"],
     "animal-therapy": ["סוסים", "רכיבה טיפולית", "כלב", "כלבי שירות", "בעלי חיים", "אלפקה"],
     "yoga-mind-body": ["יוגה", "מדיטציה", "מיינדפולנס", "נשימות", "רייקי", "דיקור", "TRE", "סומטי"],
@@ -92,13 +94,69 @@ def guess_category(text):
     return max(scores, key=scores.get) if scores else ""
 
 
+class _TgHtml(HTMLParser):
+    """קורא את messages*.html של ייצוא טלגרם בפורמט HTML (ברירת המחדל של Telegram Desktop)."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.messages, self._depth, self._date, self._buf = [], 0, "", None
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        cls = (a.get("class") or "").split()
+        if self._buf is not None:
+            if tag == "div":
+                self._depth += 1
+            if tag == "a" and a.get("href"):
+                self._buf.append(" " + a["href"] + " ")
+            if tag == "br":
+                self._buf.append("\n")
+            return
+        if tag == "div" and "date" in cls and a.get("title"):
+            d = re.match(r"(\d\d)\.(\d\d)\.(\d{4})", a["title"])
+            self._date = f"{d.group(3)}-{d.group(2)}-{d.group(1)}" if d else ""
+        if tag == "div" and cls == ["text"]:
+            self._buf, self._depth = [], 1
+
+    def handle_endtag(self, tag):
+        if self._buf is not None and tag == "div":
+            self._depth -= 1
+            if self._depth == 0:
+                self.messages.append({"type": "message", "date": self._date, "text": "".join(self._buf)})
+                self._buf = None
+
+    def handle_data(self, data):
+        if self._buf is not None:
+            self._buf.append(data)
+
+
+def load_messages(src):
+    """מקבל result.json, קובץ messages.html, או תיקיית ייצוא שלמה (JSON או HTML)."""
+    if src.is_dir():
+        if (src / "result.json").exists():
+            src = src / "result.json"
+        else:
+            files = sorted(src.glob("messages*.html"), key=lambda f: int(re.sub(r"\D", "", f.stem) or 1))
+            if not files:
+                sys.exit(f"לא נמצא result.json או messages*.html בתיקייה {src}")
+            parser = _TgHtml()
+            for f in files:
+                parser.feed(f.read_text(encoding="utf-8"))
+            return parser.messages
+    if src.suffix.lower() in (".html", ".htm"):
+        parser = _TgHtml()
+        parser.feed(src.read_text(encoding="utf-8"))
+        return parser.messages
+    data = json.loads(src.read_text(encoding="utf-8"))
+    return data.get("messages", data if isinstance(data, list) else [])
+
+
 def main():
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(1)
     src = Path(sys.argv[1])
-    data = json.loads(src.read_text(encoding="utf-8"))
-    messages = data.get("messages", data if isinstance(data, list) else [])
+    messages = load_messages(src)
     out_dir = Path(__file__).parent / "telegram_out"
     out_dir.mkdir(exist_ok=True)
 
@@ -130,7 +188,7 @@ def main():
             for kind, name in orgs:
                 keys.append(("name:" + kind + " " + name.strip()).strip())
         phones = [p for p in PHONE_RE.findall(t) if len(re.sub(r"\D", "", p)) >= 4]
-        for k in keys:
+        for k in dict.fromkeys(keys):  # קישור שמופיע פעמיים באותה הודעה נספר פעם אחת
             c = cands[k]
             c["mentions"] += 1
             c["phones"].update(phones[:3])
