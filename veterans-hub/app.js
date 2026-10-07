@@ -243,7 +243,7 @@
         <p class="lead">מסודר לפי תחומים, הכי מתאים קודם. כל כרטיס נפתח לפרטים, טלפון, ואפשרות להשאיר פנייה.</p>
         <div class="actions"><a class="btn" href="#/match">לשנות תשובות</a> <button class="btn" id="print">להדפיס / לשמור PDF</button></div>
       </section>
-      ${crisis ? `<div class="callout">אם קשה במיוחד עכשיו, לא צריך לחכות לאף תוכנית: <a href="tel:*8944">*8944</a> (נפש אחת, 24/7, גם ללא הכרה), ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:1800363363">1-800-363-363</a>. זמינים גם בלילה.</div>` : ""}
+      ${crisis ? `<div class="callout">אם קשה במיוחד עכשיו, לא צריך לחכות לאף תוכנית: <a href="tel:*8944">*8944</a> (נפש אחת, 24/7, גם ללא הכרה), ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:*3362">*3362</a>. זמינים גם בלילה.</div>` : ""}
       ${guideKeys.length ? `<div class="callout callout-info"><strong>חשוב לדעת על הזכויות שלך:</strong> ${guideKeys.map(k => `<a href="#/rights?s=${k}">${esc(GUIDES[k].title)}</a>`).join(" · ")}</div>` : ""}
       ${order.map(c => `
         <section class="res-group">

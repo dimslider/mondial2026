@@ -47,10 +47,10 @@ python3 tools/build_data.py research/*.json
 
 ### ייבוא מקבוצת טלגרם
 
-1. ב-**Telegram Desktop** פותחים את הקבוצה, לוחצים ⋮ ← **Export chat history**, מבטלים מדיה ובוחרים **JSON**.
+1. ב-**Telegram Desktop** פותחים את הקבוצה, לוחצים ⋮ ← **Export chat history** ומבטלים מדיה. הפורמט יכול להיות JSON או HTML (ברירת המחדל).
 2. מריצים:
    ```bash
-   python3 tools/telegram_import.py path/to/result.json
+   python3 tools/telegram_import.py path/to/ChatExport_folder   # תיקיית הייצוא, או result.json
    ```
 3. מתקבל `tools/telegram_out/candidates.csv`: רשימת ארגונים, קישורים וטלפונים שהוזכרו בקבוצה, ממוינת לפי מספר האזכורים. עוברים עליה, מוחקים את מה שלא רלוונטי, ואז:
    ```bash
