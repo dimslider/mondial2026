@@ -44,7 +44,7 @@ android {
 tasks.register("copyWeb", Copy) {
     def web = rootProject.file("..")
     from(web) {
-        include "index.html", "app.js", "styles.css", "store.js", "firebase-config.js", "data/**"
+        include "index.html", "app.js", "styles.css", "store.js", "config.js", "data/**"
     }
     into layout.projectDirectory.dir("src/main/assets/www")
 }

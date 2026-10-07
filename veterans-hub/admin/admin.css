@@ -1,0 +1,11 @@
+.adm-card { background: var(--sheet); border: var(--stroke) solid var(--ink); border-radius: var(--r-sheet); padding: 14px 16px; margin-top: 16px; }
+.adm-card h2 { font-family: var(--display); font-weight: 400; font-size: 26px; line-height: 1.1; }
+.adm-meta { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.adm-quote { margin-top: 8px; padding: 8px 12px; border-inline-start: 3px solid var(--ink); font-size: 15px; white-space: pre-wrap; }
+.adm-dup { margin-top: 8px; padding: 6px 10px; background: var(--t-home); border-radius: 10px; font-size: 14px; color: #151515; }
+.adm-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.badge-n:not(:empty) { display: inline-block; min-width: 22px; padding: 0 6px; margin-inline-start: 4px; font-size: 13px; text-align: center; background: var(--ink); color: var(--on-ink); border-radius: 11px; }
+.adm-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 12px; }
+.adm-table td, .adm-table th { border-bottom: 1px dashed var(--ink); padding: 6px 4px; text-align: start; vertical-align: top; }
+.form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 520px) { .form .two { grid-template-columns: 1fr; } }

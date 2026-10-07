@@ -23,17 +23,25 @@ python3 -m http.server 8000
 # לפתוח http://localhost:8000
 ```
 
-בלי Firebase האתר רץ במצב הדגמה: פניות והצעות נשמרות רק בדפדפן.
+בלי שרת האתר רץ במצב הדגמה: הצעות, תיקונים ופניות נשמרים רק במכשיר.
+בדיקה מקומית עם השרת: `npx wrangler pages dev dist --d1 DB=test` (אחרי `sh tools/build_site.sh`).
 
-## חיבור לענן (Firebase, חינמי)
+## אירוח ושרת (Cloudflare Pages + D1, חינמי)
 
-1. ליצור פרויקט ב-[Firebase](https://console.firebase.google.com), ולהפעיל **Realtime Database** ו-**Authentication ← Email/Password**.
-2. להדביק את פרטי הפרויקט ב-`firebase-config.js`.
-3. **חובה:** להעלות את חוקי האבטחה מ-`database.rules.json` (Realtime Database ← Rules). הפניות כוללות מידע רגיש. אסור להשאיר את המסד במצב test mode.
-4. ליצור משתמש מנהל ב-Authentication, להעתיק את ה-UID שלו, ולהוסיף ידנית במסד: `admins/<UID> = true`.
-5. להעלות לאירוח, למשל GitHub Pages, Firebase Hosting או Netlify.
+1. **Pages:** Workers & Pages ← Create ← Pages ← Connect to Git ← המאגר.
+   Root directory: `veterans-hub` · Build command: `sh tools/build_site.sh` · Build output: `dist`.
+2. **D1:** ליצור מסד `magia-lecha`, ובפרויקט Pages ← Settings ← Bindings ← D1 בשם `DB`. הטבלאות נוצרות לבד.
+3. **Turnstile (ספאם):** Site key ב-`config.js` (ציבורי). Secret key כמשתנה מוצפן `TURNSTILE_SECRET` ב-Pages.
+4. **ניהול:** Zero Trust ← Access ← Self-hosted app על `admin*` ו-`api/admin*`, מדיניות לפי מייל.
+   משתנים ב-Pages: `ADMIN_EMAILS` (מיילים מורשים), `ACCESS_TEAM` (למשל `myteam.cloudflareaccess.com`),
+   `ACCESS_AUD` (ה-Application Audience Tag של האפליקציה ב-Access). השרת מאמת את החתימה של Access.
+5. **אפליקציה:** לשים את כתובת האתר ב-`android/app/src/main/res/values/strings.xml` (`site_url`).
+   האפליקציה תטען את האתר החי, ובלי רשת את העותק שבתוכה.
 
-לפי החוקים: כל אחד יכול **לשלוח** פנייה או הצעה, אבל רק מנהל יכול **לקרוא** אותן ולאשר הצעות. הצעות שאושרו מוצגות לכולם.
+מה משתמשים יכולים לשלוח: מקום חדש, תיקון לשירות, המלצה ("ממליץ/ה"), ובקשה שגוף יחזור אליהם.
+הכול נכנס לתור ב-`/admin/`. הצעות כפולות מתאחדות. מה שמאושר מופיע מיד אצל כולם.
+פניות "שיחזרו אליי" כוללות פרטי קשר ומידע רגיש: נראות רק בעמוד הניהול.
+
 
 ## עדכון המאגר
 
@@ -63,12 +71,14 @@ python3 tools/build_data.py research/*.json
 
 ```
 index.html, app.js, styles.css   ← האתר (HTML/JS נקי, בלי שלב build)
-store.js                         ← אחסון: Firebase, ואם אין אז localStorage
+store.js, config.js              ← חיבור לשרת, ובלעדיו מצב הדגמה
+functions/                       ← השרת: /api/live, /api/submit, /api/admin/* (Pages Functions + D1)
+admin/                           ← עמוד הניהול: תור ההצעות, תיקונים, פניות
 data/taxonomy.js                 ← קטגוריות, סטטוסים, קשיים, תחומי עניין, אזורים
 data/services.js                 ← המאגר (נוצר אוטומטית)
 data/guides.js                   ← "מה מגיע לי" לפי סטטוס
 research/*.json                  ← תוצרי המחקר הגולמיים
 tools/build_data.py              ← מיזוג ונרמול
 tools/telegram_import.py         ← חילוץ מייצוא טלגרם
-database.rules.json              ← חוקי אבטחה ל-Firebase
+tools/build_site.sh              ← מכין את dist לפרסום
 ```

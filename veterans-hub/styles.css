@@ -279,3 +279,26 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .star-tag .star { width: 13px; height: 13px; }
 .svc .community { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; padding: 8px 12px; background: var(--t-home); border: 2px solid var(--ink); border-radius: var(--r-hand); font-size: 15px; color: #151515; }
 .svc .community .star { flex: none; margin-top: 2px; }
+
+/* ---------- להוסיף מקום, להמליץ, לתקן ---------- */
+.add-btn { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); background: var(--t-home); border: var(--stroke) solid var(--ink); border-radius: 48% 54% 46% 52%; text-decoration: none; }
+.add-row { display: flex; gap: 14px; align-items: center; margin-top: 22px; padding: 14px 16px; text-decoration: none; background: var(--sheet); border: 2px dashed var(--ink); border-radius: var(--r-hand); font-size: 15px; line-height: 1.4; }
+.add-row strong { font-family: var(--hand); font-size: 17px; }
+.add-row .plus { flex: none; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 28px; background: var(--t-home); border: 2px solid var(--ink); border-radius: 50% 46% 54% 48%; color: #151515; }
+.form .chip input { width: 1px; min-height: 0; padding: 0; }
+.form label.chip { font-weight: 400; }
+.chips.small { gap: 6px 10px; margin: 6px 0 4px; }
+.chips.small .chip span { min-height: 42px; font-size: 17px; padding: 0 8px; }
+.chips.small .chip input:checked + span { padding: 0 12px; }
+.form .big input { font-size: 18px; min-height: 54px; }
+.star-check { align-items: center !important; font-family: var(--hand); font-weight: 600 !important; font-size: 17px; }
+.star-check .star { color: #b07a10; }
+.more-fields { border-bottom: 2px dashed var(--ink); }
+.more-fields > label { margin-bottom: 10px; }
+.ts:empty { display: none; }
+.thanks h2 { font-family: var(--display); font-weight: 400; font-size: 34px; }
+.svc-community { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.chip-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; font: inherit; font-family: var(--hand); font-size: 15px; font-weight: 600; color: var(--ink); background: transparent; border: 2px dashed var(--ink); border-radius: var(--r-blob); cursor: pointer; }
+.chip-btn[aria-pressed="true"] { border-style: solid; background: var(--t-home); color: #151515; }
+.chip-btn .star { width: 16px; height: 16px; }
+.form[hidden], [hidden] { display: none !important; }

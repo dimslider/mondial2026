@@ -8,7 +8,7 @@
   const canPrint = (() => { try { return window.self === window.top; } catch (e) { return false; } })();
 
   let SERVICES = (window.SERVICES || []).map(s => Object.assign({ source: "research" }, s));
-  let approvedLoaded = false;
+  let liveLoaded = false;
 
   // ---------- helpers ----------
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c =>
@@ -39,18 +39,43 @@
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) { /* ignore */ }
   }
 
-  async function ensureApproved() {
-    if (approvedLoaded) return;
-    approvedLoaded = true;
-    try {
-      const extra = await Store.listApproved();
-      extra.forEach(s => {
-        s.id = "p-" + s._id;
-        s.source = "provider";
-        SERVICES.push(s);
-      });
-    } catch (e) { /* offline */ }
+  // מה שאושר בשרת: מקומות שהקהילה הוסיפה, תיקונים לשירותים קיימים, והמלצות ("ממליץ/ה")
+  async function ensureLive() {
+    if (liveLoaded) return;
+    liveLoaded = true;
+    const L = await Store.live();
+    L.services.forEach(x => { x.source = "community"; SERVICES.push(x); });
+    for (const [id, patch] of Object.entries(L.overrides)) {
+      const t = SERVICES.find(x => x.id === id);
+      if (t) Object.assign(t, patch);
+    }
+    for (const [id, n] of Object.entries(L.recs)) {
+      const t = SERVICES.find(x => x.id === id);
+      if (t) t.community_recs = (Number(t.community_recs) || 0) + n;
+    }
+    const mode = document.getElementById("store-mode");
+    if (mode) mode.textContent = Store.mode === "cloud" ? "" : "מצב הדגמה: מה ששולחים נשמר רק במכשיר";
   }
+
+  // הגנה מספאם (Cloudflare Turnstile). בלי מפתח או בלי שרת, מחזיר טוקן ריק.
+  let tsScript = null;
+  function captcha(el) {
+    const key = (window.APP_CONFIG || {}).turnstileSiteKey;
+    if (!key || Store.mode !== "cloud" || !el) return Promise.resolve(() => "");
+    tsScript = tsScript || new Promise((ok, fail) => {
+      const sc = document.createElement("script");
+      sc.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      sc.onload = ok; sc.onerror = fail;
+      document.head.appendChild(sc);
+    });
+    return tsScript.then(() => {
+      const w = window.turnstile.render(el, { sitekey: key, language: "he", appearance: "interaction-only" });
+      return () => window.turnstile.getResponse(w) || "";
+    }).catch(() => () => "");
+  }
+  const sendError = err => err && err.code === "rate" ? "שלחת הרבה הודעות היום. אפשר לנסות שוב מחר."
+    : err && err.code === "captcha" ? "לא הצלחנו לוודא שזה לא רובוט. נסו לרענן את העמוד."
+    : "השליחה לא הצליחה. נסו שוב בעוד רגע.";
 
   // ---------- matching ----------
   // ציון התאמה: קשיים שווים יותר מתחומי עניין, אזור קרוב מוסיף, עלות נמוכה מוסיפה מעט.
@@ -119,7 +144,7 @@
   // שורה קצרה ברשימה: שם, משפט פתיחה בשורה אחת, ושורת פרטים. כל השאר בכרטיס שנפתח.
   function card(s, why, noTag) {
     const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => T.regions[r] || r)];
-    if (s.source === "provider") meta.push("הצטרף ללוח");
+    if (s.source === "community") meta.push("נוסף ע״י הקהילה");
     else if (s.verified_at) meta.push("✓ נבדק");
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
@@ -166,6 +191,7 @@
             </li>`).join("")}
         </ul>
         <a class="btn btn-wide home-cta" href="#/match">לא בטוח? 4 שאלות קצרות</a>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>מכירים מקום שעוזר ולא מופיע כאן?</strong><br>להוסיף בדקה. ככה המאגר גדל.</span></a>
         ${prof ? `<p class="saved-link"><a class="link-u" href="#/results">לתחנות שלי ←</a></p>` : ""}
         <p class="note quiet">בלי הרשמה. מה שמסמנים נשאר רק במכשיר.</p>
       </section>`;
@@ -203,6 +229,7 @@
         </nav>` : ""}
         <div class="grid" id="area-list" style="margin-top: 6px"></div>
         ${!p ? `<p class="actions"><a class="link-u" href="#/match">לסדר לפי מה שמתאים לי ←</a></p>` : ""}
+        <a class="add-row" href="#/add?a=${k}"><span class="plus" aria-hidden="true">+</span><span><strong>חסר כאן משהו?</strong><br>להוסיף מקום ל${esc(A.label)}</span></a>
       </section>`;
     const list = document.getElementById("area-list");
     const show = c => pagedList(list, rest.filter(s => !c || s.category === c), s => card(s, null, true));
@@ -414,6 +441,7 @@
         </form>
         <p class="count" id="count"></p>
         <div class="grid" id="list"></div>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>לא מצאת?</strong><br>להוסיף מקום או שירות</span></a>
       </section>`;
     const form = document.getElementById("filters");
     const run = () => {
@@ -535,143 +563,72 @@
     tick();
   }
 
-  function viewProvider() {
-    const cats = Object.keys(T.categories).filter(k => k !== "hotlines");
+  // ---------- להוסיף מקום ----------
+  // טופס קצר, בעיקר בלחיצות. נכנס לתור של המנהל, ואחרי אישור מופיע אצל כולם.
+  function radioChip(group, key, label, checked) {
+    return `<label class="chip"><input type="radio" name="${group}" value="${esc(key)}" ${checked ? "checked" : ""}><span>${esc(label)}</span></label>`;
+  }
+  function viewAdd(params) {
+    const pre = AREAS[params.get("a")] ? AREAS[params.get("a")].cats : [];
+    const cats = Object.keys(T.categories);
+    const COSTS = { free: "ללא עלות", "mod-funded": "במימון משרד הביטחון", partial: "השתתפות חלקית", paid: "בתשלום", "": "לא יודע/ת" };
     $main.innerHTML = `
-      <section class="form-page">
-        <h1 class="page-title">הצטרפות ללוח</h1>
-        <p class="lead">חוות, עמותות, מטפלים, סטודיואים, מועדוני גלישה וכל מי שמציע משהו שיכול לעזור. אחרי בדיקה קצרה ההצעה תופיע במאגר, ופניות של מתעניינים יועברו אליכם.</p>
-        <form id="prov" class="form">
-          <label>שם הגוף / התוכנית *<input name="name" required maxlength="120"></label>
-          <label>תחום *
-            <select name="category" required>${cats.map(k => `<option value="${k}">${esc(T.categories[k].label)}</option>`).join("")}</select>
-          </label>
-          <label>מה אתם מציעים, בפועל? *<textarea name="description" required maxlength="1200" rows="5" placeholder="למשל: מפגש שבועי של גלישה בקבוצה קטנה, 8 מפגשים, כולל ציוד ומדריך עם הכשרה בטראומה."></textarea></label>
-          <fieldset><legend>למי זה מתאים?</legend><div class="chips">${Object.keys(T.eligibility).map(k => chip("eligibility", k, T.eligibility[k])).join("")}</div></fieldset>
-          <fieldset><legend>במה זה עוזר?</legend><div class="chips">${Object.keys(T.difficulties).map(k => chip("difficulties", k, T.difficulties[k])).join("")}</div></fieldset>
-          <fieldset><legend>תחומי עניין</legend><div class="chips">${Object.keys(T.interests).map(k => chip("interests", k, T.interests[k])).join("")}</div></fieldset>
-          <fieldset><legend>אזור</legend><div class="chips">${Object.keys(T.regions).map(k => chip("regions", k, T.regions[k])).join("")}</div></fieldset>
+      <section class="form-page add-page">
+        <h1 class="page-title">להוסיף מקום</h1>
+        <p class="lead">עמותה, חווה, קבוצה, מטפל/ת דרך גוף, פעילות, מענק. כל דבר שעזר לך או למישהו שאת/ה מכיר/ה. אנחנו בודקים ומוסיפים.</p>
+        <form id="add" class="form" novalidate>
+          <label class="big">איך קוראים לזה? *<input name="name" required maxlength="120" autocomplete="off" placeholder="למשל: חוות הגליל לוחמים"></label>
+          <fieldset><legend>באיזה תחום?</legend>
+            <div class="chips small">${cats.map(k => radioChip("category", k, SHORT_CAT[k] || (k === "hotlines" ? "קו סיוע" : catLabel(k)), pre[0] === k)).join("")}</div>
+          </fieldset>
+          <label>מה עושים שם, במשפט או שניים<textarea name="what" rows="3" maxlength="800"></textarea></label>
+          <fieldset><legend>איפה?</legend>
+            <div class="chips small">${Object.keys(T.regions).map(k => chip("regions", k, T.regions[k])).join("")}</div>
+          </fieldset>
+          <fieldset><legend>כמה זה עולה?</legend>
+            <div class="chips small">${Object.keys(COSTS).map(k => radioChip("cost", k, COSTS[k], k === "")).join("")}</div>
+          </fieldset>
           <div class="row">
-            <label>עלות *
-              <select name="cost" required>${Object.keys(T.cost).map(k => `<option value="${k}">${esc(T.cost[k].label)}</option>`).join("")}</select>
-            </label>
-            <label>פירוט עלות<input name="cost_notes" maxlength="200" placeholder="למשל: 50 ש״ח למפגש, חינם למילואימניקים"></label>
+            <label>אתר או עמוד<input name="website" maxlength="300" inputmode="url" placeholder="קישור"></label>
+            <label>טלפון של הגוף<input name="phone" type="tel" maxlength="40"></label>
           </div>
-          <label>כתובת / יישוב<input name="location" maxlength="150"></label>
-          <div class="row">
-            <label>טלפון<input name="phone" type="tel" maxlength="30"></label>
-            <label>אימייל לפניות *<input name="email" type="email" required maxlength="120"></label>
-          </div>
-          <label>אתר / עמוד פייסבוק / אינסטגרם<input name="website" maxlength="300"></label>
-          <label>איך מצטרפים?<textarea name="how_to_apply" rows="2" maxlength="500"></textarea></label>
-          <label>איש/אשת קשר ותפקיד *<input name="contact_person" required maxlength="120"></label>
-          <label class="check"><input type="checkbox" name="agree" required> אני מאשר/ת שהפרטים נכונים, ושפרטי הגוף יוצגו לציבור באתר.</label>
-          <button class="btn btn-ink" type="submit">שליחה לבדיקה</button>
-          <p class="form-msg" id="prov-msg" role="status"></p>
+          <fieldset><legend>מה הקשר שלך?</legend>
+            <div class="chips small">${radioChip("relation", "used", "הייתי שם / נעזרתי", true)}${radioChip("relation", "staff", "אני עובד/ת שם")}${radioChip("relation", "heard", "שמעתי עליו")}</div>
+          </fieldset>
+          <label class="check star-check"><input type="checkbox" name="recommend"> ${STAR} אני ממליץ/ה בחום</label>
+          <details class="fold more-fields"><summary>עוד פרטים (לא חובה)</summary>
+            <label>למי זה מתאים, תנאים, איך נרשמים<textarea name="notes" rows="3" maxlength="800"></textarea></label>
+            <label>כתובת / יישוב<input name="location" maxlength="120"></label>
+            <label>אם נרצה לשאול משהו: טלפון או מייל שלך<input name="contact" maxlength="120"></label>
+          </details>
+          <div class="ts" id="add-ts"></div>
+          <button class="btn btn-ink btn-wide" type="submit">לשלוח</button>
+          <p class="form-msg" id="add-msg" role="status"></p>
         </form>
+        <p class="note quiet">לא מפרסמים את הפרטים שלך. מה ששלחת נבדק לפני שמופיע במאגר.</p>
       </section>`;
-    const f = document.getElementById("prov");
+    const f = document.getElementById("add");
+    const msg = document.getElementById("add-msg");
+    let token = () => "";
+    captcha(document.getElementById("add-ts")).then(g => { token = g; });
     f.addEventListener("submit", async e => {
       e.preventDefault();
       const fd = new FormData(f);
-      const rec = {};
-      ["name", "category", "description", "cost", "cost_notes", "location", "phone", "email", "website", "how_to_apply", "contact_person"]
-        .forEach(k => rec[k] = (fd.get(k) || "").toString().trim());
-      ["eligibility", "difficulties", "interests", "regions"].forEach(k => rec[k] = fd.getAll(k));
-      rec.provider_type = "private";
-      rec.status = "pending";
-      const msg = document.getElementById("prov-msg");
+      const name = (fd.get("name") || "").trim();
+      if (name.length < 2) { msg.textContent = "צריך לפחות שם."; f.name.focus(); return; }
+      const data = { name, recommend: !!fd.get("recommend"), regions: fd.getAll("regions") };
+      ["category", "what", "cost", "website", "phone", "relation", "notes", "location", "contact"].forEach(k => data[k] = (fd.get(k) || "").toString().trim());
+      const btn = f.querySelector("button[type=submit]");
+      btn.disabled = true;
       try {
-        await Store.addSubmission(rec);
-        f.reset();
-        msg.textContent = "תודה! ההצעה התקבלה ותיבדק בקרוב.";
+        const r = await Store.submit("new", data, { token: token() });
+        f.innerHTML = `<div class="sheet thanks"><h2>תודה!</h2><p>${r.local ? "נשמר במכשיר (מצב הדגמה, עוד אין שרת)." : "קיבלנו. אחרי בדיקה קצרה זה יופיע במאגר לכולם."}</p>
+          <p class="actions"><a class="btn" href="#/add">להוסיף עוד מקום</a> <a class="link-u" href="#/">לדף הבית</a></p></div>`;
       } catch (err) {
-        msg.textContent = "משהו השתבש בשליחה. נסו שוב מאוחר יותר.";
+        btn.disabled = false;
+        msg.textContent = sendError(err);
       }
     });
-  }
-
-  async function viewAdmin() {
-    if (!Store.isAdminReady()) {
-      $main.innerHTML = `
-        <section class="form-page">
-          <h1 class="page-title">כניסת מנהלים</h1>
-          <form id="login" class="form">
-            <label>אימייל<input name="email" type="email" required></label>
-            <label>סיסמה<input name="password" type="password" required></label>
-            <button class="btn btn-ink">כניסה</button>
-            <p class="form-msg" id="login-msg"></p>
-          </form>
-        </section>`;
-      document.getElementById("login").addEventListener("submit", async e => {
-        e.preventDefault();
-        const fd = new FormData(e.target);
-        try { await Store.signIn(fd.get("email"), fd.get("password")); viewAdmin(); }
-        catch (err) { document.getElementById("login-msg").textContent = "כניסה נכשלה."; }
-      });
-      return;
-    }
-    $main.innerHTML = `<section><h1 class="page-title">ניהול</h1><p>טוען…</p></section>`;
-    let leads = [], subs = [];
-    try { [leads, subs] = await Promise.all([Store.listLeads(), Store.listSubmissions()]); }
-    catch (e) { $main.innerHTML = `<section><h1 class="page-title">ניהול</h1><p>אין הרשאה לצפות בנתונים. ודאו שהמשתמש מוגדר כמנהל (ראו README).</p></section>`; return; }
-    leads.sort((a, b) => b.createdAt - a.createdAt);
-    subs.sort((a, b) => b.createdAt - a.createdAt);
-    const byId = Object.fromEntries(SERVICES.map(s => [s.id, s]));
-    const pending = subs.filter(s => !s.status || s.status === "pending");
-    const fmt = t => new Date(t).toLocaleString("he-IL");
-    $main.innerHTML = `
-      <section>
-        <h1 class="page-title">ניהול</h1>
-        ${Store.mode === "local" ? `<div class="callout callout-info">מצב הדגמה: הנתונים כאן נשמרו רק בדפדפן הזה. כדי לקבל פניות אמיתיות מחברים את Firebase (ראו README).</div>` : ""}
-        <h2>הצעות של גופים שממתינות לאישור (${pending.length})</h2>
-        <div class="admin-list">
-          ${pending.map(s => `
-            <div class="admin-item">
-              <strong>${esc(s.name)}</strong> · ${esc(catLabel(s.category))} · ${esc(costLabel(s.cost))}
-              <p>${esc(s.description)}</p>
-              <small>${esc(s.contact_person)} · ${esc(s.email)} · ${esc(s.phone)} · ${esc(s.website)} · ${fmt(s.createdAt)}</small>
-              <div class="actions">
-                <button class="btn btn-ink" data-approve="${esc(s._id)}">אישור ופרסום</button>
-                <button class="btn" data-reject="${esc(s._id)}">דחייה</button>
-              </div>
-            </div>`).join("") || "<p>אין הצעות ממתינות.</p>"}
-        </div>
-        <h2>פניות של מטופלים (${leads.length})</h2>
-        <div class="table-wrap">
-          <table class="admin-table">
-            <thead><tr><th>תאריך</th><th>שירות</th><th>שם</th><th>יצירת קשר</th><th>הודעה</th><th>סטטוס</th></tr></thead>
-            <tbody>
-              ${leads.map(l => `
-                <tr>
-                  <td>${fmt(l.createdAt)}</td>
-                  <td>${esc((byId[l.serviceId] || {}).name || l.serviceName || l.serviceId)}</td>
-                  <td>${esc(l.name)}</td>
-                  <td>${esc(l.contact)}</td>
-                  <td>${esc(l.message)}</td>
-                  <td><select data-lead="${esc(l._id)}">
-                    ${["new", "forwarded", "done"].map(st => `<option value="${st}" ${((l.status || "new") === st) ? "selected" : ""}>${{ new: "חדשה", forwarded: "הועברה לגוף", done: "טופלה" }[st]}</option>`).join("")}
-                  </select></td>
-                </tr>`).join("") || `<tr><td colspan="6">אין פניות עדיין.</td></tr>`}
-            </tbody>
-          </table>
-        </div>
-        <p><button class="btn" id="csv">ייצוא פניות ל-CSV</button></p>
-      </section>`;
-    $main.querySelectorAll("[data-approve]").forEach(b => b.onclick = async () => {
-      await Store.approve(subs.find(s => s._id === b.dataset.approve)); approvedLoaded = false;
-      SERVICES = SERVICES.filter(s => s.source !== "provider"); await ensureApproved(); viewAdmin();
-    });
-    $main.querySelectorAll("[data-reject]").forEach(b => b.onclick = async () => { await Store.reject(b.dataset.reject); viewAdmin(); });
-    $main.querySelectorAll("[data-lead]").forEach(sel => sel.onchange = () => Store.markLead(sel.dataset.lead, sel.value));
-    document.getElementById("csv").onclick = () => {
-      const rows = [["date", "service", "name", "contact", "message", "status"]].concat(leads.map(l =>
-        [fmt(l.createdAt), (byId[l.serviceId] || {}).name || l.serviceName || "", l.name, l.contact, l.message || "", l.status || "new"]));
-      const csv = "﻿" + rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\n");
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
-      a.download = "leads.csv"; a.click();
-    };
   }
 
   // ---------- service card ----------
@@ -706,6 +663,17 @@
           ${helps.length ? `<details class="fold"><summary>במה זה עוזר</summary><p>${esc(helps.join(" · "))}</p></details>` : ""}
           ${s.location || arr(s.regions).length ? `<details class="fold"><summary>איפה</summary><p>${esc([s.location, arr(s.regions).map(r => T.regions[r]).join(", ")].filter(Boolean).join(" · "))}</p></details>` : ""}
         </div>
+        <div class="svc-community">
+          <button class="chip-btn" type="button" id="rec-btn" aria-pressed="${Store.hasRecommended(s.id)}">${STAR}<span>${Store.hasRecommended(s.id) ? "המלצת. תודה" : "ממליץ/ה"}</span></button>
+          <button class="chip-btn" type="button" id="fix-toggle">משהו לא נכון? / להוסיף פרט</button>
+        </div>
+        <form id="fix" class="form lead-form" hidden>
+          <label>מה לא נכון, או מה כדאי להוסיף?<textarea name="text" rows="3" maxlength="1000" required placeholder="למשל: הטלפון השתנה, יש המתנה של חודשיים, זה פתוח גם למי שלא מוכר"></textarea></label>
+          <label>אם נרצה לשאול משהו: טלפון או מייל (לא חובה)<input name="contact" maxlength="120"></label>
+          <div class="ts" id="fix-ts"></div>
+          <button class="btn btn-ink">לשלוח</button>
+          <p class="form-msg" role="status"></p>
+        </form>
         <form id="lead" class="form lead-form" hidden>
           <p class="note">נעביר לגוף, והם יחזרו אליך. לא חובה לספר יותר ממה שנוח.</p>
           <label>שם<input name="name" required maxlength="80"></label>
@@ -723,22 +691,62 @@
     const more = document.getElementById("svc-more");
     if (more) more.onclick = () => { document.getElementById("svc-desc").classList.remove("clamp-3"); more.remove(); };
     const f = document.getElementById("lead");
-    document.getElementById("lead-toggle").onclick = () => { f.hidden = !f.hidden; if (!f.hidden) f.querySelector("input").focus(); };
+    document.getElementById("lead-toggle").onclick = () => {
+      f.hidden = !f.hidden;
+      if (!f.hidden) {
+        f.querySelector("input").focus();
+        if (!f.querySelector(".ts")) { const d = document.createElement("div"); d.className = "ts"; f.querySelector("button").before(d); captcha(d).then(g => { leadToken = g; }); }
+      }
+    };
+    let leadToken = null;
     f.addEventListener("submit", async e => {
       e.preventDefault();
       const fd = new FormData(f);
       const msg = f.querySelector(".form-msg");
       try {
-        await Store.addLead({
-          serviceId: s.id, serviceName: s.name, serviceEmail: s.email || "",
-          name: fd.get("name").trim(), contact: fd.get("contact").trim(),
-          message: (fd.get("message") || "").trim(), consent: true, status: "new"
-        });
+        await Store.submit("lead", {
+          serviceName: s.name, name: fd.get("name").trim(), contact: fd.get("contact").trim(),
+          message: (fd.get("message") || "").trim(), consent: true
+        }, { service_id: s.id, token: leadToken ? leadToken() : "" });
         f.querySelectorAll("input,textarea,button").forEach(x => x.disabled = true);
         msg.textContent = "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.";
       } catch (err) {
-        msg.textContent = "השליחה לא הצליחה. אפשר להתקשר ישירות.";
+        msg.textContent = sendError(err) + " אפשר גם להתקשר ישירות.";
       }
+    });
+    // המלצה בלחיצה אחת
+    const rec = document.getElementById("rec-btn");
+    rec.onclick = async () => {
+      if (Store.hasRecommended(s.id)) return;
+      rec.disabled = true;
+      try {
+        await Store.recommend(s.id);
+        s.community_recs = (Number(s.community_recs) || 0) + 1;
+        rec.setAttribute("aria-pressed", "true");
+        rec.querySelector("span").textContent = "המלצת. תודה";
+      } catch (err) { rec.querySelector("span").textContent = "לא נשמר, נסו שוב"; }
+      rec.disabled = false;
+    };
+    // תיקון או פרט נוסף
+    const fx = document.getElementById("fix");
+    let fixToken = null;
+    document.getElementById("fix-toggle").onclick = () => {
+      fx.hidden = !fx.hidden;
+      if (!fx.hidden) {
+        fx.querySelector("textarea").focus();
+        if (!fixToken) captcha(document.getElementById("fix-ts")).then(g => { fixToken = g; });
+      }
+    };
+    fx.addEventListener("submit", async e => {
+      e.preventDefault();
+      const fd = new FormData(fx);
+      const msg = fx.querySelector(".form-msg");
+      const text = (fd.get("text") || "").trim();
+      if (text.length < 3) { msg.textContent = "כתבו כמה מילים."; return; }
+      try {
+        await Store.submit("fix", { text, contact: (fd.get("contact") || "").trim() }, { service_id: s.id, token: fixToken ? fixToken() : "" });
+        fx.innerHTML = `<p class="form-msg">תודה! נבדוק ונעדכן.</p>`;
+      } catch (err) { msg.textContent = sendError(err); }
     });
   }
   function closeModal() {
@@ -762,15 +770,15 @@
     const [path, qs] = h.split("?");
     const params = new URLSearchParams(qs || "");
     document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", path === "/" + a.dataset.nav || (a.dataset.nav === "" && path === "/area")));
-    await ensureApproved();
+    await ensureLive();
     if (path === "/match") viewMatch();
     else if (path === "/results") viewResults();
     else if (path === "/browse") viewBrowse(params);
     else if (path === "/rights") viewRights(params);
     else if (path === "/area") viewArea(params);
     else if (path === "/help") viewHelp();
-    else if (path === "/provider") viewProvider();
-    else if (path === "/admin") viewAdmin();
+    else if (path === "/add" || path === "/provider") viewAdd(params);
+    else if (path === "/admin") { location.href = "admin/"; return; }
     else viewHome();
     if (!qs || path !== "/browse") window.scrollTo(0, 0);
   }
@@ -791,8 +799,7 @@
     applyTheme(next);
     try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage blocked */ }
   };
-  document.getElementById("store-mode").textContent = Store.mode === "cloud" ? "מחובר לענן" : "מצב הדגמה (ללא שרת)";
+
   document.getElementById("data-stamp").textContent = window.SERVICES_UPDATED ? "המאגר עודכן: " + window.SERVICES_UPDATED : "";
-  Store.onAuth(() => { if (location.hash.startsWith("#/admin")) route(); });
   route();
 })();

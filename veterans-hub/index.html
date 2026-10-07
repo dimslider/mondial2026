@@ -18,6 +18,9 @@
       <button class="dim-toggle" id="dim-toggle" type="button" aria-pressed="false" aria-label="מצב עמום">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
       </button>
+      <a class="add-btn" href="#/add" aria-label="להוסיף מקום או שירות" title="להוסיף מקום">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 4.5 C 11.6 9, 12.3 15, 12 19.5 M4.5 12.2 C 9 11.7, 15 12.4, 19.5 11.9"/></svg>
+      </a>
       <a class="help-btn" href="#/help">עזרה עכשיו</a>
     </div>
   </header>
@@ -40,13 +43,10 @@
 
   <footer class="footer">
     <p>המידע נאסף ממקורות פתוחים ונבדק מול האתרים הרשמיים כשאפשר. לפני שמגיעים, כדאי לוודא תנאים ועלויות מול הגוף. האתר אינו תחליף לייעוץ רפואי, נפשי או משפטי.</p>
-    <p><a href="#/provider">לגופים: הצטרפות ללוח</a> · <a href="#/admin">ניהול</a> · <span id="store-mode"></span> · <span id="data-stamp"></span></p>
+    <p><a href="#/add">להוסיף מקום או שירות</a> · <a href="admin/">ניהול</a> · <span id="store-mode"></span> · <span id="data-stamp"></span></p>
   </footer>
 
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-  <script src="firebase-config.js"></script>
+  <script src="config.js"></script>
   <script src="data/taxonomy.js"></script>
   <script src="data/services.js"></script>
   <script src="data/guides.js"></script>

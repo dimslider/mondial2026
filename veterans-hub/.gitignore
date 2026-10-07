@@ -5,3 +5,5 @@ __pycache__/
 veterans-hub/research/pages/
 research/pages/
 .artifact/
+dist/
+.wrangler/
