@@ -68,8 +68,9 @@ def clean(s, warn):
     if out["category"] not in VALID["categories"]:
         warn(f"{out['name']}: קטגוריה לא מוכרת {out['category']!r}")
         out["category"] = "peer-support"
-    if out["cost"] not in VALID["cost"]:
-        out["cost"] = "partial"
+    if out["cost"] and out["cost"] not in VALID["cost"]:
+        warn(f"{out['name']}: עלות לא מוכרת {out['cost']!r}")
+        out["cost"] = ""  # ריק = "לא ידוע" באתר; לא מנחשים עלות שלא כתובה במקור
     if out["provider_type"] not in VALID["providerTypes"]:
         out["provider_type"] = "ngo"
     for f, tax in LIST_FIELDS.items():

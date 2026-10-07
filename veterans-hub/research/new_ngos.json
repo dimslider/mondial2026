@@ -2,14 +2,17 @@
  {
   "name": "לב אל לב ישראל (Israel Heart2Heart)",
   "category": "peer-support",
-  "description": "עמותה ירושלמית שפועלת מאז 2018 ללוחמים משוחררים המתמודדים עם פוסט טראומה. התוכנית נמשכת כשנה וחצי ובנויה על שלושה צירים: קהילה תומכת וליווי אישי, תוכנית יוגה טיפולית ומיינדפולנס שפותחה לחיילים עם PTSD, וליווי תעסוקתי ועסקי באמצעות מנטורים ואנשי מקצוע.",
+  "description": "עמותה שמלווה לוחמים משוחררים, משרתי מילואים ובני משפחותיהם שמתמודדים עם פוסט טראומה. המסע הטיפולי נמשך 18 חודשים ומשלב טיפול סומטי מבוסס טראומה, מנטור אישי, ימי העצמה וריטריטים, ליווי תעסוקתי ותמיכה במשפחה. התוכנית 'Sisters at Heart' מיועדת לנשים ולבנות זוג של הלוחמים. העמותה פועלת ביותר מ-25 מקומות בארץ.",
   "provider_type": "ngo",
   "eligibility": [
    "combat-soldiers",
    "reservists",
    "mod-recognized",
    "mod-in-process",
-   "not-recognized"
+   "not-recognized",
+   "security-forces",
+   "terror-victims",
+   "families"
   ],
   "difficulties": [
    "ptsd",
@@ -18,56 +21,58 @@
    "family-relations"
   ],
   "interests": [
-   "mind-body",
-   "fitness"
+   "mind-body"
   ],
   "cost": "free",
-  "cost_notes": "פעילות במימון תרומות",
+  "cost_notes": "לפי אתר העמותה, התוכניות ניתנות ללא עלות למשתתפים ולמשפחות.",
   "regions": [
-   "jerusalem"
+   "nationwide",
+   "jerusalem",
+   "south"
   ],
-  "location": "רחוב הרטום 16, ירושלים",
-  "phone": "",
-  "email": "",
-  "website": "https://www.israelgives.org/amuta/580746352",
-  "how_to_apply": "פנייה ישירה לעמותה דרך עמוד העמותה או ערוצי הקשר שלה",
-  "source_url": "https://www.thejewishnews.com/community/cover-local-jewish-detroiters-partner-with-israel-heart2heart-to-support-idf-veterans-with-ptsd/article_25437d92-b503-49f9-be51-6dc246bb0295.html",
-  "confidence": "high"
+  "location": "משרדים: הרטום 16, ירושלים; שדרות לכיש 5, קריית גת",
+  "phone": "+972-526-071239",
+  "email": "office@ih2h.org",
+  "website": "https://israelh2h.org",
+  "how_to_apply": "פנייה דרך דף יצירת הקשר באתר, בטלפון או במייל. משתתפים מגיעים גם בהפניה מבתי חולים ומטפלים.",
+  "source_url": "https://israelh2h.org/faq",
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
   "name": "Our Family First – סופי שבוע זוגיים למשפחות מילואימניקים",
   "category": "family-support",
-  "description": "ארגון שהוקם בתחילת 2024 ומקיים סופי שבוע עם לינה לזוגות של משרתי מילואים. בתוכנית סדנאות פסיכו-חינוכיות, טיפול קבוצתי ומפגשים זוגיים עם מטפלים זוגיים ומטפלי טראומה מישראל ומארה\"ב, ותינוקות עד גיל שנתיים יכולים להגיע עם ההורים.",
+  "description": "ארגון שמקיים סופי שבוע עם לינה ללוחמים ולבנות ובני הזוג שלהם, כשהם חוזרים מהלחימה למשפחה. בתוכנית סדנאות פסיכו-חינוכיות וייעוץ זוגי, עם התמקדות בזוגיות, בהורות ובחזרה לשגרה אחרי טראומה.",
   "provider_type": "ngo",
   "eligibility": [
    "reservists",
+   "combat-soldiers",
    "families"
   ],
   "difficulties": [
    "family-relations",
-   "ptsd",
-   "anxiety"
+   "ptsd"
   ],
   "interests": [
    "travel"
   ],
   "cost": "free",
-  "cost_notes": "המטפלים מתנדבים והאירוח ממומן מתרומות",
+  "cost_notes": "לא מצוין באתר הארגון. לפי דיווחים בתקשורת המטפלים מתנדבים והפעילות ממומנת מתרומות.",
   "regions": [
    "nationwide"
   ],
   "location": "",
   "phone": "",
   "email": "",
-  "website": "https://ourfamilyfirst.org",
-  "how_to_apply": "פנייה דרך אתר הארגון",
-  "source_url": "https://jewishlink.news/our-family-first-supports-idf-reservist-families-under-wartime-strain/",
+  "website": "https://www.ourfamilyfirst.org",
+  "how_to_apply": "באתר הארגון אין טופס הרשמה או פרטי קשר. לפי דיווחים, זוגות מגיעים בעיקר דרך היחידות וארגונים שותפים.",
+  "source_url": "https://www.ourfamilyfirst.org",
   "confidence": "medium"
  },
  {
   "name": "פורום נשות המילואימניקים",
   "category": "rights-legal",
-  "description": "עמותה שהוקמה בנובמבר 2023 ונרשמה באפריל 2024 על ידי נשות משרתי מילואים, ומייצגת עשרות אלפי בנות זוג. הפורום פועל לשינוי מדיניות ולהגנה על זכויות בנות הזוג, בעיקר בעבודה, ומפעיל צוות עורכי דין מתנדבים שמסייע בענייני הגנה מפיטורים.",
+  "description": "עמותה של בנות זוג של משרתי מילואים, שקמה בעקבות המלחמה. הפורום פועל להגנה על הזכויות של בנות הזוג, בעיקר בעבודה, ולהסברה מול מקבלי ההחלטות, ומקיים קהילה תומכת.",
   "provider_type": "ngo",
   "eligibility": [
    "families",
@@ -80,7 +85,7 @@
   ],
   "interests": [],
   "cost": "free",
-  "cost_notes": "ייעוץ משפטי בהתנדבות",
+  "cost_notes": "",
   "regions": [
    "nationwide",
    "online"
@@ -89,14 +94,14 @@
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "פנייה לפורום דרך קבוצות הפורום ברשתות החברתיות",
+  "how_to_apply": "פנייה לפורום דרך הקהילה שלו ברשתות החברתיות.",
   "source_url": "https://www.timesofisrael.com/fired-during-war-reservists-wives-band-together-to-battle-for-job-security/amp/",
-  "confidence": "high"
+  "confidence": "medium"
  },
  {
   "name": "אחותי – קהילה לבנות זוג של פצועי צה\"ל",
   "category": "family-support",
-  "description": "עמותה שמקיימת קהילת נשים לבנות זוג ולנשים של פצועי צה\"ל, כולל פצועים עם פוסט טראומה. אחרי כחמש שנות פעילות במסגרת עמותה אחרת לסיוע ללוחמים, היא פועלת כעמותה עצמאית ומקיימת מפגשים, הקשבה ותמיכה הדדית.",
+  "description": "עמותה שמקיימת קהילת נשים לבנות זוג של לוחמים פצועים, כולל פצועים עם פוסט טראומה. בקהילה יש מפגשים, מעגלי שיח ותמיכה הדדית.",
   "provider_type": "ngo",
   "eligibility": [
    "families"
@@ -116,14 +121,14 @@
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "פנייה ישירה לעמותה",
+  "how_to_apply": "פנייה ישירה לעמותה.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1230840",
-  "confidence": "high"
+  "confidence": "medium"
  },
  {
   "name": "הותיר אחריו חבר.ה – תמיכה בבני ובנות זוג שכולים שלא היו נשואים",
   "category": "family-support",
-  "description": "עמותה שפועלת מאז 1998 למען בני ובנות זוג של חללי צה\"ל וכוחות הביטחון שלא היו נשואים להם. היא מעניקה לכל אחד ואחת מעטפת טיפולית מותאמת וליווי אישי לאורך זמן, ומאז 7 באוקטובר קלטה מאות פונים חדשים לטיפול פרטני וקבוצתי.",
+  "description": "עמותה שפועלת מאז 1998 למען בנות ובני הזוג של חללי צה\"ל וכוחות הביטחון. כל בת או בן זוג שכולים מקבלים ליווי אישי של חברה שכולה ותיקה, ויש גם סיוע במימון טיפול פרטני, קבוצות תמיכה בהנחיית מטפלים, מפגשי העצמה, ייעוץ תעסוקתי, קרן מענקים לחירום וליווי להורים של בני ובנות הזוג. העמותה נתמכת על ידי משרד הביטחון ופועלת בשיתוף אגף נפגעים ומשפחות בצה\"ל.",
   "provider_type": "ngo",
   "eligibility": [
    "bereaved",
@@ -132,51 +137,61 @@
   "difficulties": [
    "grief",
    "loneliness",
-   "bureaucracy"
+   "employment",
+   "financial"
   ],
   "interests": [],
-  "cost": "free",
-  "cost_notes": "",
+  "cost": "subsidized",
+  "cost_notes": "העמותה מסייעת במימון טיפול פרטני, ויש קרן מענקים לחירום למי שזקוקים.",
   "regions": [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה ישירה לעמותה, פרטים בכל זכות",
-  "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%95%D7%AA%D7%99%D7%A8_%D7%90%D7%97%D7%A8%D7%99%D7%95_%D7%97%D7%91%D7%A8%D7%94",
-  "confidence": "high"
+  "phone": "077-770-3166",
+  "email": "info@gfidf.org.il",
+  "website": "https://www.girlfriendsidf.org.il",
+  "how_to_apply": "פנייה לעמותה בטלפון או במייל.",
+  "source_url": "https://www.girlfriendsidf.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  },
  {
-  "name": "קרן דובדבן (Friends of Duvdevan) – תמיכה בבוגרי יחידת דובדבן",
+  "name": "עמותת דובדבן – תמיכה בבוגרי ובוגרות יחידת דובדבן (Duvdevan Foundation)",
   "category": "peer-support",
-  "description": "קרן של בוגרי יחידת דובדבן שמלווה את לוחמי היחידה במעבר לחיים האזרחיים. היא מעניקה מלגות, מנטורינג, תוכניות חוסן וטיפול בפוסט טראומה וליווי לפצועים, ומאז 7 באוקטובר גם מענקים למשרתי מילואים ולמשפחותיהם.",
+  "description": "עמותת הבוגרים של יחידת דובדבן. מחלקת החוסן מציעה ליווי אישי של אנשי מקצוע, הפניה לטיפול נפשי בקהילה ללא עלות, סדנאות חוסן, תוכניות ימיות וקבוצת כדורסל, תמיכה בבנות זוג ובמשפחות, וליווי לפצועים בגוף ובנפש כולל ליווי בהכרה באגף השיקום. יש גם מלגות לימודים, ליווי תעסוקתי, סדנה למשרתי מילואים וסיוע כלכלי.",
   "provider_type": "ngo",
   "eligibility": [
    "combat-soldiers",
    "reservists",
-   "families"
+   "families",
+   "mod-recognized",
+   "mod-in-process"
   ],
   "difficulties": [
    "ptsd",
    "employment",
-   "financial"
+   "financial",
+   "family-relations",
+   "bureaucracy"
   ],
   "interests": [
-   "learning"
+   "learning",
+   "sea",
+   "sport",
+   "mind-body"
   ],
   "cost": "free",
-  "cost_notes": "מקבלי מלגות מתנדבים בתוכניות הקרן",
+  "cost_notes": "הפניה לטיפול נפשי בקהילה ללא עלות. סיוע כלכלי ומלגות לפי בקשה ואישור ועדה.",
   "regions": [
    "nationwide"
   ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מיועד ללוחמים ובוגרים של יחידת דובדבן, פנייה דרך הקרן",
-  "source_url": "https://www.jns.org/organization/friends-of-duvdevan",
-  "confidence": "medium"
+  "location": "השדות 16, עדנים (כתובת דואר)",
+  "phone": "+972 50-467-1712",
+  "email": "info@217.co.il",
+  "website": "https://duvdevanfoundation.org",
+  "how_to_apply": "מיועד לבוגרי ובוגרות היחידה. פונים דרך האתר (\"אני זקוק לסיוע\"), בטלפון או במייל. לסיוע כלכלי ממלאים טופס פנייה ועוברים ראיון.",
+  "source_url": "https://duvdevanfoundation.org/%d7%97%d7%95%d7%a1%d7%9f/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-07"
  }
 ]
