@@ -98,91 +98,105 @@
   }
 
   // ---------- components ----------
+  const AREAS = window.AREAS || {};
+  const areaOf = cat => Object.keys(AREAS).find(k => AREAS[k].cats.includes(cat)) || "soul";
+  const areaTag = s => { const a = areaOf(s.category); return `<span class="area-tag area-${a}">${esc(AREAS[a].label)}</span>`; };
+  // קווים שנמשכו ביד: אותו קו משמש לרשימות, לתחנות ולגל
+  const HAND_LINE = `<svg class="hand-line" viewBox="0 0 24 400" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M12 0 C 4 40, 20 70, 12 110 C 4 150, 22 180, 12 220 C 2 260, 20 300, 12 340 C 6 370, 16 390, 12 400" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
+  const WAVE = `<svg class="wave" viewBox="0 0 346 18" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M2 9 Q 22 1 43 9 T 86 9 T 129 9 T 172 9 T 215 9 T 258 9 T 301 9 T 344 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
+  const TICK = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 13 C 7 15, 8 17, 10 19 C 13 13, 16 8, 21 4"/></svg>`;
+  const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
+
   function chip(group, key, label, checked) {
     return `<label class="chip"><input type="checkbox" name="${group}" value="${esc(key)}" ${checked ? "checked" : ""}><span>${esc(label)}</span></label>`;
   }
   function card(s, why) {
-    const tags = [];
-    tags.push(`<span class="tag cost-${esc(s.cost)}">${esc(costLabel(s.cost))}</span>`);
-    arr(s.regions).slice(0, 2).forEach(r => tags.push(`<span class="tag">${esc(T.regions[r] || r)}</span>`));
-    if (s.source === "provider") tags.push(`<span class="tag tag-new">הצטרף ללוח</span>`);
-    else if (s.verified_at) tags.push(`<span class="tag tag-ok">✓ מאומת</span>`);
+    const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 2).map(r => T.regions[r] || r)];
+    if (s.source === "provider") meta.push("הצטרף ללוח");
+    else if (s.verified_at) meta.push("✓ נבדק");
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
-        <div class="card-cat">${catIcon(s.category)} ${esc(catLabel(s.category))}</div>
+        <div class="tag-row">${areaTag(s)}</div>
         <h3>${esc(s.name)}</h3>
-        <p>${esc((s.description || "").slice(0, 170))}${(s.description || "").length > 170 ? "…" : ""}</p>
-        ${why && why.length ? `<ul class="why">${why.slice(0, 2).map(w => `<li>${esc(w)}</li>`).join("")}</ul>` : ""}
-        <div class="tags">${tags.join("")}</div>
+        <p>${esc(shortDesc(s.description, 150))}</p>
+        ${why && why.length ? `<span class="why">← ${esc(why.slice(0, 2).join(" · "))}</span>` : ""}
+        <span class="meta-line">${esc(meta.join(" · "))}</span>
       </article>`;
-  }
-  function hotlinesBlock() {
-    const lines = SERVICES.filter(s => s.category === "hotlines" && s.phone);
-    if (!lines.length) return "";
-    return `
-      <section class="hotlines">
-        <h2>☎️ קווים פתוחים — אפשר להתקשר גם עכשיו</h2>
-        <div class="hotline-grid">
-          ${lines.slice(0, 12).map(s => `
-            <div class="hotline">
-              <div><strong>${esc(s.name)}</strong><small>${esc((s.description || "").slice(0, 80))}</small></div>
-              <a class="btn btn-small" href="${telHref(s.phone)}">${esc(s.phone)}</a>
-            </div>`).join("")}
-        </div>
-      </section>`;
   }
 
   // ---------- views ----------
   function viewHome() {
-    const cats = Object.keys(T.categories).filter(k => k !== "hotlines");
-    const counts = {};
-    SERVICES.forEach(s => { counts[s.category] = (counts[s.category] || 0) + 1; });
     const prof = loadProfile();
+    const counts = {};
+    SERVICES.forEach(s => { const a = areaOf(s.category); counts[a] = (counts[a] || 0) + 1; });
     $main.innerHTML = `
-      <section class="hero">
-        <h1>כל מה שמגיע לך — במקום אחד.</h1>
-        <p class="lead">טיפולים, עמותות, חוות שיקומיות, גלישה, יוגה, מענקים וזכויות — לנכי צה״ל, למילואימניקים, ללוחמים, לשוטרים, וגם למי שעוד לא הוכר במשרד הביטחון.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#/match">${prof ? "לעדכן את ההתאמה שלי" : "מצאו לי מה מתאים (2 דקות)"}</a>
-          ${prof ? `<a class="btn" href="#/results">להתאמות שלי</a>` : ""}
-          <a class="btn" href="#/browse">לדפדף בכל ${SERVICES.length} השירותים</a>
-        </div>
-        <p class="note">לא צריך להירשם. מה שתסמנו נשמר רק אצלכם במכשיר.</p>
-      </section>
-
-      <section class="notrec">
-        <h2>עוד לא מוכר/ת? זה לא אומר שאין לך כלום.</h2>
-        <p>הרבה מהשירותים כאן פתוחים בלי הכרה: עמותות, קווי סיוע, קופות החולים, מרכזי חוסן ותוכניות למילואימניקים. וגם במשרד הביטחון יש היום טיפול נפשי שאפשר לקבל עוד לפני שההכרה הסתיימה.</p>
-        <a class="link" href="#/rights">מה מגיע לי לפי הסטטוס שלי ←</a>
-      </section>
-
       <section>
-        <h2 class="section-title">לפי תחום</h2>
-        <div class="cat-grid">
-          ${cats.map(k => `
-            <a class="cat" href="#/browse?cat=${k}">
-              <span class="cat-icon">${T.categories[k].icon}</span>
-              <span>${esc(T.categories[k].label)}</span>
-              <small>${counts[k] || 0}</small>
-            </a>`).join("")}
-        </div>
-      </section>
-
-      ${hotlinesBlock()}
-
-      <section class="provider-cta">
-        <h2>מפעילים חווה, סטודיו, קבוצה או תוכנית?</h2>
-        <p>הציעו את עצמכם בלוח. אחרי בדיקה קצרה תופיעו למי שזה יכול לעזור, ופניות יגיעו אליכם.</p>
-        <a class="btn btn-primary" href="#/provider">להצטרפות ללוח</a>
+        <h1 class="page-title">מה מושך אותך?</h1>
+        <p class="lead">משם מתחילים. טיפול, ים, חוות, ספורט, מענקים וזכויות, לנכי צה״ל, מילואימניקים, שוטרים ולמי שעוד לא הוכר.</p>
+        <ul class="areas lined">
+          ${HAND_LINE}
+          ${Object.keys(AREAS).map(k => `
+            <li>
+              <span class="node" aria-hidden="true"></span>
+              <a href="#/area?a=${k}">
+                <span class="dabbed area-${k}"><span class="word${AREAS[k].label.length > 4 ? " long" : ""}">${esc(AREAS[k].label)}</span></span>
+                <span><span class="sub">${esc(AREAS[k].sub)}</span><br><span class="count">${counts[k] || 0} אפשרויות</span></span>
+              </a>
+            </li>`).join("")}
+        </ul>
+        <a class="btn btn-wide home-cta" href="#/match">לא בטוח? 4 שאלות קצרות</a>
+        ${prof ? `<p class="saved-link"><a class="link-u" href="#/results">לתחנות שלי ←</a></p>` : ""}
+        <p class="lead">בלי הרשמה. מה שתסמן נשאר רק אצלך במכשיר.</p>
       </section>`;
+  }
+
+  function viewArea(params) {
+    const k = AREAS[params.get("a")] ? params.get("a") : "sea";
+    const A = AREAS[k];
+    const p = loadProfile();
+    let items = SERVICES.filter(s => A.cats.includes(s.category) && s.category !== "hotlines");
+    if (p) items = items.map(s => Object.assign({ s }, score(s, p))).sort((a, b) => b.sc - a.sc).map(x => x.s);
+    else items.sort((a, b) => (b.verified_at ? 1 : 0) - (a.verified_at ? 1 : 0));
+    const top = items[0], rest = items.slice(1);
+    $main.innerHTML = `
+      <section class="area-${k}">
+        <div class="area-hero">
+          <span class="dabbed"><span class="word">${esc(A.label)}</span></span>
+          <span class="note">${items.length} אפשרויות<br>${esc(A.sub)}</span>
+        </div>
+        ${WAVE}
+        ${top ? `
+          <article class="sheet" style="margin-top: 16px">
+            <span class="note highlight">${p ? "הכי מתאים לך" : "כדאי להתחיל כאן"} · ${esc(costLabel(top.cost))}</span>
+            <h2>${esc(top.name)}</h2>
+            <p>${esc(shortDesc(top.description, 180))}</p>
+            <div class="actions">
+              <button class="btn btn-ink" type="button" data-open="${esc(top.id)}">לפרטים וליצירת קשר</button>
+            </div>
+          </article>` : `<p class="empty">עוד אין כאן שירותים. אפשר <a href="#/provider">להציע גוף</a>.</p>`}
+        <div class="grid" style="margin-top: 10px">${rest.map(s => card(s)).join("")}</div>
+        ${!p ? `<p class="actions"><a class="link-u" href="#/match">לסדר לפי מה שמתאים לי ←</a></p>` : ""}
+      </section>`;
+  }
+
+  function progressLine(idx, total) {
+    const xs = Array.from({ length: total }, (_, i) => 330 - i * (314 / (total - 1)));
+    const solidTo = xs[idx];
+    return `<svg class="progress-line" viewBox="0 0 346 40" fill="none" aria-hidden="true">
+      <path d="M330 20 C 300 10, 280 30, ${solidTo + 40} 20 S ${solidTo + 10} 24, ${solidTo} 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M${solidTo} 20 C ${solidTo - 30} 10, 60 30, 16 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="2 7"/>
+      ${xs.map((x, i) => i === idx
+        ? `<circle cx="${x}" cy="20" r="13" fill="var(--t-soul)" stroke="currentColor" stroke-width="2.2"/>`
+        : `<circle cx="${x}" cy="20" r="9" fill="${i < idx ? "currentColor" : "var(--paper)"}" stroke="currentColor" stroke-width="2.2"/>`).join("")}
+    </svg>`;
   }
 
   function viewMatch() {
     const p = loadProfile() || { statuses: [], difficulties: [], interests: [], regions: [], maxCost: null };
     const steps = [
-      { key: "statuses", title: "מה המצב שלך?", sub: "אפשר לסמן כמה. זה קובע לאילו שירותים יש לך זכאות.", opts: T.eligibility },
-      { key: "difficulties", title: "עם מה הכי קשה עכשיו?", sub: "סמנו מה שמרגיש נכון. אין תשובה לא נכונה.", opts: T.difficulties },
-      { key: "interests", title: "מה מדבר אליך?", sub: "דברים שאוהבים, או שתמיד רצית לנסות. לרוב הם הדרך הכי טובה להתחיל.", opts: T.interests },
+      { key: "statuses", title: "מה המצב שלך?", sub: "אפשר לסמן כמה. זה קובע למה יש לך זכאות.", opts: T.eligibility },
+      { key: "difficulties", title: "עם מה הכי קשה עכשיו?", sub: "אפשר לבחור כמה. אין תשובה לא נכונה.", opts: T.difficulties },
+      { key: "interests", title: "מה מדבר אליך?", sub: "דברים שאוהבים, או שתמיד רצית לנסות.", opts: T.interests },
       { key: "regions", title: "איפה נוח לך?", sub: "שירותים ארציים ואונליין יופיעו תמיד.", opts: T.regions }
     ];
     let idx = 0;
@@ -191,9 +205,8 @@
       const last = idx === steps.length - 1;
       $main.innerHTML = `
         <section class="wizard">
-          <div class="progress" aria-hidden="true"><span style="width:${((idx + 1) / steps.length) * 100}%"></span></div>
-          <p class="step-count">שלב ${idx + 1} מתוך ${steps.length}</p>
-          <h1>${st.title}</h1>
+          <div aria-label="שאלה ${idx + 1} מתוך ${steps.length}">${progressLine(idx, steps.length)}</div>
+          <h1 class="page-title">${st.title}</h1>
           <p class="lead">${st.sub}</p>
           <form id="step-form">
             <div class="chips">
@@ -208,27 +221,26 @@
                 <label><input type="radio" name="maxCost" value="" ${p.maxCost == null ? "checked" : ""}> לא משנה</label>
               </fieldset>` : ""}
             <div class="wizard-nav">
-              ${idx > 0 ? `<button type="button" class="btn" id="back">חזרה</button>` : "<span></span>"}
-              <button type="submit" class="btn btn-primary">${last ? "הראו לי מה מתאים" : "המשך"}</button>
+              ${idx > 0 ? `<button type="button" class="link-u" id="back">חזרה</button>` : ""}
+              <button type="button" class="link-u" id="skip">לדלג</button>
+              <button type="submit" class="btn btn-ink">${last ? "הראו לי" : "המשך"}</button>
             </div>
           </form>
         </section>`;
       const form = document.getElementById("step-form");
-      form.addEventListener("submit", e => {
-        e.preventDefault();
-        p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value);
+      const collect = () => { p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value); };
+      const next = () => {
         if (last) {
           const mc = form.querySelector('input[name="maxCost"]:checked');
           p.maxCost = mc && mc.value !== "" ? Number(mc.value) : null;
           saveProfile(p);
           location.hash = "#/results";
         } else { idx++; render(); window.scrollTo(0, 0); }
-      });
-      const back = document.getElementById("back");
-      if (back) back.onclick = () => {
-        p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value);
-        idx--; render();
       };
+      form.addEventListener("submit", e => { e.preventDefault(); collect(); next(); });
+      document.getElementById("skip").onclick = () => { p[st.key] = []; next(); };
+      const back = document.getElementById("back");
+      if (back) back.onclick = () => { collect(); idx--; render(); };
     }
     render();
   }
@@ -237,46 +249,55 @@
     const p = loadProfile();
     if (!p) { location.hash = "#/match"; return; }
     const res = match(p);
-    const byCat = {};
-    res.forEach(r => { (byCat[r.s.category] = byCat[r.s.category] || []).push(r); });
-    // סדר הקבוצות לפי שתי ההתאמות הטובות בכל קבוצה, כדי שקבוצה עם התאמה אחת מקרית לא תקפוץ לראש
-    const depth = c => byCat[c].slice(0, 2).reduce((t, r) => t + r.sc, 0);
-    const order = Object.keys(byCat).sort((a, b) => depth(b) - depth(a));
-    // שלושה צעדים ראשונים: ההתאמות הכי טובות, כל אחת מתחום אחר
+    // שלוש תחנות: ההתאמות הכי טובות, כל אחת מתחום אחר
     const first = [];
-    for (const r of res) { if (first.length < 3 && !first.some(f => f.s.category === r.s.category)) first.push(r); }
+    for (const r of res) { if (first.length < 3 && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
     const firstIds = new Set(first.map(r => r.s.id));
-    const crisis = p.difficulties.some(d => ["ptsd", "depression", "addiction", "moral-injury"].includes(d));
-    const gentle = !crisis && p.difficulties.some(d => ["anxiety", "loneliness", "sleep", "anger", "grief"].includes(d));
+    const byArea = {};
+    res.filter(r => !firstIds.has(r.s.id)).forEach(r => { const a = areaOf(r.s.category); (byArea[a] = byArea[a] || []).push(r); });
+    const depth = a => byArea[a].slice(0, 2).reduce((t, r) => t + r.sc, 0);
+    const order = Object.keys(byArea).sort((a, b) => depth(b) - depth(a));
+    const crisis = p.difficulties.some(d => ["ptsd", "depression", "addiction", "moral-injury", "anxiety", "loneliness", "sleep", "anger", "grief"].includes(d));
     const noInput = !p.difficulties.length && !p.interests.length;
-    const SHOW = 2;
-    const guideKeys = p.statuses.filter(s => window.GUIDES && GUIDES[s]);
+    const SHORT = { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך הכרה", "not-recognized": "עוד לא מוכר/ת", "reservists": "מילואים",
+      "combat-soldiers": "לוחם/ת", "police": "משטרה", "security-forces": "כוחות ביטחון", "families": "משפחה", "bereaved": "משפחה שכולה",
+      "terror-victims": "נפגע/ת איבה", "civilians": "אזרח/ית" };
+    const who = [...p.statuses.map(s => SHORT[s]).slice(0, 2), ...p.regions.map(r => T.regions[r]).slice(0, 1)].filter(Boolean).join(" · ");
     $main.innerHTML = `
-      <section class="results-head">
-        <h1>${first.length ? "מאיפה להתחיל" : "לא מצאנו התאמה מדויקת"}</h1>
-        <p class="lead">${res.length} אפשרויות מתאימות לך. כאן למטה שלוש שכדאי להתחיל מהן, ואחריהן השאר לפי תחום.</p>
-        <div class="actions"><a class="btn" href="#/match">לשנות תשובות</a>${canPrint ? ` <button class="btn" id="print">להדפיס / לשמור PDF</button>` : ""}</div>
+      <section>
+        <h1 class="page-title">${first.length ? "התחנות שלך" : "לא מצאנו התאמה מדויקת"}</h1>
+        ${who ? `<p class="lead">${esc(who)}</p>` : ""}
+        <p class="actions"><a class="link-u" href="#/match">לשנות תשובות</a></p>
+        ${noInput ? `<div class="callout">כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין. <a href="#/match">לסמן עכשיו</a></div>` : ""}
+        ${crisis ? `<div class="callout">כשקשה, לא חייבים לחכות לאף תוכנית. אפשר לדבר עם מישהו גם עכשיו, גם בלילה. <a href="#/help">עזרה עכשיו ←</a></div>` : ""}
+        ${first.length ? `
+          <ol class="stations lined">
+            ${HAND_LINE}
+            ${first.map((r, n) => {
+              const s = r.s;
+              return `<li>
+                <span class="st-node" aria-hidden="true">${n + 1}</span>
+                <div class="tag-row">${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
+                <h2 data-open="${esc(s.id)}" tabindex="0" role="button">${esc(s.name)}</h2>
+                <p>${esc(shortDesc(s.description, 120))}</p>
+                ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך").slice(0, 1).join("") || r.why[0])}</span>` : ""}
+                <div class="actions">
+                  ${s.phone ? `<a class="btn btn-ink" href="${telHref(s.phone)}">${esc(firstPhone(s.phone))}</a>` : ""}
+                  <button class="link-u" type="button" data-open="${esc(s.id)}">לפרטים</button>
+                </div>
+              </li>`;
+            }).join("")}
+          </ol>` : `<p class="empty">נסו לסמן פחות סינונים, או <a href="#/">לבחור תחום</a>.</p>`}
       </section>
-      ${noInput ? `<div class="callout callout-info">כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין. <a href="#/match">לסמן עכשיו</a></div>` : ""}
-      ${gentle ? `<div class="callout callout-soft">כשקשה, לא חייבים להתמודד לבד. אפשר לדבר עם מישהו כבר היום, גם בלילה: ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:*3362">*3362</a>, נפש אחת <a href="tel:*8944">*8944</a>.</div>` : ""}
-      ${first.length ? `
-        <section class="first-steps" aria-label="צעדים ראשונים">
-          <ol>${first.map((r, n) => `<li>${card(r.s, r.why)}</li>`).join("")}</ol>
-        </section>` : ""}
-      ${crisis ? `<div class="callout">אם קשה במיוחד עכשיו, לא צריך לחכות לאף תוכנית: <a href="tel:*8944">*8944</a> (נפש אחת, 24/7, גם ללא הכרה), ער״ן <a href="tel:1201">1201</a>, נט״ל <a href="tel:*3362">*3362</a>. זמינים גם בלילה.</div>` : ""}
-      ${guideKeys.length ? `<div class="callout callout-info"><strong>חשוב לדעת על הזכויות שלך:</strong> ${guideKeys.map(k => `<a href="#/rights?s=${k}">${esc(GUIDES[k].title)}</a>`).join(" · ")}</div>` : ""}
-      ${order.length ? `<h2 class="more-title">עוד אפשרויות לפי תחום</h2>` : ""}
-      ${order.map(c => { const rest = byCat[c].filter(r => !firstIds.has(r.s.id)); return rest.length ? `
-        <section class="res-group">
-          <h3 class="group-title">${catIcon(c)} ${esc(catLabel(c))} <small>${rest.length}</small></h3>
-          <div class="grid">${rest.slice(0, SHOW).map(r => card(r.s, r.why)).join("")}</div>
-          ${rest.length > SHOW ? `<details><summary>להציג עוד ${rest.length - SHOW}</summary><div class="grid">${rest.slice(SHOW).map(r => card(r.s, r.why)).join("")}</div></details>` : ""}
-        </section>` : ""; }).join("")}
-      ${!res.length ? `<p class="empty">לא מצאנו התאמה מדויקת. נסו לסמן פחות סינונים, או <a href="#/browse">לדפדף בכל השירותים</a>.</p>` : ""}`;
-    if (canPrint) document.getElementById("print").onclick = () => {
-      document.querySelectorAll("details").forEach(d => d.open = true);
-      window.print();
-    };
+      ${order.length ? `
+        <section class="more-areas">
+          <h2 class="section-title">עוד ${res.length - first.length} תחנות בדרך, לפי תחום</h2>
+          ${order.map(a => `
+            <details class="area-${a}">
+              <summary><span class="dabbed"><span class="display" style="font-size: 26px">${esc(AREAS[a].label)}</span></span><span class="hand">${byArea[a].length} אפשרויות</span></summary>
+              <div class="grid">${byArea[a].map(r => card(r.s, r.why.filter(w => w !== "מתאים לסטטוס שלך"))).join("")}</div>
+            </details>`).join("")}
+        </section>` : ""}`;
   }
 
   // מילים נרדפות לחיפוש. כל מילה בשאילתה נחשבת כנמצאה אם אחת מהנרדפות שלה מופיעה.
@@ -343,7 +364,7 @@
       `<option value="${k}" ${cur === k ? "selected" : ""}>${esc(getLabel ? getLabel(obj[k]) : obj[k])}</option>`).join("");
     $main.innerHTML = `
       <section>
-        <h1>כל השירותים</h1>
+        <h1 class="page-title">חיפוש</h1>
         <form class="filters" id="filters">
           <input type="search" name="q" placeholder="חיפוש: גלישה, סוסים, EMDR, מלגה…" value="${esc(st.q)}" aria-label="חיפוש">
           <select name="cat" aria-label="תחום"><option value="">כל התחומים</option>${opt(T.categories, st.cat, v => v.label)}</select>
@@ -391,36 +412,77 @@
 
   function viewRights(params) {
     const G = window.GUIDES || {};
-    const sel = params.get("s");
     const keys = Object.keys(G);
-    $main.innerHTML = `
-      <section>
-        <h1>מה מגיע לי?</h1>
-        <p class="lead">סיכום קצר לפי סטטוס: מה אפשר לקבל, איפה מתחילים, ומה לא לפספס. זה לא ייעוץ משפטי. כשיש ספק, כדאי לפנות לגוף שמסייע במיצוי זכויות (יש כאלה ללא עלות במאגר).</p>
-        <div class="tabs" role="tablist">
-          ${keys.map(k => `<a role="tab" class="tab ${k === sel || (!sel && k === keys[0]) ? "active" : ""}" href="#/rights?s=${k}">${esc(G[k].title)}</a>`).join("")}
-        </div>
-        <div id="guide"></div>
-      </section>`;
-    const k = sel && G[sel] ? sel : keys[0];
-    if (!k) return;
+    const prof = loadProfile();
+    const k = G[params.get("s")] ? params.get("s") : (prof && prof.statuses.find(x => G[x])) || keys[0];
+    if (!k) { $main.innerHTML = `<section><h1 class="big-word">מה מגיע לי</h1></section>`; return; }
     const g = G[k];
-    const related = SERVICES.filter(s => ["rights-legal", "financial-grants"].includes(s.category) && eligible(s, [k])).slice(0, 6);
-    document.getElementById("guide").innerHTML = `
-      <article class="guide">
-        <p class="lead">${esc(g.intro)}</p>
-        ${g.sections.map(sec => `
-          <h2>${esc(sec.title)}</h2>
-          <ul>${sec.items.map(it => `<li>${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.text)}</a>` : esc(it.text)}</li>`).join("")}</ul>`).join("")}
-        ${related.length ? `<h2>מי יכול לעזור עם זה</h2><div class="grid">${related.map(s => card(s)).join("")}</div>` : ""}
-      </article>`;
+    const items = g.sections.flatMap(sec => sec.items.map(it => Object.assign({ section: sec.title }, it)));
+    const [key, ...rest] = items;
+    const link = it => it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.text)}</a>` : esc(it.text);
+    const related = SERVICES.filter(s => ["rights-legal", "financial-grants"].includes(s.category) && eligible(s, [k])).slice(0, 5);
+    $main.innerHTML = `
+      <section class="area-soul">
+        <h1 class="big-word">מה מגיע לי</h1>
+        <nav class="status-pick" aria-label="הסטטוס שלי">
+          ${keys.map(x => `<a href="#/rights?s=${x}" class="${x === k ? "active" : ""}" ${x === k ? 'aria-current="page"' : ""}>${esc(G[x].title)}</a>`).join("")}
+        </nav>
+        <p class="guide-intro">${esc(g.intro)}</p>
+        ${key ? `
+          <article class="sheet key-right">
+            <span class="area-tag badge">הכי חשוב</span>
+            <p>${link(key)}</p>
+          </article>` : ""}
+        ${g.sections.map(sec => {
+          const its = sec.items.filter(it => it !== g.sections[0].items[0]);
+          return its.length ? `<h2 class="section-title">${esc(sec.title)}</h2><ul class="ticks">${its.map(it => `<li>${TICK}<span>${link(it)}</span></li>`).join("")}</ul>` : "";
+        }).join("")}
+        ${related.length ? `<h2 class="section-title">מי יכול לעזור עם זה</h2><div class="grid">${related.map(s => card(s)).join("")}</div>` : ""}
+        <p class="lead" style="margin-top: 18px">כל סעיף מקושר למקור שלו. זה לא ייעוץ משפטי.</p>
+      </section>`;
+  }
+
+  function viewHelp() {
+    const lines = [
+      { name: "נפש אחת", what: "משרד הביטחון · 24/7 · גם בלי הכרה", num: "*8944" },
+      { name: "ער״ן", what: "24/7 · אפשר גם בוואטסאפ", num: "1201" },
+      { name: "נט״ל", what: "טראומה על רקע לאומי · 24/7", num: "*3362" }
+    ];
+    $main.innerHTML = `
+      <section class="help">
+        <p class="note">אף אחד לא רואה שנכנסת לכאן</p>
+        <h1>רגע. נושמים ביחד.</h1>
+        <div class="breath" aria-hidden="true">
+          <span class="blob"></span>
+          <svg viewBox="0 0 210 210" fill="none"><path d="M105 8 C 160 6, 204 48, 202 104 C 200 160, 158 204, 104 202 C 50 200, 8 158, 10 104 C 12 52, 54 10, 108 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <span class="phase" id="phase">שאיפה</span>
+        </div>
+        <p class="lead" style="text-align: center">שאיפה 4 · עצירה 4 · נשיפה 6</p>
+        <h2 class="section-title">לדבר עם מישהו, עכשיו</h2>
+        <ul class="lines">
+          ${lines.map(l => `<li><a href="tel:${l.num}"><span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="num">${l.num}</span></a></li>`).join("")}
+        </ul>
+        <p class="emergency">אם יש סכנה מיידית: מד״א <a href="tel:101">101</a> · משטרה <a href="tel:100">100</a></p>
+        <p class="actions"><a class="link-u" href="#/browse?cat=hotlines">כל קווי הסיוע</a></p>
+      </section>`;
+    // הכיתוב מתחלף עם הנשימה (4 שאיפה, 4 עצירה, 6 נשיפה = 14 שניות, כמו האנימציה)
+    const el = document.getElementById("phase");
+    const seq = [["שאיפה", 4000], ["עצירה", 4000], ["נשיפה", 6000]];
+    let i = 0;
+    const tick = () => {
+      if (!document.body.contains(el)) return;
+      el.textContent = seq[i][0];
+      setTimeout(tick, seq[i][1]);
+      i = (i + 1) % seq.length;
+    };
+    tick();
   }
 
   function viewProvider() {
     const cats = Object.keys(T.categories).filter(k => k !== "hotlines");
     $main.innerHTML = `
       <section class="form-page">
-        <h1>הצטרפות ללוח — לגופים ולמפעילים</h1>
+        <h1 class="page-title">הצטרפות ללוח</h1>
         <p class="lead">חוות, עמותות, מטפלים, סטודיואים, מועדוני גלישה וכל מי שמציע משהו שיכול לעזור. אחרי בדיקה קצרה ההצעה תופיע במאגר, ופניות של מתעניינים יועברו אליכם.</p>
         <form id="prov" class="form">
           <label>שם הגוף / התוכנית *<input name="name" required maxlength="120"></label>
@@ -447,7 +509,7 @@
           <label>איך מצטרפים?<textarea name="how_to_apply" rows="2" maxlength="500"></textarea></label>
           <label>איש/אשת קשר ותפקיד *<input name="contact_person" required maxlength="120"></label>
           <label class="check"><input type="checkbox" name="agree" required> אני מאשר/ת שהפרטים נכונים, ושפרטי הגוף יוצגו לציבור באתר.</label>
-          <button class="btn btn-primary" type="submit">שליחה לבדיקה</button>
+          <button class="btn btn-ink" type="submit">שליחה לבדיקה</button>
           <p class="form-msg" id="prov-msg" role="status"></p>
         </form>
       </section>`;
@@ -476,11 +538,11 @@
     if (!Store.isAdminReady()) {
       $main.innerHTML = `
         <section class="form-page">
-          <h1>כניסת מנהלים</h1>
+          <h1 class="page-title">כניסת מנהלים</h1>
           <form id="login" class="form">
             <label>אימייל<input name="email" type="email" required></label>
             <label>סיסמה<input name="password" type="password" required></label>
-            <button class="btn btn-primary">כניסה</button>
+            <button class="btn btn-ink">כניסה</button>
             <p class="form-msg" id="login-msg"></p>
           </form>
         </section>`;
@@ -492,10 +554,10 @@
       });
       return;
     }
-    $main.innerHTML = `<section><h1>ניהול</h1><p>טוען…</p></section>`;
+    $main.innerHTML = `<section><h1 class="page-title">ניהול</h1><p>טוען…</p></section>`;
     let leads = [], subs = [];
     try { [leads, subs] = await Promise.all([Store.listLeads(), Store.listSubmissions()]); }
-    catch (e) { $main.innerHTML = `<section><h1>ניהול</h1><p>אין הרשאה לצפות בנתונים. ודאו שהמשתמש מוגדר כמנהל (ראו README).</p></section>`; return; }
+    catch (e) { $main.innerHTML = `<section><h1 class="page-title">ניהול</h1><p>אין הרשאה לצפות בנתונים. ודאו שהמשתמש מוגדר כמנהל (ראו README).</p></section>`; return; }
     leads.sort((a, b) => b.createdAt - a.createdAt);
     subs.sort((a, b) => b.createdAt - a.createdAt);
     const byId = Object.fromEntries(SERVICES.map(s => [s.id, s]));
@@ -503,7 +565,7 @@
     const fmt = t => new Date(t).toLocaleString("he-IL");
     $main.innerHTML = `
       <section>
-        <h1>ניהול</h1>
+        <h1 class="page-title">ניהול</h1>
         ${Store.mode === "local" ? `<div class="callout callout-info">מצב הדגמה: הנתונים כאן נשמרו רק בדפדפן הזה. כדי לקבל פניות אמיתיות מחברים את Firebase (ראו README).</div>` : ""}
         <h2>הצעות של גופים שממתינות לאישור (${pending.length})</h2>
         <div class="admin-list">
@@ -513,8 +575,8 @@
               <p>${esc(s.description)}</p>
               <small>${esc(s.contact_person)} · ${esc(s.email)} · ${esc(s.phone)} · ${esc(s.website)} · ${fmt(s.createdAt)}</small>
               <div class="actions">
-                <button class="btn btn-small btn-primary" data-approve="${esc(s._id)}">אישור ופרסום</button>
-                <button class="btn btn-small" data-reject="${esc(s._id)}">דחייה</button>
+                <button class="btn btn-ink" data-approve="${esc(s._id)}">אישור ופרסום</button>
+                <button class="btn" data-reject="${esc(s._id)}">דחייה</button>
               </div>
             </div>`).join("") || "<p>אין הצעות ממתינות.</p>"}
         </div>
@@ -555,51 +617,50 @@
     };
   }
 
-  // ---------- service modal ----------
+  // ---------- service card ----------
   function openService(id) {
     const s = SERVICES.find(x => x.id === id);
     if (!s) return;
-    const contactBtns = [];
-    if (s.phone) {
-      contactBtns.push(`<a class="btn" href="${telHref(s.phone)}">📞 ${esc(s.phone)}</a>`);
-      if (isMobile(s.phone)) contactBtns.push(`<a class="btn" href="${waHref(s.phone)}" target="_blank" rel="noopener">וואטסאפ</a>`);
-    }
-    if (s.email) contactBtns.push(`<a class="btn" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך מגיע לך — " + s.name)}">✉️ מייל</a>`);
-    if (s.website) contactBtns.push(`<a class="btn" href="${esc(safeUrl(s.website))}" target="_blank" rel="noopener">🌐 לאתר</a>`);
-    const list = (title, keys, dict) => keys.length ? `<div class="meta-row"><span>${title}</span><div class="tags">${keys.map(k => `<span class="tag">${esc(dict[k] || k)}</span>`).join("")}</div></div>` : "";
+    const links = [];
+    if (s.phone && isMobile(s.phone)) links.push(`<a class="link-u" href="${waHref(s.phone)}" target="_blank" rel="noopener">וואטסאפ</a>`);
+    if (s.email) links.push(`<a class="link-u" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך מגיע לך — " + s.name)}">מייל</a>`);
+    if (s.website) links.push(`<a class="link-u" href="${esc(safeUrl(s.website))}" target="_blank" rel="noopener">לאתר</a>`);
+    links.push(`<button class="link-u" type="button" id="lead-toggle">שיחזרו אליי</button>`);
+    const who = arr(s.eligibility).map(k => T.eligibility[k]).filter(Boolean);
+    const helps = arr(s.difficulties).map(k => T.difficulties[k]).filter(Boolean);
     $modalBody.innerHTML = `
-      <div class="card-cat">${catIcon(s.category)} ${esc(catLabel(s.category))} · ${esc(T.providerTypes[s.provider_type] || "")}</div>
-      <h2 id="modal-title">${esc(s.name)}</h2>
-      <p>${esc(s.description)}</p>
-      <div class="meta">
-        <div class="meta-row"><span>עלות</span><div><span class="tag cost-${esc(s.cost)}">${esc(costLabel(s.cost))}</span> ${esc(s.cost_notes || "")}</div></div>
-        ${s.location ? `<div class="meta-row"><span>מיקום</span><div>${esc(s.location)}</div></div>` : ""}
-        ${list("למי", arr(s.eligibility), T.eligibility)}
-        ${list("עוזר ב", arr(s.difficulties), T.difficulties)}
-        ${list("אזור", arr(s.regions), T.regions)}
-        ${s.how_to_apply ? `<div class="meta-row"><span>איך מתחילים</span><div>${esc(s.how_to_apply)}</div></div>` : ""}
-      </div>
-      <div class="contact-btns">${contactBtns.join("")}</div>
-      <form id="lead" class="form lead-form">
-        <h3>להשאיר פנייה</h3>
-        <p class="small">נעביר את הפנייה לגוף, והם יחזרו אליך. לא חובה לספר יותר ממה שנוח לך.</p>
-        <div class="row">
-          <label>שם *<input name="name" required maxlength="80"></label>
-          <label>טלפון או מייל *<input name="contact" required maxlength="120"></label>
+      <div class="svc">
+        <div class="tag-row" style="margin-top: 12px">
+          ${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span>
+          <span class="verify">${s.verified_at ? "✓ נבדק מול האתר של הגוף, " + esc(s.verified_at) : "עוד לא נבדק מול האתר של הגוף. כדאי לוודא איתם."}</span>
         </div>
-        <label>משהו שחשוב שידעו? (לא חובה)<textarea name="message" rows="2" maxlength="600"></textarea></label>
-        <label class="check"><input type="checkbox" name="consent" required> אני מסכים/ה שהפרטים יועברו ל${esc(s.name)} לצורך יצירת קשר בלבד.</label>
-        <button class="btn btn-primary">שליחת פנייה</button>
-        <p class="form-msg" role="status"></p>
-      </form>
-      <p class="verify ${s.verified_at ? "verify-ok" : "verify-no"}">${s.verified_at
-        ? "✓ הפרטים אומתו מול אתר הגוף ב-" + esc(s.verified_at)
-        : "⚠ הפרטים עוד לא אומתו מול אתר הגוף עצמו. לפני שמגיעים, כדאי לוודא איתם טלפונית."}</p>
-      ${s.source_url ? `<p class="source">מקור: <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a></p>` : ""}`;
+        <h2 id="modal-title">${esc(s.name)}</h2>
+        <p class="desc">${esc(s.description)}</p>
+        ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${esc(s.cost_notes)}</span></p>` : ""}
+        ${who.length ? `<h3>למי זה</h3><ul class="ticks">${who.slice(0, 5).map(w => `<li>${TICK}<span>${esc(w)}</span></li>`).join("")}</ul>` : ""}
+        ${helps.length ? `<h3>במה זה עוזר</h3><p>${esc(helps.join(" · "))}</p>` : ""}
+        ${s.how_to_apply ? `<h3>איך מתחילים</h3><p>${esc(s.how_to_apply)}</p>` : ""}
+        ${s.location ? `<h3>איפה</h3><p>${esc(s.location)}${arr(s.regions).length ? " · " + esc(arr(s.regions).map(r => T.regions[r]).join(", ")) : ""}</p>` : ""}
+        <div class="contact">
+          ${s.phone ? `<a class="btn btn-ink btn-wide" href="${telHref(s.phone)}">להתקשר <span dir="ltr">${esc(firstPhone(s.phone))}</span></a>` : ""}
+          <div class="links">${links.join("")}</div>
+        </div>
+        <form id="lead" class="form lead-form" hidden>
+          <p class="note">נעביר לגוף, והם יחזרו אליך. לא חובה לספר יותר ממה שנוח.</p>
+          <label>שם<input name="name" required maxlength="80"></label>
+          <label>טלפון או מייל<input name="contact" required maxlength="120"></label>
+          <label>משהו שחשוב שידעו? (לא חובה)<textarea name="message" rows="2" maxlength="600"></textarea></label>
+          <label class="check"><input type="checkbox" name="consent" required> אני מסכים/ה שהפרטים יועברו ל${esc(s.name)} רק כדי ליצור איתי קשר.</label>
+          <button class="btn btn-ink">לשלוח</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+        ${s.source_url ? `<p class="source">מקור: <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a></p>` : ""}
+      </div>`;
     $modal.hidden = false;
     document.body.classList.add("no-scroll");
     $modal.querySelector(".modal-x").focus();
     const f = document.getElementById("lead");
+    document.getElementById("lead-toggle").onclick = () => { f.hidden = !f.hidden; if (!f.hidden) f.querySelector("input").focus(); };
     f.addEventListener("submit", async e => {
       e.preventDefault();
       const fd = new FormData(f);
@@ -611,9 +672,9 @@
           message: (fd.get("message") || "").trim(), consent: true, status: "new"
         });
         f.querySelectorAll("input,textarea,button").forEach(x => x.disabled = true);
-        msg.textContent = "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם ליצור קשר ישירות בכפתורים למעלה.";
+        msg.textContent = "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.";
       } catch (err) {
-        msg.textContent = "השליחה לא הצליחה. אפשר ליצור קשר ישירות בכפתורים למעלה.";
+        msg.textContent = "השליחה לא הצליחה. אפשר להתקשר ישירות.";
       }
     });
   }
@@ -637,18 +698,36 @@
     const h = location.hash.replace(/^#/, "") || "/";
     const [path, qs] = h.split("?");
     const params = new URLSearchParams(qs || "");
-    document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", path === "/" + a.dataset.nav));
+    document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", path === "/" + a.dataset.nav || (a.dataset.nav === "" && path === "/area")));
     await ensureApproved();
     if (path === "/match") viewMatch();
     else if (path === "/results") viewResults();
     else if (path === "/browse") viewBrowse(params);
     else if (path === "/rights") viewRights(params);
+    else if (path === "/area") viewArea(params);
+    else if (path === "/help") viewHelp();
     else if (path === "/provider") viewProvider();
     else if (path === "/admin") viewAdmin();
     else viewHome();
     if (!qs || path !== "/browse") window.scrollTo(0, 0);
   }
   window.addEventListener("hashchange", route);
+  // מצב עמום: נשמר רק במכשיר. בלי בחירה, האתר עוקב אחרי הגדרת המכשיר.
+  const THEME_KEY = "vh-theme";
+  const dimBtn = document.getElementById("dim-toggle");
+  const applyTheme = t => {
+    if (t) document.documentElement.setAttribute("data-theme", t); else document.documentElement.removeAttribute("data-theme");
+    const dark = t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    if (dimBtn) dimBtn.setAttribute("aria-pressed", String(dark));
+  };
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem(THEME_KEY); } catch (e) { /* storage blocked */ }
+  applyTheme(savedTheme);
+  if (dimBtn) dimBtn.onclick = () => {
+    const next = dimBtn.getAttribute("aria-pressed") === "true" ? "light" : "dark";
+    applyTheme(next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage blocked */ }
+  };
   document.getElementById("store-mode").textContent = Store.mode === "cloud" ? "מחובר לענן" : "מצב הדגמה (ללא שרת)";
   document.getElementById("data-stamp").textContent = window.SERVICES_UPDATED ? "המאגר עודכן: " + window.SERVICES_UPDATED : "";
   Store.onAuth(() => { if (location.hash.startsWith("#/admin")) route(); });

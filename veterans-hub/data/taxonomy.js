@@ -66,3 +66,13 @@ window.TAXONOMY = {
     "academic": "אקדמי", "municipal": "רשות מקומית"
   }
 };
+
+// "תחומים": השפה החזותית של האפליקציה. כל תחום מאגד כמה קטגוריות ומקבל צבע עמום משלו (בקובץ העיצוב: --t-<key>).
+window.AREAS = {
+  sea:    { label: "ים",          sub: "גלישה, שיט, צלילה",          cats: ["water-sports"] },
+  land:   { label: "אדמה",        sub: "חוות, טבע, בעלי חיים",        cats: ["rehab-farm", "animal-therapy", "nature-retreats"] },
+  body:   { label: "גוף",         sub: "ספורט, יוגה, שיקום",          cats: ["sports", "yoga-mind-body", "medical-rehab"] },
+  soul:   { label: "נפש",         sub: "טיפול, שיחה, יצירה",          cats: ["mental-health", "peer-support", "art-music", "hotlines"] },
+  home:   { label: "בית ומשפחה",  sub: "משפחה, דיור, קהילה",          cats: ["family-support", "housing-daily", "community-volunteer"] },
+  rights: { label: "מה מגיע לי",  sub: "מענקים, הכרה, עבודה",         cats: ["rights-legal", "financial-grants", "employment-education"] }
+};

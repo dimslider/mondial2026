@@ -1,249 +1,245 @@
+/* מגיע לך — שפת "קו + לוח"
+   דיו אחד על נייר בהיר, קו שנמשך ביד, ותחומים שמסומנים בכתם צבע עמום.
+   בלי אדום ובלי התראות בסגנון אזעקה. מצב עמום הוא ערכת צבעים מלאה, לא היפוך. */
 :root {
-  --bg: #f7f5f0;
-  --surface: #ffffff;
-  --surface-2: #efebe2;
-  --text: #1f2a2e;
-  --muted: #5d686c;
-  --line: #ddd6c8;
-  --primary: #2f6b5e;
-  --primary-ink: #ffffff;
-  --accent: #c9853a;
-  --danger-bg: #fbe9e4;
-  --danger-ink: #8a2b17;
-  --info-bg: #e6f0ed;
-  --free: #2f6b5e;
-  --radius: 14px;
-  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 16px rgba(0,0,0,.05);
+  --paper: #E4ECEC;
+  --sheet: #F5F7F5;
+  --ink: #151515;
+  --muted: #485456;
+  --on-ink: #E4ECEC;
+  --t-sea: #9EC0C8;
+  --t-land: #C3C29A;
+  --t-body: #E7B48C;
+  --t-soul: #C4BBDD;
+  --t-home: #D9C08A;
+  --t-rights: #CCD6D6;
+  --hand: "Playpen Sans Hebrew", "Assistant", system-ui, sans-serif;
+  --display: "Secular One", "Assistant", system-ui, sans-serif;
+  --body: "Miriam Libre", "Assistant", system-ui, sans-serif;
+  --r-hand: 12px 26px 14px 24px;
+  --r-sheet: 18px 34px 22px 30px;
+  --r-blob: 48% 52% 46% 54% / 58% 44% 56% 42%;
+  --stroke: 2.2px;
+  color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #141a1c; --surface: #1c2427; --surface-2: #232d31; --text: #e8ecea; --muted: #a2adaa;
-    --line: #33403f; --primary: #6fb8a5; --primary-ink: #0d1514; --accent: #e0a463;
-    --danger-bg: #3a1f19; --danger-ink: #f3b4a3; --info-bg: #1d302c; --free: #6fb8a5;
-    --shadow: 0 1px 2px rgba(0,0,0,.3);
+    --paper: #171B1D; --sheet: #20262A; --ink: #E6E2D8; --muted: #A9B0AE; --on-ink: #171B1D;
+    --t-sea: #3D5C64; --t-land: #55563C; --t-body: #6E4F37; --t-soul: #4F4865; --t-home: #5F5334; --t-rights: #2E3639;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #141a1c; --surface: #1c2427; --surface-2: #232d31; --text: #e8ecea; --muted: #a2adaa;
-  --line: #33403f; --primary: #6fb8a5; --primary-ink: #0d1514; --accent: #e0a463;
-  --danger-bg: #3a1f19; --danger-ink: #f3b4a3; --info-bg: #1d302c; --free: #6fb8a5;
+  --paper: #171B1D; --sheet: #20262A; --ink: #E6E2D8; --muted: #A9B0AE; --on-ink: #171B1D;
+  --t-sea: #3D5C64; --t-land: #55563C; --t-body: #6E4F37; --t-soul: #4F4865; --t-home: #5F5334; --t-rights: #2E3639;
   color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0; background: var(--bg); color: var(--text);
-  font-family: "Assistant", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-size: 18px; line-height: 1.6;
-}
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
 body.no-scroll { overflow: hidden; }
-a { color: var(--primary); }
-h1, h2, h3 { line-height: 1.25; margin: 0 0 .5em; }
-h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; }
-h2 { font-size: 1.35rem; font-weight: 700; }
-main { max-width: 1120px; margin: 0 auto; padding: 24px 16px 48px; outline: none; }
-section { margin-bottom: 40px; }
-.lead { font-size: 1.12rem; color: var(--muted); max-width: 68ch; }
-.note, .small { color: var(--muted); font-size: .92rem; }
-
+a { color: var(--ink); }
+h1, h2, h3 { margin: 0; line-height: 1.15; text-wrap: balance; }
+p { margin: 0; }
+main { max-width: 680px; margin: 0 auto; padding: 8px 20px 48px; outline: none; }
+section + section { margin-top: 36px; }
 .skip { position: absolute; right: -999px; }
-.skip:focus { right: 8px; top: 8px; background: var(--surface); padding: 8px; z-index: 50; }
+.skip:focus { right: 8px; top: 8px; background: var(--sheet); padding: 8px; z-index: 50; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 
-.crisis-bar {
-  background: var(--danger-bg); color: var(--danger-ink); font-size: .95rem;
-  padding: 8px 16px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
-}
-.crisis-bar a { color: inherit; font-weight: 700; }
+/* ---------- ראש העמוד ---------- */
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 680px; margin: 0 auto; padding: 16px 20px 6px; }
+.brand { font-family: var(--hand); font-weight: 800; font-size: 22px; text-decoration: none; }
+.top-actions { display: flex; gap: 8px; align-items: center; }
+.help-btn { font-family: var(--hand); font-weight: 600; font-size: 15px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; background: var(--ink); color: var(--on-ink); border-radius: var(--r-hand); text-decoration: none; }
+.dim-toggle { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--ink); border: var(--stroke) solid var(--ink); border-radius: 50% 46% 54% 48%; cursor: pointer; }
+.subnav { display: flex; flex-wrap: wrap; gap: 4px 18px; max-width: 680px; margin: 0 auto; padding: 0 20px 6px; }
+.subnav a { font-family: var(--hand); font-size: 15px; min-height: 40px; display: inline-flex; align-items: center; text-decoration: none; border-bottom: 2px dashed transparent; }
+.subnav a.active { border-bottom: 2px solid var(--ink); font-weight: 600; }
 
-.topbar {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; flex-wrap: wrap;
-}
-.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.3rem; }
-.brand-mark { color: var(--accent); }
-.nav { display: flex; gap: 4px; flex-wrap: wrap; }
-.nav a { text-decoration: none; color: var(--muted); padding: 6px 10px; border-radius: 8px; font-weight: 600; font-size: .98rem; }
-.nav a.active, .nav a:hover { background: var(--surface-2); color: var(--text); }
+/* ---------- טיפוגרפיה ---------- */
+.hand { font-family: var(--hand); }
+.display { font-family: var(--display); font-weight: 400; }
+h1.page-title { font-family: var(--hand); font-weight: 800; font-size: clamp(30px, 8vw, 40px); margin-top: 14px; }
+h1.big-word { font-family: var(--display); font-weight: 400; font-size: clamp(44px, 12vw, 56px); line-height: 1; margin-top: 14px; }
+.lead { margin-top: 8px; font-size: 16px; color: var(--muted); max-width: 60ch; }
+.note { font-family: var(--hand); font-size: 14px; display: inline-block; transform: rotate(-2deg); }
+.section-title { font-family: var(--hand); font-weight: 800; font-size: 20px; margin: 26px 0 8px; }
 
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px;
-  padding: 10px 18px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
-  color: var(--text); font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
-}
-.btn:hover { border-color: var(--primary); }
-.btn-primary { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
-.btn-small { min-height: 36px; padding: 6px 12px; font-size: .95rem; }
-.btn:focus-visible, .chip input:focus-visible + span, .card:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 3px solid var(--accent); outline-offset: 2px;
-}
+/* ---------- כפתורים: לכל תפקיד צורה אחרת ---------- */
+.btn { font-family: var(--hand); font-weight: 600; font-size: 17px; min-height: 52px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: var(--ink); background: transparent; border: var(--stroke) solid var(--ink); border-radius: var(--r-sheet); cursor: pointer; }
+.btn-ink { background: var(--ink); color: var(--on-ink); border-color: var(--ink); border-radius: var(--r-hand); font-weight: 800; }
+.btn-wide { width: 100%; }
+.link-u { font-family: var(--hand); font-weight: 600; font-size: 16px; min-height: 44px; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; border-bottom: 2px solid var(--ink); background: none; border-top: 0; border-left: 0; border-right: 0; color: var(--ink); cursor: pointer; padding: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-top: 12px; }
 
-.hero { padding: 32px 0 8px; }
-.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+/* ---------- כתם צבע של תחום ---------- */
+.area-sea { --tint: var(--t-sea); } .area-land { --tint: var(--t-land); } .area-body { --tint: var(--t-body); }
+.area-soul { --tint: var(--t-soul); } .area-home { --tint: var(--t-home); } .area-rights { --tint: var(--t-rights); }
+.dabbed { position: relative; display: inline-block; padding: 2px 16px 8px; }
+.dabbed::before { content: ""; position: absolute; inset: 7px -4px 0 0; background: var(--tint); border-radius: 46% 54% 38% 62% / 60% 44% 56% 40%; transform: rotate(-3deg); z-index: 0; }
+.dabbed > * { position: relative; }
+.area-tag { display: inline-block; padding: 0 10px; font-family: var(--display); font-size: 14px; line-height: 1.6; background: var(--tint); border-radius: 40% 60% 45% 55% / 60% 50% 50% 40%; }
+.cost-tag { display: inline-block; padding: 0 10px; font-family: var(--display); font-size: 14px; line-height: 1.5; border: 2px solid var(--ink); border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%; }
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; }
 
-.notrec, .provider-cta {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
-}
-.notrec { border-inline-start: 6px solid var(--accent); }
-.link { font-weight: 700; }
+/* ---------- הקו: רשימה שמחוברת בקו יד ---------- */
+.lined { position: relative; padding-right: 34px; }
+.lined > .hand-line { position: absolute; top: 6px; right: 4px; width: 24px; height: calc(100% - 20px); pointer-events: none; }
+.lined .node { position: absolute; right: -27px; width: 16px; height: 16px; background: var(--paper); border: var(--stroke) solid var(--ink); border-radius: 52% 48% 55% 45%; }
 
-.section-title { margin-bottom: 14px; }
-.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
-.cat {
-  display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line);
-  border-radius: 12px; padding: 12px 14px; text-decoration: none; color: var(--text); font-weight: 600;
-}
-.cat:hover { border-color: var(--primary); }
-.cat-icon { font-size: 1.4rem; }
-.cat small { margin-inline-start: auto; color: var(--muted); font-weight: 400; }
+/* ---------- בית: תחומים ---------- */
+.areas { list-style: none; margin: 18px 0 0; display: flex; flex-direction: column; gap: 4px; }
+.areas li { position: relative; }
+.areas li:nth-child(even) { margin-right: 30px; }
+.areas li:nth-child(even) .node { right: -57px; }
+.areas a { display: flex; align-items: center; gap: 12px; min-height: 76px; text-decoration: none; }
+.areas .node { top: calc(50% - 8px); }
+.areas .word { font-family: var(--display); font-size: clamp(40px, 11vw, 54px); line-height: 1; white-space: nowrap; }
+.areas .word.long { font-size: clamp(28px, 8vw, 38px); }
+.areas .sub { font-family: var(--hand); font-size: 15px; }
+.areas .count { font-size: 13px; color: var(--muted); }
+.home-cta { margin-top: 26px; }
+.saved-link { margin-top: 14px; }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
-.card {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px;
-  cursor: pointer; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow);
-}
-.card:hover { border-color: var(--primary); }
-.card h3 { font-size: 1.1rem; margin: 0; }
-.card p { margin: 0; color: var(--muted); font-size: .97rem; }
-.card-cat { font-size: .85rem; color: var(--muted); font-weight: 600; }
-.why { margin: 4px 0 0; padding-inline-start: 18px; font-size: .9rem; color: var(--primary); }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
-.tag { font-size: .8rem; background: var(--surface-2); padding: 2px 9px; border-radius: 999px; }
-.tag.cost-free, .tag.cost-mod-funded { background: var(--info-bg); color: var(--free); font-weight: 700; }
-.tag-new { background: var(--accent); color: #fff; }
+/* ---------- תחום ---------- */
+.area-hero { display: flex; align-items: flex-end; gap: 14px; margin-top: 10px; }
+.area-hero .dabbed { padding: 0 22px 10px; }
+.area-hero .dabbed::before { inset: 22px -10px 0 -6px; }
+.area-hero .word { font-family: var(--display); font-size: clamp(84px, 26vw, 128px); line-height: .9; }
+.wave { display: block; width: 100%; height: 18px; margin-top: 6px; }
+.sheet { background: var(--sheet); border: var(--stroke) solid var(--ink); border-radius: var(--r-sheet); padding: 16px 18px; }
+.sheet h2 { font-family: var(--display); font-weight: 400; font-size: 32px; line-height: 1.05; margin-top: 4px; }
+.sheet p { margin-top: 6px; }
+.highlight { background: linear-gradient(transparent 55%, var(--tint, var(--t-soul)) 55%); padding: 0 4px; }
 
-.hotlines { background: var(--danger-bg); border-radius: var(--radius); padding: 20px; }
-.hotlines h2 { color: var(--danger-ink); }
-.hotline-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
-.hotline { background: var(--surface); border-radius: 10px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.hotline small { display: block; color: var(--muted); font-size: .85rem; }
+/* ---------- רשימת שירותים (שורות, לא כרטיסים) ---------- */
+.grid { display: flex; flex-direction: column; }
+.card { display: flex; flex-direction: column; gap: 4px; padding: 14px 2px; border-bottom: 2px dashed var(--ink); cursor: pointer; }
+.card:last-child { border-bottom: 0; }
+.card h3 { font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.15; }
+.card p { font-size: 15px; color: var(--muted); }
+.card .why { font-family: var(--hand); font-size: 14px; }
+.card .meta-line { font-size: 13px; color: var(--muted); }
+.card:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; }
+.count { color: var(--muted); font-size: 15px; margin: 6px 0; }
+.empty { color: var(--muted); margin-top: 12px; }
 
-/* wizard */
-.wizard { max-width: 760px; margin: 0 auto; }
-.progress { height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin: 8px 0 12px; }
-.progress span { display: block; height: 100%; background: var(--primary); transition: width .3s; }
-.step-count { color: var(--muted); font-size: .9rem; margin: 0; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
-.chip input { position: absolute; opacity: 0; }
-.chip span {
-  display: inline-block; padding: 9px 15px; border-radius: 999px; border: 1px solid var(--line);
-  background: var(--surface); cursor: pointer; font-weight: 600; min-height: 44px; line-height: 1.6;
-}
-.chip input:checked + span { background: var(--primary); border-color: var(--primary); color: var(--primary-ink); }
-.wizard-nav { display: flex; justify-content: space-between; margin-top: 24px; }
-.cost-pref { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; display: flex; gap: 18px; flex-wrap: wrap; }
-.cost-pref label { display: flex; gap: 6px; align-items: center; }
+/* ---------- התחנות שלך ---------- */
+.stations { list-style: none; margin: 18px 0 0; display: flex; flex-direction: column; gap: 26px; padding-right: 46px; }
+.stations > li { position: relative; }
+.stations .st-node { position: absolute; top: 0; right: -46px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; background: var(--paper); border: var(--stroke) solid var(--ink); border-radius: 52% 48% 55% 45%; font-family: var(--hand); font-weight: 800; font-size: 17px; }
+.stations h2 { font-family: var(--display); font-weight: 400; font-size: 28px; line-height: 1.1; margin-top: 6px; cursor: pointer; }
+.stations p { font-size: 15px; margin-top: 4px; }
+.stations .why { font-family: var(--hand); font-size: 14px; margin-top: 4px; display: inline-block; transform: rotate(-1.5deg); }
+.more-areas h3 { font-family: var(--display); font-weight: 400; font-size: 26px; }
+.more-areas details { border-bottom: 2px dashed var(--ink); }
+.more-areas summary { list-style: none; cursor: pointer; min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.more-areas summary::-webkit-details-marker { display: none; }
+.more-areas summary .hand { font-size: 14px; }
 
-.results-head .actions { display: flex; gap: 8px; flex-wrap: wrap; }
-.callout { background: var(--danger-bg); color: var(--danger-ink); padding: 12px 16px; border-radius: 12px; margin-bottom: 16px; }
-.callout a { color: inherit; font-weight: 700; }
-.callout-info { background: var(--info-bg); color: var(--text); }
-.callout-info a { color: var(--primary); }
-.res-group h2 small { color: var(--muted); font-weight: 400; font-size: .9rem; }
-details summary { cursor: pointer; margin: 12px 0; color: var(--primary); font-weight: 700; }
-.empty { color: var(--muted); }
+/* ---------- שאלון ---------- */
+.wizard { max-width: 620px; }
+.progress-line { display: block; width: 100%; height: 40px; margin-top: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 20px 0 6px; }
+.chip { position: relative; }
+.chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.chip span { display: inline-flex; align-items: center; min-height: 52px; padding: 0 10px; font-family: var(--display); font-size: 22px; line-height: 1.1; border-bottom: 2px dashed var(--ink); cursor: pointer; }
+.chip input:checked + span { padding: 0 16px; border: var(--stroke) solid var(--ink); border-radius: var(--r-blob); background: var(--t-soul); }
+.chip:nth-child(3n) input:checked + span { transform: rotate(-2deg); }
+.chip input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 3px; }
+.cost-pref { border: 0; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 4px; }
+.cost-pref legend { font-family: var(--hand); font-weight: 800; font-size: 18px; margin-bottom: 4px; }
+.cost-pref label { display: flex; gap: 10px; align-items: center; min-height: 44px; }
+.cost-pref input { width: 20px; height: 20px; accent-color: var(--ink); }
+.wizard-nav { position: sticky; bottom: 0; z-index: 5; display: flex; gap: 10px; align-items: center; margin-top: 18px; padding-block: 12px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--paper); }
+.wizard-nav .btn-ink { flex: 1; }
 
-.filters { display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: 8px; margin: 12px 0; }
-.filters input, .filters select, .form input, .form select, .form textarea {
-  font: inherit; font-size: 1rem; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line);
-  background: var(--surface); color: var(--text); width: 100%; min-height: 44px;
-}
-.count { color: var(--muted); }
+/* ---------- הודעות ---------- */
+.callout { margin-top: 16px; padding: 12px 16px; background: var(--sheet); border: var(--stroke) solid var(--ink); border-radius: var(--r-hand); font-size: 15px; }
+.callout a { font-weight: 700; }
 
-.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 16px 0; }
-.tab { text-decoration: none; padding: 8px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: var(--text); font-weight: 600; }
-.tab.active { background: var(--primary); color: var(--primary-ink); border-color: var(--primary); }
-.guide { background: var(--surface); border-radius: var(--radius); padding: 22px; border: 1px solid var(--line); }
-.guide li { margin-bottom: 6px; }
-.guide h2 { margin-top: 22px; }
+/* ---------- מה מגיע לי ---------- */
+.status-pick { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; }
+.status-pick a { font-family: var(--hand); font-size: 16px; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; border-bottom: 2px dashed var(--ink); }
+.status-pick a.active { font-weight: 800; padding: 0 12px; border: var(--stroke) solid var(--ink); border-radius: var(--r-blob); }
+.guide-intro { font-family: var(--hand); font-size: 18px; line-height: 1.45; margin-top: 16px; }
+.key-right { position: relative; margin-top: 18px; }
+.key-right .badge { position: absolute; top: -13px; left: 14px; }
+.ticks { list-style: none; margin: 10px 0 0; padding: 0; }
+.ticks li { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 2px dashed var(--ink); }
+.ticks li:last-child { border-bottom: 0; }
+.ticks svg { flex: none; margin-top: 3px; }
+.ticks a { text-decoration-thickness: 1px; }
 
-.form-page { max-width: 800px; margin: 0 auto; }
-.form { display: flex; flex-direction: column; gap: 14px; }
-.form label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; }
-.form label.check { flex-direction: row; align-items: flex-start; gap: 8px; font-weight: 400; }
-.form label.check input { width: auto; min-height: auto; margin-top: 6px; }
-.form fieldset { border: 1px solid var(--line); border-radius: 12px; padding: 8px 14px; }
-.form fieldset .chips { margin: 6px 0; }
-.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.form-msg { color: var(--primary); font-weight: 700; min-height: 1.4em; }
-
-/* modal */
-.modal { position: fixed; inset: 0; z-index: 40; display: flex; align-items: center; justify-content: center; padding: 16px; }
+/* ---------- כרטיס שירות ---------- */
+.modal { position: fixed; inset: 0; z-index: 40; display: flex; align-items: flex-end; justify-content: center; }
 .modal[hidden] { display: none; }
-.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.45); }
-.modal-card {
-  position: relative; background: var(--surface); border-radius: var(--radius); max-width: 720px; width: 100%;
-  max-height: 90vh; overflow-y: auto; padding: 24px; box-shadow: 0 10px 40px rgba(0,0,0,.25);
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, .35); }
+.modal-card { position: relative; width: 100%; max-width: 640px; max-height: 92vh; overflow-y: auto; background: var(--paper); border: var(--stroke) solid var(--ink); border-bottom: 0; border-radius: 22px 34px 0 0; padding: 18px 22px calc(26px + env(safe-area-inset-bottom, 0px)); }
+.modal-x { font-family: var(--hand); font-weight: 600; font-size: 16px; min-height: 44px; background: none; border: 0; border-bottom: 2px solid var(--ink); color: var(--ink); cursor: pointer; padding: 0; }
+.svc h2 { font-family: var(--display); font-weight: 400; font-size: clamp(32px, 9vw, 40px); line-height: 1.02; margin-top: 8px; }
+.svc .desc { margin-top: 10px; font-size: 16px; }
+.svc h3 { font-family: var(--hand); font-weight: 800; font-size: 19px; margin: 18px 0 6px; }
+.svc .verify { font-family: var(--hand); font-size: 13px; }
+.svc .contact { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.svc .contact .links { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 6px 16px; }
+.lead-form { margin-top: 12px; }
+.source { font-size: 13px; color: var(--muted); word-break: break-all; margin-top: 14px; }
+
+/* ---------- עזרה עכשיו ---------- */
+.help h1 { font-family: var(--hand); font-weight: 800; font-size: 30px; margin-top: 10px; }
+.breath { position: relative; width: 210px; height: 210px; margin: 18px auto 0; display: flex; align-items: center; justify-content: center; text-align: center; }
+.breath .blob { position: absolute; inset: 0; background: var(--t-soul); border-radius: var(--r-blob); animation: breathe 14s ease-in-out infinite; }
+.breath svg { position: absolute; inset: 0; }
+.breath .phase { position: relative; font-family: var(--display); font-size: 30px; line-height: 1.1; }
+@keyframes breathe { 0%, 100% { transform: scale(.82); } 30%, 58% { transform: scale(1); } }
+.lines { list-style: none; margin: 6px 0 0; padding: 0; }
+.lines a { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-decoration: none; border-bottom: 2px dashed var(--ink); }
+.lines li:last-child a { border-bottom: 0; }
+.lines .name { font-family: var(--display); font-size: 22px; display: block; }
+.lines .what { font-size: 13px; color: var(--muted); }
+.lines .num { font-family: var(--display); font-size: 26px; direction: ltr; }
+.emergency { margin-top: 18px; padding-top: 12px; border-top: var(--stroke) solid var(--ink); font-size: 15px; }
+
+/* ---------- טפסים ---------- */
+.filters { display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: 8px; margin: 14px 0; }
+.filters input, .filters select, .form input, .form select, .form textarea {
+  font: inherit; font-size: 16px; padding: 10px 12px; min-height: 48px; width: 100%;
+  background: var(--sheet); color: var(--ink); border: 2px solid var(--ink); border-radius: 10px 18px 12px 16px;
 }
-.modal-x { position: absolute; top: 10px; left: 10px; border: 0; background: var(--surface-2); color: var(--text); width: 40px; height: 40px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; }
-.meta { border-top: 1px solid var(--line); margin: 12px 0; }
-.meta-row { display: grid; grid-template-columns: 110px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: .97rem; }
-.meta-row > span { color: var(--muted); font-weight: 600; }
-.meta-row .tags { padding: 0; }
-.contact-btns { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
-.lead-form { background: var(--surface-2); border-radius: 12px; padding: 16px; margin-top: 8px; }
-.lead-form h3 { margin: 0; }
-.source { font-size: .85rem; color: var(--muted); word-break: break-all; }
+.form { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+.form label { display: flex; flex-direction: column; gap: 4px; font-weight: 700; }
+.form label.check { flex-direction: row; align-items: flex-start; gap: 8px; font-weight: 400; }
+.form label.check input { width: auto; min-height: auto; margin-top: 6px; accent-color: var(--ink); }
+.form fieldset { border: 2px dashed var(--ink); border-radius: var(--r-hand); padding: 8px 14px; }
+.form legend { font-family: var(--hand); font-weight: 800; }
+.form .chips { margin: 6px 0; }
+.form .chip span { font-size: 18px; min-height: 44px; }
+.form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-msg { font-family: var(--hand); font-weight: 600; min-height: 1.4em; }
+.form-page { max-width: 620px; }
 
-/* admin */
-.admin-item { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin-bottom: 10px; }
-.admin-item .actions { display: flex; gap: 8px; margin-top: 8px; }
+/* ---------- ניהול ---------- */
+.admin-item { border-bottom: 2px dashed var(--ink); padding: 14px 0; }
 .table-wrap { overflow-x: auto; }
-.admin-table { width: 100%; border-collapse: collapse; background: var(--surface); font-size: .92rem; }
-.admin-table th, .admin-table td { border-bottom: 1px solid var(--line); padding: 8px; text-align: start; vertical-align: top; }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.admin-table th, .admin-table td { border-bottom: 1px solid var(--ink); padding: 8px; text-align: start; vertical-align: top; }
+.admin-table select { font: inherit; background: var(--sheet); color: var(--ink); border: 1px solid var(--ink); }
 
-.footer { max-width: 1120px; margin: 0 auto; padding: 24px 16px 40px; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
+.footer { max-width: 680px; margin: 0 auto; padding: 22px 20px 40px; color: var(--muted); font-size: 13px; border-top: 2px dashed var(--ink); }
+.footer p + p { margin-top: 8px; }
+a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 
-@media (max-width: 760px) {
-  body { font-size: 17px; }
+@media (max-width: 640px) {
   .filters { grid-template-columns: 1fr 1fr; }
   .filters input[type=search] { grid-column: 1 / -1; }
   .form .row { grid-template-columns: 1fr; }
-  .meta-row { grid-template-columns: 1fr; gap: 2px; }
-  .nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
-  .nav a { white-space: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .breath .blob { animation: none; }
 }
 @media print {
-  .crisis-bar, .topbar, .footer, .actions, .modal, .hero-cta { display: none !important; }
-  body { background: #fff; color: #000; font-size: 12pt; }
-  .card { break-inside: avoid; box-shadow: none; }
-}
-a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
-.verify { font-size: .9rem; padding: 8px 12px; border-radius: 10px; margin: 10px 0 0; }
-.verify-ok { background: var(--info-bg); color: var(--free); font-weight: 700; }
-.verify-no { background: var(--surface-2); color: var(--muted); }
-.tag-ok { background: var(--info-bg); color: var(--free); font-weight: 700; }
-
-/* ---- צעדים ראשונים ותוצאות מקוצרות ---- */
-.first-steps ol { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 12px; counter-reset: step; }
-.first-steps > ol > li { counter-increment: step; position: relative; padding-inline-start: 44px; }
-.first-steps > ol > li::before {
-  content: counter(step); position: absolute; inset-inline-start: 0; top: 14px;
-  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--primary); color: var(--primary-ink); font-weight: 800;
-}
-.first-steps .card { border-color: var(--primary); }
-.more-title { margin-top: 8px; font-size: 1.15rem; color: var(--muted); }
-.group-title { font-size: 1.05rem; margin: 0 0 10px; }
-.group-title small { color: var(--muted); font-weight: 400; }
-.res-group { margin-bottom: 22px; }
-.callout-soft { background: var(--surface-2); color: var(--text); }
-.callout-soft a { color: var(--primary); }
-
-/* ---- נייד: כפתור המשך תמיד גלוי, תפריט שלא נחתך, פס מצוקה קומפקטי ---- */
-.wizard-nav {
-  position: sticky; bottom: 0; z-index: 5; background: var(--bg);
-  padding-block: 12px calc(12px + env(safe-area-inset-bottom, 0px)); margin-top: 16px;
-  border-top: 1px solid var(--line);
-}
-@media (max-width: 760px) {
-  .crisis-bar { font-size: .88rem; padding: 6px 12px; gap: 4px 8px; }
-  .crisis-bar .cb-long { display: none; }
-  .topbar { position: static; }
-  .nav { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; overflow: visible; }
-  .nav a { white-space: normal; text-align: center; padding: 8px 6px; background: var(--surface-2); }
-  .nav a.active { background: var(--primary); color: var(--primary-ink); }
-  .first-steps > ol > li { padding-inline-start: 0; padding-top: 6px; }
-  .first-steps > ol > li::before { inset-inline-start: auto; inset-inline-end: 10px; top: 0; width: 28px; height: 28px; z-index: 1; }
+  .topbar, .subnav, .footer, .wizard-nav, .modal { display: none !important; }
 }

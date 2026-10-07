@@ -2,47 +2,45 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>מגיע לך — מפת השירותים ללוחמים ונכים</title>
-  <meta name="description" content="מאגר שירותים, טיפולים, עמותות וזכויות לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר — בהתאמה אישית לפי קשיים ותחומי עניין.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>מגיע לך</title>
+  <meta name="description" content="טיפולים, עמותות, חוות, ים, מענקים וזכויות לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר — בהתאמה אישית.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Hebrew:wght@400;600;800&family=Secular+One&family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#main">דילוג לתוכן</a>
 
-  <div class="crisis-bar" role="region" aria-label="קווי חירום">
-    <strong>במצוקה עכשיו?</strong>
-    <span id="crisis-lines">נפש אחת<span class="cb-long"> (משרד הביטחון, 24/7, גם ללא הכרה)</span> <a href="tel:*8944">*8944</a> · ער״ן <a href="tel:1201">1201</a> · נט״ל <a href="tel:*3362">*3362</a> · חירום <a href="tel:101">101</a> / <a href="tel:100">100</a></span>
-  </div>
-
   <header class="topbar">
-    <a class="brand" href="#/">
-      <span class="brand-mark" aria-hidden="true">✦</span>
-      <span>מגיע לך</span>
-    </a>
-    <nav class="nav" aria-label="ניווט ראשי">
-      <a href="#/match" data-nav="match">התאמה אישית</a>
-      <a href="#/browse" data-nav="browse">כל השירותים</a>
-      <a href="#/rights" data-nav="rights">מה מגיע לי</a>
-      <a href="#/provider" data-nav="provider">לגופים: הצטרפות</a>
-    </nav>
+    <a class="brand" href="#/">מגיע לך</a>
+    <div class="top-actions">
+      <button class="dim-toggle" id="dim-toggle" type="button" aria-pressed="false" aria-label="מצב עמום">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <a class="help-btn" href="#/help">עזרה עכשיו</a>
+    </div>
   </header>
+  <nav class="subnav" aria-label="ניווט">
+    <a href="#/" data-nav="">תחומים</a>
+    <a href="#/match" data-nav="match">התאמה אישית</a>
+    <a href="#/browse" data-nav="browse">חיפוש</a>
+    <a href="#/rights" data-nav="rights">מה מגיע לי</a>
+  </nav>
 
   <main id="main" tabindex="-1"></main>
 
   <div id="modal" class="modal" hidden>
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-x" data-close aria-label="סגירה">✕</button>
+      <button class="modal-x" data-close type="button">סגירה</button>
       <div id="modal-body"></div>
     </div>
   </div>
 
   <footer class="footer">
-    <p>המידע נאסף ממקורות פתוחים ומעודכן מעת לעת. לפני הגעה כדאי לוודא תנאים ועלויות מול הגוף עצמו. האתר אינו תחליף לייעוץ רפואי, נפשי או משפטי.</p>
-    <p><a href="#/admin">ניהול</a> · <span id="store-mode"></span> · <span id="data-stamp"></span></p>
+    <p>המידע נאסף ממקורות פתוחים ונבדק מול האתרים הרשמיים כשאפשר. לפני שמגיעים, כדאי לוודא תנאים ועלויות מול הגוף. האתר אינו תחליף לייעוץ רפואי, נפשי או משפטי.</p>
+    <p><a href="#/provider">לגופים: הצטרפות ללוח</a> · <a href="#/admin">ניהול</a> · <span id="store-mode"></span> · <span id="data-stamp"></span></p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
