@@ -110,18 +110,33 @@
   function chip(group, key, label, checked) {
     return `<label class="chip"><input type="checkbox" name="${group}" value="${esc(key)}" ${checked ? "checked" : ""}><span>${esc(label)}</span></label>`;
   }
-  function card(s, why) {
-    const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 2).map(r => T.regions[r] || r)];
+  // שורה קצרה ברשימה: שם, משפט פתיחה בשורה אחת, ושורת פרטים. כל השאר בכרטיס שנפתח.
+  function card(s, why, noTag) {
+    const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => T.regions[r] || r)];
     if (s.source === "provider") meta.push("הצטרף ללוח");
     else if (s.verified_at) meta.push("✓ נבדק");
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
-        <div class="tag-row">${areaTag(s)}</div>
-        <h3>${esc(s.name)}</h3>
-        <p>${esc(shortDesc(s.description, 150))}</p>
-        ${why && why.length ? `<span class="why">← ${esc(why.slice(0, 2).join(" · "))}</span>` : ""}
-        <span class="meta-line">${esc(meta.join(" · "))}</span>
+        <div class="card-main">
+          <h3>${esc(s.name)}</h3>
+          <p class="teaser">${esc(shortDesc(s.description, 110))}</p>
+          ${why && why.length ? `<span class="why">← ${esc(why[0])}</span>` : ""}
+          <span class="meta-line">${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
+        </div>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M15 4 C 11 8, 9 10, 8 12 C 10 14, 12 17, 15 20"/></svg>
       </article>`;
+  }
+  // רשימה שנפתחת בהדרגה: מציגים כמה, והשאר בלחיצה על "עוד"
+  const PAGE = 8;
+  function pagedList(el, items, render) {
+    let shown = PAGE;
+    const draw = () => {
+      el.innerHTML = items.slice(0, shown).map(render).join("") +
+        (items.length > shown ? `<button class="more-btn" type="button">עוד ${Math.min(PAGE * 2, items.length - shown)} מתוך ${items.length - shown}</button>` : "");
+      const b = el.querySelector(".more-btn");
+      if (b) b.onclick = () => { shown += PAGE * 2; draw(); };
+    };
+    draw();
   }
 
   // ---------- views ----------
@@ -132,7 +147,7 @@
     $main.innerHTML = `
       <section>
         <h1 class="page-title">מה מושך אותך?</h1>
-        <p class="lead">משם מתחילים. טיפול, ים, חוות, ספורט, מענקים וזכויות, לנכי צה״ל, מילואימניקים, שוטרים ולמי שעוד לא הוכר.</p>
+        <p class="lead">לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ולמי שעוד לא הוכר.</p>
         <ul class="areas lined">
           ${HAND_LINE}
           ${Object.keys(AREAS).map(k => `
@@ -146,7 +161,7 @@
         </ul>
         <a class="btn btn-wide home-cta" href="#/match">לא בטוח? 4 שאלות קצרות</a>
         ${prof ? `<p class="saved-link"><a class="link-u" href="#/results">לתחנות שלי ←</a></p>` : ""}
-        <p class="lead">בלי הרשמה. מה שתסמן נשאר רק אצלך במכשיר.</p>
+        <p class="note quiet">בלי הרשמה. מה שמסמנים נשאר רק במכשיר.</p>
       </section>`;
   }
 
@@ -158,6 +173,7 @@
     if (p) items = items.map(s => Object.assign({ s }, score(s, p))).sort((a, b) => b.sc - a.sc).map(x => x.s);
     else items.sort((a, b) => (b.verified_at ? 1 : 0) - (a.verified_at ? 1 : 0));
     const top = items[0], rest = items.slice(1);
+    const cats = A.cats.filter(c => c !== "hotlines" && rest.some(s => s.category === c));
     $main.innerHTML = `
       <section class="area-${k}">
         <div class="area-hero">
@@ -169,15 +185,30 @@
           <article class="sheet" style="margin-top: 16px">
             <span class="note highlight">${p ? "הכי מתאים לך" : "כדאי להתחיל כאן"} · ${esc(costLabel(top.cost))}</span>
             <h2>${esc(top.name)}</h2>
-            <p>${esc(shortDesc(top.description, 180))}</p>
+            <p class="clamp-2">${esc(shortDesc(top.description, 140))}</p>
             <div class="actions">
               <button class="btn btn-ink" type="button" data-open="${esc(top.id)}">לפרטים וליצירת קשר</button>
             </div>
           </article>` : `<p class="empty">עוד אין כאן שירותים. אפשר <a href="#/provider">להציע גוף</a>.</p>`}
-        <div class="grid" style="margin-top: 10px">${rest.map(s => card(s)).join("")}</div>
+        ${cats.length > 1 ? `<nav class="subcats" aria-label="סינון">
+          <button type="button" class="active" data-cat="">הכל</button>
+          ${cats.map(c => `<button type="button" data-cat="${c}">${esc(SHORT_CAT[c] || catLabel(c))}</button>`).join("")}
+        </nav>` : ""}
+        <div class="grid" id="area-list" style="margin-top: 6px"></div>
         ${!p ? `<p class="actions"><a class="link-u" href="#/match">לסדר לפי מה שמתאים לי ←</a></p>` : ""}
       </section>`;
+    const list = document.getElementById("area-list");
+    const show = c => pagedList(list, rest.filter(s => !c || s.category === c), s => card(s, null, true));
+    show("");
+    $main.querySelectorAll(".subcats button").forEach(b => b.onclick = () => {
+      $main.querySelectorAll(".subcats button").forEach(x => x.classList.toggle("active", x === b));
+      show(b.dataset.cat);
+    });
   }
+  const SHORT_CAT = { "rehab-farm": "חוות", "animal-therapy": "בעלי חיים", "nature-retreats": "טבע ומסעות", "sports": "ספורט",
+    "yoga-mind-body": "יוגה וגוף-נפש", "medical-rehab": "שיקום רפואי", "mental-health": "טיפול", "peer-support": "עמיתים",
+    "art-music": "יצירה", "family-support": "משפחה", "housing-daily": "דיור ויומיום", "community-volunteer": "קהילה",
+    "rights-legal": "זכויות", "financial-grants": "מענקים", "employment-education": "עבודה ולימודים" };
 
   function progressLine(idx, total) {
     const xs = Array.from({ length: total }, (_, i) => 330 - i * (314 / (total - 1)));
@@ -279,7 +310,7 @@
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
                 <div class="tag-row">${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
                 <h2 data-open="${esc(s.id)}" tabindex="0" role="button">${esc(s.name)}</h2>
-                <p>${esc(shortDesc(s.description, 120))}</p>
+                <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
                 ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך").slice(0, 1).join("") || r.why[0])}</span>` : ""}
                 <div class="actions">
                   ${s.phone ? `<a class="btn btn-ink" href="${telHref(s.phone)}">${esc(firstPhone(s.phone))}</a>` : ""}
@@ -295,9 +326,11 @@
           ${order.map(a => `
             <details class="area-${a}">
               <summary><span class="dabbed"><span class="display" style="font-size: 26px">${esc(AREAS[a].label)}</span></span><span class="hand">${byArea[a].length} אפשרויות</span></summary>
-              <div class="grid">${byArea[a].map(r => card(r.s, r.why.filter(w => w !== "מתאים לסטטוס שלך"))).join("")}</div>
+              <div class="grid" data-area-list="${a}"></div>
             </details>`).join("")}
         </section>` : ""}`;
+    $main.querySelectorAll("[data-area-list]").forEach(el => pagedList(el, byArea[el.dataset.areaList],
+      r => card(r.s, r.why.filter(w => w !== "מתאים לסטטוס שלך"), true)));
   }
 
   // מילים נרדפות לחיפוש. כל מילה בשאילתה נחשבת כנמצאה אם אחת מהנרדפות שלה מופיעה.
@@ -399,8 +432,8 @@
       document.getElementById("count").textContent = partial
         ? `לא מצאנו התאמה לכל המילים. אלה ${out.length} תוצאות שמתאימות לחלק מהן:`
         : `${out.length} תוצאות`;
-      document.getElementById("list").innerHTML = out.map(s => card(s)).join("") ||
-        `<p class="empty">אין תוצאות. נסו חיפוש אחר.</p>`;
+      const list = document.getElementById("list");
+      if (out.length) pagedList(list, out, s => card(s)); else list.innerHTML = `<p class="empty">אין תוצאות. נסו חיפוש אחר.</p>`;
       const qs = new URLSearchParams();
       for (const [k, v] of fd.entries()) if (v) qs.set(k, v);
       history.replaceState(null, "", "#/browse" + (qs.toString() ? "?" + qs : ""));
@@ -419,7 +452,19 @@
     const g = G[k];
     const items = g.sections.flatMap(sec => sec.items.map(it => Object.assign({ section: sec.title }, it)));
     const [key, ...rest] = items;
-    const link = it => it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.text)}</a>` : esc(it.text);
+    // כל סעיף סגור: רואים כותרת קצרה, ופותחים כדי לקרוא. כותרת = מה שלפני הנקודתיים, או המשפט הראשון.
+    const split = t => {
+      const c = t.indexOf(":");
+      if (c > 0 && c < 70) return [t.slice(0, c), t.slice(c + 1).trim()];
+      const m = t.match(/^(.{12,80}?[.!?])\s+(.+)$/);
+      return m ? [m[1].replace(/\.$/, ""), m[2]] : [t, ""];
+    };
+    const src = it => it.url ? `<a class="link-u src" href="${esc(it.url)}" target="_blank" rel="noopener">למקור ←</a>` : "";
+    const fold = it => {
+      const [h, b] = split(it.text);
+      if (!b) return `<li class="fold-flat">${TICK}<span>${esc(h)} ${src(it)}</span></li>`;
+      return `<li><details class="fold"><summary>${TICK}<span>${esc(h)}</span></summary><p>${esc(b)} ${src(it)}</p></details></li>`;
+    };
     const related = SERVICES.filter(s => ["rights-legal", "financial-grants"].includes(s.category) && eligible(s, [k])).slice(0, 5);
     $main.innerHTML = `
       <section class="area-soul">
@@ -427,19 +472,24 @@
         <nav class="status-pick" aria-label="הסטטוס שלי">
           ${keys.map(x => `<a href="#/rights?s=${x}" class="${x === k ? "active" : ""}" ${x === k ? 'aria-current="page"' : ""}>${esc(G[x].title)}</a>`).join("")}
         </nav>
-        <p class="guide-intro">${esc(g.intro)}</p>
+        <p class="guide-intro clamp-3" id="g-intro" role="button" tabindex="0" title="להרחבה">${esc(g.intro)}</p>
         ${key ? `
           <article class="sheet key-right">
             <span class="area-tag badge">הכי חשוב</span>
-            <p>${link(key)}</p>
+            <p class="clamp-3" id="key-text" role="button" tabindex="0">${esc(key.text)}</p>
+            <p>${src(key)}</p>
           </article>` : ""}
         ${g.sections.map(sec => {
           const its = sec.items.filter(it => it !== g.sections[0].items[0]);
-          return its.length ? `<h2 class="section-title">${esc(sec.title)}</h2><ul class="ticks">${its.map(it => `<li>${TICK}<span>${link(it)}</span></li>`).join("")}</ul>` : "";
+          return its.length ? `<h2 class="section-title">${esc(sec.title)}</h2><ul class="ticks folds">${its.map(fold).join("")}</ul>` : "";
         }).join("")}
-        ${related.length ? `<h2 class="section-title">מי יכול לעזור עם זה</h2><div class="grid">${related.map(s => card(s)).join("")}</div>` : ""}
-        <p class="lead" style="margin-top: 18px">כל סעיף מקושר למקור שלו. זה לא ייעוץ משפטי.</p>
+        ${related.length ? `<h2 class="section-title">מי יכול לעזור עם זה</h2><div class="grid">${related.map(s => card(s, null, true)).join("")}</div>` : ""}
+        <p class="note quiet" style="margin-top: 18px">כל סעיף מקושר למקור שלו. זה לא ייעוץ משפטי.</p>
       </section>`;
+    const intro = document.getElementById("g-intro");
+    intro.onclick = () => intro.classList.remove("clamp-3");
+    const kt = document.getElementById("key-text");
+    if (kt) kt.onclick = () => kt.classList.remove("clamp-3");
   }
 
   function viewHelp() {
@@ -632,18 +682,21 @@
       <div class="svc">
         <div class="tag-row" style="margin-top: 12px">
           ${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span>
-          <span class="verify">${s.verified_at ? "✓ נבדק מול האתר של הגוף, " + esc(s.verified_at) : "עוד לא נבדק מול האתר של הגוף. כדאי לוודא איתם."}</span>
+          <span class="verify">${s.verified_at ? "✓ נבדק " + esc(s.verified_at) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
         </div>
         <h2 id="modal-title">${esc(s.name)}</h2>
-        <p class="desc">${esc(s.description)}</p>
+        <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
+        ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
         ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${esc(s.cost_notes)}</span></p>` : ""}
-        ${who.length ? `<h3>למי זה</h3><ul class="ticks">${who.slice(0, 5).map(w => `<li>${TICK}<span>${esc(w)}</span></li>`).join("")}</ul>` : ""}
-        ${helps.length ? `<h3>במה זה עוזר</h3><p>${esc(helps.join(" · "))}</p>` : ""}
-        ${s.how_to_apply ? `<h3>איך מתחילים</h3><p>${esc(s.how_to_apply)}</p>` : ""}
-        ${s.location ? `<h3>איפה</h3><p>${esc(s.location)}${arr(s.regions).length ? " · " + esc(arr(s.regions).map(r => T.regions[r]).join(", ")) : ""}</p>` : ""}
         <div class="contact">
           ${s.phone ? `<a class="btn btn-ink btn-wide" href="${telHref(s.phone)}">להתקשר <span dir="ltr">${esc(firstPhone(s.phone))}</span></a>` : ""}
           <div class="links">${links.join("")}</div>
+        </div>
+        <div class="folds-svc">
+          ${s.how_to_apply ? `<details class="fold" open><summary>איך מתחילים</summary><p>${esc(s.how_to_apply)}</p></details>` : ""}
+          ${who.length ? `<details class="fold"><summary>למי זה</summary><p>${esc(who.slice(0, 6).join(" · "))}</p></details>` : ""}
+          ${helps.length ? `<details class="fold"><summary>במה זה עוזר</summary><p>${esc(helps.join(" · "))}</p></details>` : ""}
+          ${s.location || arr(s.regions).length ? `<details class="fold"><summary>איפה</summary><p>${esc([s.location, arr(s.regions).map(r => T.regions[r]).join(", ")].filter(Boolean).join(" · "))}</p></details>` : ""}
         </div>
         <form id="lead" class="form lead-form" hidden>
           <p class="note">נעביר לגוף, והם יחזרו אליך. לא חובה לספר יותר ממה שנוח.</p>
@@ -659,6 +712,8 @@
     $modal.hidden = false;
     document.body.classList.add("no-scroll");
     $modal.querySelector(".modal-x").focus();
+    const more = document.getElementById("svc-more");
+    if (more) more.onclick = () => { document.getElementById("svc-desc").classList.remove("clamp-3"); more.remove(); };
     const f = document.getElementById("lead");
     document.getElementById("lead-toggle").onclick = () => { f.hidden = !f.hidden; if (!f.hidden) f.querySelector("input").focus(); };
     f.addEventListener("submit", async e => {
