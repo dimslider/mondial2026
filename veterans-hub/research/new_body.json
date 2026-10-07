@@ -1,0 +1,575 @@
+[
+  {
+    "name": "ריסטארט (Restart) – ליווי, מנטורינג ויזמות לפצועי צה\"ל",
+    "category": "employment-education",
+    "description": "עמותה שהוקמה ב-2014 על ידי פצועי צה\"ל ומתנדבים מעולם העסקים, ומלווה פצועים בחזרה למסלול חיים באמצעות מנטורינג, חשיפה לטכנולוגיה ויזמות וקהילה תומכת. העמותה מפיקה מדי שנה את מיזם Makers for Heroes, שבו צוותי מתנדבים מחברות הייטק מפתחים פתרונות טכנולוגיים לאתגרים אישיים של פצועים.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "mod-recognized",
+      "combat-soldiers"
+    ],
+    "difficulties": [
+      "physical-disability",
+      "employment",
+      "loneliness"
+    ],
+    "interests": [
+      "tech",
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide",
+      "center"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לעמותה דרך אתר האינטרנט או עמודי הרשתות החברתיות שלה.",
+    "source_url": "https://www.mako.co.il/pzm-soldiers/Article-cae7a07a3e3f381027.htm",
+    "confidence": "medium"
+  },
+  {
+    "name": "תושייה – קבוצות תמיכה למשפחות של לוחמים עם פוסט טראומה (האגודה לבריאות הציבור)",
+    "category": "family-support",
+    "description": "תוכנית של האגודה לבריאות הציבור המפעילה קבוצות תמיכה לנשים, ילדים והורים של לוחמים המתמודדים עם פוסט טראומה קרבית. הקבוצות משלבות סדנאות חווייתיות עם הנחיה מקצועית ומאפשרות שיתוף ועיבוד של המציאות המשפחתית. התוכנית קשורה גם לסטודיו החברתי לאומנות ומלאכה של האגודה בירושלים.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "families",
+      "reservists",
+      "combat-soldiers",
+      "not-recognized"
+    ],
+    "difficulties": [
+      "family-relations",
+      "ptsd",
+      "loneliness"
+    ],
+    "interests": [
+      "art",
+      "crafts"
+    ],
+    "cost": "free",
+    "cost_notes": "ייתכן שהמחיר משתנה לפי קבוצה, יש לברר מול האגודה.",
+    "regions": [
+      "jerusalem",
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לאגודה לבריאות הציבור.",
+    "source_url": "https://www.maariv.co.il/news/israel/article-1316749",
+    "confidence": "medium"
+  },
+  {
+    "name": "קרן מענקים לעסקים של בני/בנות זוג של משרתי מילואים – הסוכנות היהודית",
+    "category": "financial-grants",
+    "description": "קרן של הסוכנות היהודית וקרן תובענות ייצוגיות המעניקה מענק חד פעמי של 5,000 עד 20,000 ש\"ח לעסקים בבעלות בני ובנות זוג של משרתי מילואים שנפגעו כלכלית במלחמה. נדרש שירות מילואים של 60 יום לפחות במסגרת חרבות ברזל, והעסקים זכאים גם לליווי עסקי ללא תשלום.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "families",
+      "reservists"
+    ],
+    "difficulties": [
+      "financial",
+      "employment"
+    ],
+    "interests": [],
+    "cost": "free",
+    "cost_notes": "מענק של עד 1% מהמחזור השנתי, עד 20,000 ש\"ח. יש לבדוק אם מועד ההגשה עדיין פתוח.",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "הגשת בקשה מקוונת דרך אתר הסוכנות היהודית בזמן שחלון ההגשה פתוח.",
+    "source_url": "https://www.israelhayom.co.il/military-life/article/19152146",
+    "confidence": "medium"
+  },
+  {
+    "name": "Chayal's Angels – טיפולי גוף ונפש בהתנדבות למשרתי מילואים",
+    "category": "yoga-mind-body",
+    "description": "עמותה שהקימה טאשה כהן מהצפון, השולחת מטפלים מתנדבים לבסיסים, בעיקר בצפון, להעניק ללוחמים ולמשרתי מילואים טיפולים כמו פיזיותרפיה, כירופרקטיקה, דיקור, עיסוי, יוגה ותרגולי נשימה. לפי דיווחים העמותה טיפלה באלפי חיילים באמצעות יותר מ-100 מטפלים מתנדבים.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "reservists",
+      "combat-soldiers"
+    ],
+    "difficulties": [
+      "chronic-pain",
+      "anxiety",
+      "sleep"
+    ],
+    "interests": [
+      "mind-body"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "north"
+    ],
+    "location": "בסיסים בצפון הארץ",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לעמותה דרך עמוד הגיוס שלה ב-IsraelGives או ברשתות החברתיות.",
+    "source_url": "https://jewishstandard.timesofisrael.com/chayals-angels-bring-relief/",
+    "confidence": "medium"
+  },
+  {
+    "name": "בשבילנו (Bishvilenu) – אפליקציית החלמה לחיילים ולמשפחות",
+    "category": "yoga-mind-body",
+    "description": "פלטפורמה דיגיטלית חינמית לחיילים ולבני משפחותיהם הבונה תוכנית החלמה אישית סביב שלושה צירים: נפש, גוף וקהילה. האפליקציה כוללת כלים כמו טכניקות נרטיביות, תרגילי נשימה ותרגילים גופניים, ופותחה בשיתוף אנשי מקצוע בתחום הטראומה מישראל ומארה\"ב.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "combat-soldiers",
+      "reservists",
+      "families",
+      "not-recognized"
+    ],
+    "difficulties": [
+      "ptsd",
+      "anxiety",
+      "sleep",
+      "family-relations"
+    ],
+    "interests": [
+      "mind-body",
+      "tech"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "online"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "הורדת האפליקציה והרשמה.",
+    "source_url": "https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/",
+    "confidence": "medium"
+  },
+  {
+    "name": "CMBM ישראל – קבוצות מיומנויות גוף-נפש לנפגעי טראומה",
+    "category": "yoga-mind-body",
+    "description": "סניף ישראלי של המרכז לרפואת גוף-נפש (Center for Mind-Body Medicine), הפועל בישראל יותר מ-20 שנה ומפעיל קבוצות קטנות המלמדות מיומנויות ויסות כמו נשימה, מדיטציה, תנועה וביטוי יצירתי. מאז 7 באוקטובר הארגון מפעיל מענים לאוכלוסיות שנחשפו לטראומה ומכשיר אנשי מקצוע בשיטה.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "civilians",
+      "families",
+      "reservists",
+      "terror-victims"
+    ],
+    "difficulties": [
+      "ptsd",
+      "anxiety",
+      "sleep"
+    ],
+    "interests": [
+      "mind-body"
+    ],
+    "cost": "",
+    "cost_notes": "יש לברר את מסגרות הקבוצות הפעילות ואת עלותן.",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "https://cmbm.org/communities/community/israel/",
+    "how_to_apply": "פנייה דרך אתר CMBM.",
+    "source_url": "https://cmbm.org/communities/community/israel/",
+    "confidence": "low"
+  },
+  {
+    "name": "מלגת ממדים ללימודים – האגף לחיילים משוחררים",
+    "category": "employment-education",
+    "description": "מלגה ממשלתית ללוחמים משוחררים ולאוכלוסיות ייחודיות למימון לימודים לתואר ראשון או שני במוסד מוכר, וכן לימודי תעודה באומנויות. במאי 2026 בוטל הקיזוז בינה לבין מלגת מיל-GO, כך שניתן לקבל את שתיהן במקביל.",
+    "provider_type": "government",
+    "eligibility": [
+      "combat-soldiers"
+    ],
+    "difficulties": [
+      "financial",
+      "employment"
+    ],
+    "interests": [
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "מימון שכר לימוד לתקופה מוגבלת לפי תנאי הזכאות. משך מימוש הזכאות ללוחמים ארוך יותר מאשר לחיילים אחרים.",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "https://www.hachvana.mod.gov.il",
+    "how_to_apply": "הגשת בקשה דרך אתר האגף לחיילים משוחררים (hachvana).",
+    "source_url": "https://www.study.co.il/P47538/",
+    "confidence": "high"
+  },
+  {
+    "name": "מלגת משפיעים בלימודים – האגודה למען החייל וקרן אדמונד דה רוטשילד",
+    "category": "employment-education",
+    "description": "מלגת קיום של 12,000 עד 18,000 ש\"ח ללוחמים ולוחמות משוחררים, ולאחרונה גם לתומכי לחימה, מאוכלוסיות ייחודיות כמו חיילים בודדים, זכאי תשמ\"ש, עולים, יוצאי אתיופיה וחרדים. המלגה כוללת 100 שעות התנדבות בקהילה וניתנת בשיתוף האגף לחיילים משוחררים ומילואים.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "combat-soldiers"
+    ],
+    "difficulties": [
+      "financial"
+    ],
+    "interests": [
+      "learning",
+      "volunteering"
+    ],
+    "cost": "free",
+    "cost_notes": "מחייבת 100 שעות התנדבות.",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "הרשמה בתקופת ההגשה השנתית דרך האתר של האגודה למען החייל או האגף לחיילים משוחררים.",
+    "source_url": "https://www.ice.co.il/consumerism/news/article/1124337",
+    "confidence": "high"
+  },
+  {
+    "name": "מלגת מיל-GO לחיילים משוחררים",
+    "category": "employment-education",
+    "description": "מלגה לסטודנטים חיילים משוחררים הניתנת לפי קריטריונים סוציו-אקונומיים ומנוהלת על ידי המועצה להשכלה גבוהה ופר\"ח. לפי הדיווחים גובהה נע בין כ-5,000 לכ-12,500 ש\"ח בשנה, ומאז מאי 2026 ניתן לקבלה במקביל למלגת ממדים ללימודים.",
+    "provider_type": "government",
+    "eligibility": [
+      "combat-soldiers",
+      "reservists"
+    ],
+    "difficulties": [
+      "financial"
+    ],
+    "interests": [
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "הגשה בתקופת ההרשמה השנתית דרך המל\"ג או פר\"ח.",
+    "source_url": "https://www.study.co.il/P47538/",
+    "confidence": "medium"
+  },
+  {
+    "name": "ורטיגו – תוכניות 'שבים' ו'שניים כאחד' למשרתי מילואים ובני זוג",
+    "category": "family-support",
+    "description": "להקת המחול ורטיגו מפעילה, לצד חוות החוסן, תוכניות חוסן נוספות למשרתי מילואים ולמשפחותיהם: 'שבים' לחזרה לשגרה, ו'שניים כאחד', תוכנית לזוגות הכוללת עבודה קבוצתית שבועית, מדיטציה ותנועה. הפעילות מתקיימת בכפר האקו-ארט בעמק האלה.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "reservists",
+      "families",
+      "combat-soldiers"
+    ],
+    "difficulties": [
+      "family-relations",
+      "ptsd"
+    ],
+    "interests": [
+      "mind-body",
+      "art"
+    ],
+    "cost": "",
+    "cost_notes": "יש לברר עלות ותנאי השתתפות מול ורטיגו.",
+    "regions": [
+      "jerusalem",
+      "center"
+    ],
+    "location": "כפר האקו-ארט, עמק האלה",
+    "phone": "",
+    "email": "",
+    "website": "https://vertigo.org.il",
+    "how_to_apply": "פנייה דרך אתר ורטיגו.",
+    "source_url": "https://vertigo.org.il/en/?p=20236",
+    "confidence": "medium"
+  },
+  {
+    "name": "לצמוח כמנצחים ו-HackerU – הכשרות הייטק לנפגעי טראומה",
+    "category": "employment-education",
+    "description": "שיתוף פעולה בין עמותת 'לצמוח כמנצחים' למכללת HackerU המעניק הכשרות הייטק ללא עלות לנפגעי טראומה ופוסט טראומה, כולל פצועי צה\"ל. לאחר אבחון מקצועי המשתתפים לומדים 250 עד 600 שעות בתחומים כמו סייבר, QA וניתוח מערכות, עם חונכות, סיוע בכתיבת קורות חיים וחיבור למעסיקים.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "mod-recognized",
+      "not-recognized",
+      "civilians",
+      "terror-victims"
+    ],
+    "difficulties": [
+      "employment",
+      "ptsd"
+    ],
+    "interests": [
+      "tech",
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לעמותת לצמוח כמנצחים.",
+    "source_url": "https://www.maariv.co.il/news/israel/article-1193939",
+    "confidence": "medium"
+  },
+  {
+    "name": "ארזים – תוכנית הכשרה טכנולוגית ותעסוקה לפצועי צה\"ל (אוניברסיטת בר-אילן)",
+    "category": "employment-education",
+    "description": "תוכנית של אוניברסיטת בר-אילן המעניקה לפצועי צה\"ל הכשרה מקצועית בתחומי טכנולוגיה וחדשנות וסיוע בהשתלבות בתעסוקה קבועה ומשמעותית.",
+    "provider_type": "academic",
+    "eligibility": [
+      "mod-recognized",
+      "mod-in-process"
+    ],
+    "difficulties": [
+      "employment",
+      "physical-disability",
+      "ptsd"
+    ],
+    "interests": [
+      "tech",
+      "learning"
+    ],
+    "cost": "",
+    "cost_notes": "יש לברר את תנאי המימון מול התוכנית.",
+    "regions": [
+      "center"
+    ],
+    "location": "אוניברסיטת בר-אילן, רמת גן",
+    "phone": "*9392",
+    "email": "arazim.program@biu.ac.il",
+    "website": "https://sites.biu.ac.il/arazim-idf-veterans",
+    "how_to_apply": "הגשת מועמדות דרך אתר התוכנית או פנייה במייל. מענה טלפוני בימים א'-ה' 09:00-17:00.",
+    "source_url": "https://sites.biu.ac.il/arazim-idf-veterans/page/10306",
+    "confidence": "high"
+  },
+  {
+    "name": "Infinity Labs, עתידים ואלביט – מסלול פיתוח תוכנה לפצועי המלחמה",
+    "category": "employment-education",
+    "description": "מסלול הכשרה בפיתוח תוכנה ללא עלות לפצועי מלחמת חרבות ברזל הנמצאים בשיקום, באורך כ-10 חודשים במרכז הפיתוח של Infinity Labs בחיפה. בסיום חלק מהבוגרים נקלטים באלביט ואחרים מופנים לחברות טכנולוגיה נוספות.",
+    "provider_type": "private",
+    "eligibility": [
+      "mod-recognized",
+      "mod-in-process",
+      "reservists"
+    ],
+    "difficulties": [
+      "employment"
+    ],
+    "interests": [
+      "tech",
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "ייתכן שמדובר במחזורים מוגבלים, יש לברר אם נפתח מחזור חדש.",
+    "regions": [
+      "haifa"
+    ],
+    "location": "חיפה",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לעמותת עתידים או ל-Infinity Labs.",
+    "source_url": "https://www.ice.co.il/career/news/article/1044081",
+    "confidence": "medium"
+  },
+  {
+    "name": "מהכשרה לתעסוקה – התעשייה האווירית ואורט לפצועי צה\"ל",
+    "category": "employment-education",
+    "description": "תוכנית של התעשייה האווירית ואורט רחובות שבה פצועי צה\"ל ומערכות הביטחון לומדים להנדסאי אלקטרוניקה במשך כ-17 חודשים, במימון מלא של שכר הלימוד ועם סל סיוע. הבוגרים מיועדים להיקלט כעובדים בתעשייה האווירית.",
+    "provider_type": "private",
+    "eligibility": [
+      "mod-recognized",
+      "security-forces"
+    ],
+    "difficulties": [
+      "employment",
+      "financial"
+    ],
+    "interests": [
+      "tech",
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "מימון שכר לימוד מלא וסל סיוע של כ-38,000 ש\"ח לפי הדיווח.",
+    "regions": [
+      "center"
+    ],
+    "location": "אורט רחובות",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לתעשייה האווירית או לאורט לגבי מחזורים חדשים.",
+    "source_url": "https://www.maariv.co.il/news/military/article-1311901",
+    "confidence": "medium"
+  },
+  {
+    "name": "חוזרים למסלול – ליווי תעסוקתי מודע טראומה (ג'וינט-תבת)",
+    "category": "employment-education",
+    "description": "תוכנית ליווי והכוונה תעסוקתית מודעת טראומה לאנשים שעבדו עד פרוץ המלחמה ונאלצו להפסיק לעבוד בעקבות פגיעה מתמשכת, ונמצאים בסיכון לנשירה משוק העבודה. התוכנית פותחה במסגרת ג'וינט-תבת ופונה גם למשרתי מילואים שנפגעו.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "reservists",
+      "civilians",
+      "not-recognized",
+      "terror-victims"
+    ],
+    "difficulties": [
+      "employment",
+      "ptsd"
+    ],
+    "interests": [
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לג'וינט-תבת או למרכזי התעסוקה השותפים.",
+    "source_url": "https://www.maariv.co.il/economy/israel/article-1091651",
+    "confidence": "medium"
+  },
+  {
+    "name": "Jobify – לוח משרות ייעודי לנכי צה\"ל וכוחות הביטחון",
+    "category": "employment-education",
+    "description": "מערכת משרות שהוקמה בשיתוף ג'וינט-תבת ואגודת ידידי ארגון נכי צה\"ל, ובה פורסמו אלפי משרות המותאמות לפצועים ולפצועות של צה\"ל וכוחות הביטחון.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "mod-recognized",
+      "security-forces",
+      "police"
+    ],
+    "difficulties": [
+      "employment"
+    ],
+    "interests": [],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide",
+      "online"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "חיפוש משרות והגשת מועמדות דרך מערכת Jobify.",
+    "source_url": "https://www.maariv.co.il/news/israel/article-1169403",
+    "confidence": "medium"
+  },
+  {
+    "name": "18x Elite Impact – תוכנית יזמות למשרתי מילואים",
+    "category": "employment-education",
+    "description": "תוכנית בסגנון חממה שהוקמה בעקבות גיוס המילואים הנרחב, ומצמידה משרתי מילואים ליזמים, משקיעים ומנהלים מנוסים כדי לפתח מיזמים בשלב מוקדם. לפי דיווחים, בשנה הראשונה הוקמו במסגרתה יותר מ-150 חברות.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "reservists",
+      "combat-soldiers"
+    ],
+    "difficulties": [
+      "employment"
+    ],
+    "interests": [
+      "tech",
+      "learning"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "הגשת מועמדות דרך אתר התוכנית.",
+    "source_url": "https://www.jewishnews.co.uk/israeli-reservists-launch-150-startups-through-new-entrepreneurship-initiative/",
+    "confidence": "medium"
+  },
+  {
+    "name": "צל\"ש – מערך 'אשת חיל' לתמיכה בנשות לוחמים ומשרתי מילואים",
+    "category": "family-support",
+    "description": "עמותת צל\"ש (צבא לשם שמיים), המלווה חיילים דתיים, הקימה מאז פרוץ המלחמה מערך תמיכה לנשות לוחמים בסדיר ובמילואים. המערך כולל קבוצות תמיכה, ביקורי מתנדבות בבתים וליווי רוחני ורגשי על ידי רבנים, רבניות ונשים שבני זוגן משרתים.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "families",
+      "reservists"
+    ],
+    "difficulties": [
+      "loneliness",
+      "family-relations"
+    ],
+    "interests": [
+      "spiritual"
+    ],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "פנייה לעמותת צל\"ש.",
+    "source_url": "https://www.maariv.co.il/news/israel/Article-1057094",
+    "confidence": "medium"
+  },
+  {
+    "name": "פורום נשות המילואים – קהילת תמיכה למשרתות מילואים",
+    "category": "peer-support",
+    "description": "קהילה פיזית ווירטואלית שמנוהלת על ידי מתנדבות ומשמשת רשת תמיכה לנשים המשרתות במילואים. הפורום פועל גם מול צה\"ל והכנסת לקידום מענים לנשים במילואים ולמשפחותיהן.",
+    "provider_type": "ngo",
+    "eligibility": [
+      "reservists"
+    ],
+    "difficulties": [
+      "loneliness",
+      "anxiety",
+      "family-relations"
+    ],
+    "interests": [],
+    "cost": "free",
+    "cost_notes": "",
+    "regions": [
+      "nationwide",
+      "online"
+    ],
+    "location": "",
+    "phone": "",
+    "email": "",
+    "website": "",
+    "how_to_apply": "הצטרפות דרך קבוצת הפייסבוק של הפורום.",
+    "source_url": "https://www.inn.co.il/news/654322",
+    "confidence": "low"
+  }
+]
