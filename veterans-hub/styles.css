@@ -307,3 +307,29 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .area-hero h1 { margin: 0; font: inherit; }
 .area-hero .word.long { font-size: clamp(46px, 14vw, 72px); white-space: nowrap; }
 html, body { overflow-x: hidden; }
+
+/* ---------- אזימוט: לוגו, כריכה, ביקור חוזר ---------- */
+.brand { display: inline-flex; align-items: center; gap: 8px; font-family: var(--display); font-weight: 400; font-size: 24px; }
+.brand .logo { display: block; }
+.welcome { display: flex; flex-direction: column; }
+.lockup { display: flex; align-items: center; gap: 14px; margin-top: 6px; }
+.lockup .logo { flex: none; }
+.wordmark { font-family: var(--display); font-size: clamp(42px, 13vw, 54px); line-height: 1; }
+.tagline { font-family: var(--hand); font-size: 16px; margin-top: 4px; }
+.welcome-title { font-family: var(--hand); font-weight: 800; font-size: clamp(23px, 6.8vw, 28px); line-height: 1.25; margin-top: 18px; }
+.welcome-sub { margin-top: 8px; font-size: 15.5px; line-height: 1.55; }
+.route { list-style: none; position: relative; margin: 20px 0 0; padding: 0 46px 0 0; display: flex; flex-direction: column; gap: 14px; }
+.route li { position: relative; display: flex; flex-direction: column; }
+.route strong { font-family: var(--display); font-weight: 400; font-size: 20px; }
+.route li > span:last-child { font-size: 14px; color: var(--muted); }
+.route .st-node { position: absolute; right: -46px; top: -2px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: var(--tint); border: var(--stroke) solid var(--ink); border-radius: 52% 48% 55% 45%; font-family: var(--hand); font-weight: 800; font-size: 15px; color: var(--ink); }
+.welcome-cta { margin-top: 24px; min-height: 64px; flex-direction: column; gap: 2px; }
+.welcome-cta .big { font-family: var(--display); font-size: 22px; }
+.welcome-cta .small { font-family: var(--hand); font-size: 13px; }
+.welcome-alt { text-align: center; margin-top: 12px; font-size: 15px; }
+.center { text-align: center; }
+.stations.compact { gap: 18px; }
+.stations.compact h2 { font-size: 23px; }
+.area-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.area-chip { min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; background: var(--tint); color: var(--ink); border-radius: 48% 52% 46% 54% / 54% 46% 56% 44%; font-family: var(--display); font-size: 19px; text-decoration: none; }
+.area-chip:nth-child(even) { border-radius: 52% 48% 55% 45%; }

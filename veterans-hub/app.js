@@ -187,8 +187,75 @@
     draw();
   }
 
+  // הלוגו: מצפן, קווי גובה, ושביל מנוקד שמוביל לחץ. detail=false לגדלים קטנים.
+  const LOGO = (size, detail = true) => `<svg class="logo" aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 240 240" fill="none">
+    ${detail ? `<defs><clipPath id="lg-disc"><circle cx="120" cy="120" r="93"/></clipPath></defs>` : ""}
+    <path d="M120 22 C 176 20, 220 64, 218 121 C 216 175, 173 219, 118 217 C 64 215, 21 172, 23 118 C 25 64, 66 23, 123 24" fill="var(--t-sea)" stroke="currentColor" stroke-width="${detail ? 6 : 12}" stroke-linecap="round"/>
+    ${detail ? `<g clip-path="url(#lg-disc)" stroke="currentColor" stroke-linecap="round" fill="none">
+      <path d="M14 128 C 40 116, 62 140, 92 128 C 120 116, 142 140, 172 126 C 196 116, 214 132, 232 124" stroke-width="4.5"/>
+      <path d="M40 160 C 66 150, 84 170, 110 160 C 136 150, 156 168, 200 156" stroke-width="3.2"/>
+      <path d="M60 188 C 84 180, 104 194, 128 186 C 150 180, 166 190, 186 184" stroke-width="3.2"/></g>` : ""}
+    <path d="M120 24 L 120 44" stroke="currentColor" stroke-width="${detail ? 6 : 12}" stroke-linecap="round"/>
+    <path d="M48 210 C 58 198, 70 192, 84 186 C 100 180, 108 170, 122 162 C 138 152, 154 140, 160 118 C 164 106, 168 96, 170 90" stroke="currentColor" stroke-width="${detail ? 5 : 10}" stroke-linecap="round" stroke-dasharray="0.1 ${detail ? 14 : 26}"/>
+    ${detail ? `<circle cx="44" cy="214" r="9" fill="var(--paper)" stroke="currentColor" stroke-width="4.5"/>` : ""}
+    <path d="M116 124 C 132 108, 150 92, 170 72" stroke="currentColor" stroke-width="${detail ? 9 : 16}" stroke-linecap="round"/>
+    <path d="M150 70 C 160 69, 168 68, 175 67 C 174 74, 173 82, 173 90" stroke="currentColor" stroke-width="${detail ? 9 : 16}" stroke-linecap="round" stroke-linejoin="round"/>
+    ${detail ? `<circle cx="116" cy="124" r="10" fill="var(--paper)" stroke="currentColor" stroke-width="5"/>` : ""}
+  </svg>`;
+
   // ---------- views ----------
+  // דף הבית: ביקור ראשון = כריכה שהופכת למסלול. מי שכבר ענה על השאלון = התחנות שלו.
   function viewHome() {
+    const prof = loadProfile();
+    if (prof) return viewReturning(prof);
+    $main.innerHTML = `
+      <section class="welcome">
+        <div class="lockup">${LOGO(96)}<div><div class="wordmark">אזימוט</div><div class="tagline">הכיוון הבא שלך</div></div></div>
+        <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
+        <p class="welcome-sub">טיפול, חוות, ים, ספורט, מענקים וזכויות. לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. רובו בלי עלות.</p>
+        <ol class="route lined">
+          ${HAND_LINE}
+          <li><span class="st-node area-soul">1</span><strong>מספרים קצת</strong><span>מה המצב, מה קשה, מה מדבר אליך</span></li>
+          <li><span class="st-node area-sea">2</span><strong>מקבלים 3 תחנות</strong><span>מקומות שמתאימים לך, מתחומים שונים</span></li>
+          <li><span class="st-node area-land">3</span><strong>פונים</strong><span>מתקשרים ישר, או מבקשים שיחזרו אליך</span></li>
+        </ol>
+        <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות · דקה · אפשר לדלג</span></a>
+        <p class="welcome-alt">או <a class="link-u" href="#/explore">לחפש לבד</a> · <a class="link-u" href="#/rights">מה מגיע לי</a></p>
+        <p class="note quiet center">${SERVICES.length} מקומות · נבדק מול מקורות רשמיים · נבנה עם הקהילה</p>
+      </section>`;
+  }
+
+  // ביקור חוזר: 3 התחנות, ומתחת לשוטט לבד
+  function viewReturning(p) {
+    const res = match(p);
+    const first = [];
+    for (const r of res) { if (first.length < 3 && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
+    const SHORTS = { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך הכרה", "not-recognized": "עוד לא מוכר/ת", "reservists": "מילואים",
+      "combat-soldiers": "לוחם/ת", "police": "משטרה", "security-forces": "כוחות ביטחון", "families": "משפחה", "bereaved": "משפחה שכולה",
+      "terror-victims": "נפגע/ת איבה", "civilians": "אזרח/ית" };
+    const who = [...p.statuses.map(x => SHORTS[x]).slice(0, 2), ...p.regions.map(r => T.regions[r]).slice(0, 1)].filter(Boolean).join(" · ");
+    $main.innerHTML = `
+      <section>
+        <h1 class="page-title">התחנות שלך</h1>
+        <p class="lead">${esc(who)}${who ? " · " : ""}<a class="link-u" href="#/match">לשנות</a></p>
+        ${first.length ? `<ol class="stations lined compact">
+          ${HAND_LINE}
+          ${first.map((r, n) => `<li>
+            <span class="st-node" aria-hidden="true">${n + 1}</span>
+            <div class="tag-row">${starTag(r.s)}${areaTag(r.s)}</div>
+            <h2 data-open="${esc(r.s.id)}" tabindex="0" role="button">${nameHtml(r.s.name)}</h2>
+            ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך")[0] || r.why[0])}</span>` : ""}
+          </li>`).join("")}
+        </ol>
+        <p class="actions"><a class="link-u" href="#/results">לכל התחנות שלך (${res.length}) ←</a></p>` : `<p class="empty">לא מצאנו התאמה. <a href="#/match">לשנות תשובות</a></p>`}
+        <h2 class="section-title">או לשוטט לבד</h2>
+        <div class="area-chips">${Object.keys(AREAS).map(k => `<a class="area-chip area-${k}" href="#/area?a=${k}">${esc(AREAS[k].label)}</a>`).join("")}</div>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>מכירים מקום שעוזר ולא מופיע?</strong><br>להוסיף בדקה</span></a>
+      </section>`;
+  }
+
+  // כל התחומים (מה שהיה דף הבית)
+  function viewExplore() {
     const prof = loadProfile();
     const counts = {};
     SERVICES.forEach(s => { const a = areaOf(s.category); counts[a] = (counts[a] || 0) + 1; });
@@ -723,7 +790,7 @@
     if (!s) return;
     const links = [];
     if (s.phone && isMobile(s.phone)) links.push(`<a class="link-u" href="${waHref(s.phone)}" target="_blank" rel="noopener">וואטסאפ</a>`);
-    if (s.email) links.push(`<a class="link-u" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך מגיע לך — " + s.name)}">מייל</a>`);
+    if (s.email) links.push(`<a class="link-u" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך אזימוט: " + s.name)}">מייל</a>`);
     if (s.website) links.push(`<a class="link-u" href="${esc(safeUrl(s.website))}" target="_blank" rel="noopener">לאתר</a>`);
     links.push(`<button class="link-u" type="button" id="lead-toggle">שיחזרו אליי</button>`);
     const who = arr(s.eligibility).map(k => T.eligibility[k]).filter(Boolean);
@@ -861,13 +928,14 @@
     const h = location.hash.replace(/^#/, "") || "/";
     const [path, qs] = h.split("?");
     const params = new URLSearchParams(qs || "");
-    document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", path === "/" + a.dataset.nav || (a.dataset.nav === "" && path === "/area")));
+    document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", path === "/" + a.dataset.nav || (a.dataset.nav === "explore" && path === "/area")));
     await ensureLive();
     if (path === "/match") viewMatch();
     else if (path === "/results") viewResults();
     else if (path === "/browse") viewBrowse(params);
     else if (path === "/rights") viewRights(params);
     else if (path === "/area") viewArea(params);
+    else if (path === "/explore") viewExplore();
     else if (path === "/help") viewHelp();
     else if (path === "/privacy") viewPrivacy();
     else if (path === "/add" || path === "/provider") viewAdd(params);
@@ -893,6 +961,8 @@
     try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage blocked */ }
   };
 
+  const bl = document.getElementById("brand-logo");
+  if (bl) bl.innerHTML = LOGO(30, false);
   document.getElementById("data-stamp").textContent = window.SERVICES_UPDATED ? "המאגר עודכן: " + window.SERVICES_UPDATED : "";
   route();
 })();

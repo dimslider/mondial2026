@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- אייקון: כתם צבע של "ים" וקו יד אחד, על נייר בהיר -->
+<!-- אייקון אזימוט: מצפן בצבע "ים", קו גובה, שביל מנוקד וחץ לכיוון -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
     <path android:fillColor="#E4ECEC" android:pathData="M0,0h108v108h-108z" />
-    <path android:fillColor="#9EC0C8"
-        android:pathData="M30,40 C44,26 74,28 82,44 C90,60 76,80 56,80 C36,80 18,56 30,40 Z" />
-    <path android:strokeColor="#151515" android:strokeWidth="4" android:strokeLineCap="round"
-        android:fillColor="#00000000"
-        android:pathData="M22,62 Q31,52 40,62 T58,62 T76,62 T94,58" />
-    <path android:strokeColor="#151515" android:strokeWidth="4" android:strokeLineCap="round"
-        android:fillColor="#00000000"
-        android:pathData="M54,22 C50,30 58,34 54,42" />
+    <path android:fillColor="#9EC0C8" android:strokeColor="#151515" android:strokeWidth="3.2"
+        android:pathData="M54,24.5 C70.5,24 84,37.5 83.5,54.3 C83,70.5 70,83.7 53.7,83.2 C37.5,82.7 24.3,69.7 24.8,53.5 C25.3,37.5 37.8,24.8 54.8,25" />
+    <path android:strokeColor="#151515" android:strokeWidth="2" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M28.5,58 C36,54.5 42,61.5 50.5,58 C58.5,54.5 66,61.5 79.5,57" />
+    <path android:strokeColor="#151515" android:strokeWidth="3.2" android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M54,25.5 L54,31" />
+    <path android:fillColor="#151515" android:pathData="M30.5,78 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path android:fillColor="#151515" android:pathData="M38.5,74.5 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path android:fillColor="#151515" android:pathData="M46.5,70.5 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path android:fillColor="#151515" android:pathData="M54.5,66 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path android:fillColor="#151515" android:pathData="M61,60 m-1.8,0 a1.8,1.8 0 1,0 3.6,0 a1.8,1.8 0 1,0 -3.6,0" />
+    <path android:strokeColor="#151515" android:strokeWidth="4.5" android:strokeLineCap="round" android:strokeLineJoin="round" android:fillColor="#00000000"
+        android:pathData="M52.8,55.2 L69,39.6 M62.4,39 L70.8,38.1 L70.2,46.2" />
 </vector>
