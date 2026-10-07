@@ -142,6 +142,13 @@ def main():
             s["id"] += "x"
         seen.add(s["id"])
 
+    # סימון אימות מול אתר הגוף עצמו (tools/verify_sources.py)
+    ver_path = ROOT / "research" / "verification.json"
+    ver = {r["id"]: r for r in json.loads(ver_path.read_text(encoding="utf-8"))} if ver_path.exists() else {}
+    for s in merged:
+        r = ver.get(s["id"])
+        s["verified_at"] = r["checked_at"] if r and r.get("ok") else ""
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(

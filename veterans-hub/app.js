@@ -101,6 +101,7 @@
     tags.push(`<span class="tag cost-${esc(s.cost)}">${esc(costLabel(s.cost))}</span>`);
     arr(s.regions).slice(0, 2).forEach(r => tags.push(`<span class="tag">${esc(T.regions[r] || r)}</span>`));
     if (s.source === "provider") tags.push(`<span class="tag tag-new">הצטרף ללוח</span>`);
+    else if (s.verified_at) tags.push(`<span class="tag tag-ok">✓ מאומת</span>`);
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
         <div class="card-cat">${catIcon(s.category)} ${esc(catLabel(s.category))}</div>
@@ -513,7 +514,10 @@
         <button class="btn btn-primary">שליחת פנייה</button>
         <p class="form-msg" role="status"></p>
       </form>
-      ${s.source_url ? `<p class="source">מקור: <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a>${s.confidence === "low" ? " · <em>מידע שלא אומת במלואו — כדאי לבדוק מול הגוף</em>" : ""}</p>` : ""}`;
+      <p class="verify ${s.verified_at ? "verify-ok" : "verify-no"}">${s.verified_at
+        ? "✓ הפרטים אומתו מול אתר הגוף ב-" + esc(s.verified_at)
+        : "⚠ הפרטים עוד לא אומתו מול אתר הגוף עצמו. לפני שמגיעים, כדאי לוודא איתם טלפונית."}</p>
+      ${s.source_url ? `<p class="source">מקור: <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a></p>` : ""}`;
     $modal.hidden = false;
     document.body.classList.add("no-scroll");
     $modal.querySelector(".modal-x").focus();

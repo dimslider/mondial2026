@@ -2,3 +2,5 @@ tools/telegram_out/
 result.json
 **/result.json
 __pycache__/
+veterans-hub/research/pages/
+research/pages/

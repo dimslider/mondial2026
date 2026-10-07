@@ -1,5 +1,5 @@
 // נוצר אוטומטית ע"י tools/build_data.py — לא לערוך ידנית; לעדכן את קבצי המחקר ולהריץ מחדש.
-window.SERVICES_UPDATED = "2026-10-06";
+window.SERVICES_UPDATED = "2026-10-07";
 window.SERVICES = [
  {
   "id": "1202-org-il-0bf488",
@@ -30,7 +30,8 @@ window.SERVICES = [
   "website": "https://www.1202.org.il",
   "how_to_apply": "לפנות דרך אתר האיגוד או לקווי הסיוע המפורסמים בו.",
   "source_url": "https://www.1202.org.il/education-and-trainings",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-3f6563",
@@ -61,7 +62,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג 02-6269999.",
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/Pages/KavHeromHB.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-cd9956",
@@ -99,7 +101,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג *8944 בכל שעה.",
   "source_url": "https://www.maariv.co.il/news/military/article-937035",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-cbf1f7",
@@ -131,7 +134,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג *6500.",
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/moked-harvot",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-9b7f6c",
@@ -160,7 +164,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג 1111 ולבחור את השלוחה המתאימה.",
   "source_url": "https://www.kolzchut.org.il/he/מוקד_שירות_ארצי:מוקד_השירות_של_צה%22ל",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-8909d4",
@@ -188,7 +193,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג 1111 ולבחור את השלוחה המתאימה (לפניות כלליות: שלוחה 5 ואז 4).",
   "source_url": "https://www.kolzchut.org.il/he/מוקד_שירות_ארצי:מוקד_השירות_של_צה%22ל",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-b3abee",
@@ -221,7 +227,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג *5486 בימים א'–ה' בשעות 08:00–20:00.",
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-e49db4",
@@ -264,7 +271,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג 1-800-363-363 בכל שעה, באופן אנונימי.",
   "source_url": "https://www.kan.org.il/content/kan-news/local/598910/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "new-sahar-org-il-50ed06",
@@ -303,7 +311,8 @@ window.SERVICES = [
   "website": "https://new.sahar.org.il",
   "how_to_apply": "להיכנס לצ'אט באתר סה\"ר בשעות הפעילות, או לכתוב ל-sahar.help@sahar.org.il.",
   "source_url": "https://www.kolzchut.org.il/he/סהר_-_סיוע_והקשבה_ברשת",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-4f39e6",
@@ -344,7 +353,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג 1201 (24/7), או לשלוח הודעת וואטסאפ ל-052-845-1201, או להיכנס לצ'אט באתר ער\"ן.",
   "source_url": "https://www.kolzchut.org.il/he/ער\"ן_-_עזרה_ראשונה_נפשית_בטלפון_ובאינטרנט",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-7acfcf",
@@ -379,7 +389,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותה (דרך דף הגיוס/תרומות או הפניה מטפל).",
   "source_url": "https://archive.israel21c.org/?p=154392",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-26fa24",
@@ -412,7 +423,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותת בלב אחד; העמותה עובדת בשיתוף משרד הביטחון.",
   "source_url": "https://www.jns.org/canine-therapy-helps-soldiers-cope-with-ptsd/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-ab8b91",
@@ -448,7 +460,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לחווה או דרך עמותת 'ישר לחייל' לבירור מימון.",
   "source_url": "https://yasharlachayal.org/therapy-for-soldiers-with-ptsd-2/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-7a1ef5",
@@ -481,7 +494,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעובד/ת השיקום ולבקש הפניה לספק כלבי שירות מוכר של משרד הביטחון.",
   "source_url": "https://www.kolzchut.org.il/he/כלבי_שירות_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-52db99",
@@ -513,7 +527,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותה.",
   "source_url": "https://www.jns.org/canine-therapy-helps-soldiers-cope-with-ptsd/",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "israelguidedog-org-49be3a",
@@ -550,7 +565,8 @@ window.SERVICES = [
   "website": "https://israelguidedog.org",
   "how_to_apply": "פונים למרכז דרך האתר ומגישים בקשה לתוכנית כלבי שירות ל-PTSD; מוכרי אגף השיקום יכולים לתאם גם דרך עו\"ס/רכז השיקום לקבלת השתתפות במימון.",
   "source_url": "https://israelguidedog.org/service-dogs/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "icm-org-il-5c59e7",
@@ -585,7 +601,8 @@ window.SERVICES = [
   "website": "https://www.icm.org.il/en/soulkey/",
   "how_to_apply": "לפנות לקונסרבטוריון דרך עמוד התכנית באתר ולתאם שיחת היכרות.",
   "source_url": "https://www.icm.org.il/en/soulkey/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-0c18b1",
@@ -617,7 +634,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק פרטי הקשר בכתבה ולפנות למארגני התכנית.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1278435",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-fe99ed",
@@ -651,7 +669,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין השיקום ולבקש אישור מימון לחוג/סדנה.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%98%D7%A8%D7%95%D7%9D_%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9C%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "inz-org-il-b68995",
@@ -687,7 +706,8 @@ window.SERVICES = [
   "website": "https://www.inz.org.il",
   "how_to_apply": "להצטרף כחבר בארגון נכי צה\"ל ולהירשם בבית הלוחם הקרוב.",
   "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-73dd3b",
@@ -718,7 +738,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבקש סיוע או להירשם להתנדבות באתר לב אחד.",
   "source_url": "https://www.runi.ac.il/en/students/dean/community-service/lev-echad",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-884706",
@@ -748,7 +769,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לתוכנית דרך הגורמים המפעילים שפורסמו בכתבה.",
   "source_url": "https://www.maariv.co.il/economy/israel/article-1091651",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-6de9e7",
@@ -777,7 +799,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש דרך מערכת הבקשות של אגף המילואים/דיקנאט המוסד לפי הנחיות השנה.",
   "source_url": "https://www.study.co.il/P47361/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-06d5ab",
@@ -806,7 +829,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם באתר MiluimTech ולהשתתף באירועי נטוורקינג ומנטורינג.",
   "source_url": "https://www.jewishnews.co.uk/top-tech-companies-are-helping-reservists-catch-up-professionally/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "inz-org-il-c2788c",
@@ -839,7 +863,8 @@ window.SERVICES = [
   "website": "https://www.inz.org.il",
   "how_to_apply": "לפנות לסניף ארגון נכי צה\"ל הקרוב ולבקש מלווה תעסוקתי.",
   "source_url": "https://www.drushim.co.il/job/37650783/aeba30dc/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "hachvana-mod-gov-il-543dde",
@@ -868,7 +893,8 @@ window.SERVICES = [
   "website": "https://www.hachvana.mod.gov.il",
   "how_to_apply": "לקבוע פגישת ייעוץ באתר hachvana.mod.gov.il או להגיע ללשכה.",
   "source_url": "https://www.kolzchut.org.il/he/האגף_לחיילים_משוחררים_ומילואים",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "innovationisrael-org-il-c39e04",
@@ -898,7 +924,8 @@ window.SERVICES = [
   "website": "https://innovationisrael.org.il",
   "how_to_apply": "לעקוב אחר מפעילי התכניות שנבחרו בקול הקורא באתר רשות החדשנות ולהירשם אצלם.",
   "source_url": "https://innovationisrael.org.il/en/press_release/reservists-ai-training/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-86fc20",
@@ -927,7 +954,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה דרך קצין השיקום באגף השיקום עם תכנית עסקית.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9B%D7%9C%D7%9B%D7%9C%D7%99_%D7%9C%D7%A2%D7%A6%D7%9E%D7%90%D7%99%D7%9D_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-439179",
@@ -956,7 +984,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לדיקנאט הסטודנטים/מדור מילואים במוסד עם אישור שירות.",
   "source_url": "https://rector.huji.ac.il/sites/default/files/rector/files/bny_vbnvt_zvg_lmylvymnyqym.pdf",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-576196",
@@ -991,7 +1020,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש מועמדות דרך עמותת לצמוח כמנצחים/HackerU; עוברים אבחון התאמה מקצועי.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1193939",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-8cc91c",
@@ -1021,7 +1051,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להצטרף לקהילה דרך קבוצות הרשת החברתית/לינקדאין של \"מילואים להייטק\".",
   "source_url": "https://www.maariv.co.il/news/israel/article-1177875",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-cf3a6e",
@@ -1051,7 +1082,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לאגף משפחות והנצחה במשרד הביטחון.",
   "source_url": "https://www.kolzchut.org.il/he/מימון_לימודי_תעודה_מקצועית_ותואר_ראשון_לאחים_שכולים",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-cc3e83",
@@ -1080,7 +1112,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לעקוב אחר פרסומי בני ברית ישראל ולהגיש בחלון ההגשה.",
   "source_url": "https://www.maariv.co.il/news/military/Article-1124429",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-46d014",
@@ -1109,7 +1142,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש דרך מדור המלגות של המוסד האקדמי בחלון ההגשה של FIDF.",
   "source_url": "https://dekanat.haifa.ac.il/student-services/scholarship-department/scholarship-types/other-financial-aid-scholarships/impact-program-scholarships-of-friends-of-the-idf-usa/?lang=en",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-fea95d",
@@ -1137,7 +1171,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק בדיקנאט הסטודנטים אם המוסד משתתף ולהגיש לפי התקנון.",
   "source_url": "https://www.jce.ac.il/wp-content/uploads/2025/10/תקנון-מלגת-גראס-מילואים-תשפו.pdf",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-924578",
@@ -1165,7 +1200,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה מקוונת בחלון ההגשה השנתי (אוגוסט–ספטמבר) דרך הקרן להכוונת חיילים משוחררים/דיקנאט הסטודנטים.",
   "source_url": "https://wgalil.ac.il/wp-content/uploads/2026/08/august_hot_scholarships.pdf",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-35f9cf",
@@ -1194,7 +1230,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם באתר/טופס המיזם \"מסייעטק\" ולהיות מותאם למנטור.",
   "source_url": "https://finance.walla.co.il/item/3733572",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-a8cf52",
@@ -1223,7 +1260,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לדיקנט הסטודנטים / רכז/ת המילואים במוסד עם אישור שירות.",
   "source_url": "https://Afeka.ac.il/media/h4zb5zpc/%D7%AA%D7%99%D7%A7%D7%95%D7%9F-%D7%9C%D7%9B%D7%9C%D7%9C%D7%99-%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA-%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98-%D7%94%D7%95%D7%A8%D7%90%D7%AA-%D7%A9%D7%A2%D7%94-%D7%97%D7%A8%D7%91%D7%95%D7%AA-%D7%91%D7%A8%D7%96%D7%9Ccleanedcleaned.pdf",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-410036",
@@ -1253,7 +1291,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה דרך אתר המילואים / המוקד המשולם של צה\"ל עם אישור לימודים וקבלות.",
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-ce9f44",
@@ -1290,7 +1329,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לתאם עם עובד/ת השיקום את הפעילות ולקבל אישור מימון מראש.",
   "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-d7fcbc",
@@ -1322,7 +1362,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין השיקום ולבקש תכנית שיקום מקצועי.",
   "source_url": "https://www.kolzchut.org.il/he/שיקום_מקצועי_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-1685e6",
@@ -1354,7 +1395,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין/ת השיקום באגף השיקום ולבנות תכנית שיקום מקצועי.",
   "source_url": "https://www.kolzchut.org.il/he/שיקום_מקצועי_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-6b9358",
@@ -1387,7 +1429,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבנות תכנית שיקום עם עובד/ת השיקום ולהגיש בקשה למימון לימודים/הכשרה.",
   "source_url": "https://www.bhol.co.il/news/1740932",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-31a611",
@@ -1416,7 +1459,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם באתר שירות התעסוקה או בלשכה הקרובה ולבקש שיבוץ לתכנית למשרתי מילואים/שובר הכשרה.",
   "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-89242c",
@@ -1445,7 +1489,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם לפר\"ח ולהציג אישור ימי מילואים לרכז/ת.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%AA%D7%95%D7%A1%D7%A4%D7%AA_%D7%9C%D7%9E%D7%9C%D7%92%D7%AA_%D7%A4%D7%A8%22%D7%97_%D7%9C%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D_%D7%91%D7%92%D7%99%D7%9F_%D7%A9%D7%99%D7%A8%D7%95%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-916d67",
@@ -1472,7 +1517,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם דרך Early Starters / הרשות המקומית בשאלה על מחזור קרוב.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1279396",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-c27dad",
@@ -1501,7 +1547,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להצטרף דרך עמוד האינסטגרם/פייסבוק של \"חבר שלי לוחם\".",
   "source_url": "https://www.maariv.co.il/news/israel/article-1089149",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-ae4041",
@@ -1530,7 +1577,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לאגודה לבריאות הציבור דרך פרטי התכנית בכתבה.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1316749",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-8adf2f",
@@ -1561,7 +1609,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לעקוב אחר פרסומי הסוכנות היהודית והרשויות בצפון על מחזור הקיץ.",
   "source_url": "https://www.maariv.co.il/news/world/article-1361340",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "onefamilytogether-org-7a58af",
@@ -1597,7 +1646,8 @@ window.SERVICES = [
   "website": "https://onefamilytogether.org/en/about-us/",
   "how_to_apply": "לפנות לארגון דרך האתר ולבקש שיבוץ לעובדת/עובד סוציאלי ולתוכנית מתאימה.",
   "source_url": "https://onefamilytogether.org/en/about-us/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-f3e035",
@@ -1625,7 +1675,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "ליצור קשר עם העמותה דרך אתרה/רשתות חברתיות ולהצטרף לקהילה ולמפגשים.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1230840",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-fa0927",
@@ -1657,7 +1708,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לארגון ולהירשם כחבר/ה.",
   "source_url": "https://www.kolzchut.org.il/he/ארגון_אלמנות_ויתומי_צה%22ל",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-9989e0",
@@ -1689,7 +1741,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לברר באתר החברה להגנת הטבע.",
   "source_url": "https://natureisrael.org/natureheals",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-204716",
@@ -1721,7 +1774,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לחווה או דרך עמותת 'עוגן למשפחות המילואים'.",
   "source_url": "https://www.maariv.co.il/breaking-news/article-1176043",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-9bea4c",
@@ -1749,7 +1803,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין השיקום של הנכה ולהגיש בקשה לטיפול לבן המשפחה.",
   "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_לבני_משפחה_של_נכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-7dfee1",
@@ -1778,7 +1833,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעובד/ת השיקום של הנכה ולבקש אישור טיפול לבן/בת המשפחה.",
   "source_url": "https://shikum.mod.gov.il/family/support/therapy",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "yadlabanim-org-14efc9",
@@ -1809,7 +1865,8 @@ window.SERVICES = [
   "website": "https://yadlabanim.org",
   "how_to_apply": "לפנות לסניף יד לבנים הקרוב.",
   "source_url": "https://yadlabanim.org/wp-content/uploads/2023/04/אגרת-מידע-לאחים-השכולים.pdf",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-a1241c",
@@ -1840,7 +1897,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למארגנות המוזכרות בכתבה.",
   "source_url": "https://www.maariv.co.il/news/health/article-1162445",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-4b36e4",
@@ -1877,7 +1935,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשת החזר באתר המילואים (miluim.idf.il) / מרכז מילואים 360 עם קבלות, עד סוף 2026.",
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%A2%D7%98%D7%A4%D7%AA-%D7%98%D7%99%D7%A4%D7%95%D7%9C%D7%99%D7%9D-%D7%A8%D7%92%D7%A9%D7%99%D7%99%D7%9D/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-b24e1c",
@@ -1906,7 +1965,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש תביעה באתר ביטוח לאומי, בעמוד המענק לבני זוג של משרתי מילואים.",
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/Pages/MankMiloeimHB.aspx",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "lonesoldiercenter-com-801633",
@@ -1935,7 +1995,8 @@ window.SERVICES = [
   "website": "https://lonesoldiercenter.com",
   "how_to_apply": "לפנות דרך אתר המרכז lonesoldiercenter.com.",
   "source_url": "https://magazine.esra.org.il/posts/entry/never-alone-the-heart-and-mission-of-the-lone-soldier-center.html",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-f3e9cb",
@@ -1967,7 +2028,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להתקשר לקו הסיוע ולציין שמדובר בבן/בת משפחה של לוחם.",
   "source_url": "https://www.maariv.co.il/news/israel/Article-697723",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-fc20bd",
@@ -1996,7 +2058,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק מול הרשות המקומית/משרד החינוך לגבי קייטנות, ומול ביטוח לאומי לגבי דמי אבטלה לבן/בת הזוג.",
   "source_url": "https://www.timesofisrael.com/liveblog_entry/government-allocates-56-million-more-for-benefits-for-idf-reservists/",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-08c8d9",
@@ -2029,7 +2092,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לארגון Selah (באמצעות אתר הארגון) – מיועד לעולים חדשים במשבר.",
   "source_url": "https://jewishindependent.ca/oldsite/archives/oct03/archives03oct17-05.html",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-23fb72",
@@ -2061,7 +2125,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לארגון 'עוגן למשפחות המילואים'.",
   "source_url": "https://www.maariv.co.il/breaking-news/article-1176043",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-11279f",
@@ -2089,7 +2154,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למוקד העירוני/מינהל הרווחה בעיריית ירושלים ולבקש את מערך המילואימניקים.",
   "source_url": "https://www.kipa.co.il/כדאי-לדעת/1194386-0/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-abf8ab",
@@ -2119,7 +2185,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעמותה דרך הרשתות החברתיות של \"אחותי\".",
   "source_url": "https://www.maariv.co.il/news/israel/article-1230840",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-b5c953",
@@ -2147,7 +2214,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעובד/ת הסוציאלי/ת או קצין השיקום באגף השיקום.",
   "source_url": "https://www.kolzchut.org.il/he/הלוואה_ומענק_לכיסוי_חובות_של_נכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-ac4a8b",
@@ -2175,7 +2243,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לאגף משפחות והנצחה במשרד הביטחון עם תכנית עסקית.",
   "source_url": "https://www.kolzchut.org.il/he/הלוואה_למימון_עסק_עצמאי_לבני_משפחה_של_חללי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-cf90e9",
@@ -2203,7 +2272,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להציג אישור נכות מאגף השיקום ברשות המסים בעת דיווח על הרכישה.",
   "source_url": "https://www.kolzchut.org.il/he/הנחה_במס_רכישה_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "yasharlachayal-org-c8a54e",
@@ -2234,7 +2304,8 @@ window.SERVICES = [
   "website": "https://yasharlachayal.org",
   "how_to_apply": "פנייה לארגון דרך האתר.",
   "source_url": "https://yasharlachayal.org/therapy-for-soldiers-with-ptsd-2/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-66adbb",
@@ -2266,7 +2337,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פונים לרכז/ת השיקום באגף השיקום במשרד הביטחון ומבקשים מימון כלב שירות; נדרשת הכרה בנכות של 20% לפחות על PTSD.",
   "source_url": "https://www.kolzchut.org.il/he/כלבי_שירות_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-7e5880",
@@ -2298,7 +2370,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פונים לאגף נפגעי פעולות איבה בביטוח הלאומי (או לעו\"ס המטפל) ומגישים בקשה לכלב שירות.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/Celev_Sherut.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-bedbcf",
@@ -2328,7 +2401,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "הזכאות נקבעת לפי ימי שירות; ההנפקה נעשית דרך מערכי המילואים – לבדוק בעמוד הטבות לחיילי מילואים בכל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%9C%D7%97%D7%99%D7%99%D7%9C%D7%99_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-62e3dc",
@@ -2356,7 +2430,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק זכאות באזור האישי באתר המילואים; רוב התשלומים מועברים אוטומטית.",
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-b27ba7",
@@ -2385,7 +2460,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם באתר המועדון עם פרטי שירות; ההטבות ממומשות באתר ובבתי העסק השותפים.",
   "source_url": "https://protocol.co.il/behatsdaa/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-1f8e0a",
@@ -2414,7 +2490,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק באתר הסוכנות היהודית/בבנק שבו מתנהל חשבון העסק (הפועלים, דיסקונט, הבינלאומי, לאומי, מזרחי-טפחות, יהב, מסד, מרכנתיל) את חלון ההגשה הפעיל; להכין אישור ימי מילואים ונתוני מחזור.",
   "source_url": "https://www.maariv.co.il/economy/israel/article-1122748",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-cf9d05",
@@ -2449,7 +2526,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה דרך קצין השיקום באגף השיקום עם פירוט הפעילות המבוקשת.",
   "source_url": "https://www.kolzchut.org.il/he/פעילויות_טרום_שיקום_לנכי_צה%22ל_וכוחות_הביטחון_נפגעי_פוסט_טראומה",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-52f696",
@@ -2477,7 +2555,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק תנאי זכאות ואופן הגשה בדף כל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%9E%D7%A2%D7%A0%D7%A7_%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA_%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D_%D7%91%D7%9E%D7%9C%D7%97%D7%9E%D7%AA_%D7%97%D7%A8%D7%91%D7%95%D7%AA_%D7%91%D7%A8%D7%96%D7%9C_%D7%A9%D7%94%D7%95%D7%90_%D7%94%D7%95%D7%A8%D7%94_%D7%9C%D7%99%D7%9C%D7%93_%D7%A2%D7%9D_%D7%A6%D7%A8%D7%9B%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-26de9b",
@@ -2505,7 +2584,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "בדרך כלל משולם אוטומטית; לבדוק בכל-זכות ובאתר המילואים של צה\"ל אם נדרשת הגשה.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_משפחה_מוגדל_למי_ששירתו_בצו_8_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-b92b34",
@@ -2534,7 +2614,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף נפגעי פעולות איבה בביטוח הלאומי.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Casualties_benefits/%D7%94%D7%98%D7%91%D7%95%D7%AA%20%D7%95%D7%9E%D7%A2%D7%A0%D7%A7%D7%99%D7%9D/Pages/%D7%A1%D7%99%D7%95%D7%A2%20%D7%91%D7%A8%D7%9B%D7%99%D7%A9%D7%AA%20%D7%A8%D7%9B%D7%91%20%D7%A8%D7%A4%D7%95%D7%90%D7%99.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-677d83",
@@ -2561,7 +2642,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש באזור האישי באתר רשות המסים (מערכת מענקי חרבות ברזל), בעצמך או דרך רואה חשבון.",
   "source_url": "https://finance.walla.co.il/item/3682332",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-9e02b4",
@@ -2595,7 +2677,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם לליווי באתר עמותת פעמונים; מתנדב/ת יוצרים קשר ומתחילים תהליך של כ-שנה.",
   "source_url": "https://www.kipa.co.il/כדאי-לדעת/1223070-0/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-f15e80",
@@ -2623,7 +2706,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לעקוב אחר הודעות הסוכנות היהודית על פתיחת סבב הגשה; להגיש בקשה מקוונת עם אישור שירות המילואים של בן/בת הזוג ונתוני העסק.",
   "source_url": "https://www.ynetnews.com/business/article/bjev5c8k11g",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "miluim-idf-il-c6491b",
@@ -2653,7 +2737,8 @@ window.SERVICES = [
   "website": "https://www.miluim.idf.il",
   "how_to_apply": "להגיש בקשה דרך אתר המילואים (miluim.idf.il); בקשות חריגות – לוועדת החריגים של הקרן דרך האתר.",
   "source_url": "https://www.miluim.idf.il/articles-list/%D7%A7%D7%A8%D7%9F-%D7%94%D7%A1%D7%99%D7%95%D7%A2-%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA%D7%99-%D7%94%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "michaellevinlonesoldier--303e34",
@@ -2683,7 +2768,8 @@ window.SERVICES = [
   "website": "https://michaellevinlonesoldier.org/about-us",
   "how_to_apply": "לפנות דרך מרכז הלוחמים הבודדים או אתר הקרן לבקשת מימון ייעוץ.",
   "source_url": "https://michaellevinlonesoldier.org/about-us",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "btl-gov-il-60a11f",
@@ -2710,7 +2796,8 @@ window.SERVICES = [
   "website": "https://www.btl.gov.il",
   "how_to_apply": "שכירים – להעביר אישור מילואים (טופס 3010) למעסיק; עצמאים ולא עובדים – להגיש תביעה באתר ביטוח לאומי.",
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/KizbeotHB/MiloeimHB/Pages/MsrtimMiloeim.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-96d265",
@@ -2739,7 +2826,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק זכאות באתר מילואים של צה\"ל ובכל-זכות; רוב המענקים משולמים אוטומטית לפי ימי השירות, חלקם דורשים הגשה מקוונת.",
   "source_url": "https://www.mako.co.il/news-military/2026_q1/Article-536d6736f0ecb91026.htm",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-efa6f3",
@@ -2767,7 +2855,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשות להחזר הוצאות דרך אתר המילואים של צה\"ל; לעיין במדריך בכל-זכות.",
   "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-d21a7f",
@@ -2795,7 +2884,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לאגף השיקום (מחלקת דיור) ולהגיש בקשה להלוואה.",
   "source_url": "https://www.kolzchut.org.il/he/הלוואה_לרכישת_דירה_ראשונה_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-97ae96",
@@ -2825,7 +2915,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה דרך קצין השיקום בצירוף הצעת מחיר לשיפוץ.",
   "source_url": "https://www.kolzchut.org.il/he/הלוואה_לשיפוץ_דירה_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-5245fa",
@@ -2854,7 +2945,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף השיקום בצירוף מסמכים על המצב הכלכלי.",
   "source_url": "https://www.kolzchut.org.il/he/השכרת_דירות_של_משרד_הביטחון_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-b9b962",
@@ -2884,7 +2976,8 @@ window.SERVICES = [
   "website": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
   "how_to_apply": "להגיש בקשה דרך עמוד השירות באתר gov.il בצירוף מסמכים רפואיים.",
   "source_url": "https://www.gov.il/he/service/vehicle-adaptation-and-driving-accessories-committee",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-bc4772",
@@ -2916,7 +3009,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיע לסניף הקרוב עם הפניה/מסמך רפואי ולשאול את הציוד.",
   "source_url": "https://www.inn.co.il/news/281456",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-7589af",
@@ -2946,7 +3040,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף השיקום דרך קצין השיקום עם חוות דעת רפואית על אי התאמת הדירה.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_להחלפת_דירה_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-f2f87a",
@@ -2974,7 +3069,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף השיקום עם חוזה השכירות בדיור הציבורי.",
   "source_url": "https://www.kolzchut.org.il/he/מענק_לנכי_צה%22ל_וכוחות_הביטחון_ששוכרים_דירה_בדיור_הציבורי",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-bfb545",
@@ -3011,7 +3107,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "הפניה דרך בית החולים המאשפז, אגף השיקום או קופת החולים.",
   "source_url": "https://www.maariv.co.il/news/military/Article-1070989",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-ce2c69",
@@ -3047,7 +3144,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להצטרף כחבר/ה בארגון נכי צה\"ל עם אישור הכרה ממשרד הביטחון, ולהירשם בבית הלוחם הקרוב.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1153088",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "hospitals-clalit-co-il-2b9fa3",
@@ -3082,7 +3180,8 @@ window.SERVICES = [
   "website": "https://hospitals.clalit.co.il/loewenstein",
   "how_to_apply": "הפניה מבית החולים המאשפז או מהגורם המממן (אגף השיקום/קופה) לאשפוז שיקומי או שיקום יום.",
   "source_url": "https://www.maariv.co.il/hamekomon/petah-tikva/article-1050803",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-76e4e8",
@@ -3112,7 +3211,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבקש הפניה מהרופא/קצין השיקום באגף השיקום; לא-מוכרים יכולים לפנות ישירות למרכז סגול לבירור התאמה.",
   "source_url": "https://www.aftau.org/?p=4268",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-e680e9",
@@ -3146,7 +3246,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לתאם פגישת ייעוץ במרכז מילב\"ת בתל השומר.",
   "source_url": "https://www.kolzchut.org.il/he/מילבת",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-d65cd7",
@@ -3181,7 +3282,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "הפניה מהגורם המטפל או המממן לאשפוז שיקומי או לשיקום יום.",
   "source_url": "https://www.ice.co.il/health/news/article/1055748",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-1c0994",
@@ -3210,7 +3312,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לאגף השיקום לקבלת הפניה למרפאת קטועים להתאמת תותבת.",
   "source_url": "https://www.kolzchut.org.il/he/תותבות_יד_ורגל_לנכי_צה%22ל_וכוחות_הביטחון_קטועי_גפיים",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-0fc55e",
@@ -3244,7 +3347,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לוועדת סל שיקום (נדרשת בדרך כלל נכות נפשית של 40% ומעלה מביטוח לאומי) דרך הגוף המטפל.",
   "source_url": "https://www.gov.il/he/service/rehabilitation-support-package",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-352bd3",
@@ -3274,7 +3378,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לקבל רישיון מרופא מוסמך/היק\"ר, ואז להגיש לאגף השיקום בקשה למימון בצירוף הרישיון.",
   "source_url": "https://www.kolzchut.org.il/he/קנביס_רפואי_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-fee0a6",
@@ -3306,7 +3411,8 @@ window.SERVICES = [
   "website": "https://www.gov.il/he/service/cannabis-ptsd",
   "how_to_apply": "לפנות לפסיכיאטר מטפל שימלא את נספח ה-PTSD, ולהגיש בקשה לרישיון דרך רופא מוסמך/היק\"ר.",
   "source_url": "https://www.gov.il/he/service/cannabis-ptsd",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-545599",
@@ -3340,7 +3446,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבקש הפניה מאגף השיקום/קופת החולים ולתאם אינטייק מול בית החולים.",
   "source_url": "https://www.israelhayom.co.il/health/article/17643807",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-2244d7",
@@ -3368,7 +3475,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לאגף נפגעי פעולות איבה בביטוח הלאומי בצירוף מרשם רפואי.",
   "source_url": "https://www.kolzchut.org.il/he/תותבות_יד_ורגל_לנפגעי_פעולות_איבה_קטועי_גפיים",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-3c362c",
@@ -3402,7 +3510,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לאיכילוב / לארגון למענכם ולבקש קביעת אינטייק במרכז להתערבות מוקדמת.",
   "source_url": "https://www.maariv.co.il/news/health/article-1357590",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-c9ab2a",
@@ -3435,7 +3544,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למרכז החוסן המקומי (או *5486) שפועל במסגרת הקואליציה.",
   "source_url": "https://en.wikipedia.org/wiki/The_Israel_Coalition_for_Trauma",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-ff99e5",
@@ -3468,7 +3578,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקליניקה ולתאם שיחת אינטייק.",
   "source_url": "https://www.maariv.co.il/news/education/article-1063058",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-aaf3bf",
@@ -3498,7 +3609,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "מתנדבים פונים דרך רכז היחידה/מחלקת החוסן של זק\"א.",
   "source_url": "https://www.srugim.co.il/?p=1053355",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-f802c3",
@@ -3534,7 +3646,8 @@ window.SERVICES = [
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "להגיש בקשה להכרה, ואז לפנות לאגף השיקום (או למוקד *6500 לפצועי המלחמה) ולבקש אישור למטפל/ת לפני תחילת הטיפול.",
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/mental-treatment",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-61bb79",
@@ -3570,7 +3683,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעובד/ת השיקום לפני תחילת הטיפול ולקבל אישור למטפל שבחרתם (ספק רשום של אגף השיקום).",
   "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-ae2f06",
@@ -3603,7 +3717,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "דרך הגורם המלווה בביטוח לאומי לחטופים ששבו.",
   "source_url": "https://www.btl.gov.il/HaravotBarzel1/HtofimHazro/Pages/TipolNafsi.aspx",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-88b3ca",
@@ -3638,7 +3753,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למוקד בריאות הנפש של קופת החולים שלך או דרך האפליקציה.",
   "source_url": "https://www.kolzchut.org.il/he/מוקדים_לסיוע_ותמיכה_רגשית_מטעם_קופות_החולים_ומרכזי_חוסן_בעקבות_מלחמת_חרבות_ברזל",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-0bfef9",
@@ -3671,7 +3787,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למוקד קופת החולים שלכם או לאפליקציה ולבקש הפניה לטיפול נפשי.",
   "source_url": "https://www.kolzchut.org.il/he/מוקדים_לסיוע_ותמיכה_רגשית_מטעם_קופות_החולים_ומרכזי_חוסן_בעקבות_מלחמת_חרבות_ברזל",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-6b87af",
@@ -3701,7 +3818,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבדוק את רישום המחקר NCT05732155 ולפנות לצוות המחקר בהעמק לבדיקת התאמה.",
   "source_url": "https://clinicaltrials.gov/study/NCT05732155",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "herzoghospital-org-62ab60",
@@ -3734,7 +3852,8 @@ window.SERVICES = [
   "website": "https://www.herzoghospital.org/metiv/",
   "how_to_apply": "לפנות למטיב דרך אתר המרכז הרפואי הרצוג ולבקש שיבוץ למסלול לוחמים.",
   "source_url": "https://www.herzoghospital.org/metiv/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-649cbe",
@@ -3764,7 +3883,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין/ת השיקום באגף השיקום במשרד הביטחון ולבקש אישור טיפול.",
   "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_לנכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-ca1087",
@@ -3800,7 +3920,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין/ת השיקום האישי/ת באגף השיקום ולבקש אישור למענה המתאים.",
   "source_url": "https://www.kipa.co.il/חדשות/1211705-0/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-e92888",
@@ -3832,7 +3953,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה דרך המרכז הרפואי תל אביב עם הפניה מרופא/קופת חולים או גורם מממן.",
   "source_url": "https://www.jpost.com/health-and-wellness/article-906212",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "lonesoldiercenter-com-6cbf32",
@@ -3865,7 +3987,8 @@ window.SERVICES = [
   "website": "https://lonesoldiercenter.com/",
   "how_to_apply": "לפנות דרך אתר המרכז ולהירשם כחייל/ה בודד/ה או משוחרר/ת עד 5 שנים.",
   "source_url": "https://lonesoldiercenter.com/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-800178",
@@ -3896,7 +4019,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג למרכז ולתאם פגישה.",
   "source_url": "https://kan.org.il/content/kan-news/defense/558950/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-dcb81a",
@@ -3927,7 +4051,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג למרכז ולתאם פגישה.",
   "source_url": "https://kan.org.il/content/kan-news/defense/558950/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-fd7702",
@@ -3958,7 +4083,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחייג למרכז ולתאם אינטייק.",
   "source_url": "https://kan.org.il/content/kan-news/defense/558950/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-5f9fa6",
@@ -3989,7 +4115,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למרכז באיכילוב (פרטי קשר בכתבה/אתר בית החולים).",
   "source_url": "https://www.ynet.co.il/activism/article/bjglpzqpgx",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-f16b8d",
@@ -4027,7 +4154,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לאתר את מרכז החוסן לפי אזור המגורים ברשימת הביטוח הלאומי ולפנות אליו; אם אין מרכז באזור – *5486.",
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-f5bb54",
@@ -4068,7 +4196,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למרכז החוסן ביישוב/באזור; אם אין – למוקד הארצי *5486 (א'–ה' 8:00–20:00).",
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-cc17e9",
@@ -4102,7 +4231,8 @@ window.SERVICES = [
   "website": "https://www.gov.il/he/Departments/DynamicCollectors/resilience-centers-list",
   "how_to_apply": "לאתר את מרכז החוסן לפי יישוב המגורים ברשימה הממשלתית ולהתקשר ישירות.",
   "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/public-care/community-treatment/resilience-center/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-478b5f",
@@ -4142,7 +4272,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקו נט\"ל 1-800-363-363 ולציין שירות במשטרה; ניתן גם דרך גורמי הרווחה/קב\"ן במשטרה.",
   "source_url": "https://jweekly.com/?p=36816",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-fd5b53",
@@ -4173,7 +4304,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למטיב ולבקש בדיקת התאמה למחקר; נדרש אבחון PTSD ועמידה בקריטריונים רפואיים.",
   "source_url": "https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-bfaaca",
@@ -4204,7 +4336,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות ישירות למרכז החוסן/מוקד הטיפול שברשימת ביטוח לאומי.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/MerkazeiSiua.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-e78796",
@@ -4238,7 +4371,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעמותת אמפא ולהירשם לסדנת InHeal הקרובה.",
   "source_url": "https://www.maariv.co.il/news/israel/article-1153088",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-aa11a3",
@@ -4269,7 +4403,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לסניף עמך הקרוב לבירור זכאות.",
   "source_url": "https://www.kolzchut.org.il/he/עמך",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "maccabi4u-co-il-7fcc4b",
@@ -4301,7 +4436,8 @@ window.SERVICES = [
   "website": "https://www.maccabi4u.co.il/maccabi_circles/mental_health",
   "how_to_apply": "לפנות למוקד בריאות הנפש של הקופה שלכם ולציין שירות מילואים.",
   "source_url": "https://www.kolzchut.org.il/he/מוקדים_לסיוע_ותמיכה_רגשית_מטעם_קופות_החולים_ומרכזי_חוסן_בעקבות_מלחמת_חרבות_ברזל",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-a0c306",
@@ -4332,7 +4468,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה ישירה למרכז לשיחת התאמה.",
   "source_url": "https://www.kikar.co.il/386113.html",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-d71edb",
@@ -4361,7 +4498,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעובד/ת השיקום האישי/ת באגף השיקום כדי לממש את רכיבי הרפורמה.",
   "source_url": "https://www.ynet.co.il/news/article/H1EfwDrO00",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-4d0929",
@@ -4392,7 +4530,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעמותה דרך אתרה או ברשתות החברתיות ולבקש שיבוץ למטפל.",
   "source_url": "https://www.ice.co.il/social/news/article/979314",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-aefd24",
@@ -4428,7 +4567,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למרכז (דרך פרסומי המרכז/רשתות) לבירור התאמה וזמינות.",
   "source_url": "https://jpost.com/israel-news/article-825184",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-40d731",
@@ -4462,7 +4602,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותת בלב אחד; יש רשימת המתנה.",
   "source_url": "https://www.jns.org/israel-news/new-york-trip-for-wounded-israeli-soldiers-boosts-mind-body-and-spirit",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-0d6eec",
@@ -4494,7 +4635,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותה (לרוב כקבוצה/פלוגה).",
   "source_url": "https://jewishlink.news/a-path-for-tomorr-bshvil-hamachar-and-the-healing-of-israeli-society/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-1aa986",
@@ -4528,7 +4670,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעמותה ולהירשם, או להירשם כיחידה או פלוגה דרך מפקד או קצין ת\"ש.",
   "source_url": "https://themedialine.org/life-lines/from-war-zone-to-wilderness-how-some-israeli-soldiers-are-healing-after-gaza/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "natureisrael-org-2582ca",
@@ -4560,7 +4703,8 @@ window.SERVICES = [
   "website": "https://natureisrael.org/natureheals",
   "how_to_apply": "לברר באתר החברה להגנת הטבע / דרך הרשות המקומית או היחידה.",
   "source_url": "https://natureisrael.org/natureheals",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-28d1f6",
@@ -4594,7 +4738,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבקש מקצין השיקום אישור לפעילות טרום-שיקום ולבחור מסגרת מאושרת.",
   "source_url": "https://www.kolzchut.org.il/he/%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%99%D7%95%D7%AA_%D7%98%D7%A8%D7%95%D7%9D_%D7%A9%D7%99%D7%A7%D7%95%D7%9D_%D7%9C%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C_%D7%95%D7%9B%D7%95%D7%97%D7%95%D7%AA_%D7%94%D7%91%D7%99%D7%98%D7%97%D7%95%D7%9F_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A4%D7%95%D7%A1%D7%98_%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-aad8a5",
@@ -4625,7 +4770,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לברר דרך החברה להגנת הטבע או המרכז הרפואי שיבא.",
   "source_url": "https://natureisrael.org/natureheals",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-94ba7f",
@@ -4658,7 +4804,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותה.",
   "source_url": "https://www.jewishcolorado.org/event/voice-from-within-healing-in-nature-innovative-approaches-to-ptsd-recovery/",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-61e072",
@@ -4692,7 +4839,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם לרשימת ההמתנה (פרטי קשר לא אומתו – לפי כתבה ב-The Media Line).",
   "source_url": "https://themedialine.org/life-lines/from-war-zone-to-wilderness-how-some-israeli-soldiers-are-healing-after-gaza/",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "pomcanada-com-f32425",
@@ -4726,7 +4874,8 @@ window.SERVICES = [
   "website": "https://pomcanada.com/",
   "how_to_apply": "פנייה כקבוצה/יחידה למטיב – תוכנית Peace of Mind.",
   "source_url": "https://pomcanada.com/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-224b2a",
@@ -4758,7 +4907,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לברר מועדים ומיקומים מול קו \"נפש אחת\" *8944 או מול קצין השיקום.",
   "source_url": "https://www.makorrishon.co.il/news/606089/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-a42eb8",
@@ -4791,7 +4941,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לבית הלוחם ירושלים ולבקש קשר עם רכז/ת הפוסט טראומה.",
   "source_url": "https://www.drushim.co.il/job/37451891/19d35e5e/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-dd5002",
@@ -4828,7 +4979,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לארגון דרך הרשתות החברתיות.",
   "source_url": "https://jweekly.com/?p=138825",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-a938b1",
@@ -4862,7 +5014,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותת אחים לחיים.",
   "source_url": "https://www.sajr.co.za/injured-idf-soldiers-find-healing-in-south-africa/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "inz-org-il-a865b4",
@@ -4899,7 +5052,8 @@ window.SERVICES = [
   "website": "https://www.inz.org.il",
   "how_to_apply": "להצטרף כחבר/ה לאחר ההכרה ולפנות לסניף האזורי.",
   "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-771f95",
@@ -4928,7 +5082,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "עובדים ומתנדבים פונים לגורמי הרווחה/חוסן בתחנת מד\"א שלהם.",
   "source_url": "https://www.inn.co.il/news/549402",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "herzoghospital-org-5af7da",
@@ -4960,7 +5115,8 @@ window.SERVICES = [
   "website": "https://www.herzoghospital.org/metiv/",
   "how_to_apply": "פנייה כצוות/מחלקה דרך מטיב (בדרך כלל ביוזמת מפקד או נציג הצוות).",
   "source_url": "https://www.herzoghospital.org/metiv/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-1e4a02",
@@ -4991,7 +5147,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לברר פרטי קשר עדכניים בעמוד הארגון בכל-זכות.",
   "source_url": "https://www.kolzchut.org.il/ru/%22%D0%9A%D0%B5%D1%85%D0%B8%D0%BB%D0%B0%D1%82_%D0%9E%D1%80%22_%D0%B4%D0%BB%D1%8F_%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9_%D1%81_%D0%BF%D0%BE%D0%B2%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F%D0%BC%D0%B8_%D0%BC%D0%BE%D0%B7%D0%B3%D0%B0_%D0%B8_%D0%B8%D1%85_%D1%81%D0%B5%D0%BC%D0%B5%D0%B9",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "novaexhibition-com-aca212",
@@ -5030,7 +5187,8 @@ window.SERVICES = [
   "website": "https://novaexhibition.com/the-tribe-of-nova-foundation",
   "how_to_apply": "ניצולים נרשמים לקהילת שבט נובה ופונים לרכזי הקרן לקבלת מענה.",
   "source_url": "https://jnf.org.au/?p=20995",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-2a6322",
@@ -5058,7 +5216,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעמותה לבירור השירותים.",
   "source_url": "https://www.kolzchut.org.il/he/הפרעת_דחק_פוסט_טראומתית_%28PTSD%29",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "nbn-org-il-61e022",
@@ -5089,7 +5248,8 @@ window.SERVICES = [
   "website": "https://www.nbn.org.il/lsrc",
   "how_to_apply": "להיכנס לאתר התוכנית ולפנות לרכזי החיילים הבודדים.",
   "source_url": "https://www.nbn.org.il/lsrc",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-0ca12f",
@@ -5124,7 +5284,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה דרך רכז/ת השיקום באגף השיקום (חוות חוסן מוכרת) או ישירות לחווה.",
   "source_url": "https://www.ice.co.il/health/news/article/1042430",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-d383d0",
@@ -5158,7 +5319,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "ההפניה בשיתוף אגף השיקום במשרד הביטחון – לפנות לרכז/ת השיקום או ישירות לחווה.",
   "source_url": "https://www.goodpeoplefund.org/news/harvesting-healing/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "back2life-org-il-2f1d97",
@@ -5196,7 +5358,8 @@ window.SERVICES = [
   "website": "https://back2life.org.il",
   "how_to_apply": "פנייה דרך האתר של העמותה להצטרפות למחזור הבא; פתוח גם לשורדי נובה ושבים מהשבי בסדנאות.",
   "source_url": "https://israelgives.org/amuta/580808053",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-f762d0",
@@ -5226,7 +5389,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לברר דרך דף הקמפיין.",
   "source_url": "https://my.israelgives.org/en/campaign/way",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "vertigo-org-il-a2394e",
@@ -5262,7 +5426,8 @@ window.SERVICES = [
   "website": "https://vertigo.org.il/en/shikum-2/",
   "how_to_apply": "ההפניה נעשית דרך אגף השיקום במשרד הביטחון / ארגון נכי צה\"ל; ניתן לפנות לוורטיגו דרך האתר לבירור מחזורים.",
   "source_url": "https://vertigo.org.il/en/shikum-2/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-0a23ca",
@@ -5297,7 +5462,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פונים לרכז/ת השיקום או לקו של אגף השיקום ומבקשים הפניה לחוות חוסן באזור המגורים.",
   "source_url": "https://www.mako.co.il/news-lifestyle/2024_q2/Article-7522dca3d89bf81026.htm",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-50ec05",
@@ -5335,7 +5501,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "למי שיש סל שיקום ממשרד הבריאות – דרך רכז/ת הסל; אחרים – פנייה ישירה לחווה.",
   "source_url": "https://archive.israel21c.org/?p=153370",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-cf1296",
@@ -5371,7 +5538,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותת חוות רימון.",
   "source_url": "https://aish.com/how-farming-is-healing-israelis-wounded-soldiers/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-c84ffb",
@@ -5410,7 +5578,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותת חוות רימון לבירור התאמה ומחזורים.",
   "source_url": "https://www.icej.org/blog/icej-supports-israeli-farm-treating-war-trauma-victims/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-b2586a",
@@ -5448,7 +5617,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לעמותת חוות רימון.",
   "source_url": "https://ejewishphilanthropy.com/an-israeli-nonprofit-sent-a-cold-email-to-a-banks-general-inbox-it-responded-with-1-7-million/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "miluimnikim-org-6bb62c",
@@ -5478,7 +5648,8 @@ window.SERVICES = [
   "website": "https://miluimnikim.org",
   "how_to_apply": "למלא פנייה באתר קהילת המילואימניקים בעמוד הסיוע המשפטי.",
   "source_url": "https://miluimnikim.org/mishpati/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-272116",
@@ -5509,7 +5680,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "פנייה לארגון.",
   "source_url": "https://www.ice.co.il/health/news/article/1042430",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "shikum-umb-mod-gov-il-9c0739",
@@ -5544,7 +5716,8 @@ window.SERVICES = [
   "website": "https://shikum-umb.mod.gov.il",
   "how_to_apply": "להגיש תביעה להכרה באתר אגף השיקום (תביעה מקוונת) בצירוף מסמכים רפואיים; לסיוע רגשי בזמן התהליך – *8944.",
   "source_url": "https://shikum-umb.mod.gov.il/media/0tzbkekn/haravot-barzel-guide-2024.pdf",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "shikum-mod-gov-il-22016b",
@@ -5583,7 +5756,8 @@ window.SERVICES = [
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "ממלאים טופס בקשה להכרה באתר אגף השיקום (מקוון), מצרפים מסמכים רפואיים ותיעוד מהשירות; מומלץ להיעזר בסיוע משפטי חינם (ראו רשומות סיוע משפטי).",
   "source_url": "https://shikum.mod.gov.il/recognition/request/apply",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-147588",
@@ -5614,7 +5788,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש תביעה להכרה כנפגע פעולת איבה באתר הביטוח הלאומי, ובמקביל לפנות למרכז חוסן לטיפול.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/MerkazeiSiua.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-855b96",
@@ -5645,7 +5820,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש טופס בל/580 (הודעה על פגיעה בפעולות איבה ותביעה) לביטוח לאומי, עם מסמכים רפואיים ופרטי האירוע.",
   "source_url": "https://www.btl.gov.il/%D7%98%D7%A4%D7%A1%D7%99%D7%9D%20%D7%95%D7%90%D7%99%D7%A9%D7%95%D7%A8%D7%99%D7%9D/Documents/t580.pdf",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-12749c",
@@ -5673,7 +5849,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקצין הקישור/שלישות היחידה עם אישור הורה עצמאי ולבקש התאמת השירות.",
   "source_url": "https://www.kolzchut.org.il/he/הקלות_לחיילי_מילואים_שהם_הורים_עצמאיים_(הורים_יחידים)",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-ad829a",
@@ -5704,7 +5881,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לקליניקה דרך עמוד הקליניקה באתר הקריה האקדמית אונו.",
   "source_url": "https://www.ono.ac.il/clinical-law/clinic-for-the-recognition-of-military-disability/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-648185",
@@ -5736,7 +5914,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "אין הגשה נפרדת; לברר מול אגף השיקום (*6500) או ארגון נכי צה\"ל אילו רכיבים כבר מיושמים.",
   "source_url": "https://www.mako.co.il/news-israel/2026_q2/Article-c4d90de42b1ae91026.htm",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-d8fd54",
@@ -5767,7 +5946,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לקרוא את המדריך בכל-זכות ולפנות לגורם המממן הרלוונטי (אגף השיקום/ביטוח לאומי/קופה).",
   "source_url": "https://www.kolzchut.org.il/he/פגיעה_מוחית_טראומטית_(TBI)",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-ecf25e",
@@ -5795,7 +5975,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לקרוא את המדריך באתר כל זכות.",
   "source_url": "https://www.kolzchut.org.il/he/מדריך_למשרתי_מילואים_ובני_משפחותיהם_במלחמת_חרבות_ברזל_והמלחמה_מול_איראן",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-253d8d",
@@ -5826,7 +6007,8 @@ window.SERVICES = [
   "website": "https://www.kolzchut.org.il",
   "how_to_apply": "לגלוש לפורטל ולחפש לפי נושא.",
   "source_url": "https://www.kolzchut.org.il/he/נכי_צה%22ל_וכוחות_הביטחון",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-ebbd3e",
@@ -5857,7 +6039,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לעמותה דרך עמוד הגיוס/האתר ולתאר את מצב תהליך ההכרה.",
   "source_url": "https://my.israelgives.org/en/fundme/PTSD",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-ff9abe",
@@ -5887,7 +6070,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להוריד את המדריך מאתר אגף השיקום.",
   "source_url": "https://shikum-umb.mod.gov.il/media/0tzbkekn/haravot-barzel-guide-2024.pdf",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-c3ea9e",
@@ -5919,7 +6103,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה להכרה באגף השיקום ולציין חשיפה לאירוע מבצעי; קצין התגמולים יבחן התאמה למסלול המהיר.",
   "source_url": "https://www.kolzchut.org.il/he/מסלול_מהיר_להכרה_בנכות_לחיילי_צה%22ל_וכוחות_הביטחון_עם_פוסט_טראומה",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-5af3f4",
@@ -5949,7 +6134,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה להכרה לאגף השיקום (כמו חיילים), עם מסמכי שירות משטרתי ורפואיים; מומלץ ייצוג משפטי.",
   "source_url": "https://he.wikisource.org/wiki/%D7%97%D7%95%D7%A7_%D7%94%D7%9E%D7%A9%D7%98%D7%A8%D7%94_(%D7%A0%D7%9B%D7%99%D7%9D_%D7%95%D7%A0%D7%A1%D7%A4%D7%99%D7%9D)",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-b105bf",
@@ -5980,7 +6166,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשה לסיוע משפטי בלשכת הסיוע המשפטי המחוזית של משרד המשפטים (או מקוון).",
   "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_חינם_לחיילי_צה%22ל_מטעם_משרד_המשפטים",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "api-miluim-idf-il-575bbf",
@@ -6007,7 +6194,8 @@ window.SERVICES = [
   "website": "https://api.miluim.idf.il/api/v1/Media/i5jlwnmt/%D7%98%D7%95%D7%A4%D7%A1-%D7%91%D7%A7%D7%A9%D7%94-%D7%9C%D7%A1%D7%99%D7%95%D7%A2-%D7%9E%D7%A9%D7%A4%D7%98%D7%99-%D7%9C%D7%97%D7%99%D7%99%D7%9C-%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D.pdf",
   "how_to_apply": "למלא טופס בקשה לסיוע משפטי לחייל מילואים (באתר המילואים) ולשלוח לפי ההנחיות.",
   "source_url": "https://www.kolzchut.org.il/he/סיוע_משפטי_לחיילי_מילואים",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-8a997d",
@@ -6035,7 +6223,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להיכנס לסימולטור באתר ביטוח לאומי ולענות על השאלות. מוקד ביטוח לאומי: *6050.",
   "source_url": "https://www.btl.gov.il/Simulators/Soldiers/Pages/default.aspx",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "israelbar-org-il-ddeda0",
@@ -6065,7 +6254,8 @@ window.SERVICES = [
   "website": "https://www.israelbar.org.il/pro-bono",
   "how_to_apply": "לבדוק רשימת מרכזי הזכויות באתר לשכת עורכי הדין (israelbar.org.il/pro-bono) ולקבוע פגישה.",
   "source_url": "https://www.globes.co.il/news/article.aspx?did=508717",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-bdea6b",
@@ -6097,7 +6287,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבירור הזכאות מכוח התיקון – לפנות לאגף השיקום או לארגון נכי צה\"ל; לבקשות חריגות – דרך הוועדה לפנים משורת הדין באגף השיקום.",
   "source_url": "https://www.haaretz.co.il/news/politi/2026-07-15/ty-article/0000019f-6736-df91-a7df-ef3676910000",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-712f66",
@@ -6130,7 +6321,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "דרך אגף השיקום / מוקד *6500 – לבקש שיבוץ קצין/ת תל\"ם.",
   "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/telem",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-955aae",
@@ -6171,7 +6363,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להצטרף לארגון נכי צה\"ל (נדרשת הכרה באגף השיקום) ולהירשם לחוגים בבית הלוחם הקרוב.",
   "source_url": "https://www.timesofisrael.com/wounded-idf-veterans-find-a-home-in-israels-state-of-the-art-rehabilitation-centers/",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-1e7d9b",
@@ -6210,7 +6403,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להצטרף לארגון נכי צה\"ל ולהירשם לבית הלוחם הקרוב (תל אביב, חיפה, ירושלים, באר שבע ועוד).",
   "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-b94979",
@@ -6249,7 +6443,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם כחבר בארגון נכי צה\"ל ולפנות לבית הלוחם הקרוב.",
   "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "ilan-israel-co-il-9f2f5c",
@@ -6287,7 +6482,8 @@ window.SERVICES = [
   "website": "https://ilan-israel.co.il/en/sports",
   "how_to_apply": "לפנות לאילן או ישירות למרכז ברמת גן ולבקש שיבוץ בתוכנית ששק או בענף ספורט מותאם.",
   "source_url": "https://en.wikipedia.org/wiki/Israel_Sports_Center_for_the_Disabled",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-0bdbc4",
@@ -6320,7 +6516,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבקש בבית החולים או במרכז השיקום מפגש עם נציגי איגוד הספורט לנכים, או לפנות לאיגוד ישירות.",
   "source_url": "https://www.maariv.co.il/economy/israel/article-1202536",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-406d76",
@@ -6352,7 +6549,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לוועד הפראלימפי או לאיגוד הספורט לנכים, או לבקש הפניה מצוות מרכז השיקום.",
   "source_url": "https://unitedwithisrael.org/wounded-idf-soldiers-train-to-become-future-paralympic-champions/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-791369",
@@ -6384,7 +6582,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות למחלקת הספורט בבית הלוחם הקרוב ולשאול על מיונים לנבחרת.",
   "source_url": "https://www.timesofisrael.com/idf-disabled-veteran-athletes-bring-home-14-medals-from-first-invictus-games/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-aae858",
@@ -6422,7 +6621,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לחפש את 'רצים עם רמי' ברשתות החברתיות וליצור קשר כדי להצטרף לקבוצה הקרובה.",
   "source_url": "https://sports.walla.co.il/item/3689260",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-225e7f",
@@ -6457,7 +6657,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם דרך העמותה לקבוצת לוחמים בחוף הקרוב.",
   "source_url": "https://www.algemeiner.com/2026/04/30/israel-facing-ptsd-emergency-new-app-seeks-help-idf-soldiers-heal/",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "hagalsheli-co-il-4025b1",
@@ -6500,7 +6701,8 @@ window.SERVICES = [
   "website": "https://hagalsheli.co.il",
   "how_to_apply": "להיכנס לאתר העמותה (עמוד 'למי זה מתאים') ולהשאיר פרטים, או לפנות לרכז/ת השיקום באגף השיקום ולבקש הפניה לתוכנית הגלישה הטיפולית של הגל שלי.",
   "source_url": "https://www.jpost.com/israel-news/article-787878",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-5d40b9",
@@ -6533,7 +6735,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לפנות לרכז/ת השיקום או לקצין/ת הטיפול באגף השיקום ולבקש הפניה לטיפול ימי (גלישה או שיט) במסגרת נפש אחת.",
   "source_url": "https://www.jpost.com/israel-news/article-787878",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "yamtov-com-79f4ce",
@@ -6571,7 +6774,8 @@ window.SERVICES = [
   "website": "https://www.yamtov.com",
   "how_to_apply": "לפנות לעמותה דרך האתר, או לבקש מרכז/ת השיקום באגף השיקום הפניה לטיפול ימי של ימטוב.",
   "source_url": "https://www.worldsurfleague.com/posts/498015/meet-yamtov-an-ngo-that-uses-surfing-for-good",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "brothersin-yoga-2335d6",
@@ -6612,7 +6816,8 @@ window.SERVICES = [
   "website": "https://www.brothersin.yoga",
   "how_to_apply": "להירשם למחזור הבא דרך אתר העמותה.",
   "source_url": "https://www.brothersin.yoga/en/about",
-  "confidence": "high"
+  "confidence": "high",
+  "verified_at": ""
  },
  {
   "id": "s-b85612",
@@ -6648,7 +6853,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להירשם דרך אתר/רשתות העמותה לשיעור בסמוך למקום המגורים.",
   "source_url": "https://www.ice.co.il/sport_news/news/article/1017611",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-4ce228",
@@ -6679,7 +6885,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להיכנס לאתר לאומית, למלא את הפרטים בעמוד ההטבה למילואימניקים ולקבוע טיפול.",
   "source_url": "https://finance.walla.co.il/item/3636716",
-  "confidence": "low"
+  "confidence": "low",
+  "verified_at": ""
  },
  {
   "id": "s-890574",
@@ -6710,7 +6917,8 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "להגיש בקשת החזר לביטוח לאומי לפי ההנחיות בעמוד.",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "natal-org-il-b9297c",
@@ -6742,7 +6950,8 @@ window.SERVICES = [
   "website": "https://www.natal.org.il",
   "how_to_apply": "לפנות לנט\"ל דרך האתר ולשאול על מחזור היוגה הקרוב.",
   "source_url": "https://www.natal.org.il/en/?p=3076",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  },
  {
   "id": "s-2c0e2a",
@@ -6776,6 +6985,7 @@ window.SERVICES = [
   "website": "",
   "how_to_apply": "לבצע טיפול אצל מטפל מוסמך ולהגיש בקשת החזר לאגף השיקום; לברר מראש מול עובד/ת השיקום את רשימת הטיפולים והסכום.",
   "source_url": "https://www.hon.co.il/?p=137604",
-  "confidence": "medium"
+  "confidence": "medium",
+  "verified_at": ""
  }
 ];

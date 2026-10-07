@@ -208,3 +208,7 @@ details summary { cursor: pointer; margin: 12px 0; color: var(--primary); font-w
   .card { break-inside: avoid; box-shadow: none; }
 }
 a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
+.verify { font-size: .9rem; padding: 8px 12px; border-radius: 10px; margin: 10px 0 0; }
+.verify-ok { background: var(--info-bg); color: var(--free); font-weight: 700; }
+.verify-no { background: var(--surface-2); color: var(--muted); }
+.tag-ok { background: var(--info-bg); color: var(--free); font-weight: 700; }
