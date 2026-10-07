@@ -177,6 +177,26 @@ def main():
     for s in merged:
         s.pop("tg_key", None)
 
+    # תיקוני הגהה (research/community/corrections.json): לפי מזהה. _remove = להוריד, _hide = להסתיר עד בדיקה ידנית
+    cor_path = ROOT / "research" / "community" / "corrections.json"
+    if cor_path.exists():
+        cor = json.loads(cor_path.read_text(encoding="utf-8"))
+        ids = {s["id"] for s in merged}
+        for k in cor:
+            if k not in ids:
+                warnings.append(f"תיקון למזהה שלא קיים: {k}")
+        kept = []
+        for s in merged:
+            c = cor.get(s["id"], {})
+            if c.get("_remove") or c.get("_hide"):
+                continue
+            s.update({k: v for k, v in c.items() if not k.startswith("_")})
+            # קו מפריד ארוך באמצע משפט קשה לקריאה בעברית: מחליפים בפסיק
+            for f in ("description", "how_to_apply", "cost_notes"):
+                s[f] = re.sub(r"\s+[–—]\s+", ", ", s.get(f) or "")
+            kept.append(s)
+        merged = kept
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(
