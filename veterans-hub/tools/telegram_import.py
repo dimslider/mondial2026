@@ -168,7 +168,9 @@ def main():
         services.append({
             "name": r["name_guess"],
             "category": r["category_guess"] or "peer-support",
-            "description": r["snippets"].split(" ⟂ ")[0][:300] if r["snippets"] else "",
+            # לא מעתיקים טקסט מהודעות של חברי הקבוצה לתוך המאגר, כי הוא עלול לכלול סיפור אישי או מידע רפואי.
+            # את התיאור כותבים מחדש מתוך האתר הרשמי של הגוף, בשלב האימות.
+            "description": "",
             "provider_type": "ngo",
             "eligibility": [], "difficulties": [], "interests": [],
             "cost": "partial", "cost_notes": "לא אומת — מקור: קבוצת טלגרם",
