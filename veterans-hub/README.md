@@ -26,7 +26,10 @@ python3 -m http.server 8000
 בלי שרת האתר רץ במצב הדגמה: הצעות, תיקונים ופניות נשמרים רק במכשיר.
 בדיקה מקומית עם השרת: `npx wrangler pages dev dist --d1 DB=test` (אחרי `sh tools/build_site.sh`).
 
-## אירוח ושרת (Cloudflare Pages + D1, חינמי)
+## אירוח ושרת (Cloudflare Workers + D1, חינמי)
+
+האתר רץ כ-Worker עם קבצים סטטיים (`worker.js`, `wrangler.jsonc`). ב-Workers & Pages ← Create application ← GitHub:
+שם `magia-lecha`, Root directory `veterans-hub`, Deploy `npx wrangler deploy`. אפשר גם כ-Pages (התיקייה `functions/` עובדת שם כמו שהיא):
 
 1. **Pages:** Workers & Pages ← Create ← Pages ← Connect to Git ← המאגר.
    Root directory: `veterans-hub` · Build command: `sh tools/build_site.sh` · Build output: `dist`.

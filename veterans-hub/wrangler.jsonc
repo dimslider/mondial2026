@@ -1,0 +1,12 @@
+{
+  // Cloudflare Worker של "מגיע לך". השם חייב להיות זהה לשם הפרויקט בלוח הבקרה.
+  "name": "magia-lecha",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "build": { "command": "sh tools/build_site.sh" },
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": ["/api/*"] },
+  // משתנים (ADMIN_EMAILS, ACCESS_TEAM, ACCESS_AUD) וסוד (TURNSTILE_SECRET) מוגדרים בלוח הבקרה, ונשמרים בין פריסות
+  "keep_vars": true
+  // מסד הנתונים יתווסף כאן אחרי שייווצר ב-D1:
+  // "d1_databases": [{ "binding": "DB", "database_name": "magia-lecha", "database_id": "..." }]
+}
