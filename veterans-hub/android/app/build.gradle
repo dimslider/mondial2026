@@ -10,12 +10,28 @@ android {
         applicationId "il.magialecha.app"
         minSdk 24
         targetSdk 34
-        versionCode 1
-        versionName "0.1"
+        // מספר גרסה עולה בכל בנייה ב-GitHub, כדי שגרסה חדשה תותקן מעל הקודמת
+        versionCode((System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInteger() + 100)
+        versionName "0.2." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
+    }
+
+    // מפתח חתימה קבוע לגרסאות הבדיקה. בלי זה כל בנייה נחתמת במפתח אקראי אחר,
+    // ואנדרואיד מסרב לעדכן ("החבילה מתנגשת עם חבילה קיימת").
+    // זה מפתח בדיקות בלבד, גלוי בכוונה. לחנות Google Play ייווצר מפתח נפרד ושמור.
+    signingConfigs {
+        test {
+            storeFile file("test-signing.jks")
+            storePassword "magialecha-test"
+            keyAlias "magialecha-test"
+            keyPassword "magialecha-test"
+        }
     }
 
     buildTypes {
-        debug { applicationIdSuffix ".test" }
+        debug {
+            applicationIdSuffix ".beta"
+            signingConfig signingConfigs.test
+        }
     }
 
     compileOptions {
