@@ -887,37 +887,6 @@
   "confidence": "high"
  },
  {
-  "name": "פעילויות טרום שיקום לנכי צה\"ל נפגעי פוסט טראומה",
-  "category": "nature-retreats",
-  "description": "תוכנית קדם-שיקומית למי שעוד לא יכול/ה להשתלב בלימודים או בעבודה וצריך/ה שלב ביניים. מקבלים החזר הוצאות של עד 10,000 ₪ לשנה קלנדרית על פעילויות שאושרו בתוכנית. יתרה שלא נוצלה לא עוברת לשנה הבאה.",
-  "provider_type": "government",
-  "eligibility": [
-   "mod-recognized"
-  ],
-  "difficulties": [
-   "ptsd",
-   "loneliness",
-   "employment"
-  ],
-  "interests": [
-   "learning",
-   "nature",
-   "sport"
-  ],
-  "cost": "mod-funded",
-  "cost_notes": "החזר הוצאות עד 10,000 ₪ לשנה קלנדרית",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "shikum_mokedTS@mod.gov.il",
-  "website": "https://shikum.mod.gov.il",
-  "how_to_apply": "תנאים: לפחות 20% נכות (או 10% אם ההכרה לפני 1996) בגין פוסט-טראומה, ואין תוכנית שיקום או תעסוקה מתאימה. בונים את התוכנית עם העובדת הסוציאלית במחוז, ואחת לחודש שולחים קבלות דרך האזור האישי באתר אגף השיקום או למייל.",
-  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/trom",
-  "confidence": "high"
- },
- {
   "name": "מוקדי סיוע רגשי של קופות החולים",
   "category": "mental-health",
   "description": "קופות החולים מפעילות מוקדי חירום ותמיכה רגשית, ולפי הביטוח הלאומי נותנות בנוסף מענה טיפולי לתמיכה רגשית של 3 שיחות טיפוליות עם אנשי מקצוע – זמין למבוטחי הקופה.",
