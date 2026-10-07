@@ -31,7 +31,7 @@ VALID = {k: keys_of(k) for k in ["categories", "eligibility", "difficulties", "i
 LIST_FIELDS = {"eligibility": "eligibility", "difficulties": "difficulties", "interests": "interests", "regions": "regions"}
 FIELDS = ["id", "name", "category", "description", "provider_type", "eligibility", "difficulties", "interests",
           "cost", "cost_notes", "regions", "location", "phone", "email", "website", "how_to_apply",
-          "source_url", "confidence", "reviewed_at"]
+          "source_url", "confidence", "reviewed_at", "community_recs", "community_note"]
 
 
 def norm_name(n):
@@ -96,6 +96,9 @@ def merge(a, b):
             a[f] = b[f]
     if len(b.get("description", "")) > len(a.get("description", "")) * 1.5:
         a["description"] = b["description"]
+    # המלצות מהקהילה: מספר ממליצים שונים. לוקחים את הגבוה.
+    if (b.get("community_recs") or 0) > (a.get("community_recs") or 0):
+        a["community_recs"], a["community_note"] = b["community_recs"], b.get("community_note", "")
     rank = {"high": 2, "medium": 1, "low": 0}
     if rank[b["confidence"]] > rank[a["confidence"]]:
         a["confidence"] = b["confidence"]
