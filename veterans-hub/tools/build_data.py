@@ -163,6 +163,19 @@ def main():
         auto = r["checked_at"] if r and r.get("ok") and s["confidence"] == "high" else ""
         s["verified_at"] = s.get("reviewed_at", "") or auto
 
+    # המלצות מהקהילה (research/community/recs.json): מספר הודעות המלצה ותקציר כללי, לפי שם מדויק או tg_key
+    rec_path = ROOT / "research" / "community" / "recs.json"
+    if rec_path.exists():
+        by = {norm_name(s["name"]): s for s in merged}
+        for r in json.loads(rec_path.read_text(encoding="utf-8")):
+            t = by.get(norm_name(r["name"]))
+            if not t:
+                warnings.append(f"המלצת קהילה בלי שירות תואם: {r['name']}")
+                continue
+            t["community_recs"], t["community_note"] = r["recs"], r.get("note", "")
+    for s in merged:
+        s.pop("tg_key", None)
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(

@@ -106,8 +106,8 @@
   const HAND_LINE = `<svg class="hand-line" viewBox="0 0 24 400" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M12 0 C 4 40, 20 70, 12 110 C 4 150, 22 180, 12 220 C 2 260, 20 300, 12 340 C 6 370, 16 390, 12 400" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
   const WAVE = `<svg class="wave" viewBox="0 0 346 18" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M2 9 Q 22 1 43 9 T 86 9 T 129 9 T 172 9 T 215 9 T 258 9 T 301 9 T 344 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
   const TICK = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 13 C 7 15, 8 17, 10 19 C 13 13, 16 8, 21 4"/></svg>`;
-  // כוכב: כמה אנשים שונים מקהילת הנכים והלוחמים המליצו על השירות (מינימום 2 כדי שיוצג)
-  const STAR_MIN = 2;
+  // כוכב: כמה הודעות המלצה היו עליו בקבוצת הנכים והלוחמים (מינימום 3, ורק כשההמלצות רבות מהתלונות)
+  const STAR_MIN = 3;
   const starred = s => (s.community_recs || 0) >= STAR_MIN;
   const STAR = `<svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 C 12.8 7, 14 9.6, 21.5 10.2 C 16 13, 15.6 15, 17.6 21.5 C 13.8 18, 10.4 18, 6.4 21.5 C 8.4 15, 8 13, 2.5 10.2 C 10 9.6, 11.2 7, 12 2.5 Z"/></svg>`;
   const starTag = s => starred(s) ? `<span class="star-tag">${STAR}מומלץ בקהילה</span>` : "";
@@ -692,7 +692,7 @@
           <span class="verify">${s.verified_at ? "✓ נבדק " + esc(s.verified_at) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
         </div>
         <h2 id="modal-title">${esc(s.name)}</h2>
-        ${starred(s) ? `<p class="community">${STAR}<span><strong>${s.community_recs} אנשים מהקהילה המליצו</strong>${s.community_note ? " · " + esc(s.community_note) : ""}</span></p>` : ""}
+        ${starred(s) ? `<p class="community">${STAR}<span><strong>${s.community_recs} המלצות בקבוצת הנכים והלוחמים</strong>${s.community_note ? " · " + esc(s.community_note) : ""}</span></p>` : ""}
         <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
         ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
         ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${esc(s.cost_notes)}</span></p>` : ""}

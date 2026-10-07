@@ -598,8 +598,8 @@ window.SERVICES = [
   "source_url": "https://nocamels.com/2023/04/idf-veterans-best-friend-dogs-ease-pain-of-ptsd/",
   "confidence": "medium",
   "reviewed_at": "",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 5,
+  "community_note": "בית חם ופעיל לפצועים",
   "verified_at": ""
  },
  {
@@ -941,8 +941,8 @@ window.SERVICES = [
   "source_url": "https://zdvo.org/a-second-home-beit-halochem-centers/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 32,
+  "community_note": "ייעוץ זכויות ועורך דין ללא עלות, חוגים, ספורט וטיפולים",
   "verified_at": "2026-10-07"
  },
  {
@@ -1487,8 +1487,8 @@ window.SERVICES = [
   "source_url": "https://www.maariv.co.il/news/israel/article-1193939",
   "confidence": "medium",
   "reviewed_at": "",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 3,
+  "community_note": "אימונים, סדנאות ומפגשים חברתיים",
   "verified_at": ""
  },
  {
@@ -1829,8 +1829,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/trom",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 5,
+  "community_note": "קורסים ותחביבים לפני שיקום מקצועי",
   "verified_at": "2026-10-07"
  },
  {
@@ -1866,7 +1866,7 @@ window.SERVICES = [
   "source_url": "https://www.mako.co.il/pzm-soldiers/Article-cae7a07a3e3f381027.htm",
   "confidence": "medium",
   "reviewed_at": "",
-  "community_recs": "",
+  "community_recs": 3,
   "community_note": "",
   "verified_at": ""
  },
@@ -4562,8 +4562,8 @@ window.SERVICES = [
   "source_url": "https://www.rising-heroes.org/",
   "confidence": "medium",
   "reviewed_at": "",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 3,
+  "community_note": "מומלצת למי שמחפש משלחת ריפוי",
   "verified_at": ""
  },
  {
@@ -4810,8 +4810,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/ContactUs/CombatResponse",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 8,
+  "community_note": "כדאי לפנות סמוך לאירוע",
   "verified_at": "2026-10-07"
  },
  {
@@ -5911,8 +5911,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/about/one-soul",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 5,
+  "community_note": "כדאי לקבל אישור למטפל מראש",
   "verified_at": "2026-10-07"
  },
  {
@@ -6297,8 +6297,8 @@ window.SERVICES = [
   "source_url": "https://www.hamichlol.org.il/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%9B%D7%99_%D7%A6%D7%94%22%D7%9C",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 39,
+  "community_note": "עוזרים לקדם פניות מול האגף, ייעוץ, הלוואות והנחות",
   "verified_at": "2026-10-07"
  },
  {
@@ -7742,8 +7742,8 @@ window.SERVICES = [
   "source_url": "https://shikum.mod.gov.il/contactus/goodhands",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
+  "community_recs": 16,
+  "community_note": "ממליצים לפנות אליהם לפני ועדה רפואית",
   "verified_at": "2026-10-07"
  },
  {
