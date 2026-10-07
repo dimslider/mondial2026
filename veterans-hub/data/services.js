@@ -2085,46 +2085,6 @@ window.SERVICES = [
   "verified_at": ""
  },
  {
-  "id": "natal-org-il-8a483f",
-  "name": "איינגאר יוגה מודעת טראומה – נט\"ל",
-  "category": "family-support",
-  "description": "נט\"ל (עמותת נפגעי טראומה על רקע לאומי) מפעילה קבוצות איינגאר יוגה מודעת טראומה בפריסה ארצית, כולל קבוצות לבני/בנות זוג של מילואימניקים, למילואימניקים ולהורים שלהם. התרגול עוזר לווסת מתח, לחזק ביטחון בגוף ותחושת מסוגלות.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "bereaved",
-   "civilians",
-   "combat-soldiers",
-   "families",
-   "reservists",
-   "terror-victims"
-  ],
-  "difficulties": [
-   "anxiety",
-   "family-relations",
-   "ptsd",
-   "sleep"
-  ],
-  "interests": [
-   "mind-body"
-  ],
-  "cost": "",
-  "cost_notes": "העלות לא מפורטת באתר, כדאי לברר מול נט\"ל",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "קבוצות בפריסה ארצית",
-  "phone": "*3362",
-  "email": "",
-  "website": "https://www.natal.org.il",
-  "how_to_apply": "להירשם בטופס בעמוד היוגה באתר נט\"ל (לבחור \"בני/בנות זוג של מילואימניקים\") או דרך קו הסיוע *3362.",
-  "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/%d7%90%d7%99%d7%99%d7%a0%d7%92%d7%90%d7%a8-%d7%99%d7%95%d7%92%d7%94-%d7%9e%d7%95%d7%93%d7%a2%d7%aa-%d7%98%d7%a8%d7%90%d7%95%d7%9e%d7%94/",
-  "confidence": "high",
-  "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
-  "verified_at": "2026-10-07"
- },
- {
   "id": "idfwo-org-fa0927",
   "name": "ארגון אלמנות ויתומי צה\"ל",
   "category": "family-support",
@@ -7871,7 +7831,6 @@ window.SERVICES = [
   ],
   "difficulties": [
    "anxiety",
-   "bureaucracy",
    "depression",
    "ptsd"
   ],
@@ -8008,6 +7967,45 @@ window.SERVICES = [
   "website": "https://www.brothersin.yoga/",
   "how_to_apply": "לפנות לעמותה דרך האתר, במייל contact@brothersin.yoga או בטלפון/ווטסאפ 050-2688240.",
   "source_url": "https://www.brothersin.yoga/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": "2026-10-07"
+ },
+ {
+  "id": "natal-org-il-8a483f",
+  "name": "איינגאר יוגה מודעת טראומה – נט\"ל",
+  "category": "yoga-mind-body",
+  "description": "נט\"ל (עמותת נפגעי טראומה על רקע לאומי) מפעילה קבוצות איינגאר יוגה מודעת טראומה בפריסה ארצית, כולל קבוצות לבני/בנות זוג של מילואימניקים, למילואימניקים ולהורים שלהם. התרגול עוזר לווסת מתח, לחזק ביטחון בגוף ותחושת מסוגלות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "civilians",
+   "combat-soldiers",
+   "families",
+   "reservists",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "",
+  "cost_notes": "העלות לא מפורטת באתר, כדאי לברר מול נט\"ל",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "קבוצות בפריסה ארצית",
+  "phone": "*3362",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "להירשם בטופס בעמוד היוגה באתר נט\"ל (לבחור \"בני/בנות זוג של מילואימניקים\") או דרך קו הסיוע *3362.",
+  "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/%d7%90%d7%99%d7%99%d7%a0%d7%92%d7%90%d7%a8-%d7%99%d7%95%d7%92%d7%94-%d7%9e%d7%95%d7%93%d7%a2%d7%aa-%d7%98%d7%a8%d7%90%d7%95%d7%9e%d7%94/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",

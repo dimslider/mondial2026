@@ -304,3 +304,6 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .form[hidden], [hidden] { display: none !important; }
 .privacy p { margin-top: 8px; }
 .ticks.plain li { align-items: flex-start; }
+.area-hero h1 { margin: 0; font: inherit; }
+.area-hero .word.long { font-size: clamp(46px, 14vw, 72px); white-space: nowrap; }
+html, body { overflow-x: hidden; }

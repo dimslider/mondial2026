@@ -17,10 +17,15 @@
   const catLabel = k => (T.categories[k] || { label: k }).label;
   const catIcon = k => (T.categories[k] || { icon: "•" }).icon;
   const costLabel = k => (T.cost[k] || { label: k || "לא ידוע" }).label;
-  // שדה טלפון יכול להכיל כמה מספרים ("1201 | וואטסאפ 052-…") — לחיוג לוקחים את הראשון
-  const firstPhone = p => String(p).split(/\||או|,|\(/)[0].trim();
-  const telHref = p => "tel:" + firstPhone(p).replace(/[^\d*+#]/g, "");
-  const isMobile = p => /^0?5\d/.test(firstPhone(p).replace(/[^\d]/g, "").replace(/^972/, "0"));
+  // שדה טלפון יכול להכיל כמה מספרים ("1201 | וואטסאפ 052-…", "*3362 / 1-800-…") — לחיוג לוקחים את הראשון.
+  // "1111 שלוחה 6" מחויג כ-1111 ואז 6 (פסיק = המתנה בחיוג)
+  const firstPhone = p => String(p).split(/\||\/|\bאו\b|,|\(|;/)[0].replace(/שלוחה\s*\d+/, "").trim();
+  const telHref = p => {
+    const ext = String(p).split(/\||\/|\bאו\b|,|\(|;/)[0].match(/שלוחה\s*(\d+)/);
+    return "tel:" + firstPhone(p).replace(/[^\d*+#]/g, "") + (ext ? "," + ext[1] : "");
+  };
+  // וואטסאפ רק למספר נייד ישראלי מלא (05X + 7 ספרות), לא לקווי כוכבית
+  const isMobile = p => { const f = firstPhone(p); if (f.includes("*")) return false; const d = f.replace(/[^\d]/g, "").replace(/^972/, "0"); return /^05\d{8}$/.test(d); };
   const waHref = p => {
     let d = String(p).replace(/[^\d]/g, "");
     if (d.startsWith("0")) d = "972" + d.slice(1);
@@ -80,12 +85,14 @@
   // ---------- matching ----------
   // ציון התאמה: קשיים שווים יותר מתחומי עניין, אזור קרוב מוסיף, עלות נמוכה מוסיפה מעט.
   // זכאות היא סינון קשיח — לא מציגים שירות שהמשתמש לא זכאי לו (אלא אם השירות פתוח לכולם).
-  const OPEN_TO_ALL = ["civilians"];
+  // "פתוח לכולם": רק שירות רחב באמת (קווי סיוע, מרכזי חוסן וכו'), שמסומן גם "אזרח/ית" וגם לפחות 3 קבוצות נוספות.
+  // שירות שמסומן רק "נפגעי איבה + אזרחים" (למשל הטבה של ביטוח לאומי) לא יוצג לשוטר או למילואימניק.
+  const openToAll = s => { const el = arr(s.eligibility); return el.includes("civilians") && el.length >= 4; };
   function eligible(s, statuses) {
     const el = arr(s.eligibility);
     if (!statuses.length || !el.length) return true;
-    if (el.some(e => OPEN_TO_ALL.includes(e))) return true;
-    return el.some(e => statuses.includes(e));
+    if (el.some(e => statuses.includes(e))) return true;
+    return openToAll(s);
   }
   function regionOk(s, regions) {
     const r = arr(s.regions);
@@ -99,12 +106,15 @@
     const d = arr(s.difficulties).filter(x => p.difficulties.includes(x));
     const i = arr(s.interests).filter(x => p.interests.includes(x));
     if (d.length) { sc += 3 * d.length; why.push("עוזר ב: " + d.map(x => T.difficulties[x]).join(", ")); }
-    if (i.length) { sc += 2 * i.length; why.push("מתאים לתחומי עניין: " + i.map(x => T.interests[x]).join(", ")); }
+    if (i.length) { sc += 3 * i.length; why.push("מתאים לתחומי עניין: " + i.map(x => T.interests[x]).join(", ")); }
     const r = arr(s.regions);
-    if (p.regions.length && r.some(x => p.regions.includes(x))) { sc += 2; why.push("קרוב אליך"); }
-    const cr = (T.cost[s.cost] || { rank: 4 }).rank;
+    if (p.regions.length && r.some(x => p.regions.includes(x))) { sc += 1; why.push("קרוב אליך"); }
+    else if (p.regions.length && !regionOk(s, p.regions)) { sc -= 3; why.push("באזור אחר"); }
+    // עלות לא ידועה נחשבת באמצע, לא כמו "בתשלום"
+    const cr = s.cost ? (T.cost[s.cost] || { rank: 4 }).rank : 2;
     sc += Math.max(0, 2 - cr * 0.5);
     if (p.maxCost != null && cr > p.maxCost) sc -= 4;
+    if (/ניסוי קליני|ניסוי\s/.test(s.name)) sc -= 3;   // ניסויים קליניים: לא בראש הרשימה
     const el = arr(s.eligibility).filter(x => p.statuses.includes(x));
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
     if (s.confidence === "low") sc -= 1;
@@ -112,11 +122,16 @@
     return { sc, why };
   }
   function match(p) {
+    const asked = p.difficulties.length || p.interests.length;
+    const free = p.maxCost === 0;
     return SERVICES
       .filter(s => s.category !== "hotlines")
-      .filter(s => eligible(s, p.statuses) && regionOk(s, p.regions))
+      .filter(s => eligible(s, p.statuses))
+      // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
+      .filter(s => !free || !["subsidized", "partial", "paid"].includes(s.cost))
       .map(s => Object.assign({ s }, score(s, p)))
-      .filter(x => x.sc > 1.5 || (!p.difficulties.length && !p.interests.length))
+      // כשסימנו קושי או תחום עניין, שירות חייב לענות על לפחות אחד מהם (קרבה לבד לא מספיקה)
+      .filter(x => asked ? (arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i))) && x.sc > 1.5 : regionOk(x.s, p.regions))
       // שירות שפתוח לכולם (ולא ספציפית לסטטוס שסימנת) מוצג רק אם הוא עונה על קושי או תחום עניין שבחרת
       .filter(x => !p.statuses.length || arr(x.s.eligibility).some(e => p.statuses.includes(e)) ||
         arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i)))
@@ -136,6 +151,8 @@
   const starred = s => (s.community_recs || 0) >= STAR_MIN;
   const STAR = `<svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 C 12.8 7, 14 9.6, 21.5 10.2 C 16 13, 15.6 15, 17.6 21.5 C 13.8 18, 10.4 18, 6.4 21.5 C 8.4 15, 8 13, 2.5 10.2 C 10 9.6, 11.2 7, 12 2.5 Z"/></svg>`;
   const starTag = s => starred(s) ? `<span class="star-tag">${STAR}מומלץ בקהילה</span>` : "";
+  // שם עם תוספת לועזית בסוגריים: עוטפים כדי שהסוגריים לא יתהפכו בשבירת שורה
+  const nameHtml = n => esc(n).replace(/\(([A-Za-z][^()]*)\)/g, '(<bdi dir="ltr">$1</bdi>)');
   const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
 
   function chip(group, key, label, checked) {
@@ -149,7 +166,7 @@
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
         <div class="card-main">
-          <h3>${esc(s.name)}</h3>
+          <h3>${nameHtml(s.name)}</h3>
           <p class="teaser">${esc(shortDesc(s.description, 110))}</p>
           ${why && why.length ? `<span class="why">← ${esc(why[0])}</span>` : ""}
           <span class="meta-line">${starTag(s)}${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
@@ -202,14 +219,15 @@
     const A = AREAS[k];
     const p = loadProfile();
     let items = SERVICES.filter(s => A.cats.includes(s.category) && s.category !== "hotlines");
-    if (p) items = items.map(s => Object.assign({ s }, score(s, p))).sort((a, b) => b.sc - a.sc).map(x => x.s);
+    // עם פרופיל: מציגים רק מה שמתאים לסטטוס, והכי מתאים קודם
+    if (p) items = items.filter(s => eligible(s, p.statuses)).map(s => Object.assign({ s }, score(s, p))).sort((a, b) => b.sc - a.sc).map(x => x.s);
     else items.sort((a, b) => (b.verified_at ? 1 : 0) - (a.verified_at ? 1 : 0));
     const top = items[0], rest = items.slice(1);
     const cats = A.cats.filter(c => c !== "hotlines" && rest.some(s => s.category === c));
     $main.innerHTML = `
       <section class="area-${k}">
         <div class="area-hero">
-          <span class="dabbed"><span class="word">${esc(A.label)}</span></span>
+          <h1 class="dabbed"><span class="word${A.label.length > 4 ? " long" : ""}">${esc(A.label)}</span></h1>
           <span class="note">${items.length} אפשרויות<br>${esc(A.sub)}</span>
         </div>
         ${WAVE}
@@ -217,7 +235,7 @@
           <article class="sheet" style="margin-top: 16px">
             <span class="note highlight">${p ? "הכי מתאים לך" : "כדאי להתחיל כאן"} · ${esc(costLabel(top.cost))}</span>
             ${starTag(top)}
-            <h2>${esc(top.name)}</h2>
+            <h2>${nameHtml(top.name)}</h2>
             <p class="clamp-2">${esc(shortDesc(top.description, 140))}</p>
             <div class="actions">
               <button class="btn btn-ink" type="button" data-open="${esc(top.id)}">לפרטים וליצירת קשר</button>
@@ -316,7 +334,11 @@
     const res = match(p);
     // שלוש תחנות: ההתאמות הכי טובות, כל אחת מתחום אחר
     const first = [];
-    for (const r of res) { if (first.length < 3 && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
+    // אם בחרו תחום עניין, תחנה אחת לפחות תהיה ממנו
+    const byInterest = p.interests.length ? res.find(r => arr(r.s.interests).some(i => p.interests.includes(i))) : null;
+    if (byInterest) first.push(byInterest);
+    for (const r of res) { if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
+    first.sort((a, b) => b.sc - a.sc);
     const firstIds = new Set(first.map(r => r.s.id));
     const byArea = {};
     res.filter(r => !firstIds.has(r.s.id)).forEach(r => { const a = areaOf(r.s.category); (byArea[a] = byArea[a] || []).push(r); });
@@ -343,7 +365,7 @@
               return `<li>
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
                 <div class="tag-row">${starTag(s)}${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
-                <h2 data-open="${esc(s.id)}" tabindex="0" role="button">${esc(s.name)}</h2>
+                <h2 data-open="${esc(s.id)}" tabindex="0" role="button">${nameHtml(s.name)}</h2>
                 <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
                 ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך").slice(0, 1).join("") || r.why[0])}</span>` : ""}
                 <div class="actions">
@@ -370,6 +392,8 @@
   // מילים נרדפות לחיפוש. כל מילה בשאילתה נחשבת כנמצאה אם אחת מהנרדפות שלה מופיעה.
   const SYNONYMS = [
     ["ptsd", "פוסט טראומה", "פוסט-טראומה", "פוסטטראומה", "הלם קרב"],
+    ["קנאביס", "קנביס", "cbd"],
+    ["אלמנה", "אלמנות", "אלמן", "שכול", "שכולה", "משפחות שכולות"],
     ["כסף", "מענק", "מענקים", "כלכלי", "כספי", "תגמול", "החזר", "מימון", "הלוואה"],
     ["עורך דין", "עו\"ד", "עורכי דין", "משפטי", "ייצוג", "ערעור", "תביעה"],
     ["שוטר", "שוטרים", "משטרה", "נכי משטרה", "מג\"ב", "משמר הגבול"],
@@ -389,6 +413,9 @@
     ["רכב", "נהיגה", "ניידות"]
   ];
   const PREFIXES = ["וה", "שה", "בה", "לה", "מה", "ה", "ב", "ל", "ו", "מ", "ש", "כ"];
+  // גרשיים וגרש בכל הצורות (״ " ׳ ') לא משנים לחיפוש: נט״ל = נט"ל = נטל
+  const normQ = t => String(t || "").toLowerCase().replace(/["״׳'`]/g, "");
+  SYNONYMS.forEach((g, i) => { SYNONYMS[i] = g.map(normQ).filter(w => w !== "עוד"); });   // "עו\"ד" בלי גרשיים = "עוד"
   function expand(word) {
     const out = new Set([word]);
     for (const p of PREFIXES) if (word.length > p.length + 2 && word.startsWith(p)) out.add(word.slice(p.length));
@@ -398,10 +425,10 @@
   const REGION_WORDS = { "צפון": "north", "בצפון": "north", "חיפה": "haifa", "בחיפה": "haifa", "קריות": "haifa", "מרכז": "center", "במרכז": "center",
     "שרון": "sharon", "בשרון": "sharon", "ירושלים": "jerusalem", "בירושלים": "jerusalem", "דרום": "south", "בדרום": "south", "באר שבע": "south" };
   function searchScore(s, words) {
-    const name = (s.name || "").toLowerCase();
+    const name = normQ(s.name);
     const tags = [catLabel(s.category), ...arr(s.interests).map(x => T.interests[x]), ...arr(s.difficulties).map(x => T.difficulties[x]),
-      ...arr(s.regions).map(x => T.regions[x]), ...arr(s.eligibility).map(x => T.eligibility[x])].join(" ").toLowerCase();
-    const body = [s.description, s.location, s.cost_notes, s.how_to_apply].join(" ").toLowerCase();
+      ...arr(s.regions).map(x => T.regions[x]), ...arr(s.eligibility).map(x => T.eligibility[x])].join(" ").toLowerCase().replace(/["״׳'`]/g, "");
+    const body = normQ([s.description, s.location, s.cost_notes, s.how_to_apply].join(" "));
     // מילה קצרה (כמו "ים") נחשבת רק כמילה שלמה, אחרת היא נמצאת בתוך "מילואימניקים"
     // מחפשים רק בתחילת מילה (מותר לפניה ה/ב/ל/ו/מ/כ; בלי ש, אחרת "חווה" נמצא ב"שחווה"), כדי ש"חוות" לא יימצא באמצע מילה אחרת
     const escRe = x => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -446,7 +473,8 @@
     const form = document.getElementById("filters");
     const run = () => {
       const fd = new FormData(form);
-      const q = (fd.get("q") || "").trim().toLowerCase();
+      // קיצורים עם גרשיים שבלי הגרשיים הופכים למילה אחרת ("עו״ד" → "עוד")
+      const q = normQ((fd.get("q") || "").trim().replace(/עו["״]ד/g, "עורך דין").replace(/ב["״]ל/g, "ביטוח לאומי"));
       // ביטוי שלם שמופיע ברשימת הנרדפות ("עורך דין", "כלב שירות") נחפש כיחידה אחת
       const words = SYNONYMS.some(g => g.includes(q)) ? [q] : q.split(/\s+/).filter(Boolean);
       const pool = SERVICES.filter(s => {
@@ -482,7 +510,10 @@
     const G = window.GUIDES || {};
     const keys = Object.keys(G);
     const prof = loadProfile();
-    const k = G[params.get("s")] ? params.get("s") : (prof && prof.statuses.find(x => G[x])) || keys[0];
+    // סטטוסים בלי מדריך משלהם מקבלים את הקרוב ביותר; משפחה שכולה ואזרחים מקבלים את מדריך המשפחות / נפגעי האיבה
+    const ALIAS = { "combat-soldiers": "not-recognized", "security-forces": "police", "bereaved": "families", "civilians": "terror-victims" };
+    const pick = x => G[x] ? x : (G[ALIAS[x]] ? ALIAS[x] : null);
+    const k = pick(params.get("s")) || (prof && prof.statuses.map(pick).find(Boolean)) || keys[0];
     if (!k) { $main.innerHTML = `<section><h1 class="big-word">מה מגיע לי</h1></section>`; return; }
     const g = G[k];
     const items = g.sections.flatMap(sec => sec.items.map(it => Object.assign({ section: sec.title }, it)));
@@ -500,7 +531,10 @@
       if (!b) return `<li class="fold-flat">${TICK}<span>${esc(h)} ${src(it)}</span></li>`;
       return `<li><details class="fold"><summary>${TICK}<span>${esc(h)}</span></summary><p>${esc(b)} ${src(it)}</p></details></li>`;
     };
-    const related = SERVICES.filter(s => ["rights-legal", "financial-grants"].includes(s.category) && eligible(s, [k])).slice(0, 5);
+    // מי יכול לעזור: קודם מה שמיועד במפורש לסטטוס הזה, ורק אחר כך שירותים רחבים
+    const related = SERVICES.filter(s => ["rights-legal", "financial-grants"].includes(s.category) && eligible(s, [k]))
+      .sort((a, b) => (arr(b.eligibility).includes(k) ? 1 : 0) - (arr(a.eligibility).includes(k) ? 1 : 0) || (b.verified_at ? 1 : 0) - (a.verified_at ? 1 : 0))
+      .slice(0, 5);
     $main.innerHTML = `
       <section class="area-soul">
         <h1 class="big-word">מה מגיע לי</h1>
@@ -700,7 +734,7 @@
           ${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span>
           <span class="verify">${s.verified_at ? "✓ נבדק " + esc(s.verified_at) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
         </div>
-        <h2 id="modal-title">${esc(s.name)}</h2>
+        <h2 id="modal-title">${nameHtml(s.name)}</h2>
         ${starred(s) ? `<p class="community">${STAR}<span><strong>${s.community_recs} המלצות בקבוצת הנכים והלוחמים</strong>${s.community_note ? " · " + esc(s.community_note) : ""}</span></p>` : ""}
         <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
         ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
@@ -739,6 +773,8 @@
       </div>`;
     $modal.hidden = false;
     document.body.classList.add("no-scroll");
+    // כפתור "חזרה" בטלפון סוגר את הכרטיס במקום לצאת מהעמוד
+    if (!(history.state && history.state.sheet)) history.pushState({ sheet: true }, "");
     $modal.querySelector(".modal-x").focus();
     const more = document.getElementById("svc-more");
     if (more) more.onclick = () => { document.getElementById("svc-desc").classList.remove("clamp-3"); more.remove(); };
@@ -756,12 +792,13 @@
       const fd = new FormData(f);
       const msg = f.querySelector(".form-msg");
       try {
-        await Store.submit("lead", {
+        const r = await Store.submit("lead", {
           serviceName: s.name, name: fd.get("name").trim(), contact: fd.get("contact").trim(),
           message: (fd.get("message") || "").trim(), consent: true
         }, { service_id: s.id, token: leadToken ? leadToken() : "" });
         f.querySelectorAll("input,textarea,button").forEach(x => x.disabled = true);
-        msg.textContent = "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.";
+        msg.textContent = r && r.local ? "לא הצלחנו לשלוח עכשיו (אין חיבור לשרת). הכי בטוח להתקשר או לכתוב להם ישירות."
+          : "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.";
       } catch (err) {
         msg.textContent = sendError(err) + " אפשר גם להתקשר ישירות.";
       }
@@ -805,9 +842,12 @@
     $modal.hidden = true;
     document.body.classList.remove("no-scroll");
   }
-  $modal.addEventListener("click", e => { if (e.target.closest("[data-close]")) closeModal(); });
+  // סגירה מהממשק: חוזרים צעד אחד בהיסטוריה (מוחקים את הצעד שהכרטיס הוסיף)
+  const closeSheet = () => { if (history.state && history.state.sheet) history.back(); else closeModal(); };
+  window.addEventListener("popstate", () => { if (!$modal.hidden) closeModal(); });
+  $modal.addEventListener("click", e => { if (e.target.closest("[data-close]")) closeSheet(); });
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && !$modal.hidden) closeModal();
+    if (e.key === "Escape" && !$modal.hidden) closeSheet();
     if (e.key === "Enter" && e.target.dataset && e.target.dataset.open) openService(e.target.dataset.open);
   });
   $main.addEventListener("click", e => {

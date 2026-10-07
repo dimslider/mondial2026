@@ -155,7 +155,13 @@
   "how_to_apply": "רוב הזוגות מגיעים דרך היחידות וארגונים שותפים. כדאי לשאול ביחידה או לבדוק באתר הארגון."
  },
  "natal-org-il-8a483f": {
-  "cost": ""
+  "cost": "",
+  "category": "yoga-mind-body",
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ]
  },
  "s-bedbcf": {
   "_remove": "אין תיאור אמיתי (הערת מחקר)"
@@ -667,5 +673,12 @@
  },
  "shikum-mod-gov-il-a17284": {
   "_hide": "ייתכן שנסגר (עמודים סותרים)"
+ },
+ "shikum-mod-gov-il-4f9c0b": {
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ]
  }
 }
