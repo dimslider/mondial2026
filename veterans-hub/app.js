@@ -200,6 +200,8 @@
       if (p.age === "60+" && arr(s.interests).includes("extreme")) sc -= 2;
     }
     if (s.intensity === "oneoff" && s.kind !== "money" && s.kind !== "rights") sc -= 1;
+    // שירות לתפקיד מסוים במשפחה (אלמנות, יתומים, אחים) כשלא ידוע מה הקשר: לא בראש הרשימה
+    if (p.statuses.some(x => x === "families" || x === "bereaved") && !p.relation && familyRoles(s).length) sc -= 3;
     if (s.confidence === "low") sc -= 1;
     if (starred(s)) { sc += 1; why.push("מומלץ בקהילה"); }
     return { sc, why };
@@ -215,6 +217,38 @@
     const worse = p.worsened === true && st.includes("mod-recognized");
     return (unrecognized || worse) && !p.difficulties.includes("bureaucracy") ? Object.assign({}, p, { difficulties: [...p.difficulties, "bureaucracy"], implied: true }) : p;
   }
+  // למי במשפחה השירות מיועד, ולמשפחה של מי (פצוע, מילואים, חטוף, חלל)
+  function familyRoles(s) {
+    const t = s.name, r = [];
+    if (/אלמנ|בנות זוג|בני זוג|בן\/בת זוג|בני\/בנות זוג|נשות|רעיות/.test(t)) r.push("partner");
+    if (/יתומ|ילדי|לילדים|נוער/.test(t)) r.push("child");
+    if (/לאחים|אחים שכולים|אחים ואחיות של|לאחיות|אחים צעירים|לאחים שכולים/.test(t)) r.push("sibling");
+    if (/הורים שכולים|להורים(?! של)|הורים לילד/.test(t)) r.push("parent");
+    if (/להורים של בנות|הורים של בני/.test(t)) r.push("parent-of-partner");
+    return r;
+  }
+  function familyContext(s) {
+    const t = s.name + " " + (s.description || "").slice(0, 160);
+    if (/חטופים|חטוף/.test(t)) return "hostage";
+    if (/שכול|אלמנ|יתומ|חללי|נופלים|נרצחים/.test(s.name)) return "bereaved";
+    if (/פצועים|פצוע|נכים|נכי|הלומי|פוסט טראומה/.test(s.name)) return "wounded";
+    if (/מילואים|מילואימניק/.test(s.name)) return "reservist";
+    return "";
+  }
+  function familyFit(s, p) {
+    const fam = p.statuses.includes("families"), ber = p.statuses.includes("bereaved");
+    if (!fam && !ber) return true;
+    if (p.statuses.some(x => !["families", "bereaved"].includes(x))) return true;   // יש עוד סטטוס: לא מסננים כאן
+    const roles = familyRoles(s), ctx = familyContext(s);
+    if (p.relation && roles.length && !roles.includes(p.relation)) return false;
+    if (ber && !fam && (ctx === "hostage" || ctx === "wounded" || ctx === "reservist") && s.kind === "family") return false;
+    if (ber && /נובה/.test(s.name)) return false;
+    if (fam && !ber && ctx === "bereaved") return false;
+    // פצוע ומילואימניק חופפים הרבה פעמים (מילואימניק עם פוסט טראומה). רק חטופים הם מסלול נפרד לגמרי.
+    if (fam && !ber && p.famof && ((ctx === "hostage") !== (p.famof === "hostage"))) return false;
+    if (fam && !ber && !p.famof && ctx === "hostage") return false;
+    return true;
+  }
   function match(p, opts = {}) {
     p = withImplied(p);
     const t = townOf(p.town);
@@ -228,6 +262,7 @@
       .filter(s => eligible(s, p.statuses))
       .filter(s => !p.statuses.length || recognized || !needsRecognition(s))
       .filter(s => !narrowGroup(s))
+      .filter(s => familyFit(s, p))
       // שירות למי שעוד לא מוכר (כתוב בשם) לא מתאים למי שכבר מוכר
       .filter(s => !recognized || !/שאינם מוכרים|שאינן מוכרות|לא מוכרים|ללא הכרה/.test(s.name))
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
@@ -260,14 +295,18 @@
     const tx = r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
       (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) +
       (p.statuses.some(x => x === "police" || x === "security-forces") ? (r.s.police === "yes" ? 3 : r.s.police === "no" ? -4 : 0) : 0) -
+      (r.s.category === "animal-therapy" ? 4 : 0) -
       (r.s.intensity === "residential" || r.s.intensity === "intensive" || /בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0) - (/רפורמ|המלצות ועדת|מדריך|פורטל/.test(r.s.name) ? 5 : 0);
-    const isTreatment = r => r.s.kind ? r.s.kind === "treatment" && (r.s.category === "mental-health" || arr(r.s.difficulties).some(x => MENTAL.includes(x))) : r.s.category === "mental-health";
+    const isTreatment = r => (r.s.kind === "family" || r.s.kind === "money") && /טיפול/.test(r.s.name) && r.s.category !== "animal-therapy" || (r.s.kind ? r.s.kind === "treatment" && (r.s.category === "mental-health" || arr(r.s.difficulties).some(x => MENTAL.includes(x))) : r.s.category === "mental-health");
     const likesIt = r => arr(r.s.interests).some(i => p.interests.includes(i));
     // מה שהאדם אמר שהכי חשוב לו עכשיו: זו התחנה הראשונה
     const GOAL_PICK = {
       talk: () => best(isTreatment, tx),
       do: () => best(r => (r.s.kind === "activity" || !r.s.kind && likesIt(r)) && (!p.interests.length || likesIt(r)), r => r.sc + (r.s.format === "group" ? 1 : 0)),
-      people: () => best(r => r.s.kind === "peer" || r.s.kind === "activity" && r.s.format === "group", r => r.sc + (likesIt(r) ? 3 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0)),
+      // "אנשים שמבינים": עדיפות לקהילה של אנשים במצב שלו (הורים שכולים, שוטרים, לוחמים מהתקופה שלו)
+      people: () => best(r => r.s.kind === "peer" || r.s.kind === "family" && r.s.format !== "individual" || r.s.kind === "activity" && r.s.format === "group",
+        r => r.sc + (likesIt(r) ? 3 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0) +
+          (arr(r.s.eligibility).length <= 4 && arr(r.s.eligibility).some(x => p.statuses.includes(x) && !["combat-soldiers", "reservists", "civilians"].includes(x)) ? 5 : 0)),
       rights: () => best(r => r.s.kind === "rights" || r.s.kind === "money", r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג/.test(r.s.name) ? 3 : 0))
     };
     if (p.goal && GOAL_PICK[p.goal]) take(GOAL_PICK[p.goal]());
@@ -576,6 +615,10 @@
         const on = k => !!form.querySelector(`input[name="statuses"][value="${k}"]:checked`);
         const anyRec = on("mod-recognized") || on("mod-in-process") || on("not-recognized");
         fu.innerHTML =
+          (on("families") || on("bereaved") ? radioRow("relation", on("bereaved") ? "מה הקשר שלך לחלל/ה?" : "מה הקשר שלך?",
+            { partner: "בן/בת זוג", parent: "הורה", child: "ילד/ה", sibling: "אח/ות" }, p.relation) : "") +
+          (on("families") && !on("bereaved") ? radioRow("famof", "בן/בת משפחה של מי?",
+            { wounded: "פצוע/ה, נכה או מתמודד/ת עם פוסט טראומה", reservist: "משרת/ת מילואים", hostage: "חטוף/ה שחזר/ה" }, p.famof) : "") +
           ((on("police") || on("security-forces")) && !anyRec ? radioRow("secrec", "ומה עם הכרה בנכות? (לשוטרים ולכוחות הביטחון זה דרך אגף השיקום)",
             { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך", "not-recognized": "לא הגשתי / לא יודע/ת" }, p.secrec) : "") +
           (on("mod-recognized") ? radioRow("worsened", "ומאז ההכרה?", { yes: "המצב החמיר", no: "פחות או יותר אותו דבר" }, p.worsened === true ? "yes" : p.worsened === false ? "no" : "") : "") +
@@ -590,6 +633,8 @@
         if (st.key !== "statuses") return;
         const val = n => (form.querySelector(`input[name="${n}"]:checked`) || {}).value || null;
         // הכרה של שוטר / איש כוחות ביטחון: נכנסת לסטטוסים עצמם
+        p.relation = p.statuses.some(x => x === "families" || x === "bereaved") ? val("relation") : null;
+        p.famof = p.statuses.includes("families") && !p.statuses.includes("bereaved") ? val("famof") : null;
         p.secrec = val("secrec");
         if (p.secrec && !p.statuses.includes(p.secrec)) p.statuses = [...p.statuses, p.secrec];
         const w = val("worsened");

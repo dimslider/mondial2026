@@ -127,5 +127,34 @@
   "how_to_apply": "מבקשים מקצין התגמולים טופס 'בדיקה מחדש', מצרפים מסמכים רפואיים שמראים את ההחמרה, ומגישים לאגף השיקום.",
   "source_url": "https://www.mako.co.il/finances-law/law-general/Article-105f6f0b46fad91027.htm",
   "confidence": "medium"
+ },
+ {
+  "name": "טיפול נפשי ורגשי לבני משפחה שכולים – אגף משפחות, הנצחה ומורשת (משרד הביטחון)",
+  "category": "family-support",
+  "description": "הורים, בני זוג, אחים וילדים של חללי צה\"ל וכוחות הביטחון זכאים למימון טיפול נפשי אצל מטפל מורשה של האגף: טיפול אישי, זוגי או משפחתי. האגף מפעיל גם קבוצות תמיכה בהנחיית אנשי מקצוע. המימון בהחזר או בתשלום ישיר למטפל.",
+  "provider_type": "government",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "grief",
+   "depression",
+   "family-relations",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "מספר המפגשים והמסגרת משתנים, כדאי לוודא את התנאים העדכניים מול האגף.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "03-7776700",
+  "email": "",
+  "website": "https://www.kolzchut.org.il/he/טיפול_נפשי_ורגשי_לבני_משפחה_של_חללי_צה%22ל_וכוחות_הביטחון",
+  "how_to_apply": "פונים לאגף משפחות, הנצחה ומורשת (03-7776700) או לקצין/ת הנפגעים, ובוחרים מטפל מרשימת המטפלים המורשים.",
+  "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_ורגשי_לבני_משפחה_של_חללי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "medium"
  }
 ]

@@ -239,7 +239,9 @@
    "maxCost": null,
    "age": "30-45",
    "town": "מודיעין-מכבים-רעות",
-   "goal": "talk"
+   "goal": "talk",
+   "relation": "partner",
+   "famof": "reservist"
   },
   "minimal": {
    "statuses": [
@@ -275,7 +277,8 @@
    "maxCost": null,
    "age": "45-60",
    "town": "חיפה",
-   "goal": "people"
+   "goal": "people",
+   "relation": "parent"
   },
   "minimal": {
    "statuses": [

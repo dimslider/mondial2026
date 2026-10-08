@@ -3832,6 +3832,49 @@ window.SERVICES = [
   "town": "ארצי"
  },
  {
+  "id": "s-4671e0",
+  "name": "טיפול נפשי ורגשי לבני משפחה שכולים – אגף משפחות, הנצחה ומורשת (משרד הביטחון)",
+  "category": "family-support",
+  "description": "הורים, בני זוג, אחים וילדים של חללי צה\"ל וכוחות הביטחון זכאים למימון טיפול נפשי אצל מטפל מורשה של האגף: טיפול אישי, זוגי או משפחתי. האגף מפעיל גם קבוצות תמיכה בהנחיית אנשי מקצוע. המימון בהחזר או בתשלום ישיר למטפל.",
+  "provider_type": "government",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "family-relations",
+   "grief"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "מספר המפגשים והמסגרת משתנים, כדאי לוודא את התנאים העדכניים מול האגף.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "03-7776700",
+  "email": "",
+  "website": "https://www.kolzchut.org.il/he/טיפול_נפשי_ורגשי_לבני_משפחה_של_חללי_צה%22ל_וכוחות_הביטחון",
+  "how_to_apply": "פונים לאגף משפחות, הנצחה ומורשת (03-7776700) או לקצין/ת הנפגעים, ובוחרים מטפל מרשימת המטפלים המורשים.",
+  "source_url": "https://www.kolzchut.org.il/he/טיפול_נפשי_ורגשי_לבני_משפחה_של_חללי_צה%22ל_וכוחות_הביטחון",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
+ },
+ {
   "id": "shikum-mod-gov-il-7dfee1",
   "name": "טיפול נפשי לבני משפחה של נכים ופצועים – אגף השיקום",
   "category": "family-support",
@@ -3927,6 +3970,7 @@ window.SERVICES = [
    "families"
   ],
   "difficulties": [
+   "family-relations",
    "grief",
    "loneliness"
   ],
@@ -7666,6 +7710,7 @@ window.SERVICES = [
   "description": "המרכז הקליני הבין-תחומי באוניברסיטת חיפה פתוח לקהל הרחב. המכון לפסיכותרפיה במרכז מציע ייעוץ וטיפול נפשי בגישות שונות, בדיכאון, חרדה, טראומה וקונפליקטים, באופן פרטני, זוגי, קבוצתי או בהדרכת הורים. המטפלים הם פסיכולוגים קליניים, עובדים סוציאליים קליניים ומטפלות בהבעה. אפשר לקבל טיפול בעברית, ערבית, אנגלית ורוסית. מתאים גם למי שחוזר/ת ממילואים ומחפש/ת טיפול בצפון.",
   "provider_type": "academic",
   "eligibility": [
+   "bereaved",
    "civilians",
    "families",
    "reservists"
@@ -7984,6 +8029,7 @@ window.SERVICES = [
    "civilians",
    "combat-soldiers",
    "not-recognized",
+   "police",
    "reservists"
   ],
   "difficulties": [
@@ -13634,6 +13680,7 @@ window.SERVICES = [
    "mod-in-process",
    "mod-recognized",
    "not-recognized",
+   "police",
    "reservists",
    "security-forces",
    "terror-victims"
@@ -14030,6 +14077,7 @@ window.SERVICES = [
    "combat-soldiers",
    "families",
    "mod-in-process",
+   "mod-recognized",
    "police",
    "reservists",
    "security-forces",

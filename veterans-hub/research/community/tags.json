@@ -4414,5 +4414,17 @@
   "lng": null,
   "elig_fix": null,
   "note": "20% נכות ומעלה בגלל פגיעה נפשית או פגיעת ראש, או 100%; המימוש דרך Shikum.Me"
+ },
+ "s-4671e0": {
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null
  }
 }

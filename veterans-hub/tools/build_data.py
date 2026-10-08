@@ -233,6 +233,13 @@ def main():
             if isinstance(fix, list) and fix and all(x in VALID["eligibility"] for x in fix):
                 s["eligibility"] = sorted(set(fix))
 
+    # שירות חדש שעוד לא תויג: סוג לפי הקטגוריה, עד שיתויג לפי research/RUBRIC.md
+    CAT_KIND = {"hotlines": "hotline", "mental-health": "treatment", "medical-rehab": "treatment", "peer-support": "peer",
+                "rights-legal": "rights", "financial-grants": "money", "employment-education": "work", "family-support": "family",
+                "housing-daily": "housing"}
+    for s in merged:
+        s.setdefault("kind", CAT_KIND.get(s["category"], "activity"))
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(
