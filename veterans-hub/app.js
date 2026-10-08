@@ -243,6 +243,7 @@
     if (p.relation && roles.length && !roles.includes(p.relation)) return false;
     if (ber && !fam && (ctx === "hostage" || ctx === "wounded" || ctx === "reservist") && s.kind === "family") return false;
     if (ber && /נובה/.test(s.name)) return false;
+    if (ber && !p.statuses.includes("terror-victims") && /איבה/.test(s.name)) return false;
     if (fam && !ber && ctx === "bereaved") return false;
     // פצוע ומילואימניק חופפים הרבה פעמים (מילואימניק עם פוסט טראומה). רק חטופים הם מסלול נפרד לגמרי.
     if (fam && !ber && p.famof && ((ctx === "hostage") !== (p.famof === "hostage"))) return false;
@@ -297,7 +298,7 @@
       (p.statuses.some(x => x === "police" || x === "security-forces") ? (r.s.police === "yes" ? 3 : r.s.police === "no" ? -4 : 0) : 0) -
       (r.s.category === "animal-therapy" ? 4 : 0) -
       (/TMS|HBOT|תא לחץ|קנביס|SGB|Stella|סטלה|ניסוי/.test(r.s.name) ? 5 : 0) -   // טיפולי קו שני, לא הצעד הראשון
-      (r.s.intensity === "residential" || r.s.intensity === "intensive" || /בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0) - (/רפורמ|המלצות ועדת|מדריך|פורטל/.test(r.s.name) ? 5 : 0);
+      (r.s.intensity === "residential" || r.s.intensity === "intensive" || /בית מאזן|אשפוז|הבית הבטוח|אינטנסיבי/.test(r.s.name) ? 5 : 0) - (/רפורמ|המלצות ועדת|מדריך|פורטל/.test(r.s.name) ? 5 : 0);
     const isTreatment = r => (r.s.kind === "family" || r.s.kind === "money") && /טיפול/.test(r.s.name) && r.s.category !== "animal-therapy" || (r.s.kind ? r.s.kind === "treatment" && (r.s.category === "mental-health" || arr(r.s.difficulties).some(x => MENTAL.includes(x))) : r.s.category === "mental-health");
     const likesIt = r => arr(r.s.interests).some(i => p.interests.includes(i));
     // מה שהאדם אמר שהכי חשוב לו עכשיו: זו התחנה הראשונה

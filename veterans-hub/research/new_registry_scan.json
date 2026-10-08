@@ -783,7 +783,7 @@
   "confidence": "high",
   "reviewed_at": "2026-10-08",
   "kind": "treatment",
-  "intensity": "oneoff",
+  "intensity": "intensive",
   "recognition": "unknown",
   "police": "yes",
   "unit_only": false,

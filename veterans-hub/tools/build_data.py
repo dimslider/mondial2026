@@ -31,7 +31,8 @@ VALID = {k: keys_of(k) for k in ["categories", "eligibility", "difficulties", "i
 LIST_FIELDS = {"eligibility": "eligibility", "difficulties": "difficulties", "interests": "interests", "regions": "regions"}
 FIELDS = ["id", "name", "category", "description", "provider_type", "eligibility", "difficulties", "interests",
           "cost", "cost_notes", "regions", "location", "phone", "email", "website", "how_to_apply",
-          "source_url", "confidence", "reviewed_at", "community_recs", "community_note", "unit_only"]
+          "source_url", "confidence", "reviewed_at", "community_recs", "community_note", "unit_only",
+          "kind", "intensity", "recognition", "police", "format", "town", "lat", "lng", "war_only"]
 
 
 def norm_name(n):
@@ -238,7 +239,16 @@ def main():
                 "rights-legal": "rights", "financial-grants": "money", "employment-education": "work", "family-support": "family",
                 "housing-daily": "housing"}
     for s in merged:
-        s.setdefault("kind", CAT_KIND.get(s["category"], "activity"))
+        if not s.get("kind"):
+            s["kind"] = CAT_KIND.get(s["category"], "activity")
+        # תיוג שהגיע ישירות מקובץ המחקר (שדות RUBRIC)
+        if isinstance(s.get("lat"), (int, float)) and isinstance(s.get("lng"), (int, float)) and not s.get("geo"):
+            s["geo"] = [round(s["lat"], 3), round(s["lng"], 3)]
+        if s.get("war_only") == "iron-swords":
+            s["era"] = "iron-swords"
+        for f in ("lat", "lng", "war_only"):
+            s.pop(f, None)
+        s["unit_only"] = bool(s.get("unit_only"))
 
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
