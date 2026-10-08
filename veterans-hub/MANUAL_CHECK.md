@@ -506,3 +506,55 @@
 פעילויות: דייג, ג'יפים, סאפ, בזייה, דבוראות, נגרות, נפחות, בישול, תיאטרון, מסעות מדבר, שביל ישראל, מסעות לחו"ל, תורה.
 כחצי מרשימת הארגונים הקיימים לא נבדקה לתתי-תוכניות.
 
+
+## סבב סריקה 2: לאמת (חיפוש בלבד)
+
+- תוכנית שיקום ללוחמי גדוד 13 – עמותת גדעון (גולני) · https://www.golani13.org.il/en/rehabilitation-program-for-the-soldiers-of-gdud13/
+- FLM (First Line Med) – קבוצות עיבוד וטיפול ארוך טווח, עמותת אנטה · https://www.anatta.org.il/en/initiative/flm-first-line-med
+- הכשרה לפיתוח תוכנה לפצועי חרבות ברזל – עתידים, Infinity Labs ואלביט · https://www.ice.co.il/career/news/article/1044081
+- מפגשי עיבוד לאחים ואחיות של פצועים – עמותת אדוות · https://www.maariv.co.il/news/article-1162128
+- ליווי משפחות פצועים באשפוז ממושך – עמותת ואהבת · https://www.inn.co.il/news/668994
+- "קטע של טיול" – טיולי ג'יפים ללוחמים קטועי גפיים · https://www.inn.co.il/news/647316
+- מיזם נהיגת שטח לפצועי צה"ל – ריסטארט · https://www.maariv.co.il/news/israel/article-1333448
+- הכשרה להייטק לנפגעי פוסט טראומה – לצמוח כמנצחים ומכללת HackerU · https://www.maariv.co.il/news/israel/article-1193939
+- נבחרת ישראל בכדורגל קטועים · https://sport1.maariv.co.il/other-industries/article/1597358/
+- העוגן למשפחות המילואים – מתנדבים לעזרה בבית · https://www.maariv.co.il/news/israel/Article-1124955
+- תוכנית תמיכה למילואימניקים חוזרים – דרך עמי · https://m.jpost.com/health-and-wellness/mind-and-spirit/article-846910
+- סדנאות כתיבה לביטוי רגשי למשתתפי המלחמה – מרכז החוסן מדיקל קר (עמותת אמפא) · https://www.maariv.co.il/news/israel/article-1109170
+- סדנאות סרט וסיפור דיגיטלי ללוחמים – נט"ל ו-I WAS THERE · https://www.natal.org.il/en/?p=2094
+- פרויקט השלום (Hashalom) – מרכז החמנייה לחוסן אקדמי, אוניברסיטת בר-אילן · https://www.jns.org/news/israel-news/wounded-idf-soldiers-complete-semester-through-bar-ilan-university-rehabilitation-program
+- כניסה חינם לבית הלוחם לפצועי חרבות ברזל ובני משפחתם – ארגון נכי צה"ל ופועלים לתקומה · https://www.ice.co.il/consumerism/news/article/1005225
+- קורס Cyber Security Analyst לפצועי צה"ל – בנק הפועלים וארגון נכי צה"ל · https://www.calcalist.co.il/article/hyrqocltze
+- מסלול ייעודי לפצועי צה"ל וכוחות הביטחון ב-Jobify – ג'וינט-תבת ואגודת הידידים של ארגון נכי צה"ל · https://www.maariv.co.il/news/israel/article-1169403
+- תוכנית לנכי צה"ל, נפגעי טרור ופעולות איבה ומשפחותיהם – מרכז חוויות · https://havayot-center.co.il/t-en-us/%D7%AA%D7%9B%D7%A0%D7%99%D7%95%D7%AA-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%95%D7%AA/%D7%A0%D7%9B%D7%99-%D7%A6%D7%94-%D7%9C-%D7%A0%D7%A4%D7%92%D7%A2%D7%99-%D7%98%D7%A8%D7%95%D7%A8-%D7%95%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA-%D7%90%D7%99%D7%91%D7%94-%D7%95%D7%9E%D7%A9%D7%A4%D7%97%D7%95%D7%AA%D7%99%D7%94%D7%9D
+- ורטיגו כוח האיזון – מחול משלב לאנשים עם מוגבלות פיזית · https://vertigo.org.il/en/power-balance/about/
+- קו 1203 לגברים נפגעי תקיפה מינית – איגוד מרכזי הסיוע · https://www.kolzchut.org.il/he/מרכזי_הסיוע_לנפגעות_ונפגעי_תקיפה_מינית
+- הקליניקה לדיני עבודה – הקריה האקדמית אונו · https://www.ono.ac.il/clinical-law/%D7%94%D7%A7%D7%9C%D7%99%D7%A0%D7%99%D7%A7%D7%94-%D7%9C%D7%93%D7%99%D7%A0%D7%99-%D7%A2%D7%91%D7%95%D7%93%D7%94/
+- מרכז החוסן והטראומה – הקריה האקדמית אונו · https://www.ono.ac.il/%D7%9E%D7%A8%D7%9B%D7%96-%D7%94%D7%97%D7%95%D7%A1%D7%9F-%D7%95%D7%94%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94/
+- ליווי רגשי ומשפטי בהליך ההכרה – המכון הירושלמי לצדק, לא מפקירים פצועים בשטח ופורום יהלומי הקרב · https://www.maariv.co.il/news/israel/article-1260587
+- סיוע משפטי חינם למשרתי מילואים מול ועדות התעסוקה – משרד הביטחון · https://www.mod.gov.il/media/plfjgyme/%D7%94%D7%9E%D7%91-6203-2025.pdf
+- מחשבים מסלול מחדש – עיריית ירושלים ומרכז התעסוקה הזדמנות · https://www.maariv.co.il/business/carrier/Article-1110134
+- שיקום מקצועי לנפגעי פעולות איבה – ביטוח לאומי · https://www.btl.gov.il/benefits/Victims_of_Hostilities/Pages/shokomMikzoei.aspx
+- טיפולים וחונכות לילדי נפגעי איבה – ביטוח לאומי (נפש אחת) · https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/YaldeyNifga.aspx
+- ליווי מקצועי למשרתי מילואים ובני משפחותיהם – חוות מרפא רשפון · https://www.maariv.co.il/breaking-news/article-1176043
+- תוכניות יוגה למשפחות, לשורדי נובה ולחיילים – אחים ואחיות ליוגה · https://my.israelgives.org/en/fundme/Healing4Israel
+
+### סבב 2: הוחזקו בצד
+
+- כלבים ללוחמים – המרכז להכשרות כלבי שירות (מייסדים יוצאי עוקץ) · https://servicedogs.org.il/en/dogs-for-soldiers/
+- דאגה לבוגרים שנפגעו בשירות – עמותת בוגרי עוקץ (ההולכים בראש) · https://www.oketzfoundation.org/eng
+- ליווי מנטלי – עמותת דובדבן · https://duvdevanfoundation.org/%D7%90%D7%97%D7%A8%D7%99-%D7%94%D7%A9%D7%97%D7%A8%D7%95%D7%A8/%D7%9C%D7%99%D7%95%D7%95%D7%99-%D7%9E%D7%A0%D7%98%D7%9C%D7%99/
+- מרכז להתערבות מוקדמת בטראומה – איכילוב וארגון למענכם · https://www.maariv.co.il/news/health/article-1357590
+- הכשרה להייטק לנפגעי פוסט טראומה – לצמוח כמנצחים ו-HackerU · https://www.maariv.co.il/news/israel/article-1193939
+- טיולי שיקום לפצועי צה"ל – עמותת לפרוש כנף · https://www.inn.co.il/news/658549
+- מראות – מפגשי אמנות בין סטודנטים ללוחמים משוחררים עם פוסט טראומה · https://www.kipa.co.il/חדשות/1148806-0/
+- ריטריט ללוחמים ולוחמות עם סדנאות טיפוליות – קבוצת המ"מ · https://www.maariv.co.il/news/military/article-1080719
+- קבוצת צילום טיפולי (Alex's Group) – בית החולים לב השרון · https://www.yonatannir.com/alexsgroup
+- קורסי "חוזרים הביתה" (Returning Home) לסטודנטים משרתי מילואים – אוניברסיטת בר-אילן · https://afbiu.org/donation/rise
+- סטודיו "דרך האומנות" – צורפות ואומנות במסגרת תושייה, האגודה לבריאות הציבור · https://www.maariv.co.il/news/israel/article-1316749
+- הכשרה מקצועית לצעירים שורדי טראומה – מרחב מרפא רשפון · https://en.globes.co.il/en/article-initiative-helps-young-october-7-survivors-to-rejoin-workforce-1001482257
+- תוכנית מנהיגות בשיט תחרותי – ימטוב · https://www.jewishrhody.com/stories/rhode-island-israeli-vets-connect-on-the-water,7337
+- SafeHeart – טיפול ארוך טווח לשורדי 7 באוקטובר · https://www.jns.org/israel-news/safe-heart-for-israels-mental-health-professionals-oct-7-is-ongoing
+- Chayal's Angels – טיפולים משלימים למילואימניקים · https://orato.world/2024/08/28/resilience-and-healing-on-israels-northern-border-volunteer-leads-20-therapists-in-support-of-soldiers/
+
+TERRA UMA לא נוסף (מוסתר בהחלטה).

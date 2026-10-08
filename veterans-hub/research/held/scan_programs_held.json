@@ -726,5 +726,457 @@
   "how_to_apply": "פנייה דרך אתר העמותה.",
   "source_url": "https://diamonds4life.co.il/",
   "confidence": "low"
+ },
+ {
+  "name": "כלבים ללוחמים – המרכז להכשרות כלבי שירות (מייסדים יוצאי עוקץ)",
+  "category": "animal-therapy",
+  "description": "תוכנית שבה לוחמים עם פוסט טראומה מאלפים כלב שירות בקבוצת תמיכה הדדית, באימונים שבועיים לאורך כשנה. המרכז הוקם על ידי יוצאי יחידת עוקץ, והכלבים ניתנים ללוחמים במתנה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי כתבה בערוץ 14 הכלבים ניתנים במתנה, בלי בירוקרטיה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://servicedogs.org.il/en/dogs-for-soldiers/",
+  "how_to_apply": "פנייה דרך אתר המרכז",
+  "source_url": "https://servicedogs.org.il/en/dogs-for-soldiers/",
+  "confidence": "medium"
+ },
+ {
+  "name": "דאגה לבוגרים שנפגעו בשירות – עמותת בוגרי עוקץ (ההולכים בראש)",
+  "category": "peer-support",
+  "description": "עמותת הבוגרים של יחידת עוקץ בונה רשת בוגרים ותמיכה הדדית, ודואגת לבוגרים שנפגעו בשירות ולבני משפחותיהם. העמותה גם דואגת לכלבים הפורשים ומקיימת פעילויות חברתיות עם כלבים. מיועד לבוגרי היחידה בלבד.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "animals",
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.oketzfoundation.org",
+  "how_to_apply": "פנייה לעמותה דרך האתר",
+  "source_url": "https://www.oketzfoundation.org/eng",
+  "confidence": "low"
+ },
+ {
+  "name": "ליווי מנטלי – עמותת דובדבן",
+  "category": "mental-health",
+  "description": "ליווי נפשי לבוגרי ובוגרות יחידת דובדבן אחרי השחרור, כולל הפניה לטיפול פרטני, זוגי וקבוצתי. מיועד לבוגרי היחידה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://duvdevanfoundation.org",
+  "how_to_apply": "פנייה דרך עמוד 'ליווי מנטלי' באתר העמותה",
+  "source_url": "https://duvdevanfoundation.org/%D7%90%D7%97%D7%A8%D7%99-%D7%94%D7%A9%D7%97%D7%A8%D7%95%D7%A8/%D7%9C%D7%99%D7%95%D7%95%D7%99-%D7%9E%D7%A0%D7%98%D7%9C%D7%99/",
+  "confidence": "medium"
+ },
+ {
+  "name": "מרכז להתערבות מוקדמת בטראומה – איכילוב וארגון למענכם",
+  "category": "mental-health",
+  "description": "מרכז חינמי להתערבות מוקדמת בטראומה נפשית, שמרחיב את מרכז אסיף באיכילוב. נותן טיפול נפשי מקצועי בחינם למשרתי מילואים, לאנשי כוחות הביטחון ולבני משפחותיהם, עם מענה ייעודי לבני המשפחה.",
+  "provider_type": "hmo",
+  "eligibility": [
+   "reservists",
+   "security-forces",
+   "families",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "center"
+  ],
+  "location": "המרכז הרפואי תל אביב (איכילוב)",
+  "phone": "",
+  "email": "",
+  "website": "https://www.tasmc.org.il",
+  "how_to_apply": "",
+  "source_url": "https://www.maariv.co.il/news/health/article-1357590",
+  "confidence": "medium"
+ },
+ {
+  "name": "הכשרה להייטק לנפגעי פוסט טראומה – לצמוח כמנצחים ו-HackerU",
+  "category": "employment-education",
+  "description": "הכשרה במקצועות ההייטק לנפגעי פוסט טראומה, כולל לוחמים שנפצעו, עם ליווי אישי, בניית קורות חיים וחיבור למעסיקים. התוכנית ללא עלות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לעמותת לצמוח כמנצחים או ל-HackerU",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1193939",
+  "confidence": "medium"
+ },
+ {
+  "name": "טיולי שיקום לפצועי צה\"ל – עמותת לפרוש כנף",
+  "category": "nature-retreats",
+  "description": "העמותה, שהוקמה לטיולים משותפים של צעירים עם ובלי מוגבלות, מתמקדת מאז המלחמה בתוכניות שיקום וטיולים לפצועי צה\"ל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "travel",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.lifroskanaf.co.il/",
+  "how_to_apply": "פנייה דרך אתר העמותה",
+  "source_url": "https://www.inn.co.il/news/658549",
+  "confidence": "low"
+ },
+ {
+  "name": "מראות – מפגשי אמנות בין סטודנטים ללוחמים משוחררים עם פוסט טראומה",
+  "category": "art-music",
+  "description": "מיזם קהילתי שהחל במרכז הצעירים של המועצה האזורית גליל תחתון, ומחבר סטודנטים ללוחמים משוחררים עם פוסט טראומה דרך יצירה בכל סוגי האמנות.",
+  "provider_type": "municipal",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-recognized",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "art",
+   "crafts"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "north"
+  ],
+  "location": "גליל תחתון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "דרך מרכז הצעירים גליל תחתון",
+  "source_url": "https://www.kipa.co.il/חדשות/1148806-0/",
+  "confidence": "low"
+ },
+ {
+  "name": "ריטריט ללוחמים ולוחמות עם סדנאות טיפוליות – קבוצת המ\"מ",
+  "category": "nature-retreats",
+  "description": "ריטריט ללוחמים וללוחמות שמשלב סדנאות טיפוליות, מבית קבוצת המ\"מ, התארגנות של קצינים ולוחמים ותיקי יחידות מיוחדות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לקבוצת המ\"מ",
+  "source_url": "https://www.maariv.co.il/news/military/article-1080719",
+  "confidence": "low"
+ },
+ {
+  "name": "קבוצת צילום טיפולי (Alex's Group) – בית החולים לב השרון",
+  "category": "art-music",
+  "description": "קבוצת צילום טיפולי שנתית בבית החולים לב השרון, שבה משתתפים לוחמים עם פוסט טראומה ובני משפחה של לוחמים, ומשתמשים בתמונות כבסיס לשיחה.",
+  "provider_type": "government",
+  "eligibility": [
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations"
+  ],
+  "interests": [
+   "art"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "sharon"
+  ],
+  "location": "בית החולים לב השרון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "",
+  "source_url": "https://www.yonatannir.com/alexsgroup",
+  "confidence": "low"
+ },
+ {
+  "name": "קורסי \"חוזרים הביתה\" (Returning Home) לסטודנטים משרתי מילואים – אוניברסיטת בר-אילן",
+  "category": "employment-education",
+  "description": "קורסים ייעודיים לסטודנטים שחזרו משירות מילואים, שעוזרים לחזור ללימודים מבחינה אקדמית ורגשית. הקורסים נותנים מסגרת, תמיכה והכוונה בזמן שהסטודנטים מעבדים את חוויות המלחמה.",
+  "provider_type": "academic",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "center"
+  ],
+  "location": "אוניברסיטת בר-אילן, רמת גן",
+  "phone": "",
+  "email": "",
+  "website": "https://www.biu.ac.il",
+  "how_to_apply": "דרך דיקנאט הסטודנטים או מרכז החמנייה לחוסן אקדמי בבר-אילן",
+  "source_url": "https://afbiu.org/donation/rise",
+  "confidence": "low"
+ },
+ {
+  "name": "סטודיו \"דרך האומנות\" – צורפות ואומנות במסגרת תושייה, האגודה לבריאות הציבור",
+  "category": "art-music",
+  "description": "סטודיו חברתי לצורפות ואומנות של האגודה לבריאות הציבור בירושלים, שמשתלב בתוכנית תושייה למשפחות של לוחמים שנפגעו מלחץ קרב. הסדנאות החווייתיות נותנות לבני המשפחה מקום לעבד את המציאות ביחד.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "crafts",
+   "art"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים",
+  "phone": "02-5656900",
+  "email": "",
+  "website": "https://www.aguda.co.il",
+  "how_to_apply": "פנייה לאגודה לבריאות הציבור, תוכנית תושייה",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1316749",
+  "confidence": "low"
+ },
+ {
+  "name": "הכשרה מקצועית לצעירים שורדי טראומה – מרחב מרפא רשפון",
+  "category": "employment-education",
+  "description": "תוכנית הכשרה מקצועית לצעירים עם קושי נפשי משמעותי אחרי 7 באוקטובר, שפותחה במרחב מרפא רשפון יחד עם עמותת Youth of Light. הפיילוט נפתח ל-14 שורדי מסיבת נובה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "sharon"
+  ],
+  "location": "רשפון",
+  "phone": "",
+  "email": "",
+  "website": "https://healingspace.co.il",
+  "how_to_apply": "פנייה למרחב מרפא רשפון",
+  "source_url": "https://en.globes.co.il/en/article-initiative-helps-young-october-7-survivors-to-rejoin-workforce-1001482257",
+  "confidence": "medium"
+ },
+ {
+  "name": "תוכנית מנהיגות בשיט תחרותי – ימטוב",
+  "category": "water-sports",
+  "description": "תוכנית של ימטוב שעוזרת לוותיקים ולבני משפחה שמתמודדים עם פוסט טראומה לעשות שינוי דרך ספורט ימי תחרותי כמו שיט. הקבוצות נפגשות כל יום שישי באשדוד, תל אביב, הרצליה וחיפה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "free",
+  "cost_notes": "מוכר כטיפול ימי במסגרת נפש אחת",
+  "regions": [
+   "center",
+   "haifa",
+   "south"
+  ],
+  "location": "אשדוד, תל אביב, הרצליה, חיפה",
+  "phone": "",
+  "email": "",
+  "website": "https://www.yamtov.com",
+  "how_to_apply": "פנייה לעמותת ימטוב",
+  "source_url": "https://www.jewishrhody.com/stories/rhode-island-israeli-vets-connect-on-the-water,7337",
+  "confidence": "low"
+ },
+ {
+  "name": "SafeHeart – טיפול ארוך טווח לשורדי 7 באוקטובר",
+  "category": "mental-health",
+  "description": "ארגון של אנשי בריאות נפש שנותן טיפול פרטני וקבוצתי וטיפולים משלימים לשורדי מסיבת נובה ו-7 באוקטובר, עם רשת של כ-400 מטפלים בכל הארץ. יש לו גם מענה חירום לשורדים עם תסמינים קשים ותמיכה לבני משפחה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "terror-victims",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "חלק מהמפגשים במימון המדינה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לארגון",
+  "source_url": "https://www.jns.org/israel-news/safe-heart-for-israels-mental-health-professionals-oct-7-is-ongoing",
+  "confidence": "medium"
+ },
+ {
+  "name": "Chayal's Angels – טיפולים משלימים למילואימניקים",
+  "category": "medical-rehab",
+  "description": "יוזמה שנותנת לחיילים, ובמיוחד למשרתי מילואים, טיפולים כמו יוגה, פיזיותרפיה וכירופרקטיקה, עם צוות של כ-20 מטפלים מתנדבים באזור הצפון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "north"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "",
+  "source_url": "https://orato.world/2024/08/28/resilience-and-healing-on-israels-northern-border-volunteer-leads-20-therapists-in-support-of-soldiers/",
+  "confidence": "low"
  }
 ]
