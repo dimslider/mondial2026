@@ -1,0 +1,925 @@
+[
+ {
+  "name": "אלבום שקוף – מאגר תוכניות שיקום וליווי אישי חינם (Invisible Album)",
+  "category": "peer-support",
+  "description": "אתר שמרכז במקום אחד תוכניות שיקום ללוחמים משוחררים שמתמודדים עם קשיים נפשיים אחרי השירות: טיפול רגשי, עיבוד חוויות לחימה, ספורט, תעסוקה, מיצוי זכויות ותמיכה במשפחה. אפשר לחפש לבד, או להירשם לליווי אישי חינם: מתנדב/ת שעברו הכשרה, בהדרכת עובדת סוציאלית, נפגשים איתך 6-8 פעמים בזום ובונים איתך תוכנית שיקום אישית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "families",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy",
+   "employment",
+   "family-relations",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "הליווי האישי ללא עלות; לחלק מהתוכניות במאגר יש עלות או תנאי הכרה משלהן",
+  "regions": [
+   "online",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.invisiblealbum.com",
+  "how_to_apply": "להיכנס לאתר ולמלא את טופס ההרשמה לליווי אישי (invisiblealbum.com/he/enroll), או לעבור על השאלון \"מצאו את התהליך שמתאים לכם\" ולבחור תוכנית.",
+  "source_url": "https://invisiblealbum.com/he/enroll",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "peer",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "מאגר תוכניות + ליווי אישי של מתנדב/ת (6-8 מפגשי זום). היה ב-research/held כ-medium; עכשיו נבדק מול האתר עצמו"
+ },
+ {
+  "name": "עמותת הלם קרב – קהילה טיפולית להלומי קרב ולמשפחותיהם (\"לא מפקירים פצועים בשטח\")",
+  "category": "mental-health",
+  "description": "קהילה טיפולית ושיקומית למי שמתמודד עם פוסט טראומה על רקע השירות הצבאי, ולבני המשפחה. יש טיפול פרטני, קבוצות, סדנאות, טיפולים משלימים ופעילות חברתית שוטפת, עם תוכנית אישית לכל משתתף. ללא עלות, ולפי כתבה עליהם גם בלי צורך בהכרה ממשרד הביטחון. בתים בצוחר, במעלה צביה, בקבוצת שילר ובתל אביב.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "families",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות (לפי האתר)",
+  "regions": [
+   "south",
+   "north",
+   "center"
+  ],
+  "location": "צוחר, מעלה צביה, קבוצת שילר, תל אביב",
+  "phone": "050-6078202",
+  "email": "info@helemkrav.org.il",
+  "website": "https://www.helemkrav.org.il",
+  "how_to_apply": "להתקשר או לשלוח וואטסאפ ל-050-6078202, לכתוב ל-info@helemkrav.org.il, או להשאיר פרטים בטופס באתר, הם חוזרים אליך.",
+  "source_url": "https://www.helemkrav.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "היה ב-research/held ('הבית להלומי קרב', מכל שירות); עכשיו נבדק מול helemkrav.org.il. 'בלי הכרה' לפי כתבה, לא לפי האתר"
+ },
+ {
+  "name": "מרפאת קמה לטיפול בטראומה ואובדן – שלוותה (כללית), הוד השרון",
+  "category": "mental-health",
+  "description": "מרפאה בקהילה של המרכז לבריאות הנפש שלוותה, למבוגרים מגיל 18 שעברו אירוע מאיים, אירוע ביטחוני, תאונה, תקיפה, או אובדן פתאומי של אדם קרוב. הטיפול ממוקד ומוגבל בזמן (למשל EMDR וטיפול בחשיפה), פרטני או קבוצתי, ואפשר לשלב טיפול תרופתי. יש גם טיפול זוגי ומשפחתי.",
+  "provider_type": "hmo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "reservists",
+   "security-forces",
+   "terror-victims",
+   "bereaved"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "grief",
+   "sleep",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "בהפניה מרופא משפחה ו'טופס 17' מקופת החולים; העלות לא מפורטת באתר, כדאי לוודא מול המרפאה",
+  "regions": [
+   "sharon"
+  ],
+  "location": "כיכר המושבה, סוקולוב 46, קומה 2, הוד השרון",
+  "phone": "09-7470250 (וואטסאפ: 050-6191023)",
+  "email": "kamaclinic@clalit.org.il",
+  "website": "https://hospitals.clalit.co.il/shalvata/he/adults/community_clinics/Pages/kama.aspx",
+  "how_to_apply": "לקבל מרופא המשפחה הפניה ו'טופס 17', ולשלוח את שניהם למייל המרפאה. אחר כך המרפאה קובעת שיחת קבלה.",
+  "source_url": "https://hospitals.clalit.co.il/shalvata/he/adults/community_clinics/Pages/kama.aspx",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "הוד השרון",
+  "lat": 32.15,
+  "lng": 34.89,
+  "note": null
+ },
+ {
+  "name": "קהילת ברזל – לוח משרות למילואימניקים, פצועים ומפונים (Iron Community)",
+  "category": "employment-education",
+  "description": "לוח משרות ייעודי שמחבר בין מעסיקים, בעיקר מההייטק, לבין אנשי מילואים, פצועי כוחות הביטחון ומפונים שרוצים לחזור לעבודה. אפשר לסנן משרות חלקיות, נגישות או כאלה שלא דורשות ניסיון קודם.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "mod-recognized",
+   "mod-in-process",
+   "civilians"
+  ],
+  "difficulties": [
+   "employment",
+   "physical-disability"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי אלבום שקוף, ללא עלות; באתר עצמו לא מצוין מחיר",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.iron-community.com/",
+  "how_to_apply": "להיכנס לאתר, לחפש משרה מתאימה (אפשר לסנן) ולהגיש מועמדות ישירות דרך המשרה.",
+  "source_url": "https://www.iron-community.com/positions",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": null
+ },
+ {
+  "name": "אדוות להחלמה – טיפול זוגי ומשפחתי אחרי טראומה, אוניברסיטת בר-אילן (Ripples to Recovery)",
+  "category": "family-support",
+  "description": "מיזם של בר-אילן שמציע טיפולים קצרים לזוגות ולמשפחות אחרי המלחמה: 'חוזרים לקשר', 4 מפגשי זום לזוגות שהמילואים או המלחמה פגעו בקשר ביניהם; טיפול זוגי מודע טראומה (CBCT), 15 מפגשים אונליין כשאחד מבני הזוג סובל מפוסט-טראומה; ו'טיול משפחתי', 4-5 מפגשים בקמפוס להורים וילדים בגילאי 3-15.",
+  "provider_type": "academic",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "'חוזרים לקשר' ו'טיול משפחתי', 100 ש\"ח למפגש; הטיפול הזוגי (CBCT) ללא עלות במסגרת מחקר. לפי אלבום שקוף אפשר לקבל החזר דרך תכנית עמית / אגף השיקום",
+  "regions": [
+   "online",
+   "center"
+  ],
+  "location": "אוניברסיטת בר-אילן, רמת גן (וזום)",
+  "phone": "",
+  "email": "centerf@biu.ac.il",
+  "website": "https://sites.biu.ac.il/ripples-recovery",
+  "how_to_apply": "למלא את טופס הפנייה באתר המיזם (לכל תוכנית יש טופס משלה), או לכתוב למייל centerf@biu.ac.il.",
+  "source_url": "https://sites.biu.ac.il/ripples-recovery/page/5604",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "רמת גן",
+  "lat": 32.07,
+  "lng": 34.84,
+  "note": "רוב המפגשים בזום; 'טיול משפחתי' בקמפוס בר-אילן"
+ },
+ {
+  "name": "מרכז צ'ויס (CHOICE) – טראומה והתמכרות לצעירים, האגודה לבריאות הציבור, בני ברק",
+  "category": "mental-health",
+  "description": "מרכז יום חדש של האגודה לבריאות הציבור לנוער ולצעירים בגילאי 12-35 שמתמודדים עם טראומה לצד התמכרות, לחומרים (אלכוהול, סמים, תרופות) או למסכים, גיימינג והימורים. הטיפול משולב במקום אחד, ויש גם ליווי למשפחה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "addiction",
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות עד גיל 26 (במימון ביטוח לאומי); מעל גיל 26, לפי אלבום שקוף יש השתתפות עצמית",
+  "regions": [
+   "center"
+  ],
+  "location": "מגדל V, בר כוכבא 23, בני ברק",
+  "phone": "",
+  "email": "",
+  "website": "https://www.aguda.co.il/services/%D7%9E%D7%A8%D7%9B%D7%96-%D7%A6%D7%B3%D7%95%D7%99%D7%A1-choice/",
+  "how_to_apply": "לפנות לאגודה לבריאות הציבור דרך עמוד המרכז באתר ולבקש שיחת ייעוץ דיסקרטית.",
+  "source_url": "https://www.aguda.co.il/services/%D7%9E%D7%A8%D7%9B%D7%96-%D7%A6%D7%B3%D7%95%D7%99%D7%A1-choice/",
+  "confidence": "medium",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "בני ברק",
+  "lat": 32.09,
+  "lng": 34.83,
+  "note": null
+ },
+ {
+  "name": "מכון עתיד – ייעוץ וטיפול פסיכולוגי-תעסוקתי, אוניברסיטת אריאל",
+  "category": "employment-education",
+  "description": "ייעוץ וטיפול פסיכולוגי-תעסוקתי אישי סביב עבודה, לימודים, משברים וחזרה לשגרה, לחיילים ולוחמים משוחררים ובמילואים. המפגשים שבועיים, פנים אל פנים או מרחוק.",
+  "provider_type": "academic",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "anxiety"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "בתשלום מסובסד; לפי אלבום שקוף אפשר לבדוק זכאות למימון משרד הביטחון, ויש הנחה לנרשמים ללימודים באריאל",
+  "regions": [
+   "judea-samaria",
+   "online"
+  ],
+  "location": "אריאל",
+  "phone": "",
+  "email": "",
+  "website": "https://www.invisiblealbum.com/he/product/6a41076fd9ec3a295746b2dc",
+  "how_to_apply": "להירשם דרך עמוד התוכנית באתר אלבום שקוף.",
+  "source_url": "https://www.invisiblealbum.com/he/product/6a41076fd9ec3a295746b2dc",
+  "confidence": "low",
+  "reviewed_at": "",
+  "kind": "work",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "אריאל",
+  "lat": 32.1,
+  "lng": 35.17,
+  "note": "ביטחון נמוך: לא מופיע באתר האוניברסיטה, רק באלבום שקוף ובפייסבוק"
+ },
+ {
+  "name": "אופק חדש – מרכז לטיפול בטראומה ליוצאי צה\"ל וכוחות הביטחון, בני ברק (New Horizon)",
+  "category": "mental-health",
+  "description": "מרכז טיפול בטראומה נפשית ליוצאי צה\"ל ומערכות הביטחון, לבני ובנות הזוג שלהם ולתושבי העוטף. יש טיפול אישי (EMDR, PE, WET), קבוצות, כולל קבוצת פלייבק, טיפול גוף-נפש וייעוץ פסיכיאטרי. לא צריך הכרה במשרד הביטחון או אבחנה של פוסט-טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "police",
+   "security-forces",
+   "families",
+   "not-recognized",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות; נדרשת מחויבות להגעה סדירה",
+  "regions": [
+   "center"
+  ],
+  "location": "מגדלי LYFE, הירקון 5, קומה 10, בני ברק",
+  "phone": "050-4207918 (גם וואטסאפ)",
+  "email": "",
+  "website": "https://newhorizon.org.il/",
+  "how_to_apply": "להתקשר או לשלוח וואטסאפ ל-050-4207918 ולבקש שיחת התאמה; אחריה נקבעת פגישת הערכה ראשונה.",
+  "source_url": "https://newhorizon.org.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "בני ברק",
+  "lat": 32.09,
+  "lng": 34.83,
+  "note": null
+ },
+ {
+  "name": "מרכז טללים – מרכז עירוני טיפולי לחוסן, נתניה",
+  "category": "mental-health",
+  "description": "מרכז טיפולי של עיריית נתניה (מינהל הרווחה) לתושבי העיר והסביבה שמתמודדים עם השלכות נפשיות של המלחמה, חרדה, טראומה ואובדן. יש טיפול אישי, זוגי, משפחתי וקבוצתי, פנים אל פנים או מרחוק. אנשי מילואים יכולים לקבל 12 מפגשים דרך תכנית 'עמית'.",
+  "provider_type": "municipal",
+  "eligibility": [
+   "reservists",
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "grief"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "לפי אלבום שקוף, ללא עלות; למילואימניקים דרך תכנית עמית",
+  "regions": [
+   "sharon"
+  ],
+  "location": "נתניה",
+  "phone": "",
+  "email": "",
+  "website": "https://www.invisiblealbum.com/he/product/696e256a8d3f92072e36411f",
+  "how_to_apply": "מילואימניקים נרשמים דרך אפליקציית 'עמית' של משרד הביטחון; תושבים אחרים יכולים לפנות דרך אגף הרווחה בעיריית נתניה או להירשם דרך עמוד התוכנית באלבום שקוף.",
+  "source_url": "https://netanya.mynet.co.il/local_news/article/bjuxfwfkxg",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "נתניה",
+  "lat": 32.33,
+  "lng": 34.86,
+  "note": "12 מפגשים למילואימניקים דרך תכנית עמית"
+ },
+ {
+  "name": "בגובה העיניים – לוחמים למען לוחמים",
+  "category": "peer-support",
+  "description": "עמותה שהקימו לוחמים, שמלווה לוחמי מילואים ולוחמים משוחררים במעבר מהלחימה לשגרה, עם או בלי הכרה רשמית. הפעילות כוללת קבוצות עמיתים לעיבוד, חוויות שטח, סדנאות גוף-נפש, נגרות, גלישה וחקלאות טיפולית, וגם כלים מעשיים כמו ניהול כסף ואיזון בין עבודה למשפחה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "family-relations",
+   "financial"
+  ],
+  "interests": [
+   "crafts",
+   "sea",
+   "nature",
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי אלבום שקוף, ללא עלות; באתר העמותה לא מצוין מחיר",
+  "regions": [
+   "center"
+  ],
+  "location": "בת ים, ראשון לציון, סתריה, ניר צבי, כפר סירקין",
+  "phone": "",
+  "email": "",
+  "website": "https://www.eye2eye.org.il/",
+  "how_to_apply": "ללחוץ 'הצטרפו אלינו' באתר, למלא את טופס יצירת הקשר או לשלוח הודעת וואטסאפ דרך הקישור באתר.",
+  "source_url": "https://www.eye2eye.org.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "peer",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": null
+ },
+ {
+  "name": "המקום – מרחבי תמיכה רגשית לישראלים בהודו",
+  "category": "mental-health",
+  "description": "עמותה שמפעילה מרחבים פתוחים במוקדי התרמילאים בהודו, ארמבול בגואה בחורף ודרמסאלה באביב ובקיץ, לצעירים ישראלים שמתמודדים עם המלחמה ועם 7 באוקטובר. אפשר להגיע בלי תיאום לקפה ולשיחה, להשתתף בסדנאות חוסן ובמעגלים, לדבר אחד על אחד עם עובדת סוציאלית, ולקבל הפניה להמשך טיפול ואפילו חילוץ נפשי בשעת חירום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "civilians",
+   "terror-victims",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness",
+   "addiction"
+  ],
+  "interests": [
+   "travel"
+  ],
+  "cost": "free",
+  "cost_notes": "השירותים ללא עלות; לא כולל טיסה ולינה",
+  "regions": [],
+  "location": "ארמבול (גואה) ודרמסאלה, הודו",
+  "phone": "",
+  "email": "",
+  "website": "https://hamakom.ngo/",
+  "how_to_apply": "להגיע למרחב בלי תיאום מראש, או להשאיר פרטים בטופס באתר (גם בני משפחה שדואגים למישהו בהודו).",
+  "source_url": "https://hamakom.ngo/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "בחו\"ל: ארמבול (גואה) ודרמסאלה, הודו"
+ },
+ {
+  "name": "Snow Therapy – ריטריט סקי ועיבוד קבוצתי באלפים ללוחמים",
+  "category": "nature-retreats",
+  "description": "שבוע בהרי האלפים בצרפת לקבוצות של כ-12 לוחמים ולוחמות במילואים ומשוחררים, שמשלב סקי או סנובורד עם עיבוד קבוצתי בהנחיית אנשי טיפול. שף ישראלי מבשל אוכל כשר לכל השבוע.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [
+   "extreme",
+   "sport",
+   "travel"
+  ],
+  "cost": "paid",
+  "cost_notes": "לפי אלבום שקוף: כ-10,000 ש\"ח, אפשר לממש מענקי מילואים; ביטוח ספורט אתגרי על חשבון המשתתף",
+  "regions": [],
+  "location": "הרי האלפים, צרפת",
+  "phone": "",
+  "email": "",
+  "website": "https://www.invisiblealbum.com/he/product/69903d9b6d928bda7ef7b187",
+  "how_to_apply": "להירשם דרך עמוד התוכנית באתר אלבום שקוף.",
+  "source_url": "https://www.invisiblealbum.com/he/product/69903d9b6d928bda7ef7b187",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "האלפים, צרפת",
+  "lat": null,
+  "lng": null,
+  "note": "בחו\"ל; עלות כ-10,000 ש\"ח לפי אלבום שקוף"
+ },
+ {
+  "name": "כפר מעבר – תהליכי עיבוד לצוותי מילואים",
+  "category": "peer-support",
+  "description": "עמותה שהוקמה אחרי 7 באוקטובר ומארחת צוותים אורגניים של לוחמי מילואים לתהליך של יום עד ארבעה ימים, כולל לינה. בתהליך יש כלים לוויסות רגשי, עיבוד חוויות הקרב, סדנאות (תנועה, כתיבה, פוטותרפיה) וטיפולי גוף, וגם מפגשים נפרדים לבנות הזוג ומפגשי זום להמשך.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "anger"
+  ],
+  "interests": [
+   "nature",
+   "writing"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי אלבום שקוף, ללא עלות; באתר העמותה לא מצוין מחיר",
+  "regions": [
+   "north",
+   "center"
+  ],
+  "location": "חוות כפר מעבר במושב בצת, ומרכז 'כאן ועכשיו' בגדרה",
+  "phone": "",
+  "email": "kfarmaavar@gmail.com",
+  "website": "https://kfarm.co.il/",
+  "how_to_apply": "ההרשמה לצוותים בלבד: מפקד או נציג הצוות פונה לעמותה במייל או בוואטסאפ דרך האתר, והצוות המקצועי מתאים את התהליך ליחידה.",
+  "source_url": "https://kfarm.co.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "peer",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "בצת",
+  "lat": 33.07,
+  "lng": 35.14,
+  "note": "לצוותי מילואים אורגניים בלבד, לא לפונים בודדים; גם מרכז בגדרה"
+ },
+ {
+  "name": "מכון פוירשטיין – המרכז לשיקום קוגניטיבי ורגשי לפוסט-טראומה",
+  "category": "medical-rehab",
+  "description": "תוכנית שיקום רב-תחומית למי שהוכר עם 20% נכות ומעלה בגלל פוסט-טראומה. מתחילים באבחון, ואז בונים תוכנית אישית: טיפול רגשי, שיקום קוגניטיבי בשיטת פוירשטיין (קשב, זיכרון, התארגנות), ריפוי בעיסוק וליווי למציאת עבודה, לימודים או פנאי. בין 2 ל-16 שעות בשבוע, כך שאפשר לשלב עם עבודה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "employment",
+   "anxiety"
+  ],
+  "interests": [
+   "animals",
+   "mind-body",
+   "crafts"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "האתר לא מציין עלות; ההפניה דרך אגף השיקום או ביטוח לאומי",
+  "regions": [
+   "jerusalem",
+   "south",
+   "center"
+  ],
+  "location": "ירושלים, שדרות, באר שבע, ראשון לציון",
+  "phone": "02-569-3333",
+  "email": "digital@icelp.org.il",
+  "website": "https://feuerstein-institute.co.il/ptsd/",
+  "how_to_apply": "לקבוע שיחת ייעוץ עם המכון, ואז לבקש הפניה רשמית מעובד/ת השיקום באגף השיקום או בביטוח לאומי.",
+  "source_url": "https://feuerstein-institute.co.il/ptsd/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "למוכרים עם 20% נכות ומעלה בגלל פוסט טראומה (אגף השיקום או ביטוח לאומי)"
+ },
+ {
+  "name": "חירם – קהילת השיקום בקיבוץ הרדוף",
+  "category": "housing-daily",
+  "description": "קהילת שיקום עם מגורים בקיבוץ הרדוף לצעירים בני 18-35 אחרי משבר נפשי, כולל פוסט-טראומה מורכבת. התהליך נמשך כשנתיים וחצי ומשלב עבודה בסדנאות, טיפול אישי וקבוצתי, חיים קהילתיים וטבע, עד יציאה הדרגתית למגורים עצמאיים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "depression",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "crafts",
+   "art"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "הקבלה דורשת סל שיקום; לפי אלבום שקוף, ללא עלות לזכאי סל שיקום של משרד הביטחון, אבל באתר חירם זה לא מוזכר. כדאי לברר מול העמותה",
+  "regions": [
+   "north"
+  ],
+  "location": "קיבוץ הרדוף",
+  "phone": "04-9059215 / 04-9059368",
+  "email": "hiram@hiram.org.il",
+  "website": "https://hiram.org.il/harduf-rehabilitation-communityitation/",
+  "how_to_apply": "למלא את השאלון באתר ולצרף דוח פסיכיאטרי עדכני ואישורי סל שיקום. המתאימים מוזמנים לשיחה, לראיון ולחמישה ימי התנסות.",
+  "source_url": "https://hiram.org.il/harduf-rehabilitation-communityitation/",
+  "confidence": "medium",
+  "reviewed_at": "2026-10-08",
+  "kind": "housing",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "קיבוץ הרדוף",
+  "lat": 32.76,
+  "lng": 35.18,
+  "note": "נדרש סל שיקום (משרד הבריאות); הקשר למשרד הביטחון רק לפי אלבום שקוף"
+ },
+ {
+  "name": "איכות בשיקום – הוסטל, דיור מוגן וקהילה תומכת, חולון",
+  "category": "housing-daily",
+  "description": "עמותה שמפעילה בחולון שלוש מסגרות מגורים למבוגרים שמתמודדים עם קושי נפשי: הוסטל שיקומי ל-19 דיירים עם צוות 24/7 (עד שנה וחצי), קהילה תומכת עם דירות עצמאיות וליווי יומי, ודיור מוגן בדירות קבוצתיות. מתקבלים זכאי סל שיקום וגם מופנים של משרד הביטחון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "depression",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "לזכאי סל שיקום או למופנים של משרד הביטחון; באתר לא מצוינת עלות",
+  "regions": [
+   "center"
+  ],
+  "location": "חולון",
+  "phone": "03-5585887 (הוסטל וקהילה תומכת) / 052-2085738 (דיור מוגן)",
+  "email": "hostel@eychut.org.il",
+  "website": "https://eychut.org.il/",
+  "how_to_apply": "להתקשר למסגרת המתאימה ולתאם ביקור היכרות; נדרש אישור סל שיקום או הפניה ממשרד הביטחון.",
+  "source_url": "https://eychut.org.il/holon/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "housing",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "חולון",
+  "lat": 32.02,
+  "lng": 34.78,
+  "note": null
+ },
+ {
+  "name": "מרכז ניב ניראל – טיפול בטראומה מלחמתית ללוחמים ולמשפחותיהם (Niv Nirel Center)",
+  "category": "mental-health",
+  "description": "מרכז טיפול ושיקום בכפר הנוער הדסה נעורים, מול הים, למשוחררים, למילואימניקים, לאנשי כוחות הביטחון ולבני המשפחה שלהם. יש טיפול פרטני, משפחתי וקבוצתי, טיפול בתנועה, ייעוץ והכוונה, וגם ליווי למי שחוזר לשירות מילואים. מקבלים גם מי שלא הוכר על ידי המדינה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces",
+   "families",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות, בכפוף לטופס 17 מקופת החולים או להתחייבות של אגף השיקום, המרכז עוזר להשיג אותם",
+  "regions": [
+   "sharon"
+  ],
+  "location": "כפר הנוער הדסה נעורים",
+  "phone": "054-6555949 (גם בוואטסאפ)",
+  "email": "",
+  "website": "https://www.nivnirelcenter.org",
+  "how_to_apply": "למלא את טופס הפנייה באתר (שם, טלפון, והאם אתם הפונים עצמם או בני משפחה), או להתקשר או לשלוח וואטסאפ ל-054-6555949.",
+  "source_url": "https://www.nivnirelcenter.org",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "כפר הנוער הדסה נעורים",
+  "lat": 32.36,
+  "lng": 34.87,
+  "note": null
+ },
+ {
+  "name": "הווילה – יום טיפול אינטנסיבי בטראומה ללוחמים ולאנשי כוחות הביטחון וההצלה (שותפות מגן ישראלית – Back to Life)",
+  "category": "mental-health",
+  "description": "יום אחד בווילה שקטה בהרצליה, מ-8:30 עד 17:00: עיבוד אישי ודיסקרטי של חוויות קשות בשיטת EMDR, תרגול כלים להרגעה ולוויסות, ושיחה קבוצתית על טראומה, בלי לספר לקבוצה מה עבר עליך. בסוף היום בודקים מה צריך הלאה ומפנים לטיפול. למי שצריך יותר יש 'וילה קמפוס', ריטריט טיפולי ארוך יותר, וגם ליווי משפטי בהכרה מול אגף השיקום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "השירות בווילה ללא עלות",
+  "regions": [
+   "sharon"
+  ],
+  "location": "הרצליה",
+  "phone": "054-6530627 (גם בוואטסאפ)",
+  "email": "office@backtolife.org.il",
+  "website": "https://backtolife.org.il",
+  "how_to_apply": "למלא את הטופס בעמוד 'צור קשר' באתר ולבחור 'יום טיפול אינטנסיבי בווילה' (או וילה קמפוס / ייעוץ משפטי), או להתקשר או לכתוב בוואטסאפ ל-054-6530627. אפשר לפנות גם בשביל בן משפחה. מגיעים לבד או כצוות, עד 15 איש בקבוצה.",
+  "source_url": "https://backtolife.org.il/villa/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "treatment",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "yes",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "הרצליה",
+  "lat": 32.16,
+  "lng": 34.84,
+  "note": "יש גם 'וילה קמפוס' (ריטריט ארוך יותר) וליווי משפטי בהכרה"
+ },
+ {
+  "name": "תקוות – שיקום דרך ספורט לפצועי צה\"ל ולנפגעי טרור (Tikvot)",
+  "category": "sports",
+  "description": "עמותת מתנדבים מ-2007 שמשקמת פצועי צה\"ל ונפגעי טרור דרך ספורט: טריאתלון, סקי, גלישה וסקי מים, רכיבה על סוסים, קארטינג, חדר כושר ועוד. העמותה מממנת אימונים וציוד קרוב למקום המגורים, ומעודדת להתאמן לצד ספורטאים בלי מוגבלות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "physical-disability"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "sea",
+   "extreme"
+  ],
+  "cost": "free",
+  "cost_notes": "העמותה מממנת אימונים וציוד",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.tikvot.org.il",
+  "how_to_apply": "למלא את טופס ההצטרפות (Join as Member) שמקושר מאתר העמותה.",
+  "source_url": "https://www.tikvot.org.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": null
+ },
+ {
+  "name": "האחים שלנו – קהילה לאחים ואחיות שכולים",
+  "category": "peer-support",
+  "description": "קהילה שהקימו ב-2017 אחים שכולים, לאחים ולאחיות שאיבדו אח או אחות בשירות הביטחוני או בפעולות איבה. יש מסעות שטח וסדנאות חווייתיות להתמודדות עם השכול, מפגשים וקהילות אזוריות, ליווי אישי והכוונה ללימודים ולעבודה, וגם דרכים להנצחה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "grief",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "writing",
+   "art"
+  ],
+  "cost": "",
+  "cost_notes": "העלות לא מפורטת באתר, יש לברר מול העמותה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "ירושלים (משרדי העמותה)",
+  "phone": "055-4422579",
+  "email": "",
+  "website": "https://ourbrothers.co.il",
+  "how_to_apply": "להצטרף דרך הקישור 'הצטרפות לעמותה' באתר, או להתקשר ל-055-4422579.",
+  "source_url": "https://ourbrothers.co.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": null
+ },
+ {
+  "name": "ארגון נפגעי פעולות האיבה – מידע, ייעוץ משפטי ומיצוי זכויות",
+  "category": "rights-legal",
+  "description": "הגוף היציג של נפגעי פעולות איבה בישראל, כולל משפחות שכולות, אלמנים ואלמנות ויתומים. נותן מידע וייעוץ משפטי על הזכויות מול ביטוח לאומי, מלווה בשיקום, ומפעיל גם תמיכה רגשית, מלגות והלוואות ללא ריבית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "terror-victims",
+   "bereaved",
+   "families"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "financial",
+   "grief"
+  ],
+  "interests": [],
+  "cost": "",
+  "cost_notes": "העלות לא מפורטת, יש לברר מול הארגון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "תל אביב",
+  "phone": "",
+  "email": "",
+  "website": "https://www.irgun.org.il",
+  "how_to_apply": "לפנות לארגון דרך האתר. אתר הארגון לא נפתח בבדיקה; פרטי הקשר מופיעים בדף הארגון באתר כל זכות.",
+  "source_url": "https://www.kolzchut.org.il/he/%D7%90%D7%A8%D7%92%D7%95%D7%9F_%D7%A0%D7%A4%D7%92%D7%A2%D7%99_%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA_%D7%90%D7%99%D7%91%D7%94",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "האתר הרשמי לא נפתח בבדיקה; לאמת טלפון מול כל זכות"
+ }
+]
