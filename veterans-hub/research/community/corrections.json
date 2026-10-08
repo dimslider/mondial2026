@@ -76,8 +76,18 @@
  },
  "s-3a9f3b": {
   "cost_notes": "כדאי לברר את תנאי ההשתתפות מול התוכנית.",
-  "how_to_apply": "נרשמים באתר 18X Impact (עמוד הצטרפות). התוכנית בחינם, בשיתוף רשות החדשנות.",
-  "website": "https://www.18ximpact.org"
+  "how_to_apply": "נרשמים באתר 18X Impact בעמוד Join Us.",
+  "website": "https://www.18ximpact.org",
+  "cost": "free",
+  "eligibility": [
+   "reservists"
+  ],
+  "email": "office@18ximpact.org",
+  "description": "תוכנית יזמות טכנולוגית ארצית למשרתי מילואים, בסבסוד מלא, שנמשכת 18 חודשים. התוכנית מלווה את המשתתפים בהקמת מיזמים עם מנטורים ויועצים מנוסים, ויש בה גם קהילה, וובינרים ומפגשים.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.18ximpact.org/"
  },
  "jobify360-co-il-c7b680": {
   "name": "Jobify (ג'וביפיי) – התאמת משרות וייעוץ קריירה"
@@ -311,7 +321,13 @@
  "s-1a9249": {
   "description": "עמותה שנותנת סיוע נפשי דיסקרטי וללא עלות למשוחררים ומשוחררות מצה\"ל עם תסמינים של פוסט טראומה, שעוד לא אובחנו או לא מטופלים דרך משרד הביטחון. לפעמים זה בגלל הדחקה, בושה, פחד לבקש עזרה או קושי מול הבירוקרטיה. העמותה גם מעלה מודעות ופועלת לקידום ההכרה באגף השיקום.",
   "website": "https://www.guardianbrother.org",
-  "email": "info@guardianbrother.org"
+  "email": "info@guardianbrother.org",
+  "phone": "050-6563748",
+  "how_to_apply": "מתקשרים לעמותה או כותבים למייל. מקבלים 12 מפגשים טיפוליים ללא עלות אצל מטפל באזור המגורים, בלי צורך להזדהות או להירשם כהלומי קרב.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.guardianbrother.org/"
  },
  "cohenveteransnetwork-org-fe5188": {
   "website": "https://www.cohenveteransnetwork.org/",
@@ -505,11 +521,26 @@
   "_hide": "סגור כרגע לפי האתר שלהם"
  },
  "s-016bf1": {
-  "cost": "",
+  "cost": "free",
   "name": "החווה של רוקה (Ruca's Farm) – חווה שיקומית במושב חמד",
   "website": "https://www.ruca-farm.co.il",
-  "phone": "077-3334597",
-  "email": "ruca.farm23@gmail.com"
+  "phone": "052-6130269",
+  "email": "ruca.farm23@gmail.com",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "families"
+  ],
+  "description": "חווה חקלאית ושיקומית במושב חמד, ליוצאי כוחות הביטחון עם פוסט טראומה על רקע צבאי, מוכרים ושאינם מוכרים. בתוכניות עובדים בקבוצה בחקלאות ובדבוראות, עם פעילות גוף-נפש וארוחות משותפות. יש גם תוכנית למילואימניקים שלא מוכרים או בתהליך הכרה, תוכנית לזוגות ותוכנית לבנות זוג. כל תוכניות השיקום ללא עלות.",
+  "how_to_apply": "ממלאים את טופס יצירת הקשר באתר החווה ובוחרים 'מעוניין/ת להירשם לתוכניות השיקום', או מתקשרים לחווה.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.ruca-farm.co.il/%D7%94%D7%9E%D7%A8%D7%97%D7%91-%D7%94%D7%A9%D7%99%D7%A7%D7%95%D7%9E%D7%99"
  },
  "nbn-org-il-61e022": {
   "cost": "",
@@ -572,7 +603,11 @@
   "cost_notes": "ייתכן סיוע משפטי בעלות מוזלת לנכי משטרה; לברר מול הארגון. הארגון מבוסס על חברות.",
   "website": "https://neshot.org.il",
   "phone": "08-9212281",
-  "email": "neshot2@neshot.org.il"
+  "email": "neshot2@neshot.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://neshot.org.il/contact-us/"
  },
  "s-9993b4": {
   "phone": "050-6216366",
@@ -686,7 +721,11 @@
  },
  "s-abf8ab": {
   "website": "https://mysister-il.co.il/",
-  "how_to_apply": "נרשמים בטופס באתר."
+  "how_to_apply": "נרשמים בטופס באתר.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://mysister-il.co.il/"
  },
  "s-78adbb": {
   "website": "https://atalef.com",
@@ -698,11 +737,24 @@
  },
  "s-94ba7f": {
   "website": "https://www.hin-group.org/",
-  "email": "contact@hin-group.org"
+  "email": "contact@hin-group.org",
+  "description": "עמותה שלוקחת לוחמים משוחררים מצה\"ל לשבוע של טיפול בטבע, יחד עם הצוות שאיתו לחמו. לפני כן יש מיון והכנה עם אנשי מקצוע, ואחרי כן ליווי וקהילת בוגרים. התהליך מלווה במחקר של אוניברסיטאות קיימברידג' ותל אביב.",
+  "how_to_apply": "פונים לעמותה במייל contact@hin-group.org. יש מיון לפני ההשתתפות ורשימת המתנה.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.hin-group.org/program"
  },
  "shikum-mod-gov-il-a17284": {
   "website": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
-  "phone": "*8150"
+  "phone": "*8150",
+  "name": "בית מאזן רגעים – מגדל העמק (אגף השיקום)",
+  "description": "בית מאזן במגדל העמק, מול עמק יזרעאל, שמונע אשפוז פסיכיאטרי לנכי ונכות צה\"ל במשבר נפשי. יש בו טיפול רגשי פרטני עם תוכנית אישית, יוגה, מיינדפולנס וטיפול באמנות, עם צוות של פסיכולוגים, עובדות סוציאליות ומטפלים. הכתובת: שושנת העמקים 18, מגדל העמק.",
+  "how_to_apply": "מבקשים הפניה לבית מאזן דרך המרפאה במחוז שלכם באגף השיקום, או בבקשה מקוונת באתר האישי של אגף השיקום.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://shikum.mod.gov.il/api/Umbraco/getDynamicPage/?pageId=4325"
  },
  "shikum-mod-gov-il-4f9c0b": {
   "difficulties": [
@@ -726,5 +778,680 @@
    "north",
    "south"
   ]
- }
+ },
+ "atalef-com-01967e": {},
+ "namer-org-il-6a5681": {
+  "_remove": "זו כתבה על מחזור אחד של קורס הכשרה למתנדבים מחברי העמותה שהסתיים בדצמבר, ולא שירות פתוח שאפשר להירשם אליו."
+ },
+ "namer-org-il-15a309": {
+  "website": "https://namer.org.il/project-3/",
+  "description": "פרויקט 'אתרוג' של עמותת בוגרי סיירת גולני: מסעות שחרור של כשבוע בארץ ובחו\"ל לצוותים, עם ליווי של אנשי מקצוע, לעיבוד חוויות הקרב ביחד. העמותה גם מכשירה לוחמים לתמיכת עמיתים ועוזרת במיצוי זכויות מול משרד הביטחון. מיועד לבוגרי היחידה בלבד, בסדיר המשתחרר ובמילואים.",
+  "how_to_apply": "הרשמה דרך עמוד 'אתרוג לעיבוד חוויות לחימה' באתר עמותת הנמר, או במייל info@namer.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://namer.org.il/project-3/"
+ },
+ "namer-org-il-088478": {
+  "_remove": "סדנה חד־פעמית (16-17/2 ו-25/2) לבוגרי סיירת גולני בשיתוף עמותה נוספת, בתשלום מסובסד לחברי עמותה; התאריכים כבר עברו."
+ },
+ "669-org-il-a11cf6": {
+  "cost": "subsidized",
+  "email": "info@669.org.il",
+  "how_to_apply": "טופס 'פנו אלינו' בדף המיזם באתר עמותת החתול, או במייל info@669.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.669.org.il/mehaltzim"
+ },
+ "orev-family-com-ae7fc4": {
+  "email": "orevfamily@gmail.com",
+  "description": "עמותת בוגרי עורב צנחנים לא נותנת טיפול בעצמה, אבל מפעילה קו להתייעצות ותמיכה ומכוונת את לוחמי ובוגרי היחידה למסגרות שותפות: כפר שרה (שהקימו בוגרי היחידה) ומסעות של עמותת בשביל המחר לצוותים. יש גם תוכנית מנטורינג לבוגרים.",
+  "how_to_apply": "פנייה לעמותה דרך טופס יצירת הקשר באתר או במייל orevfamily@gmail.com",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.orev-family.com/פוסט-טראומה"
+ },
+ "yahalomfoundation-com-3e8eec": {
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.yahalomfoundation.com/activity/process"
+ },
+ "yahalomfoundation-com-52bbb6": {
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.yahalomfoundation.com/for/veterans"
+ },
+ "shual-f-org-il-f53d53": {
+  "cost": "subsidized",
+  "email": "office@shual-f.org.il",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "families"
+  ],
+  "description": "עמותת בוגרי סיירת גבעתי נותנת לבוגרי היחידה ולבני המשפחה שלהם תמיכה נפשית וליווי מקצועי דיסקרטי, בחינם או במחיר מסובסד. יש גם ליווי לפצועי הסיירת במיצוי זכויות והכנה לוועדות רפואיות, מסעות צוות לעיבוד חוויות לחימה וקבוצת גלישה.",
+  "how_to_apply": "הרשמה לפורום התמיכה בעמוד 'תמיכה וחוסן' באתר העמותה, או במייל office@shual-f.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.shual-f.org.il/news"
+ },
+ "maglan-org-cb4f5d": {
+  "phone": "054-2922120",
+  "website": "https://maglan.org/casualty-escort-system/",
+  "how_to_apply": "טופס יצירת קשר באתר עמותת ידידי מגלן (לבחור נושא 'מערך ליווי פצועים'), או בטלפון/וואטסאפ העמותה 054-2922120",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://maglan.org/casualty-escort-system/"
+ },
+ "barak-188-com-d961b3": {},
+ "yadlashiryon-com-758693": {
+  "name": "קשר ופעילויות לנכי השריון – ענף הנפגעים בחיל השריון",
+  "website": "https://www.yadlashiryon.com/casualties-branch",
+  "phone": "08-6307402",
+  "email": "office@yadlashiryon.com",
+  "description": "ענף הנפגעים בחיל השריון שומר על קשר עם חיילים שנפצעו או חלו בשירות בסדיר ובמילואים, ומקיים לנכי החיל אירועי הוקרה ופעילויות ייעודיות. הענף מלווה גם משפחות שכולות של החיל.",
+  "how_to_apply": "פנייה לענף הנפגעים דרך משרדי עמותת יד לשריון בלטרון: 08-6307402 או office@yadlashiryon.com",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.yadlashiryon.com/casualties-branch"
+ },
+ "egoz-org-il-5ba6c7": {
+  "name": "סדנאות עיבוד חוויות לחימה לצוותים – עמותת אגוז",
+  "website": "https://www.egoz.org.il/foundation",
+  "description": "עמותת בוגרי סיירת אגוז מפגישה צוותים אורגניים של היחידה בסדנאות ייעודיות, כדי לעבד ביחד את חוויות הלחימה הקשות ולחזור לשגרה האזרחית. מיועד ללוחמי ובוגרי היחידה בסדיר ובמילואים.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.egoz.org.il/foundation"
+ },
+ "kavlevanon-org-il-4cf1f6": {
+  "email": "kavlevanon@gmail.com",
+  "description": "עמותה ללוחמים ששירתו ברצועת הביטחון בלבנון בשנים 1982 עד 2000 ומתמודדים עם פוסט טראומה. נותנת ליווי ומפגשי תמיכה קבוצתיים ופרטניים עם אנשי מקצוע, סדנאות בטבע, אמנות וספורט, עזרה במציאת טיפול, וחיבור למשרדי עורכי דין לתביעת הכרה במשרד הביטחון.",
+  "how_to_apply": "טופס יצירת קשר באתר העמותה או במייל kavlevanon@gmail.com",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://kavlevanon.org.il/ptsd/"
+ },
+ "yamas-org-il-4a7d0f": {
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://yamas.org.il/"
+ },
+ "yamas-org-il-50e4ef": {
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://yamas.org.il/"
+ },
+ "1221-org-il-32fc9e": {
+  "phone": "1221",
+  "how_to_apply": "בזמן אירוע חירום מתקשרים למוקד איחוד הצלה 1221; מתנדבי הארגון מקבלים סיוע דרך 'חוס\"ן פנימי'",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://1221.org.il/new-porj/%D7%97%D7%95%D7%A1%D7%9F-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%95%D7%A1%D7%99%D7%95%D7%A2-%D7%A0%D7%A4%D7%A9%D7%99/"
+ },
+ "magenisrael-org-il-6d4d62": {},
+ "helptsd-org-a24290": {
+  "phone": "054-2404211",
+  "email": "helptsd93@gmail.com",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "families",
+   "not-recognized"
+  ],
+  "description": "עמותה ללוחמים משוחררים ולמשפחות שלהם. התוכנית המרכזית היא סדרת מפגשי עיבוד חוויות לחימה לצוותים, עם מנחים בעלי הכשרה קלינית. העמותה נותנת גם סיוע פרטני וליווי לבני ובנות הזוג.",
+  "how_to_apply": "טופס יצירת קשר באתר, וואטסאפ 054-2404211 או במייל helptsd93@gmail.com",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://helptsd.org/"
+ },
+ "inz-org-il-698f2c": {},
+ "belev-echad-org-15cdf2": {},
+ "belev-echad-org-ba6e96": {},
+ "restartglobal-org-5ee999": {
+  "website": "https://restartglobal.org/makers-for-heroes/",
+  "email": "info@restartglobal.org",
+  "description": "תוכנית של עמותת ריסטארט: במשך חצי שנה צוותי מתנדבים, כמו מהנדסים, מתכנתים, מעצבים, רופאים ופיזיותרפיסטים, בונים יחד עם פצועי צה\"ל פתרון טכנולוגי מותאם לאתגר יומיומי שאין לו פתרון בשוק. התוכנית מסתיימת באירוע שיא של שלושה ימים, והמשתתפים צריכים לקחת חלק פעיל.",
+  "how_to_apply": "הרשמה דרך דף Makers for Heroes באתר ריסטארט, או במייל info@restartglobal.org",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://restartglobal.org/makers-for-heroes/"
+ },
+ "idfwo-org-1299a0": {
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.idfwo.org/by-your-side-program/"
+ },
+ "idfwo-org-c2f7eb": {
+  "description": "מערך של ארגון אלמנות ויתומי צה\"ל ליתומים ויתומות מגיל לידה ועד 30. יש מחנות לאורך השנה (פסח, קיץ, סוכות), סמינרים, משלחות וליווי אישי, יחד עם קבוצת שווים.",
+  "website": "https://www.idfwo.org/activities-for/otzma/",
+  "how_to_apply": "הרשמה דרך האזור האישי באתר הארגון או בטלפון 03-6918403",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.idfwo.org/activities-for/otzma/"
+ },
+ "mishpahot-hantzaha-mod-g-54009d": {
+  "name": "תל\"א – תוכנית למיצוי איכויות ליתומי צה\"ל (ארגון אלמנות ויתומי צה\"ל ומשרד הביטחון)",
+  "cost": "subsidized",
+  "description": "תוכנית אישית ליתומי ויתומות צה\"ל וכוחות הביטחון עד גיל 21. בונים עם המשפחה תוכנית לפי תחומי העניין והצרכים, למשל ספורט, אח בוגר, טיפול באמנות או בבישול, אימון מנטלי, שפות או פיתוח קול. ההשתתפות העצמית היא 10% מעלות הפעילות.",
+  "website": "https://www.idfwo.org/tela-personal-development-program/",
+  "phone": "03-6918403",
+  "how_to_apply": "שיחה עם העובד/ת הסוציאלי/ת או עם מחלקת הצעירים בארגון (03-6918403), ואז אישור התוכנית בוועדה לפני תחילת הפעילות",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.idfwo.org/tela-personal-development-program/"
+ },
+ "yadlabanim-org-dd7452": {
+  "name": "פרויקט פר\"ח לאחים שכולים – יד לבנים",
+  "description": "סטודנטים מלגאים מלווים אחים ואחיות שכולים מכיתה א' עד י\"ב, עם עזרה בלימודים ופעילות חברתית.",
+  "phone": "*8381",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://yadlabanim.org/פרויקט-פרח/"
+ },
+ "girlfriendsidf-org-il-3f0e3f": {
+  "name": "ליווי וקבוצת תמיכה להורים של בנות ובני זוג שכולים – הותיר אחריו חבר.ה",
+  "description": "להורים של בנות ובני זוג של חללי צה\"ל: מלווה אישית מימי השבעה, קבוצת תמיכה והדרכה שבועית בזום שאפשר להצטרף אליה בכל שלב, וטיפול משפחתי של 8 מפגשים שגם האחים יכולים להצטרף אליו.",
+  "phone": "077-770-3166",
+  "email": "info@gfidf.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.girlfriendsidf.org.il/ליוויהוריהחברההשכולה"
+ },
+ "ourfamilyfirst-org-a6e120": {},
+ "levechad-org-fe21c5": {},
+ "jewishagency-org-9fa7ad": {
+  "_remove": "תוכנית 'עצמאימניקים' לעסקי משרתי מילואים מסומנת באתר מרום של הסוכנות כ'הסתיימה'; קרן 'עסקים במילואים' לבני זוג נסגרה להגשה ב-30.4.26."
+ },
+ "paamonim-org-90031a": {
+  "name": "מרחב מוגן כלכלי – ליווי כלכלי לנפגעי המלחמה ומשפחות מילואים – פעמונים",
+  "description": "ליווי כלכלי אישי של פעמונים למילואימניקים ולמשפחות שנפגעו מהמלחמה: עזרה ראשונה כלכלית, תוכנית הבראה, מיצוי זכויות וחיבור לשירותי סיוע נוספים. מתאים גם למפונים, משפחות שכולות ופצועים.",
+  "phone": "03-9127100",
+  "email": "info@paamonim.org",
+  "how_to_apply": "בקשה לליווי בטופס באתר פעמונים (app.paamonim.org.il) או בטלפון 03-9127100",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.paamonim.org/he/volunteer-roles/accompany-war-affected-financial-stability/"
+ },
+ "ogen-org-e122c3": {},
+ "yadsarah-org-6c5889": {
+  "description": "יחידה של יד שרה לחיילים שנפצעו במלחמה: השאלת ציוד רפואי ואורתופדי בחינם, כמו כיסאות גלגלים, קביים והליכונים, גם בסניפים שבתוך בתי החולים, ואירוח למשפחות ליד בתי החולים שבהם הפצועים מטופלים.",
+  "phone": "*6444",
+  "email": "info@yadsarah.org.il",
+  "how_to_apply": "פנייה לסניף יד שרה הקרוב או לסניף בבית החולים, או בטלפון *6444",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://yadsarah.org/yad-sarah-expands-operations-to-support-rehabilitation-of-over-2500-idf-soldiers-reducing-stress-on-healthcare-system/"
+ },
+ "adi-rehab-org-8c4aee": {
+  "name": "מרכז הספורט הפאראלימפי וקבוצת כדורסל בכיסאות גלגלים – עדי נגב נחלת ערן",
+  "description": "מרכז ספורט שיקומי בכפר עדי נגב עם אולם, חדר כושר ובריכה הידרותרפית. יש כדורסל בכיסאות גלגלים (קבוצה בליגה הארצית שמתאמנת פעמיים בשבוע), בוצ'יה, טניס שולחן, חץ וקשת וג'ודו.",
+  "phone": "073-2360410",
+  "email": "office-pool@adi-il.org",
+  "website": "https://adi-rehab.org/he/מרכז-הספורט-הפאראלימפי/",
+  "how_to_apply": "פנייה לבריכה ההידרותרפית ומרכז הספורט בטלפון 073-2360410 (א'-ה') או במייל",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://adi-rehab.org/he/מרכז-הספורט-הפאראלימפי/"
+ },
+ "adi-rehab-org-5ac2f1": {},
+ "inheal-org-df6ace": {
+  "name": "InHeal – מתחילים מחדש, סדנה ללוחמי ולוחמות מילואים (מדיקל קר)",
+  "description": "סדנה של 5 ימים במלון עם לינה ופנסיון מלא ללוחמי ולוחמות מילואים מגיל 24 ששירתו תקופה ארוכה בלחימה. יש אימון בוקר, טיפולים אישיים וסדנאות קבוצתיות, ואחר כך תוכנית תמיכה המשכית. כל יום ראשון נפתחת סדנה חדשה.",
+  "phone": "03-5008899",
+  "email": "info@inheal.org",
+  "how_to_apply": "הרשמה בטופס באתר InHeal או בטלפון 03-5008899",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.inheal.org/inheal-%d7%a1%d7%93%d7%a0%d7%aa-%d7%9e%d7%aa%d7%97%d7%99%d7%9c%d7%99%d7%9d-%d7%9e%d7%97%d7%93%d7%a9-%d7%9c%d7%97%d7%99%d7%99%d7%9c%d7%99-%d7%95%d7%97%d7%99%d7%99%d7%9c%d7%95%d7%aa-%d7%9e%d7%99/"
+ },
+ "icc-haifa-ac-il-f7c8d4": {
+  "name": "טיפול נפשי כולל טיפול בטראומה – המכון לפסיכותרפיה, המרכז הקליני הבין-תחומי אוניברסיטת חיפה",
+  "description": "המכון לפסיכותרפיה של אוניברסיטת חיפה נותן ייעוץ וטיפול נפשי למצבי מצוקה כמו דיכאון, חרדה וטראומה, כולל פוסט טראומה ופגיעה מוסרית. המכון הוא גם מרכז הכשרה למטפלים. השירות ניתן בעברית, ערבית, אנגלית ורוסית.",
+  "phone": "04-8288622",
+  "email": "icc@univ.haifa.ac.il",
+  "how_to_apply": "פנייה למרכז הקליני בטלפון 04-8288622/3 (א'-ה' 8:00–20:00) או במייל",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://icc.haifa.ac.il/%d7%94%d7%9e%d7%9b%d7%95%d7%9f-%d7%9c%d7%a4%d7%a1%d7%99%d7%9b%d7%95%d7%aa%d7%a8%d7%a4%d7%99%d7%94/"
+ },
+ "lonesoldiercenter-com-f9e0b1": {
+  "description": "המרכז מלווה חיילים בודדים, עולים וישראלים בלי עורף משפחתי, מלפני הגיוס, בזמן השירות ועד חמש שנים אחרי השחרור, עם עובדים סוציאליים ורכזים. יש מרכזים קהילתיים בירושלים, תל אביב ובאר שבע ובתי מגורים לחיילים בודדים.",
+  "phone": "02-502-2211",
+  "how_to_apply": "פנייה למרכז בטלפון 02-502-2211 או 03-560-1931, או דרך טופס יצירת הקשר באתר",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://lonesoldiercenter.com/"
+ },
+ "achimlachaim-org-37cae0": {
+  "how_to_apply": "בקשת הצטרפות לעמותה וטופס יצירת קשר באתר אחים לחיים",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.achimlachaim.org/בית-האחים/"
+ },
+ "achimlachaim-org-a71e60": {},
+ "bankhapoalim-co-il-b193f3": {},
+ "natal-org-il-4f510a": {
+  "name": "WeRise – אימון קריירה לשורדי המסיבות וצעירי הדרום – נט\"ל",
+  "description": "אימון קריירה של נט\"ל למי שמתקשה לחזור לעבודה או להתמיד בה בעקבות המלחמה: אימון אישי, אימון לעצמאים, סדנאות קבוצתיות ומנטור מהתחום. מיועד לשורדי המסיבות ולצעירים תושבי הדרום, בעלות סמלית.",
+  "eligibility": [
+   "terror-victims",
+   "civilians"
+  ],
+  "cost": "subsidized",
+  "website": "https://www.natal.org.il/werise/",
+  "phone": "*3362",
+  "how_to_apply": "טופס הרשמה בדף WeRise באתר נט\"ל",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.natal.org.il/werise/"
+ },
+ "natal-org-il-c67cd8": {
+  "_remove": "מסע הג'יפים עם גרוטראלי לא מופיע באתר נט\"ל, ונראה שהיה אירוע חד-פעמי."
+ },
+ "tribeofnova-com-906b39": {
+  "website": "https://tribeofnova.org.il",
+  "phone": "054-390-2773",
+  "email": "Info@tribeofnova.org.il",
+  "eligibility": [
+   "terror-victims",
+   "civilians",
+   "bereaved"
+  ],
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://tribeofnova.org.il/activities/ימי-קהילה/"
+ },
+ "etgarim-org-3d689f": {
+  "name": "קבוצות ספורט לנפגעי מלחמת חרבות ברזל – אתגרים",
+  "description": "אתגרים פתחה קבוצות ספורט לפצועי מלחמת חרבות ברזל, עם ציוד מותאם לכל מגבלה: קיאקים, סקי מים, שייט מפרשיות, ריצה, אופניים למתמודדי פוסט טראומה וקורס צלילה. הקבוצות בכל הארץ, בבתי חולים שיקומיים ובקהילה, וההשתתפות בחינם.",
+  "website": "https://etgarim.org/פעילויות-לנפגעי-חרבות-ברזל/",
+  "phone": "03-5613585",
+  "email": "frontdesk@etgarim.org",
+  "how_to_apply": "השארת פרטים בטופס בדף הפעילויות לנפגעי חרבות ברזל באתר אתגרים, או בטלפון 03-5613585",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://etgarim.org/פעילויות-לנפגעי-חרבות-ברזל/"
+ },
+ "israelparasport-org-298d3c": {
+  "name": "שס\"ק (שיקום, ספורט, קהילה) – מרכז הספורט לנכים ספיבק רמת גן",
+  "website": "https://iscd.com/%d7%a9%d7%99%d7%a7%d7%95%d7%9d-%d7%95%d7%a1%d7%a4%d7%95%d7%a8%d7%98-%d7%91%d7%a7%d7%94%d7%99%d7%9c%d7%94-%d7%9c%d7%9e%d7%a4%d7%95%d7%a0%d7%99%d7%9d/",
+  "phone": "03-5754444",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "terror-victims",
+   "civilians",
+   "families"
+  ],
+  "description": "תוכנית של מרכז הספורט לנכים ספיבק ברמת גן ועמותת איל\"ן, בתמיכת קרנות הביטוח הלאומי, שנפתחה אחרי 7 באוקטובר. משלבת פעילות גופנית מותאמת לטראומה (הידרותרפיה, שחייה, כושר, פילאטיס, אומנויות לחימה ועוד) עם קבוצה טיפולית בהנחיית איש מקצוע, לנפגעי מלחמה וטרור ולאנשים עם מוגבלות פיזית. גם בני משפחה קרובים יכולים להשתתף.",
+  "how_to_apply": "ממלאים טופס מקוון בעמוד התוכנית באתר המרכז, או פונים למרכז בטלפון 03-5754444.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://iscd.com/%d7%a9%d7%99%d7%a7%d7%95%d7%9d-%d7%95%d7%a1%d7%a4%d7%95%d7%a8%d7%98-%d7%91%d7%a7%d7%94%d7%99%d7%9c%d7%94-%d7%9c%d7%9e%d7%a4%d7%95%d7%a0%d7%99%d7%9d/"
+ },
+ "thenextstep-org-il-ade752": {
+  "name": "קהילת הצעד הבא – ליווי עמיתים וקבוצות תמיכה לקטועי גפיים",
+  "website": "https://thenextstep.org.il/",
+  "phone": "1-700-554-700",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "terror-victims",
+   "civilians",
+   "families"
+  ],
+  "description": "קהילה לכל קטועי הגפיים בישראל, בלי הבדל אם הקטיעה מוכרת במשרד הביטחון, בביטוח לאומי או מתאונה. קטועים ותיקים מתנדבים מבקרים ומלווים קטועים חדשים, ויש קבוצות תמיכה, קבוצת בני זוג, קבוצת הורים, ערבי קהילה, אירועי גיבוש, קבוצות ספורט וייעוץ בזכויות. הפעילות בלי תשלום.",
+  "how_to_apply": "מצטרפים לקהילה במילוי טופס חברות באתר, או מתקשרים ל-1-700-554-700 כדי לבקש ביקור של קטוע ותיק.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://thenextstep.org.il/%d7%a7%d7%94%d7%99%d7%9c%d7%aa-%d7%94%d7%a6%d7%a2%d7%93-%d7%94%d7%91%d7%90/"
+ },
+ "hagalsheli-co-il-37bd6b": {
+  "_remove": "ה-SURF TRUCK לא מופיע באתר הגל שלי, לא ברשימת המרכזים ולא בתוכניות."
+ },
+ "hagalsheli-co-il-369a45": {
+  "name": "מרכז הגל שלי זיקים",
+  "phone": "03-6029293",
+  "email": "office@hagalsheli.co.il",
+  "website": "https://hagalsheli.co.il/zikim/",
+  "eligibility": [
+   "security-forces",
+   "reservists",
+   "combat-soldiers",
+   "terror-victims",
+   "civilians",
+   "families",
+   "bereaved"
+  ],
+  "description": "מרכז גלישה טיפולי של עמותת הגל שלי בחוף זיקים, שנפתח ב-2025. נותן טיפול פרטני וקבוצתי דרך הים והגלישה למתמודדים עם טראומה ופוסט טראומה מהעוטף והדרום, ביניהם אנשי כוחות הביטחון, שורדי המסיבות, חטופים ששבו ומשפחותיהם, משפחות שכולות וצוותים רפואיים. המרכז נגיש.",
+  "how_to_apply": "דרך טופס 'לקחת חלק' באתר הגל שלי, בטלפון 03-6029293 או במייל office@hagalsheli.co.il.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://hagalsheli.co.il/zikim/"
+ },
+ "nbn-org-il-28c565": {
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.nbn.org.il/nbnlsp/services-for-lone-soldiers/"
+ },
+ "zivneurim-org-2ae663": {
+  "name": "פעילות ימית למתמודדים עם פוסט טראומה – זיו נעורים",
+  "email": "office@zivneurim.org",
+  "description": "עמותה שהקימו יוצאי שייטת 13 ומפעילה מרכזים ימיים ברחבי הארץ. לצד עבודתה העיקרית עם נוער בסיכון, היא מפעילה תוכנית ימית (גלישה, סאפ, קיאקים, שיט וצלילה) למתמודדים עם פוסט טראומה, לחיזוק כוחות ההתמודדות האישית והקבוצתית.",
+  "how_to_apply": "פונים למשרד העמותה בטלפון 09-7710314 או במייל office@zivneurim.org. באתר אין טופס הרשמה ייעודי.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://zivneurim.org/%D7%94%D7%AA%D7%9B%D7%A0%D7%99%D7%AA-%D7%94%D7%97%D7%99%D7%A0%D7%95%D7%9B%D7%99%D7%AA/"
+ },
+ "drorprogram-org-il-4ac6d6": {
+  "email": "dror@summit.org.il",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "reservists",
+   "combat-soldiers",
+   "security-forces",
+   "police"
+  ],
+  "description": "קהילה טיפולית ושיקומית ארוכת טווח בירושלים של מכון סאמיט, בשיתוף אגף השיקום, ללוחמים, למשרתי מילואים ולאנשי כוחות הביטחון והשיטור עם פוסט טראומה צבאית ופגיעה בתפקוד. מגיעים ארבעה ימים בשבוע לשנה לפחות. יש שני מסלולים: מגורים בדירות שותפים עם צוות מסביב לשעון (מכל הארץ), או ליווי בקהילה לתושבי ירושלים, גוש עציון והסביבה. כולל טיפול פרטני וקבוצתי, ליווי תעסוקתי ולימודי.",
+  "how_to_apply": "ממלאים טופס בדיקת התאמה באתר התוכנית או כותבים ל-dror@summit.org.il. צריך הכרה באגף השיקום על רקע פוסט טראומה, או תהליך הכרה ב-03 ומעלה. אפשר להגיע בהפניה מאגף השיקום או לפנות לבד, וגם בני משפחה יכולים לפנות.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://drorprogram.org.il/"
+ },
+ "18xagentics-com-7710a1": {
+  "cost": "subsidized",
+  "description": "קורס מעשי של 18X Elite Impact בבינה מלאכותית אג'נטית: 12 מפגשים שבועיים של כ-4 שעות במשך 3 חודשים, שבהם כל משתתף בונה פתרון AI אמיתי לארגון שבו הוא עובד. מיועד למשרתי מילואים פעילים ולמשוחררים שעובדים כיום בתפקיד טכנולוגי בארגון עם פעילות מו\"פ. משרתי מילואים זכאים מקבלים 80% סבסוד.",
+  "how_to_apply": "משאירים פרטים בטופס באתר 18xagentics.com. תנאי הסבסוד: משרת מילואים פעיל, או משוחרר עד 5 שנים מסיום השירות הסדיר (עד 10 שנים למי שעשה מילואים), שעובד בתפקיד טכנולוגי בארגון עם מו\"פ. אפשר להשתתף גם בלי זכאות, בתשלום מלא.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://18xagentics.com/"
+ },
+ "golani13-org-il-09c88b": {
+  "_remove": "העמוד הוא קריאה לתרומות מתחילת 2024 לתוכנית שמיועדת רק ללוחמי גדוד 13 דרך מפקדת הגדוד, ומבקש לא להירשם דרך האתר; אין סימן לפעילות פתוחה לציבור."
+ },
+ "anatta-org-il-e58b94": {
+  "name": "FLM (First Line Med) – טיפול נפשי ארוך טווח לנפגעי 7 באוקטובר, קרן אנאתה",
+  "website": "https://www.anatta.org.il/flm-en",
+  "email": "general@anatta.org.il",
+  "eligibility": [
+   "civilians",
+   "terror-victims",
+   "bereaved",
+   "families"
+  ],
+  "description": "מיזם טיפולי שקם אחרי 7 באוקטובר בתמיכת קרן אנאתה. כ-450 פסיכואנליטיקאים ואנשי טיפול בכירים נותנים טיפול פרטני ארוך טווח (עד שלוש שנים), קבוצות עיבוד שבועיות וייעוץ פסיכיאטרי, בחינם. מיועד לנפגעים ישירים של 7 באוקטובר, לשורדי הטבח, למשפחות שכולות ולמשפחות חטופים, ולקהילות העוטף והנגב, כולל בני משפחה רחבה.",
+  "how_to_apply": "פונים במייל general@anatta.org.il.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.anatta.org.il/flm-en"
+ },
+ "s-705a87": {
+  "_remove": "לפי בדיקות קודמות זה היה מחזור יחיד ב-2024, ואתר Infinity Labs חסום כרגע (403); כיום פועלת רק תוכנית DevOps אחרת ללוחמים משוחררים ומילואימניקים בצפון, לא לפצועים."
+ },
+ "s-978de9": {
+  "name": "עמותת אדוות – ארגון משפחות הפצועים",
+  "website": "https://www.advot.org.il/",
+  "email": "advot23@gmail.com",
+  "eligibility": [
+   "families"
+  ],
+  "description": "עמותה למשפחות של פצועי כוחות הביטחון ונפגעי פעולות איבה: הורים, בני זוג, ילדים ואחים. מקיימת קבוצות תמיכה, פורום אחים ואחיות, ערבים לאחים של פצועים, אירועים לאמהות ולזוגות, ימי כיף לילדים, ליווי רגשי וייעוץ בזכויות. יש באתר גם סוכנת דיגיטלית בשם 'אדווה' שעונה לבני משפחה בכל שעה.",
+  "how_to_apply": "מצטרפים לקהילה דרך כפתור 'להצטרפות לקהילה' באתר, או כותבים ל-advot23@gmail.com. ההרשמה לפעילויות מתפרסמת בקבוצת הווטסאפ של העמותה.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.advot.org.il/"
+ },
+ "s-512a0e": {},
+ "s-73e470": {},
+ "s-e08749": {
+  "_remove": "באתר ריסטארט מופיעות תוכנית מנטורים, Makers for Heroes ותוכנית סטוריטלרס, אבל אין מיזם נהיגת שטח."
+ },
+ "s-457af3": {
+  "name": "לצמוח כמנצחים – מרכז צמיחה גופני ומנטלי ללוחמים",
+  "website": "https://www.growaswinners.com",
+  "phone": "055-9816963",
+  "email": "g.as.winners@gmail.com",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "not-recognized",
+   "security-forces"
+  ],
+  "description": "עמותה ברמת גן שמלווה חיילים, מילואימניקים ואנשי כוחות הביטחון וההצלה שמתמודדים עם טראומה ופוסט טראומה. משלבת אימוני אומנויות לחימה וספורט, ליווי אישי וקבוצתי, קהילה ועזרה בחזרה לעבודה, כולל הכשרות להייטק.",
+  "how_to_apply": "ממלאים טופס הרשמה באתר העמותה, מתקשרים ל-055-9816963 או כותבים ל-g.as.winners@gmail.com.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.growaswinners.com"
+ },
+ "s-b5765e": {},
+ "s-91049f": {
+  "website": "https://www.haogenmiluim.org.il/",
+  "email": "haogen@jdemocrat.org.il",
+  "phone": "055-5646086",
+  "description": "מערך מתנדבים ארצי שעוזר למשפחות של משרתי מילואים ומשרתי קבע: שמרטפות ועזרה עם הילדים, בישול ומשלוח ארוחות, קיפול כביסה, עזרה לוגיסטית וכלכלית, ליווי רגשי, סדנאות, עזרה בתעסוקה וטיולים קהילתיים.",
+  "how_to_apply": "משפחה ממלאת טופס 'לקבלת סיוע' באתר העוגן; מתנדבים נרשמים בעמוד ההתנדבות. אפשר גם לכתוב ל-haogen@jdemocrat.org.il או בווטסאפ ל-055-5646086.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.haogenmiluim.org.il/services"
+ },
+ "s-19a8a2": {},
+ "s-d60045": {
+  "name": "מתחילים מחדש – סדנת טראומה למילואימניקים, עמותת אמפא ומדיקל קר",
+  "website": "https://imfa.co.il/%d7%a1%d7%93%d7%a0%d7%94-%d7%99%d7%99%d7%97%d7%95%d7%93%d7%99%d7%aa-%d7%9c%d7%9c%d7%90-%d7%a2%d7%9c%d7%95%d7%aa-%d7%9c%d7%97%d7%99%d7%99%d7%9c%d7%99-%d7%9e%d7%99%d7%9c%d7%95%d7%90%d7%99%d7%9d/",
+  "phone": "03-5008833",
+  "email": "info@imfa.co.il",
+  "cost": "free",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "description": "סדנה קבוצתית בלי תשלום בשיטת InHeal, של עמותת אמפא במרכז מדיקל קר בבת ים. מיועדת ללוחמות וללוחמי מילואים מגיל 24 ששירתו תקופה ממושכת בלחימה, ועוזרת להתמודד עם תסמינים כמו ניתוק רגשי, הימנעות, שכחה ואשמה, ולחזור לשגרה.",
+  "how_to_apply": "נרשמים דרך טופס ההרשמה בעמוד הסדנה באתר עמותת אמפא, או בטלפון 03-5008833.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://imfa.co.il/%d7%a1%d7%93%d7%a0%d7%94-%d7%99%d7%99%d7%97%d7%95%d7%93%d7%99%d7%aa-%d7%9c%d7%9c%d7%90-%d7%a2%d7%9c%d7%95%d7%aa-%d7%9c%d7%97%d7%99%d7%99%d7%9c%d7%99-%d7%9e%d7%99%d7%9c%d7%95%d7%90%d7%99%d7%9d/"
+ },
+ "natal-org-il-693eb0": {
+  "_remove": "עמוד הסדנה באתר נט\"ל מחזיר 404, וחיפוש I WAS THERE באתר לא מוצא כלום; נראה שזו הייתה סדנה חד פעמית."
+ },
+ "biu-ac-il-9c9345": {
+  "name": "פרויקט שלו\"ם – קורסים אקדמיים לחיילים בשיקום, מרכז החוסן חמני\"ה, אוניברסיטת בר-אילן",
+  "website": "https://www.biu.ac.il/article/583752",
+  "cost": "free",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "description": "תוכנית של מרכז החוסן חמני\"ה בבר-אילן לחיילים ולחיילות שנמצאים בשיקום. לומדים קורסים אקדמיים רגילים בתחומים שונים, בגמישות מלאה ובהתאמה אישית, עם ליווי של עובדת סוציאלית, מנטורינג ותמיכה. הלימודים במימון מלא של האוניברסיטה, ומי שעומד בדרישות מקבל נקודות זכות לתואר.",
+  "how_to_apply": "נרשמים בטופס מקוון של התוכנית (הקישור מופיע בעמוד התוכנית באתר בר-אילן). אין תנאי קבלה מגבילים.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.biu.ac.il/article/583752"
+ },
+ "inz-org-il-76f23f": {},
+ "inz-org-il-6810eb": {},
+ "jobify360-co-il-aeb545": {
+  "how_to_apply": "נרשמים בחינם באתר Jobify ומבקשים שם ייעוץ קריירה אישי ללא עלות. נציג מטעם ארגון נכי צה\"ל חוזר אליכם.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://jobify360.co.il/about"
+ },
+ "havayot-center-co-il-203f04": {
+  "phone": "02-9931988",
+  "email": "havayot.center@gmail.com",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.havayot-center.co.il/"
+ },
+ "vertigo-org-il-18d606": {
+  "cost": "paid",
+  "phone": "02-6244176",
+  "website": "https://vertigo.org.il/power-of-balance/ensemble-2/",
+  "how_to_apply": "קובעים שיחת היכרות דרך הטופס בעמוד התוכנית השנתית באתר ורטיגו, או מתקשרים למשרד ורטיגו.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://vertigo.org.il/power-of-balance/ensemble-2/"
+ },
+ "1202-org-il-6b5f24": {
+  "how_to_apply": "חיוג ל-1203 (קו לגברים). לגברים דתיים: 02-5328000. אפשר גם בוואטסאפ 052-8361202 או בצ'אט האנונימי באתר.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.1202.org.il/"
+ },
+ "ono-ac-il-68a91e": {
+  "website": "https://www.ono.ac.il/clinical-law/%D7%94%D7%A7%D7%9C%D7%99%D7%A0%D7%99%D7%A7%D7%94-%D7%9C%D7%93%D7%99%D7%A0%D7%99-%D7%A2%D7%91%D7%95%D7%93%D7%94/",
+  "how_to_apply": "ממלאים את טופס הפנייה בעמוד הקליניקה לדיני עבודה באתר אונו (https://wkf.ms/3GZzcek), וחוזרים אליכם.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.ono.ac.il/clinical-law/%D7%94%D7%A7%D7%9C%D7%99%D7%A0%D7%99%D7%A7%D7%94-%D7%9C%D7%93%D7%99%D7%A0%D7%99-%D7%A2%D7%91%D7%95%D7%93%D7%94/"
+ },
+ "ono-ac-il-e39078": {
+  "_remove": "לפי עמוד המרכז, שלושת המפגשים החינמיים והטיפול המסובסד מיועדים רק לסטודנטים של הקריה האקדמית אונו (כולל סטודנטים מילואימניקים) ולסגל, ולא לציבור המילואימניקים הרחב."
+ },
+ "s-3b7077": {
+  "name": "ייצוג משפטי חינם לפצועי צה\"ל מול משרד הביטחון – המכון הירושלמי לצדק",
+  "description": "המכון הירושלמי לצדק מייצג בחינם פצועי צה\"ל מול הוועדות של משרד הביטחון שקובעות אחוזי נכות, ועוזר ללוחמים ולמשוחררים בבקשת הכרה בפוסט טראומה.",
+  "website": "https://jij.org.il",
+  "phone": "02-5375545",
+  "how_to_apply": "מתקשרים למשרדי המכון הירושלמי לצדק.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://jij.org.il/news/%d7%9c%d7%94%d7%a1%d7%aa%d7%9b%d7%9c-%d7%9c%d7%a6%d7%93%d7%a7-%d7%91%d7%a2%d7%99%d7%a0%d7%99%d7%99%d7%9d/"
+ },
+ "mod-gov-il-7491f8": {
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "email": "Miluim.moked@digital.idf.il",
+  "description": "משרד הביטחון נותן ייצוג משפטי חינם על ידי עורכי דין לדיני עבודה למשרתי מילואים, ובמקרים מסוימים גם לבני ובנות הזוג, שפוטרו או נפגעו בעבודה בגלל המילואים: מול ועדת התעסוקה, בערעור לבית הדין לעבודה ובשימוע בתקופה המוגנת. אחרי שהבקשה מאושרת מקבלים רשימת עורכי דין ובוחרים אחד.",
+  "how_to_apply": "ממלאים טופס בקשה לסיוע משפטי לחיילי מילואים ושולחים עם המסמכים למייל Miluim.moked@digital.idf.il, עד 9 חודשים מיום הפיטורים. לבירורים: מוקד המילואים 1111 שלוחה 4.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.hachvana.mod.gov.il/ConsultationAndDirection/Documents/טופס%20תביעה%20לוועדות%20תעסוקה.pdf"
+ },
+ "s-6266bf": {},
+ "btl-gov-il-090b89": {
+  "website": "https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation%20_Victims_of_%20Hostilities/Pages/default.aspx",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.btl.gov.il/benefits/Vocational_Rehabilitation/Vocational_Rehabilitation%20_Victims_of_%20Hostilities/Pages/default.aspx"
+ },
+ "btl-gov-il-eeaba8": {
+  "website": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/YaldeyNifga.aspx",
+  "phone": "03-5127118",
+  "description": "ילדים בגילאי 7 עד 30 שההורה שלהם נפגע איבה עם פוסט טראומה, פגיעה נפשית או פגיעת ראש זכאים להחזר על טיפול נפשי פרטני. עד גיל 18 יש גם החזר על טיפול אלטרנטיבי. ילדים בגילאי 5 עד 18 זכאים גם לחונכות לתמיכה רגשית, חברתית ולימודית, עד 4 שעות בשבוע.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/YaldeyNifga.aspx"
+ },
+ "healingspace-co-il-23525c": {
+  "name": "חוות מרפא רשפון – טיפולי גוף-נפש וצמיחה מטראומה",
+  "description": "חווה טיפולית ברשפון שמציעה טיפולי גוף-נפש, סדנאות חוסן ותוכניות צמיחה מטראומה, גם לחיילים בסדיר ובמילואים ולאנשי כוחות הביטחון וההצלה. בימי חמישי בערב יש ערב פתוח עם טיפולים וסדנאות.",
+  "email": "groups@healingspace.co.il",
+  "how_to_apply": "פונים דרך טופס יצירת הקשר באתר חוות מרפא, או במייל לקבוצות וימי טיפול.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://healingspace.co.il/%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%95%D7%AA-%D7%A6%D7%9E%D7%99%D7%97%D7%94/"
+ },
+ "brothersin-yoga-a89b1e": {
+  "name": "מסע לחיים ושיעורי יוגה רגישה לטראומה – אחים ליוגה",
+  "description": "עמותה שמלמדת יוגה רגישה לטראומה למי שמתמודד עם טראומה על רקע ביטחוני. התוכנית המרכזית, מסע לחיים, כוללת ריטריט פתיחה, מפגשים שבועיים בזום וריטריט סיום. יש גם שיעורי יוגה פתוחים בזום לכל הציבור פעמיים ביום, ללא עלות.",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "civilians",
+   "terror-victims"
+  ],
+  "phone": "050-2688240",
+  "email": "contact@brothersin.yoga",
+  "how_to_apply": "נרשמים דרך אתר העמותה (כפתור הרשמה), או פונים בטלפון או במייל של העמותה.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://www.brothersin.yoga/"
+ },
+ "atalef-com-61908c": {
+  "description": "תוכנית של עמותת העטלף (בוגרי שייטת 13) לאנשי כוחות הביטחון שמתמודדים עם חוויות קשות מהשירות ומהלחימה. כל משתתף משודך למתנדב מבוגרי היחידה לליווי אישי של שנה לפחות, בפעילות ים מאתגרת: שיט, צלילה או גלישה.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://atalef.com/social/"
+ },
+ "atalef-com-aadfe1": {
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "description": "תוכנית משותפת לעמותת העטלף ולבית הלוחם: מתנדבים מבוגרי שייטת 13 מלווים נכי צה\"ל, חברי בית הלוחם, בלימוד שחייה וגלישת סאפ עם מאמן מוסמך.",
+  "website": "https://atalef.com/social/",
+  "how_to_apply": "פונים לבית הלוחם הקרוב או לעמותת העטלף.",
+  "confidence": "high",
+  "reviewed_at": "2026-10-08",
+  "verified_at": "2026-10-08",
+  "source_url": "https://atalef.com/social/"
+ },
+ "lohamim-org-il-1df527": {}
 }
