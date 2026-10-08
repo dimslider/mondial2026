@@ -128,7 +128,9 @@
     // עלות לא ידועה נחשבת באמצע, לא כמו "בתשלום"
     const cr = s.cost ? (T.cost[s.cost] || { rank: 4 }).rank : 2;
     sc += Math.max(0, 2 - cr * 0.5);
-    if (p.maxCost != null && cr > p.maxCost) sc -= 4;
+    // עלות לא ידועה לא נענשת. "במימון משרד הביטחון" הוא חינם למי שמוכר או בתהליך
+    const modFree = s.cost === "mod-funded" && p.statuses.some(x => x === "mod-recognized" || x === "mod-in-process");
+    if (p.maxCost != null && s.cost && !modFree && cr > p.maxCost) sc -= 4;
     if (/ניסוי קליני|ניסוי\s/.test(s.name)) sc -= 3;   // ניסויים קליניים: לא בראש הרשימה
     const el = arr(s.eligibility).filter(x => p.statuses.includes(x));
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
