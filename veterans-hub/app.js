@@ -153,6 +153,25 @@
   const starTag = s => starred(s) ? `<span class="star-tag">${STAR}מומלץ בקהילה</span>` : "";
   // שם עם תוספת לועזית בסוגריים: עוטפים כדי שהסוגריים לא יתהפכו בשבירת שורה
   const nameHtml = n => esc(n).replace(/\(([A-Za-z][^()]*)\)/g, '(<bdi dir="ltr">$1</bdi>)');
+  // שם ארוך ("אתגרים – ספורט אתגרי לפצועי חרבות ברזל (Etgarim)") מתפצל ברשימות לשם ראשי ולשורת משנה.
+  // שום דבר לא נמחק: השם המלא מופיע בכרטיס. תוספת לועזית בסוגריים יורדת רק מהרשימה.
+  function splitName(n) {
+    const full = String(n || "");
+    const m = full.match(/^(.{3,}?)\s+[–—]\s+(.+)$/);
+    let main = m ? m[1] : full, sub = m ? m[2] : "";
+    const strip = t => t.replace(/\s*\([A-Za-z][^()]*\)\s*$/, "").trim();
+    main = strip(main) || main; sub = strip(sub);
+    return { main, sub };
+  }
+  const nameBlock = (s, tag = "h3", attrs = "") => {
+    const { main, sub } = splitName(s.name);
+    // שם ראשי קצר ("ער״ן", "1202", "InHeal") לא אומר כלום לבד: ההסבר נשאר בשורה שלו, באותה הדגשה
+    if (sub && main.length <= 12) return `<${tag} ${attrs}>${esc(main)}<span class="name-inline">: ${esc(sub)}</span></${tag}>`;
+    return `<${tag} ${attrs}>${esc(main)}</${tag}>${sub ? `<span class="name-sub">${esc(sub)}</span>` : ""}`;
+  };
+  // סיבה שחוזרת זהה בכל התחנות היא רעש; מציגים אותה רק כשהיא מבחינה בין התחנות
+  const whyText = r => r.why.filter(w => w !== "מתאים לסטטוס שלך")[0] || "";
+  const distinctWhy = list => new Set(list.map(whyText)).size > 1;
   const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
 
   function chip(group, key, label, checked) {
@@ -166,8 +185,8 @@
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
         <div class="card-main">
-          <h3>${nameHtml(s.name)}</h3>
-          <p class="teaser">${esc(shortDesc(s.description, 110))}</p>
+          ${nameBlock(s)}
+          ${splitName(s.name).sub ? "" : `<p class="teaser">${esc(shortDesc(s.description, 110))}</p>`}
           ${why && why.length ? `<span class="why">← ${esc(why[0])}</span>` : ""}
           <span class="meta-line">${starTag(s)}${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
         </div>
@@ -211,18 +230,18 @@
     $main.innerHTML = `
       <section class="welcome">
         <div class="glass hero">
-          <div class="lockup">${LOGO(84)}<div><div class="wordmark">אזימוט</div><div class="tagline">הכיוון הבא שלך</div></div></div>
+          <div class="lockup">${LOGO(72)}<div class="wordmark">אזימוט</div></div>
           <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
-          <p class="welcome-sub">טיפול, חוות, ים, ספורט, מענקים וזכויות. לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. רובו בלי עלות.</p>
+          <p class="welcome-sub">טיפול, ים, חוות, ספורט, מענקים וזכויות. לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. רובו בלי עלות.</p>
         </div>
         <ol class="route">
-          <li class="glass-sm"><span class="st-node area-soul">1</span><span><strong>מספרים קצת</strong><span>מה המצב, מה קשה, מה מדבר אליך</span></span></li>
-          <li class="glass-sm"><span class="st-node area-sea">2</span><span><strong>מקבלים 3 תחנות</strong><span>מקומות שמתאימים לך, מתחומים שונים</span></span></li>
-          <li class="glass-sm"><span class="st-node area-land">3</span><span><strong>פונים</strong><span>מתקשרים ישר, או מבקשים שיחזרו אליך</span></span></li>
+          <li class="glass-sm"><span class="st-node area-soul">1</span><strong>מספרים קצת על עצמך</strong></li>
+          <li class="glass-sm"><span class="st-node area-sea">2</span><strong>מקבלים 3 מקומות שמתאימים לך</strong></li>
+          <li class="glass-sm"><span class="st-node area-land">3</span><strong>מתקשרים, או מבקשים שיחזרו אליך</strong></li>
         </ol>
-        <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות · דקה · אפשר לדלג</span></a>
+        <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות · דקה</span></a>
         <p class="welcome-alt">או <a class="link-u" href="#/explore">לחפש לבד</a> · <a class="link-u" href="#/rights">מה מגיע לי</a></p>
-        <p class="note quiet center">${SERVICES.length} מקומות · נבדק מול מקורות רשמיים · נבנה עם הקהילה</p>
+        <p class="note quiet center">${SERVICES.length} מקומות · בלי הרשמה · נבדק מול מקורות רשמיים</p>
       </section>`;
   }
 
@@ -235,6 +254,7 @@
       "combat-soldiers": "לוחם/ת", "police": "משטרה", "security-forces": "כוחות ביטחון", "families": "משפחה", "bereaved": "משפחה שכולה",
       "terror-victims": "נפגע/ת איבה", "civilians": "אזרח/ית" };
     const who = [...p.statuses.map(x => SHORTS[x]).slice(0, 2), ...p.regions.map(r => T.regions[r]).slice(0, 1)].filter(Boolean).join(" · ");
+    const showWhy = distinctWhy(first);
     $main.innerHTML = `
       <section>
         <h1 class="page-title">התחנות שלך</h1>
@@ -244,8 +264,8 @@
           ${first.map((r, n) => `<li>
             <span class="st-node" aria-hidden="true">${n + 1}</span>
             <div class="tag-row">${starTag(r.s)}${areaTag(r.s)}</div>
-            <h2 data-open="${esc(r.s.id)}" tabindex="0" role="button">${nameHtml(r.s.name)}</h2>
-            ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך")[0] || r.why[0])}</span>` : ""}
+            ${nameBlock(r.s, "h2", `data-open="${esc(r.s.id)}" tabindex="0" role="button"`)}
+            ${showWhy && whyText(r) ? `<span class="why">← ${esc(whyText(r))}</span>` : ""}
           </li>`).join("")}
         </ol>
         <p class="actions"><a class="link-u" href="#/results">לכל התחנות שלך (${res.length}) ←</a></p>` : `<p class="empty">לא מצאנו התאמה. <a href="#/match">לשנות תשובות</a></p>`}
@@ -271,7 +291,7 @@
               <span class="node" aria-hidden="true"></span>
               <a href="#/area?a=${k}">
                 <span class="dabbed area-${k}"><span class="word${AREAS[k].label.length > 4 ? " long" : ""}">${esc(AREAS[k].label)}</span></span>
-                <span><span class="sub">${esc(AREAS[k].sub)}</span><br><span class="count">${counts[k] || 0} אפשרויות</span></span>
+                <span class="sub">${esc(AREAS[k].sub)}</span>
               </a>
             </li>`).join("")}
         </ul>
@@ -303,7 +323,7 @@
           <article class="sheet" style="margin-top: 16px">
             <span class="note highlight">${p ? "הכי מתאים לך" : "כדאי להתחיל כאן"} · ${esc(costLabel(top.cost))}</span>
             ${starTag(top)}
-            <h2>${nameHtml(top.name)}</h2>
+            ${nameBlock(top, "h2")}
             <p class="clamp-2">${esc(shortDesc(top.description, 140))}</p>
             <div class="actions">
               <button class="btn btn-ink" type="button" data-open="${esc(top.id)}">לפרטים וליצירת קשר</button>
@@ -433,9 +453,9 @@
               return `<li>
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
                 <div class="tag-row">${starTag(s)}${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
-                <h2 data-open="${esc(s.id)}" tabindex="0" role="button">${nameHtml(s.name)}</h2>
+                ${nameBlock(s, "h2", `data-open="${esc(s.id)}" tabindex="0" role="button"`)}
                 <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
-                ${r.why.length ? `<span class="why">← ${esc(r.why.filter(w => w !== "מתאים לסטטוס שלך").slice(0, 1).join("") || r.why[0])}</span>` : ""}
+                ${distinctWhy(first) && whyText(r) ? `<span class="why">← ${esc(whyText(r))}</span>` : ""}
                 <div class="actions">
                   ${s.phone ? `<a class="btn btn-ink" href="${telHref(s.phone)}">${esc(firstPhone(s.phone))}</a>` : ""}
                   <button class="link-u" type="button" data-open="${esc(s.id)}">לפרטים</button>
@@ -609,11 +629,12 @@
         <nav class="status-pick" aria-label="הסטטוס שלי">
           ${keys.map(x => `<a href="#/rights?s=${x}" class="${x === k ? "active" : ""}" ${x === k ? 'aria-current="page"' : ""}>${esc(G[x].title)}</a>`).join("")}
         </nav>
-        <p class="guide-intro clamp-3" id="g-intro" role="button" tabindex="0" title="להרחבה">${esc(g.intro)}</p>
+        <div class="guide-intro"><p class="clamp-2" id="g-intro" role="button" tabindex="0" title="להרחבה">${esc(g.intro)}</p></div>
         ${key ? `
           <article class="sheet key-right">
             <span class="area-tag badge">הכי חשוב</span>
-            <p class="clamp-3" id="key-text" role="button" tabindex="0">${esc(key.text)}</p>
+            <p class="clamp-2" id="key-text" role="button" tabindex="0">${esc(key.text)}</p>
+            <button class="link-u read-more" type="button" id="key-more">לקרוא הכול</button>
             <p>${src(key)}</p>
           </article>` : ""}
         ${g.sections.map(sec => {
@@ -624,9 +645,10 @@
         <p class="note quiet" style="margin-top: 18px">כל סעיף מקושר למקור שלו. זה לא ייעוץ משפטי.</p>
       </section>`;
     const intro = document.getElementById("g-intro");
-    intro.onclick = () => intro.classList.remove("clamp-3");
+    intro.onclick = () => intro.classList.remove("clamp-2");
     const kt = document.getElementById("key-text");
-    if (kt) kt.onclick = () => kt.classList.remove("clamp-3");
+    const km = document.getElementById("key-more");
+    if (kt) kt.onclick = km.onclick = () => { kt.classList.remove("clamp-2"); km.remove(); };
   }
 
   function viewHelp() {

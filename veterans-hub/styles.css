@@ -410,3 +410,170 @@ html, body { overflow-x: hidden; }
   :root:not([data-theme="light"]) .btn-ink { background: linear-gradient(#F0ECE2, #D6D1C6); color: #171B1D; box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 12px 24px -12px rgba(0, 0, 0, .8); }
 }
 :root[data-theme="dark"] .btn-ink { background: linear-gradient(#F0ECE2, #D6D1C6); color: #171B1D; box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 12px 24px -12px rgba(0, 0, 0, .8); }
+
+/* ===== שפה שקטה (אוקטובר 2026): גוברת על כל מה שלמעלה ===== */
+/* אזימוט, שפה "שקטה": שני פונטים, פינות אחידות, קווים ישרים ודקים, יישור לימין, צבע רק כסימון.
+   הזהות נשארת: המצפן, צבעי הים והאדמה, המפה (עדינה מאוד ברקע). */
+:root {
+  --hand: "Assistant", system-ui, sans-serif;
+  --display: "Frank Ruhl Libre", "David Libre", serif;
+  --body: "Assistant", system-ui, sans-serif;
+  --r-hand: 14px;
+  --r-sheet: 18px;
+  --r-blob: 999px;
+  --stroke: 1.5px;
+  --line: rgba(21, 21, 21, .12);
+  --line-strong: rgba(21, 21, 21, .22);
+  --muted: #56615F;
+  --topo-opacity: .32;
+  --glass: rgba(250, 252, 251, .82);
+  --glass-strong: rgba(250, 252, 251, .94);
+  --glass-edge: rgba(255, 255, 255, .95);
+  --glass-shadow: 0 1px 2px rgba(21, 40, 48, .06), 0 10px 30px -18px rgba(21, 40, 48, .28);
+  --glass-shadow-sm: 0 1px 2px rgba(21, 40, 48, .06), 0 6px 16px -12px rgba(21, 40, 48, .3);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --line: rgba(255, 255, 255, .1); --line-strong: rgba(255, 255, 255, .2); --muted: #A3ABA9; --topo-opacity: .25;
+    --glass: rgba(34, 40, 44, .82); --glass-strong: rgba(34, 40, 44, .95); --glass-edge: rgba(255, 255, 255, .07); }
+}
+:root[data-theme="dark"] { --line: rgba(255, 255, 255, .1); --line-strong: rgba(255, 255, 255, .2); --muted: #A3ABA9; --topo-opacity: .25;
+  --glass: rgba(34, 40, 44, .82); --glass-strong: rgba(34, 40, 44, .95); --glass-edge: rgba(255, 255, 255, .07); }
+
+body { font-size: 17px; line-height: 1.65; letter-spacing: 0; }
+.topo .t-land-lines { display: none; }
+
+/* טיפוגרפיה: כותרות סריף, כל השאר פונט אחד. בלי מילים ענקיות. */
+.page-title, .big-word { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1.2; margin-top: 8px; }
+.section-title { font-family: var(--display); font-weight: 700; font-size: 21px; margin: 28px 0 10px; }
+.lead { font-size: 16px; color: var(--muted); margin-top: 6px; }
+.note, .hand, .tagline, .why, .guide-intro, .count { font-family: var(--body); }
+.brand { font-family: var(--display); font-weight: 700; font-size: 22px; }
+
+/* בלי קווים מצוירים, בלי הטיות, בלי קווקוו */
+.lined > .hand-line, .wave { display: none; }
+.chip:nth-child(3n) input:checked + span, .stations .why { transform: none; }
+.card, .ticks li, .lines a, .folds-svc .fold, .more-fields, .status-pick a, .subnav a { border-bottom-style: solid !important; border-bottom-width: 1px !important; border-bottom-color: var(--line) !important; }
+.card:last-child, .ticks li:last-child, .lines li:last-child a { border-bottom: 0 !important; }
+.subnav a { border-bottom-color: transparent !important; }
+.subnav a.active { border-bottom: 2px solid var(--ink) !important; font-weight: 700; }
+.subnav { gap: 4px 22px; padding-top: 2px; }
+.subnav a { font-size: 15.5px; }
+
+/* כפתורים: פינה אחת, גובה אחד */
+.btn, .help-btn, .more-btn, .chip-btn, .subcats button { border-radius: 14px; }
+.btn { font-family: var(--body); font-weight: 700; font-size: 17px; border-width: 1.5px; }
+.btn-ink { background: var(--ink); box-shadow: 0 6px 16px -10px rgba(0, 0, 0, .55); }
+.help-btn { font-family: var(--body); font-weight: 700; border-radius: 12px; box-shadow: none; }
+.dim-toggle, .add-btn { border-radius: 12px; border-width: 1.5px; }
+.add-btn { background: transparent; }
+.link-u { font-family: var(--body); font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.more-btn { border: 1px solid var(--line-strong); font-family: var(--body); }
+
+/* תגיות תחום: נקודת צבע ושם, לא כתם */
+.area-tag { background: transparent !important; padding: 0 !important; border: 0; font-family: var(--body); font-weight: 600; font-size: 12.5px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+.area-tag::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--tint); }
+.cost-tag { font-family: var(--body); font-size: 12.5px; color: var(--muted); border: 0; padding: 0; }
+.cost-tag::before { content: "·"; margin-inline-end: 6px; }
+.star-tag { font-family: var(--body); font-weight: 700; font-size: 12px; border-width: 1px; border-radius: 8px; }
+.tag-row { gap: 8px; }
+
+/* רשימות */
+.card { padding: 14px 0; }
+.card h3 { font-family: var(--body); font-weight: 700; font-size: 17.5px; line-height: 1.35; }
+.card .teaser { font-size: 14.5px; }
+.card .meta-line { font-size: 13px; }
+.grid { padding: 0 16px; border-radius: 18px; }
+
+/* דף הבית ותחומים */
+.welcome .hero { padding: 20px; }
+.wordmark { font-family: var(--display); font-weight: 700; font-size: 40px; }
+.tagline { font-size: 15px; color: var(--muted); }
+.welcome-title { font-family: var(--display); font-weight: 700; font-size: 25px; line-height: 1.3; }
+.welcome-sub { font-size: 15.5px; color: var(--ink); }
+.welcome .route li { border-radius: 14px; padding: 12px 14px; }
+.welcome .route li strong { font-family: var(--body); font-weight: 700; font-size: 16.5px; }
+.route .st-node, .stations .st-node { border-radius: 50% !important; border-width: 1.5px; font-family: var(--body); font-weight: 700; width: 28px; height: 28px; font-size: 14px; }
+.welcome-cta .big { font-family: var(--body); font-weight: 700; font-size: 19px; }
+.welcome-cta .small { font-family: var(--body); font-weight: 400; opacity: .85; }
+.welcome-alt { font-size: 15px; }
+.areas { gap: 0; }
+.areas li, .areas li:nth-child(even) { padding: 0; }
+.areas a { padding: 14px 0; border-bottom: 1px solid var(--line); gap: 14px; }
+.areas .node { display: none; }
+.dabbed { padding: 0 !important; }
+.dabbed::before { display: none !important; }
+.areas .word, .areas .word.long { font-family: var(--display); font-weight: 700; font-size: 24px; display: inline-flex; align-items: center; gap: 10px; }
+.areas .word::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--tint); }
+.areas .sub { font-family: var(--body); font-size: 14.5px; color: var(--muted); }
+.area-hero { align-items: center; gap: 12px; margin-top: 12px; }
+.area-hero .word, .area-hero .word.long { font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.15; display: inline-flex; align-items: center; gap: 12px; }
+.area-hero .word::before { content: ""; width: 16px; height: 16px; border-radius: 50%; background: var(--tint); }
+.area-hero .note { font-size: 14px; color: var(--muted); }
+.area-chip { border-radius: 12px; font-family: var(--body); font-weight: 700; font-size: 16px; background: var(--glass); border: 1px solid var(--line); display: inline-flex; gap: 8px; }
+.area-chip::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--tint); }
+.add-row { border: 1px solid var(--line); border-radius: 16px; font-size: 14.5px; }
+.add-row strong { font-family: var(--body); font-weight: 700; font-size: 15.5px; }
+.add-row .plus { border-radius: 12px; border-width: 1.5px; font-family: var(--body); font-weight: 400; font-size: 24px; width: 36px; height: 36px; }
+.subcats button { border: 1px solid var(--line-strong); font-family: var(--body); font-size: 14.5px; min-height: 38px; }
+.subcats button.active { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 700; }
+.sheet { border-radius: 18px; }
+.sheet h2 { font-family: var(--body); font-weight: 700; font-size: 21px; line-height: 1.3; }
+.highlight { background: none; padding: 0; font-weight: 600; }
+
+/* תחנות */
+.stations { padding: 18px 56px 18px 18px; border-radius: 18px; }
+.stations::before { content: ""; position: absolute; right: 31px; top: 34px; bottom: 34px; width: 1.5px; background: var(--line-strong); }
+.stations { position: relative; }
+.stations h2, .stations.compact h2 { font-family: var(--body); font-weight: 700; font-size: 18px; line-height: 1.35; }
+.stations .why, .card .why { font-size: 14px; color: var(--muted); }
+
+/* שאלון */
+.progress-line { display: none; }
+.wizard::before { content: ""; display: block; height: 4px; border-radius: 2px; background: var(--line); margin-top: 14px; }
+.chips { gap: 8px; }
+.chip span { font-family: var(--body); font-weight: 600; font-size: 16px; min-height: 46px; padding: 0 16px !important; border: 1px solid var(--line-strong) !important; border-radius: 12px !important; background: var(--glass); }
+.chip input:checked + span { background: var(--ink) !important; color: var(--paper); border-color: var(--ink) !important; transform: none !important; }
+.chips.small .chip span { font-size: 15px; min-height: 40px; }
+.wizard-nav { border-radius: 0; }
+
+/* מה מגיע לי */
+.status-pick { gap: 8px; }
+.status-pick a { font-family: var(--body); font-size: 14.5px; min-height: 38px; padding: 0 12px; border: 1px solid var(--line-strong) !important; border-radius: 10px; }
+.status-pick a.active { background: var(--ink); color: var(--paper); border-color: var(--ink) !important; padding: 0 12px; }
+.guide-intro { font-size: 15.5px; }
+.key-right .badge { font-size: 12px; }
+.fold summary { font-family: var(--body); font-weight: 600; font-size: 16px; }
+
+/* כרטיס שירות */
+.svc h2 { font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1.25; }
+.svc .verify { font-family: var(--body); color: var(--muted); }
+.modal-x { font-family: var(--body); font-weight: 600; border-bottom-width: 1px; }
+.chip-btn { border: 1px solid var(--line-strong); font-family: var(--body); font-weight: 600; }
+.svc .community { border-width: 1px; border-radius: 12px; }
+
+/* עזרה עכשיו */
+.help h1 { font-family: var(--display); font-weight: 700; }
+.breath .phase { font-family: var(--display); font-weight: 700; }
+.breath .blob { border-radius: 50%; }
+.lines .name { font-family: var(--body); font-weight: 700; font-size: 18px; }
+.lines .num { font-family: var(--body); font-weight: 700; font-size: 22px; }
+
+/* טפסים */
+.form legend { font-family: var(--body); font-weight: 700; }
+.form fieldset { border: 1px solid var(--line); }
+.filters input, .filters select, .form input, .form select, .form textarea { border: 1px solid var(--line-strong); border-radius: 12px; background: var(--glass-strong); }
+.callout { border-width: 1px; border-radius: 14px; }
+h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1.2; margin-top: 8px; }
+.footer { border-top: 1px solid var(--line); }
+.folds-svc { border-top: 1px solid var(--line); }
+.areas a { flex-direction: column; align-items: flex-start; gap: 2px; }
+.areas .count { font-size: 13px; }
+.dabbed, .area-hero .dabbed { background: none !important; }
+.name-sub { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.4; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+.stations .name-sub, .sheet .name-sub { -webkit-line-clamp: 2; font-size: 14px; }
+.lockup .wordmark { font-size: 36px; }
+.welcome .route li strong { font-family: var(--body); font-weight: 600; font-size: 16px; color: var(--ink); }
+.welcome .route li { padding: 12px 14px; }
+.welcome-sub { color: var(--muted); }
+.name-inline { font-weight: 400; }
+.card h3 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
