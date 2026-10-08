@@ -3,7 +3,7 @@ D=os.path.dirname(os.path.abspath(__file__))
 subprocess.run(['node',D+'/run.js',D+'/cur.json'],check=True,capture_output=True)
 o=json.load(open(D+'/cur.json'))
 tot=0
-for per in ['police','veteran','tbi']:
+for per in [k for k in json.load(open(D+'/personas.json')) if os.path.exists(f'{D}/gold_{k}.json')]:
     g=json.load(open(f'{D}/gold_{per}.json'))
     C=set(g['C'])-{'atalef-com-61908c'}; A=set(g['A']); AB=A|set(g['B'])
     for v in ['full','minimal']:

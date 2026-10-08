@@ -34,10 +34,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "s-3f6563",
@@ -72,10 +78,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "clalit-co-il-0710f5",
@@ -110,10 +122,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "leumit-co-il-2fd3d7",
@@ -147,13 +165,19 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
    18,
    120
-  ]
+  ],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-cd9956",
@@ -195,10 +219,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-97f497",
@@ -230,10 +260,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-cbf1f7",
@@ -269,10 +305,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "maccabi4u-co-il-f6376e",
@@ -307,10 +349,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-b3abee",
@@ -347,10 +395,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-fd5ece",
@@ -388,10 +442,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "natal-org-il-e49db4",
@@ -434,10 +494,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "sahar-org-il-50ed06",
@@ -481,10 +547,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "eran-org-il-4f39e6",
@@ -529,10 +601,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "1202-org-il-6b5f24",
@@ -567,10 +645,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "nbn-org-il-28c565",
@@ -603,10 +687,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-9d4141",
@@ -641,10 +731,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-7acfcf",
@@ -683,10 +779,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "unknown"
  },
  {
   "id": "s-d3d9dc",
@@ -721,10 +823,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 5,
   "community_note": "בית חם ופעיל לפצועים",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "בית יצחק-שער חפר",
+  "geo": [
+   32.34,
+   34.89
+  ]
  },
  {
   "id": "s-d4ba17",
@@ -761,10 +873,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "צור הדסה",
+  "geo": [
+   31.72,
+   35.1
+  ]
  },
  {
   "id": "afikimdogs-co-il-195ca4",
@@ -802,10 +924,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "קיבוץ אפיקים",
+  "geo": [
+   32.68,
+   35.58
+  ]
  },
  {
   "id": "havayot-center-co-il-f2df8f",
@@ -843,10 +975,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "אלעזר",
+  "geo": [
+   31.66,
+   35.14
+  ]
  },
  {
   "id": "israelguidedog-org-il-49be3a",
@@ -884,10 +1026,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "בית עובד",
+  "geo": [
+   31.91,
+   34.79
+  ]
  },
  {
   "id": "israelguidedog-org-il-0cf4e4",
@@ -923,10 +1075,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "בית עובד",
+  "geo": [
+   31.91,
+   34.79
+  ]
  },
  {
   "id": "s-3c3137",
@@ -964,10 +1126,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ניר העמק",
+  "geo": [
+   32.61,
+   35.28
+  ]
  },
  {
   "id": "havayot-center-co-il-203f04",
@@ -1005,10 +1177,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "אלעזר",
+  "geo": [
+   31.66,
+   35.14
+  ]
  },
  {
   "id": "photoisrael-org-b11f66",
@@ -1044,10 +1226,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "sos-israel-org-fa1518",
@@ -1083,10 +1271,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.78
+  ]
  },
  {
   "id": "icm-org-il-5c59e7",
@@ -1125,10 +1323,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.78
+  ]
  },
  {
   "id": "vertigo-org-il-18d606",
@@ -1164,10 +1372,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "group",
+  "town": "נתיב הל\"ה",
+  "geo": [
+   31.69,
+   34.97
+  ]
  },
  {
   "id": "shikum-mod-gov-il-2f4310",
@@ -1209,10 +1427,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "intensive",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "projecthed-org-3fc558",
@@ -1249,10 +1473,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "inz-org-il-b68995",
@@ -1292,10 +1522,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 32,
   "community_note": "ייעוץ זכויות ועורך דין ללא עלות, חוגים, ספורט וטיפולים",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "levechad-org-73dd3b",
@@ -1330,10 +1566,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "levechad-org-fe21c5",
@@ -1368,10 +1610,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "bankhapoalim-co-il-b193f3",
@@ -1405,10 +1653,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
-  "era": "iron-swords-desc",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "s-6de9e7",
@@ -1441,10 +1695,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "18xagentics-com-7710a1",
@@ -1478,10 +1738,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "s-3a9f3b",
@@ -1514,10 +1780,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "druzevets-org-f3c8fa",
@@ -1553,10 +1825,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "unknown",
+  "town": "עספיא",
+  "geo": [
+   32.72,
+   35.06
+  ]
  },
  {
   "id": "jobify360-co-il-c7b680",
@@ -1590,10 +1872,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "miluimtech-com-06d5ab",
@@ -1626,10 +1914,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.78
+  ]
  },
  {
   "id": "natal-org-il-4f510a",
@@ -1661,10 +1959,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "biu-ac-il-90555b",
@@ -1697,10 +2001,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "רמת גן",
+  "geo": [
+   32.07,
+   34.82
+  ]
  },
  {
   "id": "inz-org-il-c2788c",
@@ -1737,10 +2051,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "sites-biu-ac-il-be7d34",
@@ -1776,10 +2096,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "רמת גן",
+  "geo": [
+   32.07,
+   34.82
+  ]
  },
  {
   "id": "innovationisrael-org-il-726b58",
@@ -1813,10 +2143,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "hachvana-mod-gov-il-543dde",
@@ -1849,10 +2185,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "innovationisrael-org-il-c39e04",
@@ -1886,10 +2228,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-86fc20",
@@ -1922,10 +2270,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-439179",
@@ -1958,10 +2312,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "yahalomfoundation-com-52bbb6",
@@ -1993,10 +2353,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "s-457af3",
@@ -2034,10 +2400,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "רמת גן",
+  "geo": [
+   32.07,
+   34.82
+  ]
  },
  {
   "id": "s-7562ff",
@@ -2072,10 +2448,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "s-6266bf",
@@ -2107,10 +2489,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ירושלים",
+  "geo": [
+   31.78,
+   35.22
+  ]
  },
  {
   "id": "mishpahot-hantzaha-mod-g-cf3a6e",
@@ -2144,10 +2536,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "fidf-org-46d014",
@@ -2180,10 +2578,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-4542fc",
@@ -2216,10 +2620,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ירושלים",
+  "geo": [
+   31.78,
+   35.22
+  ]
  },
  {
   "id": "che-org-il-1fcb14",
@@ -2253,10 +2667,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "hachvana-mod-gov-il-0463e0",
@@ -2289,10 +2709,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "hachvana-mod-gov-il-712a71",
@@ -2326,10 +2752,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-924578",
@@ -2361,10 +2793,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "jobify360-co-il-aeb545",
@@ -2400,10 +2838,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-410036",
@@ -2437,10 +2881,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-ce9f44",
@@ -2481,10 +2931,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 5,
   "community_note": "קורסים ותחביבים לפני שיקום מקצועי",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "biu-ac-il-9c9345",
@@ -2521,10 +2977,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "רמת גן",
+  "geo": [
+   32.07,
+   34.82
+  ]
  },
  {
   "id": "inz-org-il-6810eb",
@@ -2558,10 +3024,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "restartglobal-org-ffbd34",
@@ -2597,10 +3069,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 3,
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-090b89",
@@ -2635,10 +3113,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-6b9358",
@@ -2677,10 +3161,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-31a611",
@@ -2713,10 +3203,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "perach-org-il-89242c",
@@ -2749,10 +3245,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "innovationisrael-org-il-b58bf5",
@@ -2786,10 +3288,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "earlystarters-org-il-916d67",
@@ -2820,10 +3328,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "jewishagency-org-8adf2f",
@@ -2857,10 +3371,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "onefamilytogether-org-7a58af",
@@ -2900,10 +3420,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "ourfamilyfirst-org-f4ba9d",
@@ -2938,10 +3464,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "s-abf8ab",
@@ -2973,10 +3505,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "idfwo-org-fa0927",
@@ -3012,10 +3550,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "girlfriendsidf-org-il-75df8d",
@@ -3049,10 +3593,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "s-45db30",
@@ -3088,10 +3638,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "s-91049f",
@@ -3125,10 +3681,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "vertigo-org-il-5c029c",
@@ -3164,10 +3726,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "נתיב הל\"ה",
+  "geo": [
+   31.69,
+   34.96
+  ]
  },
  {
   "id": "healingspace-co-il-23525c",
@@ -3177,7 +3749,8 @@ window.SERVICES = [
   "provider_type": "ngo",
   "eligibility": [
    "families",
-   "reservists"
+   "reservists",
+   "security-forces"
   ],
   "difficulties": [
    "family-relations",
@@ -3202,10 +3775,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "רשפון",
+  "geo": [
+   32.2,
+   34.82
+  ]
  },
  {
   "id": "ourfamilyfirst-org-a6e120",
@@ -3237,10 +3820,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-7dfee1",
@@ -3275,10 +3864,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-eeaba8",
@@ -3310,10 +3905,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "yadlabanim-org-14efc9",
@@ -3348,10 +3949,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "girlfriendsidf-org-il-3f0e3f",
@@ -3383,10 +3990,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "s-512a0e",
@@ -3420,10 +4033,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "idfwo-org-1299a0",
@@ -3456,10 +4075,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "maglan-org-cb4f5d",
@@ -3495,10 +4120,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "natal-org-il-f3e9cb",
@@ -3534,10 +4165,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-a0f475",
@@ -3570,10 +4207,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "idfwo-org-c2f7eb",
@@ -3607,10 +4250,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "s-11279f",
@@ -3642,10 +4291,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ירושלים",
+  "geo": [
+   31.77,
+   35.21
+  ]
  },
  {
   "id": "s-978de9",
@@ -3676,10 +4335,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "yadlabanim-org-dd7452",
@@ -3714,10 +4379,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "tzalash-org-2f0308",
@@ -3751,10 +4422,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "aguda-co-il-51eff6",
@@ -3787,10 +4464,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "mishpahot-hantzaha-mod-g-54009d",
@@ -3824,10 +4507,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-b5c953",
@@ -3859,10 +4548,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "mishpahot-hantzaha-mod-g-ac4a8b",
@@ -3894,10 +4589,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-cf90e9",
@@ -3929,10 +4630,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "jewishagency-org-2acf93",
@@ -3965,10 +4672,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "yasharlachayal-org-c8a54e",
@@ -4005,10 +4718,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "אלון",
+  "geo": [
+   31.83,
+   35.36
+  ]
  },
  {
   "id": "shikum-mod-gov-il-66adbb",
@@ -4045,10 +4768,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-7e5880",
@@ -4084,10 +4813,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "inz-org-il-76f23f",
@@ -4127,10 +4862,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "s-62e3dc",
@@ -4162,10 +4903,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "behatsdaa-org-il-b27ba7",
@@ -4198,10 +4945,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-52f696",
@@ -4233,10 +4986,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-26de9b",
@@ -4268,10 +5027,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "paamonim-org-90031a",
@@ -4303,10 +5068,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-757f5b",
@@ -4340,10 +5111,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-b92b34",
@@ -4376,10 +5153,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "israelgives-org-625fcb",
@@ -4416,10 +5199,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-677d83",
@@ -4450,10 +5239,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-e8adff",
@@ -4488,10 +5283,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "paamonim-org-9e02b4",
@@ -4529,10 +5330,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "ogen-org-9f492f",
@@ -4563,10 +5370,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "miluim-idf-il-c6491b",
@@ -4600,10 +5413,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "ogen-org-e122c3",
@@ -4634,10 +5453,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "michaellevinlonesoldier--303e34",
@@ -4671,10 +5496,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "btl-gov-il-60a11f",
@@ -4705,10 +5536,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-efa6f3",
@@ -4740,10 +5577,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-bd7788",
@@ -4777,10 +5620,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-b9b962",
@@ -4814,10 +5663,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-bc4772",
@@ -4853,10 +5708,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "shikum-mod-gov-il-e019e4",
@@ -4887,10 +5748,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-f2f87a",
@@ -4922,10 +5789,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-4e3d8f",
@@ -4959,10 +5832,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-da7821",
@@ -4994,10 +5873,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-bfb545",
@@ -5038,10 +5923,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "רמת גן (תל השומר)",
+  "geo": [
+   32.05,
+   34.84
+  ]
  },
  {
   "id": "restartglobal-org-5ee999",
@@ -5076,10 +5971,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "beitissie-org-il-8ef365",
@@ -5117,10 +6018,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "housing",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "hospitals-clalit-co-il-2b9fa3",
@@ -5159,10 +6066,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "רעננה",
+  "geo": [
+   32.18,
+   34.87
+  ]
  },
  {
   "id": "belev-echad-org-15cdf2",
@@ -5203,10 +6120,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "קריית אונו",
+  "geo": [
+   32.06,
+   34.86
+  ]
  },
  {
   "id": "b-k-inz-org-il-68f1d2",
@@ -5244,10 +6171,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "נהריה",
+  "geo": [
+   33.01,
+   35.09
+  ]
  },
  {
   "id": "shikumil-org-il-5e31b1",
@@ -5286,10 +6223,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "shikum-mod-gov-il-9a6f3c",
@@ -5321,10 +6264,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-e03e60",
@@ -5355,10 +6304,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "s-76e4e8",
@@ -5393,10 +6348,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "באר יעקב",
+  "geo": [
+   31.94,
+   34.84
+  ]
  },
  {
   "id": "yadsarah-org-6c5889",
@@ -5430,10 +6395,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "housing",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "s-e680e9",
@@ -5471,10 +6442,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "רמת גן (תל השומר)",
+  "geo": [
+   32.05,
+   34.84
+  ]
  },
  {
   "id": "s-d65cd7",
@@ -5513,10 +6494,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ירושלים",
+  "geo": [
+   31.79,
+   35.24
+  ]
  },
  {
   "id": "tasmc-org-il-d5ca4c",
@@ -5551,10 +6542,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.79
+  ]
  },
  {
   "id": "s-b0d63b",
@@ -5592,10 +6593,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "unknown",
+  "town": "שוהם",
+  "geo": [
+   32.0,
+   34.95
+  ]
  },
  {
   "id": "s-0fc55e",
@@ -5633,13 +6644,19 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
    18,
    120
-  ]
+  ],
+  "kind": "housing",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "adi-rehab-org-6d1a96",
@@ -5680,10 +6697,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "נחלת ערן (ליד אופקים)",
+  "geo": [
+   31.3,
+   34.6
+  ]
  },
  {
   "id": "shikum-mod-gov-il-352bd3",
@@ -5692,7 +6719,9 @@ window.SERVICES = [
   "description": "מי שאושר/ה לו/לה טיפול בקנביס רפואי בעקבות הפגיעה שהוכרה זכאי/ת למימון מלא של הקנביס לפי המינון ברישיון ושל ציוד נלווה מתכלה, וגם למשלוח הביתה או להחזר נסיעות לבית המרקחת. אגף השיקום מממן גם את הוצאת הרישיון.",
   "provider_type": "government",
   "eligibility": [
-   "mod-recognized"
+   "mod-recognized",
+   "police",
+   "security-forces"
   ],
   "difficulties": [
    "chronic-pain",
@@ -5715,10 +6744,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-fee0a6",
@@ -5754,10 +6789,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "reuth-org-il-545599",
@@ -5792,10 +6833,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.79
+  ]
  },
  {
   "id": "israelparasport-org-298d3c",
@@ -5835,10 +6886,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "רמת גן",
+  "geo": [
+   32.07,
+   34.82
+  ]
  },
  {
   "id": "shikum-mod-gov-il-b595ef",
@@ -5871,10 +6932,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "yes",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "s-2244d7",
@@ -5906,10 +6973,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "seven-plus-org-il-435acd",
@@ -5946,10 +7019,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "anatta-org-il-e58b94",
@@ -5984,10 +7063,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "ica-org-il-1ca6c6",
@@ -6024,10 +7109,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "נתניה",
+  "geo": [
+   32.33,
+   34.86
+  ]
  },
  {
   "id": "inheal-org-251184",
@@ -6062,12 +7157,22 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
    24,
    120
+  ],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "בת ים",
+  "geo": [
+   32.02,
+   34.75
   ]
  },
  {
@@ -6105,10 +7210,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 9,
   "community_note": "רבים קיבלו החזר כטיפול משלים; לבדוק מראש מול רכז/ת השיקום",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "rising-heroes-org-2a53a6",
@@ -6146,10 +7257,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 3,
   "community_note": "מומלצת למי שמחפש משלחת ריפוי",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "barak-188-com-d961b3",
@@ -6180,10 +7297,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-fd2a9b",
@@ -6193,7 +7316,9 @@ window.SERVICES = [
   "provider_type": "government",
   "eligibility": [
    "mod-in-process",
-   "mod-recognized"
+   "mod-recognized",
+   "police",
+   "security-forces"
   ],
   "difficulties": [
    "anxiety",
@@ -6220,10 +7345,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "באר שבע",
+  "geo": [
+   31.25,
+   34.79
+  ]
  },
  {
   "id": "bait-bateva-co-il-c511d0",
@@ -6263,10 +7398,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "קיבוץ מטע",
+  "geo": [
+   31.73,
+   35.07
+  ]
  },
  {
   "id": "shikum-mod-gov-il-a17284",
@@ -6299,10 +7444,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "מגדל העמק",
+  "geo": [
+   32.68,
+   35.24
+  ]
  },
  {
   "id": "enosh-org-il-cacc2f",
@@ -6312,7 +7467,9 @@ window.SERVICES = [
   "provider_type": "ngo",
   "eligibility": [
    "mod-in-process",
-   "mod-recognized"
+   "mod-recognized",
+   "police",
+   "security-forces"
   ],
   "difficulties": [
    "anxiety",
@@ -6342,10 +7499,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "רחובות",
+  "geo": [
+   31.89,
+   34.81
+  ]
  },
  {
   "id": "maccabi4u-co-il-f97ae5",
@@ -6381,10 +7548,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "shikum-mod-gov-il-680532",
@@ -6418,10 +7591,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "רמת גן (תל השומר)",
+  "geo": [
+   32.05,
+   34.84
+  ]
  },
  {
   "id": "shikum-mod-gov-il-6efac0",
@@ -6461,10 +7644,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 8,
   "community_note": "כדאי לפנות סמוך לאירוע",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "mixed",
+  "town": "פתח תקווה",
+  "geo": [
+   32.09,
+   34.88
+  ]
  },
  {
   "id": "icc-haifa-ac-il-aa368e",
@@ -6499,10 +7692,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "חיפה",
+  "geo": [
+   32.76,
+   35.02
+  ]
  },
  {
   "id": "israeltraumacoalition-or-c9ab2a",
@@ -6539,10 +7742,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "socsci4-tau-ac-il-ff99e5",
@@ -6579,10 +7788,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "תל אביב",
+  "geo": [
+   32.11,
+   34.8
+  ]
  },
  {
   "id": "zaka-org-il-aaf3bf",
@@ -6615,10 +7834,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "1221-org-il-32fc9e",
@@ -6650,10 +7875,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "shual-f-org-il-f53d53",
@@ -6685,10 +7916,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-f802c3",
@@ -6726,10 +7963,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "icc-haifa-ac-il-f7c8d4",
@@ -6763,10 +8006,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "חיפה",
+  "geo": [
+   32.76,
+   35.02
+  ]
  },
  {
   "id": "shikum-mod-gov-il-61bb79",
@@ -6807,10 +8060,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "s-ae2f06",
@@ -6847,10 +8106,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "meuhedet-co-il-ace6c3",
@@ -6886,10 +8151,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-0bfef9",
@@ -6929,10 +8200,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "hotline",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "669-org-il-a11cf6",
@@ -6966,10 +8243,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "metiv-org-62ab60",
@@ -7007,10 +8290,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ירושלים",
+  "geo": [
+   31.79,
+   35.19
+  ]
  },
  {
   "id": "shikum-mod-gov-il-ca1087",
@@ -7020,7 +8313,9 @@ window.SERVICES = [
   "provider_type": "government",
   "eligibility": [
    "mod-in-process",
-   "mod-recognized"
+   "mod-recognized",
+   "police",
+   "security-forces"
   ],
   "difficulties": [
    "anger",
@@ -7050,10 +8345,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "s-03e535",
@@ -7085,10 +8386,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "tasmc-org-il-e92888",
@@ -7126,10 +8433,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.79
+  ]
  },
  {
   "id": "lonesoldiercenter-com-6cbf32",
@@ -7167,10 +8484,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "s-800178",
@@ -7205,10 +8528,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "מועצה אזורית אשכול",
+  "geo": [
+   31.28,
+   34.42
+  ]
  },
  {
   "id": "s-fd7702",
@@ -7243,10 +8576,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "שדרות",
+  "geo": [
+   31.52,
+   34.6
+  ]
  },
  {
   "id": "me-health-gov-il-cc17e9",
@@ -7284,10 +8627,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "cohenveteransnetwork-org-fe5188",
@@ -7327,10 +8676,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "מודיעין",
+  "geo": [
+   31.9,
+   35.01
+  ]
  },
  {
   "id": "s-d60045",
@@ -7364,12 +8723,22 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
   "age": [
    24,
    120
+  ],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "בת ים",
+  "geo": [
+   32.02,
+   34.75
   ]
  },
  {
@@ -7412,10 +8781,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "תל אביב",
+  "geo": [
+   32.08,
+   34.78
+  ]
  },
  {
   "id": "metiv-org-fd5b53",
@@ -7450,10 +8829,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "unknown",
+  "town": "ירושלים",
+  "geo": [
+   31.77,
+   35.21
+  ]
  },
  {
   "id": "clinicaltrials-gov-b9eb82",
@@ -7487,10 +8876,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "עפולה",
+  "geo": [
+   32.61,
+   35.29
+  ]
  },
  {
   "id": "israel-stellacenter-com-356694",
@@ -7530,13 +8929,19 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
   "age": [
    18,
    120
-  ]
+  ],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "unknown"
  },
  {
   "id": "s-bfaaca",
@@ -7571,10 +8976,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "ezermizion-org-f09662",
@@ -7584,8 +8995,7 @@ window.SERVICES = [
   "provider_type": "ngo",
   "eligibility": [
    "civilians",
-   "families",
-   "reservists"
+   "families"
   ],
   "difficulties": [
    "anxiety",
@@ -7608,10 +9018,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "yahalomfoundation-com-3e8eec",
@@ -7644,10 +9060,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "unknown"
  },
  {
   "id": "emdr-org-il-b37aa3",
@@ -7681,10 +9103,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "amcha-org-aa11a3",
@@ -7720,10 +9148,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "crossroadsjerusalem-org-c183e3",
@@ -7758,10 +9192,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ירושלים",
+  "geo": [
+   31.78,
+   35.22
+  ]
  },
  {
   "id": "crossroadsjerusalem-org-4c6699",
@@ -7794,10 +9238,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ירושלים",
+  "geo": [
+   31.78,
+   35.22
+  ]
  },
  {
   "id": "regaim-home-com-105a7e",
@@ -7838,12 +9292,22 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
    18,
    120
+  ],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "מגדל העמק",
+  "geo": [
+   32.68,
+   35.24
   ]
  },
  {
@@ -7880,10 +9344,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "גבעת שמש",
+  "geo": [
+   31.76,
+   34.99
+  ]
  },
  {
   "id": "retorno-org-df937f",
@@ -7926,10 +9400,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "גבעת שמש",
+  "geo": [
+   31.76,
+   34.99
+  ]
  },
  {
   "id": "shikum-mod-gov-il-d71edb",
@@ -7963,10 +9447,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 5,
   "community_note": "כדאי לקבל אישור למטפל מראש",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "yes",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "s-1a9249",
@@ -8002,10 +9492,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "drorprogram-org-il-4ac6d6",
@@ -8043,10 +9539,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "required",
+  "police": "yes",
+  "format": "mixed",
+  "town": "ירושלים",
+  "geo": [
+   31.77,
+   35.21
+  ]
  },
  {
   "id": "apps-apple-com-abd84b",
@@ -8086,10 +9592,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "orev-family-com-ae7fc4",
@@ -8120,10 +9632,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "s-73e470",
@@ -8161,10 +9679,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "bshvil-org-b71303",
@@ -8202,10 +9726,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "natureisrael-org-2582ca",
@@ -8240,10 +9770,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "inz-org-il-698f2c",
@@ -8279,10 +9815,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "required",
+  "police": "yes",
+  "format": "group",
+  "town": "חו\"ל"
  },
  {
   "id": "namer-org-il-15a309",
@@ -8317,10 +9859,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "עתלית",
+  "geo": [
+   32.69,
+   34.94
+  ]
  },
  {
   "id": "belev-echad-org-ba6e96",
@@ -8356,10 +9908,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארה\"ב"
  },
  {
   "id": "egoz-org-il-5ba6c7",
@@ -8396,10 +9954,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "רמת אפעל",
+  "geo": [
+   32.06,
+   34.83
+  ]
  },
  {
   "id": "yadlashiryon-com-758693",
@@ -8433,10 +10001,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "s-94ba7f",
@@ -8472,10 +10046,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "jnf-org-8fe538",
@@ -8511,10 +10091,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "inheal-org-df6ace",
@@ -8547,13 +10133,19 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
   "age": [
    24,
    120
-  ]
+  ],
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "trauma4good-org-8d93cb",
@@ -8591,10 +10183,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "הרצליה",
+  "geo": [
+   32.16,
+   34.8
+  ]
  },
  {
   "id": "achimlachaim-org-dd5002",
@@ -8639,10 +10241,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר טרומן",
+  "geo": [
+   31.98,
+   34.92
+  ]
  },
  {
   "id": "inz-org-il-7a3d4b",
@@ -8679,10 +10291,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "inz-org-il-a865b4",
@@ -8722,10 +10340,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 39,
   "community_note": "עוזרים לקדם פניות מול האגף, ייעוץ, הלוואות והנחות",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "yes",
+  "format": "unknown",
+  "town": "סניפים"
  },
  {
   "id": "achimlachaim-org-37cae0",
@@ -8761,10 +10385,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר טרומן",
+  "geo": [
+   31.98,
+   34.92
+  ]
  },
  {
   "id": "ha-gesher-co-il-81299b",
@@ -8804,10 +10438,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "tribeofnova-com-906b39",
@@ -8846,10 +10486,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "israelh2h-org-e1caeb",
@@ -8894,10 +10540,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "lonesoldiercenter-com-f9e0b1",
@@ -8931,10 +10583,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "housing",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "yamas-org-il-50e4ef",
@@ -8966,10 +10624,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "unknown"
  },
  {
   "id": "metiv-org-fcc03b",
@@ -9005,10 +10669,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "maglan-org-216650",
@@ -9043,10 +10713,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "unknown"
  },
  {
   "id": "achimlachaim-org-a71e60",
@@ -9081,10 +10757,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "חו\"ל"
  },
  {
   "id": "nbn-org-il-61e022",
@@ -9119,10 +10801,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "תל אביב",
+  "geo": [
+   32.07,
+   34.79
+  ]
  },
  {
   "id": "duvdevanfoundation-org-d09969",
@@ -9164,10 +10856,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "s-78adbb",
@@ -9203,10 +10901,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "shikum-mod-gov-il-d5816c",
@@ -9241,10 +10945,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "kehilat-or-org-il-d0f0b2",
@@ -9282,10 +10992,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "thenextstep-org-il-ade752",
@@ -9326,10 +11042,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "atalef-com-01967e",
@@ -9372,7 +11094,13 @@ window.SERVICES = [
   "unit_only": true,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "tribeofnova-com-159d35",
@@ -9410,10 +11138,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "helptsd-org-a24290",
@@ -9448,10 +11182,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "s-19a8a2",
@@ -9487,10 +11227,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "peer",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "unknown",
+  "town": "unknown"
  },
  {
   "id": "kavlevanon-org-il-4cf1f6",
@@ -9525,10 +11271,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "older",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "unknown"
  },
  {
   "id": "dannysfarm-org-il-0ca12f",
@@ -9567,10 +11319,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סתריה",
+  "geo": [
+   31.88,
+   34.83
+  ]
  },
  {
   "id": "s-016bf1",
@@ -9613,10 +11375,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "group",
+  "town": "מושב חמד",
+  "geo": [
+   32.02,
+   34.86
+  ]
  },
  {
   "id": "vertigo-org-il-a2394e",
@@ -9657,10 +11429,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "activity",
+  "intensity": "intensive",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "נתיב הל\"ה",
+  "geo": [
+   31.69,
+   34.98
+  ]
  },
  {
   "id": "back2life-org-il-ac9911",
@@ -9705,10 +11487,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "mixed",
+  "town": "קיבוץ שדות ים",
+  "geo": [
+   32.49,
+   34.89
+  ]
  },
  {
   "id": "unitywarriors-org-f03450",
@@ -9749,10 +11541,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "geo": [
+   31.72,
+   35.17
+  ]
  },
  {
   "id": "havatrom-co-il-751df8",
@@ -9789,10 +11591,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "כרמיאל",
+  "geo": [
+   32.92,
+   35.3
+  ]
  },
  {
   "id": "rimon-farm-org-il-c84ffb",
@@ -9834,10 +11646,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "קיבוץ להב",
+  "geo": [
+   31.38,
+   34.87
+  ]
  },
  {
   "id": "rimon-farm-org-il-b2586a",
@@ -9875,10 +11697,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "יער אמציה",
+  "geo": [
+   31.53,
+   34.91
+  ]
  },
  {
   "id": "shikum-mod-gov-il-ae6b61",
@@ -9917,10 +11749,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "kfarsarah-com-b02de6",
@@ -9960,10 +11798,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "עתלית",
+  "geo": [
+   32.69,
+   34.94
+  ]
  },
  {
   "id": "adi-rehab-org-5ac2f1",
@@ -9999,10 +11847,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "כפר עדי נגב",
+  "geo": [
+   31.31,
+   34.62
+  ]
  },
  {
   "id": "s-40b69b",
@@ -10036,10 +11894,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-dc02bb",
@@ -10074,10 +11938,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-22016b",
@@ -10117,10 +11987,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "histadrut-org-il-c2f25e",
@@ -10152,10 +12028,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-855b96",
@@ -10190,10 +12072,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-4659a6",
@@ -10229,10 +12117,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "s-12749c",
@@ -10264,10 +12158,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "ono-ac-il-68a91e",
@@ -10299,10 +12199,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "קריית אונו",
+  "geo": [
+   32.06,
+   34.86
+  ]
  },
  {
   "id": "ono-ac-il-ad829a",
@@ -10315,7 +12225,9 @@ window.SERVICES = [
    "mod-in-process",
    "mod-recognized",
    "not-recognized",
-   "reservists"
+   "police",
+   "reservists",
+   "security-forces"
   ],
   "difficulties": [
    "bureaucracy",
@@ -10338,10 +12250,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "קריית אונו",
+  "geo": [
+   32.06,
+   34.86
+  ]
  },
  {
   "id": "miluimnikim-org-069933",
@@ -10375,10 +12297,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-3b7077",
@@ -10412,10 +12340,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-d8fd54",
@@ -10452,10 +12386,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "s-ecf25e",
@@ -10487,10 +12427,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "s-253d8d",
@@ -10525,10 +12471,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "lohamim-org-il-77ef22",
@@ -10563,10 +12515,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "yamas-org-il-4a7d0f",
@@ -10601,10 +12559,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": true,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-ff9abe",
@@ -10638,10 +12602,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "miluim-helper-com-23803d",
@@ -10674,10 +12644,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-c3ea9e",
@@ -10713,10 +12689,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-45dfba",
@@ -10753,10 +12735,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 16,
   "community_note": "ממליצים לפנות אליהם לפני ועדה רפואית",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "פתח תקווה",
+  "geo": [
+   32.09,
+   34.89
+  ]
  },
  {
   "id": "shikum-mod-gov-il-5af3f4",
@@ -10789,10 +12781,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "mod-gov-il-7491f8",
@@ -10824,10 +12822,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-9993b4",
@@ -10859,10 +12863,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "api-miluim-idf-il-6f6e29",
@@ -10892,10 +12902,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "s-038b6f",
@@ -10929,10 +12945,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
-  "era": "",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-368e37",
@@ -10966,10 +12988,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "israelbar-org-il-ddeda0",
@@ -11003,10 +13031,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "סניפים"
  },
  {
   "id": "btl-gov-il-5fe861",
@@ -11040,10 +13074,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "magenisrael-org-il-6d4d62",
@@ -11077,10 +13117,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "shikum-app-ca9a4f",
@@ -11117,10 +13163,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "info",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "unknown",
+  "town": "ארצי"
  },
  {
   "id": "shikum-mod-gov-il-72767d",
@@ -11157,10 +13209,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "rights",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "etgarim-org-7af9a1",
@@ -11206,10 +13264,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "isad-org-il-f6a52d",
@@ -11246,10 +13310,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "israelparasport-org-9f2f5c",
@@ -11294,10 +13364,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "רמת גן",
+  "geo": [
+   32.08,
+   34.82
+  ]
  },
  {
   "id": "thenextstep-org-il-e50f8a",
@@ -11336,10 +13416,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי"
  },
  {
   "id": "adi-rehab-org-8c4aee",
@@ -11376,10 +13462,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "כפר עדי נגב",
+  "geo": [
+   31.31,
+   34.62
+  ]
  },
  {
   "id": "s-b5765e",
@@ -11418,10 +13514,20 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "רמת גן",
+  "geo": [
+   32.08,
+   34.82
+  ]
  },
  {
   "id": "invictusgamesfoundation--ee5b32",
@@ -11457,10 +13563,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "etgarim-org-3d689f",
@@ -11500,10 +13612,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "natal-org-il-aae858",
@@ -11551,10 +13669,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "lohamim-org-il-1df527",
@@ -11591,10 +13715,16 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "unknown"
  },
  {
   "id": "hagalsheli-co-il-225e7f",
@@ -11645,10 +13775,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "etgarim-org-ea7876",
@@ -11684,10 +13820,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "atalef-com-61908c",
@@ -11728,10 +13870,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "peer",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "unknown"
  },
  {
   "id": "shikum-mod-gov-il-4f9c0b",
@@ -11767,10 +13915,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "yamtov-com-79f4ce",
@@ -11811,10 +13965,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "mixed",
+  "town": "סניפים"
  },
  {
   "id": "atalef-com-aadfe1",
@@ -11847,10 +14007,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "unknown"
  },
  {
   "id": "hagalsheli-co-il-369a45",
@@ -11892,10 +14058,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "חוף זיקים",
+  "geo": [
+   31.61,
+   34.52
+  ]
  },
  {
   "id": "zivneurim-org-2ae663",
@@ -11933,10 +14109,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "cmbm-israel-org-378fe3",
@@ -11973,10 +14155,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "brothersin-yoga-b85612",
@@ -12016,10 +14204,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "natal-org-il-8a483f",
@@ -12058,10 +14252,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים"
  },
  {
   "id": "healingspace-co-il-0d251f",
@@ -12104,10 +14304,20 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "רשפון",
+  "geo": [
+   32.2,
+   34.82
+  ]
  },
  {
   "id": "s-890574",
@@ -12142,10 +14352,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי"
  },
  {
   "id": "brothersin-yoga-a89b1e",
@@ -12185,10 +14401,16 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי"
  },
  {
   "id": "shikumme-co-il-2c0e2a",
@@ -12226,9 +14448,15 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "unit_only": "",
+  "unit_only": false,
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "kind": "money",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי"
  }
 ];

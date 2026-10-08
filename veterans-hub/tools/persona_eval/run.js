@@ -1,5 +1,5 @@
 const fs=require('fs');const H=require('path').resolve(__dirname,'../..')+'/';
-global.window={};require(H+'data/taxonomy.js');require(H+'data/services.js');
+global.window={};require(H+'data/taxonomy.js');require(H+'data/towns.js');require(H+'data/services.js');
 const src=fs.readFileSync(H+'app.js','utf8');
 const a=src.indexOf('  // אזורים שכנים')>0?Math.min(src.indexOf('  const openToAll'),src.indexOf('  // אזורים שכנים')):src.indexOf('  const openToAll'), b=src.indexOf('  // ---------- components');
 const T=window.TAXONOMY, SERVICES=window.SERVICES, arr=x=>Array.isArray(x)?x:[];

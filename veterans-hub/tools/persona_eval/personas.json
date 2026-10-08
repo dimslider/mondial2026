@@ -23,7 +23,9 @@
     "shfela"
    ],
    "maxCost": 0,
-   "age": "30-45"
+   "age": "30-45",
+   "town": "קריית גת",
+   "goal": "talk"
   },
   "minimal": {
    "statuses": [
@@ -64,7 +66,9 @@
    "maxCost": null,
    "era": "older",
    "age": "45-60",
-   "worsened": true
+   "worsened": true,
+   "town": "קריית ביאליק",
+   "goal": "people"
   },
   "minimal": {
    "statuses": [
@@ -108,7 +112,9 @@
    ],
    "maxCost": null,
    "era": "iron-swords",
-   "age": "u30"
+   "age": "u30",
+   "town": "פתח תקווה",
+   "goal": "do"
   },
   "minimal": {
    "statuses": [
@@ -145,7 +151,9 @@
     "north"
    ],
    "maxCost": null,
-   "age": "30-45"
+   "age": "30-45",
+   "town": "מע'אר",
+   "goal": "do"
   },
   "minimal": {
    "statuses": [
@@ -188,7 +196,9 @@
    ],
    "maxCost": null,
    "era": "iron-swords",
-   "age": "u30"
+   "age": "u30",
+   "town": "באר שבע",
+   "goal": "talk"
   },
   "minimal": {
    "statuses": [
@@ -227,7 +237,9 @@
     "shfela"
    ],
    "maxCost": null,
-   "age": "30-45"
+   "age": "30-45",
+   "town": "מודיעין-מכבים-רעות",
+   "goal": "talk"
   },
   "minimal": {
    "statuses": [
@@ -261,7 +273,9 @@
     "haifa"
    ],
    "maxCost": null,
-   "age": "45-60"
+   "age": "45-60",
+   "town": "חיפה",
+   "goal": "people"
   },
   "minimal": {
    "statuses": [

@@ -599,3 +599,5 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .followup { border: 0; padding: 0; margin: 0 0 10px; }
 .followup legend { font: 700 15.5px var(--body); padding: 0; margin-bottom: 8px; }
 .goal-q { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line) !important; }
+.town-q { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; font: 700 15.5px var(--body); }
+.town-q input { font: 400 16px var(--body); padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--glass-strong); color: var(--ink); }

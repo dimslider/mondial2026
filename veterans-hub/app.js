@@ -96,8 +96,8 @@
   // שוטר הוא חלק מ"כוחות הביטחון"
   const expandStatuses = st => st.includes("police") && !st.includes("security-forces") ? [...st, "security-forces"] : st;
   // שוטרים ואנשי כוחות ביטחון: תוכניות ל"לוחמים" פתוחות להם לפעמים, אבל לא תמיד כתוב. מציגים, עם הערה לברר.
-  const softEligible = (s, statuses) => statuses.some(x => x === "police" || x === "security-forces") &&
-    arr(s.eligibility).some(e => e === "combat-soldiers" || e === "reservists") && !needsRecognition(s);
+  const softEligible = (s, statuses) => statuses.some(x => x === "police" || x === "security-forces") && s.police !== "no" &&
+    (s.police === "yes" || arr(s.eligibility).some(e => e === "combat-soldiers" || e === "reservists")) && !needsRecognition(s);
   function eligible(s, statuses) {
     const el = arr(s.eligibility);
     statuses = expandStatuses(statuses);
@@ -106,7 +106,7 @@
     return openToAll(s) || softEligible(s, statuses);
   }
   // עמוד מידע (פודקאסט, פורטל, מדריך, רפורמה): שימושי, אבל לא "תחנה" שפונים אליה
-  const infoItem = s => /פודקאסט|סדרה תיעודית|פורטל|מדריך זכויות|רפורמ|המלצות ועדת/.test(s.name);
+  const infoItem = s => s.kind === "info" || /פודקאסט|סדרה תיעודית|פורטל|מדריך זכויות|רפורמ|המלצות ועדת/.test(s.name);
   // אזורים שכנים: מי שגר בשפלה יקבל גם מה שבמרכז ובירושלים, אבל לא את מרכז החוסן בשדרות
   const NEAR = { shfela: ["center", "jerusalem", "south"], center: ["shfela", "sharon"], sharon: ["center"], haifa: ["north"], north: ["haifa"],
     jerusalem: ["shfela", "judea-samaria"], "judea-samaria": ["jerusalem"], south: ["shfela"] };
@@ -130,12 +130,26 @@
   }
   // שירות שדורש הכרה: מיועד רק למוכרים (ולשוטרים / כוחות ביטחון מוכרים), בלי פתח למי שבתהליך או לא מוכר
   const OPEN_EL = ["mod-in-process", "not-recognized", "combat-soldiers", "reservists", "civilians", "terror-victims"];
-  const needsRecognition = s => { const el = arr(s.eligibility); return el.includes("mod-recognized") && !el.some(x => OPEN_EL.includes(x)); };
+  const needsRecognition = s => { if (s.recognition === "required") return true; if (s.recognition === "not_required") return false;
+    const el = arr(s.eligibility); return el.includes("mod-recognized") && !el.some(x => OPEN_EL.includes(x)); };
   // תוכנית של עמותת בוגרי יחידה מסוימת, או לחיילים בודדים: לא מתאימה בהתאמה כללית (נשארת בחיפוש)
   const narrowGroup = s => s.unit_only === true || /בוגרי|יוצאי (?:שלדג|עוקץ)|בודדים|חייל בודד|לוחמים בודדים/.test(s.name) && !/חבל זוג|מים שקטים/.test(s.name);
   // קושי ספציפי שווה יותר. "פוסט טראומה" מסומנת כמעט בכל שירות, אז כשבחרו עוד קשיים היא שווה פחות.
   const D_WEIGHT = { tbi: 5, amputation: 5, addiction: 4, "physical-disability": 4, grief: 4 };
   const MENTAL = ["ptsd", "depression", "anxiety", "sleep", "anger", "addiction", "moral-injury", "loneliness"];
+  // מרחק: לפי יישוב (אם נבחר) וקואורדינטות השירות. מספיק בקירוב, זה לא ניווט.
+  const TOWN_MAP = Object.fromEntries((window.TOWNS || []).flatMap(t => [[t[0], t], ...(t[4] || []).map(a => [a, t])]));
+  const townOf = name => TOWN_MAP[String(name || "").trim()];
+  function kmTo(s, p) {
+    const t = townOf(p.town);
+    if (!t || !Array.isArray(s.geo)) return null;
+    const R = 6371, rad = x => x * Math.PI / 180;
+    const dLat = rad(s.geo[0] - t[1]), dLng = rad(s.geo[1] - t[2]);
+    const a = Math.sin(dLat / 2) ** 2 + Math.cos(rad(t[1])) * Math.cos(rad(s.geo[0])) * Math.sin(dLng / 2) ** 2;
+    return Math.round(2 * R * Math.asin(Math.sqrt(a)));
+  }
+  // פעילות קבועה (שבועית / מזדמנת) רחוקה מדי לא מעשית. תוכנית מרוכזת או שהייה עם לינה: אפשר לנסוע.
+  const tooFar = (s, p) => { const km = kmTo(s, p); return km != null && km > 110 && ["weekly", "light", "oneoff", "unknown", undefined].includes(s.intensity) && !arr(s.regions).some(r => r === "nationwide" || r === "online"); };
   function score(s, p) {
     let sc = 0;
     const why = [];
@@ -145,7 +159,12 @@
     // תחום עניין: הראשון שווה 3, כל נוסף רק 1. כך שירות עם הרבה תגיות לא גובר על מה שעונה על הקושי.
     if (i.length) { sc += 3 + (i.length - 1); why.push("מתאים לתחומי עניין: " + i.map(x => T.interests[x]).join(", ")); }
     const r = arr(s.regions);
-    if (p.regions.length && r.some(x => p.regions.includes(x))) { sc += 1; why.push("קרוב אליך"); }
+    const km = kmTo(s, p);
+    if (km != null) {
+      if (km <= 30) { sc += 2.5; why.push(`קרוב אליך, כ-${Math.max(km, 1)} ק"מ`); }
+      else if (km <= 60) { sc += 1; why.push(`כ-${km} ק"מ ממך`); }
+      else if (km > 90 && s.intensity !== "residential" && s.intensity !== "program") sc -= 2;
+    } else if (p.regions.length && r.some(x => p.regions.includes(x))) { sc += 1; why.push("קרוב אליך"); }
     // עלות לא ידועה נחשבת באמצע, לא כמו "בתשלום"
     const cr = s.cost ? (T.cost[s.cost] || { rank: 4 }).rank : 2;
     sc += Math.max(0, 2 - cr * 0.5);
@@ -180,6 +199,7 @@
       if ((p.age === "45-60" || p.age === "60+") && /צעירים|סטודנטים|מלגות|לימודים אקדמיים|לחזור ללימודים/.test(s.name)) sc -= 2;
       if (p.age === "60+" && arr(s.interests).includes("extreme")) sc -= 2;
     }
+    if (s.intensity === "oneoff" && s.kind !== "money" && s.kind !== "rights") sc -= 1;
     if (s.confidence === "low") sc -= 1;
     if (starred(s)) { sc += 1; why.push("מומלץ בקהילה"); }
     return { sc, why };
@@ -197,6 +217,8 @@
   }
   function match(p, opts = {}) {
     p = withImplied(p);
+    const t = townOf(p.town);
+    if (t && !p.regions.includes(t[3])) p = Object.assign({}, p, { regions: [...p.regions, t[3]] });
     const asked = p.difficulties.length || p.interests.length;
     const free = p.maxCost === 0;
     const myInjury = injuryOf(p.difficulties);
@@ -211,7 +233,7 @@
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
       .filter(s => !free || !["subsidized", "partial", "paid"].includes(s.cost))
       // אזור: מה שמקומי ורחוק לא מוצג (ארצי ואונליין תמיד כן)
-      .filter(s => regionOk(s, p.regions))
+      .filter(s => regionOk(s, p.regions) && !tooFar(s, p))
       .filter(s => { const f = injuryFocus(s); return !f.length || !p.difficulties.length || f.some(k => myInjury.includes(k)); })
       .map(s => Object.assign({ s }, score(s, p)))
       // כשסימנו קושי או תחום עניין, שירות חייב לענות על לפחות אחד מהם (קרבה לבד לא מספיקה)
@@ -235,17 +257,28 @@
     // לא שתי תחנות מאותו סוג (שני כלבים, שתי חוות)
     const take = r => { if (r && first.length < 3 && !first.includes(r) && !first.some(f => f.s.category === r.s.category)) first.push(r); };
     const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
+    const tx = r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
+      (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) +
+      (p.statuses.some(x => x === "police" || x === "security-forces") ? (r.s.police === "yes" ? 3 : r.s.police === "no" ? -4 : 0) : 0) -
+      (r.s.intensity === "residential" || r.s.intensity === "intensive" || /בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0) - (/רפורמ|המלצות ועדת|מדריך|פורטל/.test(r.s.name) ? 5 : 0);
+    const isTreatment = r => r.s.kind ? r.s.kind === "treatment" && (r.s.category === "mental-health" || arr(r.s.difficulties).some(x => MENTAL.includes(x))) : r.s.category === "mental-health";
+    const likesIt = r => arr(r.s.interests).some(i => p.interests.includes(i));
+    // מה שהאדם אמר שהכי חשוב לו עכשיו: זו התחנה הראשונה
+    const GOAL_PICK = {
+      talk: () => best(isTreatment, tx),
+      do: () => best(r => (r.s.kind === "activity" || !r.s.kind && likesIt(r)) && (!p.interests.length || likesIt(r)), r => r.sc + (r.s.format === "group" ? 1 : 0)),
+      people: () => best(r => r.s.kind === "peer" || r.s.kind === "activity" && r.s.format === "group", r => r.sc + (likesIt(r) ? 3 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0)),
+      rights: () => best(r => r.s.kind === "rights" || r.s.kind === "money", r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג/.test(r.s.name) ? 3 : 0))
+    };
+    if (p.goal && GOAL_PICK[p.goal]) take(GOAL_PICK[p.goal]());
     // מענה ייעודי לפגיעה: עדיפות לשירות שזה עיקרו
     for (const k of injuryOf(p.difficulties))
       take(best(r => arr(r.s.difficulties).some(x => INJURY[k].includes(x)) && r.s.category !== "rights-legal",
         r => r.sc + (injuryFocus(r.s).includes(k) ? 4 : 0) + (r.s.category === "medical-rehab" ? 2 : 0) +
-          (k === "tbi" && /נוירו|קוגניטיב|פגיעות ראש|פגיעה מוחית/.test(r.s.name + " " + r.s.description) ? 3 : 0)));
+          (k === "tbi" ? (/נוירו|קוגניטיב/.test(r.s.name + " " + r.s.description) ? 6 : 0) + (/פגיעות ראש|פגיעה מוחית/.test(r.s.name) ? 3 : 0) : 0)));
     // טיפול נפשי כשסימנו קושי נפשי
     if (p.difficulties.some(x => MENTAL.includes(x) && x !== "loneliness" || x === "ptsd"))
-      take(best(r => r.s.category === "mental-health",
-        r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
-          (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) -
-          (/בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0) - (/רפורמ|המלצות ועדת|מדריך|פורטל/.test(r.s.name) ? 5 : 0)));   // מסגרת אינטנסיבית היא לא הצעד הראשון
+      take(best(isTreatment, tx));   // מסגרת אינטנסיבית היא לא הצעד הראשון
     // ליווי בהכרה: עדיפות לליווי אישי ולמה שמומלץ בקהילה, על פני פורטל מידע
     if (p.implied || p.worsened || p.statuses.some(x => x === "mod-in-process" || x === "not-recognized"))
       take(best(r => r.s.category === "rights-legal" && arr(r.s.difficulties).includes("bureaucracy"),
@@ -516,6 +549,9 @@
             ${st.key === "statuses" ? `<div id="followups"></div>` : ""}
             ${st.key === "difficulties" ? `<fieldset class="followup goal-q"><legend>ומה הכי חשוב לך עכשיו?</legend><div class="chips small">${
               Object.entries(GOALS).map(([k, l]) => `<label class="chip"><input type="radio" name="goal" value="${k}" ${p.goal === k ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>` : ""}
+            ${st.key === "regions" ? `<label class="town-q">היישוב שלך (לא חובה, כדי לחשב מרחק)
+              <input name="town" list="towns-list" autocomplete="off" value="${esc(p.town || "")}" placeholder="למשל: טבריה">
+              <datalist id="towns-list">${(window.TOWNS || []).map(t => `<option value="${esc(t[0])}">`).join("")}</datalist></label>` : ""}
             ${last ? `
               <fieldset class="cost-pref">
                 <legend>עלות</legend>
@@ -549,6 +585,7 @@
       if (fu) { drawFollow(); form.addEventListener("change", e => { if (e.target.name === "statuses") drawFollow(); }); }
       const collect = () => {
         p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value);
+        if (st.key === "regions") { const tv = (form.querySelector('input[name="town"]') || {}).value || ""; p.town = townOf(tv) ? townOf(tv)[0] : null; }
         if (st.key === "difficulties") { const g = form.querySelector('input[name="goal"]:checked'); p.goal = g ? g.value : null; }
         if (st.key !== "statuses") return;
         const val = n => (form.querySelector(`input[name="${n}"]:checked`) || {}).value || null;
