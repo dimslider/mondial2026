@@ -407,3 +407,102 @@
 - [ ] טלפונים ניידים שמוצגים כקו של ארגון: צל"ש, ישר לחייל, EMDR ישראל, בשביל המחר, החווה של דני, הבית הבטוח בשיבא
 - [ ] בית יהב ועפולה: *8150 או *6500
 - [ ] כלב שירות לנפגעי איבה (ביטוח לאומי): התנאי של 10% עד 1995 הועתק כנראה מאגף השיקום
+
+## סריקה משופרת (אחרי "חבל זוג"): לאמת
+
+כל הרשומות כאן נמצאו בחיפוש בלבד (לא נפתחו אתרים). מסומנות בביטחון בינוני.
+
+- רשת הביטחון עוגן – עמותת העטלף · https://atalef.com/en/atalef-programs/
+- קורס עמיתים מלווים (בשיתוף נט"ל) – עמותת הנמר · https://namer.org.il/%D7%A7%D7%95%D7%A8%D7%A1-%D7%A2%D7%9E%D7%99%D7%AA%D7%99%D7%9D-%D7%9E%D7%9C%D7%95%D7%95%D7%99%D7%9D-%D7%91%D7%A9%D7%99%D7%AA%D7%95%D7%A3-%D7%A0%D7%98%D7%B4%D7%9C/
+- מסעות עיבוד חוויות לחימה – עמותת הנמר · https://www.invisiblealbum.com/he/product/686d273a00d7c0d4261a5526
+- חוזרים הביתה – יחד, סדנה זוגית – עמותת הנמר · https://namer.org.il/%D7%97%D7%95%D7%96%D7%A8%D7%99%D7%9D-%D7%94%D7%91%D7%99%D7%AA%D7%94-%D7%99%D7%97%D7%93/
+- מחלצים את המחלצים – עמותת החתול (בוגרי 669) · https://www.669.org.il/mehaltzim
+- תמיכה נפשית ופוסט טראומה – משפחת עורב צנחנים · https://www.orev-family.com/
+- עיבוד חוויות לחימה – עמותת יהל"ם · https://www.yahalomfoundation.com/activity/process
+- ליווי תעסוקתי וסדנאות משתחררים – עמותת יהל"ם · https://www.yahalomfoundation.com/for/veterans
+- חוסן ותמיכה – עמותת השועל (בוגרי סיירת גבעתי) · https://www.shual-f.org.il/
+- מערך ליווי פצועים – עמותת ידידי מגלן · https://maglan.org/support-program-for-wounded-soldiers/?lang=en
+- אור כי יהל – עמותת ברק חטיבה 188 · https://barak-188.com/%D7%90%D7%95%D7%A8-%D7%9B%D7%99-%D7%99%D7%94%D7%9C-%D7%9C%D7%96%D7%99%D7%9B%D7%A8%D7%95-%D7%A9%D7%9C-%D7%A1%D7%A8%D7%9F-%D7%99%D7%94%D7%9C-%D7%92%D7%96%D7%99%D7%AA/
+- נופשון לנכי השריון – ענף הנפגעים בחיל השריון ויד לשריון · https://yadlashiryon.com/armored-corps/anaf-nifgaim/
+- מסעות עיבוד לחימה – עמותת אגוז · https://www.egoz.org.il/foundation
+- סיוע לפצועי היחידה – עמותת אגוז · https://www.egoz.org.il/foundation
+- תמיכה בלוחמים עם פוסט טראומה – עמותת קו לבנון · https://kavlevanon.org.il/ptsd/
+- ליווי לוחמים עם פגיעה נפשית ופיזית – עמותת ימ"ס · https://yamas.org.il/about/
+- ליווי לוחמים בודדים לפני ואחרי השחרור – עמותת ימ"ס · https://yamas.org.il/
+- חוס"ן – יחידת חירום וסיוע נפשי, איחוד הצלה · https://1221.org.il/new-porj/%D7%97%D7%95%D7%A1%D7%9F-%D7%97%D7%99%D7%A8%D7%95%D7%9D-%D7%95%D7%A1%D7%99%D7%95%D7%A2-%D7%A0%D7%A4%D7%A9%D7%99/
+- שותפות מגן ישראלית – ליווי בהליך ההכרה · https://magenisrael.org.il/en/
+- שמרו נפשם (HELPTSD) – קהילת נפגעי פוסט טראומה של צה"ל · https://helptsd.org/en/about-us/
+- טיול שחרור – ארגון נכי צה"ל (אגודת הידידים) · https://www.ynet.co.il/news/article/5534572
+- בית פלוטקין בלב אחד – מרכז טיפולים לפצועי צה"ל, קריית אונו (Belev Echad) · https://www.jns.org/feature/belev-echad-expands-care-for-idf-soldiers
+- משלחות החלמה לארה"ב לפצועי צה"ל – בלב אחד (Belev Echad) · https://www.jns.org/feature/belev-echad-expands-care-for-idf-soldiers
+- Makers for Heroes (מייקרס) – ריסטארט · https://nocamels.com/?p=115990
+- לצידך – ליווי אלמנות צה"ל בהריון (ארגון אלמנות ויתומי צה"ל) · https://www.idfwo.org/en/letzidech-beside-you/
+- עוצמה – מחנות ותמיכה קהילתית ליתומי צה"ל (ארגון אלמנות ויתומי צה"ל) · https://www.idfwo.org/en/letzidech-beside-you/
+- תל"א – תוכנית ליווי אישי ליתומי חללי צה"ל (משרד הביטחון וארגון אלמנות ויתומי צה"ל) · https://www.kolzchut.org.il/he/תוכנית_ליווי_אישי_%28תל%22א%29_ליתומים_של_חללי_צה%22ל_וכוחות_הביטחון
+- פר"ח לאחים שכולים – יד לבנים · https://yadlabanim.org/wp-content/uploads/2023/04/אגרת-מידע-לאחים-השכולים.pdf
+- מחנה קיץ לאחים שכולים צעירים – יד לבנים · https://yadlabanim.org/wp-content/uploads/2023/04/אגרת-מידע-לאחים-השכולים.pdf
+- קבוצה טיפולית להורים של בנות זוג שכולות – הותיר אחריו חבר.ה · https://www.maariv.co.il/news/israel/Article-1073309
+- טיפול זוגי המשך אחרי הסופ"ש – Our Family First · https://jewishlink.news/our-family-first-holds-therapeutic-retreat-for-soldiers-and-spouses/
+- שיעורי עזר מקוונים לילדי משרתי מילואים – לב אחד · https://www.runi.ac.il/en/students/dean/community-service/lev-echad
+- מענק לעסקים קטנים של משרתי מילואים ובני זוגם – הסוכנות היהודית ואחים לישראל · https://www.maariv.co.il/business/consumerism/article-1088482
+- תוכנית החירום למשרתי מילואים – פעמונים · https://www.inn.co.il/news/678989
+- קרן יובל – הלוואות למשרתי מילואים ומשפחותיהם – עוגן · https://ogen.org/_files/ugd/23e15f_f4d16c69b53b429ca4791f49c470a5ec.pdf
+- יחידת שיקום חיילים – יד שרה · https://yadsarah.org/yad-sarah-expands-operations-to-support-rehabilitation-of-over-2500-idf-soldiers-reducing-stress-on-healthcare-system/
+- מרכז הספורט השיקומי וקבוצת כדורסל בכיסאות גלגלים – עדי נגב נחלת ערן · https://sport1.maariv.co.il/other-industries/article/1227720/
+- שיקום דרך עבודה חקלאית – עדי נגב נחלת ערן · https://www.i24news.tv/he/news/i24news-shows/main-edition/artc-95075a06
+- סדנה למילואימניקים בודדים ורווקים – InHeal (עמותת אמפא, מדיקל קר) · https://www.maariv.co.il/news/israel/article-1153088
+- טיפול ממוקד טראומה לנפגעי המלחמה – המכון לפסיכותרפיה, המרכז הקליני הבין-תחומי אוניברסיטת חיפה · https://sdg.haifa.ac.il/wp-content/uploads/2025/06/Haifa-SDG-war-hebrew.pdf
+- ליווי אחרי השחרור ומפגשי רווחה נפשית בזום – מרכז הלוחמים הבודדים ע"ש מייקל לוין · https://magazine.esra.org.il/posts/entry/never-alone-the-heart-and-mission-of-the-lone-soldier-center.html
+- בית האחים – אחים לחיים · https://www.kolzchut.org.il/he/אחים_לחיים
+- משלחות לקהילות יהודיות בחו"ל – אחים לחיים · https://www.australianjewishnews.com/achim-lchaim-brothers-for-life/
+- "בשביל ההצלחה" – בנק הפועלים ואגודת הידידים של ארגון נכי צה"ל · https://www.bankhapoalim.co.il/he/social-banking/education-and-employment
+- We-Rise חוזרים למסלול הקריירה – נט"ל · https://www.maariv.co.il/economy/israel/article-1091651
+- מסע שטח לוחמים – נט"ל ומיזם גרוטראלי · https://www.maariv.co.il/news/israel/article-1149943
+- ימי קהילה ותוכנית מנטורינג – שבט נובה · https://israelgives.org/amuta/580780740
+- האתגריסטים – אתגרים ותנובה · https://www.ice.co.il/consumerism/news/article/1042725
+- תוכנית שסק (Shesek) – המרכז הישראלי לספורט נכים · https://www.guidestar.org/profile/27-5126671
+- טיולי עמיתים לקטועי גפיים – הצעד הבא · https://www.maariv.co.il/news/israel/article-1185024
+- SURF TRUCK – מרכז גלישה טיפולי נייד, הגל שלי · https://sport1.maariv.co.il/other-industries/article/1254272
+- מרכז הגלישה בחוף זיקים – הגל שלי · https://www.lchaimmagazine.com/?p=24154
+- קו חם 24/7 לחיילים בודדים *6563 – נפש בנפש ו-FIDF · https://www.nbn.org.il/nbnlsp/services-for-lone-soldiers/
+- תוכנית ימית למילואימניקים – זיו נעורים · https://www.kipa.co.il/%D7%97%D7%93%D7%A9%D7%95%D7%AA/1232949-0/
+- תוכנית דרור – מכון סאמיט ואגף השיקום · https://summit.org.il/%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA-%D7%93%D7%A8%D7%95%D7%A8-%D7%9C%D7%A4%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%94-%D7%A6%D7%91%D7%90%D7%99%D7%AA-%D7%90%D7%A0%D7%97%D7%A0%D7%95/
+- 18X Agentics – הכשרת AI למשרתי מילואים ומשוחררים (18X Elite Impact) · https://18xagentics.com/
+
+### הוחזקו בצד (ביטחון נמוך / מלגות ומנטורינג לבוגרי יחידה בלבד / כפילות אפשרית)
+
+- תוכנית המנטורינג לבוגרים – עמותת העטלף · https://www.afins.us/timeline
+- פרויקט ההכוונה לאקדמיה – עמותת הנמר · https://namer.org.il/project-5/
+- תוכנית המנטורינג – עמותת החתול (בוגרי 669) · https://www.669.org.il/alumni
+- מלגות לימודים לבוגרים – עמותת החתול (בוגרי 669) · https://www.669.org.il/alumni
+- תוכנית המנטורינג – עמותת יוצאי שלדג · https://www.kolsherut.org.il/p/card/c/b1b3ce77
+- פרויקט שחרור ומנטורינג – עמותת השועל (בוגרי סיירת גבעתי) · https://www.shual-f.org.il/news-1
+- פרויקט המלגות – עמותת דובדבן · https://www.duvdevanus.org/plans
+- קרן זאביק וסליחה על השאלה – עמותת סיירת הצנחנים · https://satzah.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A2%D7%9E%D7%95%D7%AA%D7%94/
+- אלבום שקוף (Invisible Album) – מאגר מענים לפוסט טראומה · https://www.ynet.co.il/health/article/sj5i2dag3
+- גולשים ללא גבולות – גלישה לפוסט טראומה · https://www.golshimllogvulot.com/en
+- גב ללוחם – הכנת לוחמים משוחררים לאזרחות · https://www.gavla.org.il/en/
+- אסופי – תמיכה בהלומי קרב · https://asufinpo.wixsite.com/asufi
+- מפגשים לנשות משרתי מילואים – Our Family First · https://jewishlink.news/our-family-first-holds-therapeutic-retreat-for-soldiers-and-spouses/
+- Wings – ריטריט חוסן ללוחמי מילואים בודדים עולים ובני זוגם – הסוכנות היהודית · https://m.jpost.com/health-and-wellness/mind-and-spirit/article-820503
+- סיוע לחיילים בודדים פצועים או חולים בהגעה מהירה לרופא מומחה – קרן מייקל לוין · https://michaellevinlonesoldier.org/about-us
+- תוכנית עמיתים למשרתי מילואים – נט"ל · https://jpost.com/conferences/article-862809
+- מלגת מיילס נדל לבוגרי דובדבן – אוניברסיטת תל אביב ועמותת דובדבן · https://english.tau.ac.il/node/2244
+- בית נובה בנחשונים – שבט נובה · https://jnf.org.au/?p=20995
+- נבחרת ריצה לקטועי גפיים – הצעד הבא · https://www.maariv.co.il/news/israel/article-1185024
+- מרינת הבית בנמל שביט – בוחרים בחיים · https://www.maariv.co.il/news/israel/article-1352644
+- הבית להלומי קרב – לא מפקירים פצועים בשטח · https://www.kolsherut.org.il/p/card/c/3eaf1ea1
+- תמיכה בלוחמים – עמותת קו לבנון · https://kavlevanon.org.il/ptsd/
+- אלבום שקוף (Invisible Album) – מאגר תוכניות שיקום ללוחמים · https://www.invisiblealbum.com/all-plans
+- אתגרים בטבע – נט"ל והמרכז הרפואי העמק · https://www.invisiblealbum.com/all-plans
+- יהלומים לחיים – קבוצות תמיכה להלומי קרב ולמשפחות · https://diamonds4life.co.il/
+
+### הוצאו מהסתרה אחרי שנמצאו פרטי קשר
+18X Impact, שומר אחי (בלי הנייד), חוות רוקה, ארגון נשות השוטרים והסוהרים, Healing in Nature, אחותי, פורום נשות המילואימניקים (פייסבוק), בית מאזן עפולה.
+נשארו מוסתרים: קרנות השוטרים (פרטים רק ממקורות משניים), חוות יעלים, אור הנר, TERRA UMA.
+
+### לא נסרקו עדיין (מכסת חיפוש נגמרה)
+עמותות: עוקץ, דוכיפת, כפיר, נח"ל, תותחנים, הנדסה, חיל האוויר, חיל הים, שב"כ, מוסד, משטרה, כבאות, אחים לנשק, רעות.
+פעילויות: דייג, ג'יפים, סאפ, בזייה, דבוראות, נגרות, נפחות, בישול, תיאטרון, מסעות מדבר, שביל ישראל, מסעות לחו"ל, תורה.
+כחצי מרשימת הארגונים הקיימים לא נבדקה לתתי-תוכניות.
+

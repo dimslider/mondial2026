@@ -1,0 +1,730 @@
+[
+ {
+  "name": "תוכנית המנטורינג לבוגרים – עמותת העטלף",
+  "category": "employment-education",
+  "description": "תוכנית חניכה שמצמידה בוגרי שייטת 13 בתחילת דרכם המקצועית לאנשי מקצוע ותיקים. מיועדת לבוגרי היחידה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://atalef.com",
+  "how_to_apply": "פנייה לעמותת העטלף",
+  "source_url": "https://www.afins.us/timeline",
+  "confidence": "medium"
+ },
+ {
+  "name": "פרויקט ההכוונה לאקדמיה – עמותת הנמר",
+  "category": "employment-education",
+  "description": "ליווי אישי לבוגרי סיירת גולני שרוצים ללמוד באקדמיה, בשיתוף עמותת \"הישגים\". ההכוונה ניתנת על ידי בוגרים שלמדו במסלולים דומים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://namer.org.il",
+  "how_to_apply": "פנייה דרך אתר עמותת הנמר",
+  "source_url": "https://namer.org.il/project-5/",
+  "confidence": "medium"
+ },
+ {
+  "name": "תוכנית המנטורינג – עמותת החתול (בוגרי 669)",
+  "category": "employment-education",
+  "description": "תוכנית חניכה לבוגרי יחידה 669 בגילאי 25 עד 35 שעומדים בצמתים בחיים. יש התאמה אישית בין מנטור לחניך ומפגש חודשי במשך שנה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.669.org.il",
+  "how_to_apply": "הרשמה דרך אתר העמותה",
+  "source_url": "https://www.669.org.il/alumni",
+  "confidence": "high"
+ },
+ {
+  "name": "מלגות לימודים לבוגרים – עמותת החתול (בוגרי 669)",
+  "category": "employment-education",
+  "description": "מלגות לבוגרי יחידה 669 ללימודי פסיכומטרי, לימודי תעודה ולימודים גבוהים. הבחירה לפי שירות ומצב כלכלי, על ידי ועדה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial",
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.669.org.il",
+  "how_to_apply": "הגשת מועמדות דרך אתר העמותה",
+  "source_url": "https://www.669.org.il/alumni",
+  "confidence": "medium"
+ },
+ {
+  "name": "תוכנית המנטורינג – עמותת יוצאי שלדג",
+  "category": "employment-education",
+  "description": "ליווי, חניכה ופיתוח אישי לבוגרי ובוגרות יחידת שלדג בשלבים שונים בחיים האזרחיים, במפגשים אישיים או קבוצתיים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.shaldag.org.il",
+  "how_to_apply": "דרך דף המנטורינג באתר העמותה: shaldag.org.il/mentoring",
+  "source_url": "https://www.kolsherut.org.il/p/card/c/b1b3ce77",
+  "confidence": "medium"
+ },
+ {
+  "name": "פרויקט שחרור ומנטורינג – עמותת השועל (בוגרי סיירת גבעתי)",
+  "category": "employment-education",
+  "description": "ליווי למשתחררים טריים מסיירת גבעתי לנחיתה רכה באזרחות, תוכנית מנטורינג עם בוגרים ותיקים, ומלגות ללימודים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.shual-f.org.il",
+  "how_to_apply": "פנייה דרך אתר העמותה",
+  "source_url": "https://www.shual-f.org.il/news-1",
+  "confidence": "medium"
+ },
+ {
+  "name": "פרויקט המלגות – עמותת דובדבן",
+  "category": "employment-education",
+  "description": "מלגות לימודים לבוגרי יחידת דובדבן לפי מצב כלכלי ושירות. המלגאים מתנדבים 120 שעות בשנה, בין היתר כמנטורים ללוחמים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial",
+   "employment"
+  ],
+  "interests": [
+   "learning",
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://duvdevanfoundation.org",
+  "how_to_apply": "דרך עמותת דובדבן",
+  "source_url": "https://www.duvdevanus.org/plans",
+  "confidence": "medium"
+ },
+ {
+  "name": "קרן זאביק וסליחה על השאלה – עמותת סיירת הצנחנים",
+  "category": "employment-education",
+  "description": "קרן זאביק נותנת מלגות לבוגרי סיירת הצנחנים בכל שנה. פרויקט \"סליחה על השאלה\" עוזר למשתחררים טריים לבחור מקצוע וכיוון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://satzah.co.il",
+  "how_to_apply": "פנייה לעמותה",
+  "source_url": "https://satzah.co.il/%D7%90%D7%95%D7%93%D7%95%D7%AA-%D7%94%D7%A2%D7%9E%D7%95%D7%AA%D7%94/",
+  "confidence": "medium"
+ },
+ {
+  "name": "אלבום שקוף (Invisible Album) – מאגר מענים לפוסט טראומה",
+  "category": "rights-legal",
+  "description": "מיזם של שני קציני מילואים: אתר ואפליקציה שמרכזים את אפשרויות התמיכה ללוחמים עם פוסט טראומה, בלי בירוקרטיה וטפסים. המיזם מופץ גם דרך אלבום שירים על הנושא.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy"
+  ],
+  "interests": [
+   "music"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.invisiblealbum.com",
+  "how_to_apply": "דרך האתר",
+  "source_url": "https://www.ynet.co.il/health/article/sj5i2dag3",
+  "confidence": "medium"
+ },
+ {
+  "name": "גולשים ללא גבולות – גלישה לפוסט טראומה",
+  "category": "water-sports",
+  "description": "עמותה שמשתמשת בגלישת גלים כדי לעזור למתמודדים עם פוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.golshimllogvulot.com",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://www.golshimllogvulot.com/en",
+  "confidence": "low"
+ },
+ {
+  "name": "גב ללוחם – הכנת לוחמים משוחררים לאזרחות",
+  "category": "employment-education",
+  "description": "תוכנית שמכינה לוחמים משוחררים למעבר לחיים האזרחיים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.gavla.org.il",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://www.gavla.org.il/en/",
+  "confidence": "low"
+ },
+ {
+  "name": "אסופי – תמיכה בהלומי קרב",
+  "category": "financial-grants",
+  "description": "עמותה שנותנת להלומי קרב סיוע במזון ובכלכלה, שיקום ותעסוקה, עזרה מול רשויות ועזרה בהגשת תביעת הכרה במשרד הביטחון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "financial",
+   "bureaucracy",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://asufinpo.wixsite.com/asufi",
+  "how_to_apply": "פנייה דרך האתר",
+  "source_url": "https://asufinpo.wixsite.com/asufi",
+  "confidence": "low"
+ },
+ {
+  "name": "מפגשים לנשות משרתי מילואים – Our Family First",
+  "category": "family-support",
+  "description": "אירועים שמוקדשים לרווחה של נשות משרתי מילואים, שמרגישות לבד כשבני הזוג בשירות ארוך.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "loneliness",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.ourfamilyfirst.org",
+  "how_to_apply": "דרך אתר הארגון",
+  "source_url": "https://jewishlink.news/our-family-first-holds-therapeutic-retreat-for-soldiers-and-spouses/",
+  "confidence": "low"
+ },
+ {
+  "name": "Wings – ריטריט חוסן ללוחמי מילואים בודדים עולים ובני זוגם – הסוכנות היהודית",
+  "category": "nature-retreats",
+  "description": "ריטריט החלמה בקפריסין ללוחמי מילואים בודדים שעלו לארץ, אחרי חודשים של מילואים במלחמה. כולל סדנאות קבוצתיות, מיינדפולנס ושיחות עיבוד, יחד עם בני הזוג. מופעל על ידי משרד העלייה והקליטה, הסוכנות היהודית וקרן מרג'.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "travel",
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "קפריסין",
+  "phone": "",
+  "email": "",
+  "website": "https://www.jewishagency.org/il/",
+  "how_to_apply": "דרך תוכנית Wings של הסוכנות היהודית",
+  "source_url": "https://m.jpost.com/health-and-wellness/mind-and-spirit/article-820503",
+  "confidence": "medium"
+ },
+ {
+  "name": "סיוע לחיילים בודדים פצועים או חולים בהגעה מהירה לרופא מומחה – קרן מייקל לוין",
+  "category": "medical-rehab",
+  "description": "הקרן עוזרת לחיילים בודדים שנפצעו או חלו לקבל תור מהיר לרופא מומחה. הקרן גם נותנת תמיכה וייעוץ להורים של חיילים בודדים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "families"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://michaellevinlonesoldier.org/about-us",
+  "how_to_apply": "פנייה לקרן דרך האתר",
+  "source_url": "https://michaellevinlonesoldier.org/about-us",
+  "confidence": "low"
+ },
+ {
+  "name": "תוכנית עמיתים למשרתי מילואים – נט\"ל",
+  "category": "peer-support",
+  "description": "נט\"ל מכשירה משרתי מילואים ואנשי חירום לתת עזרה ראשונה נפשית לחברים שלהם ליחידה. את התוכנית מוביל משרת מילואים ועובד סוציאלי בנט\"ל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [
+   "volunteering"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "פנייה לנט\"ל",
+  "source_url": "https://jpost.com/conferences/article-862809",
+  "confidence": "low"
+ },
+ {
+  "name": "מלגת מיילס נדל לבוגרי דובדבן – אוניברסיטת תל אביב ועמותת דובדבן",
+  "category": "employment-education",
+  "description": "10 מלגות חלקיות בשנה לסטודנטים לתואר ראשון ושני ששירתו ביחידת דובדבן. המלגאים מקבלים גם טיפול נפשי, קבוצות תמיכה וייעוץ קריירה לפי הצורך. רק לבוגרי היחידה.",
+  "provider_type": "academic",
+  "eligibility": [
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "financial",
+   "ptsd"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "מלגה חלקית",
+  "regions": [
+   "center"
+  ],
+  "location": "אוניברסיטת תל אביב",
+  "phone": "",
+  "email": "",
+  "website": "https://duvdevanfoundation.org",
+  "how_to_apply": "דרך אוניברסיטת תל אביב",
+  "source_url": "https://english.tau.ac.il/node/2244",
+  "confidence": "medium"
+ },
+ {
+  "name": "בית נובה בנחשונים – שבט נובה",
+  "category": "mental-health",
+  "description": "מרכז ריפוי קבוע לשורדי נובה שנבנה בקיבוץ נחשונים, עם חדרי טיפול, חממות, בריכה טיפולית, מרכז מוזיקה ואמפיתיאטרון. לפי המקור המרכז בהקמה, כדאי לבדוק אם כבר פתוח.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "grief"
+  ],
+  "interests": [
+   "nature",
+   "music",
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "center"
+  ],
+  "location": "קיבוץ נחשונים",
+  "phone": "",
+  "email": "",
+  "website": "https://www.tribeofnova.com",
+  "how_to_apply": "דרך העמותה",
+  "source_url": "https://jnf.org.au/?p=20995",
+  "confidence": "low"
+ },
+ {
+  "name": "נבחרת ריצה לקטועי גפיים – הצעד הבא",
+  "category": "sports",
+  "description": "נבחרת ריצה ראשונה בישראל לקטועי גפיים, חלק מהליווי של הצעד הבא מהשיקום ועד ספורט ברמה גבוהה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-recognized",
+   "civilians"
+  ],
+  "difficulties": [
+   "amputation",
+   "physical-disability"
+  ],
+  "interests": [
+   "sport",
+   "fitness"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.thenextstep.org.il/",
+  "how_to_apply": "פנייה לעמותה",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1185024",
+  "confidence": "low"
+ },
+ {
+  "name": "מרינת הבית בנמל שביט – בוחרים בחיים",
+  "category": "water-sports",
+  "description": "מרכז ימי בקישון לחיפה שמשלב שיט טיפולי, קבוצות תמיכה, אמנות וטיפולים להלומי קרב ולבני המשפחה, כחלק מתוכנית \"בוחרים בחיים\" שמוכרת על ידי משרד הביטחון. לפי המקור המרכז בהקמה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-recognized",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations"
+  ],
+  "interests": [
+   "sea",
+   "art"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "haifa"
+  ],
+  "location": "נמל שביט, נחל הקישון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "",
+  "source_url": "https://www.maariv.co.il/news/israel/article-1352644",
+  "confidence": "low"
+ },
+ {
+  "name": "הבית להלומי קרב – לא מפקירים פצועים בשטח",
+  "category": "peer-support",
+  "description": "עמותה בנגב שמפעילה קהילה טיפולית ושיקומית למתמודדים עם פוסט טראומה מהשירות הצבאי או הביטחוני ולבני המשפחות. אין צורך בהכרה ואין תשלום. העמותה עוסקת גם בכלבי שירות ובעזרה במיצוי זכויות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "not-recognized",
+   "mod-recognized",
+   "mod-in-process",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "bureaucracy"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי העמותה, השירותים בחינם ובלי דרישה להכרה.",
+  "regions": [
+   "south"
+  ],
+  "location": "צוחר, מועצה אזורית אשכול",
+  "phone": "",
+  "email": "",
+  "website": "https://helemkrav.org.il",
+  "how_to_apply": "פנייה ישירה לעמותה דרך האתר.",
+  "source_url": "https://www.kolsherut.org.il/p/card/c/3eaf1ea1",
+  "confidence": "medium"
+ },
+ {
+  "name": "תמיכה בלוחמים – עמותת קו לבנון",
+  "category": "peer-support",
+  "description": "עמותה של לוחמים ששירתו ברצועת הביטחון בדרום לבנון. היא נותנת ליווי אישי, עזרה כלכלית, רפואית ונפשית, וליווי משפטי בתביעת הכרה בפוסט טראומה. העמותה מקיימת גם מפגשים ואירועים כדי לשמור על הקשר בין הלוחמים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "not-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy",
+   "financial",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://kavlevanon.org.il/ptsd/",
+  "how_to_apply": "פנייה דרך אתר העמותה. מיועד ללוחמים ששירתו בלבנון.",
+  "source_url": "https://kavlevanon.org.il/ptsd/",
+  "confidence": "medium"
+ },
+ {
+  "name": "אלבום שקוף (Invisible Album) – מאגר תוכניות שיקום ללוחמים",
+  "category": "rights-legal",
+  "description": "מיזם של שני קצינים משוחררים שמרכז באתר אחד יותר מ-150 תוכניות שיקום ללוחמים עם פוסט טראומה ולמשפחות שלהם: ספורט, טבע, תעסוקה וטיפול רגשי. אפשר לסנן ולהירשם לתוכניות דרך האתר, וחלק מהתוכניות לא דורשות הכרה של משרד הביטחון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized",
+   "mod-in-process",
+   "mod-recognized",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy"
+  ],
+  "interests": [
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.invisiblealbum.com/",
+  "how_to_apply": "נכנסים לאתר, מסננים לפי צורך ונרשמים לתוכנית.",
+  "source_url": "https://www.invisiblealbum.com/all-plans",
+  "confidence": "medium"
+ },
+ {
+  "name": "אתגרים בטבע – נט\"ל והמרכז הרפואי העמק",
+  "category": "nature-retreats",
+  "description": "קבוצה למתמודדים עם פוסט טראומה מהשירות הצבאי, עם פעילות בטבע ופעילות אתגרית. התוכנית מופעלת בשיתוף נט\"ל והמרכז הרפואי העמק.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "extreme"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "north"
+  ],
+  "location": "עמק יזרעאל (המרכז הרפואי העמק, עפולה)",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "הרשמה דרך אתר אלבום שקוף או פנייה לנט\"ל.",
+  "source_url": "https://www.invisiblealbum.com/all-plans",
+  "confidence": "low"
+ },
+ {
+  "name": "יהלומים לחיים – קבוצות תמיכה להלומי קרב ולמשפחות",
+  "category": "peer-support",
+  "description": "עמותה שהקימו אנשים שמתמודדים בעצמם עם תגובת קרב. היא מציעה קבוצות תמיכה, סדנאות ופעילויות למשפחות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://diamonds4life.co.il/",
+  "how_to_apply": "פנייה דרך אתר העמותה.",
+  "source_url": "https://diamonds4life.co.il/",
+  "confidence": "low"
+ }
+]

@@ -76,8 +76,8 @@
  },
  "s-3a9f3b": {
   "cost_notes": "כדאי לברר את תנאי ההשתתפות מול התוכנית.",
-  "how_to_apply": "התוכנית היא אחד הגופים שמפעילים הכשרות למשרתי מילואים מטעם רשות החדשנות. אפשר לחפש אותה בשם 18X Impact.",
-  "_hide": "אין פרטי קשר"
+  "how_to_apply": "נרשמים באתר 18X Impact (עמוד הצטרפות). התוכנית בחינם, בשיתוף רשות החדשנות.",
+  "website": "https://www.18ximpact.org"
  },
  "jobify360-co-il-c7b680": {
   "name": "Jobify (ג'וביפיי) – התאמת משרות וייעוץ קריירה"
@@ -306,7 +306,8 @@
  },
  "s-1a9249": {
   "description": "עמותה שנותנת סיוע נפשי דיסקרטי וללא עלות למשוחררים ומשוחררות מצה\"ל עם תסמינים של פוסט טראומה, שעוד לא אובחנו או לא מטופלים דרך משרד הביטחון. לפעמים זה בגלל הדחקה, בושה, פחד לבקש עזרה או קושי מול הבירוקרטיה. העמותה גם מעלה מודעות ופועלת לקידום ההכרה באגף השיקום.",
-  "_hide": "אין פרטי קשר"
+  "website": "https://www.guardianbrother.org",
+  "email": "info@guardianbrother.org"
  },
  "cohenveteransnetwork-org-fe5188": {
   "website": "https://www.cohenveteransnetwork.org/",
@@ -486,7 +487,9 @@
  "s-016bf1": {
   "cost": "",
   "name": "החווה של רוקה (Ruca's Farm) – חווה שיקומית במושב חמד",
-  "_hide": "אין פרטי קשר"
+  "website": "https://www.ruca-farm.co.il",
+  "phone": "077-3334597",
+  "email": "ruca.farm23@gmail.com"
  },
  "nbn-org-il-61e022": {
   "cost": "",
@@ -547,7 +550,9 @@
  "s-40b69b": {
   "description": "ארגון שהוקם ב-1982 ומייצג את השוטרים והסוהרים, שאסור להם להתאגד בארגון עובדים. הארגון מופעל בידי בני משפחותיהם, בעיקר נשותיהם. הוא פועל לשיפור המעמד והרווחה של שוטרים וסוהרים, ומסייע במצוקה משפטית, כלכלית, בריאותית, משפחתית או אישית, כולל לנכי משטרה.",
   "cost_notes": "ייתכן סיוע משפטי בעלות מוזלת לנכי משטרה; לברר מול הארגון. הארגון מבוסס על חברות.",
-  "_hide": "אין פרטי קשר"
+  "website": "https://neshot.org.il",
+  "phone": "08-9212281",
+  "email": "neshot2@neshot.org.il"
  },
  "s-9993b4": {
   "phone": "050-6216366",
@@ -660,7 +665,8 @@
   "_remove": "עמותה אמריקאית, רק דף תרומות"
  },
  "s-abf8ab": {
-  "_hide": "אין פרטי קשר"
+  "website": "https://mysister-il.co.il/",
+  "how_to_apply": "נרשמים בטופס באתר."
  },
  "s-78adbb": {
   "website": "https://atalef.com",
@@ -668,13 +674,15 @@
   "how_to_apply": "פונים לעמותה דרך האתר."
  },
  "s-038b6f": {
-  "_hide": "אין פרטי קשר"
+  "website": "https://www.facebook.com/neshotmil/"
  },
  "s-94ba7f": {
-  "_hide": "אין פרטי קשר"
+  "website": "https://www.hin-group.org/",
+  "email": "contact@hin-group.org"
  },
  "shikum-mod-gov-il-a17284": {
-  "_hide": "ייתכן שנסגר (עמודים סותרים)"
+  "website": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "phone": "*8150"
  },
  "shikum-mod-gov-il-4f9c0b": {
   "difficulties": [
