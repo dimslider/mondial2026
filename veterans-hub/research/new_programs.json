@@ -1,0 +1,101 @@
+[
+ {
+  "name": "חבל זוג (Buddy Line) – עמותת העטלף",
+  "category": "water-sports",
+  "description": "תוכנית של בוגרי שייטת 13 ללוחמים משוחררים שמתמודדים עם פוסט טראומה, מכל יחידות צה\"ל וכוחות הביטחון. כל משתתף/ת משודך/ת לשנה לבוגר/ת יחידה שמלווה אישית, ויחד מצטרפים לקבוצה של כ-16 זוגות בצלילה, בגלישת גלים ובחתירה, או בשיט (עם אפשרות לרישיון סקיפר או להסמכת צלילה). הקבוצה נפגשת פעם בשבועיים לשלוש שעות, עם מדריך מקצועי ואיש/אשת טיפול שמתמחים בפוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "security-forces",
+   "police"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [
+   "sea",
+   "extreme",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "התוכנית ממומנת בתרומות. כדאי לוודא מול העמותה שאין עלות.",
+  "regions": [],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://atalef.com/social/",
+  "how_to_apply": "פונים לעמותת העטלף דרך האתר ומבקשים להצטרף למחזור הבא של חבל זוג.",
+  "source_url": "https://atalef.com/social/",
+  "confidence": "high"
+ },
+ {
+  "name": "מים שקטים (Still Waters) – עמותת העטלף",
+  "category": "water-sports",
+  "description": "תוכנית שבה מתנדבים מבוגרי שייטת 13 מלווים פצועי צה\"ל מכל היחידות בשיקום דרך פעילות במים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd",
+   "amputation"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "ממומן בתרומות. לברר מול העמותה.",
+  "regions": [],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.atalef.com/he/228",
+  "how_to_apply": "פונים לעמותת העטלף דרך האתר.",
+  "source_url": "https://www.atalef.com/he/228",
+  "confidence": "medium"
+ },
+ {
+  "name": "גלים של אהבה – גלישה ללוחמים עם פוסט טראומה (לוחמים לחיים)",
+  "category": "water-sports",
+  "description": "פרויקט גלישת גלים של עמותת לוחמים לחיים, בשיתוף גולשים ללא גבולות, ללוחמים שמתמודדים עם פוסט טראומה. מפגשים קבוצתיים קבועים בים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "לברר מול העמותה.",
+  "regions": [],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
+  "how_to_apply": "פונים לעמותת לוחמים לחיים דרך האתר.",
+  "source_url": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
+  "confidence": "medium"
+ }
+]

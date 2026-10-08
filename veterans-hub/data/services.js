@@ -1,5 +1,5 @@
 // נוצר אוטומטית ע"י tools/build_data.py — לא לערוך ידנית; לעדכן את קבצי המחקר ולהריץ מחדש.
-window.SERVICES_UPDATED = "2026-10-07";
+window.SERVICES_UPDATED = "2026-10-08";
 window.SERVICES = [
  {
   "id": "1202-org-il-0bf488",
@@ -6220,6 +6220,42 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "s-78adbb",
+  "name": "עמותת העטלף – עמותת בוגרי שייטת 13",
+  "category": "peer-support",
+  "description": "עמותת בוגרי שייטת 13. תומכת בפצועי היחידה (גוף ונפש), בנפגעי הקישון ובמשפחות השכולות, עם רשת ביטחון אישית, מענקים, מלגות ותוכניות חוסן. מפעילה גם את חבל זוג ומים שקטים, שפתוחות ללוחמים מכל היחידות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "bereaved",
+   "combat-soldiers",
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "financial",
+   "loneliness",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מיועד לבוגרי שייטת 13 ולמשפחותיהם.",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://atalef.com",
+  "how_to_apply": "פונים לעמותה דרך האתר.",
+  "source_url": "https://www.hamichlol.org.il/%D7%A2%D7%9E%D7%95%D7%AA%D7%AA_%D7%94%D7%A2%D7%98%D7%9C%D7%A3",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "shikum-mod-gov-il-d5816c",
   "name": "פעילות תמיכה של אגף השיקום בימי הזיכרון (בתים חמים וחוות שיקומיות)",
   "category": "peer-support",
@@ -7734,6 +7770,43 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "lohamim-org-il-1df527",
+  "name": "גלים של אהבה – גלישה ללוחמים עם פוסט טראומה (לוחמים לחיים)",
+  "category": "water-sports",
+  "description": "פרויקט גלישת גלים של עמותת לוחמים לחיים, בשיתוף גולשים ללא גבולות, ללוחמים שמתמודדים עם פוסט טראומה. מפגשים קבוצתיים קבועים בים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "לברר מול העמותה.",
+  "regions": [],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
+  "how_to_apply": "פונים לעמותת לוחמים לחיים דרך האתר.",
+  "source_url": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "hagalsheli-co-il-225e7f",
   "name": "הגל שלי – גלישה טיפולית ללוחמים",
   "category": "water-sports",
@@ -7820,6 +7893,47 @@ window.SERVICES = [
   "verified_at": "2026-10-07"
  },
  {
+  "id": "atalef-com-61908c",
+  "name": "חבל זוג (Buddy Line) – עמותת העטלף",
+  "category": "water-sports",
+  "description": "תוכנית של בוגרי שייטת 13 ללוחמים משוחררים שמתמודדים עם פוסט טראומה, מכל יחידות צה\"ל וכוחות הביטחון. כל משתתף/ת משודך/ת לשנה לבוגר/ת יחידה שמלווה אישית, ויחד מצטרפים לקבוצה של כ-16 זוגות בצלילה, בגלישת גלים ובחתירה, או בשיט (עם אפשרות לרישיון סקיפר או להסמכת צלילה). הקבוצה נפגשת פעם בשבועיים לשלוש שעות, עם מדריך מקצועי ואיש/אשת טיפול שמתמחים בפוסט טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "sea",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "התוכנית ממומנת בתרומות. כדאי לוודא מול העמותה שאין עלות.",
+  "regions": [],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://atalef.com/social/",
+  "how_to_apply": "פונים לעמותת העטלף דרך האתר ומבקשים להצטרף למחזור הבא של חבל זוג.",
+  "source_url": "https://atalef.com/social/",
+  "confidence": "high",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
+ },
+ {
   "id": "shikum-mod-gov-il-4f9c0b",
   "name": "טיפול ימי במסגרת 'נפש אחת' (אגף השיקום, משרד הביטחון)",
   "category": "water-sports",
@@ -7895,6 +8009,42 @@ window.SERVICES = [
   "community_recs": "",
   "community_note": "",
   "verified_at": "2026-10-07"
+ },
+ {
+  "id": "atalef-com-aadfe1",
+  "name": "מים שקטים (Still Waters) – עמותת העטלף",
+  "category": "water-sports",
+  "description": "תוכנית שבה מתנדבים מבוגרי שייטת 13 מלווים פצועי צה\"ל מכל היחידות בשיקום דרך פעילות במים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "amputation",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "",
+  "cost_notes": "ממומן בתרומות. לברר מול העמותה.",
+  "regions": [],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.atalef.com/he/228",
+  "how_to_apply": "פונים לעמותת העטלף דרך האתר.",
+  "source_url": "https://www.atalef.com/he/228",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": ""
  },
  {
   "id": "cmbm-israel-org-378fe3",
