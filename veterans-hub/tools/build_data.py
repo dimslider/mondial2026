@@ -31,7 +31,7 @@ VALID = {k: keys_of(k) for k in ["categories", "eligibility", "difficulties", "i
 LIST_FIELDS = {"eligibility": "eligibility", "difficulties": "difficulties", "interests": "interests", "regions": "regions"}
 FIELDS = ["id", "name", "category", "description", "provider_type", "eligibility", "difficulties", "interests",
           "cost", "cost_notes", "regions", "location", "phone", "email", "website", "how_to_apply",
-          "source_url", "confidence", "reviewed_at", "community_recs", "community_note"]
+          "source_url", "confidence", "reviewed_at", "community_recs", "community_note", "unit_only"]
 
 
 def norm_name(n):

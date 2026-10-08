@@ -34,6 +34,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -71,6 +72,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -108,6 +110,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -144,6 +147,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
@@ -191,6 +195,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -225,6 +230,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -263,6 +269,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
   "age": []
@@ -300,6 +307,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -339,6 +347,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -384,6 +393,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -430,6 +440,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -477,6 +488,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -514,6 +526,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -549,6 +562,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -586,6 +600,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -627,6 +642,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -664,6 +680,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 5,
   "community_note": "בית חם ופעיל לפצועים",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -703,6 +720,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -743,6 +761,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -783,6 +802,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -823,6 +843,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -861,6 +882,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -901,6 +923,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -941,6 +964,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -979,6 +1003,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1017,6 +1042,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1058,6 +1084,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1096,6 +1123,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -1140,6 +1168,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1179,6 +1208,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1221,6 +1251,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 32,
   "community_note": "ייעוץ זכויות ועורך דין ללא עלות, חוגים, ספורט וטיפולים",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1258,6 +1289,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1295,6 +1327,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -1331,6 +1364,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "iron-swords-desc",
   "age": []
@@ -1366,6 +1400,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -1402,6 +1437,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -1437,6 +1473,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -1473,6 +1510,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1508,6 +1546,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1542,6 +1581,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -1577,6 +1617,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1616,6 +1657,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1654,6 +1696,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1690,6 +1733,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1725,6 +1769,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1761,6 +1806,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1796,6 +1842,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1831,6 +1878,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -1865,6 +1913,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -1905,6 +1954,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -1942,6 +1992,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -1976,6 +2027,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -2012,6 +2064,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2047,6 +2100,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2082,6 +2136,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2118,6 +2173,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2153,6 +2209,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2189,6 +2246,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2223,6 +2281,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -2261,6 +2320,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -2297,6 +2357,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -2340,6 +2401,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 5,
   "community_note": "קורסים ותחביבים לפני שיקום מקצועי",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2379,6 +2441,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -2415,6 +2478,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -2453,6 +2517,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 3,
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2490,6 +2555,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -2531,6 +2597,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2566,6 +2633,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -2601,6 +2669,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2637,6 +2706,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2670,6 +2740,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2706,6 +2777,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2748,6 +2820,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2785,6 +2858,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -2819,6 +2893,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -2857,6 +2932,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2893,6 +2969,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2931,6 +3008,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -2967,6 +3045,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3005,6 +3084,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3042,6 +3122,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3076,6 +3157,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -3113,6 +3195,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
   "age": []
@@ -3147,6 +3230,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3184,6 +3268,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3218,6 +3303,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3254,6 +3340,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -3289,6 +3376,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3327,6 +3415,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3365,6 +3454,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3400,6 +3490,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -3436,6 +3527,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3470,6 +3562,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -3503,6 +3596,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3540,6 +3634,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3576,6 +3671,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3611,6 +3707,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3647,6 +3744,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -3681,6 +3779,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3715,6 +3814,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3749,6 +3849,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3784,6 +3885,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3823,6 +3925,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3862,6 +3965,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3900,6 +4004,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -3942,6 +4047,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "iron-swords",
   "age": []
@@ -3976,6 +4082,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4011,6 +4118,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4045,6 +4153,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4079,6 +4188,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4113,6 +4223,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -4149,6 +4260,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4184,6 +4296,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4223,6 +4336,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4256,6 +4370,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4293,6 +4408,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4333,6 +4449,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4366,6 +4483,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4402,6 +4520,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4435,6 +4554,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4471,6 +4591,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4504,6 +4625,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4538,6 +4660,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4574,6 +4697,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4610,6 +4734,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4648,6 +4773,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4681,6 +4807,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4715,6 +4842,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4751,6 +4879,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4785,6 +4914,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4828,6 +4958,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4865,6 +4996,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -4905,6 +5037,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -4946,6 +5079,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -4989,6 +5123,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5029,6 +5164,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5070,6 +5206,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5104,6 +5241,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5137,6 +5275,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5174,6 +5313,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5210,6 +5350,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -5250,6 +5391,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5291,6 +5433,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5328,6 +5471,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5368,6 +5512,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5408,6 +5553,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
@@ -5454,6 +5600,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5488,6 +5635,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5526,6 +5674,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5563,6 +5712,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5605,6 +5755,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -5640,6 +5791,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5674,6 +5826,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5713,6 +5866,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5750,6 +5904,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
   "age": []
@@ -5789,6 +5944,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -5826,6 +5982,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
@@ -5868,6 +6025,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 9,
   "community_note": "רבים קיבלו החזר כטיפול משלים; לבדוק מראש מול רכז/ת השיקום",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5908,6 +6066,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 3,
   "community_note": "מומלצת למי שמחפש משלחת ריפוי",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5941,6 +6100,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -5980,6 +6140,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6022,6 +6183,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -6057,6 +6219,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -6099,6 +6262,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6137,6 +6301,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6173,6 +6338,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6215,6 +6381,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 8,
   "community_note": "כדאי לפנות סמוך לאירוע",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6252,6 +6419,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6291,6 +6459,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6330,6 +6499,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6365,6 +6535,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6399,6 +6570,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -6433,6 +6605,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -6473,6 +6646,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6509,6 +6683,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -6552,6 +6727,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6591,6 +6767,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6629,6 +6806,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6671,6 +6849,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6707,6 +6886,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -6747,6 +6927,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6789,6 +6970,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6829,6 +7011,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6869,6 +7052,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6906,6 +7090,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6943,6 +7128,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -6983,6 +7169,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7025,6 +7212,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7061,6 +7249,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": [
@@ -7108,6 +7297,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7145,6 +7335,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7181,6 +7372,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7223,6 +7415,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": [
@@ -7263,6 +7456,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7299,6 +7493,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7334,6 +7529,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -7370,6 +7566,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
   "age": []
@@ -7408,6 +7605,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7445,6 +7643,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7480,6 +7679,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7523,6 +7723,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": [
@@ -7564,6 +7765,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7609,6 +7811,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7645,6 +7848,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 5,
   "community_note": "כדאי לקבל אישור למטפל מראש",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7683,6 +7887,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -7723,6 +7928,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -7765,6 +7971,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7798,6 +8005,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -7838,6 +8046,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -7878,6 +8087,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7915,6 +8125,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -7953,6 +8164,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -7990,6 +8202,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8028,6 +8241,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -8067,6 +8281,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8103,6 +8318,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8141,6 +8357,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8179,6 +8396,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8214,6 +8432,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": [
@@ -8257,6 +8476,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8304,6 +8524,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8343,6 +8564,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -8385,6 +8607,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 39,
   "community_note": "עוזרים לקדם פניות מול האגף, ייעוץ, הלוואות והנחות",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8423,6 +8646,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8465,6 +8689,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -8506,6 +8731,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8553,6 +8779,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8589,6 +8816,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8623,6 +8851,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -8661,6 +8890,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8698,6 +8928,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8735,6 +8966,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -8772,6 +9004,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8816,6 +9049,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8854,6 +9088,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -8891,6 +9126,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8931,6 +9167,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -8974,6 +9211,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -9016,6 +9254,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": true,
   "verified_at": "",
   "era": "",
   "age": []
@@ -9056,6 +9295,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9093,6 +9333,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -9131,6 +9372,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -9168,6 +9410,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "older",
   "age": []
@@ -9209,6 +9452,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9254,6 +9498,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -9297,6 +9542,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9344,6 +9590,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9387,6 +9634,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9426,6 +9674,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
   "age": []
@@ -9470,6 +9719,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9510,6 +9760,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9551,6 +9802,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
   "age": []
@@ -9593,6 +9845,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -9631,6 +9884,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -9667,6 +9921,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -9704,6 +9959,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -9746,6 +10002,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9780,6 +10037,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9817,6 +10075,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9855,6 +10114,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9889,6 +10149,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9923,6 +10184,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -9961,6 +10223,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -9997,6 +10260,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10033,6 +10297,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -10072,6 +10337,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10106,6 +10372,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10143,6 +10410,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10180,6 +10448,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10217,6 +10486,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -10253,6 +10523,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
   "age": []
@@ -10288,6 +10559,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10326,6 +10598,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10365,6 +10638,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 16,
   "community_note": "ממליצים לפנות אליהם לפני ועדה רפואית",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10400,6 +10674,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10434,6 +10709,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -10468,6 +10744,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10500,6 +10777,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10536,6 +10814,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10572,6 +10851,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10608,6 +10888,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10644,6 +10925,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10680,6 +10962,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10719,6 +11002,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -10758,6 +11042,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
   "age": []
@@ -10806,6 +11091,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
   "age": []
@@ -10845,6 +11131,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
   "age": []
@@ -10892,6 +11179,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10933,6 +11221,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -10972,6 +11261,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -11013,6 +11303,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -11051,6 +11342,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11093,6 +11385,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
   "age": []
@@ -11143,6 +11436,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11182,6 +11476,7 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "",
   "era": "",
   "age": []
@@ -11235,6 +11530,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11273,6 +11569,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11316,6 +11613,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -11354,6 +11652,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11397,6 +11696,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11432,6 +11732,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -11476,6 +11777,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -11516,6 +11818,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -11555,6 +11858,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11597,6 +11901,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11638,6 +11943,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11683,6 +11989,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11720,6 +12027,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []
@@ -11762,6 +12070,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-08",
   "era": "",
   "age": []
@@ -11802,6 +12111,7 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
+  "unit_only": "",
   "verified_at": "2026-10-07",
   "era": "",
   "age": []

@@ -93,12 +93,20 @@
   // "פתוח לכולם": רק שירות רחב באמת (קווי סיוע, מרכזי חוסן וכו'), שמסומן גם "אזרח/ית" וגם לפחות 3 קבוצות נוספות.
   // שירות שמסומן רק "נפגעי איבה + אזרחים" (למשל הטבה של ביטוח לאומי) לא יוצג לשוטר או למילואימניק.
   const openToAll = s => { const el = arr(s.eligibility); return el.includes("civilians") && el.length >= 4; };
+  // שוטר הוא חלק מ"כוחות הביטחון"
+  const expandStatuses = st => st.includes("police") && !st.includes("security-forces") ? [...st, "security-forces"] : st;
+  // שוטרים ואנשי כוחות ביטחון: תוכניות ל"לוחמים" פתוחות להם לפעמים, אבל לא תמיד כתוב. מציגים, עם הערה לברר.
+  const softEligible = (s, statuses) => statuses.some(x => x === "police" || x === "security-forces") &&
+    arr(s.eligibility).some(e => e === "combat-soldiers" || e === "reservists") && !needsRecognition(s);
   function eligible(s, statuses) {
     const el = arr(s.eligibility);
+    statuses = expandStatuses(statuses);
     if (!statuses.length || !el.length) return true;
     if (el.some(e => statuses.includes(e))) return true;
-    return openToAll(s);
+    return openToAll(s) || softEligible(s, statuses);
   }
+  // עמוד מידע (פודקאסט, פורטל, מדריך, רפורמה): שימושי, אבל לא "תחנה" שפונים אליה
+  const infoItem = s => /פודקאסט|סדרה תיעודית|פורטל|מדריך זכויות|רפורמ|המלצות ועדת/.test(s.name);
   // אזורים שכנים: מי שגר בשפלה יקבל גם מה שבמרכז ובירושלים, אבל לא את מרכז החוסן בשדרות
   const NEAR = { shfela: ["center", "jerusalem", "south"], center: ["shfela", "sharon"], sharon: ["center"], haifa: ["north"], north: ["haifa"],
     jerusalem: ["shfela", "judea-samaria"], "judea-samaria": ["jerusalem"], south: ["shfela"] };
@@ -124,7 +132,7 @@
   const OPEN_EL = ["mod-in-process", "not-recognized", "combat-soldiers", "reservists", "civilians", "terror-victims"];
   const needsRecognition = s => { const el = arr(s.eligibility); return el.includes("mod-recognized") && !el.some(x => OPEN_EL.includes(x)); };
   // תוכנית של עמותת בוגרי יחידה מסוימת, או לחיילים בודדים: לא מתאימה בהתאמה כללית (נשארת בחיפוש)
-  const narrowGroup = s => /בוגרי|יוצאי (?:שלדג|עוקץ)|בודדים|חייל בודד|לוחמים בודדים/.test(s.name) && !/חבל זוג|מים שקטים/.test(s.name);
+  const narrowGroup = s => s.unit_only === true || /בוגרי|יוצאי (?:שלדג|עוקץ)|בודדים|חייל בודד|לוחמים בודדים/.test(s.name) && !/חבל זוג|מים שקטים/.test(s.name);
   // קושי ספציפי שווה יותר. "פוסט טראומה" מסומנת כמעט בכל שירות, אז כשבחרו עוד קשיים היא שווה פחות.
   const D_WEIGHT = { tbi: 5, amputation: 5, addiction: 4, "physical-disability": 4, grief: 4 };
   const MENTAL = ["ptsd", "depression", "anxiety", "sleep", "anger", "addiction", "moral-injury", "loneliness"];
@@ -145,9 +153,12 @@
     const modFree = s.cost === "mod-funded" && p.statuses.some(x => x === "mod-recognized" || x === "mod-in-process");
     if (p.maxCost != null && s.cost && !modFree && cr > p.maxCost) sc -= 4;
     if (/ניסוי קליני|ניסוי\s/.test(s.name)) sc -= 3;   // ניסויים קליניים: לא בראש הרשימה
-    const el = arr(s.eligibility).filter(x => p.statuses.includes(x));
+    const myStatuses = expandStatuses(p.statuses);
+    const el = arr(s.eligibility).filter(x => myStatuses.includes(x));
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
+    else if (p.statuses.length && softEligible(s, myStatuses)) { sc -= 1; why.push("מיועד ללוחמים. כדאי לשאול אם פתוח גם לשוטרים ולכוחות הביטחון"); }
     else if (p.statuses.length) sc -= 2;   // פתוח לכולם, לא מיועד במיוחד למצב שסימנת
+    if (infoItem(s)) sc -= 2;
     // שירות לבני משפחה או לשכול, למי שלא סימן משפחה, שכול או זוגיות
     const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון/.test(s.name);
     if (forFamily && !p.statuses.some(x => x === "families" || x === "bereaved") && !p.difficulties.some(x => x === "family-relations" || x === "grief")) sc -= 3;
@@ -221,8 +232,9 @@
   function pickStations(p, res) {
     p = withImplied(p);
     const first = [];
-    const take = r => { if (r && first.length < 3 && !first.includes(r)) first.push(r); };
-    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
+    // לא שתי תחנות מאותו סוג (שני כלבים, שתי חוות)
+    const take = r => { if (r && first.length < 3 && !first.includes(r) && !first.some(f => f.s.category === r.s.category)) first.push(r); };
+    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
     // מענה ייעודי לפגיעה: עדיפות לשירות שזה עיקרו
     for (const k of injuryOf(p.difficulties))
       take(best(r => arr(r.s.difficulties).some(x => INJURY[k].includes(x)) && r.s.category !== "rights-legal",
@@ -240,12 +252,16 @@
         r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0) +
           (p.worsened ? (/החמרה|בדיקה מחדש/.test(r.s.name) ? 10 : /הגשת בקשה להכרה|מסלול ירוק|מסלול מהיר/.test(r.s.name) ? -6 : 0) : 0)));
     // בדידות: קבוצת עמיתים
-    if (p.difficulties.includes("loneliness")) take(best(r => r.s.category === "peer-support" && arr(r.s.difficulties).includes("loneliness") || (p.era === "older" && r.s.era === "older")));
+    // בדידות: קבוצה. עדיפות לקבוצה שעושה משהו שהוא אוהב (ריצה, טבע), כי למי שמסתגר קל יותר להגיע לפעילות מאשר "לקבוצת תמיכה"
+    if (p.difficulties.includes("loneliness")) take(best(r => (r.s.category === "peer-support" || arr(r.s.interests).some(i => p.interests.includes(i))) && arr(r.s.difficulties).includes("loneliness") || (p.era === "older" && r.s.era === "older"),
+      r => r.sc + (arr(r.s.interests).some(i => p.interests.includes(i)) ? 4 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0)));
     // תחום עניין: שירות שזה עיקרו (ים לגלישה, טבע לחווה), לא שירות שמזכיר את זה בדרך אגב
     if (p.interests.length)
       take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))));
-    for (const r of res) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
-    for (const r of res) take(r);
+    const pool = res.filter(r => !infoItem(r.s));
+    for (const r of pool) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
+    for (const r of pool) take(r);
+    for (const r of pool) if (first.length < 3 && !first.includes(r)) first.push(r);
     return first;
   }
 
@@ -518,7 +534,10 @@
       const drawFollow = () => {
         if (!fu) return;
         const on = k => !!form.querySelector(`input[name="statuses"][value="${k}"]:checked`);
+        const anyRec = on("mod-recognized") || on("mod-in-process") || on("not-recognized");
         fu.innerHTML =
+          ((on("police") || on("security-forces")) && !anyRec ? radioRow("secrec", "ומה עם הכרה בנכות? (לשוטרים ולכוחות הביטחון זה דרך אגף השיקום)",
+            { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך", "not-recognized": "לא הגשתי / לא יודע/ת" }, p.secrec) : "") +
           (on("mod-recognized") ? radioRow("worsened", "ומאז ההכרה?", { yes: "המצב החמיר", no: "פחות או יותר אותו דבר" }, p.worsened === true ? "yes" : p.worsened === false ? "no" : "") : "") +
           (on("combat-soldiers") || on("reservists") ? radioRow("era", "מתי היה עיקר השירות הקרבי?", { "iron-swords": "במלחמה הנוכחית, מאז 2023", "2000s": "בין 2000 ל-2023", older: "לפני 2000 (לבנון, רצועת הביטחון, יום כיפור)" }, p.era) : "") +
           radioRow("age", "גיל (לא חובה)", { u30: "עד 30", "30-45": "30 עד 45", "45-60": "45 עד 60", "60+": "60 ומעלה" }, p.age);
@@ -528,6 +547,9 @@
         p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value);
         if (st.key !== "statuses") return;
         const val = n => (form.querySelector(`input[name="${n}"]:checked`) || {}).value || null;
+        // הכרה של שוטר / איש כוחות ביטחון: נכנסת לסטטוסים עצמם
+        p.secrec = val("secrec");
+        if (p.secrec && !p.statuses.includes(p.secrec)) p.statuses = [...p.statuses, p.secrec];
         const w = val("worsened");
         p.worsened = p.statuses.includes("mod-recognized") && w ? w === "yes" : null;
         p.era = p.statuses.some(x => x === "combat-soldiers" || x === "reservists") ? val("era") : null;
