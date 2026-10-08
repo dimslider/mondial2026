@@ -77,6 +77,8 @@ def clean(s, warn):
         vals = s.get(f) or []
         if isinstance(vals, str):
             vals = [vals]
+        if f == "interests":   # "טיולים ונסיעות" אוחד עם "טבע, טיולים ומסעות"
+            vals = ["nature" if v == "travel" else v for v in vals]
         bad = [v for v in vals if v not in VALID[tax]]
         if bad:
             warn(f"{out['name']}: ערכים לא מוכרים ב-{f}: {bad}")

@@ -43,14 +43,14 @@ window.TAXONOMY = {
     "bureaucracy": "בירוקרטיה והכרה בזכויות", "financial": "קושי כלכלי", "grief": "אובדן ושכול"
   },
   interests: {
-    "sea": "ים ומים", "nature": "טבע וטיולים", "animals": "בעלי חיים", "sport": "ספורט",
+    "sea": "ים ומים", "nature": "טבע, טיולים ומסעות", "animals": "בעלי חיים", "sport": "ספורט",
     "fitness": "כושר", "mind-body": "יוגה ומדיטציה", "art": "אמנות", "music": "מוזיקה",
-    "writing": "כתיבה", "tech": "טכנולוגיה", "volunteering": "התנדבות", "travel": "טיולים ונסיעות",
+    "writing": "כתיבה", "tech": "טכנולוגיה", "volunteering": "התנדבות",
     "learning": "לימודים", "spiritual": "רוחניות ואמונה", "cooking": "בישול",
     "crafts": "עבודת כפיים ונגרות", "extreme": "אקסטרים ואדרנלין"
   },
   regions: {
-    "north": "צפון", "haifa": "חיפה והקריות", "sharon": "שרון", "center": "מרכז",
+    "north": "צפון", "haifa": "חיפה והקריות", "sharon": "שרון", "center": "מרכז", "shfela": "שפלה",
     "jerusalem": "ירושלים והסביבה", "south": "דרום", "judea-samaria": "יהודה ושומרון",
     "nationwide": "בכל הארץ", "online": "אונליין / טלפוני"
   },

@@ -38,7 +38,12 @@
   };
 
   function loadProfile() {
-    try { return JSON.parse(localStorage.getItem(PROFILE_KEY)) || null; } catch (e) { return null; }
+    try {
+      const p = JSON.parse(localStorage.getItem(PROFILE_KEY)) || null;
+      // "טיולים ונסיעות" אוחד עם "טבע, טיולים ומסעות"
+      if (p && Array.isArray(p.interests)) p.interests = [...new Set(p.interests.map(i => i === "travel" ? "nature" : i))];
+      return p;
+    } catch (e) { return null; }
   }
   function saveProfile(p) {
     try { localStorage.setItem(PROFILE_KEY, JSON.stringify(p)); } catch (e) { /* ignore */ }
@@ -94,18 +99,28 @@
     if (el.some(e => statuses.includes(e))) return true;
     return openToAll(s);
   }
+  // אזורים שכנים: מי שגר בשפלה יקבל גם מה שבמרכז ובירושלים, אבל לא את מרכז החוסן בשדרות
+  const NEAR = { shfela: ["center", "jerusalem", "south"], center: ["shfela", "sharon"], sharon: ["center"], haifa: ["north"], north: ["haifa"],
+    jerusalem: ["shfela", "judea-samaria"], "judea-samaria": ["jerusalem"], south: ["shfela"] };
+  const withNear = regions => [...new Set(regions.flatMap(r => [r, ...(NEAR[r] || [])]))];
   function regionOk(s, regions) {
     const r = arr(s.regions);
     if (!regions.length || !r.length) return true;
     if (r.includes("nationwide") || r.includes("online")) return true;
-    return r.some(x => regions.includes(x));
+    const ok = withNear(regions);
+    return r.some(x => ok.includes(x));
   }
+  // שירות שעיקרו פציעה גופנית (קטיעה, נכות פיזית, פגיעת ראש). למי שלא סימן קושי כזה הוא לא רלוונטי,
+  // גם אם מופיעה בו גם "פוסט טראומה".
+  const PHYS = ["amputation", "physical-disability", "tbi"];
+  const physicalFocus = s => { const d = arr(s.difficulties); return d.some(x => PHYS.includes(x)) && d.filter(x => !PHYS.includes(x) && x !== "ptsd").length <= 1; };
   function score(s, p) {
     let sc = 0;
     const why = [];
     const d = arr(s.difficulties).filter(x => p.difficulties.includes(x));
     const i = arr(s.interests).filter(x => p.interests.includes(x));
-    if (d.length) { sc += 3 * d.length; why.push("עוזר ב: " + d.map(x => T.difficulties[x]).join(", ")); }
+    // "פוסט טראומה" מסומנת כמעט בכל שירות, אז לבדה היא שווה פחות מקושי ספציפי (שינה, כעס, זוגיות)
+    if (d.length) { sc += d.reduce((t, x) => t + (x === "ptsd" && p.difficulties.length > 1 ? 1.5 : 3), 0); why.push("עוזר ב: " + d.map(x => T.difficulties[x]).join(", ")); }
     if (i.length) { sc += 3 * i.length; why.push("מתאים לתחומי עניין: " + i.map(x => T.interests[x]).join(", ")); }
     const r = arr(s.regions);
     if (p.regions.length && r.some(x => p.regions.includes(x))) { sc += 1; why.push("קרוב אליך"); }
@@ -117,11 +132,20 @@
     if (/ניסוי קליני|ניסוי\s/.test(s.name)) sc -= 3;   // ניסויים קליניים: לא בראש הרשימה
     const el = arr(s.eligibility).filter(x => p.statuses.includes(x));
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
+    else if (p.statuses.length) sc -= 2;   // פתוח לכולם, לא מיועד במיוחד למצב שסימנת
+    // שירות לבני משפחה או לשכול, למי שלא סימן משפחה, שכול או זוגיות
+    const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון/.test(s.name);
+    // תוכנית של עמותת בוגרי יחידה מסוימת (דובדבן, מגלן): רלוונטית רק לבוגרי היחידה, אז לא בראש הרשימה
+    if (/בוגרי|יוצאי (?:שלדג|עוקץ)/.test(s.name) && !/חבל זוג|מים שקטים/.test(s.name)) sc -= 3;
+    if (forFamily && !p.statuses.some(x => x === "families" || x === "bereaved") && !p.difficulties.some(x => x === "family-relations" || x === "grief")) sc -= 3;
     if (s.confidence === "low") sc -= 1;
     if (starred(s)) { sc += 1; why.push("מומלץ בקהילה"); }
     return { sc, why };
   }
   function match(p) {
+    // מי שבתהליך הכרה או עוד לא מוכר צריך קודם כול ליווי בהכרה, גם אם לא סימן "בירוקרטיה"
+    if (p.statuses.some(x => x === "mod-in-process" || x === "not-recognized") && !p.difficulties.includes("bureaucracy"))
+      p = Object.assign({}, p, { difficulties: [...p.difficulties, "bureaucracy"] });
     const asked = p.difficulties.length || p.interests.length;
     const free = p.maxCost === 0;
     return SERVICES
@@ -129,13 +153,18 @@
       .filter(s => eligible(s, p.statuses))
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
       .filter(s => !free || !["subsidized", "partial", "paid"].includes(s.cost))
+      // אזור: מה שמקומי ורחוק לא מוצג (ארצי ואונליין תמיד כן)
+      .filter(s => regionOk(s, p.regions))
+      .filter(s => !physicalFocus(s) || p.difficulties.some(d => PHYS.includes(d)) || !p.difficulties.length)
       .map(s => Object.assign({ s }, score(s, p)))
       // כשסימנו קושי או תחום עניין, שירות חייב לענות על לפחות אחד מהם (קרבה לבד לא מספיקה)
       .filter(x => asked ? (arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i))) && x.sc > 1.5 : regionOk(x.s, p.regions))
       // שירות שפתוח לכולם (ולא ספציפית לסטטוס שסימנת) מוצג רק אם הוא עונה על קושי או תחום עניין שבחרת
       .filter(x => !p.statuses.length || arr(x.s.eligibility).some(e => p.statuses.includes(e)) ||
         arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i)))
-      .sort((a, b) => b.sc - a.sc);
+      .sort((a, b) => b.sc - a.sc)
+      // רשימה קצרה ומדויקת: מה שרחוק מאוד מההתאמה הטובה ביותר לא מוצג (אפשר למצוא אותו בחיפוש)
+      .filter((x, _, all) => !asked || x.sc >= Math.max(4, all[0].sc * 0.35));
   }
 
   // ---------- components ----------
@@ -425,6 +454,13 @@
     // אם בחרו תחום עניין, תחנה אחת לפחות תהיה ממנו
     const byInterest = p.interests.length ? res.find(r => arr(r.s.interests).some(i => p.interests.includes(i))) : null;
     if (byInterest) first.push(byInterest);
+    // בתהליך הכרה / עוד לא מוכר: תחנה אחת היא ליווי בהכרה, כי ממנה נפתח כל השאר
+    const needsRecognition = p.statuses.some(x => x === "mod-in-process" || x === "not-recognized");
+    // עדיפות לליווי אישי (מישהו שעושה את זה איתך) על פני פורטל מידע, ולמה שמומלץ בקהילה
+    const recRank = r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0);
+    const byRecognition = needsRecognition ? res.filter(r => r.s.category === "rights-legal" && arr(r.s.difficulties).includes("bureaucracy") && !first.includes(r))
+      .sort((a, b) => recRank(b) - recRank(a))[0] : null;
+    if (byRecognition) first.push(byRecognition);
     for (const r of res) { if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
     first.sort((a, b) => b.sc - a.sc);
     const firstIds = new Set(first.map(r => r.s.id));
@@ -466,7 +502,7 @@
       </section>
       ${order.length ? `
         <section class="more-areas">
-          <h2 class="section-title">עוד ${res.length - first.length} תחנות בדרך, לפי תחום</h2>
+          <h2 class="section-title">עוד אפשרויות שמתאימות לך, לפי תחום</h2>
           ${order.map(a => `
             <details class="area-${a}">
               <summary><span class="dabbed"><span class="display" style="font-size: 26px">${esc(AREAS[a].label)}</span></span><span class="hand">${byArea[a].length} אפשרויות</span></summary>
@@ -511,7 +547,8 @@
     return [...out];
   }
   const REGION_WORDS = { "צפון": "north", "בצפון": "north", "חיפה": "haifa", "בחיפה": "haifa", "קריות": "haifa", "מרכז": "center", "במרכז": "center",
-    "שרון": "sharon", "בשרון": "sharon", "ירושלים": "jerusalem", "בירושלים": "jerusalem", "דרום": "south", "בדרום": "south", "באר שבע": "south" };
+    "שרון": "sharon", "בשרון": "sharon", "ירושלים": "jerusalem", "בירושלים": "jerusalem", "דרום": "south", "בדרום": "south", "באר שבע": "south",
+    "שפלה": "shfela", "בשפלה": "shfela", "רחובות": "shfela", "מודיעין": "shfela", "בית שמש": "shfela", "רמלה": "shfela", "לוד": "shfela" };
   function searchScore(s, words) {
     const name = normQ(s.name);
     const tags = [catLabel(s.category), ...arr(s.interests).map(x => T.interests[x]), ...arr(s.difficulties).map(x => T.difficulties[x]),
@@ -661,12 +698,23 @@
       <section class="help">
         <p class="note">אף אחד לא רואה שנכנסת לכאן</p>
         <h1>רגע. נושמים ביחד.</h1>
-        <div class="breath" aria-hidden="true">
-          <span class="blob"></span>
-          <svg viewBox="0 0 210 210" fill="none"><path d="M105 8 C 160 6, 204 48, 202 104 C 200 160, 158 204, 104 202 C 50 200, 8 158, 10 104 C 12 52, 54 10, 108 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-          <span class="phase" id="phase">שאיפה</span>
+        <div class="calm-tabs" role="tablist">
+          <button type="button" role="tab" class="active" data-tab="breath">נשימה</button>
+          <button type="button" role="tab" data-tab="ground">5 חושים</button>
         </div>
-        <p class="lead" style="text-align: center">שאיפה 4 · עצירה 4 · נשיפה 6</p>
+        <div id="tab-breath">
+          <div class="breath" aria-hidden="true">
+            <span class="blob"></span>
+            <svg viewBox="0 0 210 210" fill="none"><path d="M105 8 C 160 6, 204 48, 202 104 C 200 160, 158 204, 104 202 C 50 200, 8 158, 10 104 C 12 52, 54 10, 108 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <span class="phase"><span id="phase">שאיפה</span><span class="count" id="count-down">4</span></span>
+          </div>
+          <p class="breath-how" id="breath-how">שואפים לאט דרך האף, הבטן מתמלאת</p>
+          <p class="note" style="text-align: center">ממשיכים כמה סבבים, עד שהנשימה נרגעת.</p>
+        </div>
+        <div id="tab-ground" hidden>
+          <p class="lead">כשהראש מוצף, מחזירים אותו לחדר. עוברים חוש אחרי חוש, לאט, ואפשר להגיד בקול.</p>
+          <div class="ground" id="ground"></div>
+        </div>
         <h2 class="section-title">לדבר עם מישהו, עכשיו</h2>
         <ul class="lines">
           ${lines.map(l => `<li><a href="tel:${l.num}"><span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="num">${l.num}</span></a></li>`).join("")}
@@ -675,16 +723,42 @@
         <p class="actions"><a class="link-u" href="#/browse?cat=hotlines">כל קווי הסיוע</a></p>
       </section>`;
     // הכיתוב מתחלף עם הנשימה (4 שאיפה, 4 עצירה, 6 נשיפה = 14 שניות, כמו האנימציה)
-    const el = document.getElementById("phase");
-    const seq = [["שאיפה", 4000], ["עצירה", 4000], ["נשיפה", 6000]];
-    let i = 0;
+    // ספירה בתוך העיגול, כדי שיהיה למה להיצמד
+    const el = document.getElementById("phase"), cd = document.getElementById("count-down"), how = document.getElementById("breath-how");
+    const seq = [["שאיפה", 4, "שואפים לאט דרך האף, הבטן מתמלאת"], ["עצירה", 4, "מחזיקים רגע, הכתפיים רפויות"], ["נשיפה", 6, "נושפים לאט דרך הפה, כמו דרך קשית"]];
+    let i = 0, n = 0;
     const tick = () => {
       if (!document.body.contains(el)) return;
-      el.textContent = seq[i][0];
-      setTimeout(tick, seq[i][1]);
-      i = (i + 1) % seq.length;
+      if (n === 0) { el.textContent = seq[i][0]; how.textContent = seq[i][2]; n = seq[i][1]; i = (i + 1) % seq.length; }
+      cd.textContent = n; n--;
+      setTimeout(tick, 1000);
     };
     tick();
+    // תרגיל קרקוע 5-4-3-2-1: צעד אחרי צעד
+    const G = [
+      ["5", "דברים שרואים", "שמים לב לפרטים קטנים: צבע, אור, צל, כתם על הקיר."],
+      ["4", "דברים שאפשר לגעת בהם", "הבגד על הגוף, הכיסא מתחת, משטח קר או חם, חפץ ביד."],
+      ["3", "דברים ששומעים", "מזגן, ציפורים, רכב רחוק, הנשימה של עצמך."],
+      ["2", "דברים שמריחים", "אוויר, בגד, קפה, סבון. אפשר לקום ולחפש ריח."],
+      ["1", "דבר אחד שטועמים", "לגימת מים, מסטיק, או פשוט הטעם שיש עכשיו בפה."]
+    ];
+    let g = 0;
+    const ground = document.getElementById("ground");
+    const drawG = () => {
+      ground.innerHTML = g < G.length ? `
+        <div class="ground-step"><span class="ground-n">${G[g][0]}</span><div><strong>${G[g][1]}</strong><p>${G[g][2]}</p></div></div>
+        <div class="ground-dots" aria-hidden="true">${G.map((_, k) => `<span class="${k <= g ? "on" : ""}"></span>`).join("")}</div>
+        <button type="button" class="btn btn-ink" id="g-next">${g < G.length - 1 ? "הבא" : "סיימתי"}</button>` : `
+        <p class="lead">יפה. עכשיו נשימה אחת ארוכה. אם עדיין קשה, אפשר לדבר עם מישהו, כאן למטה.</p>
+        <button type="button" class="link-u" id="g-next">מההתחלה</button>`;
+      document.getElementById("g-next").onclick = () => { g = g < G.length ? g + 1 : 0; drawG(); };
+    };
+    drawG();
+    $main.querySelectorAll(".calm-tabs button").forEach(b => b.onclick = () => {
+      $main.querySelectorAll(".calm-tabs button").forEach(x => x.classList.toggle("active", x === b));
+      document.getElementById("tab-breath").hidden = b.dataset.tab !== "breath";
+      document.getElementById("tab-ground").hidden = b.dataset.tab !== "ground";
+    });
   }
 
   // ---------- להוסיף מקום ----------

@@ -577,3 +577,19 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .welcome-sub { color: var(--muted); }
 .name-inline { font-weight: 400; }
 .card h3 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* עזרה עכשיו: ספירה בנשימה ותרגיל 5 חושים */
+.calm-tabs { display: flex; gap: 6px; justify-content: center; margin: 14px 0 0; }
+.calm-tabs button { font: 600 15.5px var(--body); color: var(--ink); background: transparent; border: 1px solid var(--line-strong); border-radius: 12px; min-height: 40px; padding: 0 16px; cursor: pointer; }
+.calm-tabs button.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.breath .phase { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.breath .count { font-family: var(--body); font-weight: 700; font-size: 40px; line-height: 1; font-variant-numeric: tabular-nums; }
+.breath-how { text-align: center; font-size: 16.5px; margin: 14px 0 2px; min-height: 1.6em; }
+.ground { display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+.ground-step { display: flex; gap: 14px; align-items: flex-start; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--glass); }
+.ground-n { flex: none; width: 52px; height: 52px; border-radius: 50%; background: var(--t-soul); display: flex; align-items: center; justify-content: center; font: 700 26px var(--body); }
+.ground-step strong { font-size: 19px; }
+.ground-step p { margin: 4px 0 0; color: var(--muted); font-size: 15.5px; }
+.ground-dots { display: flex; gap: 6px; justify-content: center; }
+.ground-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--line-strong); }
+.ground-dots span.on { background: var(--ink); }

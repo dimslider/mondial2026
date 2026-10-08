@@ -2621,8 +2621,7 @@ window.SERVICES = [
    "family-relations"
   ],
   "interests": [
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "במימון הסוכנות היהודית וקרנות תורמות",
@@ -2662,7 +2661,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "",
   "cost_notes": "העלות לא מפורטת באתר, לברר מול הארגון",
@@ -2697,7 +2696,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "",
   "cost_notes": "לפי דיווחים בתקשורת המטפלים מתנדבים והפעילות ממומנת מתרומות.",
@@ -2765,7 +2764,7 @@ window.SERVICES = [
   ],
   "interests": [
    "learning",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -2909,7 +2908,8 @@ window.SERVICES = [
   "cost": "",
   "cost_notes": "\"שניים שהם אחד\": ללא עלות, חוץ מדמי רצינות של 300 ש\"ח לזוג, ומחייבת הגעה לכל המפגשים (ימי רביעי בערב). עלות \"שבים\" לא מפורסמת באתר.",
   "regions": [
-   "jerusalem"
+   "jerusalem",
+   "shfela"
   ],
   "location": "ורטיגו כפר אמנות אקולוגי, קיבוץ נתיב הל\"ה (אפשר איסוף מתחנת הרכבת בית שמש לתוכנית \"שבים\")",
   "phone": "02-9900235",
@@ -3072,7 +3072,7 @@ window.SERVICES = [
   ],
   "interests": [
    "learning",
-   "travel"
+   "nature"
   ],
   "cost": "partial",
   "cost_notes": "חלק מההטבות לחברים שמשלמים דמי חבר שנתיים",
@@ -3888,7 +3888,7 @@ window.SERVICES = [
    "financial"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "ההצטרפות וכרטיס האשראי של המועדון בחינם; ההטבות מסובסדות",
@@ -5817,7 +5817,8 @@ window.SERVICES = [
   "cost": "mod-funded",
   "cost_notes": "לפי האתר, ללא תשלום לזכאי אגף השיקום; בפיקוח משרד הבריאות",
   "regions": [
-   "jerusalem"
+   "jerusalem",
+   "shfela"
   ],
   "location": "קיבוץ מטע, סמוך לצור הדסה ובית שמש",
   "phone": "",
@@ -5889,7 +5890,8 @@ window.SERVICES = [
   "cost": "mod-funded",
   "cost_notes": "השהות ללא עלות, במימון אגף השיקום. מי שבתהליך הכרה צריכים אישור הכרה עקרוני.",
   "regions": [
-   "center"
+   "center",
+   "shfela"
   ],
   "location": "רחובות",
   "phone": "074-7556155",
@@ -6457,7 +6459,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -6797,6 +6799,7 @@ window.SERVICES = [
   "cost_notes": "העלות לא מפורטת, יש לברר מול המרפאה",
   "regions": [
    "center",
+   "shfela",
    "online"
   ],
   "location": "עזריאלי מודיעין, מרכז B, רחוב הרכבת 13, מודיעין",
@@ -7299,7 +7302,8 @@ window.SERVICES = [
   "cost": "partial",
   "cost_notes": "חוות החוסן: מימון מלא של אגף השיקום למי שמתאים/ה, ולמי שאינו מוכר/ת יש מסלול בסבסוד הקרן. את העלות של שאר הטיפולים יש לברר.",
   "regions": [
-   "jerusalem"
+   "jerusalem",
+   "shfela"
   ],
   "location": "גבעת שמש (בית שמש)",
   "phone": "053-3773070",
@@ -7552,8 +7556,7 @@ window.SERVICES = [
   ],
   "interests": [
    "extreme",
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -7626,8 +7629,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "סיורי הטבע לקהל הרחב בסופי שבוע וחגים ללא עלות; לגבי הפעילות למילואימניקים, לברר",
@@ -7663,8 +7665,7 @@ window.SERVICES = [
   ],
   "interests": [
    "extreme",
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "ממומן על ידי אגודת הידידים ותורמים",
@@ -7736,8 +7737,7 @@ window.SERVICES = [
   ],
   "interests": [
    "extreme",
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -7772,8 +7772,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "paid",
   "cost_notes": "לפי דף המסע ההשתתפות בתשלום",
@@ -7810,8 +7809,7 @@ window.SERVICES = [
   ],
   "interests": [
    "learning",
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -7847,7 +7845,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -7881,7 +7879,7 @@ window.SERVICES = [
    "physical-disability"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "",
   "cost_notes": "",
@@ -8034,8 +8032,8 @@ window.SERVICES = [
   ],
   "interests": [
    "learning",
+   "nature",
    "sport",
-   "travel",
    "volunteering"
   ],
   "cost": "free",
@@ -8072,8 +8070,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "לחברי ארגון נכי צה\"ל",
@@ -8226,8 +8223,7 @@ window.SERVICES = [
    "physical-disability"
   ],
   "interests": [
-   "nature",
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -8313,6 +8309,7 @@ window.SERVICES = [
   "cost_notes": "לפי אתר העמותה, התוכניות ניתנות ללא עלות למשתתפים ולמשפחות.",
   "regions": [
    "jerusalem",
+   "shfela",
    "nationwide",
    "south"
   ],
@@ -8411,7 +8408,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "כדאי לברר את העלות מול מטיב",
@@ -8481,7 +8478,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [
-   "travel"
+   "nature"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -10733,8 +10730,8 @@ window.SERVICES = [
   ],
   "interests": [
    "fitness",
-   "sport",
-   "travel"
+   "nature",
+   "sport"
   ],
   "cost": "free",
   "cost_notes": "",
@@ -10783,6 +10780,7 @@ window.SERVICES = [
   "cost_notes": "ההשתתפות בחינם; צריך אישור רפואי לפעילות ספורטיבית",
   "regions": [
    "center",
+   "shfela",
    "jerusalem",
    "judea-samaria",
    "north",
