@@ -154,6 +154,21 @@
     // כאב כרוני: ריצה ואקסטרים בלי התאמה לכאב הם לא ההמלצה הראשונה
     if (p.difficulties.includes("chronic-pain") && !arr(s.difficulties).some(x => x === "chronic-pain" || x === "physical-disability") &&
       arr(s.interests).length && arr(s.interests).every(x => ["fitness", "extreme", "sport"].includes(x))) sc -= 2;
+    // תקופת השירות: תוכנית למלחמה הנוכחית פחות מתאימה לוותיק של לבנון, ולהפך
+    if (p.era && s.era) {
+      if (s.era === "older") sc += p.era === "older" ? 4 : p.era === "iron-swords" ? -3 : 0;
+      if (s.era === "iron-swords") sc += p.era === "iron-swords" ? 1 : p.era === "older" ? -4 : -2;
+      if (s.era === "iron-swords-desc" && p.era === "older") sc -= 1;
+      if (s.era === "older" && p.era === "older") why.push("ללוחמים מהתקופה שלך");
+    }
+    // גיל: טווח שכתוב בשירות, ותוכניות לצעירים / לסטודנטים
+    const AGE_MID = { u30: 25, "30-45": 38, "45-60": 52, "60+": 65 };
+    if (p.age) {
+      const a = AGE_MID[p.age];
+      if (arr(s.age).length && (a < s.age[0] - 3 || a > s.age[1] + 3)) sc -= 4;
+      if ((p.age === "45-60" || p.age === "60+") && /צעירים|סטודנטים|מלגות|לימודים אקדמיים|לחזור ללימודים/.test(s.name)) sc -= 2;
+      if (p.age === "60+" && arr(s.interests).includes("extreme")) sc -= 2;
+    }
     if (s.confidence === "low") sc -= 1;
     if (starred(s)) { sc += 1; why.push("מומלץ בקהילה"); }
     return { sc, why };
@@ -165,7 +180,9 @@
     const unrecognized = st.some(x => x === "mod-in-process" || x === "not-recognized") ||
       (!st.includes("mod-recognized") && st.some(x => ["police", "combat-soldiers", "reservists", "security-forces"].includes(x)) &&
         p.difficulties.some(x => ["ptsd", "tbi", "amputation", "physical-disability"].includes(x)));
-    return unrecognized && !p.difficulties.includes("bureaucracy") ? Object.assign({}, p, { difficulties: [...p.difficulties, "bureaucracy"], implied: true }) : p;
+    // מוכר שהמצב שלו החמיר: צריך בדיקה מחדש (החמרה), כלומר שוב ליווי בזכויות
+    const worse = p.worsened === true && st.includes("mod-recognized");
+    return (unrecognized || worse) && !p.difficulties.includes("bureaucracy") ? Object.assign({}, p, { difficulties: [...p.difficulties, "bureaucracy"], implied: true }) : p;
   }
   function match(p, opts = {}) {
     p = withImplied(p);
@@ -178,6 +195,8 @@
       .filter(s => eligible(s, p.statuses))
       .filter(s => !p.statuses.length || recognized || !needsRecognition(s))
       .filter(s => !narrowGroup(s))
+      // שירות למי שעוד לא מוכר (כתוב בשם) לא מתאים למי שכבר מוכר
+      .filter(s => !recognized || !/שאינם מוכרים|שאינן מוכרות|לא מוכרים|ללא הכרה/.test(s.name))
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
       .filter(s => !free || !["subsidized", "partial", "paid"].includes(s.cost))
       // אזור: מה שמקומי ורחוק לא מוצג (ארצי ואונליין תמיד כן)
@@ -214,16 +233,17 @@
       take(best(r => r.s.category === "mental-health",
         r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
           (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) -
-          (/בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0)));   // מסגרת אינטנסיבית היא לא הצעד הראשון
+          (/בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0) - (/רפורמ|המלצות ועדת|מדריך|פורטל/.test(r.s.name) ? 5 : 0)));   // מסגרת אינטנסיבית היא לא הצעד הראשון
     // ליווי בהכרה: עדיפות לליווי אישי ולמה שמומלץ בקהילה, על פני פורטל מידע
-    if (p.implied || p.statuses.some(x => x === "mod-in-process" || x === "not-recognized"))
+    if (p.implied || p.worsened || p.statuses.some(x => x === "mod-in-process" || x === "not-recognized"))
       take(best(r => r.s.category === "rights-legal" && arr(r.s.difficulties).includes("bureaucracy"),
-        r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0)));
+        r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0) +
+          (p.worsened ? (/החמרה|בדיקה מחדש/.test(r.s.name) ? 10 : /הגשת בקשה להכרה|מסלול ירוק|מסלול מהיר/.test(r.s.name) ? -6 : 0) : 0)));
+    // בדידות: קבוצת עמיתים
+    if (p.difficulties.includes("loneliness")) take(best(r => r.s.category === "peer-support" && arr(r.s.difficulties).includes("loneliness") || (p.era === "older" && r.s.era === "older")));
     // תחום עניין: שירות שזה עיקרו (ים לגלישה, טבע לחווה), לא שירות שמזכיר את זה בדרך אגב
     if (p.interests.length)
       take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))));
-    // בדידות: קבוצת עמיתים
-    if (p.difficulties.includes("loneliness")) take(best(r => r.s.category === "peer-support" && arr(r.s.difficulties).includes("loneliness")));
     for (const r of res) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
     for (const r of res) take(r);
     return first;
@@ -475,6 +495,7 @@
               ${Object.keys(st.opts).filter(k => !(st.key === "regions" && (k === "nationwide" || k === "online")))
                 .map(k => chip(st.key, k, st.opts[k], p[st.key].includes(k))).join("")}
             </div>
+            ${st.key === "statuses" ? `<div id="followups"></div>` : ""}
             ${last ? `
               <fieldset class="cost-pref">
                 <legend>עלות</legend>
@@ -490,7 +511,28 @@
           </form>
         </section>`;
       const form = document.getElementById("step-form");
-      const collect = () => { p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value); };
+      // שאלות המשך קצרות, רק כשהן רלוונטיות: החמרה (למוכרים), תקופת השירות הקרבי (ללוחמים ומילואים), גיל (לא חובה)
+      const fu = document.getElementById("followups");
+      const radioRow = (name, legend, opts, cur) => `<fieldset class="followup"><legend>${legend}</legend><div class="chips small">${
+        Object.entries(opts).map(([k, l]) => `<label class="chip"><input type="radio" name="${name}" value="${k}" ${cur === k ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>`;
+      const drawFollow = () => {
+        if (!fu) return;
+        const on = k => !!form.querySelector(`input[name="statuses"][value="${k}"]:checked`);
+        fu.innerHTML =
+          (on("mod-recognized") ? radioRow("worsened", "ומאז ההכרה?", { yes: "המצב החמיר", no: "פחות או יותר אותו דבר" }, p.worsened === true ? "yes" : p.worsened === false ? "no" : "") : "") +
+          (on("combat-soldiers") || on("reservists") ? radioRow("era", "מתי היה עיקר השירות הקרבי?", { "iron-swords": "במלחמה הנוכחית, מאז 2023", "2000s": "בין 2000 ל-2023", older: "לפני 2000 (לבנון, רצועת הביטחון, יום כיפור)" }, p.era) : "") +
+          radioRow("age", "גיל (לא חובה)", { u30: "עד 30", "30-45": "30 עד 45", "45-60": "45 עד 60", "60+": "60 ומעלה" }, p.age);
+      };
+      if (fu) { drawFollow(); form.addEventListener("change", e => { if (e.target.name === "statuses") drawFollow(); }); }
+      const collect = () => {
+        p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value);
+        if (st.key !== "statuses") return;
+        const val = n => (form.querySelector(`input[name="${n}"]:checked`) || {}).value || null;
+        const w = val("worsened");
+        p.worsened = p.statuses.includes("mod-recognized") && w ? w === "yes" : null;
+        p.era = p.statuses.some(x => x === "combat-soldiers" || x === "reservists") ? val("era") : null;
+        p.age = val("age");
+      };
       const next = () => {
         if (last) {
           const mc = form.querySelector('input[name="maxCost"]:checked');

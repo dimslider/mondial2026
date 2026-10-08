@@ -34,7 +34,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-3f6563",
@@ -69,7 +71,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "clalit-co-il-0710f5",
@@ -104,7 +108,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "leumit-co-il-2fd3d7",
@@ -138,7 +144,12 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": [
+   18,
+   120
+  ]
  },
  {
   "id": "shikum-mod-gov-il-cd9956",
@@ -180,7 +191,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-97f497",
@@ -212,7 +225,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-cbf1f7",
@@ -248,7 +263,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "maccabi4u-co-il-f6376e",
@@ -283,7 +300,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-b3abee",
@@ -320,7 +339,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "natal-org-il-e49db4",
@@ -363,7 +384,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "sahar-org-il-50ed06",
@@ -407,7 +430,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "eran-org-il-4f39e6",
@@ -452,7 +477,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "1202-org-il-6b5f24",
@@ -487,7 +514,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "nbn-org-il-28c565",
@@ -520,7 +549,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-9d4141",
@@ -555,7 +586,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-7acfcf",
@@ -594,7 +627,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-d3d9dc",
@@ -629,7 +664,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 5,
   "community_note": "בית חם ופעיל לפצועים",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-d4ba17",
@@ -666,7 +703,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "afikimdogs-co-il-195ca4",
@@ -704,7 +743,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "havayot-center-co-il-f2df8f",
@@ -742,7 +783,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israelguidedog-org-il-49be3a",
@@ -780,7 +823,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israelguidedog-org-il-0cf4e4",
@@ -816,7 +861,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-3c3137",
@@ -854,7 +901,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "havayot-center-co-il-203f04",
@@ -892,7 +941,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "photoisrael-org-b11f66",
@@ -928,7 +979,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "sos-israel-org-fa1518",
@@ -964,7 +1017,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "icm-org-il-5c59e7",
@@ -1003,7 +1058,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "vertigo-org-il-18d606",
@@ -1039,7 +1096,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-2f4310",
@@ -1081,7 +1140,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "projecthed-org-3fc558",
@@ -1118,7 +1179,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-b68995",
@@ -1158,7 +1221,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 32,
   "community_note": "ייעוץ זכויות ועורך דין ללא עלות, חוגים, ספורט וטיפולים",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "levechad-org-73dd3b",
@@ -1193,7 +1258,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "levechad-org-fe21c5",
@@ -1228,7 +1295,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "bankhapoalim-co-il-b193f3",
@@ -1262,7 +1331,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "iron-swords-desc",
+  "age": []
  },
  {
   "id": "s-6de9e7",
@@ -1295,7 +1366,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "18xagentics-com-7710a1",
@@ -1329,7 +1402,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-3a9f3b",
@@ -1362,7 +1437,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "jobify360-co-il-c7b680",
@@ -1396,7 +1473,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "miluimtech-com-06d5ab",
@@ -1429,7 +1508,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "natal-org-il-4f510a",
@@ -1461,7 +1542,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "biu-ac-il-90555b",
@@ -1494,7 +1577,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-c2788c",
@@ -1531,7 +1616,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "sites-biu-ac-il-be7d34",
@@ -1567,7 +1654,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "innovationisrael-org-il-726b58",
@@ -1601,7 +1690,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "hachvana-mod-gov-il-543dde",
@@ -1634,7 +1725,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "innovationisrael-org-il-c39e04",
@@ -1668,7 +1761,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-86fc20",
@@ -1701,7 +1796,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-439179",
@@ -1734,7 +1831,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "yahalomfoundation-com-52bbb6",
@@ -1766,7 +1865,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-457af3",
@@ -1804,7 +1905,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-7562ff",
@@ -1839,7 +1942,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-6266bf",
@@ -1871,7 +1976,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "mishpahot-hantzaha-mod-g-cf3a6e",
@@ -1905,7 +2012,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "fidf-org-46d014",
@@ -1938,7 +2047,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-4542fc",
@@ -1971,7 +2082,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "che-org-il-1fcb14",
@@ -2005,7 +2118,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "hachvana-mod-gov-il-0463e0",
@@ -2038,7 +2153,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "hachvana-mod-gov-il-712a71",
@@ -2072,7 +2189,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-924578",
@@ -2104,7 +2223,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "jobify360-co-il-aeb545",
@@ -2140,7 +2261,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-410036",
@@ -2174,7 +2297,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-ce9f44",
@@ -2215,7 +2340,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 5,
   "community_note": "קורסים ותחביבים לפני שיקום מקצועי",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "biu-ac-il-9c9345",
@@ -2252,7 +2379,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-6810eb",
@@ -2286,7 +2415,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "restartglobal-org-ffbd34",
@@ -2322,7 +2453,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 3,
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-090b89",
@@ -2357,7 +2490,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-6b9358",
@@ -2396,7 +2531,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-31a611",
@@ -2429,7 +2566,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "perach-org-il-89242c",
@@ -2462,7 +2601,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "innovationisrael-org-il-b58bf5",
@@ -2496,7 +2637,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "earlystarters-org-il-916d67",
@@ -2527,7 +2670,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "jewishagency-org-8adf2f",
@@ -2561,7 +2706,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "onefamilytogether-org-7a58af",
@@ -2601,7 +2748,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "ourfamilyfirst-org-f4ba9d",
@@ -2636,7 +2785,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-abf8ab",
@@ -2668,7 +2819,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "idfwo-org-fa0927",
@@ -2704,7 +2857,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "girlfriendsidf-org-il-75df8d",
@@ -2738,7 +2893,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-45db30",
@@ -2774,7 +2931,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-91049f",
@@ -2808,7 +2967,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "vertigo-org-il-5c029c",
@@ -2844,7 +3005,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "healingspace-co-il-23525c",
@@ -2879,7 +3042,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "ourfamilyfirst-org-a6e120",
@@ -2911,7 +3076,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-7dfee1",
@@ -2946,7 +3113,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords-desc",
+  "age": []
  },
  {
   "id": "btl-gov-il-eeaba8",
@@ -2978,7 +3147,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "yadlabanim-org-14efc9",
@@ -3013,7 +3184,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "girlfriendsidf-org-il-3f0e3f",
@@ -3045,7 +3218,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-512a0e",
@@ -3079,7 +3254,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "idfwo-org-1299a0",
@@ -3112,7 +3289,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "maglan-org-cb4f5d",
@@ -3148,7 +3327,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "natal-org-il-f3e9cb",
@@ -3184,7 +3365,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-a0f475",
@@ -3217,7 +3400,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "idfwo-org-c2f7eb",
@@ -3251,7 +3436,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-11279f",
@@ -3283,7 +3470,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-978de9",
@@ -3314,7 +3503,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "yadlabanim-org-dd7452",
@@ -3349,7 +3540,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "tzalash-org-2f0308",
@@ -3383,7 +3576,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "aguda-co-il-51eff6",
@@ -3416,7 +3611,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "mishpahot-hantzaha-mod-g-54009d",
@@ -3450,7 +3647,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-b5c953",
@@ -3482,7 +3681,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "mishpahot-hantzaha-mod-g-ac4a8b",
@@ -3514,7 +3715,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-cf90e9",
@@ -3546,7 +3749,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "jewishagency-org-2acf93",
@@ -3579,7 +3784,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "yasharlachayal-org-c8a54e",
@@ -3616,7 +3823,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-66adbb",
@@ -3653,7 +3862,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-7e5880",
@@ -3689,7 +3900,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-76f23f",
@@ -3729,7 +3942,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "s-62e3dc",
@@ -3761,7 +3976,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "behatsdaa-org-il-b27ba7",
@@ -3794,7 +4011,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-52f696",
@@ -3826,7 +4045,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-26de9b",
@@ -3858,7 +4079,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "paamonim-org-90031a",
@@ -3890,7 +4113,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-757f5b",
@@ -3924,7 +4149,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-b92b34",
@@ -3957,7 +4184,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israelgives-org-625fcb",
@@ -3994,7 +4223,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-677d83",
@@ -4025,7 +4256,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-e8adff",
@@ -4060,7 +4293,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "paamonim-org-9e02b4",
@@ -4098,7 +4333,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "ogen-org-9f492f",
@@ -4129,7 +4366,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "miluim-idf-il-c6491b",
@@ -4163,7 +4402,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "ogen-org-e122c3",
@@ -4194,7 +4435,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "michaellevinlonesoldier--303e34",
@@ -4228,7 +4471,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-60a11f",
@@ -4259,7 +4504,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-efa6f3",
@@ -4291,7 +4538,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-bd7788",
@@ -4325,7 +4574,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-b9b962",
@@ -4359,7 +4610,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-bc4772",
@@ -4395,7 +4648,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-e019e4",
@@ -4426,7 +4681,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-f2f87a",
@@ -4458,7 +4715,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-4e3d8f",
@@ -4492,7 +4751,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-da7821",
@@ -4524,7 +4785,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-bfb545",
@@ -4565,7 +4828,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "restartglobal-org-5ee999",
@@ -4600,7 +4865,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "beitissie-org-il-8ef365",
@@ -4638,7 +4905,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "hospitals-clalit-co-il-2b9fa3",
@@ -4677,7 +4946,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "belev-echad-org-15cdf2",
@@ -4718,7 +4989,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "b-k-inz-org-il-68f1d2",
@@ -4756,7 +5029,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikumil-org-il-5e31b1",
@@ -4795,7 +5070,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-9a6f3c",
@@ -4827,7 +5104,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-e03e60",
@@ -4858,7 +5137,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-76e4e8",
@@ -4893,7 +5174,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "yadsarah-org-6c5889",
@@ -4927,7 +5210,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-e680e9",
@@ -4965,7 +5250,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-d65cd7",
@@ -5004,7 +5291,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "tasmc-org-il-d5ca4c",
@@ -5039,7 +5328,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-b0d63b",
@@ -5077,7 +5368,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-0fc55e",
@@ -5115,7 +5408,12 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": [
+   18,
+   120
+  ]
  },
  {
   "id": "adi-rehab-org-6d1a96",
@@ -5156,7 +5454,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-352bd3",
@@ -5188,7 +5488,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-fee0a6",
@@ -5224,7 +5526,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "reuth-org-il-545599",
@@ -5259,7 +5563,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israelparasport-org-298d3c",
@@ -5299,7 +5605,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-b595ef",
@@ -5332,7 +5640,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-2244d7",
@@ -5364,7 +5674,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "seven-plus-org-il-435acd",
@@ -5401,7 +5713,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "anatta-org-il-e58b94",
@@ -5436,7 +5750,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "ica-org-il-1ca6c6",
@@ -5473,7 +5789,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inheal-org-251184",
@@ -5508,7 +5826,12 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": [
+   24,
+   120
+  ]
  },
  {
   "id": "clinicaltrials-gov-1ea216",
@@ -5545,7 +5868,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 9,
   "community_note": "רבים קיבלו החזר כטיפול משלים; לבדוק מראש מול רכז/ת השיקום",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "rising-heroes-org-2a53a6",
@@ -5583,7 +5908,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": 3,
   "community_note": "מומלצת למי שמחפש משלחת ריפוי",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "barak-188-com-d961b3",
@@ -5614,7 +5941,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-fd2a9b",
@@ -5651,7 +5980,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "bait-bateva-co-il-c511d0",
@@ -5691,7 +6022,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-a17284",
@@ -5724,7 +6057,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "enosh-org-il-cacc2f",
@@ -5764,7 +6099,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "maccabi4u-co-il-f97ae5",
@@ -5800,7 +6137,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-680532",
@@ -5834,7 +6173,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-6efac0",
@@ -5874,7 +6215,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 8,
   "community_note": "כדאי לפנות סמוך לאירוע",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "icc-haifa-ac-il-aa368e",
@@ -5909,7 +6252,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israeltraumacoalition-or-c9ab2a",
@@ -5946,7 +6291,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "socsci4-tau-ac-il-ff99e5",
@@ -5983,7 +6330,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "zaka-org-il-aaf3bf",
@@ -6016,7 +6365,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "1221-org-il-32fc9e",
@@ -6048,7 +6399,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shual-f-org-il-f53d53",
@@ -6080,7 +6433,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-f802c3",
@@ -6118,7 +6473,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "icc-haifa-ac-il-f7c8d4",
@@ -6152,7 +6509,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-61bb79",
@@ -6193,7 +6552,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-ae2f06",
@@ -6230,7 +6591,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "meuhedet-co-il-ace6c3",
@@ -6266,7 +6629,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-0bfef9",
@@ -6306,7 +6671,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "669-org-il-a11cf6",
@@ -6340,7 +6707,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "metiv-org-62ab60",
@@ -6378,7 +6747,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-ca1087",
@@ -6418,7 +6789,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "tasmc-org-il-e92888",
@@ -6456,7 +6829,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "lonesoldiercenter-com-6cbf32",
@@ -6494,7 +6869,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-800178",
@@ -6529,7 +6906,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-fd7702",
@@ -6564,7 +6943,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "me-health-gov-il-cc17e9",
@@ -6602,7 +6983,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "cohenveteransnetwork-org-fe5188",
@@ -6642,7 +7025,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-d60045",
@@ -6676,7 +7061,12 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": [
+   24,
+   120
+  ]
  },
  {
   "id": "natal-org-il-e05ae2",
@@ -6718,7 +7108,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "metiv-org-fd5b53",
@@ -6753,7 +7145,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "clinicaltrials-gov-b9eb82",
@@ -6787,7 +7181,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israel-stellacenter-com-356694",
@@ -6827,7 +7223,12 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": [
+   18,
+   120
+  ]
  },
  {
   "id": "s-bfaaca",
@@ -6862,7 +7263,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "ezermizion-org-f09662",
@@ -6896,7 +7299,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "yahalomfoundation-com-3e8eec",
@@ -6929,7 +7334,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "emdr-org-il-b37aa3",
@@ -6963,7 +7370,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "amcha-org-aa11a3",
@@ -6999,7 +7408,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "crossroadsjerusalem-org-c183e3",
@@ -7034,7 +7445,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "crossroadsjerusalem-org-4c6699",
@@ -7067,7 +7480,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "regaim-home-com-105a7e",
@@ -7108,7 +7523,12 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": [
+   18,
+   120
+  ]
  },
  {
   "id": "retorno-org-il-a0c306",
@@ -7144,7 +7564,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "retorno-org-df937f",
@@ -7187,7 +7609,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-d71edb",
@@ -7221,7 +7645,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 5,
   "community_note": "כדאי לקבל אישור למטפל מראש",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-1a9249",
@@ -7257,7 +7683,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "drorprogram-org-il-4ac6d6",
@@ -7295,7 +7723,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "apps-apple-com-abd84b",
@@ -7335,7 +7765,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "orev-family-com-ae7fc4",
@@ -7366,7 +7798,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-73e470",
@@ -7404,7 +7838,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "bshvil-org-b71303",
@@ -7442,7 +7878,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "natureisrael-org-2582ca",
@@ -7477,7 +7915,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-698f2c",
@@ -7513,7 +7953,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "namer-org-il-15a309",
@@ -7548,7 +7990,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "belev-echad-org-ba6e96",
@@ -7584,7 +8028,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "egoz-org-il-5ba6c7",
@@ -7621,7 +8067,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "yadlashiryon-com-758693",
@@ -7655,7 +8103,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-94ba7f",
@@ -7691,7 +8141,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "jnf-org-8fe538",
@@ -7727,7 +8179,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inheal-org-df6ace",
@@ -7760,7 +8214,12 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": [
+   24,
+   120
+  ]
  },
  {
   "id": "trauma4good-org-8d93cb",
@@ -7798,7 +8257,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "achimlachaim-org-dd5002",
@@ -7843,7 +8304,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-7a3d4b",
@@ -7880,7 +8343,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "inz-org-il-a865b4",
@@ -7920,7 +8385,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 39,
   "community_note": "עוזרים לקדם פניות מול האגף, ייעוץ, הלוואות והנחות",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "achimlachaim-org-37cae0",
@@ -7956,7 +8423,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "ha-gesher-co-il-81299b",
@@ -7996,7 +8465,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "tribeofnova-com-906b39",
@@ -8035,7 +8506,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "israelh2h-org-e1caeb",
@@ -8080,7 +8553,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "lonesoldiercenter-com-f9e0b1",
@@ -8114,7 +8589,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "yamas-org-il-50e4ef",
@@ -8146,7 +8623,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "metiv-org-fcc03b",
@@ -8182,7 +8661,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "maglan-org-216650",
@@ -8217,7 +8698,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "achimlachaim-org-a71e60",
@@ -8252,7 +8735,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "nbn-org-il-61e022",
@@ -8287,7 +8772,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "duvdevanfoundation-org-d09969",
@@ -8329,7 +8816,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-78adbb",
@@ -8365,7 +8854,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-d5816c",
@@ -8400,7 +8891,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "kehilat-or-org-il-d0f0b2",
@@ -8438,7 +8931,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "thenextstep-org-il-ade752",
@@ -8479,7 +8974,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "atalef-com-01967e",
@@ -8519,7 +9016,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "tribeofnova-com-159d35",
@@ -8557,7 +9056,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "helptsd-org-a24290",
@@ -8592,7 +9093,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-19a8a2",
@@ -8628,7 +9131,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "kavlevanon-org-il-4cf1f6",
@@ -8663,7 +9168,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "older",
+  "age": []
  },
  {
   "id": "dannysfarm-org-il-0ca12f",
@@ -8702,7 +9209,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-016bf1",
@@ -8745,7 +9254,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "vertigo-org-il-a2394e",
@@ -8786,7 +9297,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "back2life-org-il-ac9911",
@@ -8831,7 +9344,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "unitywarriors-org-f03450",
@@ -8872,7 +9387,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "havatrom-co-il-751df8",
@@ -8909,7 +9426,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords-desc",
+  "age": []
  },
  {
   "id": "rimon-farm-org-il-c84ffb",
@@ -8951,7 +9470,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "rimon-farm-org-il-b2586a",
@@ -8989,7 +9510,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-ae6b61",
@@ -9028,7 +9551,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords-desc",
+  "age": []
  },
  {
   "id": "kfarsarah-com-b02de6",
@@ -9068,7 +9593,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "adi-rehab-org-5ac2f1",
@@ -9104,7 +9631,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-40b69b",
@@ -9138,7 +9667,46 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
+ },
+ {
+  "id": "s-dc02bb",
+  "name": "בקשה להחמרת מצב (בדיקה מחדש) – אגף השיקום",
+  "category": "rights-legal",
+  "description": "מי שכבר מוכר באגף השיקום ומצבו החמיר יכול לבקש בדיקה מחדש של אחוזי הנכות. מגישים טופס 'בדיקה מחדש' עם מסמכים רפואיים עדכניים, ומוזמנים לוועדה רפואית. אפשר להגיש בדרך כלל חצי שנה אחרי הוועדה האחרונה שדנה באותה פגיעה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "chronic-pain",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ההגשה ללא עלות. אפשר להיעזר בליווי חינם (למשל מרכז 'בידיים טובות' או הקליניקה באונו).",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.kolzchut.org.il/he/הכרה_בנכות_לחיילי_חובה_ומילואים_בצה%22ל_ובכוחות_הביטחון",
+  "how_to_apply": "מבקשים מקצין התגמולים טופס 'בדיקה מחדש', מצרפים מסמכים רפואיים שמראים את ההחמרה, ומגישים לאגף השיקום.",
+  "source_url": "https://www.mako.co.il/finances-law/law-general/Article-105f6f0b46fad91027.htm",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-22016b",
@@ -9178,7 +9746,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "histadrut-org-il-c2f25e",
@@ -9210,7 +9780,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-855b96",
@@ -9245,7 +9817,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-4659a6",
@@ -9281,7 +9855,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-12749c",
@@ -9313,7 +9889,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "ono-ac-il-68a91e",
@@ -9345,7 +9923,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "ono-ac-il-ad829a",
@@ -9381,7 +9961,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "miluimnikim-org-069933",
@@ -9415,7 +9997,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-3b7077",
@@ -9449,7 +10033,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-d8fd54",
@@ -9486,7 +10072,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-ecf25e",
@@ -9518,7 +10106,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-253d8d",
@@ -9553,7 +10143,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "lohamim-org-il-77ef22",
@@ -9588,7 +10180,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "yamas-org-il-4a7d0f",
@@ -9623,7 +10217,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-ff9abe",
@@ -9657,7 +10253,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "miluim-helper-com-23803d",
@@ -9690,7 +10288,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-c3ea9e",
@@ -9726,7 +10326,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-45dfba",
@@ -9763,7 +10365,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": 16,
   "community_note": "ממליצים לפנות אליהם לפני ועדה רפואית",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-5af3f4",
@@ -9796,7 +10400,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "mod-gov-il-7491f8",
@@ -9828,7 +10434,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-9993b4",
@@ -9860,7 +10468,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "api-miluim-idf-il-6f6e29",
@@ -9890,7 +10500,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-038b6f",
@@ -9924,7 +10536,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-368e37",
@@ -9958,7 +10572,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "israelbar-org-il-ddeda0",
@@ -9992,7 +10608,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "btl-gov-il-5fe861",
@@ -10026,7 +10644,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "magenisrael-org-il-6d4d62",
@@ -10060,7 +10680,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-app-ca9a4f",
@@ -10097,7 +10719,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-72767d",
@@ -10134,7 +10758,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "etgarim-org-7af9a1",
@@ -10180,7 +10806,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "isad-org-il-f6a52d",
@@ -10217,7 +10845,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "iron-swords-desc",
+  "age": []
  },
  {
   "id": "israelparasport-org-9f2f5c",
@@ -10262,7 +10892,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "thenextstep-org-il-e50f8a",
@@ -10301,7 +10933,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "adi-rehab-org-8c4aee",
@@ -10338,7 +10972,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-b5765e",
@@ -10377,7 +11013,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "invictusgamesfoundation--ee5b32",
@@ -10413,7 +11051,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "etgarim-org-3d689f",
@@ -10453,7 +11093,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "iron-swords",
+  "age": []
  },
  {
   "id": "natal-org-il-aae858",
@@ -10501,7 +11143,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "lohamim-org-il-1df527",
@@ -10538,7 +11182,9 @@ window.SERVICES = [
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
-  "verified_at": ""
+  "verified_at": "",
+  "era": "",
+  "age": []
  },
  {
   "id": "hagalsheli-co-il-225e7f",
@@ -10589,7 +11235,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "etgarim-org-ea7876",
@@ -10625,7 +11273,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "atalef-com-61908c",
@@ -10666,7 +11316,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikum-mod-gov-il-4f9c0b",
@@ -10702,7 +11354,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "yamtov-com-79f4ce",
@@ -10743,7 +11397,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "atalef-com-aadfe1",
@@ -10776,7 +11432,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "hagalsheli-co-il-369a45",
@@ -10818,7 +11476,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "zivneurim-org-2ae663",
@@ -10856,7 +11516,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "cmbm-israel-org-378fe3",
@@ -10893,7 +11555,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "brothersin-yoga-b85612",
@@ -10933,7 +11597,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "natal-org-il-8a483f",
@@ -10972,7 +11638,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "healingspace-co-il-0d251f",
@@ -11015,7 +11683,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "s-890574",
@@ -11050,7 +11720,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  },
  {
   "id": "brothersin-yoga-a89b1e",
@@ -11090,7 +11762,9 @@ window.SERVICES = [
   "reviewed_at": "2026-10-08",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-08"
+  "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
  },
  {
   "id": "shikumme-co-il-2c0e2a",
@@ -11128,6 +11802,8 @@ window.SERVICES = [
   "reviewed_at": "2026-10-07",
   "community_recs": "",
   "community_note": "",
-  "verified_at": "2026-10-07"
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
  }
 ];

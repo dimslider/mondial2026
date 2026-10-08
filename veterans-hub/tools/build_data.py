@@ -199,6 +199,20 @@ def main():
             kept.append(s)
         merged = kept
 
+    # תקופה וגיל, נגזרים מהטקסט: תוכנית שמיועדת רק ללוחמי המלחמה הנוכחית, או ללוחמי מלחמות קודמות; וטווח גילאים כשכתוב
+    IRON = re.compile(r"חרבות ברזל|מלחמת התקומה|7 באוקטובר|השבעה באוקטובר")
+    IRON_FOR = re.compile(r"(?:ל|של |עבור )(?:פצועי|לוחמי|משתתפי|משרתי המילואים ב|משרתי מילואים ב|נפגעי|מילואימניקים ב)(?:\s*מלחמת)?\s*(?:חרבות ברזל|התקומה)")
+    OLDER = re.compile(r"קו לבנון|לבנון הראשונה|רצועת הביטחון|יום כיפור|מלחמות קודמות|ותיקי מלחמות")
+    AGE = re.compile(r"(?:בגילאי|גילאי|לגילאי|בני|בנות|מגיל)\s*(\d{2})(?:\s*(?:[-–]|עד)\s*(\d{2}))?")
+    for s in merged:
+        text = s["name"] + " " + s.get("description", "")
+        # "iron-swords": בשם התוכנית (כנראה רק ללוחמי המלחמה הנוכחית). "iron-swords-desc": מוזכר בתיאור כקהל (חלש יותר).
+        s["era"] = ("older" if OLDER.search(s["name"]) else "iron-swords" if IRON.search(s["name"])
+                    else "iron-swords-desc" if IRON_FOR.search(s.get("description", "")) else "")
+        m = AGE.search(s.get("description", ""))
+        lo, hi = (int(m.group(1)), int(m.group(2) or 120)) if m else (0, 0)
+        s["age"] = [lo, hi] if m and 18 <= lo < hi else []
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(

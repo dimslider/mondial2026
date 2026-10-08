@@ -334,7 +334,13 @@
   "confidence": "high",
   "reviewed_at": "2026-10-08",
   "verified_at": "2026-10-08",
-  "source_url": "https://www.guardianbrother.org/"
+  "source_url": "https://www.guardianbrother.org/",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "not-recognized",
+   "reservists"
+  ]
  },
  "cohenveteransnetwork-org-fe5188": {
   "website": "https://www.cohenveteransnetwork.org/",

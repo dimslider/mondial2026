@@ -97,5 +97,35 @@
   "how_to_apply": "פונים לעמותת לוחמים לחיים דרך האתר.",
   "source_url": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
   "confidence": "medium"
+ },
+ {
+  "name": "בקשה להחמרת מצב (בדיקה מחדש) – אגף השיקום",
+  "category": "rights-legal",
+  "description": "מי שכבר מוכר באגף השיקום ומצבו החמיר יכול לבקש בדיקה מחדש של אחוזי הנכות. מגישים טופס 'בדיקה מחדש' עם מסמכים רפואיים עדכניים, ומוזמנים לוועדה רפואית. אפשר להגיש בדרך כלל חצי שנה אחרי הוועדה האחרונה שדנה באותה פגיעה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd",
+   "physical-disability",
+   "chronic-pain"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ההגשה ללא עלות. אפשר להיעזר בליווי חינם (למשל מרכז 'בידיים טובות' או הקליניקה באונו).",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.kolzchut.org.il/he/הכרה_בנכות_לחיילי_חובה_ומילואים_בצה%22ל_ובכוחות_הביטחון",
+  "how_to_apply": "מבקשים מקצין התגמולים טופס 'בדיקה מחדש', מצרפים מסמכים רפואיים שמראים את ההחמרה, ומגישים לאגף השיקום.",
+  "source_url": "https://www.mako.co.il/finances-law/law-general/Article-105f6f0b46fad91027.htm",
+  "confidence": "medium"
  }
 ]
