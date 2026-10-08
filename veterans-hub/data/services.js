@@ -2374,7 +2374,8 @@ window.SERVICES = [
   "difficulties": [
    "employment",
    "physical-disability",
-   "ptsd"
+   "ptsd",
+   "tbi"
   ],
   "interests": [
    "learning",
@@ -2926,7 +2927,8 @@ window.SERVICES = [
   "difficulties": [
    "anxiety",
    "family-relations",
-   "ptsd"
+   "ptsd",
+   "tbi"
   ],
   "interests": [],
   "cost": "mod-funded",
@@ -4764,7 +4766,9 @@ window.SERVICES = [
   "provider_type": "ngo",
   "eligibility": [
    "civilians",
+   "combat-soldiers",
    "mod-recognized",
+   "reservists",
    "security-forces",
    "terror-victims"
   ],
@@ -5817,7 +5821,8 @@ window.SERVICES = [
   "cost": "mod-funded",
   "cost_notes": "ללא עלות, כחלק מהמעטפת של אגף השיקום. לא צריך הפניה מהאגף.",
   "regions": [
-   "center"
+   "center",
+   "haifa"
   ],
   "location": "המרכז הרפואי שיבא, תל השומר, רמת גן",
   "phone": "052-6669512",
@@ -6086,6 +6091,7 @@ window.SERVICES = [
   "eligibility": [
    "combat-soldiers",
    "mod-in-process",
+   "police",
    "reservists"
   ],
   "difficulties": [
@@ -7298,7 +7304,6 @@ window.SERVICES = [
   "description": "אפליקציה של משרד הביטחון לחיילים משוחררים ולמילואימניקים ממלחמת 'חרבות ברזל'. מקבלים ארנק של 12,000 'מטבעות עמית' להזמנת סדנאות, אימונים וטיפולים באזור המגורים: קבוצות ריצה, פילאטיס, יוגה, גלישה וחתירה, רפואה משלימה (שיאצו, עיסוי, דיקור) וסדנאות בישול ונגרות. יש גם תרגול עצמי להפחתת לחץ וחרדה, שאלון בדיקה עצמית למי ששירת במלחמה, ובמידת הצורך עד 12 טיפולים פסיכולוגיים אישיים או זוגיים.",
   "provider_type": "government",
   "eligibility": [
-   "combat-soldiers",
    "reservists"
   ],
   "difficulties": [
@@ -7630,7 +7635,7 @@ window.SERVICES = [
   ],
   "difficulties": [
    "loneliness",
-   "physical-disability"
+   "ptsd"
   ],
   "interests": [
    "nature"
@@ -8293,7 +8298,6 @@ window.SERVICES = [
   "eligibility": [
    "combat-soldiers",
    "families",
-   "mod-in-process",
    "mod-recognized",
    "reservists"
   ],
@@ -8406,8 +8410,10 @@ window.SERVICES = [
   "provider_type": "ngo",
   "eligibility": [
    "civilians",
+   "combat-soldiers",
    "families",
    "mod-recognized",
+   "reservists",
    "terror-victims"
   ],
   "difficulties": [
@@ -8633,6 +8639,7 @@ window.SERVICES = [
   "eligibility": [
    "combat-soldiers",
    "mod-in-process",
+   "mod-recognized",
    "not-recognized"
   ],
   "difficulties": [
@@ -9116,8 +9123,8 @@ window.SERVICES = [
    "financial"
   ],
   "interests": [],
-  "cost": "subsidized",
-  "cost_notes": "ייתכן סיוע משפטי בעלות מוזלת לנכי משטרה; לברר מול הארגון. הארגון מבוסס על חברות.",
+  "cost": "",
+  "cost_notes": "ייעוץ ראשוני בחינם, ושירותים נוספים בסבסוד.",
   "regions": [
    "nationwide"
   ],
@@ -9452,9 +9459,11 @@ window.SERVICES = [
   "provider_type": "ngo",
   "eligibility": [
    "civilians",
+   "combat-soldiers",
    "mod-in-process",
    "mod-recognized",
    "not-recognized",
+   "reservists",
    "terror-victims"
   ],
   "difficulties": [
@@ -9730,6 +9739,7 @@ window.SERVICES = [
    "mod-in-process",
    "mod-recognized",
    "not-recognized",
+   "police",
    "reservists",
    "security-forces"
   ],
@@ -9768,7 +9778,6 @@ window.SERVICES = [
   ],
   "difficulties": [
    "bureaucracy",
-   "physical-disability",
    "ptsd"
   ],
   "interests": [],
@@ -10545,6 +10554,7 @@ window.SERVICES = [
    "mod-in-process",
    "mod-recognized",
    "not-recognized",
+   "police",
    "reservists",
    "security-forces",
    "terror-victims"
@@ -10775,13 +10785,15 @@ window.SERVICES = [
   "description": "מרכז גלישה טיפולי של עמותת הגל שלי בחוף זיקים, שנפתח ב-2025. נותן טיפול פרטני וקבוצתי דרך הים והגלישה למתמודדים עם טראומה ופוסט טראומה מהעוטף והדרום, ביניהם אנשי כוחות הביטחון, שורדי המסיבות, חטופים ששבו ומשפחותיהם, משפחות שכולות וצוותים רפואיים. המרכז נגיש.",
   "provider_type": "ngo",
   "eligibility": [
-   "security-forces",
-   "reservists",
-   "combat-soldiers",
-   "terror-victims",
+   "bereaved",
    "civilians",
+   "combat-soldiers",
    "families",
-   "bereaved"
+   "mod-in-process",
+   "police",
+   "reservists",
+   "security-forces",
+   "terror-victims"
   ],
   "difficulties": [
    "anxiety",

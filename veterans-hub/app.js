@@ -110,21 +110,34 @@
     const ok = withNear(regions);
     return r.some(x => ok.includes(x));
   }
-  // שירות שעיקרו פציעה גופנית (קטיעה, נכות פיזית, פגיעת ראש). למי שלא סימן קושי כזה הוא לא רלוונטי,
-  // גם אם מופיעה בו גם "פוסט טראומה".
-  const PHYS = ["amputation", "physical-disability", "tbi"];
-  const physicalFocus = s => { const d = arr(s.difficulties); return d.some(x => PHYS.includes(x)) && d.filter(x => !PHYS.includes(x) && x !== "ptsd").length <= 1; };
+  // סוג הפגיעה הגופנית: פגיעת ראש וקטיעה הן עולמות שונים. שירות שעיקרו פגיעה מסוג אחד לא מוצג למי שסימן סוג אחר.
+  const INJURY = { tbi: ["tbi"], body: ["amputation", "physical-disability"] };
+  const injuryOf = list => Object.keys(INJURY).filter(k => list.some(x => INJURY[k].includes(x)));
+  function injuryFocus(s) {
+    const d = arr(s.difficulties);
+    if (/פגיעה מוחית|פגיעות ראש|פגועי ראש/.test(s.name)) return ["tbi"];
+    if (/קטוע/.test(s.name)) return ["body"];
+    const k = injuryOf(d);
+    return k.length && d.filter(x => !INJURY.tbi.includes(x) && !INJURY.body.includes(x) && x !== "ptsd").length <= 1 ? k : [];
+  }
+  // שירות שדורש הכרה: מיועד רק למוכרים (ולשוטרים / כוחות ביטחון מוכרים), בלי פתח למי שבתהליך או לא מוכר
+  const OPEN_EL = ["mod-in-process", "not-recognized", "combat-soldiers", "reservists", "civilians", "terror-victims"];
+  const needsRecognition = s => { const el = arr(s.eligibility); return el.includes("mod-recognized") && !el.some(x => OPEN_EL.includes(x)); };
+  // תוכנית של עמותת בוגרי יחידה מסוימת, או לחיילים בודדים: לא מתאימה בהתאמה כללית (נשארת בחיפוש)
+  const narrowGroup = s => /בוגרי|יוצאי (?:שלדג|עוקץ)|בודדים|חייל בודד|לוחמים בודדים/.test(s.name) && !/חבל זוג|מים שקטים/.test(s.name);
+  // קושי ספציפי שווה יותר. "פוסט טראומה" מסומנת כמעט בכל שירות, אז כשבחרו עוד קשיים היא שווה פחות.
+  const D_WEIGHT = { tbi: 5, amputation: 5, addiction: 4, "physical-disability": 4, grief: 4 };
+  const MENTAL = ["ptsd", "depression", "anxiety", "sleep", "anger", "addiction", "moral-injury", "loneliness"];
   function score(s, p) {
     let sc = 0;
     const why = [];
     const d = arr(s.difficulties).filter(x => p.difficulties.includes(x));
     const i = arr(s.interests).filter(x => p.interests.includes(x));
-    // "פוסט טראומה" מסומנת כמעט בכל שירות, אז לבדה היא שווה פחות מקושי ספציפי (שינה, כעס, זוגיות)
-    if (d.length) { sc += d.reduce((t, x) => t + (x === "ptsd" && p.difficulties.length > 1 ? 1.5 : 3), 0); why.push("עוזר ב: " + d.map(x => T.difficulties[x]).join(", ")); }
-    if (i.length) { sc += 3 * i.length; why.push("מתאים לתחומי עניין: " + i.map(x => T.interests[x]).join(", ")); }
+    if (d.length) { sc += d.reduce((t, x) => t + (x === "ptsd" && p.difficulties.length > 1 ? 1.5 : (D_WEIGHT[x] || 3)), 0); why.push("עוזר ב: " + d.map(x => T.difficulties[x]).join(", ")); }
+    // תחום עניין: הראשון שווה 3, כל נוסף רק 1. כך שירות עם הרבה תגיות לא גובר על מה שעונה על הקושי.
+    if (i.length) { sc += 3 + (i.length - 1); why.push("מתאים לתחומי עניין: " + i.map(x => T.interests[x]).join(", ")); }
     const r = arr(s.regions);
     if (p.regions.length && r.some(x => p.regions.includes(x))) { sc += 1; why.push("קרוב אליך"); }
-    else if (p.regions.length && !regionOk(s, p.regions)) { sc -= 3; why.push("באזור אחר"); }
     // עלות לא ידועה נחשבת באמצע, לא כמו "בתשלום"
     const cr = s.cost ? (T.cost[s.cost] || { rank: 4 }).rank : 2;
     sc += Math.max(0, 2 - cr * 0.5);
@@ -137,36 +150,83 @@
     else if (p.statuses.length) sc -= 2;   // פתוח לכולם, לא מיועד במיוחד למצב שסימנת
     // שירות לבני משפחה או לשכול, למי שלא סימן משפחה, שכול או זוגיות
     const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון/.test(s.name);
-    // תוכנית של עמותת בוגרי יחידה מסוימת (דובדבן, מגלן): רלוונטית רק לבוגרי היחידה, אז לא בראש הרשימה
-    if (/בוגרי|יוצאי (?:שלדג|עוקץ)/.test(s.name) && !/חבל זוג|מים שקטים/.test(s.name)) sc -= 3;
     if (forFamily && !p.statuses.some(x => x === "families" || x === "bereaved") && !p.difficulties.some(x => x === "family-relations" || x === "grief")) sc -= 3;
+    // כאב כרוני: ריצה ואקסטרים בלי התאמה לכאב הם לא ההמלצה הראשונה
+    if (p.difficulties.includes("chronic-pain") && !arr(s.difficulties).some(x => x === "chronic-pain" || x === "physical-disability") &&
+      arr(s.interests).length && arr(s.interests).every(x => ["fitness", "extreme", "sport"].includes(x))) sc -= 2;
     if (s.confidence === "low") sc -= 1;
     if (starred(s)) { sc += 1; why.push("מומלץ בקהילה"); }
     return { sc, why };
   }
-  function match(p) {
-    // מי שבתהליך הכרה או עוד לא מוכר צריך קודם כול ליווי בהכרה, גם אם לא סימן "בירוקרטיה"
-    if (p.statuses.some(x => x === "mod-in-process" || x === "not-recognized") && !p.difficulties.includes("bureaucracy"))
-      p = Object.assign({}, p, { difficulties: [...p.difficulties, "bureaucracy"] });
+  // צרכים שלא תמיד מסמנים, אבל ברורים מהמצב: מי שבתהליך הכרה, או לוחם/שוטר עם פוסט טראומה שלא סימן שהוא מוכר,
+  // צריך קודם כול ליווי בהכרה
+  function withImplied(p) {
+    const st = p.statuses;
+    const unrecognized = st.some(x => x === "mod-in-process" || x === "not-recognized") ||
+      (!st.includes("mod-recognized") && st.some(x => ["police", "combat-soldiers", "reservists", "security-forces"].includes(x)) &&
+        p.difficulties.some(x => ["ptsd", "tbi", "amputation", "physical-disability"].includes(x)));
+    return unrecognized && !p.difficulties.includes("bureaucracy") ? Object.assign({}, p, { difficulties: [...p.difficulties, "bureaucracy"], implied: true }) : p;
+  }
+  function match(p, opts = {}) {
+    p = withImplied(p);
     const asked = p.difficulties.length || p.interests.length;
     const free = p.maxCost === 0;
-    return SERVICES
+    const myInjury = injuryOf(p.difficulties);
+    const recognized = p.statuses.includes("mod-recognized");
+    const all = SERVICES
       .filter(s => s.category !== "hotlines")
       .filter(s => eligible(s, p.statuses))
+      .filter(s => !p.statuses.length || recognized || !needsRecognition(s))
+      .filter(s => !narrowGroup(s))
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
       .filter(s => !free || !["subsidized", "partial", "paid"].includes(s.cost))
       // אזור: מה שמקומי ורחוק לא מוצג (ארצי ואונליין תמיד כן)
       .filter(s => regionOk(s, p.regions))
-      .filter(s => !physicalFocus(s) || p.difficulties.some(d => PHYS.includes(d)) || !p.difficulties.length)
+      .filter(s => { const f = injuryFocus(s); return !f.length || !p.difficulties.length || f.some(k => myInjury.includes(k)); })
       .map(s => Object.assign({ s }, score(s, p)))
       // כשסימנו קושי או תחום עניין, שירות חייב לענות על לפחות אחד מהם (קרבה לבד לא מספיקה)
-      .filter(x => asked ? (arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i))) && x.sc > 1.5 : regionOk(x.s, p.regions))
-      // שירות שפתוח לכולם (ולא ספציפית לסטטוס שסימנת) מוצג רק אם הוא עונה על קושי או תחום עניין שבחרת
-      .filter(x => !p.statuses.length || arr(x.s.eligibility).some(e => p.statuses.includes(e)) ||
-        arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i)))
-      .sort((a, b) => b.sc - a.sc)
-      // רשימה קצרה ומדויקת: מה שרחוק מאוד מההתאמה הטובה ביותר לא מוצג (אפשר למצוא אותו בחיפוש)
-      .filter((x, _, all) => !asked || x.sc >= Math.max(4, all[0].sc * 0.35));
+      .filter(x => asked ? (arr(x.s.difficulties).some(d => p.difficulties.includes(d)) || arr(x.s.interests).some(i => p.interests.includes(i))) && x.sc > 1.5 : true)
+      .sort((a, b) => b.sc - a.sc);
+    if (opts.all) return all;
+    if (!asked || !all.length) return all.slice(0, 30);
+    // רשימה קצרה ומדויקת: מה שרחוק מאוד מההתאמה הטובה ביותר לא מוצג (אפשר למצוא אותו בחיפוש)
+    const cut = Math.max(4, all[0].sc * 0.45);
+    return all.filter(x => x.sc >= cut).slice(0, 25);
+  }
+  // שלוש התחנות: מה שהכי חשוב, לפי סדר. קודם מענה לפגיעה (פגיעת ראש, קטיעה), אחר כך טיפול נפשי,
+  // אחר כך ליווי בהכרה, ואחר כך משהו מתחום עניין. מה שנשאר מתמלא מהציון הגבוה, מתחום אחר.
+  const INTEREST_CATS = { sea: ["water-sports"], nature: ["nature-retreats", "rehab-farm"], animals: ["animal-therapy", "rehab-farm"],
+    sport: ["sports", "water-sports"], fitness: ["sports"], "mind-body": ["yoga-mind-body"], art: ["art-music"], music: ["art-music"],
+    writing: ["art-music"], crafts: ["art-music", "rehab-farm"], tech: ["employment-education"], learning: ["employment-education"],
+    volunteering: ["community-volunteer"], cooking: ["rehab-farm", "art-music"], spiritual: ["nature-retreats", "peer-support"], extreme: ["sports", "water-sports"] };
+  function pickStations(p, res) {
+    p = withImplied(p);
+    const first = [];
+    const take = r => { if (r && first.length < 3 && !first.includes(r)) first.push(r); };
+    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
+    // מענה ייעודי לפגיעה: עדיפות לשירות שזה עיקרו
+    for (const k of injuryOf(p.difficulties))
+      take(best(r => arr(r.s.difficulties).some(x => INJURY[k].includes(x)) && r.s.category !== "rights-legal",
+        r => r.sc + (injuryFocus(r.s).includes(k) ? 4 : 0) + (r.s.category === "medical-rehab" ? 2 : 0) +
+          (k === "tbi" && /נוירו|קוגניטיב|פגיעות ראש|פגיעה מוחית/.test(r.s.name + " " + r.s.description) ? 3 : 0)));
+    // טיפול נפשי כשסימנו קושי נפשי
+    if (p.difficulties.some(x => MENTAL.includes(x) && x !== "loneliness" || x === "ptsd"))
+      take(best(r => r.s.category === "mental-health",
+        r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
+          (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) -
+          (/בית מאזן|אשפוז|הבית הבטוח/.test(r.s.name) ? 5 : 0)));   // מסגרת אינטנסיבית היא לא הצעד הראשון
+    // ליווי בהכרה: עדיפות לליווי אישי ולמה שמומלץ בקהילה, על פני פורטל מידע
+    if (p.implied || p.statuses.some(x => x === "mod-in-process" || x === "not-recognized"))
+      take(best(r => r.s.category === "rights-legal" && arr(r.s.difficulties).includes("bureaucracy"),
+        r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0)));
+    // תחום עניין: שירות שזה עיקרו (ים לגלישה, טבע לחווה), לא שירות שמזכיר את זה בדרך אגב
+    if (p.interests.length)
+      take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))));
+    // בדידות: קבוצת עמיתים
+    if (p.difficulties.includes("loneliness")) take(best(r => r.s.category === "peer-support" && arr(r.s.difficulties).includes("loneliness")));
+    for (const r of res) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
+    for (const r of res) take(r);
+    return first;
   }
 
   // ---------- components ----------
@@ -451,20 +511,8 @@
     const p = loadProfile();
     if (!p) { location.hash = "#/match"; return; }
     const res = match(p);
-    // שלוש תחנות: ההתאמות הכי טובות, כל אחת מתחום אחר
-    const first = [];
-    // אם בחרו תחום עניין, תחנה אחת לפחות תהיה ממנו
-    const byInterest = p.interests.length ? res.find(r => arr(r.s.interests).some(i => p.interests.includes(i))) : null;
-    if (byInterest) first.push(byInterest);
-    // בתהליך הכרה / עוד לא מוכר: תחנה אחת היא ליווי בהכרה, כי ממנה נפתח כל השאר
-    const needsRecognition = p.statuses.some(x => x === "mod-in-process" || x === "not-recognized");
-    // עדיפות לליווי אישי (מישהו שעושה את זה איתך) על פני פורטל מידע, ולמה שמומלץ בקהילה
-    const recRank = r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0);
-    const byRecognition = needsRecognition ? res.filter(r => r.s.category === "rights-legal" && arr(r.s.difficulties).includes("bureaucracy") && !first.includes(r))
-      .sort((a, b) => recRank(b) - recRank(a))[0] : null;
-    if (byRecognition) first.push(byRecognition);
-    for (const r of res) { if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
-    first.sort((a, b) => b.sc - a.sc);
+    const first = pickStations(p, match(p, { all: true }));
+    first.forEach(f => { if (!res.some(r => r.s.id === f.s.id)) res.push(f); });
     const firstIds = new Set(first.map(r => r.s.id));
     const byArea = {};
     res.filter(r => !firstIds.has(r.s.id)).forEach(r => { const a = areaOf(r.s.category); (byArea[a] = byArea[a] || []).push(r); });

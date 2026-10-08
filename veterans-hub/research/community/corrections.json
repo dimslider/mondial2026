@@ -188,7 +188,13 @@
   "cost_notes": "העלות לא מפורסמת. כדאי לברר מול החברה להגנת הטבע."
  },
  "shikum-mod-gov-il-7dfee1": {
-  "description": "בני משפחה של נכי צה\"ל זכאים להחזר על טיפול נפשי: פרטני, זוגי, משפחתי או קבוצתי. התנאי: לנכה נקבעו 20% נכות ומעלה (או 10% אם הוכר לפני 1996) בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה מכל סיבה. זכאים הורים, בן/בת זוג וילדים בגילי 7 עד 30. ההחזר עד 384 ₪ (כולל מע\"מ) לשעת טיפול בשבוע, לכל אחד. משפחות של פצועי חרבות ברזל שקיבלו הכרה עקרונית זכאיות ל-12 מפגשים (ועוד 12 לפי הצורך) במכון בהסדר או בהחזר."
+  "description": "בני משפחה של נכי צה\"ל זכאים להחזר על טיפול נפשי: פרטני, זוגי, משפחתי או קבוצתי. התנאי: לנכה נקבעו 20% נכות ומעלה (או 10% אם הוכר לפני 1996) בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה מכל סיבה. זכאים הורים, בן/בת זוג וילדים בגילי 7 עד 30. ההחזר עד 384 ₪ (כולל מע\"מ) לשעת טיפול בשבוע, לכל אחד. משפחות של פצועי חרבות ברזל שקיבלו הכרה עקרונית זכאיות ל-12 מפגשים (ועוד 12 לפי הצורך) במכון בהסדר או בהחזר.",
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "ptsd",
+   "tbi"
+  ]
  },
  "shikum-mod-gov-il-cf90e9": {
   "description": "נכי ונכות צה\"ל עם 19% נכות ומעלה לצמיתות זכאים למס רכישה מופחת ברכישת דירת מגורים, דרך רשות המסים. אם בני זוג נשואים קונים יחד ואחד מהם זכאי, שניהם זכאים להנחה."
@@ -286,7 +292,8 @@
  },
  "shikum-mod-gov-il-680532": {
   "regions": [
-   "center"
+   "center",
+   "haifa"
   ]
  },
  "maglan-org-216650": {
@@ -408,7 +415,13 @@
  },
  "shikum-mod-gov-il-f802c3": {
   "name": "טיפול נפשי בזמן תהליך ההכרה (אגף השיקום)",
-  "description": "פצועי מלחמת התקומה (חרבות ברזל) שהגישו בקשה להכרה זכאים לטיפול נפשי במימון אגף השיקום כבר בזמן תהליך ההכרה, גם אם הבקשה הוגשה בגלל פגיעה פיזית בלבד. מי שהגיש/ה בקשה בגלל פגיעה נפשית מקבל/ת טיפול שמשכו ותדירותו נקבעים אישית. מי שהגיש/ה בגלל פגיעה פיזית בלבד ועוד לא קיבל/ה הכרה עקרונית זכאי/ת ל-12 מפגשים במכונים שבהסדר עם משרד הביטחון."
+  "description": "פצועי מלחמת התקומה (חרבות ברזל) שהגישו בקשה להכרה זכאים לטיפול נפשי במימון אגף השיקום כבר בזמן תהליך ההכרה, גם אם הבקשה הוגשה בגלל פגיעה פיזית בלבד. מי שהגיש/ה בקשה בגלל פגיעה נפשית מקבל/ת טיפול שמשכו ותדירותו נקבעים אישית. מי שהגיש/ה בגלל פגיעה פיזית בלבד ועוד לא קיבל/ה הכרה עקרונית זכאי/ת ל-12 מפגשים במכונים שבהסדר עם משרד הביטחון.",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "police",
+   "reservists"
+  ]
  },
  "shikum-mod-gov-il-61bb79": {
   "name": "טיפול נפשי לנכי צה\"ל וכוחות הביטחון (אגף השיקום)"
@@ -464,7 +477,10 @@
   "name": "רפורמת \"נפש אחת\" באגף השיקום"
  },
  "apps-apple-com-abd84b": {
-  "name": "תוכנית עמית – משרד הביטחון"
+  "name": "תוכנית עמית – משרד הביטחון",
+  "eligibility": [
+   "reservists"
+  ]
  },
  "jnf-org-8fe538": {
   "description": "תוכנית של 'גדולים במדים' (Special in Uniform, בשותפות JNF-USA) שהתחילה במלחמה. התוכנית מפגישה חיילים של גדולים במדים עם לוחמי צה\"ל פצועים שעוברים שיקום פיזי ונפשי, במפגשים טיפוליים משותפים שמחזקים את שתי הקבוצות ויוצרים חברות."
@@ -498,7 +514,13 @@
  },
  "duvdevanfoundation-org-d09969": {
   "phone": "050-4671712",
-  "location": ""
+  "location": "",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "mod-recognized",
+   "reservists"
+  ]
  },
  "s-2244d7": {
   "website": "https://www.btl.gov.il"
@@ -582,6 +604,19 @@
    "haifa",
    "sharon",
    "south"
+  ],
+  "eligibility": [
+   "bereaved",
+   "civilians",
+   "combat-soldiers",
+   "families",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces",
+   "terror-victims"
   ]
  },
  "yamtov-com-79f4ce": {
@@ -600,14 +635,15 @@
  },
  "s-40b69b": {
   "description": "ארגון שהוקם ב-1982 ומייצג את השוטרים והסוהרים, שאסור להם להתאגד בארגון עובדים. הארגון מופעל בידי בני משפחותיהם, בעיקר נשותיהם. הוא פועל לשיפור המעמד והרווחה של שוטרים וסוהרים, ומסייע במצוקה משפטית, כלכלית, בריאותית, משפחתית או אישית, כולל לנכי משטרה.",
-  "cost_notes": "ייתכן סיוע משפטי בעלות מוזלת לנכי משטרה; לברר מול הארגון. הארגון מבוסס על חברות.",
+  "cost_notes": "ייעוץ ראשוני בחינם, ושירותים נוספים בסבסוד.",
   "website": "https://neshot.org.il",
   "phone": "08-9212281",
   "email": "neshot2@neshot.org.il",
   "confidence": "high",
   "reviewed_at": "2026-10-08",
   "verified_at": "2026-10-08",
-  "source_url": "https://neshot.org.il/contact-us/"
+  "source_url": "https://neshot.org.il/contact-us/",
+  "cost": ""
  },
  "s-9993b4": {
   "phone": "050-6216366",
@@ -635,7 +671,16 @@
  },
  "s-d8fd54": {
   "website": "https://www.kolzchut.org.il",
-  "name": "כל זכות – זכויות נפגעי פגיעת ראש (TBI)"
+  "name": "כל זכות – זכויות נפגעי פגיעת ראש (TBI)",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "reservists",
+   "terror-victims"
+  ]
  },
  "s-ecf25e": {
   "website": "https://www.kolzchut.org.il",
@@ -655,7 +700,15 @@
   "description": "מרחב לריפוי ולצמיחה למתמודדים/ות עם טראומה בסביבה טבעית בחוות אהרנסון בעתלית. התוכניות משלבות טיפול פסיכולוגי ממוקד טראומה (EMDR, CBT), סדנאות כמו חץ וקשת וצילום טיפולי, יוגה, אומנויות לחימה וגינון טיפולי, וגם קבוצות לשחרור לחץ וסדנאות לבנות זוג של אנשי מילואים."
  },
  "kehilat-or-org-il-d0f0b2": {
-  "description": "קהילת עמיתים לאנשים עם פגיעת ראש (מחבלה או ממחלה) ולבני משפחותיהם, במהלך תכנית השיקום ובעיקר אחריה. את הקהילה הקימו ומנהלים אנשים עם פגיעת ראש ובני משפחותיהם. יש מפגשים חברתיים, מנטורינג ופיתוח אישי, הרצאות, קבוצות שיח, ליווי עמיתים למשפחות ומידע על מיצוי זכויות."
+  "description": "קהילת עמיתים לאנשים עם פגיעת ראש (מחבלה או ממחלה) ולבני משפחותיהם, במהלך תכנית השיקום ובעיקר אחריה. את הקהילה הקימו ומנהלים אנשים עם פגיעת ראש ובני משפחותיהם. יש מפגשים חברתיים, מנטורינג ופיתוח אישי, הרצאות, קבוצות שיח, ליווי עמיתים למשפחות ומידע על מיצוי זכויות.",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "families",
+   "mod-recognized",
+   "reservists",
+   "terror-victims"
+  ]
  },
  "unitywarriors-org-f03450": {
   "name": "חוות נעלה – יוניטי ווריורס (Unity Warriors)"
@@ -860,7 +913,11 @@
   "confidence": "high",
   "reviewed_at": "2026-10-08",
   "verified_at": "2026-10-08",
-  "source_url": "https://www.yadlashiryon.com/casualties-branch"
+  "source_url": "https://www.yadlashiryon.com/casualties-branch",
+  "difficulties": [
+   "loneliness",
+   "ptsd"
+  ]
  },
  "egoz-org-il-5ba6c7": {
   "name": "סדנאות עיבוד חוויות לחימה לצוותים – עמותת אגוז",
@@ -878,7 +935,13 @@
   "confidence": "high",
   "reviewed_at": "2026-10-08",
   "verified_at": "2026-10-08",
-  "source_url": "https://kavlevanon.org.il/ptsd/"
+  "source_url": "https://kavlevanon.org.il/ptsd/",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized"
+  ]
  },
  "yamas-org-il-4a7d0f": {
   "confidence": "high",
@@ -1150,13 +1213,15 @@
   "email": "office@hagalsheli.co.il",
   "website": "https://hagalsheli.co.il/zikim/",
   "eligibility": [
-   "security-forces",
-   "reservists",
-   "combat-soldiers",
-   "terror-victims",
+   "bereaved",
    "civilians",
+   "combat-soldiers",
    "families",
-   "bereaved"
+   "mod-in-process",
+   "police",
+   "reservists",
+   "security-forces",
+   "terror-victims"
   ],
   "description": "מרכז גלישה טיפולי של עמותת הגל שלי בחוף זיקים, שנפתח ב-2025. נותן טיפול פרטני וקבוצתי דרך הים והגלישה למתמודדים עם טראומה ופוסט טראומה מהעוטף והדרום, ביניהם אנשי כוחות הביטחון, שורדי המסיבות, חטופים ששבו ומשפחותיהם, משפחות שכולות וצוותים רפואיים. המרכז נגיש.",
   "how_to_apply": "דרך טופס 'לקחת חלק' באתר הגל שלי, בטלפון 03-6029293 או במייל office@hagalsheli.co.il.",
@@ -1453,5 +1518,40 @@
   "verified_at": "2026-10-08",
   "source_url": "https://atalef.com/social/"
  },
- "lohamim-org-il-1df527": {}
+ "lohamim-org-il-1df527": {},
+ "shikum-mod-gov-il-45dfba": {
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces"
+  ]
+ },
+ "shikum-mod-gov-il-5af3f4": {
+  "difficulties": [
+   "bureaucracy",
+   "ptsd"
+  ]
+ },
+ "shikumil-org-il-5e31b1": {
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "mod-recognized",
+   "reservists",
+   "security-forces",
+   "terror-victims"
+  ]
+ },
+ "shikum-mod-gov-il-6b9358": {
+  "difficulties": [
+   "employment",
+   "physical-disability",
+   "ptsd",
+   "tbi"
+  ]
+ }
 }
