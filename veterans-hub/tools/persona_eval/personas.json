@@ -123,5 +123,156 @@
    ],
    "maxCost": null
   }
+ },
+ "druze_police": {
+  "story": "נ., 31, שוטר סיור במחוז צפון, דרוזי, גר ביישוב קטן ליד טבריה (מע'אר). שנתיים אחרי אירוע ירי קשה: פוסט טראומה, דיכאון, מסתגר בבית, הפסיק לשחק כדורגל. לא הגיש הכרה. חושש מסטיגמה ביישוב ובמשטרה. אוהב ספורט וטבע. עברית טובה, מעדיף טיפול בערבית אם אפשר.",
+  "knows": "קצין רווחה במשטרה, קופת חולים. לא יודע שהכרה לשוטרים עוברת דרך אגף השיקום.",
+  "needs": "טיפול חסוי (לא דרך הפיקוד) ורצוי בערבית; יציאה מהבית דרך ספורט/טבע קרוב; הסבר וליווי להגשת הכרה; משהו לא מסטיגמטי.",
+  "full": {
+   "statuses": [
+    "police"
+   ],
+   "difficulties": [
+    "ptsd",
+    "depression",
+    "loneliness"
+   ],
+   "interests": [
+    "sport",
+    "nature"
+   ],
+   "regions": [
+    "north"
+   ],
+   "maxCost": null,
+   "age": "30-45"
+  },
+  "minimal": {
+   "statuses": [
+    "police"
+   ],
+   "difficulties": [
+    "depression"
+   ],
+   "interests": [
+    "sport"
+   ],
+   "regions": [
+    "north"
+   ],
+   "maxCost": null
+  }
+ },
+ "woman_fighter": {
+  "story": "ש., 24, לוחמת בגדוד קרקל, השתחררה ב-2024 אחרי לחימה ב-7.10 ובעזה. מוכרת זמנית באגף השיקום על פוסט טראומה. חרדה, סיוטים, אכילה מופרעת, ניתוק מחברות. גרה בבאר שבע. אוהבת ים וכלבים, רוצה ללמוד.",
+  "knows": "אגף השיקום, נט\"ל. לא מכירה מסגרות ייעודיות ללוחמות, חוות, או מימון לימודים.",
+  "needs": "טיפול טראומה זמין (ורצוי מטפלת); קבוצה של לוחמות; פעילות ים/כלבים; חזרה ללימודים עם מימון והתאמות; קרוב לבאר שבע או ארצי.",
+  "full": {
+   "statuses": [
+    "mod-recognized",
+    "combat-soldiers"
+   ],
+   "difficulties": [
+    "ptsd",
+    "anxiety",
+    "sleep",
+    "loneliness"
+   ],
+   "interests": [
+    "sea",
+    "animals",
+    "learning"
+   ],
+   "regions": [
+    "south"
+   ],
+   "maxCost": null,
+   "era": "iron-swords",
+   "age": "u30"
+  },
+  "minimal": {
+   "statuses": [
+    "combat-soldiers"
+   ],
+   "difficulties": [
+    "anxiety"
+   ],
+   "interests": [
+    "sea"
+   ],
+   "regions": [
+    "south"
+   ],
+   "maxCost": null
+  }
+ },
+ "partner": {
+  "story": "ל., 34, בת זוג של מילואימניק עם פוסט טראומה (בתהליך הכרה), שני ילדים קטנים, גרה במודיעין. שחוקה, בודדה, הזוגיות במשבר, לא יודעת מה מגיע לה.",
+  "knows": "שמעה על נט\"ל ועל 'נפש אחת'. לא יודעת שבני זוג זכאים לטיפול דרך אגף השיקום ולמענקים למשפחות מילואים.",
+  "needs": "טיפול/תמיכה לה עצמה; טיפול זוגי; קבוצת נשים במצב דומה; זכויות ומענקים למשפחות מילואים; עזרה בבית.",
+  "full": {
+   "statuses": [
+    "families"
+   ],
+   "difficulties": [
+    "family-relations",
+    "loneliness",
+    "financial",
+    "anxiety"
+   ],
+   "interests": [
+    "mind-body"
+   ],
+   "regions": [
+    "shfela"
+   ],
+   "maxCost": null,
+   "age": "30-45"
+  },
+  "minimal": {
+   "statuses": [
+    "families"
+   ],
+   "difficulties": [
+    "family-relations"
+   ],
+   "interests": [],
+   "regions": [],
+   "maxCost": null
+  }
+ },
+ "bereaved_parent": {
+  "story": "מ., 58, אב שכול, בנו לוחם שנפל בעזה ב-2024. גר בחיפה. אבל קשה, נסגר, עבודה נפגעה, יחסים עם אשתו מתוחים.",
+  "knows": "קצין הנפגעים ואגף משפחות והנצחה, יד לבנים.",
+  "needs": "טיפול באבל ממושך; קבוצת הורים שכולים; עזרה לזוג; משהו פעיל (טבע/הליכה); זכויות.",
+  "full": {
+   "statuses": [
+    "bereaved"
+   ],
+   "difficulties": [
+    "grief",
+    "depression",
+    "family-relations"
+   ],
+   "interests": [
+    "nature"
+   ],
+   "regions": [
+    "haifa"
+   ],
+   "maxCost": null,
+   "age": "45-60"
+  },
+  "minimal": {
+   "statuses": [
+    "bereaved"
+   ],
+   "difficulties": [
+    "grief"
+   ],
+   "interests": [],
+   "regions": [],
+   "maxCost": null
+  }
  }
 }

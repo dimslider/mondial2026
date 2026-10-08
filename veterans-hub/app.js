@@ -489,6 +489,8 @@
     </svg>`;
   }
 
+  // השאלה "מה הכי חשוב לך עכשיו" קובעת את התחנה הראשונה
+  const GOALS = { talk: "לדבר עם מישהו מקצועי", do: "לצאת ולעשות משהו", people: "להיות עם אנשים שמבינים", rights: "לסדר זכויות וכסף" };
   function viewMatch() {
     const p = loadProfile() || { statuses: [], difficulties: [], interests: [], regions: [], maxCost: null };
     const steps = [
@@ -512,6 +514,8 @@
                 .map(k => chip(st.key, k, st.opts[k], p[st.key].includes(k))).join("")}
             </div>
             ${st.key === "statuses" ? `<div id="followups"></div>` : ""}
+            ${st.key === "difficulties" ? `<fieldset class="followup goal-q"><legend>ומה הכי חשוב לך עכשיו?</legend><div class="chips small">${
+              Object.entries(GOALS).map(([k, l]) => `<label class="chip"><input type="radio" name="goal" value="${k}" ${p.goal === k ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>` : ""}
             ${last ? `
               <fieldset class="cost-pref">
                 <legend>עלות</legend>
@@ -545,6 +549,7 @@
       if (fu) { drawFollow(); form.addEventListener("change", e => { if (e.target.name === "statuses") drawFollow(); }); }
       const collect = () => {
         p[st.key] = [...form.querySelectorAll(`input[name="${st.key}"]:checked`)].map(i => i.value);
+        if (st.key === "difficulties") { const g = form.querySelector('input[name="goal"]:checked'); p.goal = g ? g.value : null; }
         if (st.key !== "statuses") return;
         const val = n => (form.querySelector(`input[name="${n}"]:checked`) || {}).value || null;
         // הכרה של שוטר / איש כוחות ביטחון: נכנסת לסטטוסים עצמם
