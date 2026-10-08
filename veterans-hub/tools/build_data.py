@@ -213,6 +213,26 @@ def main():
         lo, hi = (int(m.group(1)), int(m.group(2) or 120)) if m else (0, 0)
         s["age"] = [lo, hi] if m and 18 <= lo < hi else []
 
+    # תיוג מובנה (research/community/tags.json, לפי research/RUBRIC.md): מה השירות, עוצמה, הכרה, שוטרים, מיקום מדויק
+    tag_path = ROOT / "research" / "community" / "tags.json"
+    if tag_path.exists():
+        tags = json.loads(tag_path.read_text(encoding="utf-8"))
+        for s in merged:
+            t = tags.get(s["id"])
+            if not t:
+                continue
+            for f in ("kind", "intensity", "recognition", "police", "format", "town"):
+                if t.get(f):
+                    s[f] = t[f]
+            s["unit_only"] = bool(t.get("unit_only")) or bool(s.get("unit_only"))
+            if t.get("war_only") == "iron-swords":
+                s["era"] = "iron-swords"
+            if isinstance(t.get("lat"), (int, float)) and isinstance(t.get("lng"), (int, float)):
+                s["geo"] = [round(t["lat"], 3), round(t["lng"], 3)]
+            fix = t.get("elig_fix")
+            if isinstance(fix, list) and fix and all(x in VALID["eligibility"] for x in fix):
+                s["eligibility"] = sorted(set(fix))
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(
