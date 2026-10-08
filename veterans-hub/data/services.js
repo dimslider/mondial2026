@@ -353,6 +353,47 @@ window.SERVICES = [
   "age": []
  },
  {
+  "id": "s-fd5ece",
+  "name": "מרכזי החוסן בגליל – מענה טלפוני בערבית",
+  "category": "hotlines",
+  "description": "מוקד מרכזי החוסן של הגליל המזרחי והמערבי, שמשרת גם את טבריה והיישובים הדרוזיים והערביים באזור, נותן טיפול חינם בטראומה וחרדה על רקע ביטחוני. יש קו נפרד בערבית, והטיפול פרטני, זוגי, משפחתי או קבוצתי, פנים אל פנים או מרחוק.",
+  "provider_type": "government",
+  "eligibility": [
+   "civilians",
+   "families",
+   "police",
+   "reservists",
+   "security-forces",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "מספר הקו בערבית מופיע בשני אתרים ממשלתיים בשתי צורות שונות, כדאי לוודא.",
+  "regions": [
+   "north"
+  ],
+  "location": "הגליל המזרחי והגליל המערבי, לפי כתובת המגורים",
+  "phone": "ערבית 04-7702649, עברית 04-6900603",
+  "email": "",
+  "website": "https://www.gov.il/he/Departments/DynamicCollectors/resilience-centers-list",
+  "how_to_apply": "להתקשר למוקד, ימים א'-ה' 09:00-22:00. הזכאות לפי כתובת המגורים הרשומה. ברשימה של gov.il המספר בערבית מופיע כ-04-67702649, לכן כדאי לוודא.",
+  "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MercazeiHOSEN_zafon_hb.aspx",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": "",
+  "verified_at": "",
+  "era": "",
+  "age": []
+ },
+ {
   "id": "natal-org-il-e49db4",
   "name": "נט\"ל – קו סיוע לנפגעי טראומה על רקע לאומי",
   "category": "hotlines",
@@ -1475,6 +1516,45 @@ window.SERVICES = [
   "community_note": "",
   "unit_only": "",
   "verified_at": "2026-10-08",
+  "era": "",
+  "age": []
+ },
+ {
+  "id": "druzevets-org-f3c8fa",
+  "name": "D-TEC מרכז הטכנולוגיה וההעצמה הדרוזי – ארגון הוותיקים הדרוזים",
+  "category": "employment-education",
+  "description": "ארגון הוותיקים הדרוזים (מ-2009) מלווה משוחררים דרוזים משירות צבאי וביטחוני ללימודים אקדמיים ולהייטק. ב-2025 נפתח בעספיא מרכז D-TEC לחדשנות ויזמות לצעירים וצעירות דרוזים. זה לא מענה טיפולי לפוסט טראומה, אבל יכול לעזור בחזרה לתעסוקה ולמסגרת בקהילה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning",
+   "tech"
+  ],
+  "cost": "free",
+  "cost_notes": "לא פורסם בתוצאות החיפוש",
+  "regions": [
+   "haifa",
+   "north"
+  ],
+  "location": "עספיא (הכרמל)",
+  "phone": "",
+  "email": "",
+  "website": "https://druzevets.org",
+  "how_to_apply": "דרך אתר הארגון.",
+  "source_url": "https://www.jns.org/israel-news/israels-druze-community-opens-technological-innovation-center",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": "",
+  "verified_at": "",
   "era": "",
   "age": []
  },
@@ -6972,6 +7052,41 @@ window.SERVICES = [
   "community_note": "",
   "unit_only": "",
   "verified_at": "2026-10-07",
+  "era": "",
+  "age": []
+ },
+ {
+  "id": "s-03e535",
+  "name": "מערך מע\"ן (בריאות הנפש ומדעי ההתנהגות) – משטרת ישראל",
+  "category": "mental-health",
+  "description": "מערך בריאות הנפש הפנימי של המשטרה, שקציני מע\"ן בו מלווים שוטרים אחרי אירועים קשים ומפנים לטיפול נפשי חיצוני במימון המשטרה. הטיפול כפוף לחוק זכויות החולה ולחיסיון, ולא נמסר למפקדים בלי הסכמת השוטר. המערך קטן (כ-29 תקנים לכ-32 אלף שוטרים), ולכן כדאי לפנות מוקדם.",
+  "provider_type": "government",
+  "eligibility": [
+   "police"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "טיפול חיצוני בהפניית קצין מע\"ן במימון המשטרה, לפי מפרט המכרז",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "בכל מחוזות המשטרה, כולל מחוז צפון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פנייה לקצין מע\"ן של היחידה או המחוז. ההפניה לטיפול חיצוני נעשית בכתב בחתימת קצין המע\"ן.",
+  "source_url": "https://www.ynet.co.il/news/article/r11tvqrmq",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": "",
+  "verified_at": "",
   "era": "",
   "age": []
  },

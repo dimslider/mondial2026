@@ -1178,5 +1178,63 @@
   "how_to_apply": "",
   "source_url": "https://orato.world/2024/08/28/resilience-and-healing-on-israels-northern-border-volunteer-leads-20-therapists-in-support-of-soldiers/",
   "confidence": "low"
+ },
+ {
+  "name": "תוכנית חוסן לקהילה הדרוזית בזמן מלחמה – CJP בוסטון וארגון מרכזי הקהילה (מתנ\"סים)",
+  "category": "family-support",
+  "description": "תוכנית שהושקה בתחילת 2024 לחיזוק החוסן של משפחות דרוזיות בזמן המלחמה, כולל תמיכה רגשית וסדנאות לאמהות להתמודדות עם לחץ. היא לא מיועדת ישירות ללוחם עם פוסט טראומה, ולא ברור אם היא עדיין פעילה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "civilians"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "north",
+   "haifa"
+  ],
+  "location": "יישובים דרוזיים, דרך המתנ\"סים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לברר במתנ\"ס היישוב.",
+  "source_url": "https://www.i24news.tv/en/news/israel/society/1705335400-special-program-launched-to-strengthen-druze-resilience-in-times-of-war",
+  "confidence": "low"
+ },
+ {
+  "name": "חוות מתניה – תוכנית שיקום בחקלאות וטיפול CPT ללוחמים",
+  "category": "rehab-farm",
+  "description": "חווה שמשלבת עבודת אדמה עם טיפול ממוקד בשיטת CPT של 12 מפגשים ללוחמים עם פוסט טראומה. לפי הכתבה ההשתתפות לא דורשת הכרה של משרד הביטחון. המיקום המדויק לא אומת.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "not-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "ptsd",
+   "depression"
+  ],
+  "interests": [
+   "nature",
+   "animals"
+  ],
+  "cost": "",
+  "cost_notes": "לא אומת",
+  "regions": [],
+  "location": "לא אומת",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "לא אומת, דרך פרטי החווה בכתבה.",
+  "source_url": "https://www.mako.co.il/tv-heroes_of_the_year/2026/Article-8fb3cac80f2e0a1027.htm",
+  "confidence": "low"
  }
 ]
