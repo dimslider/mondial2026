@@ -16,7 +16,7 @@
   const arr = v => Array.isArray(v) ? v : (v ? [v] : []);
   const catLabel = k => (T.categories[k] || { label: k }).label;
   const catIcon = k => (T.categories[k] || { icon: "•" }).icon;
-  const costLabel = k => (T.cost[k] || { label: k || "לא ידוע" }).label;
+  const costLabel = k => (T.cost[k] || { label: k || "עלות: לברר" }).label;
   // שדה טלפון יכול להכיל כמה מספרים ("1201 | וואטסאפ 052-…", "*3362 / 1-800-…") — לחיוג לוקחים את הראשון.
   // "1111 שלוחה 6" מחויג כ-1111 ואז 6 (פסיק = המתנה בחיוג)
   const firstPhone = p => String(p).split(/\||\/|\bאו\b|,|\(|;/)[0].replace(/שלוחה\s*\d+/, "").trim();

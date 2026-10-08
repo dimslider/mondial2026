@@ -5352,52 +5352,6 @@ window.SERVICES = [
   "age": []
  },
  {
-  "id": "israelgives-org-625fcb",
-  "name": "עמותת הלומי קרב בישראל",
-  "category": "financial-grants",
-  "description": "עמותה רשומה המסייעת להלומי קרב ולנפגעי פוסט טראומה על רקע שירות. מעניקה סיוע כלכלי, תרופות, הסעות לטיפולים, מזון וסיוע נוסף לפי בקשה, ופועלת גם בהסברה ובמאבק למען זכויות הלומי הקרב.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "combat-soldiers",
-   "families",
-   "mod-in-process",
-   "mod-recognized",
-   "not-recognized",
-   "reservists"
-  ],
-  "difficulties": [
-   "bureaucracy",
-   "financial",
-   "ptsd"
-  ],
-  "interests": [],
-  "cost": "free",
-  "cost_notes": "סיוע ללא עלות למקבלים; העמותה ממומנת מתרומות",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "https://israelgives.org/amuta/580651271",
-  "how_to_apply": "לפנות לעמותה דרך פרטי הקשר בדף העמותה ב-GuideStar.",
-  "source_url": "https://israelgives.org/amuta/580651271",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "community_recs": "",
-  "community_note": "",
-  "unit_only": false,
-  "kind": "money",
-  "intensity": "light",
-  "recognition": "unknown",
-  "police": "unknown",
-  "format": "individual",
-  "town": "ארצי",
-  "verified_at": "",
-  "era": "",
-  "age": []
- },
- {
   "id": "s-677d83",
   "name": "פיצוי לעצמאים משרתי מילואים – רשות המסים",
   "category": "financial-grants",
