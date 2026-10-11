@@ -1,6 +1,6 @@
 {
-  // Cloudflare Worker של "מגיע לך". השם חייב להיות זהה לשם הפרויקט בלוח הבקרה.
-  "name": "magia-lecha",
+  // Cloudflare Worker של "אזימוט". השם חייב להיות זהה לשם הפרויקט בלוח הבקרה.
+  "name": "azimut",
   "main": "worker.js",
   "compatibility_date": "2025-09-01",
   "build": { "command": "sh tools/build_site.sh" },
