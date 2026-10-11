@@ -98,6 +98,19 @@
   // שוטרים ואנשי כוחות ביטחון: תוכניות ל"לוחמים" פתוחות להם לפעמים, אבל לא תמיד כתוב. מציגים, עם הערה לברר.
   const softEligible = (s, statuses) => statuses.some(x => x === "police" || x === "security-forces") && s.police !== "no" &&
     (s.police === "yes" || arr(s.eligibility).some(e => e === "combat-soldiers" || e === "reservists")) && !needsRecognition(s);
+  // שוטר/ה או איש/אשת כוחות הביטחון: שירות שלא כתוב בו שהוא פתוח להם (וגם לא פתוח לכל הציבור).
+  // מציגים, אבל עם סימון ברור "אולי מתאים, לא בטוח שפתוח" כדי לחסוך פנייה מיותרת.
+  const isForces = statuses => arr(statuses).some(x => x === "police" || x === "security-forces");
+  function policeUnsure(s, statuses) {
+    if (!isForces(statuses) || s.police === "yes" || openToAll(s)) return false;
+    const el = arr(s.eligibility);
+    if (el.some(e => e === "police" || e === "security-forces")) return false;
+    // הכרה של אגף השיקום חלה גם על שוטרים, אז שירות ממשלתי למוכרים פתוח להם. בעמותה "למוכרים" זה לא בטוח.
+    if (s.provider_type === "government" && el.some(e => (e === "mod-recognized" || e === "mod-in-process") && statuses.includes(e))) return false;
+    return !el.some(e => statuses.includes(e) && e !== "mod-recognized" && e !== "mod-in-process");
+  }
+  const forcesWord = statuses => arr(statuses).includes("police") ? "לשוטרים" : "לכוחות הביטחון";
+  const maybeTag = (s, p) => p && policeUnsure(s, p.statuses) ? `<span class="maybe-tag">אולי מתאים · לא בטוח שפתוח ${forcesWord(p.statuses)}</span>` : "";
   function eligible(s, statuses) {
     const el = arr(s.eligibility);
     statuses = expandStatuses(statuses);
@@ -177,6 +190,8 @@
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
     else if (p.statuses.length && softEligible(s, myStatuses)) { sc -= 1; why.push("מיועד ללוחמים. כדאי לשאול אם פתוח גם לשוטרים ולכוחות הביטחון"); }
     else if (p.statuses.length) sc -= 2;   // פתוח לכולם, לא מיועד במיוחד למצב שסימנת
+    // שוטרים וכוחות הביטחון: מה שכתוב בו במפורש שפתוח להם קודם למה שלא בטוח
+    if (isForces(p.statuses) && s.police === "yes") { sc += 1; if (!el.length) why.unshift("פתוח גם לשוטרים ולכוחות הביטחון"); }
     if (infoItem(s)) sc -= 2;
     // שירות לבני משפחה או לשכול, למי שלא סימן משפחה, שכול או זוגיות
     const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון/.test(s.name);
@@ -276,6 +291,8 @@
       .filter(s => familyFit(s, p))
       .filter(s => supplierOk(s, p))
       .filter(s => !s.no_contact)   // בלי שום דרך פנייה: רק בחיפוש, לא בהתאמה האישית
+      // כתוב במפורש שרק לחיילי צה"ל: לא מוצג לשוטר/ה, אלא אם סימנו גם לוחם/ת או מילואים
+      .filter(s => !(s.police === "no" && isForces(p.statuses) && !p.statuses.some(x => x === "combat-soldiers" || x === "reservists")))
       // שירות למי שעוד לא מוכר (כתוב בשם) לא מתאים למי שכבר מוכר
       .filter(s => !recognized || !/שאינם מוכרים|שאינן מוכרות|לא מוכרים|ללא הכרה/.test(s.name))
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
@@ -392,8 +409,10 @@
     return `<label class="chip"><input type="checkbox" name="${group}" value="${esc(key)}" ${checked ? "checked" : ""}><span>${esc(label)}</span></label>`;
   }
   // שורה קצרה ברשימה: שם, משפט פתיחה בשורה אחת, ושורת פרטים. כל השאר בכרטיס שנפתח.
+  const hasWait = s => /המתנ|ארוך/.test(s.avail || "");
   function card(s, why, noTag) {
     const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => T.regions[r] || r)];
+    if (hasWait(s)) meta.push("⏳ יש המתנה");
     if (isSupplier(s)) meta.push("ספק בסל Shikum.Me");
     if (s.source === "community") meta.push("נוסף ע״י הקהילה");
     else if (s.verified_at) meta.push("✓ נבדק");
@@ -404,6 +423,7 @@
           ${splitName(s.name).sub ? "" : `<p class="teaser">${esc(shortDesc(s.description, 110))}</p>`}
           ${why && why.length ? `<span class="why">← ${esc(why[0])}</span>` : ""}
           <span class="meta-line">${starTag(s)}${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
+          ${maybeTag(s, loadProfile())}
         </div>
         <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M15 4 C 11 8, 9 10, 8 12 C 10 14, 12 17, 15 20"/></svg>
       </article>`;
@@ -697,6 +717,8 @@
         ${who ? `<p class="lead">${esc(who)}</p>` : ""}
         <p class="actions"><a class="link-u" href="#/match">לשנות תשובות</a></p>
         ${noInput ? `<div class="callout">כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין. <a href="#/match">לסמן עכשיו</a></div>` : ""}
+        <p class="note avail-note"><strong>על זמינות:</strong> כל השירותים כאן קיימים, אבל עדיין אין לנו מידע מלא על רשימות המתנה ועל כמה קל להתקבל. בחלק מהמקומות מחכים חודשים. כדאי לפנות לשניים או שלושה במקביל, ולשאול כבר בשיחה הראשונה אם יש המתנה.</p>
+        ${isForces(p.statuses) ? `<p class="note">שירות שמסומן <span class="maybe-tag">אולי מתאים</span> לא כותב במפורש שהוא פתוח ${forcesWord(p.statuses)}. ייתכן שכן, שווה לשאול.</p>` : ""}
         ${crisis ? `<div class="callout">כשקשה, לא חייבים לחכות לאף תוכנית. אפשר לדבר עם מישהו גם עכשיו, גם בלילה. <a href="#/help">עזרה עכשיו ←</a></div>` : ""}
         ${first.length ? `
           <ol class="stations lined">
@@ -707,6 +729,7 @@
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
                 <div class="tag-row">${starTag(s)}${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
                 ${nameBlock(s, "h2", `data-open="${esc(s.id)}" tabindex="0" role="button"`)}
+                ${maybeTag(s, p)}${hasWait(s) ? `<span class="wait-tag">⏳ ${esc(s.avail)}</span>` : ""}
                 <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
                 ${distinctWhy(first) && whyText(r) ? `<span class="why">← ${esc(whyText(r))}</span>` : ""}
                 <div class="actions">
@@ -726,7 +749,10 @@
               <div class="grid" data-area-list="${a}"></div>
               <p class="actions"><a class="link-u" href="#/area?a=${a}">לכל מה שיש ב${esc(AREAS[a].label)} ←</a></p>
             </details>`).join("")}
-        </section>` : ""}`;
+        </section>` : ""}
+      <section class="pilot-cta">
+        <p><strong>גרסת ניסיון.</strong> הרשימה טובה כמו מה שכולנו יודעים. מה היה מדויק, מה חסר, איפה נתקעת? <a class="link-u" href="#/pilot">משוב אנונימי · דקה</a></p>
+      </section>`;
     $main.querySelectorAll("[data-area-list]").forEach(el => pagedList(el, byArea[el.dataset.areaList],
       r => card(r.s, r.why.filter(w => w !== "מתאים לסטטוס שלך"), true)));
   }
@@ -1050,6 +1076,68 @@
   }
 
   // ---------- פרטיות ----------
+  // גרסת ניסיון: למה זה קיים, מה עוד חסר, ומשוב בעילום שם
+  function viewPilot() {
+    const p = loadProfile();
+    const q = (name, label, opts) => `<fieldset class="pilot-q"><legend>${label}</legend><div class="chips">${opts.map(o =>
+      `<label class="chip"><input type="radio" name="${name}" value="${esc(o)}"><span>${esc(o)}</span></label>`).join("")}</div></fieldset>`;
+    $main.innerHTML = `
+      <section class="form-page pilot">
+        <h1 class="page-title">גרסת ניסיון: בונים את זה יחד</h1>
+        <p class="lead">אזימוט נבנה מחוכמת ההמונים. המטרה היא לרכז במקום אחד את כל מה שאנשים יודעים: מה קיים, מה באמת עזר, כמה מחכים, ולמי זה פתוח בפועל.</p>
+        <p>המידע נאסף ממקורות רשמיים ונבדק מולם, אבל דברים משתנים מהר. מה שאתם יודעים מהשטח משלים את מה שאי אפשר למצוא באתרים.</p>
+
+        <h2 class="section-title">מה עוד חסר לנו</h2>
+        <ul class="ticks plain">
+          <li>${TICK}<span><strong>זמינות ורשימות המתנה.</strong> השירותים קיימים, אבל בחלק מהמקומות מחכים חודשים, ויש מקומות שקשה מאוד להתקבל אליהם. ברוב הכרטיסים עוד אין לנו את המידע הזה.</span></li>
+          <li>${TICK}<span><strong>למי זה פתוח בפועל.</strong> למשל, שירותים שלא כתוב בהם אם הם פתוחים גם לשוטרים ולכוחות הביטחון. אלה מסומנים "אולי מתאים".</span></li>
+          <li>${TICK}<span><strong>מקומות קטנים ומקומיים</strong> שלא מופיעים ברשימות מסודרות.</span></li>
+        </ul>
+
+        <h2 class="section-title">לבודקים: מה לנסות</h2>
+        <ol class="pilot-steps">
+          <li>למלא את <a href="#/match">ההתאמה האישית</a>, כמו שאתם.</li>
+          <li>לפתוח את שלוש התחנות הראשונות. הייתם פונים אליהן?</li>
+          <li>לחפש מקום שאתם מכירים. הוא מופיע? הפרטים נכונים?</li>
+          <li>יודעים כמה מחכים במקום מסוים? בכל כרטיס יש "יודעים כמה מחכים כאן?".</li>
+          <li>חסר מקום? כפתור ה-+ למעלה.</li>
+          <li>ולסיום, המשוב כאן למטה.</li>
+        </ol>
+
+        <h2 class="section-title">משוב בעילום שם</h2>
+        <p class="note"><strong>בעילום שם:</strong> לא שואלים ולא שומרים שם, טלפון, מייל או כתובת IP. בבקשה לא לכתוב פרטים מזהים, לא שלכם ולא של אחרים. שמות של מקומות ותוכניות מצוינים.</p>
+        <form id="pilot-fb" class="form">
+          ${q("relevant", "ההצעות הראשונות שקיבלת רלוונטיות אליך?", ["כן", "חלקית", "לא", "לא מילאתי התאמה"])}
+          ${q("would", "היית פונה לאחת מהן?", ["כבר פניתי", "כן, אפנה", "אולי", "לא"])}
+          <label>מה חסר? שירות, מקום או נושא שלא מצאת<textarea name="missing" rows="2" maxlength="800"></textarea></label>
+          <label>איפה נתקעת, או מה היה לא ברור?<textarea name="stuck" rows="2" maxlength="800"></textarea></label>
+          <label>מכירים מקום, קבוצה או יוזמה שעזרו לכם או למישהו שאתם מכירים? מה השם ואיך פונים<textarea name="add" rows="2" maxlength="800" placeholder="רק שם המקום ופרטים ציבוריים, בלי שמות של אנשים"></textarea></label>
+          <label>מה ידוע לכם על המתנה וזמינות? איפה מחכים הרבה, איפה קל להיכנס<textarea name="wait" rows="2" maxlength="800"></textarea></label>
+          <label>עוד משהו?<textarea name="more" rows="2" maxlength="800"></textarea></label>
+          ${p ? `<label class="check"><input type="checkbox" name="ctx" checked> לצרף את סוג ההתאמה בלבד (למשל: משטרה, מילואים, אזור), כדי שנבין למי ההצעות לא דייקו. בלי שום פרט מזהה.</label>` : ""}
+          <div class="ts" id="pilot-ts"></div>
+          <button class="btn btn-ink">לשלוח משוב</button>
+          <p class="form-msg" role="status"></p>
+        </form>
+        <p class="note quiet">רוצים לשתף יותר, או שנחזור אליכם? אפשר דרך <a href="#/privacy">טופס הפנייה</a> בעמוד הפרטיות.</p>
+      </section>`;
+    const f = document.getElementById("pilot-fb");
+    let token = null;
+    captcha(document.getElementById("pilot-ts")).then(g => { token = g; });
+    f.addEventListener("submit", async e => {
+      e.preventDefault();
+      const fd = new FormData(f);
+      const msg = f.querySelector(".form-msg");
+      const data = {};
+      ["relevant", "would", "missing", "stuck", "add", "wait", "more"].forEach(k => data[k] = (fd.get(k) || "").trim());
+      if (!Object.values(data).some(Boolean)) { msg.textContent = "אפשר לענות רק על שאלה אחת, אבל צריך לפחות אחת."; return; }
+      if (p && fd.get("ctx")) data.ctx = [...p.statuses, ...p.regions, p.era, p.age].filter(Boolean).join(",");
+      try {
+        const r = await Store.submit("feedback", data, { token: token ? token() : "" });
+        f.innerHTML = `<p class="form-msg">${r && r.local ? "אין חיבור לשרת כרגע, המשוב נשמר במכשיר וננסה שוב." : "תודה רבה! כל תשובה מדייקת את זה למי שיבוא אחריך."}</p>`;
+      } catch (err) { msg.textContent = sendError(err); }
+    });
+  }
   function viewPrivacy() {
     $main.innerHTML = `
       <section class="form-page privacy">
@@ -1063,6 +1151,7 @@
         <ul class="ticks plain">
           <li>${TICK}<span><strong>"שיחזרו אליי":</strong> השם, הטלפון או המייל, ומה שכתבת. משמש רק כדי שהגוף שבחרת יחזור אליך. אנחנו מעבירים לגוף הזה בלבד, ולא לאף אחד אחר.</span></li>
           <li>${TICK}<span><strong>הוספת מקום ותיקון פרטים:</strong> מה שכתבת בטופס. פרטי קשר שלך הם לא חובה, ומשמשים רק אם נצטרך לשאול משהו. לא מתפרסמים.</span></li>
+          <li>${TICK}<span><strong>משוב ודיווח על המתנה:</strong> בעילום שם. רק התשובות שבחרת, בלי שם, טלפון או מייל. אם סימנת, מצורף גם סוג ההתאמה (למשל "משטרה, צפון"), בלי שום פרט מזהה.</span></li>
           <li>${TICK}<span><strong>"ממליץ/ה":</strong> רק איזה שירות, וקוד אקראי של המכשיר כדי שלא ייספר פעמיים. בלי שם ובלי פרטים.</span></li>
         </ul>
 
@@ -1107,9 +1196,11 @@
     .replace(/(\*\d{3,5}|\b0\d{1,2}-?\d{3}-?\d{4}\b|\b1-?[78]00-?\d{2,3}-?\d{3,4}\b)/g, m => `<a href="tel:${m.replace(/[^\d*]/g, "")}" dir="ltr" class="nowrap">${m}</a>`)
     .replace(/([\w.+-]+@[\w-]+\.[\w.]+)/g, m => `<a href="mailto:${m}" dir="ltr">${m}</a>`);
   const heDate = d => { const m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? `${+m[2]}/${m[1]}` : d; };
+  const WAIT_OPTS = ["אין המתנה", "עד חודש", "1 עד 3 חודשים", "3 עד 6 חודשים", "חצי שנה ויותר", "לא מקבלים כרגע", "לא הצלחתי ליצור קשר"];
   function openService(id) {
     const s = SERVICES.find(x => x.id === id);
     if (!s) return;
+    const prof = loadProfile();
     const links = [];
     if (s.phone && isMobile(s.phone)) links.push(`<a class="link-u" href="${waHref(s.phone)}" target="_blank" rel="noopener">וואטסאפ</a>`);
     if (s.email) links.push(`<a class="link-u" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך אזימוט: " + s.name)}">מייל</a>`);
@@ -1128,6 +1219,20 @@
         <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
         ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
         ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${linkify(s.cost_notes)}</span></p>` : ""}
+        ${prof && policeUnsure(s, prof.statuses) ? `<p class="callout maybe-callout"><strong>אולי מתאים, לא בטוח שפתוח ${forcesWord(prof.statuses)}.</strong> לא כתוב כאן במפורש שגם ${prof.statuses.includes("police") ? "שוטרים ושוטרות" : "אנשי כוחות הביטחון"} יכולים להצטרף. ייתכן שכן: כדאי לשאול כבר בשיחה הראשונה.</p>` : ""}
+        <div class="avail-box">
+          ${s.avail ? `<p><strong>⏳ זמינות והמתנה:</strong> ${esc(s.avail)} <span class="quiet">(${s.avail_src === "site" ? "לפי האתר שלהם" : "לפי דיווחים של אנשים בקהילה"})</span></p>`
+            : `<p class="quiet">אין לנו עדיין מידע על המתנה או על כמה קל להתקבל. כדאי לשאול בשיחה הראשונה.</p>`}
+          <button class="link-u" type="button" id="wait-toggle">יודעים כמה מחכים כאן? לשתף, בעילום שם</button>
+          <form id="wait" class="form lead-form" hidden>
+            <fieldset class="chips">${WAIT_OPTS.map((o, i) => `<label class="chip"><input type="radio" name="w" value="${esc(o)}"${i ? "" : " required"}><span>${esc(o)}</span></label>`).join("")}</fieldset>
+            <label>משהו שכדאי לדעת? (לא חובה)<textarea name="note" rows="2" maxlength="400" placeholder="למשל: חזרו אליי אחרי שבוע, צריך הפניה מרופא"></textarea></label>
+            <p class="note">בעילום שם: לא שואלים ולא שומרים שם, טלפון או מייל. אחרי בדיקה זה יופיע כאן לכולם.</p>
+            <div class="ts" id="wait-ts"></div>
+            <button class="btn btn-ink">לשתף</button>
+            <p class="form-msg" role="status"></p>
+          </form>
+        </div>
         <div class="contact">
           ${s.phone ? `<a class="btn btn-ink btn-wide" href="${telHref(s.phone)}">להתקשר <span dir="ltr">${esc(firstPhone(s.phone))}</span></a>` : ""}
           <div class="links">${links.join("")}</div>
@@ -1219,6 +1324,24 @@
         if (!fixToken) captcha(document.getElementById("fix-ts")).then(g => { fixToken = g; });
       }
     };
+    // דיווח על זמינות והמתנה: בעילום שם, נכנס לתור הבדיקה
+    const wf = document.getElementById("wait");
+    let waitToken = null;
+    document.getElementById("wait-toggle").onclick = () => {
+      wf.hidden = !wf.hidden;
+      if (!wf.hidden && !waitToken) captcha(document.getElementById("wait-ts")).then(g => { waitToken = g; });
+    };
+    wf.addEventListener("submit", async e => {
+      e.preventDefault();
+      const fd = new FormData(wf);
+      const msg = wf.querySelector(".form-msg");
+      const w = fd.get("w"), note = (fd.get("note") || "").trim();
+      if (!w) { msg.textContent = "בחרו אחת מהאפשרויות."; return; }
+      try {
+        await Store.submit("fix", { text: "זמינות: " + w + (note ? ". " + note : ""), avail: w }, { service_id: s.id, token: waitToken ? waitToken() : "" });
+        wf.innerHTML = `<p class="form-msg">תודה! זה עוזר לבא אחריך.</p>`;
+      } catch (err) { msg.textContent = sendError(err); }
+    });
     fx.addEventListener("submit", async e => {
       e.preventDefault();
       const fd = new FormData(fx);
@@ -1264,6 +1387,7 @@
     else if (path === "/explore") viewExplore();
     else if (path === "/help") viewHelp();
     else if (path === "/privacy") viewPrivacy();
+    else if (path === "/pilot") viewPilot();
     else if (path === "/add" || path === "/provider") viewAdd(params);
     else if (path === "/admin") { location.href = "admin/"; return; }
     else viewHome();

@@ -62,7 +62,7 @@
     </article>`;
   }
 
-  const FIX_FIELDS = { phone: "טלפון", website: "אתר", cost_notes: "פירוט עלות", how_to_apply: "איך מתחילים", location: "מיקום", description: "תיאור" };
+  const FIX_FIELDS = { avail: "זמינות / המתנה (מוצג בכרטיס)", phone: "טלפון", website: "אתר", cost_notes: "פירוט עלות", how_to_apply: "איך מתחילים", location: "מיקום", description: "תיאור" };
   function fixCard(g) {
     if (g.service_id === "_contact") return `<article class="adm-card" data-key="${esc(g.key)}" data-sid="_contact">
       <h2>פנייה כללית / בקשת פרטיות</h2>
@@ -73,6 +73,7 @@
       <h2>${esc(s.name)}</h2>
       <p class="adm-meta">${g.items.length} הודעות · ${day(g.items[0].created_at)}</p>
       ${g.items.map(i => `<p class="adm-quote">${esc(i.data.text)}${i.data.contact ? `\n— ליצירת קשר: ${esc(i.data.contact)}` : ""}</p>`).join("")}
+      ${g.items.some(i => i.data.avail) ? `<p class="adm-meta">דיווח זמינות. כדי שיופיע בכרטיס: לנסח בשדה "זמינות / המתנה" (מוצג כ"לפי דיווחים של אנשים בקהילה").</p>` : ""}
       <form class="form">
         <p class="note">לשנות רק מה שצריך. מה שמשתנה כאן מתעדכן אצל כולם.</p>
         <label>עלות<select name="cost"><option value="">לא ידוע</option>${opts(T.cost, s.cost || "", v => v.label)}</select></label>
@@ -85,6 +86,23 @@
         </div>
       </form>
     </article>`;
+  }
+
+  // משוב מהפיילוט: בעילום שם, רק לקריאה
+  const FB_LABELS = { relevant: "ההצעות רלוונטיות?", would: "היה פונה?", missing: "מה חסר", stuck: "איפה נתקע/ה", add: "מקום שמכירים", wait: "המתנה וזמינות", more: "עוד", ctx: "סוג התאמה" };
+  function feedbackCard(g) {
+    const i = g.items[0];
+    return `<article class="adm-card" data-key="${esc(g.key)}">
+      <p class="adm-meta">${day(i.created_at)}</p>
+      ${Object.entries(FB_LABELS).filter(([k]) => i.data[k]).map(([k, l]) => `<p class="adm-quote"><strong>${l}:</strong> ${esc(i.data[k])}</p>`).join("")}
+      <form class="form"><div class="adm-actions"><button class="btn btn-ink" data-act="done" type="button">נקרא</button></div></form></article>`;
+  }
+  function feedbackCsv() {
+    const gs = Q.groups.filter(g => g.kind === "feedback");
+    const rows = [["date", ...Object.keys(FB_LABELS)], ...gs.map(g => [day(g.items[0].created_at), ...Object.keys(FB_LABELS).map(k => g.items[0].data[k] || "")])];
+    const csv = "\ufeff" + rows.map(r => r.map(x => `"${String(x).replace(/"/g, '""')}"`).join(",")).join("\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = "feedback.csv"; a.click();
   }
 
   let Q = { groups: [] };
@@ -101,6 +119,7 @@
     const nNew = Q.groups.filter(g => g.kind === "new").length, nFix = Q.groups.filter(g => g.kind === "fix").length;
     document.getElementById("n-new").textContent = nNew || "";
     document.getElementById("n-fix").textContent = nFix || "";
+    document.getElementById("n-feedback").textContent = Q.groups.filter(g => g.kind === "feedback").length || "";
     render();
   }
 
@@ -127,7 +146,8 @@
     if (tab === "leads") return renderLeads();
     if (tab === "live") return renderLive();
     const gs = Q.groups.filter(g => g.kind === tab);
-    $m.innerHTML = gs.length ? gs.map(tab === "new" ? newCard : fixCard).join("") : `<p class="empty">אין כרגע מה לבדוק.</p>`;
+    $m.innerHTML = gs.length ? gs.map(tab === "new" ? newCard : tab === "feedback" ? feedbackCard : fixCard).join("") : `<p class="empty">אין כרגע מה לבדוק.</p>`;
+    if (tab === "feedback" && gs.length) { const b = document.createElement("button"); b.className = "btn"; b.textContent = "להוריד הכול כ-CSV"; b.onclick = feedbackCsv; $m.prepend(b); }
     $m.querySelectorAll("[data-act]").forEach(b => b.onclick = () => act(b));
   }
 
@@ -150,7 +170,10 @@
         const s = S.find(x => x.id === g.service_id) || {};
         const patch = {};
         ["cost", ...Object.keys(FIX_FIELDS)].forEach(k => { const v = (fd.get(k) || "").trim(); if (v !== (s[k] || "")) patch[k] = v; });
+        if (patch.avail) patch.avail_src = "community";
         await api("override", { ids, service_id: g.service_id, patch });
+      } else if (b.dataset.act === "done") {
+        await api("lead-status", { ids, status: "done" });
       } else if (b.dataset.act === "close") {
         await api("override", { ids, service_id: g.service_id, patch: {} });
       } else {

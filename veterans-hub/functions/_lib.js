@@ -17,7 +17,7 @@ export const options = () => new Response(null, { status: 204, headers: CORS });
 const SCHEMA = [
   `CREATE TABLE IF NOT EXISTS submissions (
      id INTEGER PRIMARY KEY AUTOINCREMENT,
-     kind TEXT NOT NULL,            -- new | fix | lead
+     kind TEXT NOT NULL,            -- new | fix | lead | feedback
      service_id TEXT,               -- לתיקון ולפנייה: השירות שהם עליו
      dedupe TEXT,                   -- מפתח לאיחוד הצעות כפולות
      data TEXT NOT NULL,            -- JSON

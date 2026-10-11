@@ -8,9 +8,11 @@ const NEW_FIELDS = {
   phone: 40, website: 300, relation: 20, recommend: true, notes: 800, contact: 120,
   regions: [9], eligibility: [11]
 };
-const FIX_FIELDS = { text: 1000, contact: 120 };
+const FIX_FIELDS = { text: 1000, contact: 120, avail: 40 };
+// משוב מהפיילוט: בעילום שם. אין שדה לפרטי קשר בכלל
+const FEEDBACK_FIELDS = { relevant: 20, would: 20, missing: 800, stuck: 800, add: 800, wait: 800, more: 800, ctx: 200 };
 const LEAD_FIELDS = { name: 80, contact: 120, message: 600, consent: true, serviceName: 200 };
-const LIMIT_PER_DAY = { new: 15, fix: 20, lead: 10, recommend: 60 };
+const LIMIT_PER_DAY = { new: 15, fix: 20, lead: 10, recommend: 60, feedback: 10 };
 
 export async function onRequestPost({ request, env }) {
   let body;
@@ -46,6 +48,9 @@ export async function onRequestPost({ request, env }) {
     data = clean(body.data, NEW_FIELDS);
     if (data.name.length < 2) return json({ error: "name" }, 400);
     dedupe = "n:" + normKey(data.website || data.name);
+  } else if (kind === "feedback") {
+    data = clean(body.data, FEEDBACK_FIELDS);
+    if (!Object.values(data).some(Boolean)) return json({ error: "bad-input" }, 400);
   } else if (kind === "fix") {
     data = clean(body.data, FIX_FIELDS);
     sid = String(body.service_id || "").slice(0, 80);
