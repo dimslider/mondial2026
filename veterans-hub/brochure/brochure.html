@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=540">
+<title>אזימוט · ברושור</title>
+<!-- ברושור לשיתוף בקבוצות. שתי גרסאות: ?v=pro (מטפלים) ו-?v=self (מטופלים). מרונדר לתמונה ול-PDF ע"י render.js -->
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #E4ECEC; --ink: #151515; --muted: #4A5654;
+    --t-sea: #9EC0C8; --t-land: #C3C29A; --t-body: #E7B48C; --t-soul: #C4BBDD;
+    --glass: rgba(250, 252, 251, .86); --line: rgba(21, 21, 21, .14);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { width: 540px; height: 675px; background: var(--paper); color: var(--ink); font-family: "Assistant", system-ui, sans-serif;
+    position: relative; overflow: hidden; }
+  .topo { position: absolute; inset: 0; opacity: .45; }
+  .topo path { stroke: var(--t-sea); stroke-width: 1.6; fill: none; }
+  .page { position: relative; height: 100%; padding: 34px 36px 28px; display: flex; flex-direction: column; }
+  .lockup { display: flex; align-items: center; gap: 10px; }
+  .lockup .word { font-family: "Frank Ruhl Libre", serif; font-weight: 700; font-size: 26px; }
+  .tag { margin-inline-start: auto; font-size: 13px; font-weight: 600; padding: 3px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--glass); }
+  h1 { font-family: "Frank Ruhl Libre", serif; font-weight: 700; font-size: 34px; line-height: 1.18; margin: 26px 0 10px; }
+  .sub { font-size: 17px; line-height: 1.5; color: var(--muted); margin: 0; }
+  .steps { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; }
+  .steps li { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--glass); border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(21, 40, 48, .06), 0 6px 16px -12px rgba(21, 40, 48, .3); font-size: 17px; line-height: 1.35; }
+  .node { flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 16px; border: 1.5px solid var(--ink); }
+  .steps strong { font-weight: 700; }
+  .values { margin: 18px 0 0; font-size: 15.5px; line-height: 1.5; }
+  .values strong { font-weight: 700; }
+  .bottom { margin-top: auto; display: flex; align-items: center; gap: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .qr { flex: none; width: 92px; height: 92px; padding: 7px; background: #fff; border-radius: 10px; }
+  .qr img { width: 100%; height: 100%; display: block; }
+  .cta { font-family: "Frank Ruhl Libre", serif; font-weight: 700; font-size: 21px; line-height: 1.25; }
+  .url { direction: ltr; text-align: right; font-size: 14px; color: var(--muted); margin-top: 4px; }
+  .help { font-size: 14px; margin-top: 6px; }
+  h1, .sub, .values, .cta { text-wrap: balance; }
+  [data-v] { display: none; }
+  body.pro [data-v="pro"], body.self [data-v="self"] { display: revert; }
+  body.pro .steps[data-v="pro"], body.self .steps[data-v="self"] { display: grid; }
+</style>
+</head>
+<body>
+<svg class="topo" viewBox="0 0 540 675" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path d="M-40 70 C 80 40, 160 100, 280 66 C 400 32, 460 92, 600 60"/>
+  <path d="M-40 108 C 90 76, 170 140, 290 104 C 400 72, 470 126, 600 96"/>
+  <path d="M-40 560 C 70 530, 150 600, 270 566 C 390 532, 450 590, 600 560"/>
+  <path d="M-40 604 C 80 572, 160 644, 280 608 C 400 576, 460 632, 600 600"/>
+  <path d="M-40 650 C 90 618, 170 690, 290 652 C 410 620, 470 676, 600 646"/>
+</svg>
+<main class="page">
+  <div class="lockup">
+    <svg width="44" height="44" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+      <defs><clipPath id="d"><circle cx="120" cy="120" r="93"/></clipPath></defs>
+      <path d="M120 22 C 176 20, 220 64, 218 121 C 216 175, 173 219, 118 217 C 64 215, 21 172, 23 118 C 25 64, 66 23, 123 24" fill="#9EC0C8" stroke="#151515" stroke-width="7" stroke-linecap="round"/>
+      <g clip-path="url(#d)" stroke="#151515" stroke-linecap="round" fill="none">
+        <path d="M14 128 C 40 116, 62 140, 92 128 C 120 116, 142 140, 172 126 C 196 116, 214 132, 232 124" stroke-width="5"/>
+        <path d="M40 160 C 66 150, 84 170, 110 160 C 136 150, 156 168, 200 156" stroke-width="3.6"/></g>
+      <path d="M120 24 L 120 44" stroke="#151515" stroke-width="7" stroke-linecap="round"/>
+      <path d="M116 124 C 132 108, 150 92, 170 72" stroke="#151515" stroke-width="10" stroke-linecap="round"/>
+      <path d="M150 70 C 160 69, 168 68, 175 67 C 174 74, 173 82, 173 90" stroke="#151515" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="116" cy="124" r="10" fill="#E4ECEC" stroke="#151515" stroke-width="5"/>
+    </svg>
+    <span class="word">אזימוט</span>
+    <span class="tag">גרסת ניסיון</span>
+  </div>
+
+  <!-- מטפלים -->
+  <h1 data-v="pro">כל המקומות שיכולים לעזור למטופלים שלך. במקום אחד.</h1>
+  <p class="sub" data-v="pro">לנכי צה״ל, מילואימניקים, לוחמים, שוטרים וכוחות הביטחון, ומי שעוד לא הוכר.</p>
+  <ul class="steps" data-v="pro">
+    <li><span class="node" style="background: var(--t-sea)">1</span><span><strong>כמעט 500 מקומות:</strong> טיפול, ים, חוות, ספורט וזכויות</span></li>
+    <li><span class="node" style="background: var(--t-land)">2</span><span><strong>התאמה אישית בדקה,</strong> לפי מצב, אזור וצורך</span></li>
+    <li><span class="node" style="background: var(--t-soul)">3</span><span><strong>בונים יחד:</strong> מה שאתם יודעים מהשטח, כמה מחכים ולמי זה פתוח, עוזר לכולם</span></li>
+  </ul>
+  <p class="values" data-v="pro"><strong>נבנה בהתנדבות, מתוך רצון לעזור.</strong> בלי פרסומות, בלי עלות, ואף אחד לא מרוויח מזה.</p>
+
+  <!-- מטופלים -->
+  <h1 data-v="self">יש עזרה. לפעמים רק קשה למצוא אותה.</h1>
+  <p class="sub" data-v="self">טיפול, ים, חוות, ספורט, קבוצות וזכויות. כל מה שקיים, במקום אחד.</p>
+  <ul class="steps" data-v="self">
+    <li><span class="node" style="background: var(--t-soul)">1</span><span><strong>מספרים קצת על עצמך</strong></span></li>
+    <li><span class="node" style="background: var(--t-sea)">2</span><span><strong>מקבלים 3 מקומות שמתאימים לך</strong></span></li>
+    <li><span class="node" style="background: var(--t-land)">3</span><span><strong>מתקשרים, או מבקשים שיחזרו אליך</strong></span></li>
+  </ul>
+  <p class="values" data-v="self"><strong>בלי הרשמה, בלי עלות.</strong> התשובות נשארות אצלך בטלפון. נבנה בהתנדבות, ואף אחד לא מרוויח מזה.</p>
+
+  <div class="bottom">
+    <div class="qr"><img src="qr.svg" alt="קוד QR לאתר אזימוט"></div>
+    <div>
+      <div class="cta" data-v="pro">לנסות, לשלוח למטופלים, ולספר לנו מה חסר</div>
+      <div class="cta" data-v="self">אפשר גם לעזור לבא אחריך: לספר כמה חיכית, או מה עזר לך</div>
+      <div class="url">magia-lecha.idomayraz.workers.dev</div>
+      <div class="help" data-v="self">קשה עכשיו? ער״ן <strong>1201</strong>, בכל שעה</div>
+    </div>
+  </div>
+</main>
+<script>document.body.className = new URLSearchParams(location.search).get("v") === "self" ? "self" : "pro";</script>
+</body>
+</html>

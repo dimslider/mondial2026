@@ -477,6 +477,7 @@
         <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שלבים קצרים · אפשר לדלג</span></a>
         <p class="welcome-alt">או <a class="link-u" href="#/explore">לחפש לבד</a> · <a class="link-u" href="#/rights">מה מגיע לי</a></p>
         <p class="note quiet center">${SERVICES.length} מקומות · בלי הרשמה · נבדק מול מקורות רשמיים</p>
+        <p class="note quiet center">נבנה בהתנדבות, מתוך רצון לעזור. בלי פרסומות, ואף אחד לא מרוויח מזה. <a class="link-u" href="#/about">למה אזימוט קיים</a></p>
       </section>`;
   }
 
@@ -1076,6 +1077,26 @@
   }
 
   // ---------- פרטיות ----------
+  // למה אזימוט קיים: החזון, בכמה מילים
+  function viewAbout() {
+    $main.innerHTML = `
+      <section class="form-page about">
+        <h1 class="page-title">למה אזימוט קיים</h1>
+        <p class="lead">יש הרבה עזרה, אבל קשה למצוא אותה. היא מפוזרת בין אתרים, קבוצות ושמועות, ולא תמיד ברור למי היא מיועדת וכמה מחכים.</p>
+        <p>אזימוט אוסף את כל מה שקיים למקום אחד, כדי שכל אחד ואחת ימצאו את הצעד הבא שמתאים להם.</p>
+        <h2 class="section-title">מה אנחנו בונים, יחד</h2>
+        <ol class="about-list">
+          <li class="glass-sm"><span class="st-node area-sea">1</span><span><strong>כל המקומות במקום אחד.</strong> טיפול, ים, חוות, קבוצות וזכויות.</span></li>
+          <li class="glass-sm"><span class="st-node area-land">2</span><span><strong>מה זמין עכשיו.</strong> איפה מקבלים, כמה מחכים, ולמי זה פתוח.</span></li>
+          <li class="glass-sm"><span class="st-node area-soul">3</span><span><strong>קבוצות של שווים,</strong> קרוב לבית.</span></li>
+          <li class="glass-sm"><span class="st-node area-body">4</span><span><strong>מה עוד חסר, ואיפה,</strong> כדי שאפשר יהיה לבנות את זה.</span></li>
+        </ol>
+        <h2 class="section-title">מי עומד מאחורי זה</h2>
+        <p>רק הרצון לעזור. אזימוט נבנה בהתנדבות. אין פרסומות, אין עלות, ואף אחד לא מרוויח מזה כסף. התשובות שלך נשארות אצלך בטלפון.</p>
+        <p>כל מה שיש כאן הגיע מאנשים שעברו את הדרך ורצו שגם אחרים ימצאו. ככה נמשיך לבנות.</p>
+        <p class="actions"><a class="btn btn-ink" href="#/pilot">לקחת חלק</a> <a class="link-u" href="#/match">למצוא מה מתאים לי</a></p>
+      </section>`;
+  }
   // גרסת ניסיון: למה זה קיים, מה עוד חסר, ומשוב בעילום שם
   function viewPilot() {
     const p = loadProfile();
@@ -1388,6 +1409,7 @@
     else if (path === "/help") viewHelp();
     else if (path === "/privacy") viewPrivacy();
     else if (path === "/pilot") viewPilot();
+    else if (path === "/about") viewAbout();
     else if (path === "/add" || path === "/provider") viewAdd(params);
     else if (path === "/admin") { location.href = "admin/"; return; }
     else viewHome();

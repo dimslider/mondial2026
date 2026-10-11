@@ -631,3 +631,8 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .pilot-q .chips { margin: 8px 0 0; }
 .pilot-steps { padding-inline-start: 22px; line-height: 1.7; }
 .pilot .note { display: block; transform: none; }
+.about-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.about-list li { display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; font-size: 16px; line-height: 1.45; }
+.about-list .st-node { flex: none; position: static; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--tint); font-weight: 700; font-size: 14px; }
+.about-list strong { font-family: var(--body); font-weight: 700; }
+.about .actions { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
