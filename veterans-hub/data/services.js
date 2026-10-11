@@ -1,5 +1,5 @@
 // נוצר אוטומטית ע"י tools/build_data.py — לא לערוך ידנית; לעדכן את קבצי המחקר ולהריץ מחדש.
-window.SERVICES_UPDATED = "2026-10-08";
+window.SERVICES_UPDATED = "2026-10-11";
 window.SERVICES = [
  {
   "id": "1202-org-il-0bf488",
@@ -43,7 +43,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-3f6563",
@@ -87,7 +88,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "clalit-co-il-0710f5",
@@ -131,7 +133,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "leumit-co-il-2fd3d7",
@@ -177,7 +180,8 @@ window.SERVICES = [
   "age": [
    18,
    120
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-cd9956",
@@ -228,7 +232,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-97f497",
@@ -269,7 +274,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-cbf1f7",
@@ -314,7 +320,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "maccabi4u-co-il-f6376e",
@@ -358,7 +365,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-b3abee",
@@ -404,7 +412,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-fd5ece",
@@ -451,7 +460,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "natal-org-il-e49db4",
@@ -503,7 +513,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "sahar-org-il-50ed06",
@@ -556,7 +567,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "eran-org-il-4f39e6",
@@ -610,7 +622,50 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-4c17d6",
+  "name": "צוות ההתערבות 'מתן' – צוות טיפולי שמגיע אליך בשעת משבר נפשי (אגף השיקום)",
+  "category": "hotlines",
+  "description": "צוות של אנשי מקצוע בבריאות הנפש שמגיע אליך תוך שעתיים בשעת משבר נפשי, 24/7 בכל הארץ. הצוות מעריך את המצב שלך ושל המשפחה, נותן התערבות נקודתית של הרגעה וויסות, ואחר כך מחבר אותך למחוז להמשך טיפול.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "שירות של אגף השיקום",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "*8944",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/medical/mental-therapy/matan",
+  "how_to_apply": "מתקשרים למוקד 'נפש אחת' *8944, והצוות מופעל לפי הערכה מקצועית. אפשר גם לבקש מעובדת השיקום במחוז להזמין אותו.",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/matan",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "hotline",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "1202-org-il-6b5f24",
@@ -654,7 +709,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "nbn-org-il-28c565",
@@ -696,7 +752,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-9d4141",
@@ -740,7 +797,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-7acfcf",
@@ -788,7 +846,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-d3d9dc",
@@ -836,7 +895,59 @@ window.SERVICES = [
   "geo": [
    32.34,
    34.89
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "trci-org-il-bf95d0",
+  "name": "העמותה לרכיבה וכלבנות טיפולית – חוות חוסן בתל מונד (אגף השיקום)",
+  "category": "animal-therapy",
+  "description": "חווה טיפולית של העמותה לרכיבה וכלבנות טיפולית בתל מונד, שפועלת בתוכנית החוות השיקומיות של אגף השיקום. יש בה סוסים, כלבים ובעלי חיים, עבודת גוף נפש וטיפולים אישיים וקבוצתיים עם פסיכולוגים, מרפאים בעיסוק ועובדים סוציאליים. פעם או פעמיים בחודש יש גם פעילות למשפחות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "בהפניה של אגף השיקום, כחלק מתוכנית החוות השיקומיות",
+  "regions": [
+   "sharon"
+  ],
+  "location": "תל מונד",
+  "phone": "",
+  "email": "",
+  "website": "https://www.trci.org.il/",
+  "how_to_apply": "פונים לאשת הקשר האישית שלך באגף השיקום או לעובדת הסוציאלית במחוז.",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/farms-therapy",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "תל מונד",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.25,
+   34.92
+  ],
+  "supplier": false
  },
  {
   "id": "s-d4ba17",
@@ -886,7 +997,56 @@ window.SERVICES = [
   "geo": [
    31.72,
    35.1
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-2d9b1f",
+  "name": "טיפול זוגי בעזרת סוסים מהקרקע (איגאלה) לנכי צה\"ל עם פוסט טראומה ובני הזוג – באר טוביה (אגף השיקום)",
+  "category": "animal-therapy",
+  "description": "קבוצה לזוגות שבה עובדים יחד עם סוס מהקרקע, בלי רכיבה (מודל איגאלה). העבודה הזוגית עם הסוס, לצד זוגות נוספים, עוזרת בוויסות רגשי, בתקשורת ובתחושת ביטחון.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "south"
+  ],
+  "location": "באר טוביה",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups/12187",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/12187",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "באר טוביה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.73,
+   34.73
+  ],
+  "supplier": false
  },
  {
   "id": "afikimdogs-co-il-195ca4",
@@ -937,7 +1097,8 @@ window.SERVICES = [
   "geo": [
    32.68,
    35.58
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "havayot-center-co-il-f2df8f",
@@ -988,7 +1149,8 @@ window.SERVICES = [
   "geo": [
    31.66,
    35.14
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "israelguidedog-org-il-49be3a",
@@ -1039,7 +1201,8 @@ window.SERVICES = [
   "geo": [
    31.91,
    34.79
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "israelguidedog-org-il-0cf4e4",
@@ -1088,7 +1251,8 @@ window.SERVICES = [
   "geo": [
    31.91,
    34.79
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-3c3137",
@@ -1139,7 +1303,8 @@ window.SERVICES = [
   "geo": [
    32.61,
    35.28
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "havayot-center-co-il-203f04",
@@ -1190,7 +1355,8 @@ window.SERVICES = [
   "geo": [
    31.66,
    35.14
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "photoisrael-org-b11f66",
@@ -1235,7 +1401,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "sos-israel-org-fa1518",
@@ -1284,7 +1451,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.78
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "icm-org-il-5c59e7",
@@ -1336,7 +1504,59 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.78
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-9a79aa",
+  "name": "החממה ברחובות – מרכז שיקום תעסוקתי לנכי צה\"ל (האגודה לבריאות הציבור ואגף השיקום)",
+  "category": "art-music",
+  "description": "מרכז שיקום ברחוב גד פיינשטיין 4 ברחובות לנכים ונכות עם כל סוגי הפגיעות שצריכים מסגרת תעסוקתית. יש ציור, קרמיקה, זכוכית, פסיפס, תכשיטנות, ספורט, גינון, מחשבים, אנגלית, תנועה ומוזיקה. פתוח בימים א'-ד' 8:00-14:00.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment",
+   "loneliness",
+   "ptsd",
+   "tbi"
+  ],
+  "interests": [
+   "art",
+   "crafts",
+   "music"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מסגרת שמופעלת עבור אגף השיקום",
+  "regions": [
+   "shfela"
+  ],
+  "location": "גד פיינשטיין 4, רחובות (ליד מכללת פרס)",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
+  "how_to_apply": "פונים לעובדת השיקום האישית במחוז (myshikum.mod.gov.il/universalRequest/2/3).",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "intensive",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "רחובות",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.89,
+   34.81
+  ],
+  "supplier": false
  },
  {
   "id": "vertigo-org-il-18d606",
@@ -1385,7 +1605,54 @@ window.SERVICES = [
   "geo": [
    31.69,
    34.97
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-3e803b",
+  "name": "טיפול קבוצתי בפסיכודרמה לנכי צה\"ל עם פוסט טראומה – קרית אונו (אגף השיקום)",
+  "category": "art-music",
+  "description": "קבוצה טיפולית שמשלבת כלים מפסיכודרמה ויצירה, למתמודדים עם פוסט טראומה שרוצים לחקור דרכי התמודדות חדשות במרחב בטוח עם קבוצת שווים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd"
+  ],
+  "interests": [
+   "art"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "center"
+  ],
+  "location": "קרית אונו",
+  "phone": "",
+  "email": "Shikumta_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/6040",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/6040",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "קרית אונו",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.06,
+   34.86
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-2f4310",
@@ -1436,7 +1703,58 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-7e3af9",
+  "name": "סדנת גל בתל השומר – מסגרת תעסוקתית ויצירתית למתמודדים עם פוסט טראומה (שיבא ואגף השיקום)",
+  "category": "art-music",
+  "description": "מסגרת תעסוקתית עם ליווי טיפולי בבניין השיקום בשיבא, למתמודדים עם פוסט טראומה שלא השתלבו בעבודה. יש חוגי זכוכית, קרמיקה, נגרות, צורפות, צילום, ציור, ספורט, מוזיקה ומחשבים, עם פסיכיאטר ועובד סוציאלי מבית החולים. פתוח בימים א'-ה' 7:00-15:00.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "art",
+   "crafts",
+   "music"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מסגרת של אגף השיקום שבית החולים שיבא מפעיל",
+  "regions": [
+   "center"
+  ],
+  "location": "בניין השיקום, המרכז הרפואי שיבא, תל השומר",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
+  "how_to_apply": "פונים לעובדת השיקום האישית במחוז (myshikum.mod.gov.il/universalRequest/2/3).",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "intensive",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "רמת גן (תל השומר)",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.05,
+   34.84
+  ],
+  "supplier": false
  },
  {
   "id": "projecthed-org-3fc558",
@@ -1482,7 +1800,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "inz-org-il-b68995",
@@ -1531,7 +1850,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "levechad-org-73dd3b",
@@ -1575,7 +1895,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "levechad-org-fe21c5",
@@ -1619,7 +1940,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "bankhapoalim-co-il-b193f3",
@@ -1662,7 +1984,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-6de9e7",
@@ -1704,7 +2027,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "18xagentics-com-7710a1",
@@ -1747,7 +2071,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-3a9f3b",
@@ -1789,7 +2114,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "druzevets-org-f3c8fa",
@@ -1838,7 +2164,8 @@ window.SERVICES = [
   "geo": [
    32.72,
    35.06
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "jobify360-co-il-c7b680",
@@ -1881,7 +2208,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "miluimtech-com-06d5ab",
@@ -1927,7 +2255,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.78
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "natal-org-il-4f510a",
@@ -1968,7 +2297,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "biu-ac-il-90555b",
@@ -2014,7 +2344,8 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "inz-org-il-c2788c",
@@ -2060,7 +2391,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "sites-biu-ac-il-be7d34",
@@ -2109,7 +2441,8 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "innovationisrael-org-il-726b58",
@@ -2152,7 +2485,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hachvana-mod-gov-il-543dde",
@@ -2194,7 +2528,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "innovationisrael-org-il-c39e04",
@@ -2237,7 +2572,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-86fc20",
@@ -2279,7 +2615,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-439179",
@@ -2321,7 +2658,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yahalomfoundation-com-52bbb6",
@@ -2362,7 +2700,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-457af3",
@@ -2413,7 +2752,8 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-7562ff",
@@ -2457,7 +2797,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-6266bf",
@@ -2502,7 +2843,8 @@ window.SERVICES = [
   "geo": [
    31.78,
    35.22
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "mishpahot-hantzaha-mod-g-cf3a6e",
@@ -2545,7 +2887,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "invisiblealbum-com-400a95",
@@ -2593,7 +2936,8 @@ window.SERVICES = [
   "geo": [
    32.1,
    35.17
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "fidf-org-46d014",
@@ -2635,7 +2979,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-4542fc",
@@ -2681,7 +3026,8 @@ window.SERVICES = [
   "geo": [
    31.78,
    35.22
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "che-org-il-1fcb14",
@@ -2724,7 +3070,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hachvana-mod-gov-il-0463e0",
@@ -2766,7 +3113,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hachvana-mod-gov-il-712a71",
@@ -2809,7 +3157,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-924578",
@@ -2850,7 +3199,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "jobify360-co-il-aeb545",
@@ -2895,7 +3245,55 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-f5dbc9",
+  "name": "נתיב חדש – תוכנית הכנה לתעסוקה וללימודים לנכי צה\"ל (מכללת גל ואגף השיקום)",
+  "category": "employment-education",
+  "description": "תוכנית של 5 חודשים לנכי ונכות צה\"ל שרוצים לחזור לעבודה או ללימודים וצריכים קודם תהליך שיקומי. עובדים על תפקוד וחוסן, כישורים מקצועיים עם סיורים במקומות עבודה, ומיומנויות כמו תקשורת ואוריינות דיגיטלית, בקבוצה ובליווי אישי. יש קבוצות בנוף הגליל, טבריה, חיפה, עפולה, חדרה, רעננה, בת ים, אשדוד, ירושלים ובאר שבע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "תוכנית של אגף השיקום שמכללת גל מפעילה",
+  "regions": [
+   "center",
+   "haifa",
+   "jerusalem",
+   "north",
+   "sharon",
+   "south"
+  ],
+  "location": "נוף הגליל, טבריה, חיפה, עפולה, חדרה, רעננה, בת ים, אשדוד, ירושלים, באר שבע",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/study/11964",
+  "how_to_apply": "פונים לעובדת השיקום במחוז או נרשמים דרך עמוד התוכנית באתר אגף השיקום (shikum.mod.gov.il/study).",
+  "source_url": "https://shikum.mod.gov.il/study",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-410036",
@@ -2938,7 +3336,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-ce9f44",
@@ -2988,7 +3387,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "biu-ac-il-9c9345",
@@ -3038,7 +3438,52 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.82
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-09c3c2",
+  "name": "קבוצת הכנה לתעסוקה לנכי צה\"ל – טבריה (אגף השיקום)",
+  "category": "employment-education",
+  "description": "קבוצה טיפולית בטבריה על החזרה לעבודה אחרי פציעה: האתגרים בכניסה לשוק העבודה, ההשפעה של הנכות בעבודה וכלים מעשיים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "טבריה",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11888",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11888",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "work",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "טבריה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   35.53
+  ],
+  "supplier": false
  },
  {
   "id": "iron-community-com-606a72",
@@ -3085,7 +3530,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "inz-org-il-6810eb",
@@ -3128,7 +3574,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "restartglobal-org-ffbd34",
@@ -3173,7 +3620,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-090b89",
@@ -3217,7 +3665,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-6b9358",
@@ -3265,7 +3714,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-31a611",
@@ -3307,7 +3757,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "perach-org-il-89242c",
@@ -3349,7 +3800,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "innovationisrael-org-il-b58bf5",
@@ -3392,7 +3844,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "earlystarters-org-il-916d67",
@@ -3432,7 +3885,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "jewishagency-org-8adf2f",
@@ -3475,7 +3929,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "onefamilytogether-org-7a58af",
@@ -3524,7 +3979,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ourfamilyfirst-org-f4ba9d",
@@ -3568,7 +4024,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "sites-biu-ac-il-1e7591",
@@ -3616,7 +4073,8 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.84
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-abf8ab",
@@ -3657,7 +4115,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "idfwo-org-fa0927",
@@ -3702,7 +4161,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "girlfriendsidf-org-il-75df8d",
@@ -3745,7 +4205,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-45db30",
@@ -3790,7 +4251,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-91049f",
@@ -3833,7 +4295,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "vertigo-org-il-5c029c",
@@ -3882,7 +4345,8 @@ window.SERVICES = [
   "geo": [
    31.69,
    34.96
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "healingspace-co-il-23525c",
@@ -3931,7 +4395,56 @@ window.SERVICES = [
   "geo": [
    32.2,
    34.82
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-26451e",
+  "name": "טיפול בעזרת סוסים להורים עם פוסט טראומה וילדיהם – כפר שמואל (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית לנכי ונכות צה\"ל עם אחד הילדים בגילאי 8 עד 12. כל מפגש מתחיל בעבודה משותפת עם הסוסים, ואחר כך יש קבוצת טיפול נפרדת לילדים ולהורים. המטרה לחזק את הקשר בין ההורה לילד ואת תחושת הערך.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [
+   "animals"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "shfela"
+  ],
+  "location": "כפר שמואל",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups/12120",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/12120",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "כפר שמואל",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.88,
+   34.93
+  ],
+  "supplier": false
  },
  {
   "id": "ourfamilyfirst-org-a6e120",
@@ -3972,7 +4485,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-4671e0",
@@ -4015,7 +4529,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-7dfee1",
@@ -4041,7 +4556,7 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "1-800-800-440; וואטסאפ 050-6644000",
   "email": "shikum_mokedtipulim@mod.gov.il",
   "website": "https://shikum.mod.gov.il",
   "how_to_apply": "לבחור מטפל/ת מוסמך/ת (או מכון בהסדר), ואחרי הטיפול לשלוח קבלות וטופס בקשה דרך האזור האישי או למייל shikum_mokedtipulim@mod.gov.il.",
@@ -4058,8 +4573,53 @@ window.SERVICES = [
   "format": "mixed",
   "town": "ארצי",
   "verified_at": "2026-10-07",
-  "era": "iron-swords-desc",
-  "age": []
+  "era": "iron-swords",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-649ce1",
+  "name": "טיפול קבוצתי בתנועה לבנות זוג של נכי צה\"ל – קרית אונו ורחובות (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית לבנות זוג של נכי צה\"ל שמשתמשת בתנועה ובגוף כדרך נוספת לביטוי, לצד שיחה על מה שהפציעה הביאה לזוגיות ולמשפחה. יש קבוצה בקרית אונו וקבוצה ברחובות.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "center",
+   "shfela"
+  ],
+  "location": "קרית אונו; רחובות",
+  "phone": "",
+  "email": "Shikumd_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/12183",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/12183",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-eeaba8",
@@ -4100,7 +4660,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yadlabanim-org-14efc9",
@@ -4145,7 +4706,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "girlfriendsidf-org-il-3f0e3f",
@@ -4186,7 +4748,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-512a0e",
@@ -4229,7 +4792,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "idfwo-org-1299a0",
@@ -4271,7 +4835,53 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-6604d0",
+  "name": "מכון פמי – טיפול נפשי לאחים ולבני משפחה של פצועי צה\"ל (בהסדר עם אגף השיקום)",
+  "category": "family-support",
+  "description": "מכון פמי מופיע ברשימת המכונים שבהסדר בתפיסת ההפעלה של אגף השיקום, ולפיה אחים ואחיות של פצועים מקבלים מענה דרך הפניה למכון פמי. בני משפחה של פצועי חרבות ברזל שהבקשה שלהם אושרה עקרונית (הורים, בני זוג, ילדים 7-30 ואחים 7-18) מקבלים כאן טיפול נפשי פעם בשבוע, פרטני, זוגי, משפחתי או קבוצתי, 12 מפגשים ועוד 12 לפי הצורך. אגף השיקום משלם ישירות למכון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "grief",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "ללא עלות למשפחה במכון שבהסדר; אגף השיקום משלם ישירות למכון",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "03-5688181",
+  "email": "",
+  "website": "",
+  "how_to_apply": "פונים ישירות למכון ומביאים צילום תעודת זהות עם ספח; המכון מסדיר את התשלום מול אגף השיקום.",
+  "source_url": "https://shikum-umb.mod.gov.il/media/gdaa15vz/תפיסת-הפעלה-טיפול-נפשי-עבור-בני-משפחה-של-פצועי-צהל-וכוחות-הביטחון-מעמד-02-ו-03-חרבות-ברזל-מעודכן-15625-002-1.pdf",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי",
+  "verified_at": "",
+  "era": "iron-swords",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "maglan-org-cb4f5d",
@@ -4316,7 +4926,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "natal-org-il-f3e9cb",
@@ -4361,7 +4972,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-a0f475",
@@ -4403,7 +5015,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "idfwo-org-c2f7eb",
@@ -4446,7 +5059,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-11279f",
@@ -4491,7 +5105,8 @@ window.SERVICES = [
   "geo": [
    31.77,
    35.21
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-978de9",
@@ -4531,7 +5146,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yadlabanim-org-dd7452",
@@ -4575,7 +5191,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "tzalash-org-2f0308",
@@ -4618,7 +5235,515 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-c1ca5b",
+  "name": "קבוצה לאבות המתמודדים עם פוסט טראומה – מחוז טבריה (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית לאבות שהם נכי צה\"ל ומתמודדים עם פוסט טראומה. עוסקים בהורות לצד הפוסט טראומה, במצבים משפחתיים שמשתנים ובמציאת כוחות חדשים. עד 14 משתתפים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "מחוז טבריה",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11891",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11891",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "טבריה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   35.53
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-3aac8c",
+  "name": "קבוצה לבנות זוג של נכי צה\"ל מהעדה הדרוזית – ירכא (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית לבנות זוג של נכי צה\"ל מהעדה הדרוזית, פעם בשבוע בבניין המועצה המקומית בירכא, 12 מפגשים ועד 14 משתתפות. מדברים על תקשורת זוגית, אינטימיות, הורות ותפקידים במשפחה אחרי הפציעה, ולומדים כלים מעשיים לחוסן אישי וזוגי.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "בניין המועצה המקומית ירכא",
+  "phone": "",
+  "email": "Shikumh_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/12179",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת. בטופס מציינים גם את השם ותעודת הזהות של בן הזוג שנפצע.",
+  "source_url": "https://shikum.mod.gov.il/groups/12179",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "ירכא",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.95,
+   35.21
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-5eae8b",
+  "name": "קבוצה לבנות זוג של נכי צה\"ל מהעדה הדרוזית – מחוז טבריה (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית לבנות זוג של נכי צה\"ל מהעדה הדרוזית במחוז טבריה, פעם בשבוע למשך 12 מפגשים, עד 14 משתתפות. מקום בטוח לדבר על מה שהפציעה הביאה לזוגיות ולמשפחה ולקבל כלים מעשיים.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "מחוז טבריה (המיקום המדויק יימסר בהמשך)",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11890",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת. בטופס מציינים גם את השם ותעודת הזהות של בן הזוג שנפצע.",
+  "source_url": "https://shikum.mod.gov.il/groups/11890",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "טבריה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   35.53
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-d616ac",
+  "name": "קבוצה לבנות זוג של פצועי צה\"ל עם פוסט טראומה – קיבוץ לביא (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית בקיבוץ לביא לבנות זוג של נכי צה\"ל המוכרים עם פוסט טראומה, עד 14 משתתפות. מדברים על חוסר ודאות, תקשורת זוגית, איזון בין הטיפול בבן הזוג לצרכים שלך ועומס רגשי מול הילדים והמשפחה.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "קיבוץ לביא",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11889",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת. בטופס מציינים גם את השם ותעודת הזהות של בן הזוג שנפצע.",
+  "source_url": "https://shikum.mod.gov.il/groups/11889",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "לביא",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   35.44
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-1cf875",
+  "name": "קבוצה להורים של פצועי 'חרבות ברזל' – מחוז טבריה, מקוון ופרונטלי (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית היברידית (זום ומפגשים) לאבות ואמהות של פצועי מלחמת חרבות ברזל. מקום לדבר על הרגעים הראשונים שאחרי הפציעה, הבלבול וחוסר האונים, ולקבל כלים להתמודדות.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north",
+   "online"
+  ],
+  "location": "מחוז טבריה, מקוון ופרונטלי",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11886",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11886",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "טבריה",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords",
+  "age": [],
+  "geo": [
+   32.79,
+   35.53
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-cf8f82",
+  "name": "קבוצה מקוונת לאמהות של נכי ונכות צה\"ל (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית בזום לאמהות של נכי ונכות צה\"ל. מדברים על השינויים בחיי המשפחה אחרי הפציעה ועל איזון בין הטיפול בבן או בבת לצרכים שלך, ולומדים כלים לחידוש כוחות ולתקשורת במשפחה.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "online"
+  ],
+  "location": "מקוון",
+  "phone": "",
+  "email": "Shikumd_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/12119",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/12119",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-2833fb",
+  "name": "קבוצות טיפוליות של אגף השיקום – מחוז טבריה",
+  "category": "family-support",
+  "description": "אגף השיקום מתכנן במחוז טבריה קבוצות טיפוליות לבנות זוג של נכי צה\"ל ושל פצועי חרבות ברזל, להורים של נכים ופצועים, למתמודדים עם פוסט טראומה, לפצועי חרבות ברזל ולנכים בגיל השלישי. הקבוצות שבועיות ומונחות על ידי אנשי מקצוע.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anger",
+   "anxiety",
+   "chronic-pain",
+   "employment",
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "animals",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "jerusalem",
+   "nationwide",
+   "north",
+   "online"
+  ],
+  "location": "טבריה",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups",
+  "how_to_apply": "נכנסים לרשימת הקבוצות באתר אגף השיקום (shikum.mod.gov.il/groups), מסננים לפי מחוז טבריה ושולחים בקשת הצטרפות. לשאלות: יועצת הקבוצות במחוז טבריה במייל.",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/group-therapy",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "טבריה",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords-desc",
+  "age": [],
+  "geo": [
+   32.79,
+   35.53
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-6d1993",
+  "name": "קבוצות לבנות זוג ולהורים של נכי צה\"ל ושל פצועי 'חרבות ברזל' (אגף השיקום)",
+  "category": "family-support",
+  "description": "אגף השיקום מפעיל קבוצות טיפוליות שבועיות לבנות זוג ולהורים של נכי צה\"ל ושל פצועי חרבות ברזל, עד 14 משתתפים בקבוצה. כרגע נפתחות קבוצות בנתניה, קרית אונו, רחובות ובאר שבע, וגם קבוצות מקוונות. מדברים על השינוי בזוגיות ובמשפחה ולומדים כלים לחוסן.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "center",
+   "online",
+   "sharon",
+   "shfela",
+   "south"
+  ],
+  "location": "נתניה, קרית אונו, רחובות, באר שבע ומקוון",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups",
+  "how_to_apply": "בוחרים קבוצה ברשימה באתר אגף השיקום (shikum.mod.gov.il/groups) וממלאים טופס הצטרפות. לשאלות פונים במייל ליועצת הקבוצות במחוז (למשל מחוז דן Shikumd_kvutzot@mod.gov.il, רחובות Shikumr_kvutzot@mod.gov.il, באר שבע Shikumb_kvutzot@mod.gov.il).",
+  "source_url": "https://shikum.mod.gov.il/groups",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-565cd2",
+  "name": "קבוצת זוגות לשיפור התקשורת הזוגית לצד פוסט טראומה – תל אביב (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה לזוגות שאחד מבני הזוג מתמודד עם פוסט טראומה, בגישה קוגניטיבית התנהגותית, 9 מפגשים. לומדים איך הפוסט טראומה משפיעה על הקשר ומקבלים כלים לתקשורת וקרבה. מתאים בעיקר לזוגות בני 30 עד 40 עם ילדים.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "center"
+  ],
+  "location": "מחוז תל אביב (פרטים יפורסמו)",
+  "phone": "",
+  "email": "Shikumta_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/6011",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת. בטופס מציינים גם את פרטי בן או בת הזוג.",
+  "source_url": "https://shikum.mod.gov.il/groups/6011",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "תל אביב",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [
+   30,
+   40
+  ],
+  "geo": [
+   32.08,
+   34.78
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-75e768",
+  "name": "קבוצת יוגה טיפולית להורים של נכי צה\"ל עם פוסט טראומה (אגף השיקום)",
+  "category": "family-support",
+  "description": "קבוצה טיפולית לאמהות ואבות של נכי צה\"ל המתמודדים עם פוסט טראומה, עם כלים מהיוגה: נשימה מודעת, הרפיה וויסות חושי, לצד שיחה על האתגרים של ההורים.",
+  "provider_type": "government",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups/6243",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/6243",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-5da624",
+  "name": "שירותי חונכות לילדים של נכי צה\"ל עם פוסט טראומה, פגיעה נפשית או פגיעת ראש (אגף השיקום)",
+  "category": "family-support",
+  "description": "אגף השיקום מממן לילדים בגילאי 5 עד 18 חונך או חונכת ברוח 'אח בוגר', 4 שעות בשבוע בשני מפגשים: תמיכה רגשית, ליווי חברתי, התארגנות ולימודים, פנאי ומשחק. את החונכות נותנות חברות שבהסכם עם משרד הביטחון בכל הארץ, כמו מטב, מ.ס.ד, נתן, עמותת ידידים, ענבלים, קידום, האגודה לבריאות הציבור ועוד.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd",
+   "tbi"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "משרד הביטחון מממן את החונכות; זכאות ל-20% נכות ומעלה (או 10% אם הוכרו לפני 1996) בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/family/support/mentoring",
+  "how_to_apply": "ממלאים טופס בקשה דיגיטלי (govforms.gov.il/mw/forms/childtutor@Mod.gov.il). אחרי אישור הזכאות פונים לאחת החברות שברשימה באתר, והיא מתאימה חונך או חונכת ומקבלת הפניה מהמחוז.",
+  "source_url": "https://shikum.mod.gov.il/family/support/mentoring",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "aguda-co-il-51eff6",
@@ -4660,7 +5785,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "mishpahot-hantzaha-mod-g-54009d",
@@ -4703,7 +5829,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-b5c953",
@@ -4744,7 +5871,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "mishpahot-hantzaha-mod-g-ac4a8b",
@@ -4785,7 +5913,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-cf90e9",
@@ -4826,7 +5955,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "jewishagency-org-2acf93",
@@ -4868,7 +5998,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yasharlachayal-org-c8a54e",
@@ -4918,7 +6049,8 @@ window.SERVICES = [
   "geo": [
    31.83,
    35.36
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-66adbb",
@@ -4964,7 +6096,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-7e5880",
@@ -5009,7 +6142,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "inz-org-il-76f23f",
@@ -5058,7 +6192,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-62e3dc",
@@ -5099,7 +6234,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "behatsdaa-org-il-b27ba7",
@@ -5141,7 +6277,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-52f696",
@@ -5182,7 +6319,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-26de9b",
@@ -5223,7 +6361,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "paamonim-org-90031a",
@@ -5264,7 +6403,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-757f5b",
@@ -5307,7 +6447,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-b92b34",
@@ -5349,7 +6490,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-677d83",
@@ -5389,7 +6531,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-e8adff",
@@ -5433,7 +6576,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "paamonim-org-9e02b4",
@@ -5480,7 +6624,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ogen-org-9f492f",
@@ -5520,7 +6665,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "miluim-idf-il-c6491b",
@@ -5563,7 +6709,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ogen-org-e122c3",
@@ -5603,7 +6750,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "michaellevinlonesoldier--303e34",
@@ -5646,7 +6794,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-60a11f",
@@ -5686,7 +6835,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-efa6f3",
@@ -5727,7 +6877,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "eychut-org-il-db7f71",
@@ -5773,7 +6924,8 @@ window.SERVICES = [
   "geo": [
    32.02,
    34.78
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-bd7788",
@@ -5816,7 +6968,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-b9b962",
@@ -5859,7 +7012,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hiram-org-il-242728",
@@ -5914,7 +7068,8 @@ window.SERVICES = [
   "geo": [
    32.76,
    35.18
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-bc4772",
@@ -5959,7 +7114,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-e019e4",
@@ -5999,7 +7155,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-f2f87a",
@@ -6040,7 +7197,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-4e3d8f",
@@ -6083,7 +7241,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-da7821",
@@ -6124,7 +7283,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-bfb545",
@@ -6178,7 +7338,8 @@ window.SERVICES = [
   "geo": [
    32.05,
    34.84
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "restartglobal-org-5ee999",
@@ -6222,7 +7383,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "beitissie-org-il-8ef365",
@@ -6269,7 +7431,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hospitals-clalit-co-il-2b9fa3",
@@ -6321,7 +7484,8 @@ window.SERVICES = [
   "geo": [
    32.18,
    34.87
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "belev-echad-org-15cdf2",
@@ -6375,7 +7539,8 @@ window.SERVICES = [
   "geo": [
    32.06,
    34.86
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "b-k-inz-org-il-68f1d2",
@@ -6426,7 +7591,8 @@ window.SERVICES = [
   "geo": [
    33.01,
    35.09
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikumil-org-il-5e31b1",
@@ -6474,7 +7640,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-9a6f3c",
@@ -6515,7 +7682,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-e03e60",
@@ -6555,7 +7723,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-76e4e8",
@@ -6603,7 +7772,8 @@ window.SERVICES = [
   "geo": [
    31.94,
    34.84
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "yadsarah-org-6c5889",
@@ -6646,7 +7816,53 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "migdalor-org-il-127446",
+  "name": "מגדל אור – שיקום לעצמאות לנכי צה\"ל עם לקות ראייה (יעדים לצפון ואגף השיקום)",
+  "category": "medical-rehab",
+  "description": "מרכז 'מגדל אור' של עמותת יעדים לצפון פועל במסגרת אגף השיקום לנכים עם לקות ראייה או עיוורון. יש אבחון, הדרכה בהתמצאות וניידות עם מקל או כלב נחייה, הדרכה טכנולוגית, ייעוץ לתעסוקה ולימודים, תמיכה רגשית ופעילות חברתית כמו טיולים ורכיבה על אופני טנדם.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment",
+   "loneliness",
+   "physical-disability"
+  ],
+  "interests": [
+   "nature",
+   "tech"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "בהפניה של המרפאה במחוז באגף השיקום",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "וואטסאפ 077-7721336",
+  "email": "",
+  "website": "https://www.migdalor.org.il/",
+  "how_to_apply": "העובדת הסוציאלית באגף מפנה לאבחון במגדל אור, ואחרי דוח ההמלצות המרפאה במחוז נותנת הפניות. אפשר לפנות למרפאה במחוז (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/migdalor",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-e680e9",
@@ -6697,7 +7913,8 @@ window.SERVICES = [
   "geo": [
    32.05,
    34.84
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "feuerstein-institute-co--099754",
@@ -6745,7 +7962,107 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-a9e48d",
+  "name": "מכון שיקום N.Y.S – זרזיר",
+  "category": "medical-rehab",
+  "description": "מכון שיקום שמספק טיפולים ברפואה משלימה במסגרת סל אגף השיקום. ספק ברשימת Shikum.Me של אגף השיקום בזרזיר.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "זרזיר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "זרזיר",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.73,
+   35.22
+  ],
+  "supplier": true
+ },
+ {
+  "id": "shikum-mod-gov-il-31c7ad",
+  "name": "מרכז השיקום מרגוזה ביפו – מרכז יום לנכי צה\"ל עם פגיעת ראש (אגף השיקום ובר-אילן)",
+  "category": "medical-rehab",
+  "description": "מרכז יום שיקומי ביפו לנכי צה\"ל בגילאי 18 עד 67 עם פגיעה מוחית נרכשת. יש טיפול רגשי פרטני וקבוצתי, טיפול קוגניטיבי, סדנאות משתלה, מחשבים, נגרות, קרמיקה ומקהלה, קבוצות העשרה, ספורט, טיולים ותמיכה לבני המשפחה. פתוח בימים א'-ה' 8:00-14:00 (ג' וה' עד 16:00).",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment",
+   "loneliness",
+   "tbi"
+  ],
+  "interests": [
+   "art",
+   "crafts",
+   "music"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "מסגרת של אגף השיקום",
+  "regions": [
+   "center"
+  ],
+  "location": "יהודה מרגוזה 13, יפו",
+  "phone": "03-6821285",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
+  "how_to_apply": "פונים ישירות למרכז (03-6821285) או לעובדת השיקום במחוז דרך האזור האישי.",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/workshops",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "intensive",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "תל אביב",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [
+   18,
+   67
+  ],
+  "geo": [
+   32.05,
+   34.76
+  ],
+  "supplier": false
  },
  {
   "id": "s-d65cd7",
@@ -6797,7 +8114,8 @@ window.SERVICES = [
   "geo": [
    31.79,
    35.24
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "tasmc-org-il-d5ca4c",
@@ -6845,7 +8163,106 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.79
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-f5bc27",
+  "name": "מרפאה שיקומית לזעזוע מוח ופגיעת ראש קלה – בית החולים פוריה, טבריה (אגף השיקום)",
+  "category": "medical-rehab",
+  "description": "אשפוז יום שיקומי לנכי צה\"ל אחרי זעזוע מוח או חבלה מוחית קלה עם תסמינים שמקשים לחזור לשגרה, כמו כאבי ראש, סחרחורת, קשיי ריכוז וזיכרון, חרדה ושינה. צוות של רופא שיקום, ריפוי בעיסוק, פיזיותרפיה, פסיכולוגיה ואחות כאב. עדיף בשלושת החודשים הראשונים אחרי הפגיעה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "sleep",
+   "tbi"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "בהפניה של אגף השיקום לחבילת טיפול, באישור הרופא המחוזי",
+  "regions": [
+   "center",
+   "north"
+  ],
+  "location": "בית החולים פוריה, רמת פוריה",
+  "phone": "04-6654343; 04-6654300",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/medical/treatment/head-clinics",
+  "how_to_apply": "פונים למרפאה במחוז שלך באגף השיקום (myshikum.mod.gov.il/universalRequest/2/2); אחרי אישור הרופא המחוזי מופקת הפניה.",
+  "source_url": "https://shikum.mod.gov.il/medical/treatment/head-clinics",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "intensive",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "פוריה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.75,
+   35.54
+  ],
+  "supplier": false
+ },
+ {
+  "id": "s-8f5ad3",
+  "name": "נביעה – הידרותרפיה ובריכה טיפולית",
+  "category": "medical-rehab",
+  "description": "טיפולי הידרותרפיה פרטניים בבריכה טיפולית בשילה. טיפול במים חמימים שעוזר לגוף להשתחרר, לנוע ולהתחזק.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body",
+   "sea"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "שילה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "שילה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.05,
+   35.29
+  ],
+  "supplier": true
  },
  {
   "id": "s-b0d63b",
@@ -6896,7 +8313,8 @@ window.SERVICES = [
   "geo": [
    32.0,
    34.95
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-0fc55e",
@@ -6946,7 +8364,8 @@ window.SERVICES = [
   "age": [
    18,
    120
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "adi-rehab-org-6d1a96",
@@ -7000,7 +8419,8 @@ window.SERVICES = [
   "geo": [
    31.3,
    34.6
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-352bd3",
@@ -7043,7 +8463,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-fee0a6",
@@ -7088,7 +8509,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "reuth-org-il-545599",
@@ -7136,7 +8558,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.79
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "israelparasport-org-298d3c",
@@ -7189,7 +8612,8 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-b595ef",
@@ -7231,7 +8655,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-2244d7",
@@ -7272,7 +8697,53 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-b26c1f",
+  "name": "\"חוזרים לקירבה\" – קבוצה על אינטימיות, מיניות וזוגיות לצד פוסט טראומה – רחובות (אגף השיקום)",
+  "category": "mental-health",
+  "description": "קבוצה טיפולית למתמודדים עם ההשפעה של הפוסט טראומה על אינטימיות, מיניות, זוגיות ודימוי עצמי. מדברים על הקשר בין גוף לנפש, על השפעת הטראומה והתרופות על החשק, ועל בניית תקשורת אינטימית.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "shfela"
+  ],
+  "location": "מחוז רחובות",
+  "phone": "",
+  "email": "Shikumr_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/6131",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/6131",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "רחובות",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.89,
+   34.81
+  ],
+  "supplier": false
  },
  {
   "id": "seven-plus-org-il-435acd",
@@ -7318,7 +8789,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "anatta-org-il-e58b94",
@@ -7362,7 +8834,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ica-org-il-1ca6c6",
@@ -7412,7 +8885,8 @@ window.SERVICES = [
   "geo": [
    32.33,
    34.86
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "inheal-org-251184",
@@ -7463,7 +8937,8 @@ window.SERVICES = [
   "geo": [
    32.02,
    34.75
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "clinicaltrials-gov-1ea216",
@@ -7509,7 +8984,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "rising-heroes-org-2a53a6",
@@ -7556,7 +9032,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "newhorizon-org-il-aefd79",
@@ -7610,7 +9087,8 @@ window.SERVICES = [
   "geo": [
    32.09,
    34.83
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "barak-188-com-d961b3",
@@ -7650,7 +9128,292 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "rammot-co-il-b28228",
+  "name": "אחלמה – בית מאזן בחדרה",
+  "category": "mental-health",
+  "description": "בית מאזן בסמטת החאן 6 בחדרה, בשכונה שקטה. כולל טיפול פסיכיאטרי ופסיכוסוציאלי, טיפול תרופתי וטיפול רגשי, עם פסיכיאטר, מדריכים, עובדים סוציאליים ואחיות. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "sharon"
+  ],
+  "location": "סמטת החאן 6, חדרה",
+  "phone": "",
+  "email": "",
+  "website": "https://rammot.co.il/service/%D7%91%D7%99%D7%AA-%D7%9E%D7%90%D7%96%D7%9F-%D7%90%D7%97%D7%9C%D7%9E%D7%94/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "חדרה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.43,
+   34.92
+  ],
+  "supplier": false
+ },
+ {
+  "id": "izunefesh-com-48087e",
+  "name": "איזונפש – בית האקליפטוס ובית העוגן, בתים מאזנים ביבנה",
+  "category": "mental-health",
+  "description": "שני בתים מאזנים של איזונפש ביבנה (רחוב האקליפטוס 23 ורחוב הסירה 6), לגברים ולנשים במשבר נפשי אקוטי, עם פסיכיאטר, עובדים סוציאליים, אחיות ומדריכים לאורך כל היממה. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "shfela"
+  ],
+  "location": "האקליפטוס 23 / הסירה 6, יבנה",
+  "phone": "",
+  "email": "",
+  "website": "https://izunefesh.com/%d7%91%d7%99%d7%aa-%d7%94%d7%90%d7%a7%d7%9c%d7%99%d7%a4%d7%98%d7%95%d7%a1-%d7%99%d7%91%d7%a0%d7%94/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "יבנה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.88,
+   34.74
+  ],
+  "supplier": false
+ },
+ {
+  "id": "izunefesh-com-891c88",
+  "name": "איזונפש – בתים מאזנים לתחלואה כפולה (אבן יהודה ובני דרור)",
+  "category": "mental-health",
+  "description": "שני בתים מאזנים של איזונפש למתמודדים עם התמכרות לצד קושי נפשי (תחלואה כפולה), בית ההדרים באבן יהודה ובית האלונים בבני דרור. יש מענה להתמכרויות כולל גמילה, איזון נפשי, טיפולים פרטניים וקבוצתיים ותרגול מיומנויות חיים. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "addiction",
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "sharon"
+  ],
+  "location": "דגן פינת ההדרים, אבן יהודה; רימון 7, בני דרור",
+  "phone": "",
+  "email": "",
+  "website": "https://izunefesh.com/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "אבן יהודה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.27,
+   34.89
+  ],
+  "supplier": false
+ },
+ {
+  "id": "almarecoveryhome-co-il-3024e9",
+  "name": "אלמה – בית מאזן לנשים בתל אביב",
+  "category": "mental-health",
+  "description": "בית מאזן לנשים בלבד ברחוב צה\"ל 2 בתל אביב, חלופה לאשפוז עם צוות רב מקצועי: פסיכיאטר, פסיכותרפיסטית, פסיכולוגית קלינית, עובדת סוציאלית ומטפלת באמנות. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "center"
+  ],
+  "location": "רחוב צה\"ל 2, תל אביב",
+  "phone": "",
+  "email": "",
+  "website": "https://almarecoveryhome.co.il/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "תל אביב",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.08,
+   34.78
+  ],
+  "supplier": false
+ },
+ {
+  "id": "new-afik-com-e2c758",
+  "name": "אפיק חדש – בית מאזן בקריית אתא",
+  "category": "mental-health",
+  "description": "בית מאזן בבית קרקע עם חצר וגינה ברחוב ביאליק 11 בקריית אתא. ליווי צמוד לאורך כל היממה, שיחה שבועית עם פסיכיאטר, טיפולים פרטניים וכלים להתמודדות עם מצבי קצה. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "haifa"
+  ],
+  "location": "ביאליק 11, קריית אתא",
+  "phone": "",
+  "email": "",
+  "website": "https://www.new-afik.com/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "קריית אתא",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.81,
+   35.11
+  ],
+  "supplier": false
+ },
+ {
+  "id": "enosh-org-il-733ad3",
+  "name": "בית גומא של אנוש – בית מאזן לנשים בירושלים",
+  "category": "mental-health",
+  "description": "בית מאזן של אנוש לנשים בלבד ברחוב ארתור הנטקה 28 בירושלים, עד 12 דיירות. ניהול משבר דרך ליווי, טיפול ותמיכה, עם צוות שזמין לאורך כל היממה. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "jerusalem",
+   "shfela"
+  ],
+  "location": "ארתור הנטקה 28, ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "https://www.enosh.org.il/%D7%91%D7%99%D7%AA-%D7%9E%D7%90%D7%96%D7%9F-%D7%9C%D7%A0%D7%A9%D7%99%D7%9D/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ירושלים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.75,
+   35.17
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-fd2a9b",
@@ -7702,7 +9465,8 @@ window.SERVICES = [
   "geo": [
    31.25,
    34.79
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "bait-bateva-co-il-c511d0",
@@ -7755,7 +9519,8 @@ window.SERVICES = [
   "geo": [
    31.73,
    35.07
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-a17284",
@@ -7801,7 +9566,106 @@ window.SERVICES = [
   "geo": [
    32.68,
    35.24
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shany-co-il-116a6d",
+  "name": "בית מעגן – בית מעבר לנכי צה\"ל עם פוסט טראומה בחופית (אגף השיקום ושני בקהילה)",
+  "category": "mental-health",
+  "description": "בית מעבר ביישוב חופית בעמק חפר, 20 דקות הליכה מהים, לנכי ונכות צה\"ל עם פוסט טראומה במשבר פסיכו סוציאלי, למשל כשקשה להישאר בבית בגלל משבר במשפחה. עד 10 דיירים, לינה ופנסיון מלא, טיפול פרטני וקבוצתי, טבע תרפיה, פסיכודרמה, מוזיקה ויוגה. אפשר לשהות עד 3 חודשים ואחר כך יש ליווי.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "depression",
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [
+   "music",
+   "nature",
+   "sea"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "השהות ללא עלות, כחלק ממעטפת התמיכה של אגף השיקום",
+  "regions": [
+   "sharon"
+  ],
+  "location": "חופית, עמק חפר",
+  "phone": "",
+  "email": "",
+  "website": "https://shany.co.il/maagan/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) מעובדת השיקום במחוז, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/3).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/maavar_housing",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "housing",
+  "intensity": "residential",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "חופית",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.38,
+   34.86
+  ],
+  "supplier": false
+ },
+ {
+  "id": "hiram-org-il-c1a14d",
+  "name": "בית עלמה של חירם – בית מאזן בקיבוץ הרדוף",
+  "category": "mental-health",
+  "description": "בית מאזן של חירם בקיבוץ הרדוף, בסביבה כפרית וירוקה, עם סדנאות טיפוליות ופעילויות קבוצתיות. בצוות פסיכולוג, עובדות סוציאליות ואחות. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "north",
+   "south"
+  ],
+  "location": "קיבוץ הרדוף",
+  "phone": "",
+  "email": "",
+  "website": "https://hiram.org.il/beit-alma/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "הרדוף",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.76,
+   35.18
+  ],
+  "supplier": false
  },
  {
   "id": "enosh-org-il-cacc2f",
@@ -7856,7 +9720,55 @@ window.SERVICES = [
   "geo": [
    31.89,
    34.81
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "homeforhope-co-il-8342da",
+  "name": "בית של תקווה – בתים מאזנים בכרמיאל",
+  "category": "mental-health",
+  "description": "שני בתים מאזנים בכרמיאל (רחוב גמלא 12 ורחוב הדס 96). סדר יום פעיל של סדנאות, טיפול קבוצתי, יוגה ופסיכותרפיה, עם פסיכיאטרים, תרפיסטים, מרפאות בעיסוק, עובדים סוציאליים ואחות. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "north"
+  ],
+  "location": "גמלא 12 / הדס 96, כרמיאל",
+  "phone": "",
+  "email": "",
+  "website": "https://homeforhope.co.il/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "כרמיאל",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.92,
+   35.3
+  ],
+  "supplier": false
  },
  {
   "id": "maccabi4u-co-il-f97ae5",
@@ -7901,7 +9813,55 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "izun-org-il-ec0f36",
+  "name": "דרך האמצע – בתים מאזנים בקיסריה",
+  "category": "mental-health",
+  "description": "שני בתים מאזנים בקיסריה (רחוב חבצלת 2 ורחוב דרור 15), קרובים לטבע. יש סדר יום פעיל עם טיפול קבוצתי, נגינה, כתיבה, גינון ואמנות, וצוות עם פסיכיאטר ופסיכולוגים. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "sharon"
+  ],
+  "location": "חבצלת 2 / דרור 15, קיסריה",
+  "phone": "",
+  "email": "",
+  "website": "https://izun.org.il/therapy-spaces/%d7%9e%d7%a2%d7%a8%d7%9a-%d7%94%d7%91%d7%aa%d7%99%d7%9d-%d7%94%d7%9e%d7%90%d7%96%d7%a0%d7%99%d7%9d/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "קיסריה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.5,
+   34.9
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-680532",
@@ -7948,7 +9908,8 @@ window.SERVICES = [
   "geo": [
    32.05,
    34.84
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "backtolife-org-il-be02f9",
@@ -7996,7 +9957,8 @@ window.SERVICES = [
   "geo": [
    32.16,
    34.84
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-6efac0",
@@ -8049,7 +10011,8 @@ window.SERVICES = [
   "geo": [
    32.09,
    34.88
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "hamakom-ngo-15edab",
@@ -8095,7 +10058,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "icc-haifa-ac-il-aa368e",
@@ -8144,7 +10108,8 @@ window.SERVICES = [
   "geo": [
    32.76,
    35.02
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "israeltraumacoalition-or-c9ab2a",
@@ -8190,7 +10155,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "socsci4-tau-ac-il-ff99e5",
@@ -8240,7 +10206,8 @@ window.SERVICES = [
   "geo": [
    32.11,
    34.8
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "zaka-org-il-aaf3bf",
@@ -8282,7 +10249,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "1221-org-il-32fc9e",
@@ -8323,7 +10291,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shual-f-org-il-f53d53",
@@ -8364,7 +10333,93 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "prism-il-com-a7e782",
+  "name": "טיפול Prism (נוירו-פידבק) לפוסט טראומה במימון אגף השיקום",
+  "category": "mental-health",
+  "description": "טיפול לא פולשני בנוירו פידבק שבו חובשים כובע עם חיישני EEG ולומדים לווסת את הפעילות המוחית שקשורה לתסמיני פוסט טראומה. 15 מפגשים במרפאה, בדרך כלל פעמיים בשבוע במשך 8 שבועות, בלי תרופות ובלי חשיפה מחודשת לאירוע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "בהתחייבות (הפניה) של אגף השיקום, באישור רופא מומחה ואחרי שטיפולים מקובלים לא עזרו מספיק",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://prism-il.com/",
+  "how_to_apply": "שולחים למרפאה במחוז המלצה לטיפול מרופא מומחה שמטפל בך (myshikum.mod.gov.il/universalRequest/1/1) ומקבלים התחייבות.",
+  "source_url": "https://shikum.mod.gov.il/medical/treatment/ptsd",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-77ce26",
+  "name": "טיפול בתפקוד האינטימי ובזוגיות לנכי צה\"ל (אגף השיקום)",
+  "category": "mental-health",
+  "description": "מימון לטיפול אצל מטפלים מוסמכים בתחום האינטימיות, לבד או כזוג: הבנת הגוף, תקשורת זוגית, חרדות סביב אינטימיות ודימוי גוף, ולפי הצורך גם טיפול תרופתי. מתחילים באבחון במרפאה ייעודית בבית חולים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "family-relations",
+   "ptsd",
+   "tbi"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "זכאות: פגיעה מוכרת בתפקוד המיני, או 30%+ נכות נפשית/פוסט טראומה, או 40%+ בפגיעת ראש",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/medical/treatment/intimacy-therapy",
+  "how_to_apply": "מפיקים התחייבות לאבחון באחת המרפאות בבתי החולים דרך האזור האישי (myshikum.mod.gov.il/self-service-referrals) או דרך המרפאה במחוז, ואז התחייבות לטיפולים לפי ההמלצות.",
+  "source_url": "https://shikum.mod.gov.il/medical/treatment/intimacy-therapy",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-f802c3",
@@ -8411,7 +10466,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "icc-haifa-ac-il-f7c8d4",
@@ -8459,7 +10515,8 @@ window.SERVICES = [
   "geo": [
    32.76,
    35.02
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-61bb79",
@@ -8509,7 +10566,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-ae2f06",
@@ -8555,7 +10613,52 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-18cab6",
+  "name": "יחידת דרור – ליווי שבים מהשבי ובני משפחותיהם (אגף השיקום)",
+  "category": "mental-health",
+  "description": "יחידה של אגף השיקום, עם עובדות סוציאליות ומטפלים שמתמחים בטראומה, שמלווה אנשי כוחות ביטחון, כיתות כוננות, אנשי קבע ומילואים שחזרו מהשבי, וגם את בני המשפחה מהמעגל הראשון. כל שב מלווה אישית לאורך כל החיים, עם טיפול נפשי, טרום שיקום, לימודים, תעסוקה ומיצוי זכויות.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "mod-recognized",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "family-relations",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "השבים מוכרים לפחות ב-50% נכות לצמיתות לפי חוק פדויי שבי",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/about/harvot-barzel/dror",
+  "how_to_apply": "אנשי היחידה יוצרים קשר ראשוני ומתאמים ביקור בית סמוך לשחרור מהשירות; פרטי ההתקשרות נמסרים במפגש.",
+  "source_url": "https://shikum.mod.gov.il/about/harvot-barzel/dror",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "meuhedet-co-il-ace6c3",
@@ -8600,7 +10703,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-0bfef9",
@@ -8649,7 +10753,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "669-org-il-a11cf6",
@@ -8692,7 +10797,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "metiv-org-62ab60",
@@ -8743,7 +10849,102 @@ window.SERVICES = [
   "geo": [
    31.79,
    35.19
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "massaha-org-il-1480fa",
+  "name": "מסאחה – בית מאזן לדוברי ערבית בסוואעד חמירה",
+  "category": "mental-health",
+  "description": "בית מאזן בסוואעד חמירה שמיועד למטופלים דוברי ערבית, עם הפרדה בין נשים לגברים. יש סדר יום של סדנאות עבודה, טיפולים, שיחות קבוצתיות, אמנות וטיולים בטבע, וצוות עם פסיכיאטרית, פסיכולוגים ואחות. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "north"
+  ],
+  "location": "סוואעד חמירה",
+  "phone": "",
+  "email": "",
+  "website": "https://massaha.org.il/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "סוואעד חמירה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.8,
+   35.24
+  ],
+  "supplier": false
+ },
+ {
+  "id": "mymc-co-il-8870a8",
+  "name": "מעייני הישועה – בית מאזן לגברים בלוד (מותאם לציבור החרדי והדתי)",
+  "category": "mental-health",
+  "description": "בית מאזן לגברים בלבד ברחוב רבקה אמנו 38 בלוד, שמותאם לציבור החרדי והדתי ומשלב טיפול בסביבה שומרת תורה ומצוות. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "center"
+  ],
+  "location": "רבקה אמנו 38, לוד",
+  "phone": "",
+  "email": "",
+  "website": "https://www.mymc.co.il/mental-health/beit-maazan/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "לוד",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.95,
+   34.89
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-ca1087",
@@ -8794,7 +10995,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-03e535",
@@ -8835,7 +11037,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "tasmc-org-il-e92888",
@@ -8886,7 +11089,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.79
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "lonesoldiercenter-com-6cbf32",
@@ -8933,7 +11137,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-800178",
@@ -8981,7 +11186,8 @@ window.SERVICES = [
   "geo": [
    31.28,
    34.42
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-fd7702",
@@ -9029,7 +11235,8 @@ window.SERVICES = [
   "geo": [
    31.52,
    34.6
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "invisiblealbum-com-d049ec",
@@ -9076,7 +11283,8 @@ window.SERVICES = [
   "geo": [
    32.33,
    34.86
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "nivnirelcenter-org-f83654",
@@ -9126,7 +11334,8 @@ window.SERVICES = [
   "geo": [
    32.36,
    34.87
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "aguda-co-il-bbda02",
@@ -9174,7 +11383,8 @@ window.SERVICES = [
   "geo": [
    32.09,
    34.83
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "me-health-gov-il-cc17e9",
@@ -9221,7 +11431,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "cohenveteransnetwork-org-fe5188",
@@ -9274,7 +11485,8 @@ window.SERVICES = [
   "geo": [
    31.9,
    35.01
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "hospitals-clalit-co-il-86c8bc",
@@ -9329,7 +11541,8 @@ window.SERVICES = [
   "geo": [
    32.15,
    34.89
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-d60045",
@@ -9379,7 +11592,8 @@ window.SERVICES = [
   "geo": [
    32.02,
    34.75
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "natal-org-il-e05ae2",
@@ -9434,7 +11648,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.78
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "metiv-org-fd5b53",
@@ -9482,7 +11697,8 @@ window.SERVICES = [
   "geo": [
    31.77,
    35.21
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "clinicaltrials-gov-b9eb82",
@@ -9529,7 +11745,56 @@ window.SERVICES = [
   "geo": [
    32.61,
    35.29
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "soteria-org-il-90bb2b",
+  "name": "סוטריה ירושלים – בית מאזן לגברים",
+  "category": "mental-health",
+  "description": "בית סוטריה ברחוב דוסתאי 12 בירושלים, לגברים בלבד. טיפול תומך עם פעילות יומית כמו יוגה, מיינדפולנס וטיפול באמנות, ובישול משותף עם הדיירים. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "jerusalem",
+   "sharon"
+  ],
+  "location": "דוסתאי 12, ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "https://www.soteria.org.il/jerusalem",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "ירושלים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.2
+  ],
+  "supplier": false
  },
  {
   "id": "israel-stellacenter-com-356694",
@@ -9581,7 +11846,8 @@ window.SERVICES = [
   "age": [
    18,
    120
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-bfaaca",
@@ -9625,7 +11891,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ezermizion-org-f09662",
@@ -9667,7 +11934,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yahalomfoundation-com-3e8eec",
@@ -9709,7 +11977,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "emdr-org-il-b37aa3",
@@ -9752,7 +12021,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "helemkrav-org-il-0ecceb",
@@ -9800,7 +12070,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "amcha-org-aa11a3",
@@ -9845,7 +12116,94 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-1b5856",
+  "name": "קבוצה לנכי צה\"ל המתמודדים עם כאב כרוני – רחובות (אגף השיקום)",
+  "category": "mental-health",
+  "description": "קבוצה טיפולית לנכי ונכות צה\"ל שחיים עם כאב גופני מתמשך. לומדים כלים למניעת כאב ולהתמודדות עם ההשפעה שלו על העבודה, המשפחה, השינה והתפקוד.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "sleep"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "shfela"
+  ],
+  "location": "מחוז רחובות",
+  "phone": "",
+  "email": "Shikumr_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11760",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11760",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "רחובות",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.89,
+   34.81
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-8e91f9",
+  "name": "קבוצה מקוונת לניהול כעסים למתמודדים עם פוסט טראומה (אגף השיקום)",
+  "category": "mental-health",
+  "description": "קבוצות טיפוליות בזום לנכי צה\"ל המתמודדים עם פוסט טראומה וכעס. לומדים להבין את מנגנון הכעס, לקבל כלים למניעת התפרצויות ולחזור לתחושת ביטחון ושליטה. נפתחות כמה קבוצות במהלך השנה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anger",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "online"
+  ],
+  "location": "מקוון",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11623",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "crossroadsjerusalem-org-c183e3",
@@ -9893,7 +12251,8 @@ window.SERVICES = [
   "geo": [
    31.78,
    35.22
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "crossroadsjerusalem-org-4c6699",
@@ -9939,7 +12298,8 @@ window.SERVICES = [
   "geo": [
    31.78,
    35.22
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "regaim-home-com-105a7e",
@@ -9996,7 +12356,56 @@ window.SERVICES = [
   "geo": [
    32.68,
    35.24
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "ruahyam-com-e060d0",
+  "name": "רוח ים – בית מאזן בהרצליה",
+  "category": "mental-health",
+  "description": "בית מאזן ברמת ים 77 בהרצליה, שמתמחה בטראומה, במשברים פסיכוטיים ובתחלואה כפולה. כולל פסיכותרפיה אינטנסיבית ואיזון תרופתי. הבית פתוח לכלל האוכלוסייה ומוכר על ידי משרד הבריאות; דרך אגף השיקום הוא מיועד למי שבתהליך הכרה על פגיעה נפשית ועוד לא קיבל הכרה עקרונית. אפשר לשהות עד 3 חודשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "civilians",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "addiction",
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "דרך אגף השיקום השהות ללא עלות, לפי תנאי הזכאות ובהפניה של המרפאה המחוזית",
+  "regions": [
+   "sharon"
+  ],
+  "location": "רמת ים 77, הרצליה",
+  "phone": "",
+  "email": "",
+  "website": "https://ruahyam.com/",
+  "how_to_apply": "מבקשים הפניה (התחייבות) לבית מאזן מהמרפאה במחוז שלך באגף השיקום, דרך האזור האישי (myshikum.mod.gov.il/universalRequest/2/2).",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/balancing-house",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "residential",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "הרצליה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.16,
+   34.84
+  ],
+  "supplier": false
  },
  {
   "id": "retorno-org-il-a0c306",
@@ -10045,7 +12454,8 @@ window.SERVICES = [
   "geo": [
    31.76,
    34.99
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "retorno-org-df937f",
@@ -10101,7 +12511,8 @@ window.SERVICES = [
   "geo": [
    31.76,
    34.99
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-d71edb",
@@ -10144,7 +12555,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-1a9249",
@@ -10189,7 +12601,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "drorprogram-org-il-4ac6d6",
@@ -10240,7 +12653,8 @@ window.SERVICES = [
   "geo": [
    31.77,
    35.21
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "apps-apple-com-abd84b",
@@ -10289,7 +12703,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "orev-family-com-ae7fc4",
@@ -10329,7 +12744,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-73e470",
@@ -10376,7 +12792,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "invisiblealbum-com-4c0a62",
@@ -10419,7 +12836,8 @@ window.SERVICES = [
   "town": "האלפים, צרפת",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "bshvil-org-b71303",
@@ -10466,7 +12884,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "natureisrael-org-2582ca",
@@ -10510,7 +12929,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "inz-org-il-698f2c",
@@ -10555,7 +12975,8 @@ window.SERVICES = [
   "town": "חו\"ל",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "namer-org-il-15a309",
@@ -10603,7 +13024,8 @@ window.SERVICES = [
   "geo": [
    32.69,
    34.94
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "belev-echad-org-ba6e96",
@@ -10648,7 +13070,8 @@ window.SERVICES = [
   "town": "ארה\"ב",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "egoz-org-il-5ba6c7",
@@ -10698,7 +13121,8 @@ window.SERVICES = [
   "geo": [
    32.06,
    34.83
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "yadlashiryon-com-758693",
@@ -10741,7 +13165,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-94ba7f",
@@ -10786,7 +13211,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "jnf-org-8fe538",
@@ -10831,7 +13257,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "inheal-org-df6ace",
@@ -10876,7 +13303,8 @@ window.SERVICES = [
   "age": [
    24,
    120
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "trauma4good-org-8d93cb",
@@ -10927,7 +13355,8 @@ window.SERVICES = [
   "geo": [
    32.16,
    34.8
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "achimlachaim-org-dd5002",
@@ -10985,7 +13414,8 @@ window.SERVICES = [
   "geo": [
    31.98,
    34.92
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "inz-org-il-7a3d4b",
@@ -11031,7 +13461,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "invisiblealbum-com-80192d",
@@ -11081,7 +13512,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "inz-org-il-a865b4",
@@ -11130,7 +13562,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "eye2eye-org-il-ac9ecf",
@@ -11180,7 +13613,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "achimlachaim-org-37cae0",
@@ -11229,7 +13663,8 @@ window.SERVICES = [
   "geo": [
    31.98,
    34.92
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "ourbrothers-co-il-6994a2",
@@ -11274,7 +13709,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ha-gesher-co-il-81299b",
@@ -11323,7 +13759,51 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-77b57f",
+  "name": "חונכות אישית לנכי צה\"ל (אגף השיקום)",
+  "category": "peer-support",
+  "description": "חונך או חונכת לליווי אישי שעוזרים לשפר מיומנויות חברתיות, להשתלב בלימודים, בעבודה ובקהילה ולשמור על תפקוד. התוכן והתדירות נקבעים לפי הצורך שלך, והחונכות ניתנת דרך חברות חיצוניות שבהסכם עם האגף.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment",
+   "loneliness",
+   "ptsd",
+   "tbi"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "זכאות ל-20% נכות ומעלה בגלל פגיעת ראש או פגיעה נפשית, או ל-100% / 100%+ בכל סוג פגיעה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/rehabilitation/vocational/tutoring",
+  "how_to_apply": "פונים קודם לעובדת השיקום במחוז כדי לוודא זכאות (myshikum.mod.gov.il/universalRequest/1/11), ואז אפשר לקבל את השירות דרך אחת החברות שברשימה.",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/tutoring",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "tribeofnova-com-906b39",
@@ -11371,7 +13851,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "kfarm-co-il-830ee5",
@@ -11421,7 +13902,8 @@ window.SERVICES = [
   "geo": [
    33.07,
    35.14
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "israelh2h-org-e1caeb",
@@ -11475,7 +13957,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "lonesoldiercenter-com-f9e0b1",
@@ -11518,7 +14001,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yamas-org-il-50e4ef",
@@ -11559,7 +14043,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "metiv-org-fcc03b",
@@ -11604,7 +14089,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "maglan-org-216650",
@@ -11648,7 +14134,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "achimlachaim-org-a71e60",
@@ -11692,7 +14179,8 @@ window.SERVICES = [
   "town": "חו\"ל",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "nbn-org-il-61e022",
@@ -11740,7 +14228,8 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.79
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "duvdevanfoundation-org-d09969",
@@ -11791,7 +14280,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-78adbb",
@@ -11836,7 +14326,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-d5816c",
@@ -11880,7 +14371,53 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-f047cd",
+  "name": "קבוצה לנכי צה\"ל בגיל השלישי – קיבוץ לביא (אגף השיקום)",
+  "category": "peer-support",
+  "description": "קבוצה טיפולית לנכי ונכות צה\"ל בגיל השלישי בקיבוץ לביא. מדברים על שינויים רגשיים ופיזיים, מצבים משפחתיים וחברתיים ומציאת משמעות, ולומדים כלים לחוסן.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "depression",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "קיבוץ לביא",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11887",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11887",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "לביא",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   35.44
+  ],
+  "supplier": false
  },
  {
   "id": "kehilat-or-org-il-d0f0b2",
@@ -11927,7 +14464,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "thenextstep-org-il-ade752",
@@ -11977,7 +14515,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "atalef-com-01967e",
@@ -12026,7 +14565,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "tribeofnova-com-159d35",
@@ -12073,7 +14613,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "helptsd-org-a24290",
@@ -12117,7 +14658,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-19a8a2",
@@ -12162,7 +14704,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "kavlevanon-org-il-4cf1f6",
@@ -12206,7 +14749,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "older",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "dannysfarm-org-il-0ca12f",
@@ -12258,7 +14802,8 @@ window.SERVICES = [
   "geo": [
    31.88,
    34.83
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-016bf1",
@@ -12314,7 +14859,8 @@ window.SERVICES = [
   "geo": [
    32.02,
    34.86
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "vertigo-org-il-a2394e",
@@ -12368,7 +14914,8 @@ window.SERVICES = [
   "geo": [
    31.69,
    34.98
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "back2life-org-il-ac9911",
@@ -12426,7 +14973,58 @@ window.SERVICES = [
   "geo": [
    32.49,
    34.89
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "cavaliero-co-il-da54bb",
+  "name": "חוות חוסן קבליירו בפארק – רמת גן (חווה שיקומית של אגף השיקום)",
+  "category": "rehab-farm",
+  "description": "חווה שיקומית בפארק הלאומי ברמת גן שפועלת בשיתוף אגף השיקום. התוכנית כוללת טיפול בעזרת סוסים, רכיבה טיפולית, עבודה עם האדמה והצמחים וסדנאות יצירה, עם צוות מטפלים. יש ימים נפרדים לפצועי מלחמת התקומה ולנכים ותיקים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "animals",
+   "art",
+   "nature"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "בהפניה של אגף השיקום, כחלק מתוכנית החוות השיקומיות",
+  "regions": [
+   "center"
+  ],
+  "location": "הפארק הלאומי, רמת גן",
+  "phone": "",
+  "email": "",
+  "website": "https://cavaliero.co.il/resilience-farm/",
+  "how_to_apply": "פונים לאשת הקשר האישית שלך באגף השיקום או לעובדת הסוציאלית במחוז.",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/farms-therapy",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "רמת גן",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords-desc",
+  "age": [],
+  "geo": [
+   32.07,
+   34.82
+  ],
+  "supplier": false
  },
  {
   "id": "unitywarriors-org-f03450",
@@ -12480,7 +15078,8 @@ window.SERVICES = [
   "geo": [
    31.72,
    35.17
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "havatrom-co-il-751df8",
@@ -12530,7 +15129,8 @@ window.SERVICES = [
   "geo": [
    32.92,
    35.3
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "rimon-farm-org-il-c84ffb",
@@ -12585,7 +15185,8 @@ window.SERVICES = [
   "geo": [
    31.38,
    34.87
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "rimon-farm-org-il-b2586a",
@@ -12636,7 +15237,8 @@ window.SERVICES = [
   "geo": [
    31.53,
    34.91
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-ae6b61",
@@ -12684,7 +15286,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "kfarsarah-com-b02de6",
@@ -12737,7 +15340,8 @@ window.SERVICES = [
   "geo": [
    32.69,
    34.94
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "adi-rehab-org-5ac2f1",
@@ -12786,7 +15390,8 @@ window.SERVICES = [
   "geo": [
    31.31,
    34.62
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "irgun-org-il-ac236a",
@@ -12829,7 +15434,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-40b69b",
@@ -12872,7 +15478,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-dc02bb",
@@ -12916,7 +15523,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-22016b",
@@ -12965,7 +15573,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "histadrut-org-il-c2f25e",
@@ -13006,7 +15615,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-855b96",
@@ -13050,7 +15660,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-4659a6",
@@ -13095,7 +15706,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-12749c",
@@ -13136,7 +15748,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "ono-ac-il-68a91e",
@@ -13181,7 +15794,8 @@ window.SERVICES = [
   "geo": [
    32.06,
    34.86
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "ono-ac-il-ad829a",
@@ -13232,7 +15846,8 @@ window.SERVICES = [
   "geo": [
    32.06,
    34.86
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "miluimnikim-org-069933",
@@ -13275,7 +15890,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-3b7077",
@@ -13318,7 +15934,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-d8fd54",
@@ -13364,7 +15981,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-ecf25e",
@@ -13405,7 +16023,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-253d8d",
@@ -13449,7 +16068,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "lohamim-org-il-77ef22",
@@ -13493,7 +16113,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "yamas-org-il-4a7d0f",
@@ -13537,7 +16158,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-ff9abe",
@@ -13580,7 +16202,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "miluim-helper-com-23803d",
@@ -13622,7 +16245,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-c3ea9e",
@@ -13667,7 +16291,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-45dfba",
@@ -13717,7 +16342,8 @@ window.SERVICES = [
   "geo": [
    32.09,
    34.89
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-5af3f4",
@@ -13759,7 +16385,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "mod-gov-il-7491f8",
@@ -13800,7 +16427,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-9993b4",
@@ -13841,7 +16469,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "api-miluim-idf-il-6f6e29",
@@ -13880,7 +16509,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-038b6f",
@@ -13923,7 +16553,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-368e37",
@@ -13966,7 +16597,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "israelbar-org-il-ddeda0",
@@ -14009,7 +16641,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "btl-gov-il-5fe861",
@@ -14052,7 +16685,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "magenisrael-org-il-6d4d62",
@@ -14095,7 +16729,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-app-ca9a4f",
@@ -14141,7 +16776,8 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-72767d",
@@ -14187,7 +16823,1550 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-2c74d9",
+  "name": "2Fit – סטודיו אימונים ופילאטיס מכשירים (חיפה)",
+  "category": "sports",
+  "description": "סטודיו בחיפה עם שיעורי סטודיו ופילאטיס מכשירים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-f89db0",
+  "name": "ACTIVITY אקטיביטי – יוגה ואימון פונקציונלי ליד הים (חיפה)",
+  "category": "sports",
+  "description": "סטודיו כושר בחיפה עם שיעורי יוגה ואימון פונקציונלי, חלקם ליד הים. יש סניף גם בקריית אליעזר.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body",
+   "sea"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה, קריית אליעזר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-fcd901",
+  "name": "ADENKA – נחף",
+  "category": "sports",
+  "description": "סטודיו כושר. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בנחף.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "נחף",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "נחף",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.93,
+   35.32
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-115568",
+  "name": "ARENA FIT – סטודיו ופילאטיס מכשירים לנשים (חיפה)",
+  "category": "sports",
+  "description": "סטודיו לנשים בלבד בחיפה, עם שיעורי סטודיו ופילאטיס מכשירים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-befc0c",
+  "name": "BJK Dojo – אומנויות לחימה בחיפה",
+  "category": "sports",
+  "description": "דוג'ו לאומנויות לחימה בחיפה, באימון קבוצתי או אישי.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anger",
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-3970c8",
+  "name": "Big Gym – אום אל-פחם",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום באום אל-פחם.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "אום אל-פחם",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "אום אל-פחם",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.52,
+   35.15
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-dcc83d",
+  "name": "Climax Fitness – אום אל-פחם",
+  "category": "sports",
+  "description": "מכון כושר. ספק ברשימת Shikum.Me של אגף השיקום באום אל-פחם.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "אום אל-פחם",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "אום אל-פחם",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.52,
+   35.15
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-fe239d",
+  "name": "EM FITNESS – כפר קרע",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בכפר קרע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "כפר קרע",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר קרע",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.51,
+   35.05
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-0345f4",
+  "name": "Elpatron Gym – עספיא",
+  "category": "sports",
+  "description": "חדר כושר. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום בעספיא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "עספיא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "עספיא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.72,
+   35.06
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-eb9809",
+  "name": "Fitness For Life – כפר יאנוח",
+  "category": "sports",
+  "description": "מכון כושר בכפר יאנוח. ספק ברשימת Shikum.Me של אגף השיקום ביאנוח-ג'ת.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "יאנוח-ג'ת",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "יאנוח-ג'ת",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.98,
+   35.24
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-12a8ef",
+  "name": "Free Jump – ירכא",
+  "category": "sports",
+  "description": "מתחם קפיצה ופעילות גופנית. ספק ברשימת Shikum.Me של אגף השיקום בירכא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "ירכא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "ירכא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.95,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-de5d79",
+  "name": "G-fit – כפר קרע",
+  "category": "sports",
+  "description": "חדר כושר לנשים, ושיעורי סטודיו ופילאטיס מכשירים. ספק ברשימת Shikum.Me של אגף השיקום בכפר קרע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "כפר קרע",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר קרע",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.51,
+   35.05
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-d3e2c4",
+  "name": "Gmynasem – ירכא",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בירכא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "ירכא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "ירכא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.95,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-28ef8f",
+  "name": "Gofit pro – כפר קרע",
+  "category": "sports",
+  "description": "חדר כושר. ספק ברשימת Shikum.Me של אגף השיקום בכפר קרע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "כפר קרע",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר קרע",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.51,
+   35.05
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-9a441c",
+  "name": "Gold Gym – ג'וליס",
+  "category": "sports",
+  "description": "מועדון כושר. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום בג'וליס.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "ג'וליס",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "ג'וליס",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.94,
+   35.19
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-0e87a6",
+  "name": "Golden Wolf – אום אל-פחם",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום באום אל-פחם.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "אום אל-פחם",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "אום אל-פחם",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.52,
+   35.15
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-78edf0",
+  "name": "Indigo aerial acrobatics – אקרובטיקה אווירית וריקוד על עמוד (חיפה)",
+  "category": "sports",
+  "description": "סטודיו לאקרובטיקה אווירית וריקוד על עמוד בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-a874e8",
+  "name": "JEEM GYM – עראבה",
+  "category": "sports",
+  "description": "חדר כושר. ספק ברשימת Shikum.Me של אגף השיקום בעראבה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "עראבה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "עראבה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.85,
+   35.34
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-6c0cd2",
+  "name": "Janus – כושר לנשים (חיפה)",
+  "category": "sports",
+  "description": "מקום אימון לנשים בלבד בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-b15899",
+  "name": "MY BABY – קיר טיפוס ונינג'ה, ירכא",
+  "category": "sports",
+  "description": "מתחם עם קיר טיפוס, מסלול נינג'ה ואטרקציות. ספק ברשימת Shikum.Me של אגף השיקום בירכא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה. ברשימה מופיעה כרטיסייה ב-70 ₪.",
+  "regions": [
+   "north"
+  ],
+  "location": "ירכא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "ירכא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.95,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-00caf6",
+  "name": "Multi sport – חיפה",
+  "category": "sports",
+  "description": "פעילות ספורט ואימונים בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-264b27",
+  "name": "PROFIT – מועדון כושר חיפה",
+  "category": "sports",
+  "description": "מועדון כושר בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-9c6fdf",
+  "name": "Peaky Blinders Gym – כפר מנדא",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. לגברים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בכפר מנדא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "כפר מנדא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר מנדא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.81,
+   35.26
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-48ea15",
+  "name": "S-GYM מכון בריאות וכושר – כסרא-סמיע",
+  "category": "sports",
+  "description": "מכון בריאות וכושר. ספק ברשימת Shikum.Me של אגף השיקום בכסרא-סמיע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "כסרא-סמיע",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "כסרא-סמיע",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.96,
+   35.3
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-113d03",
+  "name": "StayActive לי בריא – אימוני קבוצות (חיפה)",
+  "category": "sports",
+  "description": "אימוני כושר בקבוצות בחיפה, עם קבוצות לנשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-2143aa",
+  "name": "TSport Gym – חורפיש",
+  "category": "sports",
+  "description": "חדר כושר ושיעורים קבוצתיים. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום בחורפיש.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "חורפיש",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חורפיש",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   33.02,
+   35.35
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-e4e7d3",
+  "name": "The Center For Healthy Life – מע'אר",
+  "category": "sports",
+  "description": "מרכז כושר ואורח חיים בריא. ספק ברשימת Shikum.Me של אגף השיקום במע'אר.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "מע'אר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "מע'אר",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.89,
+   35.41
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-c6051d",
+  "name": "Tractor Studio – מג'ד אל-כרום",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום במג'ד אל-כרום.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "מג'ד אל-כרום",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "מג'ד אל-כרום",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.92,
+   35.25
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-71be48",
+  "name": "Vitaris ויטאריס – מע'אר",
+  "category": "sports",
+  "description": "מכון כושר. ספק ברשימת Shikum.Me של אגף השיקום במע'אר.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "מע'אר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "מע'אר",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.89,
+   35.41
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-375f6b",
+  "name": "body move – סטודיו לריקוד לנשים (חיפה)",
+  "category": "sports",
+  "description": "סטודיו לריקוד ותנועה לנשים בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-f6d0bf",
+  "name": "mad men gym – חדר כושר וסטודיו (חיפה)",
+  "category": "sports",
+  "description": "חדר כושר וסטודיו בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-75e8a3",
+  "name": "אוקסיג'ן פיטנס – דיר חנא",
+  "category": "sports",
+  "description": "חדר כושר ושיעורי סטודיו. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום בדיר חנא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "דיר חנא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "דיר חנא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.86,
+   35.36
+  ],
+  "supplier": true
  },
  {
   "id": "etgarim-org-7af9a1",
@@ -14242,7 +18421,56 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-e8dca8",
+  "name": "דיווה אקטיב – פילאטיס מכשירים לנשים (חיפה)",
+  "category": "sports",
+  "description": "פילאטיס מכשירים לנשים בלבד בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  },
  {
   "id": "isad-org-il-f6a52d",
@@ -14288,7 +18516,57 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "iron-swords-desc",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-ac4f08",
+  "name": "הולמס פלייס חיפה – מועדון כושר ופילאטיס מכשירים",
+  "category": "sports",
+  "description": "מועדון כושר גדול עם חדר כושר, שיעורי סטודיו ופילאטיס מכשירים. בחיפה יש סניפים בפמילי חיפה, בקניון חיפה ובגרנד קניון.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה: פמילי חיפה, קניון חיפה, גרנד קניון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  },
  {
   "id": "israelparasport-org-9f2f5c",
@@ -14346,7 +18624,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "thenextstep-org-il-e50f8a",
@@ -14394,7 +18673,347 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-e0e07b",
+  "name": "חדר כושר רויאל – באקה אל-גרביה",
+  "category": "sports",
+  "description": "חדר כושר. ספק ברשימת Shikum.Me של אגף השיקום בבאקה אל-גרביה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "באקה אל-גרביה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "באקה אל-גרביה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.42,
+   35.04
+  ],
+  "supplier": true
+ },
+ {
+  "id": "shikum-mod-gov-il-c552c3",
+  "name": "טיפול קבוצתי ברכיבה על אופניים למתמודדים עם פוסט טראומה – ירושלים (אגף השיקום)",
+  "category": "sports",
+  "description": "קבוצה טיפולית במחוז ירושלים שמשלבת רכיבה על אופניים עם שיחה. מדברים על מתח, כעס וחרדה, על קשרים במשפחה ובזוגיות ועל החזרת תחושת השליטה, ולומדים כלים מעשיים.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anger",
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "nature",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "מחוז ירושלים",
+  "phone": "",
+  "email": "Shikumj_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/6247",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/6247",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "ירושלים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.78,
+   35.21
+  ],
+  "supplier": false
+ },
+ {
+  "id": "ladiesinshape-co-il-498ef8",
+  "name": "ליידיס אין שייפ – מכון כושר לנשים (חיפה)",
+  "category": "sports",
+  "description": "מכון כושר לנשים בשיטת Curves, שמשלבת אימוני כוח, אירובי ומתיחות. יש גם אימוני שיקום וחוגי עיצוב גוף וריקוד.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "הרצל 16, קומה 2, חיפה",
+  "phone": "077-3535000",
+  "email": "",
+  "website": "https://www.ladiesinshape.co.il/",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-f25bdc",
+  "name": "מועדון הספורט מכבי חיפה",
+  "category": "sports",
+  "description": "מועדון ספורט בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-226d6d",
+  "name": "מועדון ספורט אלוואחה – אום אל-פחם",
+  "category": "sports",
+  "description": "מועדון ספורט. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום באום אל-פחם.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "אום אל-פחם",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "אום אל-פחם",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.52,
+   35.15
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-1c5a97",
+  "name": "מכון עדן מתחם החברים – שפרעם",
+  "category": "sports",
+  "description": "מכון כושר. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בשפרעם.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "שפרעם",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "שפרעם",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.81,
+   35.17
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-1f8f38",
+  "name": "מרכז ADAN – כפר כנא",
+  "category": "sports",
+  "description": "סטודיו כושר. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בכפר כנא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "כפר כנא",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "כפר כנא",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.75,
+   35.34
+  ],
+  "supplier": true
  },
  {
   "id": "adi-rehab-org-8c4aee",
@@ -14444,7 +19063,56 @@ window.SERVICES = [
   "geo": [
    31.31,
    34.62
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "s-7ded1a",
+  "name": "מרכז ספורט \"הגעתם ליעד\" – בהפרדה (חיפה)",
+  "category": "sports",
+  "description": "מרכז ספורט בחיפה עם אימונים בהפרדה בין נשים לגברים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  },
  {
   "id": "s-b5765e",
@@ -14496,7 +19164,8 @@ window.SERVICES = [
   "geo": [
    32.08,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "invictusgamesfoundation--ee5b32",
@@ -14541,7 +19210,346 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-0f0f1f",
+  "name": "סטודיו hype – ריינה",
+  "category": "sports",
+  "description": "סטודיו כושר ופילאטיס מכשירים. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בריינה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "ריינה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "ריינה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.72,
+   35.31
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-81a12a",
+  "name": "סטודיו אנפילד – אבו סנאן",
+  "category": "sports",
+  "description": "סטודיו כושר. יש פעילות נפרדת לנשים ולגברים. ספק ברשימת Shikum.Me של אגף השיקום באבו סנאן.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "אבו סנאן",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "אבו סנאן",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.96,
+   35.17
+  ],
+  "supplier": true
+ },
+ {
+  "id": "sporter-co-il-405ce8",
+  "name": "ספורטר חיפה – מועדון כושר ופילאטיס מכשירים",
+  "category": "sports",
+  "description": "מועדון כושר עם חדר כושר, שיעורי סטודיו (גם יוגה וקיקבוקס) ופילאטיס מכשירים. הסניף בחיפה נמצא בשדרות הנשיא 107, במלון דן פנורמה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "שדרות הנשיא 107, חיפה (מלון דן פנורמה)",
+  "phone": "*2490",
+  "email": "",
+  "website": "https://www.sporter.co.il/",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-0efc97",
+  "name": "פיור (Pure) חיפה – פונקציונלי, פילאטיס מכשירים וקבוצות ריצה",
+  "category": "sports",
+  "description": "רשת סטודיו בחיפה עם הרבה סניפים: אימון פונקציונלי, פילאטיס מכשירים, שיעורי תנועה וקבוצות ריצה. יש סניפים בכרמל, דניה, רמת אשכול, ורדיה, נווה שאנן, בת גלים, הטכניון, אוניברסיטת חיפה ומרכז קסטרא.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה, כמה סניפים (כרמל, דניה, רמת אשכול, ורדיה, נווה שאנן, בת גלים, טכניון, אוניברסיטה, קסטרא)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-e0147d",
+  "name": "פלקס – סטודיו, אימוני כוח ופילאטיס מכשירים (חיפה)",
+  "category": "sports",
+  "description": "סטודיו בחיפה עם שיעורי סטודיו, פילאטיס מכשירים וקבוצת אימוני כוח לנשים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-5ac9cd",
+  "name": "קאנטרי אלחוארנה – כפר קרע",
+  "category": "sports",
+  "description": "קאנטרי קלאב עם מתקני ספורט וכושר. ספק ברשימת Shikum.Me של אגף השיקום בכפר קרע.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "כפר קרע",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "כפר קרע",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.51,
+   35.05
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-9095b6",
+  "name": "קאנטרי אלתות – טמרה",
+  "category": "sports",
+  "description": "קאנטרי קלאב עם מתקני ספורט וכושר. ספק ברשימת Shikum.Me של אגף השיקום בטמרה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "טמרה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "טמרה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.85,
+   35.2
+  ],
+  "supplier": true
  },
  {
   "id": "etgarim-org-3d689f",
@@ -14590,7 +19598,158 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "iron-swords",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-494868",
+  "name": "קרוספיט איירון טאון חיפה",
+  "category": "sports",
+  "description": "קופסת קרוספיט בחיפה, אימונים פונקציונליים בקבוצה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-351bca",
+  "name": "קרוספיט דאון טאון חיפה",
+  "category": "sports",
+  "description": "קופסת קרוספיט בחיפה, אימונים פונקציונליים בקבוצה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-96af16",
+  "name": "קרוספיט קריות – חיפה",
+  "category": "sports",
+  "description": "קרוספיט בקבוצה, עם שיעורים מעורבים ושיעורים לגברים בלבד.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "fitness",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  },
  {
   "id": "natal-org-il-aae858",
@@ -14648,7 +19807,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "tikvot-org-il-30c678",
@@ -14694,7 +19854,356 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "4fitness-co-il-5f29ab",
+  "name": "4Fitness – קבוצת שחייה למבוגרים (קריית ביאליק)",
+  "category": "water-sports",
+  "description": "קבוצת שחייה למבוגרים בבריכת אפק בקריית ביאליק, בכמה רמות: מתחילים, שיפור סגנון ומתקדמים. אפשר גם להתגבר על פחד מהמים ולהתכונן לשחייה בים הפתוח.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "בריכת אפק, דרור 2, קריית ביאליק",
+  "phone": "",
+  "email": "",
+  "website": "https://4fitness.co.il/our-activities/swimming-for-adults/",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "קריית ביאליק",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.83,
+   35.08
+  ],
+  "supplier": true
+ },
+ {
+  "id": "mindsurf-co-il-a22469",
+  "name": "MindSurf – בית ספר לגלישה בעכו (חוף ארגמן)",
+  "category": "water-sports",
+  "description": "בית ספר לגלישה בחוף ארגמן בעכו. שיעורי גלישה לכל הגילאים, וגם השכרת גלשן.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "חוף ארגמן, עכו",
+  "phone": "054-6344010",
+  "email": "",
+  "website": "https://www.mindsurf.co.il/",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "עכו",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.93,
+   35.08
+  ],
+  "supplier": true
+ },
+ {
+  "id": "seaswim-co-il-fa23d3",
+  "name": "Sea Swim – שחייה בים בחוף דור-נחשולים",
+  "category": "water-sports",
+  "description": "אימוני שחייה בים הפתוח בחופי דור-נחשולים, אישיים או בקבוצה, לכל הרמות. לומדים לשחות יעיל יותר, לנשום נכון ולהרגיש בטוחים במים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חוף דור-נחשולים",
+  "phone": "052-6225951",
+  "email": "seaswimisrael@gmail.com",
+  "website": "https://www.seaswim.co.il/",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "נחשולים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.61,
+   34.92
+  ],
+  "supplier": true
+ },
+ {
+  "id": "thebuttons-co-il-f65914",
+  "name": "The Buttons – אימוני שחייה (יקנעם)",
+  "category": "water-sports",
+  "description": "מועדון טריאתלון עם אימוני שחייה ביקנעם, וגם לימוד שחייה בים. במועדון יש גם קבוצות רכיבת שטח ביקנעם.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa",
+   "north"
+  ],
+  "location": "יקנעם",
+  "phone": "052-2549591",
+  "email": "",
+  "website": "https://thebuttons.co.il/",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "יקנעם",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.66,
+   35.11
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-38a6f2",
+  "name": "Water World – אימוני שחייה ווסטרס (נשר)",
+  "category": "water-sports",
+  "description": "אימוני שחייה בקבוצה בנשר, במסגרת אימוני \"ווסטרס\" של Water World.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "נשר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "נשר",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.77,
+   35.04
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-0f2214",
+  "name": "בריכת השחייה גבעת זאב",
+  "category": "water-sports",
+  "description": "בריכת שחייה בגבעת זאב. שחייה ופעילות במים במימון סל הטיפולים המשלימים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "גבעת זאב",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "גבעת זאב",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.86,
+   35.17
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-63604a",
+  "name": "בריכת מסילת ציון",
+  "category": "water-sports",
+  "description": "בריכת שחייה במושב מסילת ציון ליד בית שמש. אפשר לשחות ולהתאמן במים במימון סל הטיפולים המשלימים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "מושב מסילת ציון (ליד בית שמש)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "מסילת ציון",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.8,
+   35.01
+  ],
+  "supplier": true
  },
  {
   "id": "lohamim-org-il-1df527",
@@ -14740,7 +20249,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hagalsheli-co-il-225e7f",
@@ -14800,7 +20310,57 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-8d0a6a",
+  "name": "המרכז לספורט ימי קריית חיים – השכרת סאפ וגלשן",
+  "category": "water-sports",
+  "description": "מרכז ספורט ימי בחוף קריית חיים. אפשר לשכור סאפ או גלשן ולצאת לים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "קריית חיים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "קריית חיים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.83,
+   35.06
+  ],
+  "supplier": true
  },
  {
   "id": "etgarim-org-ea7876",
@@ -14845,7 +20405,8 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "atalef-com-61908c",
@@ -14895,7 +20456,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "shikum-mod-gov-il-4f9c0b",
@@ -14940,7 +20502,107 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-3404e2",
+  "name": "טיפול קבוצתי בגלישה למתמודדים עם פוסט טראומה – בת ים (אגף השיקום)",
+  "category": "water-sports",
+  "description": "קבוצה טיפולית בבת ים לנכי ונכות צה\"ל המוכרים עם פוסט טראומה, שמשלבת גלישת גלים עם שיחה קבוצתית על ההתמודדות אחרי הפציעה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "center"
+  ],
+  "location": "בת ים",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups/12178",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/12178",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "בת ים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.02,
+   34.75
+  ],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-628f0b",
+  "name": "טיפול קבוצתי בפעילות ימית בכנרת לנכי צה\"ל עם פוסט טראומה (גינוסר, אגף השיקום)",
+  "category": "water-sports",
+  "description": "קבוצה טיפולית של אגף השיקום שנפגשת פעם בשבוע בגינוסר על חוף הכנרת, 12 מפגשים. משלבים קייאקים, סאפ, מפרשית וגלשני רוח עם שיחה קבוצתית, ועובדים על ויסות רגשי, תחושת שליטה וביטחון. מנחים אנשי מקצוע טיפוליים, הקבוצה קטנה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anger",
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "north"
+  ],
+  "location": "גינוסר, חוף הכנרת",
+  "phone": "",
+  "email": "Shikumt_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11892",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11892",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "גינוסר",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.85,
+   35.52
+  ],
+  "supplier": false
  },
  {
   "id": "yamtov-com-79f4ce",
@@ -14990,7 +20652,107 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-8153e2",
+  "name": "לונה סרף \"גלים של חיבור\" – מרחב גלישה בעכו",
+  "category": "water-sports",
+  "description": "מרחב גלישה בעכו עם פעילות גלישה בים, וגם השכרת גלשן וסאפ.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "עכו",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "עכו",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.93,
+   35.08
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-ca1d49",
+  "name": "לי ים – מועדון גלישה עתלית",
+  "category": "water-sports",
+  "description": "מועדון גלישה בחוף עתלית. יש אימוני קבוצה שמשלבים יוגה, פילאטיס וגלישה, ואפשר גם לשכור גלשן או סאפ.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "עתלית",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "עתלית",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.69,
+   34.94
+  ],
+  "supplier": true
  },
  {
   "id": "atalef-com-aadfe1",
@@ -15032,7 +20794,8 @@ window.SERVICES = [
   "town": "unknown",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
  },
  {
   "id": "hagalsheli-co-il-369a45",
@@ -15088,7 +20851,57 @@ window.SERVICES = [
   "geo": [
    31.61,
    34.52
-  ]
+  ],
+  "supplier": false
+ },
+ {
+  "id": "s-fc92a9",
+  "name": "עמותת אל הים – חתירה בקבוצה עם מדריך (קריית חיים)",
+  "category": "water-sports",
+  "description": "חתירה בים בקבוצה, עם ליווי של מדריך, מחוף קריית חיים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "קריית חיים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "קריית חיים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.83,
+   35.06
+  ],
+  "supplier": false
  },
  {
   "id": "zivneurim-org-2ae663",
@@ -15135,7 +20948,350 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-e78824",
+  "name": "קאהונה סרף קלאב – קבוצות גלישה וחתירה והשכרת ציוד (חיפה)",
+  "category": "water-sports",
+  "description": "מועדון גלישה בחיפה עם קבוצות גלישה וחתירה בהדרכה, וגם השכרת גלשן וסאפ למי שכבר יודע. נכנסים למים בקבוצה או לבד, לפי הקצב שלך.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-2a8529",
+  "name": "קאנטרי גן עברון – בריכה (נהריה)",
+  "category": "water-sports",
+  "description": "כניסה לבריכה בקאנטרי גן עברון ליד נהריה, לשחייה עצמאית.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "נהריה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "נהריה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   33.01,
+   35.1
+  ],
+  "supplier": true
+ },
+ {
+  "id": "shikum-mod-gov-il-4a064a",
+  "name": "קבוצות שייט טיפולי לנכי צה\"ל עם פוסט טראומה – חיפה, הרצליה ותל אביב (אגף השיקום)",
+  "category": "water-sports",
+  "description": "קבוצות טיפוליות של אגף השיקום שמשלבות שייט בים עם שיחה קבוצתית, פעם בשבוע ל-12 מפגשים. יש קבוצה בנמל חיפה, בנמל הרצליה ובתל אביב. הקבוצות פתוחות לכל המחוזות.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anger",
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "nature",
+   "sea"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "center",
+   "haifa",
+   "sharon"
+  ],
+  "location": "נמל חיפה; נמל הרצליה; תל אביב",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/groups",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/6152",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "format": "group",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-52d4ff",
+  "name": "רואים את האופק בים – השכרת גלשן וסאפ (קריית חיים)",
+  "category": "water-sports",
+  "description": "השכרת גלשן וסאפ בחוף קריית חיים, למי שרוצה לצאת לים בזמן שלו.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "sport"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "קריית חיים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "individual",
+  "town": "קריית חיים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.83,
+   35.06
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-f290c1",
+  "name": "BE FIT – סטודיו פילאטיס מכשירים לנשים",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס מכשירים לנשים בבית שמש.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "בית שמש",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "בית שמש",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.75,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-fe45df",
+  "name": "Bepilates – זרזיר",
+  "category": "yoga-mind-body",
+  "description": "פילאטיס מכשירים. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בזרזיר.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "זרזיר",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "זרזיר",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.73,
+   35.22
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-772894",
+  "name": "Body and mind – חיפה",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לגוף ונפש בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  },
  {
   "id": "cmbm-israel-org-378fe3",
@@ -15181,7 +21337,592 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-5a21e9",
+  "name": "Harmony Pilates – פילאטיס מכשירים",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס מכשירים בירושלים. יש סניף ברוממה ויש פעילות לנשים בלבד.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים (סניף רוממה)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-b1afb9",
+  "name": "Ice guru – יוגה, נשימה ומדיטציה (חיפה)",
+  "category": "yoga-mind-body",
+  "description": "יוגה, תרגילי נשימה ומדיטציה בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-e3c161",
+  "name": "Inspire Studio – פילאטיס לנשים",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס לנשים בירושלים, עם פילאטיס מזרן ופילאטיס מכשירים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-ff324e",
+  "name": "MG פילאטיס מכשירים וסטודיו לנשים",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס מכשירים ושיעורי סטודיו לנשים בלבד בירושלים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-d2e214",
+  "name": "Miss Pilates – סטודיו לפילאטיס מכשירים פסגת זאב",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס מכשירים בפסגת זאב בירושלים. חיזוק הגוף ושרירי הליבה בתנועה מבוקרת.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים, פסגת זאב",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-079013",
+  "name": "Movement Natural – סטודיו ג'ירוקינזיס",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לג'ירוקינזיס בירושלים, שיטת תנועה רכה שמשלבת נשימה, גמישות ותנועה זורמת של עמוד השדרה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-256cfd",
+  "name": "Nemo Yoga – אריאל",
+  "category": "yoga-mind-body",
+  "description": "סטודיו ליוגה באריאל. תרגול שמרגיע את הגוף ועוזר עם מתח, חרדה ושינה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "אריאל",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "אריאל",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.1,
+   35.17
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-6948a2",
+  "name": "Netiv Pilates – סטודיו פילאטיס בחיפה",
+  "category": "yoga-mind-body",
+  "description": "סטודיו פילאטיס בחיפה: שיעורי פילאטיס מזרן בקבוצה, ואימונים אישיים בפילאטיס מכשירים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-c25b54",
+  "name": "Pilates Home – חורפיש",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בחורפיש.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "חורפיש",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חורפיש",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   33.02,
+   35.35
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-0d708a",
+  "name": "Studio Pilara – חורפיש",
+  "category": "yoga-mind-body",
+  "description": "אימוני פילאטיס מכשירים קבוצתיים. לנשים בלבד. ספק ברשימת Shikum.Me של אגף השיקום בחורפיש.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "חורפיש",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חורפיש",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   33.02,
+   35.35
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-7027ff",
+  "name": "V pure balance – שיעורי פילאטיס",
+  "category": "yoga-mind-body",
+  "description": "שיעורי פילאטיס באריאל. תרגול שמחזק את הגוף, משפר יציבה ונשימה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "אריאל",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "אריאל",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.1,
+   35.17
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-1acd3c",
+  "name": "Yam Wellness – חיפה (אלנבי ובת גלים)",
+  "category": "yoga-mind-body",
+  "description": "מרכז וולנס ותנועה בחיפה, עם סניפים ברחוב אלנבי ובבת גלים.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה: אלנבי, בת גלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  },
  {
   "id": "brothersin-yoga-b85612",
@@ -15230,7 +21971,56 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-4f028c",
+  "name": "איו יוגה – נחלאות והמושבה הגרמנית",
+  "category": "yoga-mind-body",
+  "description": "סטודיו ליוגה בירושלים עם שני סניפים, בנחלאות ובמושבה הגרמנית. תרגול שמרגיע את הגוף ועוזר עם מתח, חרדה ושינה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים: נחלאות, המושבה הגרמנית",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
  },
  {
   "id": "natal-org-il-8a483f",
@@ -15278,7 +22068,153 @@ window.SERVICES = [
   "town": "סניפים",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-d55f3c",
+  "name": "אינפיט פילאטיס – חיפה",
+  "category": "yoga-mind-body",
+  "description": "סטודיו פילאטיס בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-4ab149",
+  "name": "בית של יוגה – ירושלים",
+  "category": "yoga-mind-body",
+  "description": "סטודיו ליוגה בירושלים. תרגול שמרגיע את הגוף ועוזר עם מתח, חרדה ושינה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-cb1a53",
+  "name": "הולמס פלייס מבשרת ציון – פילאטיס מכשירים",
+  "category": "yoga-mind-body",
+  "description": "פילאטיס מכשירים במועדון הולמס פלייס במבשרת ציון.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "מבשרת ציון",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "מבשרת ציון",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.8,
+   35.15
+  ],
+  "supplier": true
  },
  {
   "id": "healingspace-co-il-0d251f",
@@ -15334,7 +22270,8 @@ window.SERVICES = [
   "geo": [
    32.2,
    34.82
-  ]
+  ],
+  "supplier": false
  },
  {
   "id": "s-890574",
@@ -15378,7 +22315,105 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "yogapoint-co-il-f96ed5",
+  "name": "יוגהפוינט – סטודיו ליוגה בירושלים",
+  "category": "yoga-mind-body",
+  "description": "סטודיו ליוגה ברחביה בירושלים, עם שיעורים לכל רמה ושיעורים פרטיים. התרגול עוזר להוריד סטרס, לשפר נשימה ושינה ולחזק את החוסן.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "רמב\"ן 23, רחביה, ירושלים",
+  "phone": "050-9509404",
+  "email": "yogapoint.co.il@gmail.com",
+  "website": "https://www.yogapoint.co.il",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://www.yogapoint.co.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "mixed",
+  "town": "ירושלים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-df6eca",
+  "name": "מטי שייפ – פילאטיס מכשירים לנשים (הר חומה ורמות)",
+  "category": "yoga-mind-body",
+  "description": "פילאטיס מכשירים לנשים במועדוני מטי שייפ בירושלים, בשכונות הר חומה ורמות.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "ירושלים: הר חומה, רמות",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "ירושלים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.77,
+   35.21
+  ],
+  "supplier": true
  },
  {
   "id": "brothersin-yoga-a89b1e",
@@ -15427,7 +22462,252 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-08",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-89a54e",
+  "name": "מרכז ספורט עירוני גלי חיפה – פילאטיס מכשירים",
+  "category": "yoga-mind-body",
+  "description": "פילאטיס מכשירים במרכז הספורט העירוני גלי חיפה.",
+  "provider_type": "municipal",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "מרכז ספורט עירוני גלי חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": false
+ },
+ {
+  "id": "s-e2e13d",
+  "name": "מרכז קהילתי נווה דוד – פילאטיס, יוגה ופלדנקרייז",
+  "category": "yoga-mind-body",
+  "description": "שיעורי יוגה ופלדנקרייז בסטודיו של המרכז הקהילתי נווה דוד בחיפה, וגם קבוצת פילאטיס לנשים.",
+  "provider_type": "municipal",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "מרכז קהילתי נווה דוד, חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": false
+ },
+ {
+  "id": "s-98f507",
+  "name": "מתנ\"ס מעלה אדומים – פילאטיס מכשירים",
+  "category": "yoga-mind-body",
+  "description": "פילאטיס מכשירים במתנ\"ס של מעלה אדומים.",
+  "provider_type": "municipal",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "מעלה אדומים",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "מעלה אדומים",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.78,
+   35.3
+  ],
+  "supplier": false
+ },
+ {
+  "id": "s-309aac",
+  "name": "סטודיו B תנועה – פילאטיס מזרן ויוגה לנשים",
+  "category": "yoga-mind-body",
+  "description": "שיעורי פילאטיס מזרן ויוגה לנשים בגבע בנימין.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "גבע בנימין (אדם)",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "גבע בנימין",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.86,
+   35.26
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-01be6a",
+  "name": "סטודיו NAFAS – כפר יאסיף",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס. ספק ברשימת Shikum.Me של אגף השיקום בכפר יאסיף.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (6,600 ₪ בשנה) למוכרים עם 20% נכות ומעלה על פוסט-טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "north"
+  ],
+  "location": "כפר יאסיף",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "כפר יאסיף",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.95,
+   35.16
+  ],
+  "supplier": true
  },
  {
   "id": "shikumme-co-il-2c0e2a",
@@ -15474,6 +22754,152 @@ window.SERVICES = [
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
-  "age": []
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "s-7d79c3",
+  "name": "ספורטילי פילאטיס",
+  "category": "yoga-mind-body",
+  "description": "סטודיו לפילאטיס בכוכב יעקב, עם שיעורים נפרדים לגברים ולנשים. מחזק את הגוף ושרירי הליבה בתנועה מבוקרת.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "chronic-pain",
+   "physical-disability"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "דרך סל הטיפולים המשלימים ב-Shikum.Me: לזכאים עם 20% נכות ומעלה בגלל פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% ומעלה.",
+  "regions": [
+   "judea-samaria"
+  ],
+  "location": "כוכב יעקב",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "unknown",
+  "town": "כוכב יעקב",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.88,
+   35.25
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-157e85",
+  "name": "פילאטיס ריפורם – חיפה",
+  "category": "yoga-mind-body",
+  "description": "סטודיו פילאטיס בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "chronic-pain",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
+ },
+ {
+  "id": "s-366f30",
+  "name": "ציפור היוגה – יוגה לנשים בחיפה",
+  "category": "yoga-mind-body",
+  "description": "סטודיו יוגה לנשים בחיפה.",
+  "provider_type": "private",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "mod-funded",
+  "cost_notes": "במימון סל הטיפולים המשלימים של אגף השיקום (Shikum.Me), עד 6,600 ₪ בשנה. זכאים: מוכרים עם 20% נכות ומעלה בגין פוסט טראומה, פגיעה נפשית או פגיעת ראש, או 100% נכות ומעלה.",
+  "regions": [
+   "haifa"
+  ],
+  "location": "חיפה",
+  "phone": "",
+  "email": "",
+  "website": "",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "no",
+  "format": "group",
+  "town": "חיפה",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.79,
+   34.99
+  ],
+  "supplier": true
  }
 ];

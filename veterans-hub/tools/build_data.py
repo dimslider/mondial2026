@@ -249,6 +249,8 @@ def main():
         for f in ("lat", "lng", "war_only"):
             s.pop(f, None)
         s["unit_only"] = bool(s.get("unit_only"))
+        # ספק פרטי בסל הטיפולים המשלימים (Shikum.Me): מכון, סטודיו, בריכה. לא "תוכנית", מוצג אחרת.
+        s["supplier"] = s.get("provider_type") == "private" and bool(re.search(r"Shikum\.?Me", (s.get("how_to_apply") or "") + (s.get("cost_notes") or ""), re.I))
 
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))

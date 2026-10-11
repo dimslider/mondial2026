@@ -250,6 +250,16 @@
     if (fam && !ber && !p.famof && ctx === "hostage") return false;
     return true;
   }
+  // ספק בסל Shikum.Me (מכון כושר, סטודיו, בריכה): רק למוכרים, רק קרוב, ולא יותר מכמה ברשימה
+  const isSupplier = s => s.supplier === true;
+  function supplierOk(s, p) {
+    if (!isSupplier(s)) return true;
+    if (!p.statuses.includes("mod-recognized")) return false;
+    if (/לנשים|בהפרדה/.test(s.name)) return false;   // אין לנו שאלת מגדר: סטודיו לנשים נשאר בחיפוש
+    const km = kmTo(s, p);
+    if (km != null) return km <= 35;
+    return p.regions.length > 0 && arr(s.regions).some(r => p.regions.includes(r));
+  }
   function match(p, opts = {}) {
     p = withImplied(p);
     const t = townOf(p.town);
@@ -264,6 +274,7 @@
       .filter(s => !p.statuses.length || recognized || !needsRecognition(s))
       .filter(s => !narrowGroup(s))
       .filter(s => familyFit(s, p))
+      .filter(s => supplierOk(s, p))
       // שירות למי שעוד לא מוכר (כתוב בשם) לא מתאים למי שכבר מוכר
       .filter(s => !recognized || !/שאינם מוכרים|שאינן מוכרות|לא מוכרים|ללא הכרה/.test(s.name))
       // "רק ללא עלות": מוציאים מה שידוע שעולה כסף (מסובסד, חלקי, בתשלום)
@@ -279,7 +290,8 @@
     if (!asked || !all.length) return all.slice(0, 30);
     // רשימה קצרה ומדויקת: מה שרחוק מאוד מההתאמה הטובה ביותר לא מוצג (אפשר למצוא אותו בחיפוש)
     const cut = Math.max(4, all[0].sc * 0.45);
-    return all.filter(x => x.sc >= cut).slice(0, 25);
+    let nSup = 0;
+    return all.filter(x => x.sc >= cut).filter(x => !isSupplier(x.s) || ++nSup <= 3).slice(0, 25);
   }
   // שלוש התחנות: מה שהכי חשוב, לפי סדר. קודם מענה לפגיעה (פגיעת ראש, קטיעה), אחר כך טיפול נפשי,
   // אחר כך ליווי בהכרה, ואחר כך משהו מתחום עניין. מה שנשאר מתמלא מהציון הגבוה, מתחום אחר.
@@ -292,7 +304,7 @@
     const first = [];
     // לא שתי תחנות מאותו סוג (שני כלבים, שתי חוות)
     const take = r => { if (r && first.length < 3 && !first.includes(r) && !first.some(f => f.s.category === r.s.category)) first.push(r); };
-    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
+    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && !isSupplier(r.s) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
     const tx = r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
       (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) +
       (p.statuses.some(x => x === "police" || x === "security-forces") ? (r.s.police === "yes" ? 3 : r.s.police === "no" ? -4 : 0) : 0) -
@@ -332,7 +344,7 @@
     // תחום עניין: שירות שזה עיקרו (ים לגלישה, טבע לחווה), לא שירות שמזכיר את זה בדרך אגב
     if (p.interests.length)
       take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))));
-    const pool = res.filter(r => !infoItem(r.s));
+    const pool = res.filter(r => !infoItem(r.s) && !isSupplier(r.s));
     for (const r of pool) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
     for (const r of pool) take(r);
     for (const r of pool) if (first.length < 3 && !first.includes(r)) first.push(r);
@@ -381,6 +393,7 @@
   // שורה קצרה ברשימה: שם, משפט פתיחה בשורה אחת, ושורת פרטים. כל השאר בכרטיס שנפתח.
   function card(s, why, noTag) {
     const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => T.regions[r] || r)];
+    if (isSupplier(s)) meta.push("ספק בסל Shikum.Me");
     if (s.source === "community") meta.push("נוסף ע״י הקהילה");
     else if (s.verified_at) meta.push("✓ נבדק");
     return `
@@ -511,6 +524,7 @@
     // עם פרופיל: מציגים רק מה שמתאים לסטטוס, והכי מתאים קודם
     if (p) items = items.filter(s => eligible(s, p.statuses)).map(s => Object.assign({ s }, score(s, p))).sort((a, b) => b.sc - a.sc).map(x => x.s);
     else items.sort((a, b) => (b.verified_at ? 1 : 0) - (a.verified_at ? 1 : 0));
+    items = [...items.filter(s => !isSupplier(s)), ...items.filter(isSupplier)];   // ספקי Shikum.Me אחרי התוכניות
     const top = items[0], rest = items.slice(1);
     const cats = A.cats.filter(c => c !== "hotlines" && rest.some(s => s.category === c));
     $main.innerHTML = `
@@ -818,7 +832,7 @@
         let hits = scored.filter(x => x.matched === words.length);
         // אין התאמה לכל המילים: מציגים את מה שמתאים לחלק מהן, עם הסבר
         if (!hits.length) { hits = scored.filter(x => x.matched > 0); partial = hits.length > 0; }
-        out = hits.sort((a, b) => b.matched - a.matched || b.total - a.total).map(x => x.s);
+        out = hits.sort((a, b) => b.matched - a.matched || (isSupplier(a.s) ? 1 : 0) - (isSupplier(b.s) ? 1 : 0) || b.total - a.total).map(x => x.s);
       }
       document.getElementById("count").textContent = partial
         ? `לא מצאנו התאמה לכל המילים. אלה ${out.length} תוצאות שמתאימות לחלק מהן:`
