@@ -899,6 +899,56 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "odemfarm-com-a0440a",
+  "name": "החווה ביער אודם – תוכנית שיקום עם בעלי חיים ללוחמים ולמתמודדי פוסט טראומה",
+  "category": "animal-therapy",
+  "description": "חוות חופש לבעלי חיים שחולצו במושב אודם ברמת הגולן, שמשמשת גם כמרכז שיקומי לבני אדם. יש בה תוכנית שיקום לחיילים ולמתמודדי פוסט טראומה שמשלבת מגע עם בעלי חיים ופעילות בטבע, במימון תרומות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "ptsd"
+  ],
+  "interests": [
+   "animals",
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "תוכנית השיקום ממומנת מתרומות; מחיר למשתתפים לא צוין",
+  "regions": [
+   "north"
+  ],
+  "location": "מושב אודם, צפון רמת הגולן",
+  "phone": "054-7653123",
+  "email": "",
+  "website": "https://odemfarm.com",
+  "how_to_apply": "פנייה לחווה בטלפון או בוואטסאפ 054-7653123. אין באתר טופס הרשמה לתוכנית.",
+  "source_url": "https://odemfarm.com",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "unknown",
+  "town": "אודם",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   33.2,
+   35.75
+  ],
+  "supplier": false
+ },
+ {
   "id": "trci-org-il-bf95d0",
   "name": "העמותה לרכיבה וכלבנות טיפולית – חוות חוסן בתל מונד (אגף השיקום)",
   "category": "animal-therapy",
@@ -4165,6 +4215,49 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "home4u-org-il-13c26b",
+  "name": "הבית במילואים – ליווי משפחות מילואים וקבע במתנדב לחצי שנה (עמותת הבית)",
+  "category": "family-support",
+  "description": "תוכנית של עמותת 'הבית, ליווי והעצמת משפחות' שקמה אחרי 7 באוקטובר. מלווה מתנדב שעבר הכשרה, בהדרכת פסיכולוגים ואנשי מקצוע, נפגש עם המשפחה פעם בשבועיים במשך חצי שנה. הליווי עוסק בזוגיות, הורות, כלכלה, קריירה וחוסן. פועלת בכל הארץ, גם בשיתוף רשויות מקומיות (למשל הרצליה).",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "family-relations",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "למשפחות משרתי מילואים וקבע ללא עלות (לשאר המשפחות 500 ש\"ח סמלי; דרך רשויות מקומיות מסובסד)",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "055-989-8690",
+  "email": "office@home4u.org.il",
+  "website": "https://home4u.org.il/",
+  "how_to_apply": "למלא את טופס הבקשה לליווי משפחתי באתר (יש טופס נפרד למשרתים ביחידות שדה), ואז שאלון היכרות וראיון. אפשר גם לכתוב ל-office@home4u.org.il.",
+  "source_url": "https://home4u.org.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
   "id": "girlfriendsidf-org-il-75df8d",
   "name": "הותיר אחריו חבר.ה – תמיכה בבני ובנות זוג שכולים שלא היו נשואים",
   "category": "family-support",
@@ -4250,6 +4343,55 @@ window.SERVICES = [
   "format": "group",
   "town": "ארצי",
   "verified_at": "2026-10-07",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "miluimfamily-org-1da3f2",
+  "name": "המטה הלאומי למשפחות המילואים – רכזי משפחות מילואים ברשויות המקומיות",
+  "category": "family-support",
+  "description": "מערך ממשלתי חדש (משרד הנגב, הגליל והחוסן הלאומי) שמציב רכז או רכזת למשפחות מילואים בתוך הרשות המקומית. הרכז מחבר את המשפחה למענים ברשות ובמשרדי הממשלה: זוגיות, הורות, חוסן נפשי, תעסוקה, מיצוי זכויות וייעוץ כלכלי, ומארגן פעילויות למשפחות. באתר רשימת רכזים בכ-86 רשויות, רובן בצפון, בדרום, בשפלה וביהודה ושומרון, וגם קבוצת וואטסאפ עם מדריכת הורים של מכון אדלר.",
+  "provider_type": "government",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "employment",
+   "family-relations",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "הליווי של הרכז ללא עלות; רוב הפעילויות ללא עלות, בחלקן תשלום סמלי",
+  "regions": [
+   "haifa",
+   "judea-samaria",
+   "nationwide",
+   "north",
+   "shfela",
+   "south"
+  ],
+  "location": "רכזים ב-86 רשויות מקומיות ומועצות אזוריות",
+  "phone": "",
+  "email": "",
+  "website": "https://miluimfamily.org/",
+  "how_to_apply": "להיכנס לעמוד 'מצאו את הרכז שלכם' (miluimfamily.org/coordinators), לחפש את הרשות ולפנות לרכז בטלפון או במייל. אם אין רכז ברשות, אפשר להשאיר פנייה בטופס צור קשר באתר.",
+  "source_url": "https://miluimfamily.org/coordinators",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "no",
+  "format": "mixed",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
   "era": "",
   "age": [],
   "supplier": false
@@ -4925,6 +5067,51 @@ window.SERVICES = [
   "format": "individual",
   "town": "סניפים",
   "verified_at": "2026-10-08",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "mashivharuach-org-5c80eb",
+  "name": "משיב הרוח – סדנאות חוסן לנשות מילואימניקים ולזוגות מילואים",
+  "category": "family-support",
+  "description": "מיזם חברתי שמקיים סדנאות קבוצתיות של יומיים עם לינה, לעיבוד, מנוחה וכלים לחוסן. יש סדנה לנשות מילואימניקים ולנשות פצועי מלחמה, וסדנה לזוגות מילואים. ההנחיה של נשות מקצוע בליווי רגשי ועיבוד טראומה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "סדנת נשות מילואים 350 ש\"ח כולל לינה וארוחות; סדנת זוגות 550 ש\"ח לזוג. אפשר לקבל החזר מקרן הסיוע למשרתי המילואים. מיועד למי שעשה לפחות 200 ימי מילואים בשנתיים האחרונות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "סדנאות בכמה אתרים בארץ, למשל כפר הנופש מצוקי דרגות",
+  "phone": "",
+  "email": "sadnaot@mashivharuach.org",
+  "website": "https://www.mashivharuach.org",
+  "how_to_apply": "הרשמה דרך עמוד הסדנה באתר, או במייל sadnaot@mashivharuach.org.",
+  "source_url": "https://www.mashivharuach.org/lp/women-workshop",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "family",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
   "era": "",
   "age": [],
   "supplier": false
@@ -8612,6 +8799,57 @@ window.SERVICES = [
   "geo": [
    32.07,
    34.82
+  ],
+  "supplier": false
+ },
+ {
+  "id": "chef-factory-co-il-2ae5b4",
+  "name": "שף פקטורי – סדנאות אפייה וקונדיטוריה שיקומיות לחיילים פצועים, נתניה",
+  "category": "medical-rehab",
+  "description": "מרכז קולינרי טיפולי-שיקומי בנתניה שמפעיל סדנאות לחיילים שנפצעו בשירות, בליווי אישי ועבודה מעשית באפייה וקונדיטוריה. המשתתפים מגיעים בעיקר ממחלקות השיקום בבתי החולים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "cooking"
+  ],
+  "cost": "",
+  "cost_notes": "עלות לא צוינה באתר",
+  "regions": [
+   "sharon"
+  ],
+  "location": "גיבורי ישראל 34, נתניה",
+  "phone": "077-4115411",
+  "email": "cheffactorynetanya@gmail.com",
+  "website": "https://chef-factory.co.il",
+  "how_to_apply": "השארת פרטים בטופס באתר או טלפון 077-4115411.",
+  "source_url": "https://chef-factory.co.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "נתניה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.33,
+   34.86
   ],
   "supplier": false
  },
@@ -12408,6 +12646,56 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "rootin-co-il-983fee",
+  "name": "רוטאין (RootIn) – תהליך טיפול רגשי קצר למשרתי מילואים",
+  "category": "mental-health",
+  "description": "מיזם חברתי של קב\"נים במילואים שנותן טיפול רגשי ממוקד וקצר של שישה מפגשים, פנים אל פנים או בזום, למעבר מחירום לשגרה. מתאים למשרתי מילואים, לבני משפחה ולאזרחים, ולא צריך אבחנה של פוסט טראומה. לפני ההתחלה יש שיחת הערכה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "families",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "employment",
+   "family-relations",
+   "moral-injury",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "partial",
+  "cost_notes": "תשלום לפי יכולת (דאנא) אחרי כל מפגש",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "052-3528222",
+  "email": "info@rootin.co.il",
+  "website": "https://rootin.co.il",
+  "how_to_apply": "למלא טופס הרשמה באתר (rootin.co.il/signup) או לפנות בטלפון או במייל.",
+  "source_url": "https://rootin.co.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "individual",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
   "id": "retorno-org-il-a0c306",
   "name": "רטורנו – גמילה מהתמכרויות",
   "category": "mental-health",
@@ -12933,6 +13221,50 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "thedayafter-co-il-fedd35",
+  "name": "היום שאחרי – מסעות עיבוד לצוותי מילואים",
+  "category": "nature-retreats",
+  "description": "מיזם חברתי שקם במלחמה ומוביל צוותי מילואים שלחמו יחד בתהליך עיבוד של 9 חודשים: סדנת הכנה בארץ, שבוע בקהילה יהודית בחו\"ל, סדנת סיכום ומפגש מעקב. ההנחיה של עובדים סוציאליים ופסיכולוגים קליניים, ויש גם ליווי פרטני למי שצריך.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "סדנאות בישראל ומסע של שבוע בחו\"ל",
+  "phone": "052-5130854",
+  "email": "info@thedayafter.co.il",
+  "website": "https://thedayafter.co.il",
+  "how_to_apply": "להשאיר פרטים בטופס באתר; חוזרים לשיחת היכרות ובונים מסע מותאם לצוות. ההרשמה היא של צוות מילואים שלם.",
+  "source_url": "https://thedayafter.co.il/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords",
+  "age": [],
+  "supplier": false
+ },
+ {
   "id": "inz-org-il-698f2c",
   "name": "טיול שחרור – ארגון נכי צה\"ל (אגודת הידידים)",
   "category": "nature-retreats",
@@ -13125,6 +13457,53 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "mehina-net-8d9b91",
+  "name": "עלות השחר – מסעות עיבוד חוויות לחימה לצוותי לוחמים (עמותת שחר)",
+  "category": "nature-retreats",
+  "description": "תוכנית של עמותת שחר שמלווה צוותי לוחמים מחרבות ברזל בעיבוד חוויות השירות והחזרה לחיים האזרחיים. המסע כולל מפגש זום, יום הכנה בטבע בארץ, חמישה ימים בטבע בחו\"ל עם עבודה קבוצתית וכלים מעשיים, ומפגש סיכום אחרי החזרה. מונחה על ידי צוות של מטפלים ואנשי מקצוע.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "moral-injury",
+   "ptsd"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "המסעות ממומנים מתרומות; לפי האתר יש רשימת המתנה ארוכה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "058-510-6303",
+  "email": "Alotshachar@mehina.net",
+  "website": "https://mehina.net/alot-hashahar/",
+  "how_to_apply": "לפנות לצוות עלות השחר במייל Alotshachar@mehina.net או למשרד העמותה. התוכנית בנויה לצוות לוחמים שלחם יחד (קבוצה אורגנית).",
+  "source_url": "https://mehina.net/alot-hashahar/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords",
+  "age": [],
+  "supplier": false
+ },
+ {
   "id": "yadlashiryon-com-758693",
   "name": "קשר ופעילויות לנכי השריון – ענף הנפגעים בחיל השריון",
   "category": "nature-retreats",
@@ -13164,6 +13543,53 @@ window.SERVICES = [
   "format": "group",
   "town": "unknown",
   "verified_at": "2026-10-08",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "ruachgvura-org-dcbc04",
+  "name": "רוח גבורה – ריטריטים וסדנאות גוף-נפש למילואימניקים",
+  "category": "nature-retreats",
+  "description": "עמותת מתנדבים שהוקמה ב-2025 ותומכת במילואימניקים בחזרה לחיים האזרחיים. מציעה ריטריטים, סדנאות יוגה ומדיטציה, אמבטיות קרח, עבודה חקלאית ותמיכה קהילתית שוטפת. בריטריט הראשון השתתפו יותר מ-100 מילואימניקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "extreme",
+   "mind-body",
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "Ruachgvuraboard@googlegroups.com",
+  "website": "https://ruachgvura.org",
+  "how_to_apply": "השארת פרטים בטופס 'צור קשר' באתר או במייל.",
+  "source_url": "https://ruachgvura.org",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "format": "group",
+  "town": "ארצי",
+  "verified_at": "2026-10-11",
   "era": "",
   "age": [],
   "supplier": false
@@ -13667,6 +14093,62 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "taotherapy-co-il-82a941",
+  "name": "בשביל אור – תוכנית החלמה מפוסט טראומה בשיטת 12 הצעדים (עמותת טאותרפיה)",
+  "category": "peer-support",
+  "description": "תוכנית קבוצתית של עמותת טאותרפיה ללוחמים, שוטרים, אנשי שב\"כ ונפגעי פעולות איבה שמתמודדים עם פוסט טראומה. במשך 30 שבועות נפגשת קבוצה קטנה פעם בשבוע ללימוד ותרגול של שיטת 12 הצעדים, וכל משתתף מלווה על ידי חונך שהוא בוגר התוכנית. יש גם סדנאות מרוכזות במהלך התוכנית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "addiction",
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "spiritual"
+  ],
+  "cost": "",
+  "cost_notes": "התוכנית ממומנת מתרומות (לפי העמותה כ-15,000 ש\"ח למשתתף לשנה); לא כתוב אם יש השתתפות עצמית",
+  "regions": [
+   "center"
+  ],
+  "location": "רחוב קהילת ונציה 8, תל אביב",
+  "phone": "03-7788766",
+  "email": "",
+  "website": "https://taotherapy.co.il/ptsd/",
+  "how_to_apply": "להתקשר למשרד העמותה או למלא את טופס יצירת הקשר באתר ולסמן \"הנחיית קבוצות 12 הצעדים לפוסט טראומתיים של שרותי הביטחון\".",
+  "source_url": "https://taotherapy.co.il/ptsd/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "group",
+  "town": "תל אביב",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.08,
+   34.78
+  ],
+  "supplier": false
+ },
+ {
   "id": "ourbrothers-co-il-6994a2",
   "name": "האחים שלנו – קהילה לאחים ואחיות שכולים",
   "category": "peer-support",
@@ -14047,6 +14529,58 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "moadon448-co-il-c303cf",
+  "name": "מועדון 448 – הבית השני ללוחמים, הרצליה",
+  "category": "peer-support",
+  "description": "מועדון קהילתי ללוחמים ולוחמות ליד ארנה הרצליה, ברוח 'לוחמים למען לוחמים'. פעילות שבועית: חזרות להקה, ערב ג'אם, ארוחת שישי ללוחמים, וגם קורסים קצרים (הדפסת תלת ממד, אגרוף, מוזיקה), גלישה, קורס סקיפר ומרחב עבודה מול הים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "music",
+   "sea",
+   "sport",
+   "tech"
+  ],
+  "cost": "",
+  "cost_notes": "חלק מהקורסים בתשלום; מחירי הפעילות לא מפורסמים",
+  "regions": [
+   "sharon"
+  ],
+  "location": "הצדף 1, הרצליה (ליד שער C של מתחם הארנה)",
+  "phone": "058-7655448",
+  "email": "",
+  "website": "https://moadon448.co.il",
+  "how_to_apply": "הרשמה דרך קישורי האירועים באתר, הצטרפות לקבוצת הווטסאפ של המועדון מהאתר, או בטלפון/וואטסאפ 058-7655448.",
+  "source_url": "https://moadon448.co.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "weekly",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "group",
+  "town": "הרצליה",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.16,
+   34.8
+  ],
+  "supplier": false
+ },
+ {
   "id": "metiv-org-fcc03b",
   "name": "מטיב – \"מסע שחרור\" (Peace of Mind) ללוחמים משוחררים",
   "category": "peer-support",
@@ -14229,6 +14763,51 @@ window.SERVICES = [
    32.07,
    34.79
   ],
+  "supplier": false
+ },
+ {
+  "id": "natal-org-il-08fa0c",
+  "name": "סולטוק (Soul Talk) – קבוצות שיח לבוגרי שירות סדיר ומילואים (נט\"ל)",
+  "category": "peer-support",
+  "description": "קבוצות תהליכיות וחברתיות לבוגרי שירות סדיר ומילואים, לוחמים ותומכי לחימה, שחוויות השירות עדיין משפיעות עליהם. כל קבוצה מונחית על ידי מנחה מקצועי של נט\"ל, ונותנת כלים למעבר ללימודים, לעבודה, למשפחה ולשגרה. הקבוצות פועלות בקמפוסים וברשויות מקומיות ברחבי הארץ.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "employment",
+   "loneliness",
+   "moral-injury",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il/natal-community-projects/soul-talk/",
+  "how_to_apply": "למלא את טופס הפנייה בעמוד סולטוק באתר נט\"ל (קבוצת השיבה הביתה, סדנה או הרצאה). אם אין קבוצה באזור, משאירים פרטים וחוזרים אליכם כשנפתחת קבוצה. מועדי קבוצות מתפרסמים גם בעמוד הפייסבוק של סולטוק.",
+  "source_url": "https://www.natal.org.il/natal-community-projects/soul-talk/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
   "supplier": false
  },
  {
@@ -15340,6 +15919,61 @@ window.SERVICES = [
   "geo": [
    32.69,
    34.94
+  ],
+  "supplier": false
+ },
+ {
+  "id": "soultalkfarm-org-il-885fa7",
+  "name": "שיח נפש (Soultalk) – חווה חקלאית יוצרת ללוחמי חרבות ברזל ולמשפחות",
+  "category": "rehab-farm",
+  "description": "חווה חקלאית בשרון שהקימו מתנדבים מצוות מילואים של יחידה 669. מציעה תהליך אישי, עבודה חקלאית, יצירה וסדנאות, וגם ערבי צוות לקבוצות ויחידות. ללא עלות וללא צורך בהכרה של גוף ממשלתי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "families",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "family-relations",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "art",
+   "crafts",
+   "nature"
+  ],
+  "cost": "free",
+  "cost_notes": "ההשתתפות ללא עלות ולא דורשת הכרה מגוף ממשלתי (לפי האתר)",
+  "regions": [
+   "sharon"
+  ],
+  "location": "אזור צור משה / אבן יהודה (נעץ ב-Waze באתר)",
+  "phone": "",
+  "email": "soultalk@soultalkfarm.org.il",
+  "website": "https://www.soultalkfarm.org.il",
+  "how_to_apply": "לתהליך אישי: טופס יצירת קשר בעמוד 'אודותינו' באתר. לערב צוות או סדנה ליחידה: טופס Google שמקושר באתר.",
+  "source_url": "https://www.soultalkfarm.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "mixed",
+  "town": "צור משה",
+  "verified_at": "2026-10-11",
+  "era": "iron-swords",
+  "age": [],
+  "geo": [
+   32.25,
+   34.88
   ],
   "supplier": false
  },
@@ -16645,6 +17279,59 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "reformer-org-il-d66f1e",
+  "name": "רפורמר – מיצוי זכויות וקהילה לנכי צה\"ל ולנכי כוחות הביטחון",
+  "category": "rights-legal",
+  "description": "עמותה חדשה שמסייעת לנכי צה\"ל, משטרה, שב\"כ, מוסד, כבאות ושאר כוחות הביטחון במיצוי זכויות מול משרד הביטחון, ביטוח לאומי, רשות המסים והרשויות. מפעילה גם פעילות קבוצתית לשיקום ופנאי, בעיקר ספורט ימי, ומקימה מרכז קהילתי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "mod-in-process",
+   "mod-recognized",
+   "police",
+   "security-forces"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "physical-disability",
+   "ptsd"
+  ],
+  "interests": [
+   "sea"
+  ],
+  "cost": "free",
+  "cost_notes": "הסיוע בזכויות ללא תשלום; ייצוג משפטי דרך משרדים שנבחרו כרוך בדמי פתיחת תיק של 5,000 ש\"ח + מע\"מ והסכם שכר טרחה",
+  "regions": [
+   "center",
+   "nationwide"
+  ],
+  "location": "ויצמן 2, תל אביב (מגדל אמות השקעות, קומה 6)",
+  "phone": "052-7500510",
+  "email": "",
+  "website": "https://reformer.org.il",
+  "how_to_apply": "מילוי הטופס באתר, או פנייה בטלפון 052-7500510.",
+  "source_url": "https://reformer.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "rights",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "mixed",
+  "town": "תל אביב",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.08,
+   34.78
+  ],
+  "supplier": false
+ },
+ {
   "id": "btl-gov-il-5fe861",
   "name": "רפורמת 'נפש אחת' לנפגעי איבה – ביטוח לאומי",
   "category": "rights-legal",
@@ -16824,6 +17511,58 @@ window.SERVICES = [
   "verified_at": "2026-10-07",
   "era": "iron-swords",
   "age": [],
+  "supplier": false
+ },
+ {
+  "id": "18holesfoundation-org-0f56a8",
+  "name": "18 גומות – תוכנית גולף שיקומית לחצי שנה ללוחמים משוחררים עם פוסט טראומה",
+  "category": "sports",
+  "description": "תוכנית מובנית של 6 חודשים: מפגש שבועי של 2.5 עד 3 שעות עם הדרכה מקצועית בגולף, בליווי מנחים שעברו הכשרה בגישה מודעת טראומה. מיועדת ללוחמים משוחררים עם תסמיני פוסט טראומה, גם בתהליך הכרה וגם למי שלא פנה להכרה. בנוסף לטיפול הקליני ולא במקומו.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "sport"
+  ],
+  "cost": "free",
+  "cost_notes": "ממומנת מתרומות שמכסות את כל עלויות המשתתפים (לפי האתר)",
+  "regions": [
+   "sharon"
+  ],
+  "location": "משרד העמותה: פשוש 7, הוד השרון; מגרש האימונים לא צוין (בתמונה באתר מופיע מגרש הגולף קיסריה)",
+  "phone": "054-4605917",
+  "email": "info@18holesfoundation.org",
+  "website": "https://www.18holesfoundation.org/he",
+  "how_to_apply": "פנייה בטופס 'צור קשר' באתר (אפשרות 'רוצה להשתתף'), בטלפון או במייל. יש מיון התאמה לפני הקבלה.",
+  "source_url": "https://18holesfoundation.org",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "format": "group",
+  "town": "הוד השרון",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.15,
+   34.89
+  ],
   "supplier": false
  },
  {
@@ -19454,6 +20193,57 @@ window.SERVICES = [
    34.99
   ],
   "supplier": true
+ },
+ {
+  "id": "tzavcosher-com-5e89b4",
+  "name": "צו כושר – קהילת אימונים שבועית ללוחמי מילואים",
+  "category": "sports",
+  "description": "קהילה של לוחמות ולוחמי מילואים שנפגשת פעם בשבוע לאימון כושר (ריצה ואימון כוח) ואחריו ישיבה משותפת ושיחה פתוחה. יש גם מפגשים עם אנשי טיפול, סדנאות והרצאות. הקבוצות פועלות בבאר שבע, קרית גת, אשקלון, עוטף עזה, חבל יבנה ורחובות, מודיעין, ירושלים, תל אביב, הרצליה ופרדס חנה כרכור.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "fitness",
+   "sport"
+  ],
+  "cost": "free",
+  "cost_notes": "לפי פרסומי העמותה ההשתתפות ללא עלות; לא מופיע במפורש באתר",
+  "regions": [
+   "center",
+   "haifa",
+   "jerusalem",
+   "sharon",
+   "shfela",
+   "south"
+  ],
+  "location": "קבוצות בתל אביב, הרצליה, פרדס חנה-כרכור, מודיעין, רחובות, ירושלים, באר שבע, אשקלון, קריית גת ועוד; קבוצת חיפה במתנ\"ס רמת אשכול",
+  "phone": "055-570-8650",
+  "email": "Tzavcosher@gmail.com",
+  "website": "https://www.tzavcosher.com",
+  "how_to_apply": "להשאיר פרטים בטופס ההצטרפות באתר, ונשלח קישור לקבוצה הקרובה. ההצטרפות מותנית בהעלאת אישור מילואים.",
+  "source_url": "https://www.tzavcosher.com/about-9",
+  "confidence": "high",
+  "reviewed_at": "2026-10-11",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "peer",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "no",
+  "format": "group",
+  "town": "סניפים",
+  "verified_at": "2026-10-11",
+  "era": "",
+  "age": [],
+  "supplier": false
  },
  {
   "id": "s-5ac9cd",
