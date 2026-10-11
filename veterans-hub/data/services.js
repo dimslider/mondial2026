@@ -2010,11 +2010,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "מוסדות מוכרים",
-  "phone": "",
+  "phone": "*5266",
   "email": "",
-  "website": "",
-  "how_to_apply": "להגיש דרך מערכת הבקשות של אגף המילואים/דיקנאט המוסד לפי הנחיות השנה.",
-  "source_url": "https://www.study.co.il/P47361/",
+  "website": "https://www.hachvana.mod.gov.il/ExtraBenefits/Pages/Miluim.aspx",
+  "how_to_apply": "פונים לרכז/ת המילואים במוסד הלימודים ובודקים באתר האגף לחיילים משוחררים ומילואים מתי נפתח חלון הגשת הבקשות לשנה הנוכחית.",
+  "source_url": "https://www.hachvana.mod.gov.il/DocLib2/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA%20%D7%A1%D7%99%D7%95%D7%A2%20%D7%97%D7%93%20%D7%A4%D7%A2%D7%9E%D7%99%20%D7%9C%D7%9E%D7%A9%D7%A8%D7%AA%D7%99%20%D7%9E%D7%99%D7%9C%D7%95%D7%90%D7%99%D7%9D%20%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D-1.pdf",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -2641,11 +2641,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "כל המוסדות",
-  "phone": "",
+  "phone": "*8438",
   "email": "",
-  "website": "",
-  "how_to_apply": "לפנות לרכזת המילואים או לדיקנאט הסטודנטים במוסד; המתווה מפורסם באתר של כל מוסד.",
-  "source_url": "https://www.netanya.ac.il/wp-content/uploads/2025/10/%D7%9E%D7%AA%D7%95%D7%95%D7%94-%D7%AA%D7%A9%D7%A4%D7%95-1.pdf",
+  "website": "https://www.nuis.co.il/%d7%9e%d7%aa%d7%95%d7%95%d7%94-%d7%9e%d7%99%d7%9c%d7%95%d7%90%d7%99%d7%9d/",
+  "how_to_apply": "פונים לרכז/ת המילואים או לדיקנאט במוסד; אם אין מענה, פונים למוקד המל\"ג (8438*) או ממלאים את טופס הסיוע בעמוד המתווה של התאחדות הסטודנטים.",
+  "source_url": "https://che.org.il/moked/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -2780,11 +2780,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לתעשייה האווירית או לעמותת ידידי עתידים לגבי מחזורים חדשים.",
-  "source_url": "https://www.maariv.co.il/news/military/article-1311901",
+  "phone": "09-9505027",
+  "email": "info@atidim.org.il",
+  "website": "https://atidim.org/program/atidaim/",
+  "how_to_apply": "פונים לעמותת עתידים בטלפון או במייל ושואלים על פתיחת מחזור חדש בתוכנית ההכשרה לפצועי צה\"ל עם התעשייה האווירית ואורט.",
+  "source_url": "https://atidim.org/contact/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -2822,10 +2822,10 @@ window.SERVICES = [
    "jerusalem"
   ],
   "location": "ירושלים",
-  "phone": "",
+  "phone": "106",
   "email": "",
-  "website": "",
-  "how_to_apply": "דרך מרכז התעסוקה הזדמנות בירושלים",
+  "website": "https://www.jerusalem.muni.il/",
+  "how_to_apply": "מתקשרים למוקד העירוני 106 ומבקשים להתחבר לרשות העירונית לתעסוקה (מרכז הזדמנות) לגבי התוכנית למילואימניקים.",
   "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
   "confidence": "medium",
   "reviewed_at": "",
@@ -3005,11 +3005,11 @@ window.SERVICES = [
    "jerusalem"
   ],
   "location": "עזריאלי – מכללה אקדמית להנדסה ירושלים",
-  "phone": "",
+  "phone": "*9087",
   "email": "",
-  "website": "",
-  "how_to_apply": "לסטודנטים במכללה: אין צורך במסמכים, המידע מגיע ממשרד הביטחון וועדת מלגות המילואים מחליטה. שאלות, לדיקנאט הסטודנטים במכללה.",
-  "source_url": "https://www.jce.ac.il/wp-content/uploads/2025/10/תקנון-מלגת-גראס-מילואים-תשפו.pdf",
+  "website": "https://www.jce.ac.il/%d7%93%d7%a7%d7%a0%d7%98",
+  "how_to_apply": "סטודנטים במכללה לא צריכים להגיש מסמכים; לשאלות מתקשרים למכללה (9087*) ומבקשים את דיקנאט הסטודנטים.",
+  "source_url": "https://www.jce.ac.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -3182,11 +3182,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "מוסדות להשכלה גבוהה",
-  "phone": "",
+  "phone": "*5266",
   "email": "",
-  "website": "",
-  "how_to_apply": "להגיש בקשה מקוונת בחלון ההגשה השנתי (אוגוסט–ספטמבר) דרך הקרן להכוונת חיילים משוחררים/דיקנאט הסטודנטים.",
-  "source_url": "https://wgalil.ac.il/wp-content/uploads/2026/08/august_hot_scholarships.pdf",
+  "website": "https://www.hachvana.mod.gov.il/ExtraBenefits/Pages/Miluim.aspx",
+  "how_to_apply": "נכנסים לאזור האישי באתר האגף לחיילים משוחררים ומילואים ומגישים בקשה בחלון ההגשה השנתי (אוגוסט-ספטמבר).",
+  "source_url": "https://www.hachvana.mod.gov.il/ExtraBenefits/Pages/Miluim.aspx",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -3319,11 +3319,11 @@ window.SERVICES = [
    "online"
   ],
   "location": "",
-  "phone": "",
+  "phone": "1111",
   "email": "",
-  "website": "",
-  "how_to_apply": "להגיש בקשה דרך אתר המילואים או מוקד המילואים של צה\"ל, עם אישור לימודים וקבלות.",
-  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
+  "website": "https://www.miluim.idf.il/",
+  "how_to_apply": "מגישים בקשה באתר המילואים של צה\"ל עם אישור לימודים וקבלות, ולשאלות מתקשרים למוקד 1111.",
+  "source_url": "https://news.walla.co.il/item/3697004",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -3742,8 +3742,8 @@ window.SERVICES = [
   "location": "לשכות שירות התעסוקה",
   "phone": "",
   "email": "",
-  "website": "",
-  "how_to_apply": "להירשם באתר שירות התעסוקה או בלשכה הקרובה ולבקש שיבוץ לתכנית למשרתי מילואים/שובר הכשרה.",
+  "website": "https://www.taasuka.gov.il/",
+  "how_to_apply": "נרשמים באתר שירות התעסוקה או מגיעים ללשכה הקרובה ומבקשים שיבוץ בתוכנית למשרתי מילואים.",
   "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
   "confidence": "medium",
   "reviewed_at": "",
@@ -4278,10 +4278,10 @@ window.SERVICES = [
   ],
   "location": "",
   "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "לברר מול החברה להגנת הטבע.",
-  "source_url": "https://natureisrael.org/natureheals",
+  "email": "customer-service@spni.org.il",
+  "website": "https://www.teva.org.il/contact-us",
+  "how_to_apply": "כותבים לשירות הלקוחות של החברה להגנת הטבע ושואלים על מסע החוסן הקרוב לבני נוער שחוו טראומה.",
+  "source_url": "https://www.teva.org.il/contact-us",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -4867,11 +4867,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "",
-  "source_url": "https://www.inn.co.il/news/668994",
+  "phone": "055-981-3699",
+  "email": "project.vehavta@gmail.com",
+  "website": "https://veahavtaisrael.org/",
+  "how_to_apply": "מתקשרים או שולחים וואטסאפ לעמותה ומבקשים ליווי מתנדב למשפחה בזמן האשפוז.",
+  "source_url": "https://veahavtaisrael.org/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -5135,11 +5135,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111",
   "email": "",
-  "website": "",
-  "how_to_apply": "לגבי קייטנות, לבדוק מול הרשות המקומית או משרד החינוך. לגבי המענק לבן/בת הזוג, לבדוק באתר המילואים ובכל-זכות.",
-  "source_url": "https://www.timesofisrael.com/liveblog_entry/government-allocates-56-million-more-for-benefits-for-idf-reservists/",
+  "website": "https://www.miluim.idf.il/",
+  "how_to_apply": "בודקים זכאות ומגישים בקשה באזור האישי באתר המילואים של צה\"ל; לשאלות מתקשרים למוקד 1111.",
+  "source_url": "https://www.miluim.idf.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -5221,11 +5221,11 @@ window.SERVICES = [
    "jerusalem"
   ],
   "location": "ירושלים",
-  "phone": "",
+  "phone": "106",
   "email": "",
-  "website": "",
-  "how_to_apply": "לפנות למוקד העירוני/מינהל הרווחה בעיריית ירושלים ולבקש את מערך המילואימניקים.",
-  "source_url": "https://www.kipa.co.il/כדאי-לדעת/1194386-0/",
+  "website": "https://www.jerusalem.muni.il/",
+  "how_to_apply": "מתקשרים למוקד העירוני 106 ומבקשים את מערך התמיכה במשפחות המילואימניקים.",
+  "source_url": "https://www.srugim.co.il/872209-עיריית-ירושלים-המוקד-העירוני-106-בחזית-ה",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -6354,11 +6354,11 @@ window.SERVICES = [
    "online"
   ],
   "location": "",
-  "phone": "",
+  "phone": "1111",
   "email": "",
-  "website": "",
-  "how_to_apply": "לבדוק זכאות באזור האישי באתר המילואים; רוב התשלומים מועברים אוטומטית.",
-  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
+  "website": "https://www.miluim.idf.il/",
+  "how_to_apply": "נכנסים לאזור האישי באתר המילואים ובודקים את הזכאות; רוב התשלומים מועברים אוטומטית, ולשאלות מתקשרים למוקד 1111.",
+  "source_url": "https://www.miluim.idf.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -6651,11 +6651,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "*4954",
   "email": "",
-  "website": "",
-  "how_to_apply": "להגיש באזור האישי באתר רשות המסים (מערכת מענקי חרבות ברזל), בעצמך או דרך רואה חשבון.",
-  "source_url": "https://finance.walla.co.il/item/3682332",
+  "website": "https://www.gov.il/he/departments/israel_tax_authority",
+  "how_to_apply": "נכנסים לאזור האישי באתר רשות המסים ומגישים תביעה במערכת מענקי חרבות ברזל, בעצמכם או דרך רואה חשבון.",
+  "source_url": "https://www.shibolet.com/?p=15682",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -6997,11 +6997,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "ארצי",
-  "phone": "",
+  "phone": "1111",
   "email": "",
-  "website": "",
-  "how_to_apply": "להגיש בקשות להחזר הוצאות דרך אתר המילואים של צה\"ל; לעיין במדריך בכל-זכות.",
-  "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
+  "website": "https://www.miluim.idf.il/",
+  "how_to_apply": "מגישים בקשה להחזר הוצאות עם הקבלות באתר המילואים של צה\"ל, ולשאלות מתקשרים למוקד 1111.",
+  "source_url": "https://www.miluim.idf.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -7234,11 +7234,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "להגיע לסניף הקרוב עם הפניה/מסמך רפואי ולשאול את הציוד.",
-  "source_url": "https://www.inn.co.il/news/281456",
+  "phone": "*6444",
+  "email": "info@yadsarah.org.il",
+  "website": "https://www.yadsarah.org.il/",
+  "how_to_apply": "מתקשרים ל-6444* או מגיעים לסניף יד שרה הקרוב כדי לשאול את הציוד.",
+  "source_url": "https://yadsarah.org/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -7454,11 +7454,11 @@ window.SERVICES = [
    "center"
   ],
   "location": "המרכז הרפואי שיבא, תל השומר, רמת גן",
-  "phone": "",
+  "phone": "03-5303439",
   "email": "",
-  "website": "",
-  "how_to_apply": "הפניה דרך בית החולים המאשפז, אגף השיקום או קופת החולים.",
-  "source_url": "https://www.maariv.co.il/news/military/Article-1070989",
+  "website": "https://www.sheba.co.il/rehabilitation/departments/returning-to-life-rehabilitation-wounded-soldiers/",
+  "how_to_apply": "מבקשים מהגורם המטפל או מאגף השיקום הפניה לאשפוז שיקומי במחלקת \"חוזרים לחיים\" בשיבא, ולבירורים מתקשרים למחלקה.",
+  "source_url": "https://www.sheba.co.il/rehabilitation/departments/returning-to-life-rehabilitation-wounded-soldiers/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -7843,11 +7843,11 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "בתי חולים ציבוריים",
-  "phone": "",
+  "phone": "*8150",
   "email": "",
-  "website": "",
-  "how_to_apply": "בירור זכאות מול אגף השיקום (רכז/ת השיקום) ומול המרפאה הפסיכיאטרית בבית החולים",
-  "source_url": "https://www.brainsway.com/?p=14182",
+  "website": "https://shikum.mod.gov.il/",
+  "how_to_apply": "מתקשרים למוקד אגף השיקום (*8944) או פונים לרכז/ת השיקום ומבקשים לבדוק זכאות להפניה לטיפול Deep TMS במרפאה פסיכיאטרית של בית חולים ציבורי.",
+  "source_url": "https://shikum.mod.gov.il/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -7888,11 +7888,11 @@ window.SERVICES = [
    "center"
   ],
   "location": "המרכז הרפואי שמיר (אסף הרופא), באר יעקב",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "לבקש הפניה מהגורם המטפל (אגף השיקום או גורם טיפולי אחר) ולבדוק התאמה מול המרכז.",
-  "source_url": "https://shamirfriends.shamir.org/en/proj/the-center-for-ptsd-treatment/",
+  "phone": "08-9542695",
+  "email": "hbo@shamir.gov.il",
+  "website": "https://www.shamir.org/he/clinic/%D7%9E%D7%A8%D7%9B%D7%96-%D7%A1%D7%92%D7%95%D7%9C-%D7%9C%D7%A8%D7%A4%D7%95%D7%90%D7%94-%D7%94%D7%99%D7%A4%D7%A8%D7%91%D7%90%D7%A8%D7%99%D7%AA/ptsd/",
+  "how_to_apply": "ממלאים טופס התאמה בעמוד מרכז סגול באתר שמיר או מתקשרים למרכז (א-ה 07:30-19:30) כדי לבדוק התאמה לטיפול.",
+  "source_url": "https://www.shamir.org/he/clinic/%D7%9E%D7%A8%D7%9B%D7%96-%D7%A1%D7%92%D7%95%D7%9C-%D7%9C%D7%A8%D7%A4%D7%95%D7%90%D7%94-%D7%94%D7%99%D7%A4%D7%A8%D7%91%D7%90%D7%A8%D7%99%D7%AA/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -8126,7 +8126,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -8146,7 +8146,8 @@ window.SERVICES = [
    32.73,
    35.22
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "shikum-mod-gov-il-31c7ad",
@@ -8230,11 +8231,11 @@ window.SERVICES = [
    "jerusalem"
   ],
   "location": "הדסה הר הצופים, ירושלים",
-  "phone": "",
+  "phone": "02-5842111",
   "email": "",
-  "website": "",
-  "how_to_apply": "הפניה מהגורם המטפל או המממן לאשפוז שיקומי או לאשפוז יום.",
-  "source_url": "https://hadassahinternational.org/hadassah-medical-organization-opens-new-advanced-rehabilitation-center-in-israel/",
+  "website": "https://he.hadassah.org.il/recovery/",
+  "how_to_apply": "מבקשים מהגורם המטפל או המממן הפניה לאשפוז שיקומי או לאשפוז יום בהדסה הר הצופים, ולתיאום מתקשרים למוקד הזימונים.",
+  "source_url": "https://www.hadassah.org.il/rehabilitationclinicsht/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
   "community_recs": "",
@@ -8380,7 +8381,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -8400,7 +8401,8 @@ window.SERVICES = [
    32.05,
    35.29
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-b0d63b",
@@ -8429,11 +8431,11 @@ window.SERVICES = [
    "center"
   ],
   "location": "שכונת הדרים, שוהם (סמוך למתחם בית לחיים)",
-  "phone": "",
+  "phone": "052-6860857",
   "email": "",
-  "website": "",
-  "how_to_apply": "לברר דרך רכז השיקום באגף השיקום או מול המועצה המקומית שוהם",
-  "source_url": "https://www.israelhayom.co.il/news/local/article/19509894",
+  "website": "https://nekudatmifne.org.il/",
+  "how_to_apply": "מתקשרים או שולחים וואטסאפ למרכז ומתאמים שיחה עם מנהל מקרה וסיור במקום; המרכז מלווה גם בבדיקת הזכאות מול אגף השיקום.",
+  "source_url": "https://nekudatmifne.org.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -8481,10 +8483,10 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "*5400",
   "email": "",
-  "website": "",
-  "how_to_apply": "לבקש הפניה לוועדת סל שיקום במרפאת בריאות הנפש של קופת החולים (שם גם יעזרו בטפסים). בערך חודש אחרי ההגשה מזמנים לוועדה אזורית.",
+  "website": "https://me.health.gov.il/mental-health/therapy-rehabilitation/rehabilitation/rehabilitation-basket/about/",
+  "how_to_apply": "מבקשים מהפסיכיאטר/ית במרפאת בריאות הנפש של קופת החולים הפניה לוועדת סל שיקום וממלאים איתם את טופס הבקשה.",
   "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/rehabilitation/rehabilitation-basket/about/",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
@@ -10879,8 +10881,8 @@ window.SERVICES = [
   "location": "",
   "phone": "",
   "email": "",
-  "website": "",
-  "how_to_apply": "לפנות למוקד התמיכה הנפשית של קופת החולים שלכם (המספרים מופיעים באתר הביטוח הלאומי).",
+  "website": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
+  "how_to_apply": "מתקשרים לקו התמיכה הנפשית של קופת החולים שלכם: כללית *2708, מכבי *3028, מאוחדת *3833, לאומית 072-2000272.",
   "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
@@ -11164,7 +11166,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "פנייה לקצין מע\"ן של היחידה או המחוז. ההפניה לטיפול חיצוני נעשית בכתב בחתימת קצין המע\"ן.",
+  "how_to_apply": "שוטרים פונים לקצין מע\"ן (בריאות הנפש) של היחידה או המחוז דרך המפקד או משאבי אנוש ביחידה.",
   "source_url": "https://www.ynet.co.il/news/article/r11tvqrmq",
   "confidence": "medium",
   "reviewed_at": "",
@@ -12969,8 +12971,8 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "דרך עמותת הצעד הבא או קציני הנפגעים ביחידות",
-  "source_url": "https://www.inn.co.il/news/647316",
+  "how_to_apply": "מתקשרים לעמותת הצעד הבא ומבקשים להצטרף לטיולי \"קטע של טיול\" לקטועי גפיים.",
+  "source_url": "https://www.thenextstep.org.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -12985,7 +12987,8 @@ window.SERVICES = [
   "verified_at": "",
   "era": "",
   "age": [],
-  "supplier": false
+  "supplier": false,
+  "no_contact": true
  },
  {
   "id": "invisiblealbum-com-4c0a62",
@@ -15188,7 +15191,8 @@ window.SERVICES = [
   "verified_at": "",
   "era": "iron-swords",
   "age": [],
-  "supplier": false
+  "supplier": false,
+  "no_contact": true
  },
  {
   "id": "kavlevanon-org-il-4cf1f6",
@@ -17495,7 +17499,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17515,7 +17519,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-f89db0",
@@ -17545,7 +17550,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17565,7 +17570,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-fcd901",
@@ -17593,7 +17599,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17613,7 +17619,8 @@ window.SERVICES = [
    32.93,
    35.32
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-115568",
@@ -17641,7 +17648,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17661,7 +17668,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-befc0c",
@@ -17690,7 +17698,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17710,7 +17718,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-3970c8",
@@ -17738,7 +17747,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17758,7 +17767,8 @@ window.SERVICES = [
    32.52,
    35.15
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-dcc83d",
@@ -17786,7 +17796,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17806,7 +17816,8 @@ window.SERVICES = [
    32.52,
    35.15
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-fe239d",
@@ -17834,7 +17845,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17854,7 +17865,8 @@ window.SERVICES = [
    32.51,
    35.05
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-0345f4",
@@ -17882,7 +17894,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17902,7 +17914,8 @@ window.SERVICES = [
    32.72,
    35.06
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-eb9809",
@@ -17930,7 +17943,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17950,7 +17963,8 @@ window.SERVICES = [
    32.98,
    35.24
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-12a8ef",
@@ -17979,7 +17993,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -17999,7 +18013,8 @@ window.SERVICES = [
    32.95,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-de5d79",
@@ -18027,7 +18042,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18047,7 +18062,8 @@ window.SERVICES = [
    32.51,
    35.05
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-d3e2c4",
@@ -18075,7 +18091,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18095,7 +18111,8 @@ window.SERVICES = [
    32.95,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-28ef8f",
@@ -18123,7 +18140,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18143,7 +18160,8 @@ window.SERVICES = [
    32.51,
    35.05
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-9a441c",
@@ -18171,7 +18189,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18191,7 +18209,8 @@ window.SERVICES = [
    32.94,
    35.19
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-0e87a6",
@@ -18219,7 +18238,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18239,7 +18258,8 @@ window.SERVICES = [
    32.52,
    35.15
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-78edf0",
@@ -18268,7 +18288,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18288,7 +18308,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-a874e8",
@@ -18316,7 +18337,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18336,7 +18357,8 @@ window.SERVICES = [
    32.85,
    35.34
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-6c0cd2",
@@ -18364,7 +18386,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18384,7 +18406,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-b15899",
@@ -18412,7 +18435,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18432,7 +18455,8 @@ window.SERVICES = [
    32.95,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-00caf6",
@@ -18461,7 +18485,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18481,7 +18505,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-264b27",
@@ -18506,11 +18531,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
+  "phone": "04-9080430",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.profitgym.co.il",
+  "how_to_apply": "מתקשרים למועדון ומבקשים לתאם אימון ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/80246257/27900/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -18557,7 +18582,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18577,7 +18602,8 @@ window.SERVICES = [
    32.81,
    35.26
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-48ea15",
@@ -18605,7 +18631,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18625,7 +18651,8 @@ window.SERVICES = [
    32.96,
    35.3
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-113d03",
@@ -18653,7 +18680,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18673,7 +18700,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-2143aa",
@@ -18701,7 +18729,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "נכנסים לארנק הדיגיטלי באפליקציית Shikum.Me, מחפשים את העסק ברשימת הספקים ומזמינים משם.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18721,7 +18749,8 @@ window.SERVICES = [
    33.02,
    35.35
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-e4e7d3",
@@ -18749,7 +18778,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18769,7 +18798,8 @@ window.SERVICES = [
    32.89,
    35.41
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-c6051d",
@@ -18797,7 +18827,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18817,7 +18847,8 @@ window.SERVICES = [
    32.92,
    35.25
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-71be48",
@@ -18845,7 +18876,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18865,7 +18896,8 @@ window.SERVICES = [
    32.89,
    35.41
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-375f6b",
@@ -18893,7 +18925,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18913,7 +18945,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-f6d0bf",
@@ -18941,7 +18974,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -18961,7 +18994,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-75e8a3",
@@ -18989,7 +19023,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19009,7 +19043,8 @@ window.SERVICES = [
    32.86,
    35.36
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "etgarim-org-7af9a1",
@@ -19093,7 +19128,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19113,7 +19148,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "isad-org-il-f6a52d",
@@ -19186,11 +19222,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה: פמילי חיפה, קניון חיפה, גרנד קניון",
-  "phone": "",
+  "phone": "04-8124545",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.holmesplace.co.il/",
+  "how_to_apply": "מתקשרים לסניף הולמס פלייס הקרוב ומבקשים לתאם סיור ואימון ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/62377960/27900/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -19342,11 +19378,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "באקה אל-גרביה",
-  "phone": "",
+  "phone": "054-5983557",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "how_to_apply": "מתקשרים לחדר הכושר רויאל ומבקשים לתאם אימון ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/80030809/27900/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -19489,11 +19525,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
+  "phone": "054-7710360",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.maccabihaifa.co.il/",
+  "how_to_apply": "מתקשרים לאגודת מכבי חיפה כרמל ושואלים איזה ענף או חוג מתאים במימון Shikum.Me; התשלום דרך הארנק הדיגיטלי באפליקציה.",
+  "source_url": "https://www.maccabihaifa.co.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -19537,11 +19573,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "אום אל-פחם",
-  "phone": "",
+  "phone": "04-6113344",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "how_to_apply": "מתקשרים למועדון הספורט אלוואחה ומבקשים לתאם אימון ניסיון (יש שעות נפרדות לנשים ולגברים); התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/73093960/42990/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -19588,7 +19624,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19608,7 +19644,8 @@ window.SERVICES = [
    32.81,
    35.17
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-1f8f38",
@@ -19636,7 +19673,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19656,7 +19693,8 @@ window.SERVICES = [
    32.75,
    35.34
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "adi-rehab-org-8c4aee",
@@ -19735,7 +19773,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19755,7 +19793,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-b5765e",
@@ -19787,9 +19826,9 @@ window.SERVICES = [
   "location": "רמת גן",
   "phone": "",
   "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לנבחרת דרך ההתאחדות לכדורגל או ברשתות החברתיות",
-  "source_url": "https://sport1.maariv.co.il/other-industries/article/1597358/",
+  "website": "https://www.facebook.com/israelampfootball",
+  "how_to_apply": "שולחים הודעה לעמוד הפייסבוק של איגוד הכדורגל לקטועים ומבקשים להגיע לאימון או ליום איתור.",
+  "source_url": "https://www.amputeefootball.eu/members/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -19882,7 +19921,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19902,7 +19941,8 @@ window.SERVICES = [
    32.72,
    35.31
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-81a12a",
@@ -19930,7 +19970,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -19950,7 +19990,8 @@ window.SERVICES = [
    32.96,
    35.17
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "sporter-co-il-405ce8",
@@ -20025,11 +20066,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה, כמה סניפים (כרמל, דניה, רמת אשכול, ורדיה, נווה שאנן, בת גלים, טכניון, אוניברסיטה, קסטרא)",
-  "phone": "",
+  "phone": "052-4441342",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "how_to_apply": "מתקשרים לפיור ומבקשים לתאם שיעור ניסיון בסניף הקרוב; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/80127777/40030015/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -20073,11 +20114,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "052-6800731",
+  "email": "flexhaifa1@gmail.com",
+  "website": "https://flexhaifa.com/",
+  "how_to_apply": "שולחים וואטסאפ או מתקשרים לפלקס ומבקשים לתאם אימון ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://flexhaifa.com/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -20175,7 +20216,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -20195,7 +20236,8 @@ window.SERVICES = [
    32.51,
    35.05
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-9095b6",
@@ -20223,7 +20265,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -20243,7 +20285,8 @@ window.SERVICES = [
    32.85,
    35.2
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "etgarim-org-3d689f",
@@ -20323,7 +20366,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -20343,7 +20386,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-351bca",
@@ -20370,11 +20414,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
+  "phone": "050-5366816",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.crossfit.com/gym/35387/crossfit-downtown-haifa",
+  "how_to_apply": "מתקשרים לקרוספיט דאון טאון חיפה ומבקשים לתאם אימון ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.crossfit.com/gym/35387/crossfit-downtown-haifa",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -20420,11 +20464,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "058-7750881",
+  "email": "crossfitkrayot@gmail.com",
+  "website": "https://crossfitkrayot.com/",
+  "how_to_apply": "מתקשרים או שולחים וואטסאפ לקרוספיט קריות ומבקשים לתאם אימון ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://crossfitkrayot.com/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -20779,7 +20823,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -20799,7 +20843,8 @@ window.SERVICES = [
    32.77,
    35.04
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-0f2214",
@@ -20825,11 +20870,11 @@ window.SERVICES = [
    "judea-samaria"
   ],
   "location": "גבעת זאב",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "02-5363388",
+  "email": "givatzev@matnasim.org.il",
+  "website": "https://www.givatzeev.org.il/",
+  "how_to_apply": "מתקשרים למתנ\"ס גבעת זאב ומבקשים להירשם לבריכה; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.givatzeev.org.il/page.php?type=contactUs",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -20877,7 +20922,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -20897,7 +20942,8 @@ window.SERVICES = [
    31.8,
    35.01
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "lohamim-org-il-1df527",
@@ -21034,7 +21080,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומחפשים שם את העסק לפי שמו.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -21054,7 +21100,8 @@ window.SERVICES = [
    32.83,
    35.06
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "etgarim-org-ea7876",
@@ -21373,11 +21420,11 @@ window.SERVICES = [
    "north"
   ],
   "location": "עכו",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "054-2372126",
+  "email": "lunasurf1202@gmail.com",
+  "website": "https://luna-surf.co.il/",
+  "how_to_apply": "מתקשרים למשרד של לונה סרף ומתאמים השכרת גלשן או סאפ או שיעור ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://luna-surf.co.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -21423,11 +21470,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "עתלית",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "04-9541968",
+  "email": "Yam@li-yam.com",
+  "website": "https://www.li-yam.com/",
+  "how_to_apply": "מתקשרים למועדון ומבקשים לתאם אימון קבוצתי או השכרת גלשן או סאפ; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.li-yam.com/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -21575,7 +21622,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -21595,7 +21642,8 @@ window.SERVICES = [
    32.83,
    35.06
   ],
-  "supplier": false
+  "supplier": false,
+  "no_contact": true
  },
  {
   "id": "zivneurim-org-2ae663",
@@ -21669,11 +21717,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
+  "phone": "054-7733599",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "how_to_apply": "מתקשרים למועדון ומבקשים להצטרף לקבוצת גלישה או חתירה או לתאם השכרת גלשן או סאפ; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/80305297/10070/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -21719,11 +21767,11 @@ window.SERVICES = [
    "north"
   ],
   "location": "נהריה",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "04-9857999",
+  "email": "country@evron.org.il",
+  "website": "https://country-evron.co.il/",
+  "how_to_apply": "מתקשרים לקאנטרי גן עברון ומבררים שעות שחייה חופשית ואיך נכנסים עם הזכאות; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://country-evron.co.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -21818,7 +21866,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -21838,7 +21886,8 @@ window.SERVICES = [
    32.83,
    35.06
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-f290c1",
@@ -21867,7 +21916,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -21887,7 +21936,8 @@ window.SERVICES = [
    31.75,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-fe45df",
@@ -21916,7 +21966,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -21936,7 +21986,8 @@ window.SERVICES = [
    32.73,
    35.22
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-772894",
@@ -21965,7 +22016,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -21985,7 +22036,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "cmbm-israel-org-378fe3",
@@ -22061,7 +22113,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22081,7 +22133,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-b1afb9",
@@ -22106,11 +22159,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "חיפה",
-  "phone": "",
+  "phone": "058-666-9023",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.ice-guru.com/",
+  "how_to_apply": "שולחים הודעת וואטסאפ ל-Ice guru ומבקשים לתאם שיעור יוגה, נשימה ומדיטציה בסניף חיפה (בת גלים); התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.ice-guru.com/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -22158,7 +22211,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22178,7 +22231,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-ff324e",
@@ -22207,7 +22261,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22227,7 +22281,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-d2e214",
@@ -22256,7 +22311,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22276,7 +22331,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-079013",
@@ -22304,7 +22360,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22324,7 +22380,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-256cfd",
@@ -22352,7 +22409,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22372,7 +22429,8 @@ window.SERVICES = [
    32.1,
    35.17
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-6948a2",
@@ -22400,7 +22458,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22420,7 +22478,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-c25b54",
@@ -22449,7 +22508,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22469,7 +22528,8 @@ window.SERVICES = [
    33.02,
    35.35
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-0d708a",
@@ -22498,7 +22558,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22518,7 +22578,8 @@ window.SERVICES = [
    33.02,
    35.35
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-7027ff",
@@ -22547,7 +22608,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22567,7 +22628,8 @@ window.SERVICES = [
    32.1,
    35.17
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-1acd3c",
@@ -22596,7 +22658,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22616,7 +22678,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "brothersin-yoga-b85612",
@@ -22694,7 +22757,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22714,7 +22777,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "natal-org-il-8a483f",
@@ -22791,7 +22855,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22811,7 +22875,8 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-4ab149",
@@ -22839,7 +22904,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -22859,7 +22924,8 @@ window.SERVICES = [
    31.77,
    35.21
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-cb1a53",
@@ -22885,11 +22951,11 @@ window.SERVICES = [
    "jerusalem"
   ],
   "location": "מבשרת ציון",
-  "phone": "",
+  "phone": "02-9663333",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.holmesplace.co.il/",
+  "how_to_apply": "מתקשרים למועדון הולמס פלייס במבשרת ציון ומבקשים לתאם שיעור ניסיון בפילאטיס מכשירים; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.d.co.il/80260409/27900/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -22991,10 +23057,10 @@ window.SERVICES = [
    "nationwide"
   ],
   "location": "",
-  "phone": "",
+  "phone": "1-800-363-363",
   "email": "",
-  "website": "",
-  "how_to_apply": "לתאם ולשלם לבד, ואז להגיש בקשת החזר מקוונת באתר ביטוח לאומי עם קבלה (שם ות\"ז של המטופל/ת, תאריכים, פרטי המטפל/ת ומספר עוסק).",
+  "website": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
+  "how_to_apply": "מתאמים ומשלמים לבד על הטיפול, ואז מגישים בקשת החזר מקוונת באתר ביטוח לאומי עם הקבלה (שם ות\"ז של המטופל, תאריכים, שם המטפל ומספר עוסק).",
   "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
@@ -23084,11 +23150,11 @@ window.SERVICES = [
    "jerusalem"
   ],
   "location": "ירושלים: הר חומה, רמות",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "02-502-6960",
+  "email": "ramot.matishape@gmail.com",
+  "website": "https://matishape.co.il/",
+  "how_to_apply": "מתקשרים לקאנטרי (מטי שייפ רמות) ומבקשים לתאם שיעור ניסיון בפילאטיס מכשירים לנשים; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://matishape.co.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -23182,11 +23248,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "מרכז ספורט עירוני גלי חיפה",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "phone": "04-8529611",
+  "email": "office@galeihaifa.co.il",
+  "website": "https://www.galeihaifa.co.il/%D7%A4%D7%99%D7%9C%D7%90%D7%98%D7%99%D7%A1-%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99%D7%9D",
+  "how_to_apply": "מתקשרים למשרד גלי חיפה ומבקשים לתאם שיעור ניסיון בפילאטיס מכשירים; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://www.galeihaifa.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -23231,11 +23297,11 @@ window.SERVICES = [
    "haifa"
   ],
   "location": "מרכז קהילתי נווה דוד, חיפה",
-  "phone": "",
+  "phone": "04-8380816",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://www.nevedavid.org.il/",
+  "how_to_apply": "מתקשרים למרכז הקהילתי ונרשמים לחוג פילאטיס, יוגה או פלדנקרייז; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://nevedavid.org.il/page.php?bc=AC1&id=95369&type=hug",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -23283,7 +23349,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -23303,7 +23369,8 @@ window.SERVICES = [
    31.78,
    35.3
   ],
-  "supplier": false
+  "supplier": false,
+  "no_contact": true
  },
  {
   "id": "s-309aac",
@@ -23332,7 +23399,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -23352,7 +23419,8 @@ window.SERVICES = [
    31.86,
    35.26
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-01be6a",
@@ -23381,7 +23449,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -23401,7 +23469,8 @@ window.SERVICES = [
    32.95,
    35.16
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "shikumme-co-il-2c0e2a",
@@ -23478,7 +23547,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -23498,7 +23567,8 @@ window.SERVICES = [
    31.88,
    35.25
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  },
  {
   "id": "s-157e85",
@@ -23525,9 +23595,9 @@ window.SERVICES = [
   "location": "חיפה",
   "phone": "",
   "email": "",
-  "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
-  "source_url": "https://sapakim-shikum.netlify.app/",
+  "website": "https://pilates-reform.co.il/",
+  "how_to_apply": "משאירים שם וטלפון בטופס באתר הסטודיו ומבקשים לתאם שיעור ניסיון; התשלום דרך הארנק הדיגיטלי באפליקציית Shikum.Me.",
+  "source_url": "https://pilates-reform.co.il/",
   "confidence": "medium",
   "reviewed_at": "",
   "community_recs": "",
@@ -23574,7 +23644,7 @@ window.SERVICES = [
   "phone": "",
   "email": "",
   "website": "",
-  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me של אגף השיקום (סל טיפולים משלימים, 6,600 ₪ בשנה לזכאים).",
+  "how_to_apply": "מזמינים דרך הארנק הדיגיטלי באפליקציית Shikum.Me ומבררים שם את פרטי הקשר ושעות הפעילות של העסק.",
   "source_url": "https://sapakim-shikum.netlify.app/",
   "confidence": "medium",
   "reviewed_at": "",
@@ -23594,6 +23664,7 @@ window.SERVICES = [
    32.79,
    34.99
   ],
-  "supplier": true
+  "supplier": true,
+  "no_contact": true
  }
 ];
