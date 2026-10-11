@@ -1,7 +1,7 @@
 היי, זה הסשן שבונה את "אזימוט". הפעם המשימה היא **השלמת דרכי פנייה**. בסקירה חיצונית התברר ש-117 רשומות במאגר בלי טלפון, בלי מייל ובלי אתר. כרטיס כזה משאיר את האדם בלי צעד הבא.
 
 ## לפני שמתחילים
-`git pull origin ccr-d452e790-ntiise`. הרשימה נמצאת ב-`veterans-hub/research/no_contact_list.json` (id, name, town, source_url, supplier). הרשומות המלאות נמצאות ב-`data/services.js`.
+`git pull origin ccr-d452e790-ntiise`. הרשימה נמצאת ב-`veterans-hub/research/requests/no_contact_list.json` (id, name, town, source_url, supplier). הרשומות המלאות נמצאות ב-`data/services.js`.
 
 ## סדר עדיפויות
 1. **32 הרשומות שאינן ספקים (`supplier: false`):** עמותות, תוכניות ושירותים. אלה הכי חשובות.
