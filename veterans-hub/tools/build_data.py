@@ -255,8 +255,8 @@ def main():
         # ספק פרטי בסל הטיפולים המשלימים (Shikum.Me): מכון, סטודיו, בריכה. לא "תוכנית", מוצג אחרת.
         s["supplier"] = s.get("provider_type") == "private" and bool(re.search(r"Shikum\.?Me", (s.get("how_to_apply") or "") + (s.get("cost_notes") or ""), re.I))
 
-    # השלמת דרכי פנייה (research/contact_fill.json, לפי CONTACT_REQUEST.md)
-    fill_path = ROOT / "research" / "contact_fill.json"
+    # השלמת דרכי פנייה (research/requests/contact_fill.json, לפי CONTACT_REQUEST.md)
+    fill_path = ROOT / "research" / "requests" / "contact_fill.json"
     if fill_path.exists():
         fill = json.loads(fill_path.read_text(encoding="utf-8"))
         kept = []
