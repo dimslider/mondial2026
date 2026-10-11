@@ -1,0 +1,938 @@
+[
+ {
+  "id": "s-6de9e7",
+  "name": "\"ממילואים ללימודים\" – קצין המילואים הראשי",
+  "town": "ארצי",
+  "source_url": "https://www.study.co.il/P47361/",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-439179",
+  "name": "התאמות אקדמיות למשרתי מילואים ולבני/בנות זוג",
+  "town": "ארצי",
+  "source_url": "https://www.netanya.ac.il/wp-content/uploads/2025/10/%D7%9E%D7%AA%D7%95%D7%95%D7%94-%D7%AA%D7%A9%D7%A4%D7%95-1.pdf",
+  "supplier": false,
+  "kind": "rights"
+ },
+ {
+  "id": "s-7562ff",
+  "name": "מהכשרה לתעסוקה – התעשייה האווירית ואורט לפצועי צה\"ל",
+  "town": "unknown",
+  "source_url": "https://www.maariv.co.il/news/military/article-1311901",
+  "supplier": false,
+  "kind": "work"
+ },
+ {
+  "id": "s-6266bf",
+  "name": "מחשבים מסלול מחדש – עיריית ירושלים ומרכז התעסוקה הזדמנות",
+  "town": "ירושלים",
+  "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
+  "supplier": false,
+  "kind": "work"
+ },
+ {
+  "id": "s-4542fc",
+  "name": "מלגת גראס למשרתי מילואים לוחמים – עזריאלי ירושלים",
+  "town": "ירושלים",
+  "source_url": "https://www.jce.ac.il/wp-content/uploads/2025/10/תקנון-מלגת-גראס-מילואים-תשפו.pdf",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-924578",
+  "name": "מלגת משרתי מילואים – משרד הביטחון/צה\"ל",
+  "town": "ארצי",
+  "source_url": "https://wgalil.ac.il/wp-content/uploads/2026/08/august_hot_scholarships.pdf",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-410036",
+  "name": "סיוע לסטודנטים משרתי מילואים – תגבור לימודי והחזר קורסים",
+  "town": "ארצי",
+  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-31a611",
+  "name": "שירות התעסוקה – תכניות ויריד תעסוקה למשרתי מילואים",
+  "town": "סניפים",
+  "source_url": "https://www.maariv.co.il/business/carrier/Article-1110134",
+  "supplier": false,
+  "kind": "work"
+ },
+ {
+  "id": "s-45db30",
+  "name": "החברה להגנת הטבע – מסעות חוסן לבני נוער אחרי טראומה",
+  "town": "ארצי",
+  "source_url": "https://natureisrael.org/natureheals",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-512a0e",
+  "name": "ליווי משפחות פצועים באשפוז ממושך – עמותת ואהבת",
+  "town": "ארצי",
+  "source_url": "https://www.inn.co.il/news/668994",
+  "supplier": false,
+  "kind": "family"
+ },
+ {
+  "id": "s-a0f475",
+  "name": "סבסוד קייטנות למשרתי מילואים, ומענק לבני זוג שיצאו לחל\"ת",
+  "town": "ארצי",
+  "source_url": "https://www.timesofisrael.com/liveblog_entry/government-allocates-56-million-more-for-benefits-for-idf-reservists/",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-11279f",
+  "name": "עיריית ירושלים – מערך תמיכה במילואימניקים ובמשפחותיהם",
+  "town": "ירושלים",
+  "source_url": "https://www.kipa.co.il/כדאי-לדעת/1194386-0/",
+  "supplier": false,
+  "kind": "family"
+ },
+ {
+  "id": "s-62e3dc",
+  "name": "מדיניות תגמולים, מענקים והטבות למשרתי המילואים – 2026",
+  "town": "ארצי",
+  "source_url": "https://www.miluim.idf.il/articles-list/%D7%9E%D7%93%D7%99%D7%A0%D7%99%D7%95%D7%AA-2026/",
+  "supplier": false,
+  "kind": "info"
+ },
+ {
+  "id": "s-677d83",
+  "name": "פיצוי לעצמאים משרתי מילואים – רשות המסים",
+  "town": "ארצי",
+  "source_url": "https://finance.walla.co.il/item/3682332",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-efa6f3",
+  "name": "תשלומים והחזרי הוצאות בגין שירות מילואים",
+  "town": "ארצי",
+  "source_url": "https://www.kolzchut.org.il/he/תשלומים_והחזרי_הוצאות_בגין_שירות_מילואים",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-bc4772",
+  "name": "יד שרה – השאלת ציוד רפואי ושיקומי",
+  "town": "סניפים",
+  "source_url": "https://www.inn.co.il/news/281456",
+  "supplier": false,
+  "kind": "housing"
+ },
+ {
+  "id": "s-bfb545",
+  "name": "\"חוזרים לחיים\" – מרכז שיקום פצועי מלחמה, שיבא תל השומר",
+  "town": "רמת גן (תל השומר)",
+  "source_url": "https://www.maariv.co.il/news/military/Article-1070989",
+  "supplier": false,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-e03e60",
+  "name": "טיפול Deep TMS לפוסט-טראומה במימון אגף השיקום",
+  "town": "סניפים",
+  "source_url": "https://www.brainsway.com/?p=14182",
+  "supplier": false,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-76e4e8",
+  "name": "טיפול בחמצן בתא לחץ (HBOT) לפוסט טראומה – מרכז סגול, שמיר (אסף הרופא)",
+  "town": "באר יעקב",
+  "source_url": "https://shamirfriends.shamir.org/en/proj/the-center-for-ptsd-treatment/",
+  "supplier": false,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-a9e48d",
+  "name": "מכון שיקום N.Y.S – זרזיר",
+  "town": "זרזיר",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-d65cd7",
+  "name": "מרכז השיקום ע\"ש גנדל – הדסה הר הצופים",
+  "town": "ירושלים",
+  "source_url": "https://hadassahinternational.org/hadassah-medical-organization-opens-new-advanced-rehabilitation-center-in-israel/",
+  "supplier": false,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-8f5ad3",
+  "name": "נביעה – הידרותרפיה ובריכה טיפולית",
+  "town": "שילה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-b0d63b",
+  "name": "נקודת מפנה – מרכז שיקום יום לפצועי צה\"ל בשוהם",
+  "town": "שוהם",
+  "source_url": "https://www.israelhayom.co.il/news/local/article/19509894",
+  "supplier": false,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-0fc55e",
+  "name": "סל שיקום בקהילה למתמודדי נפש – משרד הבריאות",
+  "town": "ארצי",
+  "source_url": "https://me.health.gov.il/mental-health/therapy-rehabilitation/rehabilitation/rehabilitation-basket/about/",
+  "supplier": false,
+  "kind": "housing"
+ },
+ {
+  "id": "s-0bfef9",
+  "name": "מוקדי תמיכה רגשית של קופות החולים",
+  "town": "ארצי",
+  "source_url": "https://www.btl.gov.il/StateOfEmergency/AmKelavi/Harada_HB/Pages/MrkaziHosenResima.aspx",
+  "supplier": false,
+  "kind": "hotline"
+ },
+ {
+  "id": "s-03e535",
+  "name": "מערך מע\"ן (בריאות הנפש ומדעי ההתנהגות) – משטרת ישראל",
+  "town": "ארצי",
+  "source_url": "https://www.ynet.co.il/news/article/r11tvqrmq",
+  "supplier": false,
+  "kind": "treatment"
+ },
+ {
+  "id": "s-73e470",
+  "name": "\"קטע של טיול\" – טיולי ג'יפים ללוחמים קטועי גפיים",
+  "town": "ארצי",
+  "source_url": "https://www.inn.co.il/news/647316",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-19a8a2",
+  "name": "תוכנית תמיכה למילואימניקים חוזרים – דרך עמי",
+  "town": "unknown",
+  "source_url": "https://m.jpost.com/health-and-wellness/mind-and-spirit/article-846910",
+  "supplier": false,
+  "kind": "peer"
+ },
+ {
+  "id": "s-2c74d9",
+  "name": "2Fit – סטודיו אימונים ופילאטיס מכשירים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-f89db0",
+  "name": "ACTIVITY אקטיביטי – יוגה ואימון פונקציונלי ליד הים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-fcd901",
+  "name": "ADENKA – נחף",
+  "town": "נחף",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-115568",
+  "name": "ARENA FIT – סטודיו ופילאטיס מכשירים לנשים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-befc0c",
+  "name": "BJK Dojo – אומנויות לחימה בחיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-3970c8",
+  "name": "Big Gym – אום אל-פחם",
+  "town": "אום אל-פחם",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-dcc83d",
+  "name": "Climax Fitness – אום אל-פחם",
+  "town": "אום אל-פחם",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-fe239d",
+  "name": "EM FITNESS – כפר קרע",
+  "town": "כפר קרע",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-0345f4",
+  "name": "Elpatron Gym – עספיא",
+  "town": "עספיא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-eb9809",
+  "name": "Fitness For Life – כפר יאנוח",
+  "town": "יאנוח-ג'ת",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-12a8ef",
+  "name": "Free Jump – ירכא",
+  "town": "ירכא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-de5d79",
+  "name": "G-fit – כפר קרע",
+  "town": "כפר קרע",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-d3e2c4",
+  "name": "Gmynasem – ירכא",
+  "town": "ירכא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-28ef8f",
+  "name": "Gofit pro – כפר קרע",
+  "town": "כפר קרע",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-9a441c",
+  "name": "Gold Gym – ג'וליס",
+  "town": "ג'וליס",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-0e87a6",
+  "name": "Golden Wolf – אום אל-פחם",
+  "town": "אום אל-פחם",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-78edf0",
+  "name": "Indigo aerial acrobatics – אקרובטיקה אווירית וריקוד על עמוד (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-a874e8",
+  "name": "JEEM GYM – עראבה",
+  "town": "עראבה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-6c0cd2",
+  "name": "Janus – כושר לנשים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-b15899",
+  "name": "MY BABY – קיר טיפוס ונינג'ה, ירכא",
+  "town": "ירכא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-00caf6",
+  "name": "Multi sport – חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-264b27",
+  "name": "PROFIT – מועדון כושר חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-9c6fdf",
+  "name": "Peaky Blinders Gym – כפר מנדא",
+  "town": "כפר מנדא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-48ea15",
+  "name": "S-GYM מכון בריאות וכושר – כסרא-סמיע",
+  "town": "כסרא-סמיע",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-113d03",
+  "name": "StayActive לי בריא – אימוני קבוצות (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-2143aa",
+  "name": "TSport Gym – חורפיש",
+  "town": "חורפיש",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e4e7d3",
+  "name": "The Center For Healthy Life – מע'אר",
+  "town": "מע'אר",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-c6051d",
+  "name": "Tractor Studio – מג'ד אל-כרום",
+  "town": "מג'ד אל-כרום",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-71be48",
+  "name": "Vitaris ויטאריס – מע'אר",
+  "town": "מע'אר",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-375f6b",
+  "name": "body move – סטודיו לריקוד לנשים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-f6d0bf",
+  "name": "mad men gym – חדר כושר וסטודיו (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-75e8a3",
+  "name": "אוקסיג'ן פיטנס – דיר חנא",
+  "town": "דיר חנא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e8dca8",
+  "name": "דיווה אקטיב – פילאטיס מכשירים לנשים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-ac4f08",
+  "name": "הולמס פלייס חיפה – מועדון כושר ופילאטיס מכשירים",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e0e07b",
+  "name": "חדר כושר רויאל – באקה אל-גרביה",
+  "town": "באקה אל-גרביה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-f25bdc",
+  "name": "מועדון הספורט מכבי חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-226d6d",
+  "name": "מועדון ספורט אלוואחה – אום אל-פחם",
+  "town": "אום אל-פחם",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-1c5a97",
+  "name": "מכון עדן מתחם החברים – שפרעם",
+  "town": "שפרעם",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-1f8f38",
+  "name": "מרכז ADAN – כפר כנא",
+  "town": "כפר כנא",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-7ded1a",
+  "name": "מרכז ספורט \"הגעתם ליעד\" – בהפרדה (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-b5765e",
+  "name": "נבחרת ישראל בכדורגל קטועים",
+  "town": "רמת גן",
+  "source_url": "https://sport1.maariv.co.il/other-industries/article/1597358/",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-0f0f1f",
+  "name": "סטודיו hype – ריינה",
+  "town": "ריינה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-81a12a",
+  "name": "סטודיו אנפילד – אבו סנאן",
+  "town": "אבו סנאן",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-0efc97",
+  "name": "פיור (Pure) חיפה – פונקציונלי, פילאטיס מכשירים וקבוצות ריצה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e0147d",
+  "name": "פלקס – סטודיו, אימוני כוח ופילאטיס מכשירים (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-5ac9cd",
+  "name": "קאנטרי אלחוארנה – כפר קרע",
+  "town": "כפר קרע",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-9095b6",
+  "name": "קאנטרי אלתות – טמרה",
+  "town": "טמרה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-494868",
+  "name": "קרוספיט איירון טאון חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-351bca",
+  "name": "קרוספיט דאון טאון חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-96af16",
+  "name": "קרוספיט קריות – חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-38a6f2",
+  "name": "Water World – אימוני שחייה ווסטרס (נשר)",
+  "town": "נשר",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-0f2214",
+  "name": "בריכת השחייה גבעת זאב",
+  "town": "גבעת זאב",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-63604a",
+  "name": "בריכת מסילת ציון",
+  "town": "מסילת ציון",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-8d0a6a",
+  "name": "המרכז לספורט ימי קריית חיים – השכרת סאפ וגלשן",
+  "town": "קריית חיים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-8153e2",
+  "name": "לונה סרף \"גלים של חיבור\" – מרחב גלישה בעכו",
+  "town": "עכו",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-ca1d49",
+  "name": "לי ים – מועדון גלישה עתלית",
+  "town": "עתלית",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-fc92a9",
+  "name": "עמותת אל הים – חתירה בקבוצה עם מדריך (קריית חיים)",
+  "town": "קריית חיים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e78824",
+  "name": "קאהונה סרף קלאב – קבוצות גלישה וחתירה והשכרת ציוד (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-2a8529",
+  "name": "קאנטרי גן עברון – בריכה (נהריה)",
+  "town": "נהריה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-52d4ff",
+  "name": "רואים את האופק בים – השכרת גלשן וסאפ (קריית חיים)",
+  "town": "קריית חיים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-f290c1",
+  "name": "BE FIT – סטודיו פילאטיס מכשירים לנשים",
+  "town": "בית שמש",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-fe45df",
+  "name": "Bepilates – זרזיר",
+  "town": "זרזיר",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-772894",
+  "name": "Body and mind – חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-5a21e9",
+  "name": "Harmony Pilates – פילאטיס מכשירים",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-b1afb9",
+  "name": "Ice guru – יוגה, נשימה ומדיטציה (חיפה)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e3c161",
+  "name": "Inspire Studio – פילאטיס לנשים",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-ff324e",
+  "name": "MG פילאטיס מכשירים וסטודיו לנשים",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-d2e214",
+  "name": "Miss Pilates – סטודיו לפילאטיס מכשירים פסגת זאב",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-079013",
+  "name": "Movement Natural – סטודיו ג'ירוקינזיס",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-256cfd",
+  "name": "Nemo Yoga – אריאל",
+  "town": "אריאל",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-6948a2",
+  "name": "Netiv Pilates – סטודיו פילאטיס בחיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-c25b54",
+  "name": "Pilates Home – חורפיש",
+  "town": "חורפיש",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-0d708a",
+  "name": "Studio Pilara – חורפיש",
+  "town": "חורפיש",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-7027ff",
+  "name": "V pure balance – שיעורי פילאטיס",
+  "town": "אריאל",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-1acd3c",
+  "name": "Yam Wellness – חיפה (אלנבי ובת גלים)",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-4f028c",
+  "name": "איו יוגה – נחלאות והמושבה הגרמנית",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-d55f3c",
+  "name": "אינפיט פילאטיס – חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-4ab149",
+  "name": "בית של יוגה – ירושלים",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-cb1a53",
+  "name": "הולמס פלייס מבשרת ציון – פילאטיס מכשירים",
+  "town": "מבשרת ציון",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-890574",
+  "name": "טיפולים משלימים לנפגעי איבה עם פוסט טראומה (נפש אחת) – ביטוח לאומי",
+  "town": "ארצי",
+  "source_url": "https://www.btl.gov.il/benefits/Victims_of_Hostilities/NefeSH_Ahat/Pages/TipulAlternativi.aspx",
+  "supplier": false,
+  "kind": "money"
+ },
+ {
+  "id": "s-df6eca",
+  "name": "מטי שייפ – פילאטיס מכשירים לנשים (הר חומה ורמות)",
+  "town": "ירושלים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-89a54e",
+  "name": "מרכז ספורט עירוני גלי חיפה – פילאטיס מכשירים",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-e2e13d",
+  "name": "מרכז קהילתי נווה דוד – פילאטיס, יוגה ופלדנקרייז",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-98f507",
+  "name": "מתנ\"ס מעלה אדומים – פילאטיס מכשירים",
+  "town": "מעלה אדומים",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": false,
+  "kind": "activity"
+ },
+ {
+  "id": "s-309aac",
+  "name": "סטודיו B תנועה – פילאטיס מזרן ויוגה לנשים",
+  "town": "גבע בנימין",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-01be6a",
+  "name": "סטודיו NAFAS – כפר יאסיף",
+  "town": "כפר יאסיף",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-7d79c3",
+  "name": "ספורטילי פילאטיס",
+  "town": "כוכב יעקב",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-157e85",
+  "name": "פילאטיס ריפורם – חיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ },
+ {
+  "id": "s-366f30",
+  "name": "ציפור היוגה – יוגה לנשים בחיפה",
+  "town": "חיפה",
+  "source_url": "https://sapakim-shikum.netlify.app/",
+  "supplier": true,
+  "kind": "activity"
+ }
+]

@@ -255,6 +255,24 @@ def main():
         # ספק פרטי בסל הטיפולים המשלימים (Shikum.Me): מכון, סטודיו, בריכה. לא "תוכנית", מוצג אחרת.
         s["supplier"] = s.get("provider_type") == "private" and bool(re.search(r"Shikum\.?Me", (s.get("how_to_apply") or "") + (s.get("cost_notes") or ""), re.I))
 
+    # השלמת דרכי פנייה (research/contact_fill.json, לפי CONTACT_REQUEST.md)
+    fill_path = ROOT / "research" / "contact_fill.json"
+    if fill_path.exists():
+        fill = json.loads(fill_path.read_text(encoding="utf-8"))
+        kept = []
+        for s in merged:
+            f = fill.get(s["id"]) or {}
+            st = f.get("status")
+            if st == "closed":
+                continue
+            for k in ("phone", "email", "website", "how_to_apply", "source_url"):
+                if f.get(k):
+                    s[k] = f[k].strip()
+            if st == "not_found" and not (s.get("phone") or s.get("email") or s.get("website")):
+                s["no_contact"] = True
+            kept.append(s)
+        merged = kept
+
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))
     OUT.write_text(
