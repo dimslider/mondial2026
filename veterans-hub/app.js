@@ -453,7 +453,7 @@
           <li class="glass-sm"><span class="st-node area-sea">2</span><strong>מקבלים 3 מקומות שמתאימים לך</strong></li>
           <li class="glass-sm"><span class="st-node area-land">3</span><strong>מתקשרים, או מבקשים שיחזרו אליך</strong></li>
         </ol>
-        <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות · דקה</span></a>
+        <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שלבים קצרים · אפשר לדלג</span></a>
         <p class="welcome-alt">או <a class="link-u" href="#/explore">לחפש לבד</a> · <a class="link-u" href="#/rights">מה מגיע לי</a></p>
         <p class="note quiet center">${SERVICES.length} מקומות · בלי הרשמה · נבדק מול מקורות רשמיים</p>
       </section>`;
@@ -462,8 +462,7 @@
   // ביקור חוזר: 3 התחנות, ומתחת לשוטט לבד
   function viewReturning(p) {
     const res = match(p);
-    const first = [];
-    for (const r of res) { if (first.length < 3 && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r); }
+    const first = pickStations(p, match(p, { all: true }));   // אותן תחנות כמו בדף התוצאות
     const SHORTS = { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך הכרה", "not-recognized": "עוד לא מוכר/ת", "reservists": "מילואים",
       "combat-soldiers": "לוחם/ת", "police": "משטרה", "security-forces": "כוחות ביטחון", "families": "משפחה", "bereaved": "משפחה שכולה",
       "terror-victims": "נפגע/ת איבה", "civilians": "אזרח/ית" };
@@ -593,7 +592,7 @@
       const last = idx === steps.length - 1;
       $main.innerHTML = `
         <section class="wizard">
-          <div aria-label="שאלה ${idx + 1} מתוך ${steps.length}">${progressLine(idx, steps.length)}</div>
+          <p class="step-count">שלב ${idx + 1} מתוך ${steps.length}</p>
           <h1 class="page-title">${st.title}</h1>
           <p class="lead">${st.sub}</p>
           <form id="step-form">
@@ -724,6 +723,7 @@
             <details class="area-${a}">
               <summary><span class="dabbed"><span class="display" style="font-size: 26px">${esc(AREAS[a].label)}</span></span><span class="hand">${byArea[a].length} אפשרויות</span></summary>
               <div class="grid" data-area-list="${a}"></div>
+              <p class="actions"><a class="link-u" href="#/area?a=${a}">לכל מה שיש ב${esc(AREAS[a].label)} ←</a></p>
             </details>`).join("")}
         </section>` : ""}`;
     $main.querySelectorAll("[data-area-list]").forEach(el => pagedList(el, byArea[el.dataset.areaList],
@@ -914,7 +914,14 @@
     $main.innerHTML = `
       <section class="help">
         <p class="note">אף אחד לא רואה שנכנסת לכאן</p>
-        <h1>רגע. נושמים ביחד.</h1>
+        <h1>לא לבד. אפשר לדבר עכשיו.</h1>
+        <p class="crisis-line">יש מחשבות לפגוע בעצמך? מתקשרים עכשיו לער״ן <a href="tel:1201" dir="ltr">1201</a>, או במצב מסוכן ל-<a href="tel:101" dir="ltr">101</a>.</p>
+                <ul class="lines">
+          ${lines.map(l => `<li><a href="tel:${l.num}"><span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="num">${l.num}</span></a></li>`).join("")}
+        </ul>
+        <p class="emergency">אם יש סכנה מיידית: מד״א <a href="tel:101">101</a> · משטרה <a href="tel:100">100</a></p>
+        <p class="note">לא נוח לדבר? ער״ן גם בצ'אט כתוב: <a class="link-u" href="https://www.eran.org.il/" target="_blank" rel="noopener">eran.org.il</a></p>
+        <h2 class="section-title">ובינתיים, נושמים ביחד</h2>
         <div class="calm-tabs" role="tablist">
           <button type="button" role="tab" class="active" data-tab="breath">נשימה</button>
           <button type="button" role="tab" data-tab="ground">5 חושים</button>
@@ -932,11 +939,6 @@
           <p class="lead">כשהראש מוצף, מחזירים אותו לחדר. עוברים חוש אחרי חוש, לאט, ואפשר להגיד בקול.</p>
           <div class="ground" id="ground"></div>
         </div>
-        <h2 class="section-title">לדבר עם מישהו, עכשיו</h2>
-        <ul class="lines">
-          ${lines.map(l => `<li><a href="tel:${l.num}"><span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="num">${l.num}</span></a></li>`).join("")}
-        </ul>
-        <p class="emergency">אם יש סכנה מיידית: מד״א <a href="tel:101">101</a> · משטרה <a href="tel:100">100</a></p>
         <p class="actions"><a class="link-u" href="#/browse?cat=hotlines">כל קווי הסיוע</a></p>
       </section>`;
     // הכיתוב מתחלף עם הנשימה (4 שאיפה, 4 עצירה, 6 נשיפה = 14 שניות, כמו האנימציה)
@@ -1099,6 +1101,11 @@
   }
 
   // ---------- service card ----------
+  // טלפונים ומיילים בתוך טקסט: לחיצים, ובכיוון שמאל-לימין כדי שלא יתהפכו או יישברו
+  const linkify = t => esc(t)
+    .replace(/(\*\d{3,5}|\b0\d{1,2}-?\d{3}-?\d{4}\b|\b1-?[78]00-?\d{2,3}-?\d{3,4}\b)/g, m => `<a href="tel:${m.replace(/[^\d*]/g, "")}" dir="ltr" class="nowrap">${m}</a>`)
+    .replace(/([\w.+-]+@[\w-]+\.[\w.]+)/g, m => `<a href="mailto:${m}" dir="ltr">${m}</a>`);
+  const heDate = d => { const m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? `${+m[2]}/${m[1]}` : d; };
   function openService(id) {
     const s = SERVICES.find(x => x.id === id);
     if (!s) return;
@@ -1113,20 +1120,21 @@
       <div class="svc">
         <div class="tag-row" style="margin-top: 12px">
           ${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span>
-          <span class="verify">${s.verified_at ? "✓ נבדק " + esc(s.verified_at) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
+          <span class="verify">${s.verified_at ? "✓ נבדק מול המקור ב-" + esc(heDate(s.verified_at)) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
         </div>
         <h2 id="modal-title">${nameHtml(s.name)}</h2>
         ${starred(s) ? `<p class="community">${STAR}<span><strong>${s.community_recs} המלצות בקבוצת הנכים והלוחמים</strong>${s.community_note ? " · " + esc(s.community_note) : ""}</span></p>` : ""}
         <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
         ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
-        ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${esc(s.cost_notes)}</span></p>` : ""}
+        ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${linkify(s.cost_notes)}</span></p>` : ""}
         <div class="contact">
           ${s.phone ? `<a class="btn btn-ink btn-wide" href="${telHref(s.phone)}">להתקשר <span dir="ltr">${esc(firstPhone(s.phone))}</span></a>` : ""}
           <div class="links">${links.join("")}</div>
+          ${!s.phone && !s.email && !s.website ? `<p class="note">אין לנו עדיין טלפון או אתר ישיר. אפשר לבקש שיחזרו אליך, או לחפש את השם ברשת. מכירים את הפרטים? <button class="link-u" type="button" id="fix-toggle2">להוסיף</button></p>` : ""}
         </div>
+        ${who.length ? `<p class="for-whom"><strong>למי:</strong> ${esc(who.slice(0, 4).join(" · "))}${/לנשים/.test(s.name) ? " · לנשים בלבד" : ""}</p>` : ""}
         <div class="folds-svc">
-          ${s.how_to_apply ? `<details class="fold" open><summary>איך מתחילים</summary><p>${esc(s.how_to_apply)}</p></details>` : ""}
-          ${who.length ? `<details class="fold"><summary>למי זה</summary><p>${esc(who.slice(0, 6).join(" · "))}</p></details>` : ""}
+          ${s.how_to_apply ? `<details class="fold" open><summary>איך מתחילים</summary><p>${linkify(s.how_to_apply)}</p></details>` : ""}
           ${helps.length ? `<details class="fold"><summary>במה זה עוזר</summary><p>${esc(helps.join(" · "))}</p></details>` : ""}
           ${s.location || arr(s.regions).length ? `<details class="fold"><summary>איפה</summary><p>${esc([s.location, arr(s.regions).map(r => T.regions[r]).join(", ")].filter(Boolean).join(" · "))}</p></details>` : ""}
         </div>
@@ -1150,6 +1158,7 @@
           <button class="btn btn-ink">לשלוח</button>
           <p class="form-msg" role="status"></p>
         </form>
+        <p class="note quiet card-help">קשה עכשיו? <a href="#/help">עזרה עכשיו</a> · ער״ן <a href="tel:1201" dir="ltr">1201</a></p>
         ${s.source_url ? `<p class="source">מקור: <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a></p>` : ""}
       </div>`;
     $modal.hidden = false;
@@ -1200,6 +1209,8 @@
     // תיקון או פרט נוסף
     const fx = document.getElementById("fix");
     let fixToken = null;
+    const ft2 = document.getElementById("fix-toggle2");
+    if (ft2) ft2.onclick = () => document.getElementById("fix-toggle").click();
     document.getElementById("fix-toggle").onclick = () => {
       fx.hidden = !fx.hidden;
       if (!fx.hidden) {

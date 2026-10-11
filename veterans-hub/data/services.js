@@ -801,55 +801,6 @@ window.SERVICES = [
   "supplier": false
  },
  {
-  "id": "s-7acfcf",
-  "name": "אחים של יונתן – פרויקט \"מעבר לטראומה\"",
-  "category": "animal-therapy",
-  "description": "עמותה שמפעילה את פרויקט \"מעבר לטראומה\": טיפול בעזרת סוסים שמבוסס על המפגש עם הסוס ולא על רכיבה. מיועד ללוחמים וללוחמות, לבני משפחותיהם ולמי שנפגע/ה ב-7 באוקטובר ובמלחמה, וגם למי שנפגע/ה במערכות קודמות.",
-  "provider_type": "ngo",
-  "eligibility": [
-   "combat-soldiers",
-   "families",
-   "mod-recognized",
-   "not-recognized",
-   "reservists",
-   "terror-victims"
-  ],
-  "difficulties": [
-   "anxiety",
-   "ptsd"
-  ],
-  "interests": [
-   "animals",
-   "nature"
-  ],
-  "cost": "",
-  "cost_notes": "העלות לא מפורטת, כדאי לברר מול העמותה.",
-  "regions": [
-   "center"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "",
-  "how_to_apply": "פנייה לעמותה דרך דף הקמפיין שלה.",
-  "source_url": "https://my.givingtech.org/en/fundme/BrothersOfJonathan_Oct_2024",
-  "confidence": "high",
-  "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
-  "unit_only": false,
-  "kind": "treatment",
-  "intensity": "unknown",
-  "recognition": "unknown",
-  "police": "unknown",
-  "format": "unknown",
-  "town": "unknown",
-  "verified_at": "2026-10-07",
-  "era": "",
-  "age": [],
-  "supplier": false
- },
- {
   "id": "s-d3d9dc",
   "name": "בלב אחד – אילוף כלב אישי ללוחמים עם פוסט טראומה",
   "category": "animal-therapy",
@@ -867,8 +818,8 @@ window.SERVICES = [
   "interests": [
    "animals"
   ],
-  "cost": "free",
-  "cost_notes": "לפי דיווחים בתקשורת, במימון הארגון ותורמיו.",
+  "cost": "",
+  "cost_notes": "לפי דיווחים בתקשורת, במימון הארגון ותורמיו. לא אימתנו שהתוכנית עדיין פעילה, כדאי לבדוק מולם.",
   "regions": [
    "sharon"
   ],
@@ -878,7 +829,7 @@ window.SERVICES = [
   "website": "https://belev-echad.org",
   "how_to_apply": "פנייה ישירה לארגון בלב אחד.",
   "source_url": "https://nocamels.com/2023/04/idf-veterans-best-friend-dogs-ease-pain-of-ptsd/",
-  "confidence": "medium",
+  "confidence": "low",
   "reviewed_at": "",
   "community_recs": 5,
   "community_note": "בית חם ופעיל לפצועים",
@@ -1965,8 +1916,8 @@ window.SERVICES = [
    "learning",
    "volunteering"
   ],
-  "cost": "free",
-  "cost_notes": "",
+  "cost": "",
+  "cost_notes": " לא אימתנו שהתוכנית עדיין פעילה, כדאי לבדוק מולם.",
   "regions": [
    "nationwide",
    "online"
@@ -1977,7 +1928,7 @@ window.SERVICES = [
   "website": "https://www.levechad.org",
   "how_to_apply": "דרך אתר לב אחד",
   "source_url": "https://www.runi.ac.il/en/students/dean/community-service/lev-echad",
-  "confidence": "medium",
+  "confidence": "low",
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",
@@ -2140,7 +2091,7 @@ window.SERVICES = [
    "learning",
    "tech"
   ],
-  "cost": "free",
+  "cost": "",
   "cost_notes": "כדאי לברר את תנאי ההשתתפות מול התוכנית.",
   "regions": [
    "nationwide"
@@ -2185,8 +2136,8 @@ window.SERVICES = [
    "learning",
    "tech"
   ],
-  "cost": "free",
-  "cost_notes": "לא פורסם בתוצאות החיפוש",
+  "cost": "",
+  "cost_notes": "לא מצאנו מידע על עלות.",
   "regions": [
    "haifa",
    "north"
@@ -4701,7 +4652,7 @@ window.SERVICES = [
   "phone": "1-800-800-440; וואטסאפ 050-6644000",
   "email": "shikum_mokedtipulim@mod.gov.il",
   "website": "https://shikum.mod.gov.il",
-  "how_to_apply": "לבחור מטפל/ת מוסמך/ת (או מכון בהסדר), ואחרי הטיפול לשלוח קבלות וטופס בקשה דרך האזור האישי או למייל shikum_mokedtipulim@mod.gov.il.",
+  "how_to_apply": "לפני שמתחילים: פונים לעובד/ת השיקום במחוז ומקבלים אישור למטפל/ת, או הפניה למכון בהסדר. אחרי כל טיפול שולחים קבלות וטופס בקשה דרך האזור האישי. טיפול אצל מטפל/ת שלא אושר מראש עלול לא לקבל החזר.",
   "source_url": "https://shikum.mod.gov.il/family/support/therapy",
   "confidence": "high",
   "reviewed_at": "2026-10-07",
@@ -6818,7 +6769,7 @@ window.SERVICES = [
   "id": "ogen-org-9f492f",
   "name": "קרן המילואים של עוגן – הלוואות לעסקים של משרתי מילואים",
   "category": "financial-grants",
-  "description": "עוגן, גוף אשראי חברתי ללא מטרות רווח, השיק קרן הלוואות לעסקים קטנים ולעצמאים בבעלות משרתי מילואים. ההלוואות ניתנות בריבית מסובסדת, לצד הלוואות ללא ריבית למשקי בית ותוכניות מנטורינג לבעלי עסקים.",
+  "description": "עוגן, גוף אשראי חברתי ללא מטרות רווח, השיק קרן הלוואות לעסקים קטנים ולעצמאים בבעלות משרתי מילואים. ההלוואות ניתנות בריבית מסובסדת, לצד הלוואות ללא ריבית למשקי בית ותוכניות מנטורינג לבעלי עסקים. מי יכול לפנות: עצמאי/ת או בעל/ת עסק קטן ששירת/ה לפחות חודש מילואים מאז אוקטובר 2023, בעסק שפעיל לפחות שנה.",
   "provider_type": "ngo",
   "eligibility": [
    "reservists"
@@ -9179,53 +9130,6 @@ window.SERVICES = [
   "supplier": false
  },
  {
-  "id": "clinicaltrials-gov-1ea216",
-  "name": "NeuroBrave – Mental Gym: אימון ביופידבק לפוסט טראומה",
-  "category": "mental-health",
-  "description": "NeuroBrave היא חברת בריאות דיגיטלית ישראלית שפיתחה את תוכנית Mental Gym: תרגול יומי של ביופידבק HRV (שונות דופק) בעזרת שעון חכם ואפליקציה, לצד מפגשי הנחיה קבוצתיים שבועיים. החברה מקיימת מחקר קליני (NCT07462312) שבודק אם התוכנית עוזרת להפחית תסמיני פוסט טראומה אצל לוחמים משוחררים.",
-  "provider_type": "private",
-  "eligibility": [
-   "combat-soldiers",
-   "reservists"
-  ],
-  "difficulties": [
-   "anxiety",
-   "ptsd",
-   "sleep"
-  ],
-  "interests": [
-   "mind-body",
-   "tech"
-  ],
-  "cost": "paid",
-  "cost_notes": "תוכנית בתשלום. המשתתפים במחקר הקליני לא משלמים. לגבי החזר מאגף השיקום, יש לברר מול רכז/ת השיקום לפני רכישה.",
-  "regions": [
-   "nationwide",
-   "online"
-  ],
-  "location": "מרחוק (אתר המחקר רשום בירושלים)",
-  "phone": "",
-  "email": "",
-  "website": "https://clinicaltrials.gov/study/NCT07462312",
-  "how_to_apply": "פנייה לחברה לגבי השתתפות בתוכנית או במחקר; לבדיקת מימון יש לפנות לרכז/ת השיקום באגף השיקום.",
-  "source_url": "https://clinicaltrials.gov/study/NCT07462312",
-  "confidence": "medium",
-  "reviewed_at": "",
-  "community_recs": 9,
-  "community_note": "רבים קיבלו החזר כטיפול משלים; לבדוק מראש מול רכז/ת השיקום",
-  "unit_only": false,
-  "kind": "treatment",
-  "intensity": "program",
-  "recognition": "unknown",
-  "police": "unknown",
-  "format": "mixed",
-  "town": "ארצי",
-  "verified_at": "",
-  "era": "",
-  "age": [],
-  "supplier": false
- },
- {
   "id": "rising-heroes-org-2a53a6",
   "name": "Rising Heroes – ריטריטים ותמיכה מותאמת טראומה ללוחמים",
   "category": "mental-health",
@@ -9246,7 +9150,7 @@ window.SERVICES = [
    "mind-body",
    "nature"
   ],
-  "cost": "free",
+  "cost": "",
   "cost_notes": "ארגון הממומן מתרומות; יש לברר את תנאי ההשתתפות מול הארגון",
   "regions": [
    "nationwide"
@@ -10027,7 +9931,7 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [],
-  "cost": "free",
+  "cost": "",
   "cost_notes": "במכבי: ללא עלות, שהייה אחת לשנה, באישור מראש. בקופות האחרות כדאי לברר מול הקופה.",
   "regions": [
    "nationwide"
@@ -11593,8 +11497,8 @@ window.SERVICES = [
    "ptsd"
   ],
   "interests": [],
-  "cost": "free",
-  "cost_notes": "ללא עלות עד גיל 26 (במימון ביטוח לאומי); מעל גיל 26, לפי אלבום שקוף יש השתתפות עצמית",
+  "cost": "partial",
+  "cost_notes": "ללא עלות עד גיל 26. מגיל 26 יש השתתפות עצמית, כדאי לברר מול המרכז.",
   "regions": [
    "center"
   ],
@@ -11893,7 +11797,7 @@ window.SERVICES = [
   "id": "metiv-org-fd5b53",
   "name": "ניסוי MDMA לפוסט טראומה במטיב (לאנשי כוחות הביטחון לשעבר)",
   "category": "mental-health",
-  "description": "מחקר קליני במטיב שבודק טיפול גוף-נפש (SEA-IT) בסיוע MDMA, למתמודדים עם טראומה צבאית או PTSD. המחקר מיועד למי שכבר עבר/ה טיפול ממוקד טראומה והתסמינים נמשכים, ויכול/ה להתחייב לתהליך אינטנסיבי של כ-3.5 חודשים. הטיפול ניסיוני, ניתן רק במסגרת המחקר ובכפוף לקבלה.",
+  "description": "מחקר קליני במטיב שמשווה בין שני טיפולים אינטנסיביים לפוסט טראומה צבאית: אחד עם MDMA ואחד בלי. השיבוץ לקבוצות אקראי, כך שלא כל משתתף מקבל MDMA. מיועד למי שכבר עבר טיפול ממוקד טראומה ועדיין יש לו תסמינים, ויכול להתחייב לכשלושה וחצי חודשים. זה טיפול ניסיוני, בכפוף לקבלה.",
   "provider_type": "academic",
   "eligibility": [
    "combat-soldiers",
@@ -11914,7 +11818,7 @@ window.SERVICES = [
   ],
   "location": "מרכז רפואי הרצוג, ירושלים",
   "phone": "02-5952234",
-  "email": "moriya@metiv.org",
+  "email": "",
   "website": "https://metiv.org/sea-it-mdma/",
   "how_to_apply": "למלא שאלון התאמה באתר מטיב, או לפנות ל-moriya@metiv.org או בוואטסאפ 02-6264889.",
   "source_url": "https://metiv.org/sea-it-mdma/",
@@ -13148,7 +13052,7 @@ window.SERVICES = [
    "mind-body",
    "nature"
   ],
-  "cost": "free",
+  "cost": "",
   "cost_notes": "כדאי לברר את העלות מול העמותה",
   "regions": [
    "nationwide"
@@ -13193,8 +13097,8 @@ window.SERVICES = [
   "interests": [
    "nature"
   ],
-  "cost": "free",
-  "cost_notes": "סיורי הטבע לקהל הרחב בסופי שבוע וחגים ללא עלות; לגבי הפעילות למילואימניקים, לברר",
+  "cost": "",
+  "cost_notes": "לא ברור אם הפעילות למילואימניקים בחינם. כדאי לשאול.",
   "regions": [
    "nationwide"
   ],
@@ -13613,7 +13517,7 @@ window.SERVICES = [
   "interests": [
    "nature"
   ],
-  "cost": "free",
+  "cost": "",
   "cost_notes": "העלות לא מפורטת; לברר",
   "regions": [
    "nationwide"
@@ -14599,7 +14503,7 @@ window.SERVICES = [
   "interests": [
    "nature"
   ],
-  "cost": "free",
+  "cost": "",
   "cost_notes": "כדאי לברר את העלות מול מטיב",
   "regions": [
    "nationwide"
@@ -16980,49 +16884,6 @@ window.SERVICES = [
   "supplier": false
  },
  {
-  "id": "shikum-mod-gov-il-5af3f4",
-  "name": "נכי משטרה – זכויות לפי חוק המשטרה (נכים ונספים) באמצעות אגף השיקום",
-  "category": "rights-legal",
-  "description": "שוטרים (כולל משמר הגבול, מתנדבים ומשמר אזרחי) שנפגעו בגלל השירות יכולים להגיש בקשה להכרה בנכות לאגף השיקום במשרד הביטחון, כמו חיילים, ולקבל ממנו טיפול וזכויות אם הפגיעה מוכרת, כולל פגיעה נפשית ופוסט טראומה. בשירות קבע, הבקשה מטופלת במשרד הביטחון או בביטוח לאומי לפי נסיבות הפגיעה.",
-  "provider_type": "government",
-  "eligibility": [
-   "mod-in-process",
-   "mod-recognized",
-   "police"
-  ],
-  "difficulties": [
-   "bureaucracy",
-   "ptsd"
-  ],
-  "interests": [],
-  "cost": "free",
-  "cost_notes": "ללא עלות",
-  "regions": [
-   "nationwide"
-  ],
-  "location": "",
-  "phone": "",
-  "email": "",
-  "website": "https://shikum.mod.gov.il",
-  "how_to_apply": "להגיש בקשה להכרה לאגף השיקום (טופס דיגיטלי). לעזרה באיסוף מסמכים: מדור נפגעים במשטרה, 02-5428584 או 02-5428764.",
-  "source_url": "https://shikum.mod.gov.il/recognition/terms/list",
-  "confidence": "high",
-  "reviewed_at": "2026-10-07",
-  "community_recs": "",
-  "community_note": "",
-  "unit_only": false,
-  "kind": "rights",
-  "intensity": "oneoff",
-  "recognition": "not_required",
-  "police": "yes",
-  "format": "individual",
-  "town": "ארצי",
-  "verified_at": "2026-10-07",
-  "era": "",
-  "age": [],
-  "supplier": false
- },
- {
   "id": "mod-gov-il-7491f8",
   "name": "סיוע משפטי חינם למשרתי מילואים מול ועדות התעסוקה – משרד הביטחון",
   "category": "rights-legal",
@@ -17369,6 +17230,49 @@ window.SERVICES = [
   "recognition": "unknown",
   "police": "unknown",
   "format": "unknown",
+  "town": "ארצי",
+  "verified_at": "2026-10-07",
+  "era": "",
+  "age": [],
+  "supplier": false
+ },
+ {
+  "id": "shikum-mod-gov-il-5af3f4",
+  "name": "שוטרים ושוטרות שנפגעו בשירות – הכרה וזכויות דרך אגף השיקום",
+  "category": "rights-legal",
+  "description": "שוטרים (כולל משמר הגבול, מתנדבים ומשמר אזרחי) שנפגעו בגלל השירות יכולים להגיש בקשה להכרה בנכות לאגף השיקום במשרד הביטחון, כמו חיילים, ולקבל ממנו טיפול וזכויות אם הפגיעה מוכרת, כולל פגיעה נפשית ופוסט טראומה. בשירות קבע, הבקשה מטופלת במשרד הביטחון או בביטוח לאומי לפי נסיבות הפגיעה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-in-process",
+   "mod-recognized",
+   "police"
+  ],
+  "difficulties": [
+   "bureaucracy",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "ללא עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il",
+  "how_to_apply": "להגיש בקשה להכרה לאגף השיקום (טופס דיגיטלי). לעזרה באיסוף מסמכים: מדור נפגעים במשטרה, 02-5428584 או 02-5428764.",
+  "source_url": "https://shikum.mod.gov.il/recognition/terms/list",
+  "confidence": "high",
+  "reviewed_at": "2026-10-07",
+  "community_recs": "",
+  "community_note": "",
+  "unit_only": false,
+  "kind": "rights",
+  "intensity": "oneoff",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "individual",
   "town": "ארצי",
   "verified_at": "2026-10-07",
   "era": "",
@@ -21018,7 +20922,7 @@ window.SERVICES = [
    "sport"
   ],
   "cost": "",
-  "cost_notes": "לברר מול העמותה.",
+  "cost_notes": "לברר מול העמותה. לא אימתנו שהתוכנית עדיין פעילה, כדאי לבדוק מולם.",
   "regions": [],
   "location": "",
   "phone": "",
@@ -21026,7 +20930,7 @@ window.SERVICES = [
   "website": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
   "how_to_apply": "פונים לעמותת לוחמים לחיים דרך האתר.",
   "source_url": "https://lohamim.org.il/2023/04/19/%D7%92%D7%9C%D7%99%D7%A9%D7%AA-%D7%92%D7%9C%D7%99%D7%9D-%D7%9C%D7%9C%D7%95%D7%97%D7%9E%D7%99%D7%9D-%D7%A4%D7%90%D7%95%D7%A1%D7%98-%D7%98%D7%A8%D7%90%D7%95%D7%9E%D7%98%D7%99%D7%9D/",
-  "confidence": "medium",
+  "confidence": "low",
   "reviewed_at": "",
   "community_recs": "",
   "community_note": "",

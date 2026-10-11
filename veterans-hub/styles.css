@@ -601,3 +601,12 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .goal-q { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line) !important; }
 .town-q { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; font: 700 15.5px var(--body); }
 .town-q input { font: 400 16px var(--body); padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--glass-strong); color: var(--ink); }
+
+/* סקירה חיצונית: "עזרה עכשיו" תמיד בהישג יד, טלפונים לא נשברים, מי זה מתאים גלוי */
+.topbar { position: sticky; top: 0; z-index: 30; background: var(--paper); box-shadow: 0 1px 0 var(--line); }
+.nowrap { white-space: nowrap; unicode-bidi: isolate; }
+.step-count { margin: 14px 0 0; font: 600 14px var(--body); color: var(--muted); }
+.for-whom { margin: 12px 0 0; font-size: 15px; }
+.crisis-line { margin: 10px 0 14px; padding: 12px 14px; border: 1.5px solid var(--ink); border-radius: 14px; font-size: 16.5px; }
+.crisis-line a { font-weight: 700; }
+.card-help { margin-top: 14px; }

@@ -239,6 +239,9 @@ def main():
                 "rights-legal": "rights", "financial-grants": "money", "employment-education": "work", "family-support": "family",
                 "housing-daily": "housing"}
     for s in merged:
+        # "ללא עלות" שההערה שלו אומרת לברר: עלות לא ידועה (סקירה חיצונית)
+        if s.get("cost") == "free" and re.search(r"לברר|לא מפורס|לא ידוע|כדאי לבדוק|השתתפות עצמית", s.get("cost_notes") or ""):
+            s["cost"] = ""
         if not s.get("kind"):
             s["kind"] = CAT_KIND.get(s["category"], "activity")
         # תיוג שהגיע ישירות מקובץ המחקר (שדות RUBRIC)
