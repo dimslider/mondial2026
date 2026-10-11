@@ -636,3 +636,19 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .about-list .st-node { flex: none; position: static; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--tint); font-weight: 700; font-size: 14px; }
 .about-list strong { font-family: var(--body); font-weight: 700; }
 .about .actions { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+
+/* ---------- הדגמת ניווט ---------- */
+.tour { position: fixed; inset: 0; z-index: 60; }
+.tour.centered { background: rgba(10, 14, 16, .55); }
+.tour-spot { position: fixed; border-radius: 14px; box-shadow: 0 0 0 9999px rgba(10, 14, 16, .55); outline: 2px solid #fff; transition: all .25s ease; pointer-events: none; }
+.tour.centered .tour-spot { display: none; }
+.tour-card { position: fixed; background: var(--paper); color: var(--ink); border-radius: 18px; padding: 18px 20px 14px; box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .6); }
+.tour.centered .tour-card { left: 16px; right: 16px; top: 50%; transform: translateY(-50%); max-width: 400px; margin: 0 auto; }
+.tour-count { margin: 0; font-size: 13px; color: var(--muted); }
+.tour-title { font-family: var(--display); font-weight: 700; font-size: 22px; margin: 4px 0 6px; }
+.tour-text { margin: 0; font-size: 16px; line-height: 1.55; }
+.tour-text a { font-weight: 700; }
+.tour-nav { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
+.tour-nav .btn { min-height: 46px; padding: 0 22px; }
+.tour-skip { margin-inline-start: auto; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .tour-spot { transition: none; } }

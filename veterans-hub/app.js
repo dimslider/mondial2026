@@ -1094,6 +1094,8 @@
         <h2 class="section-title">מי עומד מאחורי זה</h2>
         <p>רק הרצון לעזור. אזימוט נבנה בהתנדבות. אין פרסומות, אין עלות, ואף אחד לא מרוויח מזה כסף. התשובות שלך נשארות אצלך בטלפון.</p>
         <p>כל מה שיש כאן הגיע מאנשים שעברו את הדרך ורצו שגם אחרים ימצאו. ככה נמשיך לבנות.</p>
+        <h2 class="section-title">יצירת קשר</h2>
+        <p>רוצים להצטרף, לשאול או להציע? אפשר לכתוב ישירות: <a class="link-u" href="mailto:idomayraz@gmail.com" dir="ltr">idomayraz@gmail.com</a></p>
         <p class="actions"><a class="btn btn-ink" href="#/pilot">לקחת חלק</a> <a class="link-u" href="#/match">למצוא מה מתאים לי</a></p>
       </section>`;
   }
@@ -1433,8 +1435,90 @@
     try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage blocked */ }
   };
 
+  // ---------- הדגמת ניווט בפתיחה ראשונה ----------
+  // כמה צעדים קצרים שמאירים את הכפתורים האמיתיים. מוצג פעם אחת (נשמר במכשיר), ואפשר לראות שוב מתחתית העמוד.
+  const TOUR_KEY = "vh-tour-v1";
+  const CONTACT_EMAIL = "idomayraz@gmail.com";
+  const TOUR = [
+    { title: "ברוכים הבאים לאזימוט", text: "כל המקומות שיכולים לעזור, במקום אחד. בלי הרשמה, והתשובות נשארות אצלך בטלפון. הדגמה קצרה, חצי דקה." },
+    { sel: '.subnav [data-nav="match"]', title: "מה מתאים לי", text: "עונים על כמה שאלות קצרות, ומקבלים שלושה מקומות שמתאימים לך." },
+    { sel: ".beta-strip", title: "משוב, בעילום שם", text: "כאן מספרים לנו מה עזר, מה חסר ואיפה נתקעת. בלי שם ובלי טלפון. ובכל כרטיס של מקום אפשר גם לשתף כמה מחכים שם, או לתקן פרט." },
+    { sel: ".add-btn", title: "להוסיף מקום חדש", text: "מכירים מקום, קבוצה או יוזמה שעזרו לכם? לוחצים על הפלוס וממלאים כמה פרטים. אחרי בדיקה זה יופיע לכולם." },
+    { sel: ".help-btn", title: "עזרה עכשיו", text: "כשקשה, כאן יש קווי תמיכה שעונים בכל שעה." },
+    { title: "רוצים לדבר איתנו?", html: `אפשר לכתוב ישירות: <a href="mailto:${CONTACT_EMAIL}" dir="ltr">${CONTACT_EMAIL}</a><br>את ההדגמה אפשר לראות שוב בתחתית כל עמוד.` }
+  ];
+  function startTour() {
+    if (document.querySelector(".tour")) return;
+    const back = document.activeElement;
+    const root = document.createElement("div");
+    root.className = "tour";
+    root.innerHTML = `<div class="tour-spot" aria-hidden="true"></div>
+      <div class="tour-card" role="dialog" aria-modal="true" aria-labelledby="tour-title" aria-describedby="tour-text">
+        <p class="tour-count" aria-live="polite"></p>
+        <h2 id="tour-title" class="tour-title"></h2>
+        <p id="tour-text" class="tour-text"></p>
+        <div class="tour-nav">
+          <button class="btn btn-ink" type="button" data-t="next"></button>
+          <button class="link-u" type="button" data-t="prev">הקודם</button>
+          <button class="link-u tour-skip" type="button" data-t="skip">דלג</button>
+        </div>
+      </div>`;
+    document.body.appendChild(root);
+    const spot = root.querySelector(".tour-spot"), box = root.querySelector(".tour-card");
+    let i = 0;
+    const place = () => {
+      const st = TOUR[i];
+      const el = st.sel && document.querySelector(st.sel);
+      const r = el && el.getBoundingClientRect();
+      root.classList.toggle("centered", !r || !r.width);
+      if (!r || !r.width) { spot.style.cssText = ""; box.style.cssText = ""; return; }
+      const pad = 6;
+      spot.style.cssText = `top:${r.top - pad}px;left:${r.left - pad}px;width:${r.width + pad * 2}px;height:${r.height + pad * 2}px`;
+      const below = r.bottom + 14, w = Math.min(360, innerWidth - 32);
+      const left = Math.max(16, Math.min(innerWidth - w - 16, r.left + r.width / 2 - w / 2));
+      box.style.cssText = `width:${w}px;left:${left}px;` + (below + 220 < innerHeight ? `top:${below}px` : `bottom:${innerHeight - r.top + 14}px`);
+    };
+    const show = n => {
+      i = n;
+      const st = TOUR[i];
+      root.querySelector(".tour-count").textContent = `${i + 1} מתוך ${TOUR.length}`;
+      root.querySelector("#tour-title").textContent = st.title;
+      const t = root.querySelector("#tour-text");
+      if (st.html) t.innerHTML = st.html; else t.textContent = st.text;
+      root.querySelector('[data-t="next"]').textContent = i === 0 ? "בואו נתחיל" : i === TOUR.length - 1 ? "סיום" : "הבא";
+      root.querySelector('[data-t="prev"]').hidden = i === 0;
+      root.querySelector('[data-t="skip"]').hidden = i === TOUR.length - 1;
+      window.scrollTo(0, 0);
+      place();
+      root.querySelector('[data-t="next"]').focus();
+    };
+    const end = () => {
+      try { localStorage.setItem(TOUR_KEY, "1"); } catch (e) { /* storage blocked */ }
+      removeEventListener("resize", place); removeEventListener("keydown", key);
+      root.remove();
+      if (back && back.focus) back.focus();
+    };
+    const key = e => { if (e.key === "Escape") end(); };
+    root.addEventListener("click", e => {
+      const b = e.target.closest("[data-t]");
+      if (!b) return;
+      if (b.dataset.t === "next") i === TOUR.length - 1 ? end() : show(i + 1);
+      else if (b.dataset.t === "prev") show(i - 1);
+      else end();
+    });
+    addEventListener("resize", place); addEventListener("keydown", key);
+    show(0);
+  }
+  const tourAgain = document.getElementById("tour-again");
+  if (tourAgain) tourAgain.onclick = e => { e.preventDefault(); if (!/^#\/?$/.test(location.hash) && location.hash) location.hash = "#/"; setTimeout(startTour, 50); };
+
   const bl = document.getElementById("brand-logo");
   if (bl) bl.innerHTML = LOGO(30, false);
   document.getElementById("data-stamp").textContent = window.SERVICES_UPDATED ? "המאגר עודכן: " + window.SERVICES_UPDATED : "";
-  route();
+  route().then(() => {
+    // פעם ראשונה: הדגמה קצרה. לא בעמוד "עזרה עכשיו" (מי שמגיע לשם צריך עזרה, לא הדרכה)
+    let seen = true;
+    try { seen = !!localStorage.getItem(TOUR_KEY); } catch (e) { /* storage blocked: לא מציגים */ }
+    if (!seen && !/^#\/help/.test(location.hash)) setTimeout(startTour, 400);
+  });
 })();
