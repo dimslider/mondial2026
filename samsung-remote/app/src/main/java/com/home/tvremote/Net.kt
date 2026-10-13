@@ -102,6 +102,13 @@ object Net {
         return name.trim().ifEmpty { "Android TV" } to mac
     }
 
+    /** GET [url] on the LAN: HTTP status (-1 if no answer) and body. */
+    fun httpGet(url: String): Pair<Int, String> = try {
+        probe.newCall(Request.Builder().url(url).build()).execute().use { r -> r.code to r.body?.string().orEmpty() }
+    } catch (e: Exception) {
+        -1 to (e.javaClass.simpleName + ": " + e.message)
+    }
+
     /** GET [url] on the LAN; returns the JSON body, or null if the request failed or wasn't 2xx. */
     fun getJson(url: String): JSONObject? = try {
         probe.newCall(Request.Builder().url(url).build()).execute().use { r ->

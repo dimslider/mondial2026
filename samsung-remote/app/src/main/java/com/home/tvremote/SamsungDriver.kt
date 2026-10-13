@@ -183,7 +183,21 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             val names = HashSet<String>()
             for ((name, id) in KNOWN_APPS) {
                 if (name in names) continue
-                val info = Net.getJson("http://$ip:8001/api/v2/applications/$id") ?: continue
+                val url = "http://$ip:8001/api/v2/applications/$id"
+                var (code, body) = Net.httpGet(url)
+                if (code == -1) {
+                    Thread.sleep(300)
+                    val again = Net.httpGet(url)
+                    code = again.first
+                    body = again.second
+                }
+                session.log("rest $name $id -> $code ${body.replace("\n", " ").take(160)}")
+                if (code !in 200..299) continue
+                val info = try {
+                    JSONObject(body)
+                } catch (_: Exception) {
+                    JSONObject()
+                }
                 names.add(name)
                 found.put(JSONObject().put("appId", id).put("name", info.optString("name").ifEmpty { name }).put("app_type", 2))
             }
