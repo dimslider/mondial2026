@@ -4,59 +4,65 @@ import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
-import android.util.Base64
-import okhttp3.Request
-import okhttp3.Response
-import okhttp3.WebSocket
-import okhttp3.WebSocketListener
+import org.json.JSONArray
 import org.json.JSONObject
-import java.net.URLEncoder
 
 /**
- * Connection to a Samsung Tizen TV (2016+) over its local WebSocket remote-control API
- * (wss://<ip>:8002). The first connection shows an "Allow" prompt on the TV; the token
- * it returns is stored so later connections are silent.
- * All state is touched only on the main thread.
+ * Owns the connection to the selected TV: state machine, reconnects, queued commands.
+ * The brand-specific protocol lives in a [Driver]. All state is touched only on the main thread.
  */
 class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
 
-    companion object {
-        private const val APP_NAME = "Home Remote"
-    }
-
     private val prefs = context.getSharedPreferences("tv", Context.MODE_PRIVATE)
     private val main = Handler(Looper.getMainLooper())
-    private var ws: WebSocket? = null
+    private var driver: Driver? = null
     private var generation = 0
     private var attempt = 0
     private var active = false
     private var state = "idle"
-    private val pending = ArrayList<Pair<Long, String>>()
+    private val pending = ArrayList<Pair<Long, (Driver) -> Unit>>()
 
     val ip: String? get() = prefs.getString("ip", null)
+    private val type: String get() = prefs.getString("type", null) ?: Driver.SAMSUNG
     private val mac: String? get() = prefs.getString("mac", null)
     private val name: String? get() = prefs.getString("name", null)
     val isConnected: Boolean get() = state == "connected"
 
     private val retry = Runnable { if (active) connect() }
-    private val showPairing = Runnable { if (state == "connecting" || state == "reconnecting") setState("pairing") }
 
     private fun post(block: () -> Unit) {
         main.post { block() }
     }
 
+    /** Storage shared with drivers: keys starting with "@" are global, the rest are per TV. */
+    private fun storeKey(key: String, forType: String, forIp: String): String =
+        if (key.startsWith("@")) key else "$forType:$forIp:$key"
+
+    fun identity(): ClientIdentity = AndroidTvDriver.loadIdentity(object : Session {
+        override fun connected() {}
+        override fun waitingForUser(kind: String) {}
+        override fun denied() {}
+        override fun closed() {}
+        override fun apps(list: JSONArray) {}
+        override fun macAddress(mac: String) {}
+        override fun toast(text: String) {}
+        override fun load(key: String) = prefs.getString(key, null)
+        override fun store(key: String, value: String?) {
+            prefs.edit().putString(key, value).apply()
+        }
+    })
+
     fun start() = post {
         active = true
-        if (ws == null && state != "denied") connect() else emitStatus()
+        if (driver == null && state != "denied") connect() else emitStatus()
     }
 
     fun stop() = post {
         active = false
         main.removeCallbacks(retry)
-        main.removeCallbacks(showPairing)
         generation++
-        ws?.close(1000, null)
-        ws = null
+        driver?.close()
+        driver = null
         if (state != "noTv") state = "idle"
     }
 
@@ -67,10 +73,11 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
 
     fun requestStatus() = post { emitStatus() }
 
-    fun setTv(ip: String, name: String?, mac: String?) = post {
+    fun setTv(ip: String, type: String, name: String?, mac: String?) = post {
         prefs.edit()
             .putString("ip", ip)
-            .putString("name", name ?: "Samsung TV")
+            .putString("type", type)
+            .putString("name", name ?: "TV")
             .putString("mac", mac ?: "")
             .apply()
         attempt = 0
@@ -78,173 +85,125 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
     }
 
     fun resetPairing() = post {
-        ip?.let { prefs.edit().remove("token_$it").apply() }
+        val all = prefs.all.keys.filter { it.startsWith("$type:$ip:") || it == "token_$ip" }
+        prefs.edit().apply { all.forEach { remove(it) } }.apply()
         attempt = 0
         connect()
     }
 
-    fun sendKey(key: String) = sendRaw(
-        JSONObject()
-            .put("method", "ms.remote.control")
-            .put(
-                "params", JSONObject()
-                    .put("Cmd", "Click")
-                    .put("DataOfCmd", key)
-                    .put("Option", "false")
-                    .put("TypeOfRemote", "SendRemoteKey")
-            ).toString()
-    )
+    fun submitPin(pin: String) = post { driver?.submitPin(pin) }
 
-    fun sendText(text: String) {
-        val b64 = Base64.encodeToString(text.toByteArray(Charsets.UTF_8), Base64.NO_WRAP)
-        sendRaw(
-            JSONObject()
-                .put("method", "ms.remote.control")
-                .put(
-                    "params", JSONObject()
-                        .put("Cmd", b64)
-                        .put("DataOfCmd", "base64")
-                        .put("TypeOfRemote", "SendInputString")
-                ).toString()
-        )
+    fun sendKey(key: String) = command { d ->
+        if (!d.key(key)) toast("הכפתור הזה לא נתמך בטלוויזיה הזו")
     }
 
-    /** appType 2 = web/Tizen app (DEEP_LINK), 4 = native app (NATIVE_LAUNCH). */
-    fun launchApp(appId: String, appType: Int) = sendRaw(
-        JSONObject()
-            .put("method", "ms.channel.emit")
-            .put(
-                "params", JSONObject()
-                    .put("event", "ed.apps.launch")
-                    .put("to", "host")
-                    .put(
-                        "data", JSONObject()
-                            .put("appId", appId)
-                            .put("action_type", if (appType == 4) "NATIVE_LAUNCH" else "DEEP_LINK")
-                    )
-            ).toString()
-    )
+    fun sendText(text: String) = command { d ->
+        if (!d.text(text)) toast("הקלדה לא נתמכת בטלוויזיה הזו")
+    }
 
-    fun requestApps() = sendRaw(
-        JSONObject()
-            .put("method", "ms.channel.emit")
-            .put("params", JSONObject().put("event", "ed.installedApp.get").put("to", "host"))
-            .toString()
-    )
+    fun launchApp(appId: String, appType: Int) = command { it.launch(appId, appType) }
+
+    fun requestApps() = command { it.requestApps() }
 
     fun power() = post {
         if (isConnected) {
-            sendKey("KEY_POWER")
-        } else {
-            val m = mac
-            val target = ip
-            if (!m.isNullOrEmpty()) {
-                Thread { Net.wakeOnLan(m, target) }.start()
-                toast("שולח הדלקה לטלוויזיה…")
-            } else {
-                toast("הטלוויזיה לא מחוברת")
-            }
+            driver?.key("KEY_POWER")
+            return@post
+        }
+        val m = mac
+        val target = ip
+        if (!m.isNullOrEmpty()) {
+            Thread { Net.wakeOnLan(m, target) }.start()
+            toast("שולח הדלקה לטלוויזיה…")
+        }
+        // Android TVs often keep the remote service alive in standby: queue a power key.
+        if (type == Driver.ANDROID_TV) queue { it.key("KEY_POWER") }
+        attempt = 0
+        if (state != "connecting") connect()
+    }
+
+    private fun command(action: (Driver) -> Unit) = post {
+        val d = driver
+        if (isConnected && d != null) {
+            action(d)
+            return@post
+        }
+        queue(action)
+        if (driver == null || state == "denied") {
             attempt = 0
             connect()
         }
     }
 
-    private fun sendRaw(json: String) = post {
-        if (isConnected && ws?.send(json) == true) return@post
-        pending.add(SystemClock.elapsedRealtime() to json)
+    private fun queue(action: (Driver) -> Unit) {
+        pending.add(SystemClock.elapsedRealtime() to action)
         while (pending.size > 10) pending.removeAt(0)
-        if (ws == null || state == "denied") {
-            attempt = 0
-            connect()
-        }
     }
 
     private fun connect() {
         main.removeCallbacks(retry)
-        main.removeCallbacks(showPairing)
         val ip = ip ?: run {
             setState("noTv")
             return
         }
         val gen = ++generation
-        ws?.cancel()
-        ws = null
+        driver?.close()
         setState(if (attempt == 0) "connecting" else "reconnecting")
-
-        val appName = Base64.encodeToString(APP_NAME.toByteArray(), Base64.NO_WRAP)
-        val url = StringBuilder("wss://$ip:8002/api/v2/channels/samsung.remote.control?name=")
-            .append(URLEncoder.encode(appName, "UTF-8"))
-        prefs.getString("token_$ip", null)?.let { url.append("&token=").append(it) }
-
-        val request = try {
-            Request.Builder().url(url.toString()).build()
-        } catch (e: Exception) {
-            setState("badIp")
-            return
-        }
-        ws = Net.ws.newWebSocket(request, object : WebSocketListener() {
-            override fun onOpen(webSocket: WebSocket, response: Response) {
-                main.post { if (gen == generation) main.postDelayed(showPairing, 1500) }
-            }
-
-            override fun onMessage(webSocket: WebSocket, text: String) {
-                main.post { if (gen == generation) handle(text) }
-            }
-
-            override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
-                webSocket.close(1000, null)
-            }
-
-            override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
-                main.post { if (gen == generation) dropped() }
-            }
-
-            override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
-                main.post { if (gen == generation) dropped() }
-            }
-        })
+        val d = Driver.create(type, ip, sessionFor(gen, type, ip))
+        driver = d
+        d.connect()
     }
 
-    private fun handle(text: String) {
-        val msg = try {
-            JSONObject(text)
-        } catch (e: Exception) {
-            return
+    private fun sessionFor(gen: Int, tvType: String, tvIp: String) = object : Session {
+        private fun onMain(block: () -> Unit) {
+            main.post { if (gen == generation) block() }
         }
-        when (msg.optString("event")) {
-            "ms.channel.connect" -> {
-                val token = msg.optJSONObject("data")?.optString("token").orEmpty()
-                if (token.isNotEmpty()) ip?.let { prefs.edit().putString("token_$it", token).apply() }
-                attempt = 0
-                main.removeCallbacks(showPairing)
-                setState("connected")
-                flushPending()
-                requestApps()
-            }
 
-            "ms.channel.unauthorized", "ms.channel.timeOut" -> {
-                main.removeCallbacks(showPairing)
-                setState("denied")
-                ws?.close(1000, null)
-            }
+        override fun connected() = onMain {
+            attempt = 0
+            setState("connected")
+            flushPending()
+            driver?.requestApps()
+        }
 
-            "ed.installedApp.get" -> {
-                val list = msg.optJSONObject("data")?.optJSONArray("data") ?: return
-                emit(JSONObject().put("type", "apps").put("apps", list))
-            }
+        override fun waitingForUser(kind: String) = onMain { setState(if (kind == "pin") "pin" else "pairing") }
+
+        override fun denied() = onMain {
+            driver?.close()
+            driver = null
+            setState("denied")
+        }
+
+        override fun closed() = onMain { dropped() }
+
+        override fun apps(list: JSONArray) = onMain { emit(JSONObject().put("type", "apps").put("apps", list)) }
+
+        override fun macAddress(mac: String) = onMain {
+            if (mac.isNotEmpty() && mac != this@TvClient.mac) prefs.edit().putString("mac", mac).apply()
+        }
+
+        override fun toast(text: String) = onMain { this@TvClient.toast(text) }
+
+        override fun load(key: String): String? =
+            prefs.getString(storeKey(key, tvType, tvIp), null)
+                // Version 1 stored the Samsung token as "token_<ip>".
+                ?: if (key == "token" && tvType == Driver.SAMSUNG) prefs.getString("token_$tvIp", null) else null
+
+        override fun store(key: String, value: String?) {
+            prefs.edit().putString(storeKey(key, tvType, tvIp), value).apply()
         }
     }
 
     private fun flushPending() {
         val now = SystemClock.elapsedRealtime()
-        val toSend = pending.filter { now - it.first < 5000 }.map { it.second }
+        val toRun = pending.filter { now - it.first < 8000 }.map { it.second }
         pending.clear()
-        for (json in toSend) ws?.send(json)
+        driver?.let { d -> toRun.forEach { it(d) } }
     }
 
     private fun dropped() {
-        ws = null
-        main.removeCallbacks(showPairing)
+        driver?.close()
+        driver = null
         if (!active || state == "denied") return
         attempt++
         setState("reconnecting")
@@ -263,6 +222,7 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
                 .put("type", "status")
                 .put("state", state)
                 .put("ip", ip ?: "")
+                .put("tvType", if (ip == null) "" else type)
                 .put("name", name ?: "")
                 .put("mac", mac ?: "")
         )

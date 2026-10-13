@@ -31,6 +31,9 @@ jobs:
         with:
           gradle-version: "8.9"
 
+      - name: Protocol tests (fake Samsung / LG / Android TV)
+        run: gradle -p jvm-tests test --no-daemon
+
       - name: Build APK
         run: gradle assembleRelease --no-daemon --stacktrace
 
@@ -51,5 +54,5 @@ jobs:
           make_latest: true
           files: samsung-remote/TV-Remote.apk
           body: |
-            אפליקציית שלט לטלוויזיית סמסונג (Tizen, 2016 ומעלה).
+            שלט אוניברסלי לטלוויזיות חכמות: Samsung, LG ו-Android TV / Google TV.
             להורדה: לחצו על **TV-Remote.apk** למטה והתקינו בטלפון אנדרואיד.

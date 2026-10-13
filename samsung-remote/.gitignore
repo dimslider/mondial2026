@@ -3,3 +3,6 @@ build/
 local.properties
 *.iml
 .idea/
+jvm-tests/.gradle/
+jvm-tests/build/
+jvm-tests/.kotlin/

@@ -9,7 +9,6 @@ import android.view.KeyEvent
 import android.view.View
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
-import org.json.JSONArray
 import org.json.JSONObject
 
 class MainActivity : Activity() {
@@ -33,6 +32,8 @@ class MainActivity : Activity() {
         web.addJavascriptInterface(Bridge(), "Android")
         setContentView(web)
         web.loadUrl("file:///android_asset/remote.html")
+        // The Android TV client certificate takes a moment to generate; do it ahead of time.
+        Thread { tv.identity() }.start()
     }
 
     private fun toJs(msg: JSONObject) {
@@ -96,31 +97,34 @@ class MainActivity : Activity() {
         fun resetPairing() = tv.resetPairing()
 
         @JavascriptInterface
-        fun selectTv(ip: String, name: String, mac: String) = tv.setTv(ip, name, mac)
+        fun selectTv(ip: String, type: String, name: String, mac: String) = tv.setTv(ip, type, name, mac)
+
+        @JavascriptInterface
+        fun submitPin(pin: String) = tv.submitPin(pin)
 
         @JavascriptInterface
         fun connectIp(ip: String) {
             Thread {
-                val info = Net.deviceInfo(ip.trim())
+                val info = Net.identify(ip.trim(), tv.identity())
                 if (info != null) {
-                    tv.setTv(info.getString("ip"), info.optString("name"), info.optString("mac"))
+                    tv.setTv(info.getString("ip"), info.getString("type"), info.optString("name"), info.optString("mac"))
                 } else {
-                    // Not answering on 8001 (maybe off) — still try to connect directly.
-                    tv.setTv(ip.trim(), "Samsung TV", null)
+                    toJs(JSONObject().put("type", "toast").put("text", "לא נמצאה טלוויזיה בכתובת הזו (היא דלוקה?)"))
                 }
             }.start()
         }
 
         @JavascriptInterface
         fun scan() {
-            val found = JSONArray()
+            val found = java.util.Collections.synchronizedSet(HashSet<String>())
             Net.scan(
+                identity = { tv.identity() },
                 onFound = { dev ->
-                    synchronized(found) { found.put(dev) }
+                    found.add(dev.optString("ip"))
                     toJs(JSONObject().put("type", "scanFound").put("device", dev))
                 },
                 onDone = { me ->
-                    toJs(JSONObject().put("type", "scanDone").put("ok", me != null).put("count", found.length()))
+                    toJs(JSONObject().put("type", "scanDone").put("ok", me != null).put("count", found.size))
                 }
             )
         }

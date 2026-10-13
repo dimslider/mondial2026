@@ -166,6 +166,8 @@
   .tvrow .meta div { font-size: 15px; color: #e6ebf1; }
   .tvrow .meta small { color: var(--muted); font-size: 12px; direction: ltr; display: inline-block; }
   .tvrow.cur { box-shadow: inset 0 0 0 2px var(--accent); }
+  .badge { display: inline-block; font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 1px 6px; margin-inline-start: 4px; vertical-align: middle; direction: ltr; }
+  input.pin { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 26px; letter-spacing: 8px; text-align: center; text-transform: uppercase; }
   .btn {
     background: var(--accent); color: #fff; border-radius: 12px; padding: 12px 16px; font-size: 15px; font-weight: 600;
   }
@@ -207,7 +209,7 @@
 <div class="app">
   <div class="top">
     <div style="width:40px"></div>
-    <button class="status wait" id="status" onclick="openSheet('settings')">
+    <button class="status wait" id="status" onclick="statusTap()">
       <i class="dot"></i><span id="statusText">מתחבר…</span>
     </button>
     <button class="gear" onclick="openSheet('settings')" aria-label="הגדרות">
@@ -374,12 +376,23 @@
   </div>
 </div>
 
+<!-- Android TV pairing code -->
+<div class="sheet" id="sheet-pin">
+  <div class="handle"></div>
+  <h2>קוד צימוד</h2>
+  <p class="note">בטלוויזיה מופיע עכשיו קוד בן 6 תווים (ספרות ואותיות A–F). הקלד אותו כאן:</p>
+  <div class="inrow">
+    <input type="text" id="pinInput" class="pin" maxlength="6" placeholder="A1B2C3" autocomplete="off" autocapitalize="characters" spellcheck="false" enterkeyhint="done">
+    <button class="btn" onclick="submitPin()">אישור</button>
+  </div>
+</div>
+
 <!-- apps -->
 <div class="sheet" id="sheet-apps">
   <div class="handle"></div>
   <div style="display:flex;align-items:center;justify-content:space-between">
     <h2>אפליקציות בטלוויזיה</h2>
-    <button class="btn ghost" style="padding:8px 12px" onclick="A.refreshApps();toast('מרענן…')">רענן</button>
+    <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="A.refreshApps();toast('מרענן…')">רענן</button>
   </div>
   <div class="applist" id="applist"></div>
 </div>
@@ -399,7 +412,7 @@
     <input type="text" id="ipInput" placeholder="192.168.1.50" inputmode="decimal" autocomplete="off">
     <button class="btn" onclick="connectIp()">התחבר</button>
   </div>
-  <p class="note">כתובת ה-IP מופיעה בטלוויזיה תחת: הגדרות ← כללי ← רשת ← מצב רשת.</p>
+  <p class="note">כתובת ה-IP מופיעה בהגדרות הרשת של הטלוויזיה (למשל: הגדרות ← כללי ← רשת ← מצב רשת).</p>
 
   <h3>הגדרות</h3>
   <div class="card" style="padding:0 14px">
@@ -410,14 +423,9 @@
   <h3>פתרון בעיות</h3>
   <div class="inrow">
     <button class="btn ghost full" onclick="A.reconnect()">התחבר מחדש</button>
-    <button class="btn ghost full" onclick="A.resetPairing();toast('אשר את החיבור בטלוויזיה')">צמד מחדש</button>
+    <button class="btn ghost full" onclick="A.resetPairing();toast('מצמד מחדש…')">צמד מחדש</button>
   </div>
-  <p class="note">
-    • בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Allow / אפשר</b>.<br>
-    • כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל<br>
-    &nbsp;&nbsp;הגדרות ← כללי ← רשת ← הגדרות מומחה ← <b>הפעלה עם נייד (Power On with Mobile)</b>.<br>
-    • הטלפון והטלוויזיה חייבים להיות מחוברים לאותה רשת Wi-Fi.
-  </p>
+  <p class="note" id="helpText"></p>
   <p class="note" id="ver" style="text-align:center;margin-top:16px"></p>
 </div>
 
@@ -427,13 +435,41 @@
   // Bridge to the Android app; a stub lets the page be previewed in a desktop browser.
   const A = window.Android || new Proxy({}, { get: (_, k) => (...a) => { console.log('Android.' + String(k), ...a); return k === 'getPref' ? a[1] : ''; } });
 
+  // Shortcut buttons: app ids per TV family (Android TV takes package names).
   const KNOWN_APPS = {
-    netflix: { names: ['netflix'], ids: ['3201907018807', '11101200001'] },
-    youtube: { names: ['youtube'], ids: ['111299001912'] },
-    spotify: { names: ['spotify'], ids: ['3201606009684'] },
+    netflix: { names: ['netflix'], samsung: ['3201907018807', '11101200001'], lg: ['netflix'], androidtv: ['com.netflix.ninja'] },
+    youtube: { names: ['youtube'], samsung: ['111299001912'], lg: ['youtube.leanback.v4'], androidtv: ['com.google.android.youtube.tv'] },
+    spotify: { names: ['spotify'], samsung: ['3201606009684'], lg: ['spotify-beehive'], androidtv: ['com.spotify.tv.android'] },
   };
 
-  const S = { state: 'idle', ip: '', name: '', mac: '', apps: [], scanning: false, found: [] };
+  // Android TV can't list installed apps over the remote protocol: offer popular ones.
+  const ANDROID_TV_APPS = [
+    ['Netflix', 'com.netflix.ninja'],
+    ['YouTube', 'com.google.android.youtube.tv'],
+    ['Spotify', 'com.spotify.tv.android'],
+    ['Disney+', 'com.disney.disneyplus'],
+    ['Prime Video', 'com.amazon.amazonvideo.livingroom'],
+    ['Apple TV', 'com.apple.atve.androidtv.appletv'],
+    ['Max', 'com.wbd.stream'],
+    ['YouTube Music', 'com.google.android.youtube.tvmusic'],
+    ['Twitch', 'tv.twitch.android.app'],
+    ['Plex', 'com.plexapp.android'],
+    ['Kodi', 'org.xbmc.kodi'],
+    ['Google Play', 'com.android.vending'],
+  ].map(([name, appId]) => ({ name, appId, app_type: 0 }));
+
+  const BRANDS = { samsung: 'Samsung', lg: 'LG', androidtv: 'Android TV' };
+
+  const HELP = {
+    samsung: '• בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Allow / אפשר</b>.<br>' +
+      '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל הגדרות ← כללי ← רשת ← הגדרות מומחה ← <b>הפעלה עם נייד (Power On with Mobile)</b>.',
+    lg: '• בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Accept / אישור</b>.<br>' +
+      '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל <b>הדלקה דרך Wi-Fi / TV On With Mobile</b> (בהגדרות ← כללי ← התקנים; המיקום משתנה לפי הדגם).',
+    androidtv: '• בחיבור הראשון יופיע בטלוויזיה קוד בן 6 תווים – הקלד אותו בטלפון.<br>' +
+      '• ההדלקה עובדת כשהטלוויזיה נשארת מחוברת לרשת במצב המתנה (ברוב דגמי Google TV זו ברירת המחדל).',
+  };
+
+  const S = { state: 'idle', ip: '', tvType: '', name: '', mac: '', apps: [], scanning: false, found: [] };
   const pref = {
     haptic: A.getPref('haptic', '1') !== '0',
     hwVolume: A.getPref('hwVolume', '1') !== '0',
@@ -548,7 +584,8 @@
     closeSheets(true);
     $('sheet-' + name).classList.add('show');
     $('scrim').classList.add('show');
-    if (name === 'apps') { renderApps(); if (!S.apps.length) A.refreshApps(); }
+    if (name === 'apps') { renderApps(); if (!appList().length) A.refreshApps(); }
+    if (name === 'pin') { $('pinInput').value = ''; setTimeout(() => $('pinInput').focus(), 250); }
     if (name === 'settings') renderSettings();
   }
   function closeSheets(keepScrim) {
@@ -564,19 +601,22 @@
   /* ---------- apps ---------- */
   function launchKnown(key) {
     const k = KNOWN_APPS[key];
-    const found = S.apps.find((a) => k.names.some((n) => (a.name || '').toLowerCase().includes(n)));
+    const type = S.tvType || 'samsung';
+    const found = type !== 'androidtv' && S.apps.find((a) => k.names.some((n) => (a.name || '').toLowerCase().includes(n)));
     if (found) A.launch(String(found.appId), Number(found.app_type) || 2);
-    else k.ids.forEach((id) => A.launch(id, 2));
+    else (k[type] || []).forEach((id) => A.launch(id, 2));
   }
+  function appList() { return S.tvType === 'androidtv' ? ANDROID_TV_APPS : S.apps; }
   const PALETTE = ['#3d8bff', '#9d5cf2', '#e04f3f', '#f3a03c', '#2bb673', '#f2546b', '#5fd3b0', '#c08b4a'];
   function renderApps() {
     const box = $('applist');
-    if (!S.apps.length) {
+    $('appsRefresh').style.display = S.tvType === 'androidtv' ? 'none' : '';
+    if (!appList().length) {
       box.innerHTML = '<div class="empty" style="grid-column:1/-1">' +
         (S.state === 'connected' ? '<span class="spinner"></span> טוען רשימת אפליקציות…' : 'התחבר לטלוויזיה כדי לראות את האפליקציות') + '</div>';
       return;
     }
-    const apps = S.apps.slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    const apps = appList().slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''));
     box.innerHTML = apps.map((a, i) => {
       const name = a.name || a.appId;
       const color = PALETTE[[...name].reduce((s, c) => s + c.charCodeAt(0), 0) % PALETTE.length];
@@ -603,12 +643,24 @@
   }
   $('kbText').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendText(); } });
 
+  /* ---------- Android TV pairing code ---------- */
+  function submitPin() {
+    const v = $('pinInput').value.trim().toUpperCase();
+    if (!/^[0-9A-F]{6}$/.test(v)) { toast('הקוד הוא 6 תווים: ספרות ו-A עד F'); return; }
+    A.submitPin(v);
+    toast('בודק את הקוד…');
+    closeSheets();
+  }
+  $('pinInput').addEventListener('input', (e) => { e.target.value = e.target.value.toUpperCase().replace(/[^0-9A-F]/g, ''); });
+  $('pinInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submitPin(); } });
+
   /* ---------- status & settings ---------- */
   const STATUS = {
     idle: ['', 'מוכן'],
     connecting: ['wait', 'מתחבר…'],
     reconnecting: ['wait', 'מתחבר מחדש…'],
     pairing: ['wait', 'אשר את החיבור בטלוויזיה (Allow)'],
+    pin: ['wait', 'הקלד את הקוד שמופיע בטלוויזיה'],
     connected: ['ok', null],
     denied: ['err', 'החיבור נדחה – לחץ לניסיון חוזר'],
     noTv: ['err', 'לא נבחרה טלוויזיה – לחץ כאן'],
@@ -622,13 +674,15 @@
   function renderSettings() {
     const has = !!S.ip;
     $('curTv').innerHTML = has
-      ? '<div style="font-size:15px;color:#e6ebf1">' + esc(S.name || 'Samsung TV') + '</div>' +
+      ? '<div style="font-size:15px;color:#e6ebf1">' + esc(S.name || 'TV') + ' <span class="badge">' + esc(BRANDS[S.tvType] || '') + '</span></div>' +
         '<div class="note" style="direction:ltr;text-align:right">' + esc(S.ip) + (S.mac ? ' · ' + esc(S.mac) : '') + '</div>' +
         '<div class="note" style="margin-top:4px">' + esc(($('statusText').textContent)) + '</div>'
       : '<div class="note">עדיין לא נבחרה טלוויזיה. לחץ "חפש טלוויזיות ברשת".</div>';
     $('ipInput').value = $('ipInput').value || S.ip;
     $('prefHwVolume').checked = pref.hwVolume;
     $('prefHaptic').checked = pref.haptic;
+    $('helpText').innerHTML = (S.tvType ? HELP[S.tvType] : Object.values(HELP).map((h) => h.split('<br>')[0]).join('<br>')) +
+      '<br>• הטלפון והטלוויזיה חייבים להיות מחוברים לאותה רשת Wi-Fi.';
     renderScan();
   }
   function renderScan() {
@@ -636,7 +690,7 @@
     list.innerHTML = S.found.map((d) =>
       '<button class="tvrow' + (d.ip === S.ip ? ' cur' : '') + '" data-ip="' + esc(d.ip) + '">' +
       '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#5b8cff" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>' +
-      '<div class="meta"><div>' + esc(d.name) + '</div><small>' + esc(d.ip) + (d.model ? ' · ' + esc(d.model) : '') + '</small></div>' +
+      '<div class="meta"><div>' + esc(d.name) + ' <span class="badge">' + esc(BRANDS[d.type] || '') + '</span></div><small>' + esc(d.ip) + (d.model ? ' · ' + esc(d.model) : '') + '</small></div>' +
       (d.ip === S.ip ? '<span class="note">נבחרה</span>' : '') + '</button>').join('') +
       (S.scanning ? '<div class="empty"><span class="spinner"></span> מחפש ברשת…</div>' : '');
     $('scanBtn').style.display = S.scanning ? 'none' : '';
@@ -649,10 +703,10 @@
   });
   function selectTv(d) {
     buzz();
-    A.selectTv(d.ip, d.name || 'Samsung TV', d.mac || '');
-    S.ip = d.ip; S.name = d.name; S.mac = d.mac; S.apps = [];
+    A.selectTv(d.ip, d.type || 'samsung', d.name || 'TV', d.mac || '');
+    S.ip = d.ip; S.tvType = d.type || 'samsung'; S.name = d.name; S.mac = d.mac; S.apps = [];
     toast('מתחבר ל-' + d.name);
-    setTimeout(closeSheets, 400);
+    setTimeout(() => { if ($('sheet-settings').classList.contains('show')) closeSheets(); }, 400);
   }
   function startScan() {
     S.scanning = true; S.found = [];
@@ -669,7 +723,11 @@
   }
   $('prefHwVolume').addEventListener('change', (e) => { pref.hwVolume = e.target.checked; A.setPref('hwVolume', pref.hwVolume ? '1' : '0'); });
   $('prefHaptic').addEventListener('change', (e) => { pref.haptic = e.target.checked; A.setPref('haptic', pref.haptic ? '1' : '0'); });
-  $('status').addEventListener('click', () => { if (S.state === 'denied' || S.state === 'reconnecting') A.reconnect(); });
+  function statusTap() {
+    if (S.state === 'pin') { openSheet('pin'); return; }
+    if (S.state === 'denied' || S.state === 'reconnecting') A.reconnect();
+    openSheet('settings');
+  }
 
   /* ---------- messages from Android ---------- */
   let autoScanned = false;
@@ -677,9 +735,11 @@
     switch (m.type) {
       case 'status': {
         const prevIp = S.ip;
-        Object.assign(S, { state: m.state, ip: m.ip, name: m.name, mac: m.mac });
+        Object.assign(S, { state: m.state, ip: m.ip, tvType: m.tvType || '', name: m.name, mac: m.mac });
         if (prevIp && prevIp !== m.ip) S.apps = [];
         renderStatus();
+        if (m.state === 'pin') openSheet('pin');
+        else if ($('sheet-pin').classList.contains('show')) closeSheets();
         if ($('sheet-settings').classList.contains('show')) renderSettings();
         if (m.state === 'noTv' && !autoScanned) {
           autoScanned = true;
@@ -693,7 +753,7 @@
         if ($('sheet-apps').classList.contains('show')) renderApps();
         break;
       case 'scanFound':
-        if (!S.found.some((d) => d.ip === m.device.ip)) S.found.push(m.device);
+        S.found = S.found.filter((d) => d.ip !== m.device.ip).concat([m.device]);
         renderScan();
         break;
       case 'scanDone':
