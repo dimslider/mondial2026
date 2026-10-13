@@ -1,9 +1,12 @@
 package com.home.tvremote
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
@@ -39,6 +42,7 @@ class MainActivity : Activity() {
         web.loadUrl("file:///android_asset/remote.html")
         // The Android TV client certificate takes a moment to generate; do it ahead of time.
         Thread { tv.identity() }.start()
+        RemoteService.sync(this)
     }
 
     private fun toJs(msg: JSONObject) {
@@ -99,8 +103,36 @@ class MainActivity : Activity() {
         toJs(JSONObject().put("type", "voice").put("text", text))
     }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        val granted = grantResults.isNotEmpty() && grantResults.all { it == PackageManager.PERMISSION_GRANTED }
+        val what = if (requestCode == PHONE_REQUEST) "phone" else "notifications"
+        toJs(JSONObject().put("type", "permission").put("what", what).put("granted", granted))
+        RemoteService.sync(this)
+    }
+
     @Suppress("unused")
     inner class Bridge {
+        /** "notifications" or "phone"; answers through a "permission" message. */
+        @JavascriptInterface
+        fun requestPermission(what: String) = runOnUiThread {
+            val perm = when (what) {
+                "phone" -> Manifest.permission.READ_PHONE_STATE
+                else -> if (Build.VERSION.SDK_INT >= 33) Manifest.permission.POST_NOTIFICATIONS else null
+            }
+            val code = if (what == "phone") PHONE_REQUEST else NOTIFY_REQUEST
+            if (perm == null || checkSelfPermission(perm) == PackageManager.PERMISSION_GRANTED) {
+                toJs(JSONObject().put("type", "permission").put("what", what).put("granted", true))
+                RemoteService.sync(this@MainActivity)
+            } else {
+                requestPermissions(arrayOf(perm), code)
+            }
+        }
+
+        /** Re-applies settings that background features depend on. */
+        @JavascriptInterface
+        fun applyQuickSettings() = RemoteService.sync(this@MainActivity)
+
         @JavascriptInterface
         fun key(key: String) = tv.sendKey(key)
 
@@ -202,5 +234,7 @@ class MainActivity : Activity() {
 
     companion object {
         private const val VOICE_REQUEST = 7
+        private const val NOTIFY_REQUEST = 8
+        private const val PHONE_REQUEST = 9
     }
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+    android:background="@drawable/widget_bg" android:padding="8dp">
+    <TextView android:id="@+id/q_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textColor="#D5DBE3" android:textSize="13sp" android:maxLines="1" android:ellipsize="end"
+        android:paddingStart="6dp" android:paddingEnd="6dp" android:paddingBottom="4dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="horizontal" android:layoutDirection="ltr">
+        <ImageButton android:id="@+id/q_power" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_power" android:contentDescription="הפעלה" />
+        <ImageButton android:id="@+id/q_voldown" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_voldown" android:contentDescription="הנמך" />
+        <ImageButton android:id="@+id/q_mute" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_mute" android:contentDescription="השתק" />
+        <ImageButton android:id="@+id/q_volup" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_volup" android:contentDescription="הגבר" />
+        <ImageButton android:id="@+id/q_playpause" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_playpause" android:contentDescription="נגן או השהה" />
+    </LinearLayout>
+</LinearLayout>

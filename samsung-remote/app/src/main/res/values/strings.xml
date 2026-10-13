@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">שלט לטלוויזיה</string>
+    <string name="widget_description">כפתורי שליטה מהירה בטלוויזיה</string>
+    <string name="tile_open">שלט</string>
+    <string name="tile_mute">השתק TV</string>
 </resources>

@@ -13,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArrayList
  * One instance per process, shared by the remote screen, the notification, the widget and timers.
  * The brand-specific protocol lives in a [Driver]. All state is touched only on the main thread.
  */
-class TvClient private constructor(context: Context) {
+class TvClient private constructor(private val context: Context) {
 
     companion object {
         @Volatile
@@ -132,9 +132,8 @@ class TvClient private constructor(context: Context) {
     /** Adds (or updates) a TV and makes it the current one. */
     fun setTv(ip: String, type: String, name: String?, mac: String?) = post {
         val list = savedTvs()
-        var entry: JSONObject? = null
-        for (i in 0 until list.length()) if (list.getJSONObject(i).optString("ip") == ip) entry = list.getJSONObject(i)
-        if (entry == null) entry = JSONObject().put("ip", ip).put("label", "").also { list.put(it) }
+        val entry: JSONObject = (0 until list.length()).map { list.getJSONObject(it) }.firstOrNull { it.optString("ip") == ip }
+            ?: JSONObject().put("ip", ip).put("label", "").also { list.put(it) }
         entry.put("type", type).put("name", name ?: "TV")
         if (!mac.isNullOrEmpty()) entry.put("mac", mac)
         saveTvs(list)
@@ -157,11 +156,13 @@ class TvClient private constructor(context: Context) {
         pending.clear()
         attempt = 0
         connect()
+        RemoteWidget.refresh(context)
     }
 
     fun renameTv(ip: String, label: String) = post {
         updateSaved(ip) { it.put("label", label.trim()) }
         emitStatus()
+        RemoteWidget.refresh(context)
     }
 
     fun removeTv(ip: String) = post {
@@ -317,7 +318,9 @@ class TvClient private constructor(context: Context) {
         }
         attempt++
         setState("reconnecting")
-        val delay = minOf(8000L, 500L shl minOf(attempt, 4))
+        // On screen: retry quickly. Background only (notification, call mute): go easy on the battery.
+        val cap = if ("screen" in holders) 8_000L else 60_000L
+        val delay = minOf(cap, 500L shl minOf(attempt, 7))
         main.postDelayed(retry, delay)
     }
 

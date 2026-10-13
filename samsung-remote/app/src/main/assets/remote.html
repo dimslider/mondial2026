@@ -201,6 +201,9 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%); }
 
+  .seg.mini { padding: 3px; gap: 2px; border-radius: 12px; background: var(--bg); flex: none; }
+  .seg.mini button { height: 32px; padding: 0 10px; font-size: 13px; border-radius: 9px; }
+  .sw input:disabled { opacity: .35; }
   .tvrow .edit { display: flex; gap: 6px; margin-top: 8px; }
   .tvrow .icon-btn { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: var(--muted); background: var(--surface-3); flex: none; }
 
@@ -459,6 +462,18 @@
     <label class="sw">מצב פשוט – פחות כפתורים, כפתורים גדולים<input type="checkbox" id="prefSimple"></label>
   </div>
 
+  <h3>גישה מהירה מחוץ לאפליקציה</h3>
+  <div class="card" style="padding:0 14px">
+    <label class="sw">כפתורי שליטה בהתראות ובמסך הנעילה<input type="checkbox" id="prefQuick"></label>
+    <label class="sw">כפתורי הווליום של הטלפון שולטים בטלוויזיה גם כשהאפליקציה סגורה (רק כשהטלוויזיה מחוברת)<input type="checkbox" id="prefLockVol"></label>
+    <div class="sw">כשנכנסת שיחה
+      <div class="seg mini" id="callSeg">
+        <button data-call="off">כלום</button><button data-call="mute">השתק</button><button data-call="pause">השהה</button>
+      </div>
+    </div>
+  </div>
+  <p class="note">אפשר גם להוסיף <b>ווידג'ט</b> למסך הבית (לחיצה ארוכה על מסך הבית ← ווידג'טים ← שלט לטלוויזיה), ו<b>כפתורים להגדרות המהירות</b> (משיכה למטה מראש המסך ← עריכה ← "שלט" / "השתק TV").</p>
+
   <h3>פתרון בעיות</h3>
   <div class="inrow">
     <button class="btn ghost full" onclick="A.reconnect()">התחבר מחדש</button>
@@ -516,6 +531,9 @@
     hwVolume: A.getPref('hwVolume', '1') !== '0',
     touchpad: A.getPref('touchpad', '0') === '1',
     simple: A.getPref('simple', '0') === '1',
+    quick: A.getPref('quickControls', '0') === '1',
+    lockVol: A.getPref('lockVolume', '1') !== '0',
+    callAction: A.getPref('callAction', 'off'),
   };
 
   const $ = (id) => document.getElementById(id);
@@ -870,6 +888,7 @@
     $('prefHwVolume').checked = pref.hwVolume;
     $('prefHaptic').checked = pref.haptic;
     $('prefSimple').checked = pref.simple;
+    renderQuick();
     $('helpText').innerHTML = (S.tvType ? HELP[S.tvType] : Object.values(HELP).map((h) => h.split('<br>')[0]).join('<br>')) +
       '<br>• הטלפון והטלוויזיה חייבים להיות מחוברים לאותה רשת Wi-Fi.';
     renderScan();
@@ -924,6 +943,58 @@
     openSheet(S.tvs.length ? 'tvs' : 'settings');
   }
 
+  /* ---------- quick access (notification, lock-screen volume, calls) ---------- */
+  let pendingCall = 'off';
+  function renderQuick() {
+    $('prefQuick').checked = pref.quick;
+    $('prefLockVol').checked = pref.lockVol;
+    $('prefLockVol').disabled = !pref.quick;
+    document.querySelectorAll('#callSeg [data-call]').forEach((b) => b.classList.toggle('on', b.dataset.call === pref.callAction));
+  }
+  $('prefQuick').addEventListener('change', (e) => {
+    if (e.target.checked) { A.requestPermission('notifications'); return; }
+    pref.quick = false;
+    A.setPref('quickControls', '0');
+    A.applyQuickSettings();
+    renderQuick();
+  });
+  $('prefLockVol').addEventListener('change', (e) => {
+    pref.lockVol = e.target.checked;
+    A.setPref('lockVolume', pref.lockVol ? '1' : '0');
+    A.applyQuickSettings();
+  });
+  $('callSeg').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-call]');
+    if (!b) return;
+    buzz();
+    if (b.dataset.call === 'off') {
+      pref.callAction = 'off';
+      A.setPref('callAction', 'off');
+      A.applyQuickSettings();
+      renderQuick();
+      return;
+    }
+    pendingCall = b.dataset.call;
+    A.requestPermission('phone');
+  });
+  function onPermission(m) {
+    if (m.what === 'notifications') {
+      pref.quick = true;
+      A.setPref('quickControls', '1');
+      if (!m.granted) toast('בלי הרשאת התראות הכפתורים לא יוצגו בהתראות');
+    } else if (m.what === 'phone') {
+      if (m.granted) {
+        pref.callAction = pendingCall;
+        A.setPref('callAction', pendingCall);
+        toast(pendingCall === 'pause' ? 'הטלוויזיה תעצור בזמן שיחה' : 'הטלוויזיה תושתק בזמן שיחה');
+      } else {
+        toast('צריך הרשאה לזהות שיחות נכנסות');
+      }
+    }
+    A.applyQuickSettings();
+    renderQuick();
+  }
+
   /* ---------- messages from Android ---------- */
   let autoScanned = false;
   window.onTv = function (m) {
@@ -963,6 +1034,9 @@
         break;
       case 'toast':
         toast(m.text);
+        break;
+      case 'permission':
+        onPermission(m);
         break;
       case 'voice':
         A.text(m.text);
