@@ -94,6 +94,12 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     check('voice netflix launches', (await sent('launch')).length >= 1 && (await open()) === 'none');
     await p.evaluate(() => onTv({ type: 'voice', text: 'תפתח את דיסני' }));
     check('voice disney (TV list)', JSON.stringify(await sent('launch')) === JSON.stringify([['3201901017640', 2]]));
+    await p.evaluate(() => onTv({ type: 'apps', apps: [{ appId: 'STING', name: 'STING+ by yes', app_type: 2 }, { appId: 'STREMIO', name: 'Stremio', app_type: 2 }, { appId: '3201901017640', name: 'Disney+', app_type: 2 }] }));
+    for (const [said, want] of [['סטינג', 'STING'], ['תפתח את יס', 'STING'], ['sting', 'STING'], ['פתח סטרימיו', 'STREMIO'], ['דיסני פלוס', '3201901017640'], ['ליוטיוב', '111299001912']]) {
+      await p.evaluate((t) => onTv({ type: 'voice', text: t }), said);
+      const l = await sent('launch');
+      check(`voice "${said}"`, l.length >= 1 && l[0][0] === want, JSON.stringify(l));
+    }
     await p.evaluate(() => onTv({ type: 'voice', text: 'שעון עולמי' })); await p.waitForTimeout(350);
     check('voice other opens sheet', (await open()) === 'voice', await open());
     await p.tap('#sheet-voice .tiles button'); 

@@ -32,6 +32,19 @@ class TvClient private constructor(private val context: Context) {
     private var attempt = 0
     private var state = "idle"
     private val pending = ArrayList<Pair<Long, (Driver) -> Unit>>()
+    private val logLines = java.util.ArrayDeque<String>()
+
+    private fun addLog(line: String) = synchronized(logLines) {
+        val t = java.text.SimpleDateFormat("HH:mm:ss", java.util.Locale.US).format(java.util.Date())
+        logLines.addLast("$t $line")
+        while (logLines.size > 80) logLines.removeFirst()
+    }
+
+    /** Recent connection events, for the "copy diagnostics" button. */
+    fun diagnostics(version: String): String {
+        val head = "TV Remote $version · ${type} · ${ip ?: "-"} · state=$state · android=${android.os.Build.VERSION.SDK_INT}"
+        return head + "\n" + synchronized(logLines) { logLines.joinToString("\n") }
+    }
 
     val ip: String? get() = prefs.getString("ip", null)
     private val type: String get() = prefs.getString("type", null) ?: Driver.SAMSUNG
@@ -291,6 +304,8 @@ class TvClient private constructor(private val context: Context) {
 
         override fun toast(text: String) = onMain { this@TvClient.toast(text) }
 
+        override fun log(line: String) = addLog(line)
+
         override fun load(key: String): String? =
             prefs.getString(storeKey(key, tvType, tvIp), null)
                 // Version 1 stored the Samsung token as "token_<ip>".
@@ -325,6 +340,7 @@ class TvClient private constructor(private val context: Context) {
     }
 
     private fun setState(s: String) {
+        if (s != state) addLog("state: $s")
         state = s
         emitStatus()
     }

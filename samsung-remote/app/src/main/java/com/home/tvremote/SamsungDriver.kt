@@ -53,6 +53,7 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
     }
 
     private fun handle(text: String) {
+        session.log("in: " + text.take(600))
         val msg = try {
             JSONObject(text)
         } catch (e: Exception) {
@@ -72,7 +73,7 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             }
 
             "ed.installedApp.get" -> {
-                val list = msg.optJSONObject("data")?.optJSONArray("data")
+                val list = parseAppList(msg.opt("data"))
                 if (list != null && list.length() > 0) {
                     appsAnswered = true
                     session.apps(list)
@@ -82,7 +83,20 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
     }
 
     private fun send(json: JSONObject) {
+        if (json.optString("method") != "ms.remote.control") session.log("out: " + json.toString().take(300))
         ws?.send(json.toString())
+    }
+
+    /** The list arrives as data.data on most models; accept a bare array or a JSON string too. */
+    private fun parseAppList(data: Any?): org.json.JSONArray? = when (data) {
+        is org.json.JSONArray -> data
+        is JSONObject -> parseAppList(data.opt("data"))
+        is String -> try {
+            parseAppList(org.json.JSONTokener(data).nextValue())
+        } catch (_: Exception) {
+            null
+        }
+        else -> null
     }
 
     override fun key(key: String): Boolean {
@@ -173,6 +187,7 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
                 names.add(name)
                 found.put(JSONObject().put("appId", id).put("name", info.optString("name").ifEmpty { name }).put("app_type", 2))
             }
+            session.log("app list: no answer from the TV, ${found.length()} known apps found over REST")
             if (!appsAnswered && !closedByUs) session.apps(found)
         }.start()
     }

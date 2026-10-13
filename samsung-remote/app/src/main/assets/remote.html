@@ -492,6 +492,7 @@
     <button class="btn ghost full" onclick="A.reconnect()">התחבר מחדש</button>
     <button class="btn ghost full" onclick="A.resetPairing();toast('מצמד מחדש…')">צמד מחדש</button>
   </div>
+  <button class="btn ghost full" style="margin-top:8px" onclick="A.copyDiagnostics()">📋 העתק מידע לאבחון תקלות</button>
   <p class="note" id="helpText"></p>
   <h3>פרטיות</h3>
   <p class="note">בלי פרסומות, בלי מעקב, בלי חשבון. האפליקציה מדברת רק עם הטלוויזיה שלך ברשת הביתית ולא שולחת שום מידע לאינטרנט.</p>
@@ -832,22 +833,29 @@
   ];
   // Hebrew ways of saying app names the TV reports in English.
   const VOICE_ALIASES = {
+    sting: ['סטינג'], yes: ['יס', 'yes'], stremio: ['סטרמיו', 'סטרימיו', 'סטרים יו'], smartthings: ['סמארטתינגס', 'סמארט תינגס'],
+    gallery: ['גלריה'], nintendo: ['נינטנדו'], hbo: ['אייץ בי או'], 'kan box': ['כאן בוקס'], 'next': ['נקסט'], 'freetv': ['פריטיוי'],
     disney: ['דיסני'], prime: ['פריים', 'אמזון'], 'apple tv': ['אפל'], max: ['מקס'], twitch: ['טוויץ'],
     plex: ['פלקס'], kids: ['קידס', 'ילדים'], tubi: ['טובי'], pluto: ['פלוטו'], kan: ['כאן'], yes: ['יס'],
     partner: ['פרטנר'], cellcom: ['סלקום'], hot: ['הוט'], 'tv plus': ['טי וי פלוס'], internet: ['אינטרנט', 'דפדפן'],
   };
   let voiceQuery = '';
+  // Whole-word match, allowing one Hebrew prefix letter ("ליוטיוב", "בנטפליקס").
+  function hasWord(text, word) {
+    const w = word.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp('(^|[\\s,.!?])[והבלמשכ]?' + w + '($|[\\s,.!?])').test(text);
+  }
   function onVoice(raw) {
     const text = String(raw || '').trim();
     if (!text) return;
     const t = text.toLowerCase().replace(/^(תפתח|פתח|תפעיל|הפעל|תעבור ל|open|launch|start)\s+(את\s+)?/, '').trim();
     for (const [key, words] of VOICE_KNOWN) {
-      if (words.some((w) => t.includes(w))) { launchKnown(key); toast('פותח ' + KNOWN_APPS[key].label); return; }
+      if (words.some((w) => hasWord(t, w))) { launchKnown(key); toast('פותח ' + KNOWN_APPS[key].label); return; }
     }
     const hit = appList().find((a) => {
-      const n = String(a.name || '').toLowerCase();
-      if (n.length >= 3 && t.length >= 3 && (t.includes(n) || n.includes(t))) return true;
-      return Object.entries(VOICE_ALIASES).some(([en, he]) => n.includes(en) && he.some((w) => t.includes(w)));
+      const n = String(a.name || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+      if (n.length >= 3 && t.length >= 3 && (hasWord(t, n) || hasWord(n, t))) return true;
+      return Object.entries(VOICE_ALIASES).some(([en, he]) => hasWord(n, en) && he.some((w) => hasWord(t, w)));
     });
     if (hit) { A.launch(String(hit.appId), Number(hit.app_type) || 2); toast('פותח ' + hit.name); return; }
     voiceQuery = text;

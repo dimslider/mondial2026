@@ -209,6 +209,14 @@ class MainActivity : Activity() {
         }
 
         @JavascriptInterface
+        fun copyDiagnostics() = runOnUiThread {
+            val text = tv.diagnostics(version())
+            val cm = getSystemService(android.content.ClipboardManager::class.java)
+            cm?.setPrimaryClip(android.content.ClipData.newPlainText("TV Remote diagnostics", text))
+            toJs(JSONObject().put("type", "toast").put("text", "המידע הועתק – אפשר להדביק בצ'אט"))
+        }
+
+        @JavascriptInterface
         fun haptic() {
             try {
                 vibrator?.vibrate(VibrationEffect.createOneShot(14, VibrationEffect.DEFAULT_AMPLITUDE))

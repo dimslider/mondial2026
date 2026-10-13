@@ -20,6 +20,9 @@ interface Session {
     fun macAddress(mac: String)
     fun toast(text: String)
 
+    /** Diagnostic log line (shown under "copy diagnostics" in settings). */
+    fun log(line: String) {}
+
     /** Small persistent per-TV storage (tokens, keys). */
     fun load(key: String): String?
     fun store(key: String, value: String?)
