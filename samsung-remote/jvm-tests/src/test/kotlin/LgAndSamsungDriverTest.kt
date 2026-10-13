@@ -134,7 +134,7 @@ class LgAndSamsungDriverTest {
             d.requestApps()
             s.await("apps:2", 20)
             val ids = (0 until s.apps!!.length()).map { s.apps!!.getJSONObject(it).getString("appId") }
-            assertEquals(listOf("3201907018807", "111299001912"), ids)
+            assertEquals(setOf("3201907018807", "111299001912"), ids.toSet(), "order varies: the quick check runs in parallel")
             d.close()
         } finally {
             ws.shutdown()
