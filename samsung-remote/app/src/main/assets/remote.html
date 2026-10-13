@@ -6,16 +6,18 @@
 <title>שלט לטלוויזיה</title>
 <style>
   :root {
-    --bg: #0f141b;
-    --surface: #161c25;
-    --surface-2: #1d2531;
-    --line: #2b333f;
-    --icon: #c9d1db;
-    --muted: #8a94a3;
-    --accent: #5b8cff;
-    --accent-2: #2fb4ff;
-    --red: #ff4d4f;
-    --btn: min(19vw, 82px);
+    --bg: #0e1116;
+    --surface: #161a21;
+    --surface-2: #1e242e;
+    --surface-3: #262d39;
+    --line: #2a313d;
+    --icon: #d5dbe3;
+    --muted: #8b95a5;
+    --accent: #2ec4a6;
+    --accent-ink: #062720;
+    --red: #ff5a5f;
+    --key: min(17.5vw, 74px);
+    --gap: 12px;
   }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html, body {
@@ -29,116 +31,123 @@
   .app {
     height: 100%; max-width: 460px; margin: 0 auto;
     display: flex; flex-direction: column; justify-content: space-between;
-    padding: 10px 16px 14px;
+    padding: 10px 16px 14px; gap: 10px;
   }
 
-  /* status line */
-  .top { display: flex; align-items: center; gap: 8px; min-height: 40px; }
+  /* header: power · TV chip · settings */
+  .top { display: flex; align-items: center; gap: 10px; min-height: 48px; }
+  .pwr {
+    width: 48px; height: 48px; border-radius: 16px; flex: none; display: grid; place-items: center;
+    background: #ff5a5f1f; color: var(--red); transition: transform .08s, background .08s;
+  }
   .status {
-    flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
-    font-size: 15px; color: var(--icon); padding: 8px 4px; border-radius: 20px; min-width: 0; direction: rtl;
+    flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0;
+    height: 44px; padding: 0 14px; border-radius: 22px; background: var(--surface);
+    font-size: 15px; color: var(--icon); direction: rtl;
   }
   .status span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .status .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
-  .status.ok .dot { background: #3ddc84; box-shadow: 0 0 8px #3ddc8488; }
+  .status.ok .dot { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
   .status.wait .dot { background: #f5b942; animation: pulse 1s infinite alternate; }
   .status.err .dot { background: var(--red); }
+  .status .chev { color: var(--muted); flex: none; }
   @keyframes pulse { from { opacity: .35 } to { opacity: 1 } }
-  .gear { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; color: var(--muted); }
+  .gear { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; color: var(--muted); flex: none; }
 
-  /* round buttons */
-  .rb {
-    width: var(--btn); height: var(--btn); border-radius: 50%;
-    border: 2px solid var(--line); display: grid; place-items: center;
-    transition: background .08s, transform .08s;
+  /* keys */
+  .key {
+    border-radius: 20px; background: var(--surface); display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 4px; transition: background .08s, transform .08s;
   }
-  .pressed { background: var(--surface-2) !important; transform: scale(.95); }
+  .key small { font-size: 11px; color: var(--muted); line-height: 1; }
+  .pressed { background: var(--surface-3) !important; transform: scale(.96); }
 
-  .grid-top {
-    display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: auto auto auto;
-    justify-items: center; align-items: center; row-gap: 10px; margin-top: 6px;
+  .panel {
+    display: grid; grid-template-columns: var(--key) 1fr 1fr var(--key);
+    grid-template-rows: var(--key) var(--key); gap: var(--gap);
   }
-  .pill {
-    grid-row: 1 / 4; width: var(--btn); height: calc(var(--btn) * 2.7);
-    border: 2px solid var(--line); border-radius: calc(var(--btn) / 2);
-    display: flex; flex-direction: column; align-items: stretch; overflow: hidden;
+  .panel .key { width: 100%; height: 100%; }
+  .bar {
+    grid-row: 1 / 3; border-radius: 20px; background: var(--surface);
+    display: flex; flex-direction: column; overflow: hidden;
   }
-  .pill button { flex: 1; display: grid; place-items: center; }
-  .pill .mid { flex: none; height: 30px; display: grid; place-items: center; font-size: 17px; letter-spacing: .5px; pointer-events: none; }
+  .bar button { flex: 1; display: grid; place-items: center; transition: background .08s; }
+  .bar .mid { flex: none; padding: 2px 0; text-align: center; font-size: 11px; color: var(--muted); pointer-events: none; }
   .vol { grid-column: 1; }
   .ch { grid-column: 4; }
-  .more { grid-column: 2 / 4; }
 
-  .row3 { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
-  .toggle {
-    display: flex; background: var(--surface-2); border-radius: 30px; padding: 5px; gap: 4px;
+  .row3 { display: grid; grid-template-columns: var(--key) 1fr var(--key); gap: var(--gap); align-items: center; }
+  .row3 .key { height: 56px; }
+  .seg {
+    justify-self: center; display: flex; background: var(--surface); border-radius: 16px; padding: 4px; gap: 4px;
   }
-  .toggle button { width: 58px; height: 48px; border-radius: 26px; display: grid; place-items: center; color: var(--muted); }
-  .toggle button.on { background: var(--accent); color: #fff; }
+  .seg button { height: 44px; padding: 0 16px; border-radius: 12px; color: var(--muted); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  .seg button.on { background: var(--surface-3); color: var(--icon); }
 
   /* d-pad / touchpad */
-  .padwrap { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; padding: 8px 0; container-type: size; }
+  .padwrap { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; container-type: size; }
   .dpad {
-    position: relative; width: min(80vw, 46vh, 360px); aspect-ratio: 1; flex: none;
-    border-radius: 50%; border: 2px solid var(--line);
+    position: relative; width: min(78vw, 44vh, 340px); aspect-ratio: 1; flex: none;
+    border-radius: 50%; background: var(--surface);
+    box-shadow: inset 0 0 0 1px #ffffff08;
   }
-  .dpad .arr { position: absolute; display: grid; place-items: center; border-radius: 30%; }
-  .dpad .up    { top: 2%;  left: 30%; width: 40%; height: 26%; }
-  .dpad .down  { bottom: 2%; left: 30%; width: 40%; height: 26%; }
-  .dpad .left  { left: 2%;  top: 30%; width: 26%; height: 40%; }
-  .dpad .right { right: 2%; top: 30%; width: 26%; height: 40%; }
+  .dpad .arr { position: absolute; display: grid; place-items: center; border-radius: 30%; color: var(--icon); }
+  .dpad .up    { top: 3%;  left: 30%; width: 40%; height: 26%; }
+  .dpad .down  { bottom: 3%; left: 30%; width: 40%; height: 26%; }
+  .dpad .left  { left: 3%;  top: 30%; width: 26%; height: 40%; }
+  .dpad .right { right: 3%; top: 30%; width: 26%; height: 40%; }
   .dpad .ok {
-    position: absolute; left: 31%; top: 31%; width: 38%; height: 38%; border-radius: 50%;
-    border: 2px solid transparent;
-    background: linear-gradient(var(--bg), var(--bg)) padding-box,
-                linear-gradient(160deg, #2a9fd6, #2f55d4) border-box;
-    color: #3d74e0; font-size: clamp(26px, 8vw, 38px); font-weight: 500;
+    position: absolute; left: 32%; top: 32%; width: 36%; height: 36%; border-radius: 50%;
+    background: var(--accent); color: var(--accent-ink); font-size: clamp(20px, 6vw, 28px); font-weight: 700; letter-spacing: 1px;
+    box-shadow: 0 0 0 8px var(--surface-2);
   }
+  .dpad .ok.pressed { background: #27a88f !important; }
   .touchpad {
-    width: min(86vw, 380px); height: min(86vw, 46vh, 380px); border-radius: 28px;
-    background: var(--surface); border: 2px solid var(--line); position: relative;
+    width: min(86vw, 380px); height: min(86vw, 44vh, 380px); border-radius: 28px;
+    background: var(--surface); position: relative;
     display: none; touch-action: none; overflow: hidden;
   }
   .touchpad .hint { position: absolute; inset: auto 0 14px; text-align: center; color: var(--muted); font-size: 13px; pointer-events: none; }
   .touchpad .ripple {
     position: absolute; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%;
-    background: #5b8cff55; pointer-events: none; animation: rip .35s ease-out forwards;
+    background: #2ec4a655; pointer-events: none; animation: rip .35s ease-out forwards;
   }
   @keyframes rip { from { transform: scale(.3); opacity: 1 } to { transform: scale(1.6); opacity: 0 } }
   @supports (width: 1cqh) {
-    .dpad { width: min(80vw, 100cqh, 360px); }
+    .dpad { width: min(78vw, 100cqh, 340px); }
     .touchpad { height: min(86vw, 100cqh, 380px); }
   }
   body.tp .dpad { display: none; }
   body.tp .touchpad { display: block; }
 
-  .media { display: flex; justify-content: space-around; align-items: center; margin: 4px 0 12px; }
-  .media button { width: 64px; height: 52px; display: grid; place-items: center; border-radius: 14px; }
+  .media { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+  .media button { height: 48px; display: grid; place-items: center; border-radius: 14px; background: var(--surface); }
 
-  .apps { display: flex; justify-content: space-between; gap: 10px; }
+  .apps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
   .apps button {
-    flex: 1; max-width: 86px; aspect-ratio: 1; border-radius: 22px; background: var(--surface-2);
-    display: grid; place-items: center; box-shadow: inset 0 0 0 1px #ffffff0d;
+    height: 56px; border-radius: 16px; background: var(--surface-2); display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 5px; font-size: 13px; font-weight: 600; color: #e8edf3;
+    overflow: hidden; padding: 0 4px;
   }
+  .apps button span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .apps button i { width: 22px; height: 3px; border-radius: 2px; display: block; }
 
   /* sheets */
   .scrim { position: fixed; inset: 0; background: #0009; opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 10; }
   .scrim.show { opacity: 1; pointer-events: auto; }
   .sheet {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 11; max-width: 520px; margin: 0 auto;
-    background: var(--surface); border-radius: 22px 22px 0 0; padding: 10px 18px 22px;
+    background: var(--surface); border-radius: 24px 24px 0 0; padding: 10px 18px 22px;
     transform: translateY(105%); transition: transform .22s ease; max-height: 86vh; overflow-y: auto;
     direction: rtl;
   }
   .sheet.show { transform: none; }
   .sheet .handle { width: 42px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 12px; }
-  .sheet h2 { font-size: 18px; margin: 4px 0 14px; font-weight: 600; color: #e6ebf1; }
+  .sheet h2 { font-size: 18px; margin: 4px 0 14px; font-weight: 600; color: #e8edf3; }
   .sheet h3 { font-size: 14px; color: var(--muted); margin: 18px 0 8px; font-weight: 500; }
 
   .numgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; direction: ltr; }
-  .numgrid button {
-    height: 60px; border-radius: 16px; background: var(--surface-2); font-size: 24px; color: #e6ebf1;
-  }
+  .numgrid button { height: 60px; border-radius: 16px; background: var(--surface-2); font-size: 24px; color: #e8edf3; }
   .numgrid button.small { font-size: 14px; color: var(--icon); }
   .colors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px; direction: ltr; }
   .colors button { height: 46px; border-radius: 14px; background: var(--surface-2); display: grid; place-items: center; }
@@ -153,33 +162,28 @@
 
   .applist { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 10px; }
   .applist button { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 12px; color: #dfe5ec; min-width: 0; }
-  .applist .ic {
-    width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center;
-    font-size: 22px; font-weight: 700; color: #fff;
-  }
+  .applist .ic { width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center; font-size: 22px; font-weight: 700; color: #fff; }
   .applist span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .empty { color: var(--muted); font-size: 14px; text-align: center; padding: 20px 0; line-height: 1.6; }
 
   .card { background: var(--surface-2); border-radius: 16px; padding: 14px; }
   .tvrow { display: flex; align-items: center; gap: 12px; width: 100%; text-align: right; padding: 12px; border-radius: 14px; background: var(--surface-2); margin-bottom: 8px; }
   .tvrow .meta { flex: 1; min-width: 0; }
-  .tvrow .meta div { font-size: 15px; color: #e6ebf1; }
+  .tvrow .meta div { font-size: 15px; color: #e8edf3; }
   .tvrow .meta small { color: var(--muted); font-size: 12px; direction: ltr; display: inline-block; }
   .tvrow.cur { box-shadow: inset 0 0 0 2px var(--accent); }
   .badge { display: inline-block; font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 1px 6px; margin-inline-start: 4px; vertical-align: middle; direction: ltr; }
-  input.pin { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 26px; letter-spacing: 8px; text-align: center; text-transform: uppercase; }
-  .btn {
-    background: var(--accent); color: #fff; border-radius: 12px; padding: 12px 16px; font-size: 15px; font-weight: 600;
-  }
+  .btn { background: var(--accent); color: var(--accent-ink); border-radius: 12px; padding: 12px 16px; font-size: 15px; font-weight: 700; }
   .btn.ghost { background: var(--surface-2); color: var(--icon); font-weight: 500; }
   .btn.full { width: 100%; }
   .inrow { display: flex; gap: 8px; }
   input[type=text] {
     flex: 1; min-width: 0; background: var(--bg); border: 1px solid var(--line); border-radius: 12px;
-    color: #e6ebf1; padding: 12px; font-size: 16px; outline: none; direction: ltr; text-align: left;
+    color: #e8edf3; padding: 12px; font-size: 16px; outline: none; direction: ltr; text-align: left;
     user-select: text; -webkit-user-select: text;
   }
   input[type=text]:focus { border-color: var(--accent); }
+  input.pin { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 26px; letter-spacing: 8px; text-align: center; text-transform: uppercase; }
   .sw { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
   .sw:last-child { border-bottom: 0; }
   .sw input { appearance: none; -webkit-appearance: none; width: 46px; height: 26px; border-radius: 13px; background: var(--line); position: relative; flex: none; transition: background .15s; }
@@ -198,127 +202,112 @@
   .toast.show { opacity: 1; transform: translateX(-50%); }
 
   @media (max-height: 700px) {
-    :root { --btn: min(16vw, 66px); }
-    .pill { height: calc(var(--btn) * 2.6); }
-    .apps button { max-width: 64px; border-radius: 18px; }
-    .media { margin: 0 0 6px; }
+    :root { --key: min(15vw, 58px); --gap: 9px; }
+    .key small { display: none; }
+    .row3 .key { height: 48px; }
+    .media button { height: 40px; }
+    .apps button { height: 46px; }
+    .app { gap: 7px; }
   }
 </style>
 </head>
 <body>
 <div class="app">
   <div class="top">
-    <div style="width:40px"></div>
+    <button class="pwr" data-action="power" aria-label="הפעלה / כיבוי">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.6a8 8 0 1 0 11.4 0"/></svg>
+    </button>
     <button class="status wait" id="status" onclick="statusTap()">
       <i class="dot"></i><span id="statusText">מתחבר…</span>
+      <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <button class="gear" onclick="openSheet('settings')" aria-label="הגדרות">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
     </button>
   </div>
 
-  <div class="grid-top">
-    <div class="pill vol">
+  <div class="panel">
+    <div class="bar vol">
       <button data-key="KEY_VOLUP" data-repeat aria-label="הגבר">
-        <svg width="34" height="34" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M12 4v16M4 12h16"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="mid">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
-      </div>
+      <div class="mid">קול</div>
       <button data-key="KEY_VOLDOWN" data-repeat aria-label="הנמך">
-        <svg width="34" height="34" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M4 12h16"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14"/></svg>
       </button>
     </div>
 
-    <button class="rb" data-action="power" aria-label="הפעלה">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#ff4d4f" stroke-width="2" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.6a8 8 0 1 0 11.4 0"/></svg>
+    <button class="key" data-key="KEY_MUTE" aria-label="השתק">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9.5h3.5L11 5.5v13l-4.5-4H3z" fill="currentColor" stroke="none"/><path d="M15 9.5l5 5M20 9.5l-5 5"/></svg>
+      <small>השתק</small>
     </button>
-    <button class="rb" data-key="KEY_MENU" aria-label="הגדרות טלוויזיה">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h8M17 8h4M3 16h4M13 16h8"/><circle cx="14" cy="8" r="2.5"/><circle cx="10" cy="16" r="2.5"/></svg>
+    <button class="key" data-key="KEY_MENU" aria-label="הגדרות טלוויזיה">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h8M17 8h4M3 16h4M13 16h8"/><circle cx="14" cy="8" r="2.5"/><circle cx="10" cy="16" r="2.5"/></svg>
+      <small>תפריט</small>
     </button>
 
-    <div class="pill ch">
+    <div class="bar ch">
       <button data-key="KEY_CHUP" data-repeat aria-label="ערוץ למעלה">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l8-7 8 7"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
       </button>
-      <div class="mid">CH</div>
+      <div class="mid">ערוץ</div>
       <button data-key="KEY_CHDOWN" data-repeat aria-label="ערוץ למטה">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l8 7 8-7"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
       </button>
     </div>
 
-    <button class="rb" data-key="KEY_MUTE" aria-label="השתק">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9.5h3.5L11 5.5v13l-4.5-4H3z" fill="currentColor" stroke="none"/><path d="M15 9.5l5 5M20 9.5l-5 5"/></svg>
+    <button class="key" data-sheet="numpad" aria-label="מספרים">
+      <span style="font-size:15px;font-weight:600;letter-spacing:1px">123</span>
+      <small>מספרים</small>
     </button>
-    <button class="rb" data-sheet="numpad" aria-label="מקשי מספרים">
-      <div style="text-align:center;line-height:1">
-        <div style="font-size:16px;letter-spacing:2px;white-space:nowrap">1 2 3</div>
-        <div style="display:flex;gap:5px;justify-content:center;margin-top:6px">
-          <i style="width:7px;height:7px;border-radius:50%;background:#ef5350"></i>
-          <i style="width:7px;height:7px;border-radius:50%;background:#43a047"></i>
-          <i style="width:7px;height:7px;border-radius:50%;background:#fdd835"></i>
-          <i style="width:7px;height:7px;border-radius:50%;background:#5c6bc0"></i>
-        </div>
-      </div>
-    </button>
-
-    <button class="rb more" data-sheet="more" aria-label="עוד">
-      <svg width="40" height="12" viewBox="0 0 40 12"><circle cx="6" cy="6" r="5" fill="#2fb4ff"/><circle cx="20" cy="6" r="5" fill="#3d8bff"/><circle cx="34" cy="6" r="5" fill="#3b5ef0"/></svg>
+    <button class="key" data-sheet="more" aria-label="עוד">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+      <small>עוד</small>
     </button>
   </div>
 
   <div class="row3">
-    <button class="rb" data-key="KEY_RETURN" aria-label="חזור">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5L4 9l4 4"/><path d="M4 9h10a5 5 0 0 1 0 10h-3"/></svg>
+    <button class="key" data-key="KEY_RETURN" aria-label="חזור">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6L4 11l5 5"/><path d="M4 11h11a5 5 0 0 1 0 10h-2"/></svg>
+      <small>חזור</small>
     </button>
-    <div class="toggle">
-      <button id="modeTp" aria-label="משטח מגע">
-        <svg width="30" height="24" viewBox="0 0 30 24" fill="currentColor"><rect x="1" y="1" width="28" height="15" rx="2"/><rect x="1" y="18" width="13" height="4" rx="1"/><rect x="16" y="18" width="13" height="4" rx="1"/></svg>
-      </button>
+    <div class="seg">
       <button id="modePad" class="on" aria-label="חיצים">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3.6"/><path d="M12 2l3 3.5H9zM12 22l-3-3.5h6zM2 12l3.5-3v6zM22 12l-3.5 3V9z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3.4"/><path d="M12 2l3 3.5H9zM12 22l-3-3.5h6zM2 12l3.5-3v6zM22 12l-3.5 3V9z"/></svg>חיצים
+      </button>
+      <button id="modeTp" aria-label="משטח מגע">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M12 14v-4"/></svg>מגע
       </button>
     </div>
-    <button class="rb" data-key="KEY_HOME" aria-label="בית">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.2L2.5 11.3l1.3 1.5L5 11.8V20.5h5.2v-5.2h3.6v5.2H19v-8.7l1.2 1 1.3-1.5z"/></svg>
+    <button class="key" data-key="KEY_HOME" aria-label="בית">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4z"/></svg>
+      <small>בית</small>
     </button>
   </div>
 
   <div class="padwrap">
     <div class="dpad">
-      <button class="arr up" data-key="KEY_UP" data-repeat aria-label="למעלה"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
-      <button class="arr down" data-key="KEY_DOWN" data-repeat aria-label="למטה"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-      <button class="arr left" data-key="KEY_LEFT" data-repeat aria-label="שמאלה"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <button class="arr right" data-key="KEY_RIGHT" data-repeat aria-label="ימינה"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="arr up" data-key="KEY_UP" data-repeat aria-label="למעלה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+      <button class="arr down" data-key="KEY_DOWN" data-repeat aria-label="למטה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="arr left" data-key="KEY_LEFT" data-repeat aria-label="שמאלה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button class="arr right" data-key="KEY_RIGHT" data-repeat aria-label="ימינה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
       <button class="ok" data-key="KEY_ENTER">OK</button>
     </div>
     <div class="touchpad" id="touchpad"><div class="hint">החלק לכיוון · הקש לאישור</div></div>
   </div>
 
   <div class="media">
-    <button data-key="KEY_REWIND" data-repeat aria-label="אחורה"><svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor"><rect x="3" y="4" width="4" height="22"/><path d="M21 4v22L7 15zM36 4v22L22 15z"/></svg></button>
-    <button data-key="KEY_PLAY" aria-label="נגן"><svg width="30" height="34" viewBox="0 0 30 34" fill="currentColor"><path d="M4 2l24 15L4 32z"/></svg></button>
-    <button data-key="KEY_PAUSE" aria-label="השהה"><svg width="30" height="34" viewBox="0 0 30 34" fill="currentColor"><rect x="4" y="2" width="8" height="30" rx="1"/><rect x="18" y="2" width="8" height="30" rx="1"/></svg></button>
-    <button data-key="KEY_FF" data-repeat aria-label="קדימה"><svg width="40" height="30" viewBox="0 0 40 30" fill="currentColor"><path d="M4 4v22l14-11zM18 4v22l14-11z"/><rect x="33" y="4" width="4" height="22"/></svg></button>
+    <button data-key="KEY_REWIND" data-repeat aria-label="אחורה"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M11 6v12L3 12zM20 6v12l-8-6z"/></svg></button>
+    <button data-key="KEY_PLAY" aria-label="נגן"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></button>
+    <button data-key="KEY_PAUSE" aria-label="השהה"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1.5"/><rect x="14" y="4" width="5" height="16" rx="1.5"/></svg></button>
+    <button data-key="KEY_FF" data-repeat aria-label="קדימה"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6v12l8-6zM13 6v12l8-6z"/></svg></button>
   </div>
 
-  <div class="apps">
-    <button data-app="netflix" aria-label="Netflix">
-      <svg width="34" height="48" viewBox="0 0 34 48"><path d="M2 2h9l12 32V2h9v44c-3-.4-6-.6-9-.7L11 14v31.3c-3 .2-6 .4-9 .7z" fill="#e50914"/><path d="M2 2h9l12 32v11.3L11 14z" fill="#b1060f" opacity=".55"/></svg>
-    </button>
-    <button data-app="spotify" aria-label="Spotify">
-      <svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#1ed760"/><path d="M11 17.5c9-2.8 19.5-1.8 27 2.5M12.5 25c7.5-2.2 16.2-1.3 22.5 2.2M14 32c6-1.6 12.6-1 17.5 1.8" fill="none" stroke="#000" stroke-width="3.6" stroke-linecap="round"/></svg>
-    </button>
-    <button data-app="youtube" aria-label="YouTube">
-      <svg width="52" height="38" viewBox="0 0 52 38"><rect x="1" y="1" width="50" height="36" rx="10" fill="#ff0000"/><path d="M21 11v16l14-8z" fill="#fff"/></svg>
-    </button>
-    <button data-sheet="apps" aria-label="כל האפליקציות">
-      <svg width="44" height="44" viewBox="0 0 44 44">
-        <rect x="2" y="2" width="11" height="11" rx="2.5" fill="#7ed957"/><rect x="16.5" y="2" width="11" height="11" rx="2.5" fill="#f9c74f"/><rect x="31" y="2" width="11" height="11" rx="2.5" fill="#f3a03c"/>
-        <rect x="2" y="16.5" width="11" height="11" rx="2.5" fill="#e04f3f"/><rect x="16.5" y="16.5" width="11" height="11" rx="2.5" fill="#c9d1db"/><rect x="31" y="16.5" width="11" height="11" rx="2.5" fill="#f2546b"/>
-        <rect x="2" y="31" width="11" height="11" rx="2.5" fill="#9d5cf2"/><rect x="16.5" y="31" width="11" height="11" rx="2.5" fill="#3d8bff"/><rect x="31" y="31" width="11" height="11" rx="2.5" fill="#5fd3b0"/>
-      </svg>
-    </button>
+  <div class="apps" id="shortcuts">
+    <button data-app="netflix"><i style="background:#e5484d"></i><span>Netflix</span></button>
+    <button data-app="youtube"><i style="background:#f25c54"></i><span>YouTube</span></button>
+    <button data-app="spotify"><i style="background:#3dd68c"></i><span>Spotify</span></button>
+    <button data-sheet="apps"><i style="background:var(--accent)"></i><span>אפליקציות</span></button>
   </div>
 </div>
 
@@ -669,7 +658,7 @@
   function renderStatus() {
     const [cls, text] = STATUS[S.state] || ['', S.state];
     $('status').className = 'status ' + cls;
-    $('statusText').textContent = text || ('מחובר · ' + (S.name || S.ip));
+    $('statusText').textContent = text || (S.name || S.ip);
   }
   function renderSettings() {
     const has = !!S.ip;
@@ -689,7 +678,7 @@
     const list = $('scanList');
     list.innerHTML = S.found.map((d) =>
       '<button class="tvrow' + (d.ip === S.ip ? ' cur' : '') + '" data-ip="' + esc(d.ip) + '">' +
-      '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#5b8cff" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>' +
+      '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2ec4a6" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>' +
       '<div class="meta"><div>' + esc(d.name) + ' <span class="badge">' + esc(BRANDS[d.type] || '') + '</span></div><small>' + esc(d.ip) + (d.model ? ' · ' + esc(d.model) : '') + '</small></div>' +
       (d.ip === S.ip ? '<span class="note">נבחרה</span>' : '') + '</button>').join('') +
       (S.scanning ? '<div class="empty"><span class="spinner"></span> מחפש ברשת…</div>' : '');

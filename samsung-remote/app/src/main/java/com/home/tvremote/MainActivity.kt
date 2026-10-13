@@ -22,7 +22,7 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         web = WebView(this)
-        web.setBackgroundColor(0xFF0F141B.toInt())
+        web.setBackgroundColor(0xFF0E1116.toInt())
         web.overScrollMode = View.OVER_SCROLL_NEVER
         web.isVerticalScrollBarEnabled = false
         web.settings.javaScriptEnabled = true
