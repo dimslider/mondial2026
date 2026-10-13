@@ -201,6 +201,8 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%); }
 
+  .bar-track { height: 6px; border-radius: 3px; background: var(--bg); margin-top: 10px; overflow: hidden; }
+  .bar-track i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
   .seg.mini { padding: 3px; gap: 2px; border-radius: 12px; background: var(--bg); flex: none; }
   .seg.mini button { height: 32px; padding: 0 10px; font-size: 13px; border-radius: 9px; }
   .sw input:disabled { opacity: .35; }
@@ -448,6 +450,11 @@
     <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="requestApps();renderApps()">רענן</button>
   </div>
   <div class="applist" id="applist"></div>
+  <div id="deepScan" class="card" style="margin-top:14px">
+    <div class="note" id="deepScanText">חסרה אפליקציה? חיפוש מעמיק בודק בטלוויזיה אלפי מזהי אפליקציות ומוסיף לרשימה את מה שמותקן (כמה דקות, אפשר לעצור בכל רגע).</div>
+    <div class="bar-track" id="deepScanBar" style="display:none"><i></i></div>
+    <button class="btn ghost full" id="deepScanBtn" style="margin-top:10px" onclick="toggleDeepScan()">🔍 חיפוש מעמיק</button>
+  </div>
   <p class="note" style="margin-top:14px">טיפ: לחיצה ארוכה על כפתור קיצור בתחתית השלט מאפשרת לבחור איזו אפליקציה הוא פותח.</p>
 </div>
 
@@ -711,8 +718,34 @@
       if ($('sheet-pick').classList.contains('show')) renderPicker();
     }, 9000);
   }
+  let deepScanning = false, deepFoundBefore = 0;
+  function toggleDeepScan() {
+    if (deepScanning) { A.stopAppScan(); $('deepScanBtn').textContent = 'עוצר…'; return; }
+    deepScanning = true;
+    deepFoundBefore = S.apps.length;
+    $('deepScanBar').style.display = '';
+    $('deepScanText').textContent = 'מתחיל חיפוש…';
+    $('deepScanBtn').textContent = 'עצור';
+    A.deepScanApps();
+  }
+  function onAppScan(m) {
+    const pct = m.total ? Math.floor(100 * m.done / m.total) : 0;
+    const added = Math.max(0, S.apps.length - deepFoundBefore);
+    $('deepScanBar').firstElementChild.style.width = pct + '%';
+    if (m.finished) {
+      deepScanning = false;
+      $('deepScanBtn').textContent = '🔍 חיפוש מעמיק';
+      $('deepScanText').textContent = (m.done < m.total ? 'החיפוש נעצר' : 'החיפוש הסתיים') +
+        ' · נמצאו ' + added + ' אפליקציות חדשות' + (added ? ' (נשמרו לפעם הבאה)' : '');
+    } else {
+      deepScanning = true;
+      $('deepScanBtn').textContent = 'עצור';
+      $('deepScanText').textContent = 'מחפש… ' + pct + '% · נמצאו ' + added + ' חדשות';
+    }
+  }
   function renderApps() {
     const box = $('applist');
+    $('deepScan').style.display = S.tvType === 'samsung' && S.state === 'connected' ? '' : 'none';
     $('appsRefresh').style.display = S.tvType === 'androidtv' ? 'none' : '';
     if (!appList().length) {
       const waiting = !appsAnswered && Date.now() - appsAskedAt < 8500;
@@ -1123,6 +1156,9 @@
         break;
       case 'toast':
         toast(m.text);
+        break;
+      case 'appScan':
+        onAppScan(m);
         break;
       case 'permission':
         onPermission(m);

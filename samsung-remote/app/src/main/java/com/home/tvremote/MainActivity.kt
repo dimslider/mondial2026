@@ -149,6 +149,12 @@ class MainActivity : Activity() {
         fun refreshApps() = tv.requestApps()
 
         @JavascriptInterface
+        fun deepScanApps() = tv.deepScanApps()
+
+        @JavascriptInterface
+        fun stopAppScan() = tv.stopAppScan()
+
+        @JavascriptInterface
         fun status() = tv.requestStatus()
 
         @JavascriptInterface

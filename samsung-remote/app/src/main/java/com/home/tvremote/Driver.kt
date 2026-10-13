@@ -44,6 +44,13 @@ abstract class Driver(protected val ip: String, protected val session: Session) 
     abstract fun launch(appId: String, appType: Int)
     open fun requestApps() {}
 
+    /**
+     * Searches the TV for installed apps beyond the known list. Reports progress
+     * (checked, total, finished) and found apps through [Session.apps]. Returns false if unsupported.
+     */
+    open fun deepScanApps(onProgress: (Int, Int, Boolean) -> Unit): Boolean = false
+    open fun stopScan() {}
+
     /** Turns the TV off; must never turn it on (used by the sleep timer). */
     open fun powerOff() {
         key("KEY_POWER")

@@ -217,6 +217,16 @@ class TvClient private constructor(private val context: Context) {
 
     fun requestApps() = command { it.requestApps() }
 
+    /** Deep search for installed apps (Samsung); progress arrives as "appScan" messages. */
+    fun deepScanApps() = command { d ->
+        val ok = d.deepScanApps { done, total, finished ->
+            main.post { emit(JSONObject().put("type", "appScan").put("done", done).put("total", total).put("finished", finished)) }
+        }
+        if (!ok) toast("חיפוש מעמיק זמין רק בטלוויזיות סמסונג")
+    }
+
+    fun stopAppScan() = post { driver?.stopScan() }
+
     /** Turns the TV off without ever turning it on (sleep timer). */
     fun powerOff() = command { it.powerOff() }
 
