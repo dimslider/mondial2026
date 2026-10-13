@@ -194,7 +194,7 @@
     if (isForces(p.statuses) && s.police === "yes") { sc += 1; if (!el.length) why.unshift("פתוח גם לשוטרים ולכוחות הביטחון"); }
     if (infoItem(s)) sc -= 2;
     // שירות לבני משפחה או לשכול, למי שלא סימן משפחה, שכול או זוגיות
-    const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון/.test(s.name);
+    const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון|למשפחות|לנשות|לאמהות/.test(s.name);
     if (forFamily && !p.statuses.some(x => x === "families" || x === "bereaved") && !p.difficulties.some(x => x === "family-relations" || x === "grief")) sc -= 3;
     // כאב כרוני: ריצה ואקסטרים בלי התאמה לכאב הם לא ההמלצה הראשונה
     if (p.difficulties.includes("chronic-pain") && !arr(s.difficulties).some(x => x === "chronic-pain" || x === "physical-disability") &&
@@ -265,12 +265,13 @@
     if (fam && !ber && !p.famof && ctx === "hostage") return false;
     return true;
   }
+  // מסגרת לנשים בלבד (לא לבנות זוג או לאמהות, שזה עניין של קשר משפחתי): בהתאמה האישית רק למי שסימנה "אישה"
+  const womenOnly = s => /(?:^|[\s–(])לנשים/.test(s.name) || /בהפרדה/.test(s.name);
   // ספק בסל Shikum.Me (מכון כושר, סטודיו, בריכה): רק למוכרים, רק קרוב, ולא יותר מכמה ברשימה
   const isSupplier = s => s.supplier === true;
   function supplierOk(s, p) {
     if (!isSupplier(s)) return true;
     if (!p.statuses.includes("mod-recognized")) return false;
-    if (/לנשים|בהפרדה/.test(s.name)) return false;   // אין לנו שאלת מגדר: סטודיו לנשים נשאר בחיפוש
     const km = kmTo(s, p);
     if (km != null) return km <= 35;
     return p.regions.length > 0 && arr(s.regions).some(r => p.regions.includes(r));
@@ -291,6 +292,8 @@
       .filter(s => familyFit(s, p))
       .filter(s => supplierOk(s, p))
       .filter(s => !s.no_contact)   // בלי שום דרך פנייה: רק בחיפוש, לא בהתאמה האישית
+      .filter(s => s.status !== "closed_now")   // לא מקבלים כרגע: רק בחיפוש
+      .filter(s => !womenOnly(s) || p.gender === "f")
       // כתוב במפורש שרק לחיילי צה"ל: לא מוצג לשוטר/ה, אלא אם סימנו גם לוחם/ת או מילואים
       .filter(s => !(s.police === "no" && isForces(p.statuses) && !p.statuses.some(x => x === "combat-soldiers" || x === "reservists")))
       // שירות למי שעוד לא מוכר (כתוב בשם) לא מתאים למי שכבר מוכר
@@ -410,8 +413,16 @@
   }
   // שורה קצרה ברשימה: שם, משפט פתיחה בשורה אחת, ושורת פרטים. כל השאר בכרטיס שנפתח.
   const hasWait = s => /המתנ|ארוך/.test(s.avail || "");
+  // מחזורים: "נפתח ב-16.11" לקבוצה שעוד לא התחילה, "לא מקבלים כרגע" למה שסגור עכשיו
+  const cycleLabel = s => {
+    if (s.status === "closed_now") return "לא מקבלים כרגע";
+    if (s.status !== "future_cycle" || !s.next_cycle) return "";
+    const m = String(s.next_cycle).match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+    return m ? `מחזור חדש נפתח ${m[3] ? `ב-${+m[3]}.${+m[2]}` : `בחודש ${+m[2]}/${m[1]}`}` : `מחזור חדש: ${s.next_cycle}`;
+  };
   function card(s, why, noTag) {
     const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => T.regions[r] || r)];
+    if (cycleLabel(s)) meta.unshift("📅 " + cycleLabel(s));
     if (hasWait(s)) meta.push("⏳ יש המתנה");
     if (isSupplier(s)) meta.push("ספק בסל Shikum.Me");
     if (s.source === "community") meta.push("נוסף ע״י הקהילה");
@@ -660,7 +671,8 @@
             { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך", "not-recognized": "לא הגשתי / לא יודע/ת" }, p.secrec) : "") +
           (on("mod-recognized") ? radioRow("worsened", "ומאז ההכרה?", { yes: "המצב החמיר", no: "פחות או יותר אותו דבר" }, p.worsened === true ? "yes" : p.worsened === false ? "no" : "") : "") +
           (on("combat-soldiers") || on("reservists") ? radioRow("era", "מתי היה עיקר השירות הקרבי?", { "iron-swords": "במלחמה הנוכחית, מאז 2023", "2000s": "בין 2000 ל-2023", older: "לפני 2000 (לבנון, רצועת הביטחון, יום כיפור)" }, p.era) : "") +
-          radioRow("age", "גיל (לא חובה)", { u30: "עד 30", "30-45": "30 עד 45", "45-60": "45 עד 60", "60+": "60 ומעלה" }, p.age);
+          radioRow("age", "גיל (לא חובה)", { u30: "עד 30", "30-45": "30 עד 45", "45-60": "45 עד 60", "60+": "60 ומעלה" }, p.age) +
+          radioRow("gender", "איך לפנות אליך? (לא חובה, כדי להציג גם מסגרות לנשים בלבד)", { f: "אישה", m: "גבר" }, p.gender);
       };
       if (fu) { drawFollow(); form.addEventListener("change", e => { if (e.target.name === "statuses") drawFollow(); }); }
       const collect = () => {
@@ -678,6 +690,7 @@
         p.worsened = p.statuses.includes("mod-recognized") && w ? w === "yes" : null;
         p.era = p.statuses.some(x => x === "combat-soldiers" || x === "reservists") ? val("era") : null;
         p.age = val("age");
+        p.gender = val("gender");
       };
       const next = () => {
         if (last) {
@@ -730,7 +743,7 @@
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
                 <div class="tag-row">${starTag(s)}${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
                 ${nameBlock(s, "h2", `data-open="${esc(s.id)}" tabindex="0" role="button"`)}
-                ${maybeTag(s, p)}${hasWait(s) ? `<span class="wait-tag">⏳ ${esc(s.avail)}</span>` : ""}
+                ${maybeTag(s, p)}${cycleLabel(s) ? `<span class="wait-tag">📅 ${esc(cycleLabel(s))}</span>` : hasWait(s) ? `<span class="wait-tag">⏳ ${esc(s.avail)}</span>` : ""}
                 <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
                 ${distinctWhy(first) && whyText(r) ? `<span class="why">← ${esc(whyText(r))}</span>` : ""}
                 <div class="actions">
@@ -1244,6 +1257,7 @@
         ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${linkify(s.cost_notes)}</span></p>` : ""}
         ${prof && policeUnsure(s, prof.statuses) ? `<p class="callout maybe-callout"><strong>אולי מתאים, לא בטוח שפתוח ${forcesWord(prof.statuses)}.</strong> לא כתוב כאן במפורש שגם ${prof.statuses.includes("police") ? "שוטרים ושוטרות" : "אנשי כוחות הביטחון"} יכולים להצטרף. ייתכן שכן: כדאי לשאול כבר בשיחה הראשונה.</p>` : ""}
         <div class="avail-box">
+          ${cycleLabel(s) ? `<p><strong>📅 ${esc(cycleLabel(s))}</strong></p>` : ""}
           ${s.avail ? `<p><strong>⏳ זמינות והמתנה:</strong> ${esc(s.avail)} <span class="quiet">(${s.avail_src === "site" ? "לפי האתר שלהם" : "לפי דיווחים של אנשים בקהילה"})</span></p>`
             : `<p class="quiet">אין לנו עדיין מידע על המתנה או על כמה קל להתקבל. כדאי לשאול בשיחה הראשונה.</p>`}
           <button class="link-u" type="button" id="wait-toggle">יודעים כמה מחכים כאן? לשתף, בעילום שם</button>

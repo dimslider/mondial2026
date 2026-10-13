@@ -32,7 +32,7 @@ LIST_FIELDS = {"eligibility": "eligibility", "difficulties": "difficulties", "in
 FIELDS = ["id", "name", "category", "description", "provider_type", "eligibility", "difficulties", "interests",
           "cost", "cost_notes", "regions", "location", "phone", "email", "website", "how_to_apply",
           "source_url", "confidence", "reviewed_at", "community_recs", "community_note", "unit_only",
-          "kind", "intensity", "recognition", "police", "format", "town", "lat", "lng", "war_only", "avail", "avail_src"]
+          "kind", "intensity", "recognition", "police", "format", "town", "lat", "lng", "war_only", "avail", "avail_src", "status", "next_cycle"]
 
 
 def norm_name(n):
@@ -272,6 +272,34 @@ def main():
                 s["no_contact"] = True
             kept.append(s)
         merged = kept
+
+    # עדכונים מסריקת צמתים (update_of): רק השדות שהשתנו, על כרטיס קיים. כרטיס מוסתר נשאר מוסתר.
+    by_id = {s["id"]: s for s in merged}
+    META = {"update_of", "note", "found_via", "verified_at"}
+    for f in files:
+        for u in json.loads(Path(f).read_text(encoding="utf-8")):
+            if not isinstance(u, dict) or not u.get("update_of"):
+                continue
+            t = by_id.get(u["update_of"])
+            if not t:
+                warnings.append(f"עדכון לכרטיס שלא קיים או מוסתר: {u['update_of']}")
+                continue
+            for k, v in u.items():
+                if k in META or v in ("", None, []):
+                    continue
+                if k in ("lat", "lng"):
+                    continue
+                t[k] = v
+            if u.get("verified_at"):
+                t["verified_at"] = u["verified_at"]
+            if u.get("avail"):
+                t["avail_src"] = "site"
+    for s in merged:
+        if s.get("avail") and not s.get("avail_src"):
+            s["avail_src"] = "site"
+        # "מחזור עתידי" עם תאריך שכבר עבר: המחזור כבר רץ, לא מציגים "נפתח ב-"
+        if s.get("status") == "future_cycle" and re.fullmatch(r"\d{4}-\d{2}-\d{2}", s.get("next_cycle") or "") and s["next_cycle"] < date.today().isoformat():
+            s["status"] = "active"
 
     order = list(sorted(VALID["categories"]))
     merged.sort(key=lambda s: (s["category"] != "hotlines", order.index(s["category"]), s["name"]))

@@ -198,7 +198,8 @@
    "era": "iron-swords",
    "age": "u30",
    "town": "באר שבע",
-   "goal": "talk"
+   "goal": "talk",
+   "gender": "f"
   },
   "minimal": {
    "statuses": [
@@ -213,7 +214,8 @@
    "regions": [
     "south"
    ],
-   "maxCost": null
+   "maxCost": null,
+   "gender": "f"
   }
  },
  "partner": {
