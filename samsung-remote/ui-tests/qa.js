@@ -48,7 +48,7 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
       check(`tap opens ${sh}`, (await open()) === sh, await open());
     }
     // apps sheet asked the TV and shows spinner, then a message after timeout
-    await reset(); await p.tap('.app [data-sheet="apps"]'); await p.waitForTimeout(300);
+    await reset(); await p.tap('.app [data-sheet="apps"]'); await p.waitForTimeout(450);
     check('apps requested', (await sent('refreshApps')).length >= 1);
     check('apps spinner', await p.evaluate(() => !!document.querySelector('#applist .spinner')));
     await p.evaluate(() => onTv({ type: 'apps', apps: [{ appId: '3201907018807', name: 'Netflix', app_type: 2 }, { appId: '3201901017640', name: 'Disney+', app_type: 2 }] }));

@@ -603,7 +603,8 @@
   // Swallow a stray click that arrives right after a panel opened (e.g. after a long-press).
   let sheetOpenedAt = 0;
   window.addEventListener('click', (e) => {
-    if (Date.now() - sheetOpenedAt < 350 && e.target.closest('.sheet, .scrim')) {
+    const age = Date.now() - sheetOpenedAt;
+    if ((age < 350 && e.target.closest('.scrim')) || (age < 150 && e.target.closest('.sheet'))) {
       e.stopPropagation();
       e.preventDefault();
     }
