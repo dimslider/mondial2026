@@ -1,0 +1,1864 @@
+[
+ {
+  "update_of": "eran-org-il-4f39e6",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "lead",
+  "source_url": "https://www.eran.org.il/eran-for-the-community/first_responders/",
+  "phone": "1201 | לחיילים ולבני משפחה *2201 | למגיבים ראשונים ולבני משפחותיהם 076-8844496",
+  "how_to_apply": "לחייג 1201 (24/7) או *2201 לחיילים ולמשפחות. שוטרים, לוחמים, כבאים, אנשי רפואה והצלה ובני משפחותיהם יכולים לחייג לקו הייעודי למגיבים ראשונים 076-8844496 (שיחה אנונימית, לא מוקלטת). צ'אט ווואטסאפ דרך אתר ער\"ן בין 08:00 ל-02:00; SMS ל-052-999-3544 בין 08:00 לחצות.",
+  "police": "yes",
+  "note": "הקו הייעודי למגיבים ראשונים פונה במפורש לשוטרים, לוחמים, כבאים ואנשי רפואה והצלה ולבני משפחותיהם. שעות הפעילות של הקו הייעודי לא מצוינות בעמוד."
+ },
+ {
+  "name": "\"מנצחים איתכם\" – מנטורינג מתעשיית ההייטק לנכי צה\"ל עם רקע טכנולוגי (מחזור 5)",
+  "category": "employment-education",
+  "description": "ליווי אישי של מנטור או מנטורית מחברת טכנולוגיה לנכי ונכות צה\"ל שלמדו תחום טכנולוגי, כדי לעזור להשתלב בעבודה. כ-10 מפגשים אישיים (בעיקר בזום) לאורך 3-4 חודשים, 3-4 מפגשים משותפים בקמפוסים של החברות, קבוצות תמיכה וסימולציות ראיונות עבודה. מיזם של אגף השיקום, ארגון נכי צה\"ל, אחים לחיים וחברות טכנולוגיה.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "בעמוד לא מוזכר תשלום; התוכנית מופעלת על ידי אגף השיקום והשותפים",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "מפגשים אישיים מקוונים; מפגשים משותפים בקמפוסים של החברות השותפות ברחבי הארץ",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/updates/12175",
+  "how_to_apply": "פונים לעובדת הסוציאלית במחוז שלך באגף השיקום (דרך האזור האישי: myshikum.mod.gov.il) ומבקשים להירשם למחזור 5.",
+  "source_url": "https://shikum.mod.gov.il/updates/12175",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "מיועד לסטודנטים משנה ג' ומעלה או לבוגרים בהנדסת חשמל ומכונות, תוכנה, מדעי המחשב או תעשייה וניהול (מערכות מידע). אין התחייבות להשמה; במחזור 4 כ-40 מתוך 60 משתתפים השתלבו בעבודה.",
+  "status": "future_cycle",
+  "next_cycle": "סוף אוקטובר–תחילת נובמבר 2026 (התאריך המדויק טרם פורסם)",
+  "verified_at": "2026-10-13",
+  "found_via": "lead",
+  "avail": "מחזור 5 ייפתח בסוף אוקטובר או בתחילת נובמבר 2026 (התאריך המדויק יפורסם) ויסתיים בתחילת ינואר 2027."
+ },
+ {
+  "name": "ארים ראשי – קהילה וליווי לנשים עם פוסט טראומה על רקע צבאי או ביטחוני",
+  "category": "peer-support",
+  "description": "עמותה לנשים שנחשפו לטראומה במהלך שירות צבאי או ביטחוני, בסדיר או במילואים, מוכרות ולא מוכרות באגף השיקום. יש קהילת נשים, ימי סדנאות גוף-נפש פעם בחודשיים, מרחב פתוח פעמיים בשבוע, ריטריטים של כמה ימים 2-4 פעמים בשנה, וליווי אישי בהכרה, בירוקרטיה ומיצוי זכויות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces",
+   "police",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "bureaucracy"
+  ],
+  "interests": [
+   "mind-body",
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "באתר לא מוזכרת עלות",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "במקומות שונים בהתאם לפעילות",
+  "phone": "055-5583577",
+  "email": "Office@arimroshi.org.il",
+  "website": "https://arimroshi.org.il/",
+  "how_to_apply": "ממלאות באתר את טופס \"אני רוצה להצטרף לקהילה\" (שם, טלפון, עיר, תפקיד בצבא ומצב ההכרה במשרד הביטחון) ויחזרו אלייך, או פונות במייל או בטלפון של העמותה.",
+  "source_url": "https://arimroshi.org.il/%d7%94%d7%a4%d7%a2%d7%99%d7%9c%d7%95%d7%aa-%d7%a9%d7%9c%d7%a0%d7%95/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "yes",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "לנשים בלבד. האתר אומר \"נשים מכלל כוחות הביטחון\", ולכן סומן police=yes; כדאי לוודא מול העמותה שזה כולל שוטרות. מיקומי המפגשים לא מפורטים.",
+  "status": "active",
+  "next_cycle": "",
+  "verified_at": "2026-10-13",
+  "found_via": "lead",
+  "avail": ""
+ },
+ {
+  "name": "גולשים ללא גבולות – גלישת גלים לנפגעי פוסט טראומה משירות הביטחון (חוף תל ברוך)",
+  "category": "water-sports",
+  "description": "עמותה של מתנדבים, מדריכי גלישה, שמלמדת גלישת גלים בצמדים את מי שמתמודדים עם פוסט טראומה מהשירות הביטחוני, גם בלי ניסיון קודם. נפגשים בבוקר מוקדם בחוף תל ברוך בתל אביב: קפה, מתיחות, שעה במים וסיכום. סביב הגלישה יש קהילה תומכת.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "depression",
+   "anxiety"
+  ],
+  "interests": [
+   "sea",
+   "sport",
+   "extreme"
+  ],
+  "cost": "partial",
+  "cost_notes": "דמי חבר שנתיים סמליים. מי שזכאי לטיפולים משלימים (אלטרנטיביים) יכול להגיש את הקבלה להחזר.",
+  "regions": [
+   "center"
+  ],
+  "location": "החוף הצפוני של תל ברוך, תל אביב",
+  "phone": "",
+  "email": "golshimllogvulot@gmail.com",
+  "website": "https://www.golshimllogvulot.com",
+  "how_to_apply": "ממלאים באתר את טופס \"הצטרפות כחניך\" (בעמוד הפעילות, \"רוצה להירשם\"), או כותבים למייל העמותה.",
+  "source_url": "https://www.golshimllogvulot.com/activity",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "תל אביב",
+  "lat": 32.12,
+  "lng": 34.79,
+  "note": "ימי שני, רביעי ושישי 07:00-09:00. לפי האתר, היום פועלים בחוף תל ברוך בלבד (בכתובת מופיע גם חוף שדות ים). הקהל: \"נפגעי פוסט טראומה משירות הביטחון\", ושוטרים לא מוזכרים במפורש, ולכן police=unknown. מספר הנייד באתר מופיע עם שם של אדם ולכן לא נכלל. הכרטיס lohamim-org-il-1df527 (גלים של אהבה) הוא פרויקט נפרד של לוחמים לחיים שנעשה בשיתוף העמותה.",
+  "status": "active",
+  "next_cycle": "",
+  "verified_at": "2026-10-13",
+  "found_via": "lead",
+  "avail": ""
+ },
+ {
+  "update_of": "shikum-mod-gov-il-09c3c2",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "lead",
+  "source_url": "https://shikum.mod.gov.il/groups/11888",
+  "next_cycle": "2026-11-16",
+  "description": "קבוצה טיפולית בטבריה על החזרה לעבודה אחרי פציעה: האתגרים בכניסה לשוק העבודה, ההשפעה של הנכות בעבודה וכלים מעשיים כמו ראיון עבודה, קורות חיים וזכויות במקום העבודה. 5 מפגשים, עד 14 משתתפים.",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת. לשאלות: יועצת הקבוצות במחוז טבריה, Shikumt_kvutzot@mod.gov.il.",
+  "avail": "מחזור חדש נפתח ב-16.11.2026 בטבריה (5 מפגשים). ההרשמה פתוחה."
+ },
+ {
+  "name": "קבוצות לנכי צה\"ל בגיל השלישי – חיפה, נתניה, רחובות ובאר שבע (אגף השיקום)",
+  "category": "peer-support",
+  "description": "קבוצות טיפוליות של אגף השיקום לנכי ונכות צה\"ל בגיל השלישי, עד 14 משתתפים, בהנחיית אנשי מקצוע. מדברים על שינויים רגשיים ופיזיים, על מצבים משפחתיים וחברתיים שמשתנים ועל מציאת משמעות, ולומדים כלים לחוסן.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "loneliness",
+   "family-relations",
+   "physical-disability"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "haifa",
+   "sharon",
+   "shfela",
+   "south"
+  ],
+  "location": "חיפה; נתניה; רחובות; באר שבע",
+  "phone": "",
+  "email": "Shikumh_kvutzot@mod.gov.il (חיפה), Shikumd_kvutzot@mod.gov.il (דן/נתניה), Shikumr_kvutzot@mod.gov.il (רחובות), Shikumb_kvutzot@mod.gov.il (באר שבע)",
+  "website": "https://shikum.mod.gov.il/groups",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת. לשאלות: יועצת הקבוצות במחוז שלך במייל.",
+  "source_url": "https://shikum.mod.gov.il/groups/12185",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "עמודי הקבוצות: /groups/11626 (חיפה), /groups/11899 (נתניה, המיקום המדויק יימסר), /groups/12185 (רחובות), /groups/12116 (באר שבע). הקבוצה בקיבוץ לביא כבר במאגר (shikum-mod-gov-il-f047cd).",
+  "status": "active",
+  "next_cycle": "2026-10-25",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "avail": "חיפה נפתחה ב-4.10.2026; רחובות נפתחת ב-25.10.2026, נתניה ב-2.11.2026 ובאר שבע ב-24.11.2026."
+ },
+ {
+  "name": "קבוצה טיפולית למתמודדים עם פוסט טראומה בגילאי 35-50 – נתניה (אגף השיקום)",
+  "category": "mental-health",
+  "description": "קבוצה טיפולית בנתניה לנכי ונכות צה\"ל בני 35 עד 50 שמתמודדים עם פוסט טראומה, עד 14 משתתפים. מדברים על מתח, כעס וחרדה, על קשרים במשפחה ובזוגיות ועל החזרת תחושת השליטה, ולומדים כלים מעשיים לחוסן.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anger",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצה טיפולית שאגף השיקום מפעיל; בעמוד לא מוזכר תשלום",
+  "regions": [
+   "sharon"
+  ],
+  "location": "נתניה",
+  "phone": "",
+  "email": "Shikumd_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups/11900",
+  "how_to_apply": "ממלאים את טופס ההצטרפות בעמוד הקבוצה באתר אגף השיקום. הבקשה עוברת בדיקת התאמה ויוצרים איתך קשר; מילוי הטופס עוד לא אומר שהתקבלת.",
+  "source_url": "https://shikum.mod.gov.il/groups/11900",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "נתניה",
+  "lat": 32.33,
+  "lng": 34.86,
+  "note": "",
+  "status": "future_cycle",
+  "next_cycle": "2026-11-17",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "avail": "הקבוצה נפתחת ב-17.11.2026; ההרשמה פתוחה."
+ },
+ {
+  "name": "קבוצות טיפוליות של אגף השיקום – הרשמה לקבוצות בכל המחוזות",
+  "category": "peer-support",
+  "description": "אגף השיקום מפעיל קבוצות טיפוליות לנכי ונכות צה\"ל ולבני המשפחה בכל המחוזות, עד 14 משתתפים, בהנחיית אנשי מקצוע. יש קבוצות למתמודדים עם פוסט טראומה, לנשים נכות צה\"ל, לפצועי 'חרבות ברזל', לגיל השלישי, הכנה לתעסוקה, ולהורים ולבנות זוג. אפשר להירשם גם לקבוצות שעוד לא נקבע להן מועד.",
+  "provider_type": "government",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "families"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations",
+   "employment",
+   "loneliness",
+   "chronic-pain",
+   "anger"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "קבוצות טיפוליות שאגף השיקום מפעיל",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "קרית אונו, ירושלים, חיפה, באר שבע, רחובות, טבריה, נתניה ומקוון",
+  "phone": "",
+  "email": "מחוז טבריה Shikumt_kvutzot@mod.gov.il; חיפה Shikumh_kvutzot@mod.gov.il; דן Shikumd_kvutzot@mod.gov.il; תל אביב Shikumta_kvutzot@mod.gov.il; רחובות Shikumr_kvutzot@mod.gov.il; ירושלים Shikumj_kvutzot@mod.gov.il; באר שבע Shikumb_kvutzot@mod.gov.il",
+  "website": "https://shikum.mod.gov.il/groups",
+  "how_to_apply": "נכנסים לרשימת הקבוצות באתר אגף השיקום (shikum.mod.gov.il/groups), מסננים לפי מחוז וקהל יעד וממלאים טופס הצטרפות. אפשר להירשם גם לקבוצה שמועד הפתיחה שלה \"טרם נקבע\". לשאלות כותבים ליועצת הקבוצות במחוז.",
+  "source_url": "https://shikum.mod.gov.il/rehabilitation/vocational/group-therapy",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "קבוצות לפצועי 'חרבות ברזל' ולבני משפחתם פתוחות גם למי שקיבל אישור הכרה עקרוני. נכון ל-13.10.2026, קבוצות ללא מועד (\"טרם נקבע\") בכל מחוז (תל אביב/דן–קרית אונו, ירושלים, חיפה, באר שבע, רחובות, טבריה): בנות זוג, בנות זוג של פצועי 'חרבות ברזל', הורים, הורים לפצועי 'חרבות ברזל', גיל שלישי, מתמודדים עם פוסט טראומה, נשים נכות צה\"ל, פצועי 'חרבות ברזל', והכנה לתעסוקה (קרית אונו, חיפה, באר שבע, רחובות). בנוסף יש קבוצה מקוונת לבנות זוג של פצועי 'חרבות ברזל' (מחוז ירושלים). קבוצות עם מועד פתיחה נמצאות בכרטיסים נפרדים.",
+  "status": "active",
+  "next_cycle": "",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "avail": ""
+ },
+ {
+  "update_of": "shikum-mod-gov-il-565cd2",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/6011",
+  "next_cycle": "2026-10-20",
+  "avail": "הקבוצה נפתחת ב-20.10.2026 בתל אביב (9 מפגשים); הפרטים המדויקים יפורסמו.",
+  "location": "תל אביב",
+  "town": "תל אביב",
+  "lat": 32.08,
+  "lng": 34.78
+ },
+ {
+  "update_of": "shikum-mod-gov-il-3e803b",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/6040",
+  "next_cycle": "2026-11-02",
+  "avail": "הקבוצה נפתחת ב-2.11.2026 בקרית אונו, בימי שני 19:00-21:30."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-b26c1f",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/6131",
+  "next_cycle": "2026-10-20",
+  "avail": "הקבוצה נפתחת ב-20.10.2026, בימי שלישי 17:00-18:30, 20 מפגשים.",
+  "location": "משרדי אגף השיקום, מחוז רחובות"
+ },
+ {
+  "update_of": "shikum-mod-gov-il-1b5856",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/11760",
+  "next_cycle": "2026-10-18",
+  "avail": "הקבוצה נפתחת ב-18.10.2026 במחוז רחובות, בימי ראשון 19:00-20:30."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-d616ac",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/11889",
+  "next_cycle": "2026-12-21",
+  "avail": "הקבוצה נפתחת ב-21.12.2026 בקיבוץ לביא."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-5eae8b",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/11890",
+  "next_cycle": "2026-11-02",
+  "avail": "הקבוצה נפתחת ב-2.11.2026 באזור טבריה (12 מפגשים); המיקום המדויק יימסר."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-c1ca5b",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/11891",
+  "next_cycle": "2026-12-14",
+  "avail": "הקבוצה נפתחת ב-14.12.2026 בטבריה.",
+  "location": "טבריה"
+ },
+ {
+  "update_of": "shikum-mod-gov-il-628f0b",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/11892",
+  "next_cycle": "2026-10-19",
+  "avail": "הקבוצה נפתחת ב-19.10.2026 בגינוסר (12 מפגשים)."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-3404e2",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/12178",
+  "next_cycle": "2026-10-14",
+  "avail": "הקבוצה נפתחת ב-14.10.2026 בחוף בת ים."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-3aac8c",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/12179",
+  "next_cycle": "2026-10-20",
+  "avail": "הקבוצה נפתחת ב-20.10.2026 בירכא."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-2d9b1f",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/12187",
+  "next_cycle": "2026-11-17",
+  "avail": "הקבוצה נפתחת ב-17.11.2026, פעם בשבוע אחר הצהריים בחוות אמיר בבאר טוביה.",
+  "location": "חוות אמיר, באר טוביה"
+ },
+ {
+  "update_of": "shikum-mod-gov-il-649ce1",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/12183",
+  "next_cycle": "2026-11-23",
+  "avail": "שתי הקבוצות (קרית אונו /groups/12183 ורחובות /groups/12186) נפתחות ב-23.11.2026."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-4a064a",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/6152",
+  "next_cycle": "2026-10-27",
+  "description": "קבוצות טיפוליות של אגף השיקום שמשלבות שייט בים עם שיחה קבוצתית, פעם בשבוע. יש קבוצה בנמל חיפה ובנמל הרצליה (12 מפגשים) ובנמל תל אביב (15 מפגשים). הקבוצות פתוחות לכל המחוזות.",
+  "location": "נמל חיפה; נמל הרצליה; נמל תל אביב",
+  "avail": "הרצליה נפתחת ב-13.10.2026 (/groups/12117), חיפה ב-14.10.2026 (/groups/6152) ותל אביב ב-27.10.2026 (/groups/12230)."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-8e91f9",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/11623",
+  "next_cycle": "2026-10-14",
+  "description": "קבוצות טיפוליות בזום לנכי צה\"ל המתמודדים עם פוסט טראומה וכעס, 10 מפגשים שבועיים. לומדים להבין את מנגנון הכעס, לקבל כלים למניעת התפרצויות ולחזור לתחושת ביטחון ושליטה. כל מחוז פותח קבוצה משלו.",
+  "avail": "מחוז תל אביב נפתח ב-4.10.2026; מחוז טבריה ב-14.10.2026 (ימי רביעי 16:30-18:00, /groups/11885); מחוזות חיפה, רחובות ובאר שבע ב-27.10.2026 (/groups/12180, 12184, 12225)."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-6d1993",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups",
+  "next_cycle": "2026-10-14",
+  "avail": "מועדי פתיחה: נתניה, בנות זוג והורים של פצועי 'חרבות ברזל', 14.10.2026; רחובות, בנות זוג בגילאי 55-75, 14.10.2026; קרית אונו, הורים לפצועי 'חרבות ברזל', 12.10 ו-20.10.2026; קרית אונו, בנות זוג של פצועי 'חרבות ברזל', 20.10 ו-21.10.2026; באר שבע, בנות זוג, 20.10.2026; מקוון (מחוז חיפה), בנות זוג של מתמודדים עם פוסט טראומה, 20.10.2026; רחובות, הורים לפצועי 'חרבות ברזל', 23.11.2026; קרית אונו, בנות זוג, 23.11.2026.",
+  "note": "קבוצות לבני משפחה של פצועי 'חרבות ברזל' פתוחות גם כשהפצוע קיבל אישור הכרה עקרוני. עמודים: /groups/11608, 11610, 6239, 12177, 11627, 11628, 11622, 12226, 12181, 12227, 12228."
+ },
+ {
+  "update_of": "shikum-mod-gov-il-75e768",
+  "status": "closed_now",
+  "verified_at": "2026-10-13",
+  "found_via": "shikum-groups",
+  "source_url": "https://shikum.mod.gov.il/groups/6243",
+  "avail": "העמוד עדיין קיים, אבל הקבוצה לא מופיעה ברשימת הקבוצות הפתוחות להרשמה ואין לה מחוז או מועד פתיחה (נבדק ב-13.10.2026)."
+ },
+ {
+  "name": "פרויקט אומ\"ץ (איתור, מניעה וצמיחה) – תוכניות חוסן קהילתיות, כולל למילואימניקים (נט\"ל)",
+  "category": "peer-support",
+  "description": "פרויקט של נט\"ל בכמה ערים שבונה חוסן קהילתי אחרי אירועים לאומיים. יש סדנאות חוסן, תוכניות למשרתי מילואים, מפגשי תמיכה בבר לחברים שחוזרים ממילואים, יוגה, מיינדפולנס ומפגשים זוגיים. פועל באשדוד, בירושלים, בתל אביב-יפו ובמועצה האזורית גולן.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "civilians",
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "loneliness",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "south",
+   "jerusalem",
+   "center",
+   "north"
+  ],
+  "location": "אשדוד, ירושלים, תל אביב-יפו, מ.א. גולן",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "ממלאים את טופס יצירת הקשר בעמוד הפרויקט באתר נט\"ל ומסמנים 'תוכניות לאנשי ונשות מילואים' או את התוכנית המתאימה.",
+  "source_url": "https://www.natal.org.il/natal-community-projects/%d7%a4%d7%a8%d7%95%d7%99%d7%a7%d7%98-%d7%90%d7%95%d7%9e%d7%a5/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "קהל היעד: בני 16-18 ו-21-35 והמעגלים סביבם; העלות לא מצוינת",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "מדקרים ללא גבולות – מעגלי דיקור קבוצתיים לטראומה (פרוטוקול NADA)",
+  "category": "yoga-mind-body",
+  "description": "עמותה שמקיימת מעגלי ריפוי קבוצתיים: דיקור עדין באוזן לפי פרוטוקול NADA, יחד עם תרגילי קרקוע ומדיטציה. המעגל נמשך כשעה, בישיבה ובלבוש מלא, ולא צריך לדבר על מה שעבר. פועלת ברחבי הארץ, גם עם צבא וכוחות הביטחון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "security-forces",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "משרד: קהילת לודז' 32, תל אביב",
+  "phone": "",
+  "email": "awbisrael@gmail.com",
+  "website": "https://www.awbisrael.org.il",
+  "how_to_apply": "פונים במייל או בטופס 'צרו קשר' באתר (אפשר גם להזמין מעגל לקבוצה או ליחידה).",
+  "source_url": "https://www.awbisrael.org.il/מעגלי-ריפוי",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "העלות ומיקומי המעגלים הקבועים לא מצוינים באתר",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "מרכז אריאל (The Ariel Center) – ספורט טיפולי לחוסן, לוד",
+  "category": "sports",
+  "description": "מרכז ספורט טיפולי בלוד שמשלב פעילות ספורט עם שיח ועיבוד בהנחיית אנשי מקצוע. יש תוכניות למשרתי מילואים ולבני הזוג והמשפחות שלהם, כמו יוגה לנשות מילואימניקים וסדנאות ספורט טיפולי למשפחות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "combat-soldiers",
+   "security-forces",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "sport",
+   "fitness",
+   "mind-body"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "center"
+  ],
+  "location": "לוד",
+  "phone": "",
+  "email": "community@thearielcenter.org",
+  "website": "https://www.thearielcenter.org",
+  "how_to_apply": "כותבים למייל המרכז.",
+  "source_url": "https://www.thearielcenter.org/idf-reservists",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "לוד",
+  "lat": 31.95,
+  "lng": 34.89,
+  "note": "נט\"ל מתארת תוכנית 'חוסן בתנועה' של 8 מפגשים לפצועים בתהליך הכרה ולמוכרים; באתר המרכז (באנגלית) לא מופיע פירוט כזה. העלות לא מצוינת",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "שבים – חזרה לשגרה: 8 ימי טבע וקבוצה למילואימניקים ומשוחררים (קרן אבירם)",
+  "category": "nature-retreats",
+  "description": "תוכנית ללא עלות של 8 מפגשים שבועיים (8:00-16:00) בטבע, במקומות שונים בארץ. כל יום משלב עיבוד בקבוצה, טיפול גוף-נפש כמו יוגה או דיקור, ועבודה או תנועה כמו חקלאות, נגרות ורכיבה. מסלול 'חזרה לשגרה' למי שלא הגיש בקשה להכרה, ומסלול 'שבים 0.1' למי שהגיש ועוד לא הוכר.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "not-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "mind-body",
+   "crafts",
+   "animals"
+  ],
+  "cost": "free",
+  "cost_notes": "ללא עלות (לפי האתר)",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "contact@shavimback.com",
+  "website": "https://www.shavimback.com",
+  "how_to_apply": "נרשמים בטופס באתר. צוות הרישום חוזר בוואטסאפ (לפעמים אחרי כמה ימים) עם שיבוץ למרחב ותאריכים. רק מי שנמצא מתאים משתתף.",
+  "source_url": "https://www.shavimback.com/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "צריך להתחייב להגיע לכל 8 המפגשים",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": "אחרי ההרשמה הצוות חוזר בוואטסאפ, לפעמים אחרי כמה ימים."
+ },
+ {
+  "name": "מרפאת מגדלור – מטיב והמרכז הרפואי הרצוג (לאנשי כוחות הביטחון מוכרי אגף השיקום)",
+  "category": "mental-health",
+  "description": "מרפאה בירושלים שהוקמה באוקטובר 2023 על ידי מטיב והמרכז הרפואי הרצוג עבור אגף השיקום (מחוז ירושלים). נותנת לאנשי כוחות הביטחון עם פוסט טראומה, חרדה או דיכאון חבילות טיפול: מעקב פסיכיאטרי, טיפול פרטני, קבוצות (שיח, תיפוף, יוגה, סוסים, כתיבה) וטיפול זוגי ומשפחתי.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression",
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "למטופלים מוכרים באגף השיקום, בהפניה מהאגף",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "בניין המרפאות, המרכז הרפואי הרצוג, גבעת שאול, ירושלים",
+  "phone": "02-5952234",
+  "email": "",
+  "website": "https://metiv.org",
+  "how_to_apply": "פונים לאגף השיקום של משרד הביטחון, והם מפנים למרפאה. הקליטה מתחילה בפגישת אינטייק עם עו\"ס ואז הערכה פסיכיאטרית.",
+  "source_url": "https://metiv.org/%d7%9e%d7%92%d7%93%d7%9c%d7%95%d7%a8/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ירושלים",
+  "lat": 31.79,
+  "lng": 35.19,
+  "note": "ייתכן שבסוף הקליטה הפונה לא ייקלט ויופנה לטיפול אחר בקהילה",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "ריטריט זוגות בכרמים – יום זוגי לזוגות מילואים",
+  "category": "family-support",
+  "description": "יום ריטריט לזוגות שאחד מבני הזוג שירת במילואים בחרבות ברזל: סדנאות תקשורת זוגית, יוגה בזוגות, צילום, יצירה ופיקניק, בהנחיית אנשי טיפול. עד 12 זוגות בכל יום. מתקיים בקיבוץ כרמים בצפון הנגב ובחוות אור הנר.",
+  "provider_type": "private",
+  "eligibility": [
+   "reservists",
+   "families"
+  ],
+  "difficulties": [
+   "family-relations"
+  ],
+  "interests": [
+   "nature",
+   "art",
+   "mind-body"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "העלות המלאה 1,500 ש\"ח לזוג, ואפשר לקבל עליה החזר מקרן המילואים. בחלק מהמועדים העלות 100 ש\"ח לזוג בזכות סבסוד (לפי האתר)",
+  "regions": [
+   "south"
+  ],
+  "location": "קיבוץ כרמים, ד.נ. הנגב / חוות אור הנר",
+  "phone": "052-9096300",
+  "email": "",
+  "website": "https://retreatzoog.co.il",
+  "how_to_apply": "בוחרים תאריך ונרשמים בעמוד 'ריטריט זוגות מילואים' באתר, או כותבים בוואטסאפ.",
+  "source_url": "https://retreatzoog.co.il/zoogot-miluim/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "family",
+  "intensity": "oneoff",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": "iron-swords",
+  "format": "group",
+  "town": "קיבוץ כרמים",
+  "lat": 31.38,
+  "lng": 34.87,
+  "note": "",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": "מוגבל ל-12 זוגות בכל יום; אפשר להצטרף לרשימת המתנה."
+ },
+ {
+  "name": "ויצו – 'ממשיכות בדרך': קבוצת זום לנשות מילואים וכוחות הביטחון בתהליכי פרידה",
+  "category": "family-support",
+  "description": "קבוצת תמיכה של ויצו לנשות משרתי מילואים וכוחות הביטחון שעוברות פרידה מזוגיות בצל השירות הממושך. 12 מפגשים שבועיים בזום, שעה וחצי כל מפגש, בהנחיית אשת טיפול, כולל הרצאות על היבטים משפטיים, כלכליים והורות בפרידה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "paid",
+  "cost_notes": "550 ש\"ח לכל התוכנית; במקרה של קושי כלכלי אפשר לבקש מלגה חלקית (לפי האתר)",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://wizo.org.il",
+  "how_to_apply": "נרשמים בטופס בעמוד התוכנית באתר ויצו.",
+  "source_url": "https://wizo.org.il/womens-programs/%D7%9E%D7%9E%D7%A9%D7%99%D7%9B%D7%95%D7%AA-%D7%91%D7%93%D7%A8%D7%9A/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": "המועדים שמופיעים באתר הם מאביב 2026; כדאי לברר מתי נפתח המחזור הבא."
+ },
+ {
+  "name": "ויצו – 'תמיכה בתנועה': קבוצות תנועה ותמיכה לאמהות של לוחמים ולוחמות",
+  "category": "family-support",
+  "description": "קבוצות לאמהות של לוחמים ולוחמות, בהנחיית תרפיסטיות בתנועה. עובדים דרך הגוף ובלי מילים, ובסוף כל מפגש יש שיתוף ותמיכה. לא צריך ניסיון קודם בתנועה. יש קבוצות בתל אביב, בצורן ובזום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "anxiety",
+   "family-relations"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "עלות מסובסדת של 150 ש\"ח (לפי האתר)",
+  "regions": [
+   "center",
+   "online"
+  ],
+  "location": "תל אביב, צורן, זום",
+  "phone": "",
+  "email": "programsforwomen@gmail.com",
+  "website": "https://wizo.org.il",
+  "how_to_apply": "נרשמים בטופס בעמוד התוכנית באתר ויצו. אם אין קבוצה באזור, מציינים מאיפה את, ואם יהיו מספיק נרשמות ינסו לפתוח קבוצה.",
+  "source_url": "https://wizo.org.il/womens-programs/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%91%d7%aa%d7%a0%d7%95%d7%a2%d7%94/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": "המועדים שמופיעים באתר הם מאביב 2026; כדאי לברר מתי נפתח המחזור הבא."
+ },
+ {
+  "name": "ויצו – 'החזית שבעורף': סדנת תנועה לאמהות ופעוטות ממשפחות מילואים",
+  "category": "family-support",
+  "description": "סדנה של 8 מפגשי תנועה לאמא ופעוט (מלידה עד גיל 3) ממשפחות מילואים, ועוד מפגש סיום לאמהות בלבד. מנחה אותה מטפלת בתנועה, והמטרה היא חיזוק הקשר בין האם לילד בתקופה מורכבת. מתקיימת בכמה ערים ובסניפי ויצו.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "family-relations"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "עלות מסובסדת של 150 ש\"ח (לפי האתר)",
+  "regions": [
+   "center",
+   "jerusalem",
+   "north"
+  ],
+  "location": "בין השאר חולון, גבעתיים, ירושלים, מודיעין, עתניאל, קיבוץ געתון",
+  "phone": "",
+  "email": "programsforwomen@gmail.com",
+  "website": "https://wizo.org.il",
+  "how_to_apply": "נרשמים בטופס בעמוד הסדנה באתר ויצו.",
+  "source_url": "https://wizo.org.il/womens-programs/%d7%94%d7%97%d7%96%d7%99%d7%aa-%d7%a9%d7%91%d7%a2%d7%95%d7%a8%d7%a3-%d7%a1%d7%93%d7%a0%d7%90-%d7%93%d7%99%d7%90%d7%93%d7%99%d7%aa-%d7%a2%d7%9d-%d7%99%d7%9c%d7%93%d7%99%d7%9d/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": "המועדים שמופיעים באתר הם מאביב 2026; כדאי לברר מתי נפתח המחזור הבא."
+ },
+ {
+  "name": "ויצו – 'החזית שבעורף': סדנת טיפול באמנות לנשות מילואימניקים",
+  "category": "art-music",
+  "description": "סדנה של 8 מפגשי ערב לנשות משרתי מילואים, שמשלבת שיח עם יצירה באמנות בהנחיית מטפלות באמנות. לא צריך ידע קודם ביצירה. נפתחות קבוצות ביישובים רבים בארץ וגם קבוצה ארצית בזום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families"
+  ],
+  "difficulties": [
+   "loneliness",
+   "family-relations",
+   "anxiety"
+  ],
+  "interests": [
+   "art"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "עלות מסובסדת של 150 ש\"ח (לפי האתר)",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "programsforwomen@gmail.com",
+  "website": "https://wizo.org.il",
+  "how_to_apply": "נרשמים בטופס בעמוד הסדנה באתר ויצו.",
+  "source_url": "https://wizo.org.il/womens-programs/%D7%94%D7%97%D7%96%D7%99%D7%AA-%D7%A9%D7%91%D7%A2%D7%95%D7%A8%D7%A3/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "family",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": "המועדים שמופיעים באתר הם מאביב 2026; כדאי לברר מתי נפתח המחזור הבא."
+ },
+ {
+  "name": "שפת הים – סדנת חוסן של 3 ימים לצוותי מילואים: נשימה, צלילה חופשית וקרח",
+  "category": "water-sports",
+  "description": "סדנה של שלושה ימים לצוותי מילואים: תרגול נשימה, צלילה חופשית וטבילה בקרח, יחד עם מעגלי שיח, כדי ללמוד לווסת את מערכת העצבים במצבי לחץ. התוכנית בנויה כיום לצוותים; מי שפונה לבד מופנה לשותף של העמותה בתחום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "anxiety",
+   "anger",
+   "ptsd"
+  ],
+  "interests": [
+   "sea",
+   "mind-body",
+   "extreme"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "המימון בעיקר מעמותות, מעסיקים, משרד הביטחון ותורמים, עם השתתפות עצמית סמלית (לפי האתר)",
+  "regions": [
+   "south"
+  ],
+  "location": "",
+  "phone": "054-2604030",
+  "email": "Sfat.hayam.breath@gmail.com",
+  "website": "https://www.sfat-hayam.com",
+  "how_to_apply": "נציג הצוות ממלא את טופס ההרשמה באתר (יחידה, מספר חברי צוות ועוד) ושולח הודעה לנייד של העמותה.",
+  "source_url": "https://www.sfat-hayam.com/טופס",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "residential",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "",
+  "lat": null,
+  "lng": null,
+  "note": "מיקום הסדנה לא מצוין באתר; נט\"ל מסווגת אותה באזור הדרום והנגב",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "מרכז אנפה – גשר לחיים מיטביים (קיבוץ גבעת חיים איחוד)",
+  "category": "peer-support",
+  "description": "מרכז בקיבוץ גבעת חיים איחוד למשרתות ומשרתי מילואים אחרי שחרור, לבני משפחותיהם, לאנשי כוחות הביטחון ולפצועים. יש תהליך קבוצתי עם ליווי אישי של מטפלים בטראומה, מפגש שבועי לנשות מילואימניקים, ייעוץ תעסוקתי ואקדמי, וטיולי ג'יפים חודשיים לפצועים ולנכי צה\"ל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "security-forces",
+   "mod-recognized",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "ptsd",
+   "employment",
+   "loneliness",
+   "family-relations"
+  ],
+  "interests": [
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "sharon"
+  ],
+  "location": "קיבוץ גבעת חיים איחוד",
+  "phone": "052-8554353",
+  "email": "office@anafa.life",
+  "website": "https://www.anafa.life",
+  "how_to_apply": "להצטרפות למפגשים שולחים מייל ל-office@anafa.life. לטיולי הפצועים נרשמים בקישור שבאתר.",
+  "source_url": "https://www.anafa.life/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "peer",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "קיבוץ גבעת חיים איחוד",
+  "lat": 32.4,
+  "lng": 34.93,
+  "note": "העלות לא מצוינת באתר",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "נט\"ל NEXT – אימון קריירה מיודע טראומה וליווי לתעסוקה ולימודים",
+  "category": "employment-education",
+  "description": "היחידה לפיתוח אישי וקריירה של נט\"ל מלווה נפגעי טראומה ממלחמה וטרור בחזרה לעבודה וללימודים. יש פגישות אישיות עם מאמנת קריירה שמתמחה בטראומה, בניית תוכנית פעולה ומנטור מקצועי מהתחום. יש מסלולים גם לעצמאים ובעלי עסקים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "ממלאים את טופס בדיקת ההתאמה בעמוד פיתוח אישי וקריירה באתר נט\"ל.",
+  "source_url": "https://www.natal.org.il/career-development-programs/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "העלות לא מצוינת בעמוד",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "'אנחנו על זה' – ליווי שבועי לסטודנטים שחזרו ממילואים (נט\"ל והתאחדות הסטודנטים)",
+  "category": "employment-education",
+  "description": "ליווי שבועי לאורך כל שנת הלימודים לסטודנטים שמתקשים בלימודים בגלל המלחמה: משרתי מילואים, לוחמים משוחררים, בני זוג של משרתי מילואים ועוד. את הליווי נותנים סטודנטים למקצועות טיפול בהדרכת אנשי מקצוע מנט\"ל, עם כלים להתמודדות עם עומס, לחץ ודחיינות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers",
+   "families",
+   "bereaved",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "employment",
+   "anxiety"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "נרשמים דרך הקישור 'לפרטים והרשמה' בעמוד התוכנית באתר נט\"ל.",
+  "source_url": "https://www.natal.org.il/career-development-programs/we-are-on-it/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "העלות לא מצוינת בעמוד",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "רסיסים – כתיבה ושיתוף של סיפורים אישיים ממלחמה וטרור (נט\"ל)",
+  "category": "art-music",
+  "description": "פרויקט של נט\"ל שמזמין לוחמים, משרתי מילואים, בני זוג, הורים וכל מי שמושפע מהמלחמה לכתוב ולשתף את הסיפור האישי שלהם. כולל קורס סטוריטלינג ('לדבר זיכרון') וטקסי יום הזיכרון 'לנופלים ולחיים'. המשתתפים עוברים הכשרות במהלך השנה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "families",
+   "bereaved",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "grief",
+   "loneliness"
+  ],
+  "interests": [
+   "writing",
+   "volunteering"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.natal.org.il",
+  "how_to_apply": "משאירים פרטים דרך הקישור בעמוד הפרויקט באתר נט\"ל.",
+  "source_url": "https://www.natal.org.il/natal-community-projects/resisim/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "העלות לא מצוינת בעמוד",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "לב אחד – פרויקט סיוע לפצועי מערכת הביטחון ומשפחותיהם",
+  "category": "housing-daily",
+  "description": "מתנדבי לב אחד עוזרים לפצועי מערכת הביטחון ולמשפחות שלהם: בייביסיטר, עזרה בלימודים לילדים בכיתות א-ג בזום, שיפוצים קלים וביקורי מתנדב קבועים. יש גם פעילויות קבוצתיות לפצועים, כמו שייט ביאכטה ולימוד גלישה בהרצליה וקבוצת גיטרה, ורכזי סיוע ברוב בתי החולים הגדולים.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "mod-in-process",
+   "families",
+   "security-forces",
+   "police"
+  ],
+  "difficulties": [
+   "physical-disability",
+   "family-relations",
+   "loneliness"
+  ],
+  "interests": [
+   "sea",
+   "music"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "*3197",
+  "email": "",
+  "website": "https://www.levechad.org",
+  "how_to_apply": "נרשמים במערכת של לב אחד ופותחים בקשת סיוע דיגיטלית (קישור בעמוד הפרויקט), או מתקשרים ל-3197*.",
+  "source_url": "https://levechad.activetrail.biz/LEVECHAD-AID-INJ-G",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "housing",
+  "intensity": "light",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "הכרטיס הכללי של לב אחד (levechad-org-73dd3b) לא מפרט את הפרויקט לפצועים; העלות לא מצוינת במפורש (שירות מתנדבים)",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "name": "מכון פוירשטיין – שיקום קוגניטיבי לנפגעי ראש (כולל פצועי צה\"ל ונפגעי טרור)",
+  "category": "medical-rehab",
+  "description": "שיקום קוגניטיבי ותפקודי בשיטת פוירשטיין לאנשים שנפגעו בראש (חבלות מוחיות, פגיעות הדף, פגיעות ראש קלות). מתחילים באבחון ובונים תוכנית אישית: קשב, זיכרון, התארגנות, טיפול רגשי וליווי חזרה ללימודים ולעבודה. יש קליניקות בירושלים, בראשון לציון ובבאר שבע, ומרכזי יום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "mod-recognized",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "tbi",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון אגף השיקום או ביטוח לאומי למוכרים, או במימון פרטי (לפי האתר)",
+  "regions": [
+   "jerusalem",
+   "center",
+   "south"
+  ],
+  "location": "דיסקין 17 ירושלים; החומה 14 ראשון לציון; באר שבע",
+  "phone": "02-569-3333",
+  "email": "",
+  "website": "https://feuerstein-institute.co.il",
+  "how_to_apply": "פונים לעובד/ת השיקום באגף השיקום או בביטוח לאומי לקבלת הפניה, ואז נקבעת פגישת היכרות במרכז הקרוב.",
+  "source_url": "https://feuerstein-institute.co.il/head-injury-rehabilitation/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "בנוסף לכרטיס הקיים על פוסט טראומה (feuerstein-institute-co--099754). אפשר גם במימון פרטי",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "avail": ""
+ },
+ {
+  "update_of": "shikum-mod-gov-il-680532",
+  "regions": [
+   "center",
+   "haifa",
+   "south",
+   "jerusalem"
+  ],
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "natal-db",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/safe_housing",
+  "note": "לפי עמוד אגף השיקום יש בתים בטוחים בבאר שבע, בירושלים (כפר שאול), בטירת הכרמל, בתל השומר ובבאר יעקב; האזורים בכרטיס כללו רק מרכז וחיפה"
+ },
+ {
+  "update_of": "terrauma-co-il-19fac6",
+  "status": "future_cycle",
+  "next_cycle": "ההרשמה נפתחת בסביבות פברואר 2027",
+  "verified_at": "2026-10-13",
+  "found_via": "registry",
+  "source_url": "https://www.terrauma.co.il/faq",
+  "note": "הכרטיס מוסתר כרגע ב-corrections (_hide: תוכנית יין). רק עדכון סטטוס המחזור; ההחלטה אם להציג נשארת שלכם."
+ },
+ {
+  "name": "צהלי – ליווי ותמיכה למשפחות של הלומי קרב",
+  "category": "family-support",
+  "description": "עמותה למשפחות של לוחמי מילואים וכוחות ביטחון עם הלם קרב. יש ליווי שבועי של מלווה שמגיע הביתה (\"צועדים יחד\"), קבוצת תמיכה לנשים, וסיוע בתהליך ההכרה ובמיצוי זכויות בלי תשלום.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "families",
+   "reservists",
+   "security-forces",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "family-relations",
+   "bureaucracy"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "הסיוע בתהליך ההכרה ובמיצוי זכויות ללא תשלום (לפי האתר)",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "tzahali.org@gmail.com",
+  "website": "https://www.tzahali.org.il",
+  "how_to_apply": "דרך עמוד התוכניות באתר: קישור \"למידע והרשמה\" לליווי משפחות, או הצטרפות לקבוצות הוואטסאפ של הקהילה התומכת.",
+  "source_url": "https://www.tzahali.org.il/programs",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "family",
+  "intensity": "weekly",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "המייל מרשם העמותות (גיידסטאר). ע\"ר 580758258; דיווח אחרון 2025. האתר לא מציין תאריכים עדכניים",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "registry",
+  "avail": ""
+ },
+ {
+  "name": "הלם קלאב – קהילה ופרויקט ההכרה לפוסט טראומטים",
+  "category": "peer-support",
+  "description": "קהילה של אנשים שחיים עם פוסט טראומה. בפרויקט ההכרה יש מרכז מידע וקבוצות של חברי קהילה שכבר עברו את תהליך ההכרה מול משרד הביטחון או ביטוח לאומי, ומלווים מי שמתחיל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-in-process",
+   "not-recognized",
+   "terror-victims",
+   "civilians"
+  ],
+  "difficulties": [
+   "ptsd",
+   "bureaucracy",
+   "loneliness"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online",
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "ahalan@helem.club",
+  "website": "https://helem.club",
+  "how_to_apply": "להיכנס לעמוד \"פרויקט ההכרה\" באתר ולהצטרף לקהילה (קבוצת הפייסבוק של הלם קלאב), משם לקבוצות הוואטסאפ הייעודיות.",
+  "source_url": "https://helem.club/ptsd-recognition/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "peer",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "ע\"ר 580603868. יש גם פרויקט אפטר למשפחות ומעסיקים של מילואימניקים",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "registry",
+  "avail": ""
+ },
+ {
+  "name": "קרבי טק – מנטורינג ללוחמים משוחררים לעבודה ראשונה בהייטק",
+  "category": "employment-education",
+  "description": "כל לוחם מקבל מנטור מההייטק לליווי אישי, ויש גם סדנאות קורות חיים, ראיונות ומפגשי נטוורקינג. מיועד ללוחמים משוחררים שרוצים להשתלב בהייטק.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "",
+  "cost_notes": "העלות לא כתובה באתר",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://kravitech.org",
+  "how_to_apply": "למלא את טופס ההרשמה למנטי באתר (Join as a mentee).",
+  "source_url": "https://kravitech.org/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "ע\"ר 580799492. העלות לא כתובה במפורש באתר, אבל זו עמותה שמבוססת על מנטורים מתנדבים",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "registry",
+  "avail": ""
+ },
+ {
+  "name": "לב השחר – מרכז תמיכה וטיפול בפוסט טראומה ללוחמים (צומת בית עובד)",
+  "category": "mental-health",
+  "description": "מרכז ללוחמים ולאנשי כוחות הביטחון וההצלה עם פוסט טראומה. יש שלושה מסלולים: מפגש חברתי ומעגלי שיח, סדנאות שבועיות (אמנות, פסיכודרמה, יוגה), ומסלול טיפולי של 12 פגישות אישיות ו-12 פגישות קבוצתיות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness"
+  ],
+  "interests": [
+   "art",
+   "mind-body"
+  ],
+  "cost": "",
+  "cost_notes": "העלות לא כתובה באתר",
+  "regions": [
+   "center",
+   "shfela"
+  ],
+  "location": "סמוך לצומת בית עובד",
+  "phone": "055-9933099",
+  "email": "Levhashahar@gmail.com",
+  "website": "https://levhashahar.org.il",
+  "how_to_apply": "בכפתור \"פרטים והרשמה\" בעמוד התוכניות באתר, או בטלפון/וואטסאפ 055-9933099. לסדנאות צריך להירשם מראש.",
+  "source_url": "https://levhashahar.org.il/programs",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "treatment",
+  "intensity": "program",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "בית עובד",
+  "lat": 31.9,
+  "lng": 34.77,
+  "note": "ע\"ר 580828077. בסבב הקודם היה רמז שלא נבדק כי האתר בנוי ב-JS; עכשיו נקרא עמוד התוכניות",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "registry",
+  "avail": ""
+ },
+ {
+  "name": "Back 2 Business – ליווי תעסוקתי למילואימניקים (נט\"ל ובנק הפועלים)",
+  "category": "employment-education",
+  "description": "תוכנית של נט\"ל בשיתוף בנק הפועלים למילואימניקים שמתקשים לחזור לעבודה אחרי השירות. עד 12 פגישות אישיות עם מאמנת קריירה שמבינה טראומה, במשך 3-6 חודשים, בפריסה ארצית. מתאים גם בלי אבחנה רשמית.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "not-recognized",
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd",
+   "anxiety"
+  ],
+  "interests": [],
+  "cost": "subsidized",
+  "cost_notes": "עלות סמלית בלבד",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "פגישות פרונטליות בפריסה ארצית",
+  "phone": "*3362",
+  "email": "",
+  "website": "https://www.natal.org.il/career-development-programs/poalim-back-2-business/",
+  "how_to_apply": "למלא את טופס ההצטרפות בעמוד התוכנית באתר נט\"ל.",
+  "source_url": "https://www.natal.org.il/career-development-programs/poalim-back-2-business/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "שיתוף פעולה נט\"ל ובנק הפועלים; שאלת הטופס מתייחסת למילואימניקים בחרבות ברזל",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:natal-org-il-e05ae2",
+  "avail": ""
+ },
+ {
+  "name": "\"אתגר בטבע\" – קבוצה שבועית בטבע למתמודדים עם פוסט טראומה (נט\"ל והמרכז הרפואי העמק)",
+  "category": "nature-retreats",
+  "description": "קבוצה שנפגשת פעם בשבוע באתרי טבע באזור עמק יזראעל, למתמודדים ומתמודדות עם פוסט טראומה על רקע השירות הביטחוני. משלבת פעילות ואתגרים בטבע עם תמיכה הדדית של אנשים שעברו חוויות דומות.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "security-forces"
+  ],
+  "difficulties": [
+   "ptsd",
+   "loneliness",
+   "anxiety"
+  ],
+  "interests": [
+   "nature",
+   "extreme"
+  ],
+  "cost": "",
+  "cost_notes": "",
+  "regions": [
+   "north"
+  ],
+  "location": "אתרי טבע משתנים בעמק יזראעל",
+  "phone": "*3362",
+  "email": "",
+  "website": "https://www.natal.org.il/",
+  "how_to_apply": "להתקשר לקו הסיוע של נט\"ל (*3362 או 1-800-363-363) ולבקש להצטרף לקבוצה.",
+  "source_url": "https://www.natal.org.il/%d7%aa%d7%9e%d7%99%d7%9b%d7%94-%d7%95%d7%98%d7%99%d7%a4%d7%95%d7%9c-%d7%a0%d7%a4%d7%a9%d7%99/%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%98%d7%99%d7%a4%d7%95%d7%9c%d7%99%d7%95%d7%aa-%d7%95%d7%a7%d7%91%d7%95%d7%a6%d7%95%d7%aa-%d7%aa%d7%9e%d7%99%d7%9b%d7%94/%d7%a7%d7%91%d7%95%d7%a6%d7%aa-%d7%90%d7%aa%d7%92%d7%a8-%d7%91%d7%98%d7%91%d7%a2/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "weekly",
+  "recognition": "unknown",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "עמק יזראעל",
+  "lat": 32.61,
+  "lng": 35.29,
+  "note": "העלות לא מצוינת בעמוד",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:natal-org-il-e05ae2",
+  "avail": ""
+ },
+ {
+  "name": "לוחמים להייטק – הכשרות טכנולוגיות ללוחמים משוחררים (עמותת עתידים)",
+  "category": "employment-education",
+  "description": "תוכנית מטכ\"לית של עתידים, צה\"ל ומשרד הביטחון שמכשירה לוחמים ולוחמות משוחררים לעבודה בהייטק: בוטקאמפ בסייבר, רשתות, NOC ושיווק דיגיטלי, עם ליווי אישי והשמה עד המשרה הראשונה. יש גם מסלול ניהול מוצר לפצועי צה\"ל בלבד.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "tech",
+   "learning"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "מימון של עד 80% משכר הלימוד ומלגת קיום חודשית לזכאים",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "רמת גן, תל אביב, ראשון לציון, חיפה/עכו, אילת",
+  "phone": "",
+  "email": "",
+  "website": "https://atidim.org/program/lohamim/",
+  "how_to_apply": "להירשם דרך כפתור ההרשמה בעמוד התוכנית באתר עתידים.",
+  "source_url": "https://atidim.org/program/lohamim/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "סניפים",
+  "lat": null,
+  "lng": null,
+  "note": "לפי אלבום שקוף: ללוחמים עד 5 שנים מהשחרור (או עד 10 שנים עם מילואים פעיל) ועד גיל 37 – לא אומת באתר עתידים",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:invisiblealbum-com",
+  "avail": "מחזורים נפתחים באוקטובר 2026 עד פברואר 2027 בערים שונות"
+ },
+ {
+  "name": "FrontLife – קורסים, קהילה ותוכנית מנטורינג ללוחמי מילואים",
+  "category": "employment-education",
+  "description": "עמותה שהיא בית לצמיחה אישית ומקצועית ללוחמים ולוחמות במילואים: קורסים קצרים (כסף, אנגלית, קורות חיים, ראיונות, יזמות), ימי חשיפה למקצועות, קהילת בוגרים ומפגש חודשי. בתוכנית המנטורינג \"אלונים\" מקבלים מנטור אישי לכ-3 חודשים לתכנון הצעד הבא.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "combat-soldiers"
+  ],
+  "difficulties": [
+   "employment"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "subsidized",
+  "cost_notes": "מחירים מסובסדים ללוחמי מילואים",
+  "regions": [
+   "center",
+   "nationwide"
+  ],
+  "location": "תל אביב ופריסה ארצית",
+  "phone": "",
+  "email": "info@frontlife.org.il",
+  "website": "https://www.frontlife.org.il",
+  "how_to_apply": "להירשם לתוכניות דרך האתר או להצטרף לקבוצת הוואטסאפ של הקהילה.",
+  "source_url": "https://www.frontlife.org.il",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "unit_only": false,
+  "war_only": null,
+  "format": "mixed",
+  "town": "תל אביב",
+  "lat": 32.08,
+  "lng": 34.78,
+  "note": "",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:invisiblealbum-com",
+  "avail": ""
+ },
+ {
+  "name": "עוגן באדמה – חקלאות טיפולית למשרתי מילואים (קיימא)",
+  "category": "rehab-farm",
+  "description": "תוכנית של עמותת קיימא בחווה חקלאית ליד פרדס חנה: 10 שבועות, יום מלא בשבוע, של עבודת אדמה, גידול ירקות וסדנאות לאיזון גופני ורגשי. לא צריך ניסיון בחקלאות ולא צריך הכרה ממשרד הביטחון.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "not-recognized",
+   "mod-in-process",
+   "mod-recognized"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "loneliness"
+  ],
+  "interests": [
+   "nature",
+   "crafts"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "sharon",
+   "haifa"
+  ],
+  "location": "חוות בין התלמים, ליד פרדס חנה",
+  "phone": "",
+  "email": "",
+  "website": "https://www.kaima.org.il/projects/anchored-in-the-earth",
+  "how_to_apply": "למלא את טופס ההרשמה בעמוד התוכנית באתר קיימא.",
+  "source_url": "https://www.kaima.org.il/projects/anchored-in-the-earth",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "activity",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "unit_only": false,
+  "war_only": null,
+  "format": "group",
+  "town": "פרדס חנה",
+  "lat": 32.47,
+  "lng": 34.97,
+  "note": "",
+  "status": "future_cycle",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:invisiblealbum-com",
+  "avail": "ההרשמה למחזור הסתיו פתוחה; המחזור ייפתח במהלך אוקטובר 2026",
+  "next_cycle": "2026-10"
+ },
+ {
+  "name": "\"המדריך ל-PTSD\" – אפליקציה של אגף השיקום להתמודדות עם פוסט טראומה",
+  "category": "mental-health",
+  "description": "אפליקציה חינמית של אגף השיקום עם מידע וכלים להתמודדות עצמית עם פוסט טראומה: מיינדפולנס, מדיטציה ועוד, מעקב אישי, ומידע על אפשרויות תמיכה וסיוע במשבר. מתאימה גם למי שעוד לא הגיש בקשה להכרה.",
+  "provider_type": "government",
+  "eligibility": [
+   "not-recognized",
+   "mod-in-process",
+   "mod-recognized",
+   "combat-soldiers",
+   "reservists"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "sleep"
+  ],
+  "interests": [
+   "mind-body"
+  ],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://shikum.mod.gov.il/medical/mental-therapy/before-recognition",
+  "how_to_apply": "להוריד את האפליקציה \"המדריך ל-PTSD\" מחנות האפליקציות.",
+  "source_url": "https://shikum.mod.gov.il/medical/mental-therapy/before-recognition",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "info",
+  "intensity": "light",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "מופיע בעמוד \"מדריך מענים נפשיים למי שלא הגישו בקשה להכרה\" באתר אגף השיקום",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:shikum-mod-gov-il",
+  "avail": ""
+ },
+ {
+  "name": "תוכנית שיקום עסק/עצמאי למילואימניקים (מומנטום למשתחררים)",
+  "category": "employment-education",
+  "description": "ליווי חינם למילואימניקים שלחמו מאז 7 באוקטובר ושהעסק הקטן או העבודה כעצמאים נפגעו בגלל המילואים. כולל 5 מפגשים אישיים עם יועץ עסקי, פרונטלי או בזום, ולפי הצורך גם יועץ פיננסי או יועץ שיווק.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [],
+  "cost": "free",
+  "cost_notes": "",
+  "regions": [
+   "nationwide",
+   "online"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://www.momentum4u.org/business_rehabilitation/",
+  "how_to_apply": "להשאיר פרטים בעמוד התוכנית באתר מומנטום ולעבור שיחת אינטייק ראשונית.",
+  "source_url": "https://www.momentum4u.org/business_rehabilitation/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "no",
+  "unit_only": false,
+  "war_only": "iron-swords",
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "העמותה \"מומנטום למשתחררים\" לא נמצאה במאגר; יש לה גם סדנת הכנה לאזרחות ומסע שחרור ללוחמים בסדיר (לא נוספו – כלליים למשתחררים)",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "partners:invisiblealbum-com",
+  "avail": "מספר המקומות בתוכנית מוגבל"
+ },
+ {
+  "name": "מצדיעים בתעסוקה – ליווי תעסוקתי, הכשרות והשמה למשרתי מילואים (אחריי!)",
+  "category": "employment-education",
+  "description": "מיזם של עמותת אחריי! למשרתי ומשרתות מילואים שחזרו מהמלחמה ורוצים לשקם או לשנות קריירה: ייעוץ תעסוקתי אישי, הכשרות מקצועיות קצרות (למשל קורס ביטוח ופיננסים) וחיבור למעסיקים, עם ליווי עד חצי שנה אחרי הכניסה לעבודה. ניתן במימון מלא, גם לבני ובנות זוג ולפצועי צה\"ל.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "reservists",
+   "families",
+   "mod-recognized",
+   "mod-in-process"
+  ],
+  "difficulties": [
+   "employment",
+   "financial"
+  ],
+  "interests": [
+   "learning"
+  ],
+  "cost": "free",
+  "cost_notes": "בסבסוד מלא, ללא שימוש במענקים; הקבלה לקורסים כפופה לתנאי סף ולשיחת התאמה",
+  "regions": [
+   "nationwide"
+  ],
+  "location": "",
+  "phone": "",
+  "email": "",
+  "website": "https://aharai.org.il/salute-to-employment/",
+  "how_to_apply": "למלא את טופס ההרשמה באתר אחריי! (עמוד \"מילואימניקים\" – כולל צירוף טופס 3010 וקורות חיים), או טופס \"לפרטים נוספים והרשמה\" בעמוד קורס הפיננסים והביטוח.",
+  "source_url": "https://aharai.org.il/salute-to-employment/",
+  "confidence": "high",
+  "reviewed_at": "2026-10-13",
+  "kind": "work",
+  "intensity": "program",
+  "recognition": "not_required",
+  "police": "unknown",
+  "unit_only": false,
+  "war_only": null,
+  "format": "individual",
+  "town": "ארצי",
+  "lat": null,
+  "lng": null,
+  "note": "נמצא דרך פרסום פטור ממכרז (מיזם משותף) של משרד הכלכלה עם נוער מוביל שינוי (אחריי!) – \"תוכנית הכשרה והשמה למשרתות ולמשרתי מילואים\", 1.78 מיליון ש\"ח, 1/2025–6/2026. ההתקשרות הממשלתית הסתיימה לפי הפרסום, אבל עמודי המיזם באתר (עודכנו 11/2025 ו-2/2026) עדיין מציעים הרשמה.",
+  "status": "active",
+  "verified_at": "2026-10-13",
+  "found_via": "tender",
+  "avail": ""
+ }
+]
