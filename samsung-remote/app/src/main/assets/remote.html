@@ -718,30 +718,36 @@
       if ($('sheet-pick').classList.contains('show')) renderPicker();
     }, 9000);
   }
-  let deepScanning = false, deepFoundBefore = 0;
+  let deepScanning = false;
   function toggleDeepScan() {
     if (deepScanning) { A.stopAppScan(); $('deepScanBtn').textContent = 'עוצר…'; return; }
     deepScanning = true;
-    deepFoundBefore = S.apps.length;
     $('deepScanBar').style.display = '';
     $('deepScanText').textContent = 'מתחיל חיפוש…';
     $('deepScanBtn').textContent = 'עצור';
     A.deepScanApps();
   }
+  const fmt = (n) => Number(n).toLocaleString('he-IL');
   function onAppScan(m) {
-    const pct = m.total ? Math.floor(100 * m.done / m.total) : 0;
-    const added = Math.max(0, S.apps.length - deepFoundBefore);
-    $('deepScanBar').firstElementChild.style.width = pct + '%';
+    const pct = m.total ? (100 * m.done / m.total) : 0;
+    $('deepScanBar').style.display = '';
+    $('deepScanBar').firstElementChild.style.width = Math.max(1, pct).toFixed(1) + '%';
+    const found = m.found ? ' · נמצאו ' + m.found + ' חדשות' : '';
     if (m.finished) {
       deepScanning = false;
       $('deepScanBtn').textContent = '🔍 חיפוש מעמיק';
-      $('deepScanText').textContent = (m.done < m.total ? 'החיפוש נעצר' : 'החיפוש הסתיים') +
-        ' · נמצאו ' + added + ' אפליקציות חדשות' + (added ? ' (נשמרו לפעם הבאה)' : '');
-    } else {
-      deepScanning = true;
-      $('deepScanBtn').textContent = 'עצור';
-      $('deepScanText').textContent = 'מחפש… ' + pct + '% · נמצאו ' + added + ' חדשות';
+      $('deepScanText').textContent = (m.done < m.total ? 'החיפוש נעצר' : 'החיפוש הסתיים') + ' אחרי ' + fmt(m.done) + ' בדיקות' +
+        (m.found ? ' · נמצאו ' + m.found + ' אפליקציות חדשות (נשמרו)' : ' · לא נמצאו אפליקציות חדשות');
+      return;
     }
+    deepScanning = true;
+    $('deepScanBtn').textContent = 'עצור';
+    let eta = '';
+    if (m.msPerCheck && m.done > 0) {
+      const min = Math.ceil((m.total - m.done) * m.msPerCheck / 60000);
+      eta = min > 90 ? ' · עוד כ-' + Math.round(min / 60) + ' שעות' : ' · עוד כ-' + min + ' דק׳';
+    }
+    $('deepScanText').textContent = 'נבדקו ' + fmt(m.done) + ' מתוך ' + fmt(m.total) + eta + found;
   }
   function renderApps() {
     const box = $('applist');

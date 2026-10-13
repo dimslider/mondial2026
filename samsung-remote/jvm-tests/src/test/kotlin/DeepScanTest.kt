@@ -32,13 +32,14 @@ class DeepScanTest {
         rest.start(InetAddress.getByName("127.0.0.1"), 8001)
         try {
             val s = TestSession()
-            val progress = LinkedBlockingQueue<Triple<Int, Int, Boolean>>()
+            val progress = LinkedBlockingQueue<ScanProgress>()
             val d = SamsungDriver("127.0.0.1", s)
-            d.deepScan("2009:21590:21610 2307:31000:31005") { a, b, c -> progress.add(Triple(a, b, c)) }
-            var last: Triple<Int, Int, Boolean>
-            do { last = progress.poll(30, TimeUnit.SECONDS)!! } while (!last.third)
-            assertEquals(27, last.second)
-            assertEquals(27, last.first)
+            d.deepScan("2009:21590:21610 2307:31000:31005") { progress.add(it) }
+            var last: ScanProgress
+            do { last = progress.poll(30, TimeUnit.SECONDS)!! } while (!last.finished)
+            assertEquals(27, last.total)
+            assertEquals(27, last.done)
+            assertEquals(2, last.found)
             assertEquals(27, asked.size, "every id in the ranges is checked once")
             assertTrue("3202009021590" in asked && "3202307031005" in asked)
             val stored = JSONArray(s.storage["foundApps"])
@@ -60,11 +61,11 @@ class DeepScanTest {
     @Test
     fun givesUpWhenTheTvStopsAnswering() {
         val s = TestSession()
-        val progress = LinkedBlockingQueue<Triple<Int, Int, Boolean>>()
+        val progress = LinkedBlockingQueue<ScanProgress>()
         // Nothing listens on 127.0.0.1:8001 here: every request fails.
-        SamsungDriver("127.0.0.1", s).deepScan("2009:20000:22000") { a, b, c -> progress.add(Triple(a, b, c)) }
-        var last: Triple<Int, Int, Boolean>
-        do { last = progress.poll(60, TimeUnit.SECONDS)!! } while (!last.third)
-        assertTrue(last.first < 400, "stopped after ${last.first} of ${last.second}")
+        SamsungDriver("127.0.0.1", s).deepScan("2009:20000:22000") { progress.add(it) }
+        var last: ScanProgress
+        do { last = progress.poll(60, TimeUnit.SECONDS)!! } while (!last.finished)
+        assertTrue(last.done < 400, "stopped after ${last.done} of ${last.total}")
     }
 }

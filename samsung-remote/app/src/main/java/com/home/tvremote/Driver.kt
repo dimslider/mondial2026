@@ -32,6 +32,9 @@ interface Session {
  * One connection to one TV. Commands use the Samsung-style key names the UI sends
  * (KEY_UP, KEY_VOLUP, ...); each driver translates them.
  */
+/** Deep app scan progress: ids checked so far, total, apps found by this scan, finished. */
+data class ScanProgress(val done: Int, val total: Int, val found: Int, val finished: Boolean, val msPerCheck: Int)
+
 abstract class Driver(protected val ip: String, protected val session: Session) {
     abstract fun connect()
     abstract fun close()
@@ -48,7 +51,7 @@ abstract class Driver(protected val ip: String, protected val session: Session) 
      * Searches the TV for installed apps beyond the known list. Reports progress
      * (checked, total, finished) and found apps through [Session.apps]. Returns false if unsupported.
      */
-    open fun deepScanApps(onProgress: (Int, Int, Boolean) -> Unit): Boolean = false
+    open fun deepScanApps(onProgress: (ScanProgress) -> Unit): Boolean = false
     open fun stopScan() {}
 
     /** Turns the TV off; must never turn it on (used by the sleep timer). */

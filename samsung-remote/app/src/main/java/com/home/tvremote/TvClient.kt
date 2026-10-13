@@ -219,8 +219,13 @@ class TvClient private constructor(private val context: Context) {
 
     /** Deep search for installed apps (Samsung); progress arrives as "appScan" messages. */
     fun deepScanApps() = command { d ->
-        val ok = d.deepScanApps { done, total, finished ->
-            main.post { emit(JSONObject().put("type", "appScan").put("done", done).put("total", total).put("finished", finished)) }
+        val ok = d.deepScanApps { p ->
+            main.post {
+                emit(
+                    JSONObject().put("type", "appScan").put("done", p.done).put("total", p.total)
+                        .put("found", p.found).put("finished", p.finished).put("msPerCheck", p.msPerCheck)
+                )
+            }
         }
         if (!ok) toast("חיפוש מעמיק זמין רק בטלוויזיות סמסונג")
     }
