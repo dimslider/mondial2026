@@ -348,7 +348,7 @@
 </div>
 
 <!-- more keys -->
-<div class="sheet" id="sheet-more">
+<div class="sheet tapkeys" id="sheet-more">
   <div class="handle"></div>
   <h2>עוד מקשים</h2>
   <div class="tiles">
@@ -366,6 +366,19 @@
     <button data-key="KEY_PICTURE_SIZE"><b>▭</b>גודל תמונה</button>
     <button data-key="KEY_AMBIENT"><b>✦</b>Ambient</button>
   </div>
+</div>
+
+<!-- voice result -->
+<div class="sheet" id="sheet-voice">
+  <div class="handle"></div>
+  <h2>שמעתי: <span id="voiceText" dir="auto"></span></h2>
+  <p class="note">לא מצאתי אפליקציה בשם הזה. מה לעשות?</p>
+  <div class="tiles" style="grid-template-columns:1fr 1fr">
+    <button onclick="voiceType()"><b>⌨</b>להקליד בטלוויזיה</button>
+    <button id="voiceYt" onclick="voiceYoutube()"><b>▶</b>לחפש ביוטיוב</button>
+  </div>
+  <p class="note" style="margin-top:10px">הקלדה עובדת כשבטלוויזיה פתוח שדה חיפוש או מקלדת.</p>
+  <button class="btn ghost full" style="margin-top:6px" onclick="A.voice()">🎤 לדבר שוב</button>
 </div>
 
 <!-- sleep timer -->
@@ -432,7 +445,7 @@
   <div class="handle"></div>
   <div style="display:flex;align-items:center;justify-content:space-between">
     <h2>אפליקציות</h2>
-    <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="A.refreshApps();toast('מרענן…')">רענן</button>
+    <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="requestApps();renderApps()">רענן</button>
   </div>
   <div class="applist" id="applist"></div>
   <p class="note" style="margin-top:14px">טיפ: לחיצה ארוכה על כפתור קיצור בתחתית השלט מאפשרת לבחור איזו אפליקציה הוא פותח.</p>
@@ -558,29 +571,43 @@
     if (repeatEl) repeatEl.classList.remove('pressed');
     repeatEl = null;
   }
+  // Remote keys fire on touch-down (fast, and hold-to-repeat).
   document.addEventListener('pointerdown', (e) => {
     const el = e.target.closest('[data-key],[data-action],[data-sheet],[data-sleep]');
     if (!el) return;
     stopRepeat();
     repeatEl = el;
     el.classList.add('pressed');
+    // Keys in scrollable panels wait for a completed tap, so scrolling doesn't press them.
+    if (!el.dataset.key || el.closest('.tapkeys')) return;
     buzz();
-    if (el.dataset.key) {
-      send(el.dataset.key);
-      if ('repeat' in el.dataset) {
-        const key = el.dataset.key;
-        repeatTimer = setTimeout(() => {
-          repeatTimer = setInterval(() => { send(key); }, 130);
-        }, 420);
-      }
-    } else if (el.dataset.action) {
-      runAction(el.dataset.action);
-    } else if (el.dataset.sheet) {
-      openSheet(el.dataset.sheet);
-    } else if (el.dataset.sleep) {
-      setSleep(Number(el.dataset.sleep));
+    send(el.dataset.key);
+    if ('repeat' in el.dataset) {
+      const key = el.dataset.key;
+      repeatTimer = setTimeout(() => {
+        repeatTimer = setInterval(() => { send(key); }, 130);
+      }, 420);
     }
   });
+  // Everything that opens a panel or changes the screen fires on a completed tap.
+  // (Opening on touch-down let the tap's own click land on the backdrop and close it again.)
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-action],[data-sheet],[data-sleep],.tapkeys [data-key]');
+    if (!el) return;
+    buzz();
+    if (el.dataset.key) send(el.dataset.key);
+    else if (el.dataset.action) runAction(el.dataset.action);
+    else if (el.dataset.sheet) openSheet(el.dataset.sheet);
+    else if (el.dataset.sleep) setSleep(Number(el.dataset.sleep));
+  });
+  // Swallow a stray click that arrives right after a panel opened (e.g. after a long-press).
+  let sheetOpenedAt = 0;
+  window.addEventListener('click', (e) => {
+    if (Date.now() - sheetOpenedAt < 350 && e.target.closest('.sheet, .scrim')) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+  }, true);
   ['pointerup', 'pointercancel'].forEach((ev) => document.addEventListener(ev, stopRepeat, true));
   document.addEventListener('pointerleave', (e) => { if (e.target === repeatEl) stopRepeat(); }, true);
   window.addEventListener('blur', stopRepeat);
@@ -643,9 +670,10 @@
   /* ---------- sheets ---------- */
   function openSheet(name) {
     closeSheets(true);
+    sheetOpenedAt = Date.now();
     $('sheet-' + name).classList.add('show');
     $('scrim').classList.add('show');
-    if (name === 'apps') { renderApps(); if (!appList().length) A.refreshApps(); }
+    if (name === 'apps') { if (!appList().length) requestApps(); renderApps(); }
     if (name === 'pin') { $('pinInput').value = ''; setTimeout(() => $('pinInput').focus(), 250); }
     if (name === 'settings') renderSettings();
     if (name === 'tvs') renderTvs();
@@ -671,12 +699,25 @@
   }
   function appList() { return S.tvType === 'androidtv' ? ANDROID_TV_APPS : S.apps; }
   const PALETTE = ['#3d8bff', '#9d5cf2', '#e04f3f', '#f3a03c', '#2bb673', '#f2546b', '#5fd3b0', '#c08b4a'];
+  let appsAskedAt = 0, appsAnswered = false;
+  function requestApps() {
+    appsAskedAt = Date.now();
+    appsAnswered = false;
+    A.refreshApps();
+    setTimeout(() => {
+      if ($('sheet-apps').classList.contains('show')) renderApps();
+      if ($('sheet-pick').classList.contains('show')) renderPicker();
+    }, 9000);
+  }
   function renderApps() {
     const box = $('applist');
     $('appsRefresh').style.display = S.tvType === 'androidtv' ? 'none' : '';
     if (!appList().length) {
+      const waiting = !appsAnswered && Date.now() - appsAskedAt < 8500;
       box.innerHTML = '<div class="empty" style="grid-column:1/-1">' +
-        (S.state === 'connected' ? '<span class="spinner"></span> טוען רשימת אפליקציות…' : 'התחבר לטלוויזיה כדי לראות את האפליקציות') + '</div>';
+        (S.state !== 'connected' && !waiting ? 'התחבר לטלוויזיה כדי לראות את האפליקציות'
+          : waiting ? '<span class="spinner"></span> טוען רשימת אפליקציות…'
+          : 'הטלוויזיה לא החזירה רשימת אפליקציות.<br>אפשר ללחוץ "רענן" כדי לנסות שוב.') + '</div>';
       return;
     }
     const apps = appList().slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''));
@@ -714,7 +755,7 @@
     pickSlot = i;
     openSheet('pick');
     renderPicker();
-    if (!appList().length) A.refreshApps();
+    if (!appList().length) requestApps();
   }
   function renderPicker() {
     const known = Object.keys(KNOWN_APPS).map((k) => ({ known: k, name: KNOWN_APPS[k].label }));
@@ -781,6 +822,44 @@
     toast('נשלח');
   }
   $('kbText').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendText(); } });
+
+  /* ---------- voice: open an app by name, otherwise offer to type it ---------- */
+  const VOICE_KNOWN = [
+    ['netflix', ['נטפליקס', 'נטפלקס', 'netflix']],
+    ['youtube', ['יוטיוב', 'יו טיוב', 'יוטוב', 'youtube']],
+    ['spotify', ['ספוטיפיי', 'ספוטיפי', 'spotify']],
+  ];
+  // Hebrew ways of saying app names the TV reports in English.
+  const VOICE_ALIASES = {
+    disney: ['דיסני'], prime: ['פריים', 'אמזון'], 'apple tv': ['אפל'], max: ['מקס'], twitch: ['טוויץ'],
+    plex: ['פלקס'], kids: ['קידס', 'ילדים'], tubi: ['טובי'], pluto: ['פלוטו'], kan: ['כאן'], yes: ['יס'],
+    partner: ['פרטנר'], cellcom: ['סלקום'], hot: ['הוט'], 'tv plus': ['טי וי פלוס'], internet: ['אינטרנט', 'דפדפן'],
+  };
+  let voiceQuery = '';
+  function onVoice(raw) {
+    const text = String(raw || '').trim();
+    if (!text) return;
+    const t = text.toLowerCase().replace(/^(תפתח|פתח|תפעיל|הפעל|תעבור ל|open|launch|start)\s+(את\s+)?/, '').trim();
+    for (const [key, words] of VOICE_KNOWN) {
+      if (words.some((w) => t.includes(w))) { launchKnown(key); toast('פותח ' + KNOWN_APPS[key].label); return; }
+    }
+    const hit = appList().find((a) => {
+      const n = String(a.name || '').toLowerCase();
+      if (n.length >= 3 && t.length >= 3 && (t.includes(n) || n.includes(t))) return true;
+      return Object.entries(VOICE_ALIASES).some(([en, he]) => n.includes(en) && he.some((w) => t.includes(w)));
+    });
+    if (hit) { A.launch(String(hit.appId), Number(hit.app_type) || 2); toast('פותח ' + hit.name); return; }
+    voiceQuery = text;
+    $('voiceText').textContent = text;
+    $('voiceYt').style.display = S.tvType === 'androidtv' ? '' : 'none';
+    openSheet('voice');
+  }
+  function voiceType() { A.text(voiceQuery); toast('נשלח לטלוויזיה'); closeSheets(); }
+  function voiceYoutube() {
+    A.launch('https://www.youtube.com/results?search_query=' + encodeURIComponent(voiceQuery), 0);
+    toast('מחפש ביוטיוב…');
+    closeSheets();
+  }
 
   /* ---------- sleep timer ---------- */
   function setSleep(minutes) {
@@ -1018,6 +1097,7 @@
       }
       case 'apps':
         S.apps = m.apps || [];
+        appsAnswered = true;
         if ($('sheet-apps').classList.contains('show')) renderApps();
         if ($('sheet-pick').classList.contains('show')) renderPicker();
         break;
@@ -1039,8 +1119,7 @@
         onPermission(m);
         break;
       case 'voice':
-        A.text(m.text);
-        toast('נשלח: ' + m.text);
+        onVoice(m.text);
         break;
     }
   };

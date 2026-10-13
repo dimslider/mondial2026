@@ -19,6 +19,9 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
     @Volatile
     private var closedByUs = false
 
+    @Volatile
+    private var appsAnswered = false
+
     override fun connect() {
         val appName = Base64.getEncoder().encodeToString(APP_NAME.toByteArray())
         val url = StringBuilder("wss://$ip:8002/api/v2/channels/samsung.remote.control?name=")
@@ -69,7 +72,11 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             }
 
             "ed.installedApp.get" -> {
-                msg.optJSONObject("data")?.optJSONArray("data")?.let { session.apps(it) }
+                val list = msg.optJSONObject("data")?.optJSONArray("data")
+                if (list != null && list.length() > 0) {
+                    appsAnswered = true
+                    session.apps(list)
+                }
             }
         }
     }
@@ -147,14 +154,41 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
     }
 
     override fun requestApps() {
+        appsAnswered = false
         send(
             JSONObject()
                 .put("method", "ms.channel.emit")
                 .put("params", JSONObject().put("event", "ed.installedApp.get").put("to", "host"))
         )
+        // Many newer firmwares never answer that request. Fall back to asking the REST API
+        // about well-known apps one by one: it only answers for apps that are installed.
+        Thread {
+            Thread.sleep(2500)
+            if (appsAnswered || closedByUs) return@Thread
+            val found = org.json.JSONArray()
+            val names = HashSet<String>()
+            for ((name, id) in KNOWN_APPS) {
+                if (name in names) continue
+                val info = Net.getJson("http://$ip:8001/api/v2/applications/$id") ?: continue
+                names.add(name)
+                found.put(JSONObject().put("appId", id).put("name", info.optString("name").ifEmpty { name }).put("app_type", 2))
+            }
+            if (!appsAnswered && !closedByUs) session.apps(found)
+        }.start()
     }
 
     companion object {
         private const val APP_NAME = "Home Remote"
+
+        /** Tizen app ids of popular apps (some apps have several ids across model years). */
+        val KNOWN_APPS = listOf(
+            "Netflix" to "3201907018807", "Netflix" to "11101200001",
+            "YouTube" to "111299001912", "Spotify" to "3201606009684",
+            "Disney+" to "3201901017640", "Prime Video" to "3201910019365", "Prime Video" to "3201512006785",
+            "Apple TV" to "3201807016597", "Max" to "3202301029760", "HBO Max" to "3201601007230",
+            "YouTube Kids" to "3201611010983", "Twitch" to "3202203026841", "Plex" to "3201512006963",
+            "Samsung TV Plus" to "3201710015037", "Pluto TV" to "3201808016802", "Tubi" to "3201504001965",
+            "Internet" to "org.tizen.browser", "Gallery" to "3201710015067",
+        )
     }
 }

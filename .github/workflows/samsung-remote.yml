@@ -34,6 +34,17 @@ jobs:
       - name: Protocol tests (fake Samsung / LG / Android TV)
         run: gradle -p jvm-tests test --no-daemon
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: UI tests (touch taps through every button and panel)
+        working-directory: samsung-remote/ui-tests
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          node qa.js
+
       - name: Build APK
         run: gradle assembleRelease --no-daemon --stacktrace
 

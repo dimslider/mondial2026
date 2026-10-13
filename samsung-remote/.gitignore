@@ -6,3 +6,5 @@ local.properties
 jvm-tests/.gradle/
 jvm-tests/build/
 jvm-tests/.kotlin/
+ui-tests/node_modules/
+ui-tests/package-lock.json

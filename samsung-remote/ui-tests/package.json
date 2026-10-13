@@ -1,0 +1,6 @@
+{
+  "name": "tv-remote-ui-tests",
+  "private": true,
+  "scripts": { "test": "node qa.js" },
+  "devDependencies": { "playwright": "1.56.1" }
+}

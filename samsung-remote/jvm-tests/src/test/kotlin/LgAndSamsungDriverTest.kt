@@ -105,6 +105,44 @@ class LgAndSamsungDriverTest {
     }
 
     @Test
+    fun samsungAppListFallsBackToRestWhenTvIgnoresTheRequest() {
+        val localhost = HeldCertificate.Builder().addSubjectAlternativeName("127.0.0.1").build()
+        val certs = HandshakeCertificates.Builder().heldCertificate(localhost).build()
+        val ws = MockWebServer()
+        ws.useHttps(certs.sslSocketFactory(), false)
+        ws.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
+            override fun onOpen(webSocket: WebSocket, response: Response) {
+                webSocket.send(JSONObject().put("event", "ms.channel.connect").put("data", JSONObject()).toString())
+            }
+            // never answers ed.installedApp.get, like many newer firmwares
+        }))
+        ws.start(InetAddress.getByName("127.0.0.1"), 8002)
+        val rest = MockWebServer()
+        rest.dispatcher = object : okhttp3.mockwebserver.Dispatcher() {
+            override fun dispatch(request: okhttp3.mockwebserver.RecordedRequest): MockResponse = when (request.path) {
+                "/api/v2/applications/3201907018807" -> MockResponse().setBody("""{"id":"3201907018807","name":"Netflix","running":false}""")
+                "/api/v2/applications/111299001912" -> MockResponse().setBody("""{"id":"111299001912","name":"YouTube"}""")
+                else -> MockResponse().setResponseCode(404)
+            }
+        }
+        rest.start(InetAddress.getByName("127.0.0.1"), 8001)
+        try {
+            val s = TestSession()
+            val d = SamsungDriver("127.0.0.1", s)
+            d.connect()
+            s.await("connected")
+            d.requestApps()
+            s.await("apps:2", 20)
+            val ids = (0 until s.apps!!.length()).map { s.apps!!.getJSONObject(it).getString("appId") }
+            assertEquals(listOf("3201907018807", "111299001912"), ids)
+            d.close()
+        } finally {
+            ws.shutdown()
+            rest.shutdown()
+        }
+    }
+
+    @Test
     fun samsungUsesTokenAndSendsKeys() {
         val localhost = HeldCertificate.Builder().addSubjectAlternativeName("127.0.0.1").build()
         val certs = HandshakeCertificates.Builder().heldCertificate(localhost).build()

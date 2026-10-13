@@ -102,6 +102,15 @@ object Net {
         return name.trim().ifEmpty { "Android TV" } to mac
     }
 
+    /** GET [url] on the LAN; returns the JSON body, or null if the request failed or wasn't 2xx. */
+    fun getJson(url: String): JSONObject? = try {
+        probe.newCall(Request.Builder().url(url).build()).execute().use { r ->
+            if (r.isSuccessful) JSONObject(r.body?.string().orEmpty().ifEmpty { "{}" }) else null
+        }
+    } catch (_: Exception) {
+        null
+    }
+
     fun portOpen(ip: String, port: Int, timeoutMs: Int): Boolean = try {
         Socket().use { it.connect(InetSocketAddress(ip, port), timeoutMs) }
         true
