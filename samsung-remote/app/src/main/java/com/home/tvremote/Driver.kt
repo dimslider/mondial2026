@@ -40,6 +40,11 @@ abstract class Driver(protected val ip: String, protected val session: Session) 
     /** [appId] is a Samsung app id, an LG app id or an Android TV app link, depending on the driver. */
     abstract fun launch(appId: String, appType: Int)
     open fun requestApps() {}
+
+    /** Turns the TV off; must never turn it on (used by the sleep timer). */
+    open fun powerOff() {
+        key("KEY_POWER")
+    }
     open fun submitPin(pin: String) {}
 
     companion object {

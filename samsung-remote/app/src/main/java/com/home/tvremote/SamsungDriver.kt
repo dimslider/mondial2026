@@ -138,6 +138,14 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
         }.start()
     }
 
+    override fun powerOff() {
+        // KEY_POWER toggles, and some models keep this socket open in standby: check first.
+        Thread {
+            val power = Net.samsungInfo(ip)?.optString("power").orEmpty()
+            if (power.isEmpty() || power == "on") key("KEY_POWER")
+        }.start()
+    }
+
     override fun requestApps() {
         send(
             JSONObject()

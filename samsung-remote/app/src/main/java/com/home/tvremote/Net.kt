@@ -42,8 +42,8 @@ object Net {
         .callTimeout(3, TimeUnit.SECONDS)
         .build()
 
-    private fun device(type: String, ip: String, name: String, model: String = "", mac: String = "") =
-        JSONObject().put("type", type).put("ip", ip).put("name", name).put("model", model).put("mac", mac)
+    private fun device(type: String, ip: String, name: String, model: String = "", mac: String = "", power: String = "") =
+        JSONObject().put("type", type).put("ip", ip).put("name", name).put("model", model).put("mac", mac).put("power", power)
 
     /** Samsung: http://ip:8001/api/v2/ — null when no Samsung TV answers at that address. */
     fun samsungInfo(ip: String): JSONObject? {
@@ -54,7 +54,7 @@ object Net {
                 val j = JSONObject(r.body?.string() ?: return null)
                 val d = j.optJSONObject("device") ?: return null
                 val name = d.optString("name").ifEmpty { j.optString("name") }.ifEmpty { "Samsung TV" }
-                device(Driver.SAMSUNG, ip, name, d.optString("modelName"), d.optString("wifiMac"))
+                device(Driver.SAMSUNG, ip, name, d.optString("modelName"), d.optString("wifiMac"), d.optString("PowerState"))
             }
         } catch (e: Exception) {
             null

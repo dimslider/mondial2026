@@ -195,6 +195,10 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
         return true
     }
 
+    override fun powerOff() {
+        key("KEY_SLEEP") // KEYCODE_SLEEP only ever puts the device to sleep
+    }
+
     /** [appId] is an app link ("https://www.netflix.com/title") or a package name. */
     override fun launch(appId: String, appType: Int) {
         val link = if (appId.contains(":")) appId else "market://launch?id=$appId"

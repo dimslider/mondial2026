@@ -2,14 +2,18 @@ package com.home.tvremote
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.speech.RecognizerIntent
 import android.view.KeyEvent
 import android.view.View
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
 import org.json.JSONObject
+import java.util.Collections
 
 class MainActivity : Activity() {
 
@@ -17,6 +21,7 @@ class MainActivity : Activity() {
     private lateinit var tv: TvClient
     private val ui by lazy { getSharedPreferences("ui", MODE_PRIVATE) }
     private val vibrator by lazy { getSystemService(Vibrator::class.java) }
+    private val listener: (JSONObject) -> Unit = { msg -> toJs(msg) }
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +33,7 @@ class MainActivity : Activity() {
         web.settings.javaScriptEnabled = true
         web.settings.domStorageEnabled = true
 
-        tv = TvClient(this) { msg -> toJs(msg) }
+        tv = TvClient.get(this)
         web.addJavascriptInterface(Bridge(), "Android")
         setContentView(web)
         web.loadUrl("file:///android_asset/remote.html")
@@ -42,12 +47,14 @@ class MainActivity : Activity() {
 
     override fun onStart() {
         super.onStart()
-        tv.start()
+        tv.addListener(listener)
+        tv.acquire("screen")
     }
 
     override fun onStop() {
         super.onStop()
-        tv.stop()
+        tv.removeListener(listener)
+        tv.release("screen")
     }
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
@@ -68,6 +75,28 @@ class MainActivity : Activity() {
         web.evaluateJavascript("window.handleBack?handleBack():false") { result ->
             if (result != "true") finish()
         }
+    }
+
+    private fun startVoice() {
+        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            .putExtra(RecognizerIntent.EXTRA_PROMPT, "מה לחפש בטלוויזיה?")
+            .putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1)
+        try {
+            @Suppress("DEPRECATION")
+            startActivityForResult(intent, VOICE_REQUEST)
+        } catch (e: ActivityNotFoundException) {
+            toJs(JSONObject().put("type", "toast").put("text", "זיהוי דיבור לא זמין בטלפון הזה"))
+        }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        @Suppress("DEPRECATION")
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode != VOICE_REQUEST || resultCode != RESULT_OK) return
+        val text = data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull() ?: return
+        toJs(JSONObject().put("type", "voice").put("text", text))
     }
 
     @Suppress("unused")
@@ -100,7 +129,25 @@ class MainActivity : Activity() {
         fun selectTv(ip: String, type: String, name: String, mac: String) = tv.setTv(ip, type, name, mac)
 
         @JavascriptInterface
+        fun switchTv(ip: String) = tv.selectTv(ip)
+
+        @JavascriptInterface
+        fun renameTv(ip: String, label: String) = tv.renameTv(ip, label)
+
+        @JavascriptInterface
+        fun removeTv(ip: String) = tv.removeTv(ip)
+
+        @JavascriptInterface
         fun submitPin(pin: String) = tv.submitPin(pin)
+
+        @JavascriptInterface
+        fun voice() = runOnUiThread { startVoice() }
+
+        @JavascriptInterface
+        fun sleepTimer(minutes: Int) {
+            if (minutes > 0) SleepTimer.set(this@MainActivity, minutes) else SleepTimer.cancel(this@MainActivity)
+            tv.requestStatus()
+        }
 
         @JavascriptInterface
         fun connectIp(ip: String) {
@@ -116,7 +163,7 @@ class MainActivity : Activity() {
 
         @JavascriptInterface
         fun scan() {
-            val found = java.util.Collections.synchronizedSet(HashSet<String>())
+            val found = Collections.synchronizedSet(HashSet<String>())
             Net.scan(
                 identity = { tv.identity() },
                 onFound = { dev ->
@@ -151,5 +198,9 @@ class MainActivity : Activity() {
         } catch (_: Exception) {
             ""
         }
+    }
+
+    companion object {
+        private const val VOICE_REQUEST = 7
     }
 }

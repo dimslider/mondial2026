@@ -5,7 +5,8 @@ plugins { kotlin("jvm") version "1.9.24" }
 sourceSets {
     main {
         kotlin.srcDir("../app/src/main/java/com/home/tvremote")
-        kotlin.exclude("**/MainActivity.kt", "**/TvClient.kt")
+        // Only the protocol code: everything else uses Android APIs.
+        kotlin.include("**/Proto.kt", "**/Certs.kt", "**/Net.kt", "**/Driver.kt", "**/*Driver.kt")
     }
 }
 

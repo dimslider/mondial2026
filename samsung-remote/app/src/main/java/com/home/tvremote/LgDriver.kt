@@ -111,7 +111,7 @@ class LgDriver(ip: String, session: Session) : Driver(ip, session) {
 
                 "error" -> {
                     closedByUs = true
-                    ws?.close(1000, null)
+                    ws?.cancel()
                     session.denied()
                 }
             }

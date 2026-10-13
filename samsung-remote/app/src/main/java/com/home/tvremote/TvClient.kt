@@ -6,19 +6,30 @@ import android.os.Looper
 import android.os.SystemClock
 import org.json.JSONArray
 import org.json.JSONObject
+import java.util.concurrent.CopyOnWriteArrayList
 
 /**
- * Owns the connection to the selected TV: state machine, reconnects, queued commands.
+ * Owns the connection to the selected TV: saved TVs, state machine, reconnects, queued commands.
+ * One instance per process, shared by the remote screen, the notification, the widget and timers.
  * The brand-specific protocol lives in a [Driver]. All state is touched only on the main thread.
  */
-class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
+class TvClient private constructor(context: Context) {
+
+    companion object {
+        @Volatile
+        private var instance: TvClient? = null
+
+        fun get(context: Context): TvClient =
+            instance ?: synchronized(this) { instance ?: TvClient(context.applicationContext).also { instance = it } }
+    }
 
     private val prefs = context.getSharedPreferences("tv", Context.MODE_PRIVATE)
     private val main = Handler(Looper.getMainLooper())
+    private val listeners = CopyOnWriteArrayList<(JSONObject) -> Unit>()
+    private val holders = HashSet<String>()
     private var driver: Driver? = null
     private var generation = 0
     private var attempt = 0
-    private var active = false
     private var state = "idle"
     private val pending = ArrayList<Pair<Long, (Driver) -> Unit>>()
 
@@ -27,12 +38,24 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
     private val mac: String? get() = prefs.getString("mac", null)
     private val name: String? get() = prefs.getString("name", null)
     val isConnected: Boolean get() = state == "connected"
+    val stateName: String get() = state
 
-    private val retry = Runnable { if (active) connect() }
+    /** Short name for the current TV: the user's label, else the TV's own name. */
+    val displayName: String
+        get() = savedTvs().let { list ->
+            (0 until list.length()).map { list.getJSONObject(it) }.firstOrNull { it.optString("ip") == ip }
+                ?.optString("label")?.takeIf { it.isNotEmpty() }
+        } ?: name ?: "TV"
+
+    private val retry = Runnable { if (holders.isNotEmpty()) connect() }
 
     private fun post(block: () -> Unit) {
         main.post { block() }
     }
+
+    fun addListener(l: (JSONObject) -> Unit) = listeners.add(l)
+    fun removeListener(l: (JSONObject) -> Unit) = listeners.remove(l)
+    private fun emit(j: JSONObject) = listeners.forEach { it(j) }
 
     /** Storage shared with drivers: keys starting with "@" are global, the rest are per TV. */
     private fun storeKey(key: String, forType: String, forIp: String): String =
@@ -52,18 +75,26 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
         }
     })
 
-    fun start() = post {
-        active = true
+    // ------------------------------------------------------------ lifecycle
+
+    /** Something wants the connection kept open (the remote screen, the notification...). */
+    fun acquire(tag: String) = post {
+        holders.add(tag)
         if (driver == null && state != "denied") connect() else emitStatus()
     }
 
-    fun stop() = post {
-        active = false
+    fun release(tag: String) = post {
+        holders.remove(tag)
+        if (holders.isEmpty()) disconnect()
+    }
+
+    private fun disconnect() {
         main.removeCallbacks(retry)
         generation++
         driver?.close()
         driver = null
         if (state != "noTv") state = "idle"
+        emitStatus()
     }
 
     fun reconnect() = post {
@@ -73,15 +104,80 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
 
     fun requestStatus() = post { emitStatus() }
 
+    // ------------------------------------------------------------ saved TVs
+
+    fun savedTvs(): JSONArray {
+        prefs.getString("tvs", null)?.let {
+            try {
+                return JSONArray(it)
+            } catch (_: Exception) {
+            }
+        }
+        // Versions before the TV list kept only the current TV.
+        val list = JSONArray()
+        ip?.let { list.put(JSONObject().put("ip", it).put("type", type).put("name", name ?: "TV").put("label", "").put("mac", mac ?: "")) }
+        return list
+    }
+
+    private fun saveTvs(list: JSONArray) {
+        prefs.edit().putString("tvs", list.toString()).apply()
+    }
+
+    private fun updateSaved(ip: String, change: (JSONObject) -> Unit) {
+        val list = savedTvs()
+        for (i in 0 until list.length()) if (list.getJSONObject(i).optString("ip") == ip) change(list.getJSONObject(i))
+        saveTvs(list)
+    }
+
+    /** Adds (or updates) a TV and makes it the current one. */
     fun setTv(ip: String, type: String, name: String?, mac: String?) = post {
+        val list = savedTvs()
+        var entry: JSONObject? = null
+        for (i in 0 until list.length()) if (list.getJSONObject(i).optString("ip") == ip) entry = list.getJSONObject(i)
+        if (entry == null) entry = JSONObject().put("ip", ip).put("label", "").also { list.put(it) }
+        entry.put("type", type).put("name", name ?: "TV")
+        if (!mac.isNullOrEmpty()) entry.put("mac", mac)
+        saveTvs(list)
+        switchTo(entry)
+    }
+
+    /** Switches to a TV from the saved list. */
+    fun selectTv(ip: String) = post {
+        val list = savedTvs()
+        for (i in 0 until list.length()) if (list.getJSONObject(i).optString("ip") == ip) switchTo(list.getJSONObject(i))
+    }
+
+    private fun switchTo(tv: JSONObject) {
         prefs.edit()
-            .putString("ip", ip)
-            .putString("type", type)
-            .putString("name", name ?: "TV")
-            .putString("mac", mac ?: "")
+            .putString("ip", tv.optString("ip"))
+            .putString("type", tv.optString("type", Driver.SAMSUNG))
+            .putString("name", tv.optString("name", "TV"))
+            .putString("mac", tv.optString("mac", ""))
             .apply()
+        pending.clear()
         attempt = 0
         connect()
+    }
+
+    fun renameTv(ip: String, label: String) = post {
+        updateSaved(ip) { it.put("label", label.trim()) }
+        emitStatus()
+    }
+
+    fun removeTv(ip: String) = post {
+        val list = savedTvs()
+        val kept = JSONArray()
+        for (i in 0 until list.length()) list.getJSONObject(i).let { if (it.optString("ip") != ip) kept.put(it) }
+        saveTvs(kept)
+        prefs.edit().apply { prefs.all.keys.filter { it.contains(":$ip:") || it == "token_$ip" }.forEach { remove(it) } }.apply()
+        if (ip == this.ip) {
+            if (kept.length() > 0) switchTo(kept.getJSONObject(0))
+            else {
+                prefs.edit().remove("ip").remove("type").remove("name").remove("mac").apply()
+                disconnect()
+                setState("noTv")
+            }
+        } else emitStatus()
     }
 
     fun resetPairing() = post {
@@ -90,6 +186,8 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
         attempt = 0
         connect()
     }
+
+    // ------------------------------------------------------------ commands
 
     fun submitPin(pin: String) = post { driver?.submitPin(pin) }
 
@@ -104,6 +202,9 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
     fun launchApp(appId: String, appType: Int) = command { it.launch(appId, appType) }
 
     fun requestApps() = command { it.requestApps() }
+
+    /** Turns the TV off without ever turning it on (sleep timer). */
+    fun powerOff() = command { it.powerOff() }
 
     fun power() = post {
         if (isConnected) {
@@ -139,6 +240,8 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
         pending.add(SystemClock.elapsedRealtime() to action)
         while (pending.size > 10) pending.removeAt(0)
     }
+
+    // ------------------------------------------------------------ connection
 
     private fun connect() {
         main.removeCallbacks(retry)
@@ -179,7 +282,10 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
         override fun apps(list: JSONArray) = onMain { emit(JSONObject().put("type", "apps").put("apps", list)) }
 
         override fun macAddress(mac: String) = onMain {
-            if (mac.isNotEmpty() && mac != this@TvClient.mac) prefs.edit().putString("mac", mac).apply()
+            if (mac.isNotEmpty() && mac != this@TvClient.mac) {
+                prefs.edit().putString("mac", mac).apply()
+                updateSaved(tvIp) { it.put("mac", mac) }
+            }
         }
 
         override fun toast(text: String) = onMain { this@TvClient.toast(text) }
@@ -204,7 +310,11 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
     private fun dropped() {
         driver?.close()
         driver = null
-        if (!active || state == "denied") return
+        if (holders.isEmpty() || state == "denied") {
+            state = "idle"
+            emitStatus()
+            return
+        }
         attempt++
         setState("reconnecting")
         val delay = minOf(8000L, 500L shl minOf(attempt, 4))
@@ -224,7 +334,10 @@ class TvClient(context: Context, private val emit: (JSONObject) -> Unit) {
                 .put("ip", ip ?: "")
                 .put("tvType", if (ip == null) "" else type)
                 .put("name", name ?: "")
+                .put("label", if (ip == null) "" else displayName)
                 .put("mac", mac ?: "")
+                .put("tvs", savedTvs())
+                .put("sleepAt", SleepTimer.endsAt(prefs))
         )
     }
 
