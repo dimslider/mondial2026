@@ -59,6 +59,33 @@ class DeepScanTest {
     }
 
     @Test
+    fun resumesWhereTheLastScanStopped() {
+        val asked = java.util.Collections.synchronizedSet(HashSet<String>())
+        val rest = MockWebServer()
+        rest.dispatcher = object : Dispatcher() {
+            override fun dispatch(request: RecordedRequest): MockResponse {
+                asked.add(request.path!!.substringAfterLast('/'))
+                return MockResponse().setResponseCode(404)
+            }
+        }
+        rest.start(InetAddress.getByName("127.0.0.1"), 8001)
+        try {
+            val ranges = "2009:21590:21610"
+            val s = TestSession().apply { storage["scanPos:" + ranges.hashCode()] = "15" }
+            val progress = LinkedBlockingQueue<ScanProgress>()
+            SamsungDriver("127.0.0.1", s).deepScan(ranges) { progress.add(it) }
+            assertEquals(15, progress.poll(10, TimeUnit.SECONDS)!!.done)
+            var last: ScanProgress
+            do { last = progress.poll(30, TimeUnit.SECONDS)!! } while (!last.finished)
+            assertEquals(21, last.done)
+            assertEquals((21605..21610).map { "32020090$it" }.toSet(), asked.toSet())
+            assertEquals(null, s.storage["scanPos:" + ranges.hashCode()], "a finished scan forgets its position")
+        } finally {
+            rest.shutdown()
+        }
+    }
+
+    @Test
     fun givesUpWhenTheTvStopsAnswering() {
         val s = TestSession()
         val progress = LinkedBlockingQueue<ScanProgress>()

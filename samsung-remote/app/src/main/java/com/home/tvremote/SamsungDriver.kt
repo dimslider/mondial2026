@@ -263,8 +263,11 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             val known = HashSet<String>()
             merged().let { for (i in 0 until it.length()) known.add(it.getJSONObject(i).getString("appId")) }
             for ((_, id) in KNOWN_APPS) known.add(id)
-            val next = java.util.concurrent.atomic.AtomicInteger(0)
-            val done = java.util.concurrent.atomic.AtomicInteger(0)
+            // Resume where an earlier scan of the same ranges stopped.
+            val key = "scanPos:" + ranges.hashCode()
+            val resumeAt = (session.load(key)?.toIntOrNull() ?: 0).coerceIn(0, ids.size)
+            val next = java.util.concurrent.atomic.AtomicInteger(resumeAt)
+            val done = java.util.concurrent.atomic.AtomicInteger(resumeAt)
             val failures = java.util.concurrent.atomic.AtomicInteger(0)
             val foundCount = java.util.concurrent.atomic.AtomicInteger(0)
             val totalMs = java.util.concurrent.atomic.AtomicLong(0)
@@ -273,11 +276,12 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             fun report(finished: Boolean) {
                 val d = done.get()
                 // Wall-clock time per check, all workers together: what the user actually waits.
-                val ms = if (d == 0) 0 else ((System.currentTimeMillis() - started) / d).toInt()
+                val checked = d - resumeAt
+                val ms = if (checked <= 0) 0 else ((System.currentTimeMillis() - started) / checked).toInt()
                 onProgress(ScanProgress(d, ids.size, foundCount.get(), finished, ms))
             }
-            session.log("deep scan: ${ids.size} ids")
-            onProgress(ScanProgress(0, ids.size, 0, false, 0))
+            session.log("deep scan: ${ids.size} ids, starting at $resumeAt")
+            onProgress(ScanProgress(resumeAt, ids.size, 0, false, 0))
             val workers = (1..WORKERS).map {
                 Thread {
                     while (scanning && !closedByUs) {
@@ -312,6 +316,8 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
                         val now = System.currentTimeMillis()
                         if (now - lastReport > 1000) {
                             lastReport = now
+                            // Everything below next - WORKERS has been checked: safe resume point.
+                            session.store(key, maxOf(resumeAt, next.get() - WORKERS).toString())
                             report(false)
                         }
                     }
@@ -320,6 +326,7 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             workers.forEach { it.join() }
             val stoppedEarly = scanning.not() && done.get() < ids.size
             scanning = false
+            session.store(key, if (stoppedEarly) maxOf(resumeAt, next.get() - WORKERS).coerceAtMost(ids.size).toString() else null)
             val avg = if (done.get() == 0) 0 else totalMs.get() / done.get()
             session.log("deep scan ${if (stoppedEarly) "stopped" else "finished"} after ${done.get()} ids, ${foundCount.get()} found, avg ${avg}ms per request")
             report(true)
@@ -329,7 +336,7 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
 
     companion object {
         private const val APP_NAME = "Home Remote"
-        private const val WORKERS = 16
+        private const val WORKERS = 8
 
         /** Tizen app ids of popular apps (some apps have several ids across model years). */
         val KNOWN_APPS = listOf(

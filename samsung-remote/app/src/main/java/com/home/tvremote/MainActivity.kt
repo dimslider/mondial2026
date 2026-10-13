@@ -222,6 +222,13 @@ class MainActivity : Activity() {
             toJs(JSONObject().put("type", "toast").put("text", "המידע הועתק – אפשר להדביק בצ'אט"))
         }
 
+        /** Keeps the screen on (long app scans stop when the phone goes to sleep). */
+        @JavascriptInterface
+        fun keepScreenOn(on: Boolean) = runOnUiThread {
+            if (on) window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            else window.clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+
         @JavascriptInterface
         fun haptic() {
             try {

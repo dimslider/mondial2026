@@ -131,6 +131,26 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     await p.tap('#pickList [data-pick="3"]'); await p.waitForTimeout(300);
     check('picker saves slot', JSON.stringify(await sent('setPref')).includes('slots:10.0.0.5'));
 
+    // 5b. recorded shortcut: record keys, name it, replay by tap and by voice
+    await reset();
+    await p.dispatchEvent('[data-slot="2"]', 'pointerdown'); await p.waitForTimeout(700);
+    await p.dispatchEvent('[data-slot="2"]', 'pointerup'); await p.waitForTimeout(450);
+    await p.tap('#sheet-pick .btn'); await p.waitForTimeout(300);
+    check('recording bar shown', await p.evaluate(() => document.getElementById('recbar').classList.contains('show')));
+    for (const k of ['KEY_HOME', 'KEY_RIGHT', 'KEY_RIGHT', 'KEY_ENTER']) await p.tap(`.app [data-key="${k}"]`);
+    await calls();
+    await p.tap('#recbar .btn:not(.ghost)'); await p.waitForTimeout(450);
+    check('name sheet opens', (await open()) === 'macro', await open());
+    await p.fill('#macroName', 'STING'); await p.tap('#sheet-macro .btn');
+    const savedSlots = (await sent('setPref')).filter(a => a[0].startsWith('slots:')).map(a => JSON.parse(a[1])).pop() || [];
+    check('macro saved', JSON.stringify(savedSlots[2]) === JSON.stringify({ name: 'STING', macro: ['KEY_HOME', 'KEY_RIGHT', 'KEY_RIGHT', 'KEY_ENTER'] }), JSON.stringify(savedSlots));
+    check('macro tile label', (await p.textContent('[data-slot="2"]')).includes('STING'));
+    await p.waitForTimeout(400);
+    await p.tap('[data-slot="2"]'); await p.waitForTimeout(3600);
+    check('macro replays keys', JSON.stringify((await sent('key')).map(k => k[0])) === JSON.stringify(['KEY_HOME', 'KEY_RIGHT', 'KEY_RIGHT', 'KEY_ENTER']));
+    await p.evaluate(() => onTv({ type: 'voice', text: 'תפתח סטינג' })); await p.waitForTimeout(3600);
+    check('voice plays macro (Hebrew alias)', (await sent('key')).length === 4);
+
     // 6. TV switcher
     await reset(); await p.tap('#status'); await p.waitForTimeout(450);
     check('status opens tvs', (await open()) === 'tvs', await open());

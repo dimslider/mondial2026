@@ -201,6 +201,14 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%); }
 
+  .recbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 30; display: none; align-items: center; gap: 8px;
+    padding: 10px 14px; background: #3a1d22; color: #fff; font-size: 14px; direction: rtl;
+  }
+  .recbar.show { display: flex; }
+  .recbar span:nth-child(2) { flex: 1; }
+  .recbar .btn { padding: 8px 12px; font-size: 14px; }
+  .recdot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); animation: pulse .8s infinite alternate; }
   .bar-track { height: 6px; border-radius: 3px; background: var(--bg); margin-top: 10px; overflow: hidden; }
   .bar-track i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
   .seg.mini { padding: 3px; gap: 2px; border-radius: 12px; background: var(--bg); flex: none; }
@@ -330,6 +338,12 @@
   </div>
 </div>
 
+<div class="recbar" id="recbar">
+  <span class="recdot"></span><span id="recText">מקליט… לחץ על הכפתורים בשלט</span>
+  <button class="btn" onclick="finishRecording()">סיום</button>
+  <button class="btn ghost" onclick="cancelRecording()">ביטול</button>
+</div>
+
 <div class="scrim" id="scrim" onclick="closeSheets()"></div>
 
 <!-- numbers & colors -->
@@ -383,6 +397,18 @@
   <button class="btn ghost full" style="margin-top:6px" onclick="A.voice()">🎤 לדבר שוב</button>
 </div>
 
+<!-- name a recorded shortcut -->
+<div class="sheet" id="sheet-macro">
+  <div class="handle"></div>
+  <h2>שם לקיצור</h2>
+  <p class="note" id="macroInfo"></p>
+  <div class="inrow">
+    <input type="text" id="macroName" placeholder="למשל: STING" style="direction:rtl;text-align:right" autocomplete="off">
+    <button class="btn" onclick="saveMacro()">שמור</button>
+  </div>
+  <p class="note" style="margin-top:10px">לחיצה על הקיצור, או אמירת השם בחיפוש הקולי, תפעיל את אותו רצף מקשים.</p>
+</div>
+
 <!-- sleep timer -->
 <div class="sheet" id="sheet-sleep">
   <div class="handle"></div>
@@ -411,6 +437,7 @@
 <div class="sheet" id="sheet-pick">
   <div class="handle"></div>
   <h2>בחר אפליקציה לכפתור</h2>
+  <button class="btn ghost full" style="margin-bottom:14px" onclick="startRecording()">🎬 הקלט רצף מקשים (לכל אפליקציה)</button>
   <div class="applist" id="pickList"></div>
   <button class="btn ghost full" style="margin-top:14px" onclick="resetSlot()">החזר לברירת המחדל</button>
 </div>
@@ -451,7 +478,7 @@
   </div>
   <div class="applist" id="applist"></div>
   <div id="deepScan" class="card" style="margin-top:14px">
-    <div class="note" id="deepScanText">חסרה אפליקציה? חיפוש מעמיק בודק בטלוויזיה אלפי מזהי אפליקציות ומוסיף לרשימה את מה שמותקן (כמה דקות, אפשר לעצור בכל רגע).</div>
+    <div class="note" id="deepScanText">חסרה אפליקציה? חיפוש מעמיק בודק בטלוויזיה אלפי מזהי אפליקציות ומוסיף לרשימה את מה שמותקן. המסך יישאר דלוק בזמן החיפוש; אפשר לעצור ולהמשיך מאותה נקודה. דרך מהירה יותר: לחיצה ארוכה על כפתור קיצור ← "הקלט רצף מקשים".</div>
     <div class="bar-track" id="deepScanBar" style="display:none"><i></i></div>
     <button class="btn ghost full" id="deepScanBtn" style="margin-top:10px" onclick="toggleDeepScan()">🔍 חיפוש מעמיק</button>
   </div>
@@ -561,7 +588,14 @@
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
   function buzz() { if (pref.haptic) A.haptic(); }
-  function send(key) { A.key(key); }
+  let recording = null; // { slot, keys: [] } while recording a shortcut
+  function send(key) {
+    A.key(key);
+    if (recording) {
+      recording.keys.push(key);
+      $('recText').textContent = 'מקליט… ' + recording.keys.length + ' מקשים';
+    }
+  }
 
   let toastTimer;
   function toast(text) {
@@ -694,6 +728,7 @@
     if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
   }
   window.handleBack = function () {
+    if (recording && $('recbar').classList.contains('show')) { cancelRecording(); return true; }
     if (document.querySelector('.sheet.show')) { closeSheets(); return true; }
     return false;
   };
@@ -725,6 +760,7 @@
     $('deepScanBar').style.display = '';
     $('deepScanText').textContent = 'מתחיל חיפוש…';
     $('deepScanBtn').textContent = 'עצור';
+    A.keepScreenOn(true);
     A.deepScanApps();
   }
   const fmt = (n) => Number(n).toLocaleString('he-IL');
@@ -735,6 +771,7 @@
     const found = m.found ? ' · נמצאו ' + m.found + ' חדשות' : '';
     if (m.finished) {
       deepScanning = false;
+      A.keepScreenOn(false);
       $('deepScanBtn').textContent = '🔍 חיפוש מעמיק';
       $('deepScanText').textContent = (m.done < m.total ? 'החיפוש נעצר' : 'החיפוש הסתיים') + ' אחרי ' + fmt(m.done) + ' בדיקות' +
         (m.found ? ' · נמצאו ' + m.found + ' אפליקציות חדשות (נשמרו)' : ' · לא נמצאו אפליקציות חדשות');
@@ -789,8 +826,50 @@
   function launchSlot(i) {
     const slot = slots()[i];
     if (typeof slot === 'string') launchKnown(slot);
+    else if (slot.macro) playMacro(slot.macro, slot.name);
     else A.launch(String(slot.appId), Number(slot.appType) || 2);
   }
+
+  /* ---------- recorded shortcuts (macros) ---------- */
+  let macroPlaying = false;
+  function playMacro(keys, name) {
+    if (macroPlaying) return;
+    macroPlaying = true;
+    toast('מפעיל ' + name + '…');
+    let t = 0;
+    keys.forEach((k, idx) => {
+      setTimeout(() => { A.key(k); if (idx === keys.length - 1) macroPlaying = false; }, t);
+      // Home and Back redraw whole screens on the TV: give them time.
+      t += (k === 'KEY_HOME' || k === 'KEY_RETURN') ? 1800 : 550;
+    });
+    if (!keys.length) macroPlaying = false;
+  }
+  function startRecording() {
+    recording = { slot: pickSlot, keys: [] };
+    closeSheets();
+    $('recText').textContent = 'מקליט… לחץ על הכפתורים בשלט (למשל: בית ← חיצים ← OK)';
+    $('recbar').classList.add('show');
+  }
+  function cancelRecording() { recording = null; $('recbar').classList.remove('show'); }
+  function finishRecording() {
+    $('recbar').classList.remove('show');
+    if (!recording || !recording.keys.length) { recording = null; toast('לא הוקלטו מקשים'); return; }
+    $('macroInfo').textContent = 'הוקלטו ' + recording.keys.length + ' מקשים.';
+    $('macroName').value = '';
+    openSheet('macro');
+    setTimeout(() => $('macroName').focus(), 250);
+  }
+  function saveMacro() {
+    const name = $('macroName').value.trim();
+    if (!name) { toast('צריך שם לקיצור'); return; }
+    const v = slots();
+    v[recording.slot] = { name, macro: recording.keys.slice() };
+    saveSlots(v);
+    recording = null;
+    toast('הקיצור "' + name + '" נשמר');
+    closeSheets();
+  }
+  $('macroName').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); saveMacro(); } });
   let pickSlot = 0;
   function openPicker(i) {
     pickSlot = i;
@@ -884,18 +963,22 @@
     const w = word.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     return new RegExp('(^|[\\s,.!?])[והבלמשכ]?' + w + '($|[\\s,.!?])').test(text);
   }
+  // Does the spoken text name this app/shortcut? Direct match, or a Hebrew alias of its English name.
+  function voiceMatches(t, name) {
+    const n = String(name || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+    if (n.length >= 2 && t.length >= 2 && (hasWord(t, n) || hasWord(n, t))) return true;
+    return Object.entries(VOICE_ALIASES).some(([en, he]) => hasWord(n, en) && he.some((w) => hasWord(t, w)));
+  }
   function onVoice(raw) {
     const text = String(raw || '').trim();
     if (!text) return;
     const t = text.toLowerCase().replace(/^(תפתח|פתח|תפעיל|הפעל|תעבור ל|open|launch|start)\s+(את\s+)?/, '').trim();
+    const macro = slots().find((sl) => sl && sl.macro && voiceMatches(t, sl.name));
+    if (macro) { playMacro(macro.macro, macro.name); return; }
     for (const [key, words] of VOICE_KNOWN) {
       if (words.some((w) => hasWord(t, w))) { launchKnown(key); toast('פותח ' + KNOWN_APPS[key].label); return; }
     }
-    const hit = appList().find((a) => {
-      const n = String(a.name || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
-      if (n.length >= 3 && t.length >= 3 && (hasWord(t, n) || hasWord(n, t))) return true;
-      return Object.entries(VOICE_ALIASES).some(([en, he]) => hasWord(n, en) && he.some((w) => hasWord(t, w)));
-    });
+    const hit = appList().find((a) => voiceMatches(t, a.name));
     if (hit) { A.launch(String(hit.appId), Number(hit.app_type) || 2); toast('פותח ' + hit.name); return; }
     voiceQuery = text;
     $('voiceText').textContent = text;

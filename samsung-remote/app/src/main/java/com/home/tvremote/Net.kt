@@ -102,9 +102,16 @@ object Net {
         return name.trim().ifEmpty { "Android TV" } to mac
     }
 
+    // Some TVs take 1-2 s to answer app-status requests, more under load.
+    private val slowProbe: OkHttpClient = probe.newBuilder()
+        .connectTimeout(2, TimeUnit.SECONDS)
+        .readTimeout(6, TimeUnit.SECONDS)
+        .callTimeout(8, TimeUnit.SECONDS)
+        .build()
+
     /** GET [url] on the LAN: HTTP status (-1 if no answer) and body. */
     fun httpGet(url: String): Pair<Int, String> = try {
-        probe.newCall(Request.Builder().url(url).build()).execute().use { r -> r.code to r.body?.string().orEmpty() }
+        slowProbe.newCall(Request.Builder().url(url).build()).execute().use { r -> r.code to r.body?.string().orEmpty() }
     } catch (e: Exception) {
         -1 to (e.javaClass.simpleName + ": " + e.message)
     }
