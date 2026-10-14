@@ -520,58 +520,126 @@
 
   // ---------- views ----------
   // דף הבית: ביקור ראשון = כריכה שהופכת למסלול. מי שכבר ענה על השאלון = התחנות שלו.
+  // ---------- דף הבית ----------
+  // לפי צורך, בשפה של האדם (לא "ים/אדמה"): כל כפתור הוא סינון של המאגר
+  const NEEDS = [
+    { k: "talk", label: "לדבר עם מישהו", test: s => s.category === "hotlines" || s.kind === "treatment" && (s.category === "mental-health" || arr(s.difficulties).some(d => MENTAL.includes(d))) },
+    { k: "sleep", label: "לישון טוב יותר", test: s => s.category !== "hotlines" && arr(s.difficulties).includes("sleep") },
+    { k: "family", label: "זוגיות ומשפחה", test: s => s.category !== "hotlines" && (s.category === "family-support" || s.kind === "family" || /זוג|משפח|הורים|ילדים|אבות|אמהות/.test(s.name)) },
+    { k: "rights", label: "הכרה וזכויות", test: s => s.category === "rights-legal" || s.kind === "rights" },
+    { k: "body", label: "משהו בגוף או בטבע", test: s => ["sports", "water-sports", "nature-retreats", "rehab-farm", "yoga-mind-body", "animal-therapy"].includes(s.category) },
+    { k: "people", label: "אנשים כמוני", test: s => s.category !== "hotlines" && (s.kind === "peer" || s.category === "peer-support" || s.kind === "activity" && s.format === "group" || /קהילה|קהילת|מעגל|קבוצת תמיכה/.test(s.name)) },
+    { k: "work", label: "עבודה ולימודים", test: s => s.category === "employment-education" || s.kind === "work" },
+    { k: "money", label: "כסף ומענקים", test: s => s.category === "financial-grants" || s.kind === "money" }
+  ];
+  const needChips = () => `<nav class="needs" aria-label="לפי צורך">${NEEDS.map(n => `<a href="#/need?n=${n.k}">${esc(n.label)}</a>`).join("")}</nav>`;
+  const homeSearch = () => `<form class="h-search" id="h-search" role="search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input type="search" name="q" placeholder="מה מחפשים? למשל: גלישה, עורך דין, שינה" aria-label="חיפוש" autocomplete="off">
+    </form>`;
+  const bindHomeSearch = () => { const f = document.getElementById("h-search"); if (f) f.onsubmit = e => { e.preventDefault(); const q = new FormData(f).get("q").trim(); location.hash = "#/browse" + (q ? "?q=" + encodeURIComponent(q) : ""); }; };
+
+  // "נפתח בקרוב": מחזורים שעוד לא התחילו. באזור שלך, וגם ארצי ומקוון
+  const HE_MON = ["ינו׳", "פבר׳", "מרץ", "אפר׳", "מאי", "יוני", "יולי", "אוג׳", "ספט׳", "אוק׳", "נוב׳", "דצמ׳"];
+  function upcoming(p, n) {
+    const today = new Date().toISOString().slice(0, 10);
+    const regs = p && p.regions.length ? withNear(p.regions) : null;
+    return SERVICES.filter(s => s.status === "future_cycle" && s.next_cycle && !s.no_contact)
+      .map(s => { const m = String(s.next_cycle).match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/); return { s, m, key: m ? s.next_cycle.padEnd(10, "-01".slice(0, 10 - s.next_cycle.length)) : "9999" }; })
+      .filter(x => !x.m || x.key >= today.slice(0, x.m[3] ? 10 : 7))
+      .filter(x => !regs || arr(x.s.regions).some(r => r === "nationwide" || r === "online" || regs.includes(r)))
+      .filter(x => !p || (eligible(x.s, p.statuses) && familyFit(x.s, p) && (!womenOnly(x.s) || p.gender === "f")))
+      .sort((a, b) => a.key < b.key ? -1 : a.key > b.key ? 1 : 0)
+      .slice(0, n || 99);
+  }
+  const upcomingList = items => `<ul class="mini">${items.map(({ s, m }) => `<li data-open="${esc(s.id)}" tabindex="0" role="button">
+      <span class="d">${m ? (m[3] ? `${+m[3]}<small>${HE_MON[+m[2] - 1]}</small>` : `${HE_MON[+m[2] - 1]}<small>${m[1]}</small>`) : `בקרוב`}</span>
+      <span class="t"><b>${esc(splitName(s.name).main)}</b><small>${esc([s.location || "", arr(s.regions).includes("online") ? "מקוון" : ""].filter(Boolean).join(" · ").slice(0, 60))}</small></span></li>`).join("")}</ul>`;
+
   function viewHome() {
     const prof = loadProfile();
     if (prof) return viewReturning(prof);
+    const soon = upcoming(null, 3);
     $main.innerHTML = `
-      <section class="welcome">
+      <section class="home">
         <div class="glass hero">
-          <div class="lockup">${LOGO(72)}<div class="wordmark">אזימוט</div></div>
+          <div class="lockup">${LOGO(56)}<div class="wordmark">אזימוט</div></div>
           <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
-          <p class="welcome-sub">טיפול, ים, חוות, ספורט, מענקים וזכויות. לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. רובו בלי עלות.</p>
+          <p class="welcome-sub">יותר מ-${Math.floor(SERVICES.length / 100) * 100} מקומות לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. בלי הרשמה.</p>
+          <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות קצרות · תחנות שמתאימות לך</span></a>
         </div>
-        <ol class="route">
-          <li class="glass-sm"><span class="st-node area-soul">1</span><strong>מספרים קצת על עצמך</strong></li>
-          <li class="glass-sm"><span class="st-node area-sea">2</span><strong>מקבלים 3 מקומות שמתאימים לך</strong></li>
-          <li class="glass-sm"><span class="st-node area-land">3</span><strong>מתקשרים, או מבקשים שיחזרו אליך</strong></li>
-        </ol>
-        <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שלבים קצרים · אפשר לדלג</span></a>
-        <p class="welcome-alt">או <a class="link-u" href="#/explore">לחפש לבד</a> · <a class="link-u" href="#/rights">מה מגיע לי</a></p>
-        <p class="note quiet center">${SERVICES.length} מקומות · בלי הרשמה · נבדק מול מקורות רשמיים</p>
+        <h2 class="h-sec">או לחפש לבד</h2>
+        ${homeSearch()}${needChips()}
+        ${soon.length ? `<h2 class="h-sec">נפתח בקרוב <a href="#/soon">הכול</a></h2>${upcomingList(soon)}` : ""}
         <p class="note quiet center">נבנה בהתנדבות, מתוך רצון לעזור. בלי פרסומות, ואף אחד לא מרוויח מזה. <a class="link-u" href="#/about">למה אזימוט קיים</a></p>
       </section>`;
+    bindHomeSearch();
   }
-
-  // ביקור חוזר: 3 התחנות, ומתחת לשוטט לבד
   function viewReturning(p) {
-    const res = match(p);
     const first = pickStations(p, match(p, { all: true }));   // אותן תחנות כמו בדף התוצאות
-    const SHORTS = { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך הכרה", "not-recognized": "עוד לא מוכר/ת", "reservists": "מילואים",
-      "combat-soldiers": "לוחם/ת", "police": "משטרה", "security-forces": "כוחות ביטחון", "families": "משפחה", "bereaved": "משפחה שכולה",
-      "terror-victims": "נפגע/ת איבה", "civilians": "אזרח/ית" };
-    const who = [...p.statuses.map(x => SHORTS[x]).slice(0, 2), ...p.regions.map(r => T.regions[r]).slice(0, 1)].filter(Boolean).join(" · ");
-    const showWhy = distinctWhy(first);
+    const soon = upcoming(p, 3);
     $main.innerHTML = `
-      <section>
-        <h1 class="page-title">התחנות שלך</h1>
-        <p class="lead">${esc(who)}${who ? " · " : ""}<a class="link-u" href="#/match">לשנות</a></p>
-        ${first.length ? `<ol class="stations lined compact">
-          ${HAND_LINE}
-          ${first.map((r, n) => `<li>
-            <span class="st-node" aria-hidden="true">${n + 1}</span>
-            <div class="tag-row">${starTag(r.s)}${areaTag(r.s)}</div>
-            ${nameBlock(r.s, "h2", `data-open="${esc(r.s.id)}" tabindex="0" role="button"`)}
-            ${showWhy && whyText(r) ? `<span class="why">← ${esc(whyText(r))}</span>` : ""}
-          </li>`).join("")}
-        </ol>
-        <p class="actions"><a class="link-u" href="#/results">לכל התחנות שלך (${res.length}) ←</a></p>` : `<p class="empty">לא מצאנו התאמה. <a href="#/match">לשנות תשובות</a></p>`}
-        <h2 class="section-title">או לשוטט לבד</h2>
-        <div class="area-chips">${Object.keys(AREAS).map(k => `<a class="area-chip area-${k}" href="#/area?a=${k}">${esc(AREAS[k].label)}</a>`).join("")}</div>
+      <section class="home">
+        <h1 class="h-title">שלום שוב. מה צריך היום?</h1>
+        ${homeSearch()}${needChips()}
+        ${first.length ? `<h2 class="h-sec">התחנות שלך <a href="#/match">לשנות</a></h2>
+        <ul class="mini">${first.map((r, n) => { const f = facts(r.s, p); return `<li data-open="${esc(r.s.id)}" tabindex="0" role="button">
+          <span class="n">${n + 1}</span><span class="t"><b>${esc(splitName(r.s.name).main)}</b><small>${esc([r.role, ...f.slice(0, 2)].filter(Boolean).join(" · "))}</small></span></li>`; }).join("")}</ul>
+        <p class="actions"><a class="link-u" href="#/results">לכל מה שמתאים לך ←</a></p>` : `<p class="empty">לא מצאנו התאמה. <a href="#/match">לשנות תשובות</a></p>`}
+        ${soon.length ? `<h2 class="h-sec">נפתח בקרוב באזור שלך <a href="#/soon">הכול</a></h2>${upcomingList(soon)}`
+          : `<p class="actions"><a class="link-u" href="#/soon">קבוצות ותוכניות שנפתחות בקרוב ←</a></p>`}
         <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>מכירים מקום שעוזר ולא מופיע?</strong><br>להוסיף בדקה</span></a>
       </section>`;
+    bindHomeSearch();
   }
-
-  // כל התחומים (מה שהיה דף הבית)
+  // לפי צורך: רשימה מסוננת. עם שאלון: לפי ההתאמה האישית. בלי: לפי מה שמומלץ ונבדק
+  // בלי שאלון: קודם הקווים המרכזיים, מה שמומלץ בקהילה, ומה שמיועד לכלל הלוחמים, ולא לקבוצה צרה (נפגעי טרור, תקיפה מינית)
+  const MAIN_LINES = /נפש אחת|^נט"ל – קו|^ער"ן|^סה"ר/;
+  const BROAD_EL = ["combat-soldiers", "reservists", "mod-recognized", "mod-in-process", "not-recognized", "security-forces"];
+  function generalRank(s, k) {
+    let r = 0;
+    if (k === "talk" && s.category === "hotlines") r += MAIN_LINES.test(s.name) ? 12 : 3;
+    r += Math.min(10, s.community_recs || 0);
+    if (arr(s.eligibility).some(e => BROAD_EL.includes(e))) r += 3;
+    else if (arr(s.eligibility).length && arr(s.eligibility).every(e => e === "terror-victims" || e === "civilians")) r -= 4;
+    if (s.verified_at) r += 1;
+    if (infoItem(s)) r -= 3;
+    if (s.status === "future_cycle") r += 1;
+    return r;
+  }
+  function viewNeed(params) {
+    const need = NEEDS.find(n => n.k === params.get("n")) || NEEDS[0];
+    const p = loadProfile();
+    const ok = s => need.test(s) && !s.no_contact && s.status !== "closed_now" && !(p ? !supplierOk(s, p) : isSupplier(s));
+    let list;
+    if (p) list = match(p, { all: true }).filter(r => ok(r.s)).map(r => r.s);
+    else list = SERVICES.filter(ok).sort((a, b) => generalRank(b, need.k) - generalRank(a, need.k));
+    if (p && list.length < 5) list = list.concat(SERVICES.filter(s => ok(s) && !list.includes(s) && eligible(s, p.statuses)));
+    $main.innerHTML = `
+      <section>
+        <h1 class="page-title">${esc(need.label)}</h1>
+        <p class="lead">${list.length} מקומות${p ? ", מסודרים לפי מה שהכי מתאים לך" : ""}. ${p ? "" : `<a class="link-u" href="#/match">לסדר לפי מה שמתאים לי</a>`}</p>
+        ${needChips()}
+        <div class="grid" id="need-list"></div>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>חסר משהו?</strong><br>להוסיף מקום או שירות</span></a>
+      </section>`;
+    $main.querySelectorAll(".needs a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#/need?n=" + need.k));
+    pagedList(document.getElementById("need-list"), list, s => { const f = facts(s, p); return card(s, f.length ? [f.join(" · ")] : null); });
+  }
+  function viewSoon() {
+    const p = loadProfile();
+    const mine = p ? upcoming(p) : [];
+    const ids = new Set(mine.map(x => x.s.id));
+    const rest = upcoming(null).filter(x => !ids.has(x.s.id));
+    $main.innerHTML = `
+      <section>
+        <h1 class="page-title">נפתח בקרוב</h1>
+        <p class="lead">קבוצות ותוכניות שהמחזור הבא שלהן מתחיל בקרוב. כדאי להירשם מראש.</p>
+        ${mine.length ? `<h2 class="h-sec">מתאים לך, באזור שלך וארצי</h2>${upcomingList(mine)}` : ""}
+        ${rest.length ? `<h2 class="h-sec">${p ? "עוד מחזורים (אולי לא מתאימים לסטטוס או לאזור שלך)" : "כל המחזורים"}</h2>${upcomingList(rest)}` : ""}
+        ${!mine.length && !rest.length ? `<p class="empty">כרגע אין מחזורים קרובים במאגר.</p>` : ""}
+      </section>`;
+  }
   function viewExplore() {
     const prof = loadProfile();
     const counts = {};
@@ -1562,6 +1630,8 @@
     else if (path === "/privacy") viewPrivacy();
     else if (path === "/pilot") viewPilot();
     else if (path === "/about") viewAbout();
+    else if (path === "/need") viewNeed(params);
+    else if (path === "/soon") viewSoon();
     else if (path === "/add" || path === "/provider") viewAdd(params);
     else if (path === "/admin") { location.href = "admin/"; return; }
     else viewHome();
@@ -1667,6 +1737,8 @@
   // מספר גרסה: כדי שמשוב יתייחס לגרסה מסוימת
   const VERSION = "0.9";
   document.getElementById("data-stamp").textContent = `גרסה ${VERSION}` + (window.SERVICES_UPDATED ? " · המאגר עודכן: " + window.SERVICES_UPDATED : "");
+  // פתיחה מחדש של האפליקציה: הדפדפן משחזר את העמוד האחרון. עמודי שיטוט (תחומים, אזור) לא אמורים להיות נקודת הכניסה.
+  if (/^#\/(?:explore|area)\b/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search + "#/");
   route().then(() => {
     // פעם ראשונה: הדגמה קצרה. לא בעמוד "עזרה עכשיו" (מי שמגיע לשם צריך עזרה, לא הדרכה)
     let seen = true;
