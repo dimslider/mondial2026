@@ -652,3 +652,12 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .tour-nav .btn { min-height: 46px; padding: 0 22px; }
 .tour-skip { margin-inline-start: auto; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .tour-spot { transition: none; } }
+
+/* ---------- תחנות: כותרת תפקיד, עובדות, הצעד הראשון ---------- */
+.st-role { margin: 0 0 2px; font-size: 13.5px; font-weight: 700; letter-spacing: .01em; color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+.facts span { font-size: 13.5px; font-weight: 600; padding: 2px 10px; border-radius: 999px; background: var(--glass); border: 1px solid var(--line-strong); }
+.first-step { margin: 10px 0 0; font-size: 15.5px; line-height: 1.5; }
+.first-step strong { font-weight: 700; }
+.crisis-inline { margin: 10px 0 0; font-size: 15px; }
+.crisis-inline a { font-weight: 700; }

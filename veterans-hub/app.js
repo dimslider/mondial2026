@@ -324,8 +324,11 @@
     p = withImplied(p);
     const first = [];
     // לא שתי תחנות מאותו סוג (שני כלבים, שתי חוות)
-    const take = r => { if (r && first.length < 3 && !first.includes(r) && !first.some(f => f.s.category === r.s.category)) first.push(r); };
-    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && !isSupplier(r.s) && pred(r)).sort((a, b) => rank(b) - rank(a))[0];
+    // role: למה התחנה נבחרה. מוצג ככותרת, כדי ששלוש התחנות יהיו תוכנית ולא רשימה
+    const take = (r, role) => { if (r && first.length < 3 && !first.includes(r) && !first.some(f => f.s.category === r.s.category)) { r.role = role; first.push(r); } };
+    // בין שתי אפשרויות קרובות, עדיפות למה שאפשר לפנות אליו ישירות (טלפון, אתר, מייל)
+    const reach = r => r.s.phone || r.s.website || r.s.email ? 1.5 : 0;
+    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && !isSupplier(r.s) && pred(r)).sort((a, b) => rank(b) + reach(b) - rank(a) - reach(a))[0];
     const tx = r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
       (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) +
       (p.statuses.some(x => x === "police" || x === "security-forces") ? (r.s.police === "yes" ? 3 : r.s.police === "no" ? -4 : 0) : 0) -
@@ -344,31 +347,40 @@
           (arr(r.s.eligibility).length <= 4 && arr(r.s.eligibility).some(x => p.statuses.includes(x) && !["combat-soldiers", "reservists", "civilians"].includes(x)) ? 5 : 0)),
       rights: () => best(r => r.s.kind === "rights" || r.s.kind === "money", r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג/.test(r.s.name) ? 3 : 0))
     };
-    if (p.goal && GOAL_PICK[p.goal]) take(GOAL_PICK[p.goal]());
+    const GOAL_ROLE = { talk: "לדבר עם מישהו", do: "לעשות משהו", people: "אנשים שמבינים", rights: "לסדר את הזכויות" };
+    if (p.goal && GOAL_PICK[p.goal]) take(GOAL_PICK[p.goal](), GOAL_ROLE[p.goal]);
     // מענה ייעודי לפגיעה: עדיפות לשירות שזה עיקרו
     for (const k of injuryOf(p.difficulties))
       take(best(r => arr(r.s.difficulties).some(x => INJURY[k].includes(x)) && r.s.category !== "rights-legal",
         r => r.sc + (injuryFocus(r.s).includes(k) ? 4 : 0) + (r.s.category === "medical-rehab" ? 2 : 0) +
-          (k === "tbi" ? (/נוירו|קוגניטיב/.test(r.s.name + " " + r.s.description) ? 6 : 0) + (/פגיעות ראש|פגיעה מוחית/.test(r.s.name) ? 3 : 0) : 0)));
+          (k === "tbi" ? (/נוירו|קוגניטיב/.test(r.s.name + " " + r.s.description) ? 6 : 0) + (/פגיעות ראש|פגיעה מוחית/.test(r.s.name) ? 3 : 0) : 0)),
+        k === "tbi" ? "שיקום אחרי פגיעת ראש" : "שיקום הגוף");
     // טיפול נפשי כשסימנו קושי נפשי
     if (p.difficulties.some(x => MENTAL.includes(x) && x !== "loneliness" || x === "ptsd"))
-      take(best(isTreatment, tx));   // מסגרת אינטנסיבית היא לא הצעד הראשון
+      take(best(isTreatment, tx), "לדבר עם מישהו");   // מסגרת אינטנסיבית היא לא הצעד הראשון
     // ליווי בהכרה: עדיפות לליווי אישי ולמה שמומלץ בקהילה, על פני פורטל מידע
     if (p.implied || p.worsened || p.statuses.some(x => x === "mod-in-process" || x === "not-recognized"))
       take(best(r => r.s.category === "rights-legal" && arr(r.s.difficulties).includes("bureaucracy"),
         r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג|מימון הליך/.test(r.s.name) ? 3 : 0) - (/פורטל|מדריך|המלצות/.test(r.s.name) ? 4 : 0) +
-          (p.worsened ? (/החמרה|בדיקה מחדש/.test(r.s.name) ? 10 : /הגשת בקשה להכרה|מסלול ירוק|מסלול מהיר/.test(r.s.name) ? -6 : 0) : 0)));
+          (p.worsened ? (/החמרה|בדיקה מחדש/.test(r.s.name) ? 10 : /הגשת בקשה להכרה|מסלול ירוק|מסלול מהיר/.test(r.s.name) ? -6 : 0) : 0)),
+        p.worsened ? "במקביל: בקשה להחמרה" : "במקביל: לסדר את ההכרה");
     // בדידות: קבוצת עמיתים
     // בדידות: קבוצה. עדיפות לקבוצה שעושה משהו שהוא אוהב (ריצה, טבע), כי למי שמסתגר קל יותר להגיע לפעילות מאשר "לקבוצת תמיכה"
     if (p.difficulties.includes("loneliness")) take(best(r => (r.s.category === "peer-support" || arr(r.s.interests).some(i => p.interests.includes(i))) && arr(r.s.difficulties).includes("loneliness") || (p.era === "older" && r.s.era === "older"),
-      r => r.sc + (arr(r.s.interests).some(i => p.interests.includes(i)) ? 4 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0)));
+      r => r.sc + (arr(r.s.interests).some(i => p.interests.includes(i)) ? 4 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0)), "לא להיות לבד עם זה");
     // תחום עניין: שירות שזה עיקרו (ים לגלישה, טבע לחווה), לא שירות שמזכיר את זה בדרך אגב
     if (p.interests.length)
-      take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))));
+      take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))), "משהו שהוא לא טיפול");
     const pool = res.filter(r => !infoItem(r.s) && !isSupplier(r.s));
     for (const r of pool) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
     for (const r of pool) take(r);
     for (const r of pool) if (first.length < 3 && !first.includes(r)) first.push(r);
+    // שתי תחנות עם אותה כותרת: לשנייה "ועוד אפשרות"
+    first.forEach((r, i) => { if (!r.role || first.slice(0, i).some(f => f.role === r.role)) r.role = "ועוד אפשרות"; });
+    // התחנה הראשונה: משהו שאפשר לפנות אליו עכשיו (טלפון, אתר או מייל)
+    const direct = r => !!(r.s.phone || r.s.website || r.s.email);
+    first.sort((a, b) => direct(b) - direct(a));
+    if (first[0] && first[0].role) first[0].role = first[0].role.replace(/^במקביל: /, "");
     return first;
   }
 
@@ -405,6 +417,25 @@
   };
   // סיבה שחוזרת זהה בכל התחנות היא רעש; מציגים אותה רק כשהיא מבחינה בין התחנות
   const whyText = r => r.why.filter(w => w !== "מתאים לסטטוס שלך")[0] || "";
+  // "למה זה מתאים לך": עובדות שמשנות את ההחלטה אם לפנות, לא חזרה על מה שסימנת
+  function facts(s, p) {
+    const f = [];
+    const c = cycleLabel(s); if (c) f.push(c);
+    const st = p ? p.statuses : [];
+    const recognized = st.includes("mod-recognized");
+    const text = [s.description, s.how_to_apply, s.cost_notes, s.avail].join(" ");
+    if (p && !recognized && s.kind !== "rights" && (s.recognition === "not_required" || /בלי הכרה|ללא הכרה|לא צריך הכרה|אין צורך בהכרה|גם למי שלא מוכר|גם בלי הכרה/.test(text))) f.push("לא צריך הכרה");
+    if (p && isForces(st) && s.police === "yes") f.push(st.includes("police") ? "פתוח לשוטרים" : "פתוח לכוחות הביטחון");
+    if (s.cost === "free") f.push("חינם");
+    else if (s.cost === "mod-funded" && (recognized || st.includes("mod-in-process"))) f.push("במימון משרד הביטחון");
+    if (/בלי תור|ללא תור|ללא המתנה|אין המתנה|בלי המתנה/.test(text)) f.push("בלי תור");
+    const km = p ? kmTo(s, p) : null;
+    if (km != null && km <= 60) f.push(`כ-${Math.max(km, 1)} ק"מ ממך`);
+    else if (arr(s.regions).includes("online") || s.format === "online") f.push("אפשר מהבית");
+    return f.slice(0, 3);
+  }
+  // הצעד הראשון: המשפט הראשון של "איך מתחילים"
+  const firstStep = s => { const t = (s.how_to_apply || "").trim(); if (!t) return ""; const m = t.match(/^.{10,160}?[.!?](?=\s|$)/); return m ? m[0] : t.length > 160 ? shortDesc(t, 150) : t; };
   const distinctWhy = list => new Set(list.map(whyText)).size > 1;
   const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
 
@@ -731,9 +762,7 @@
         ${who ? `<p class="lead">${esc(who)}</p>` : ""}
         <p class="actions"><a class="link-u" href="#/match">לשנות תשובות</a></p>
         ${noInput ? `<div class="callout">כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין. <a href="#/match">לסמן עכשיו</a></div>` : ""}
-        <p class="note avail-note"><strong>על זמינות:</strong> כל השירותים כאן קיימים, אבל עדיין אין לנו מידע מלא על רשימות המתנה ועל כמה קל להתקבל. בחלק מהמקומות מחכים חודשים. כדאי לפנות לשניים או שלושה במקביל, ולשאול כבר בשיחה הראשונה אם יש המתנה.</p>
-        ${isForces(p.statuses) ? `<p class="note">שירות שמסומן <span class="maybe-tag">אולי מתאים</span> לא כותב במפורש שהוא פתוח ${forcesWord(p.statuses)}. ייתכן שכן, שווה לשאול.</p>` : ""}
-        ${crisis ? `<div class="callout">כשקשה, לא חייבים לחכות לאף תוכנית. אפשר לדבר עם מישהו גם עכשיו, גם בלילה. <a href="#/help">עזרה עכשיו ←</a></div>` : ""}
+        ${crisis ? `<p class="crisis-inline">קשה עכשיו? אפשר לדבר עם מישהו גם בלילה. <a href="#/help">עזרה עכשיו ←</a></p>` : ""}
         ${first.length ? `
           <ol class="stations lined">
             ${HAND_LINE}
@@ -741,18 +770,19 @@
               const s = r.s;
               return `<li>
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
-                <div class="tag-row">${starTag(s)}${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>
+                ${r.role ? `<p class="st-role">${esc(r.role)}</p>` : ""}
                 ${nameBlock(s, "h2", `data-open="${esc(s.id)}" tabindex="0" role="button"`)}
-                ${maybeTag(s, p)}${cycleLabel(s) ? `<span class="wait-tag">📅 ${esc(cycleLabel(s))}</span>` : hasWait(s) ? `<span class="wait-tag">⏳ ${esc(s.avail)}</span>` : ""}
-                <p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>
-                ${distinctWhy(first) && whyText(r) ? `<span class="why">← ${esc(whyText(r))}</span>` : ""}
+                ${(() => { const f = facts(s, p); return f.length ? `<p class="facts">${f.map(x => `<span>${esc(x)}</span>`).join("")}</p>` : `<div class="tag-row">${starTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>`; })()}
+                ${maybeTag(s, p)}${hasWait(s) && !cycleLabel(s) ? `<span class="wait-tag">⏳ ${esc(s.avail)}</span>` : ""}
+                ${firstStep(s) ? `<p class="first-step"><strong>הצעד הראשון:</strong> ${linkify(firstStep(s))}</p>` : `<p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>`}
                 <div class="actions">
                   ${s.phone ? `<a class="btn btn-ink" href="${telHref(s.phone)}">${esc(firstPhone(s.phone))}</a>` : ""}
                   <button class="link-u" type="button" data-open="${esc(s.id)}">לפרטים</button>
                 </div>
               </li>`;
             }).join("")}
-          </ol>` : `<p class="empty">נסו לסמן פחות סינונים, או <a href="#/">לבחור תחום</a>.</p>`}
+          </ol>
+          <p class="note avail-note">כל המקומות כאן קיימים, אבל לא תמיד יש מקום מיד. כדאי לפנות לשניים או שלושה במקביל, ולשאול בשיחה הראשונה אם יש המתנה.${isForces(p.statuses) ? ` מה שמסומן <span class="maybe-tag">אולי מתאים</span> לא כותב במפורש שהוא פתוח ${forcesWord(p.statuses)}. שווה לשאול.` : ""}</p>` : `<p class="empty">נסו לסמן פחות סינונים, או <a href="#/">לבחור תחום</a>.</p>`}
       </section>
       ${order.length ? `
         <section class="more-areas">
@@ -768,7 +798,7 @@
         <p><strong>גרסת ניסיון.</strong> הרשימה טובה כמו מה שכולנו יודעים. מה היה מדויק, מה חסר, איפה נתקעת? <a class="link-u" href="#/pilot">משוב אנונימי · דקה</a></p>
       </section>`;
     $main.querySelectorAll("[data-area-list]").forEach(el => pagedList(el, byArea[el.dataset.areaList],
-      r => card(r.s, r.why.filter(w => w !== "מתאים לסטטוס שלך"), true)));
+      r => { const f = facts(r.s, p); return card(r.s, f.length ? [f.join(" · ")] : r.why.filter(w => w !== "מתאים לסטטוס שלך"), true); }));
   }
 
   // מילים נרדפות לחיפוש. כל מילה בשאילתה נחשבת כנמצאה אם אחת מהנרדפות שלה מופיעה.
@@ -1237,6 +1267,8 @@
   // ---------- service card ----------
   // טלפונים ומיילים בתוך טקסט: לחיצים, ובכיוון שמאל-לימין כדי שלא יתהפכו או יישברו
   const linkify = t => esc(t)
+    // טווח שעות ("09:00–17:00") בעברית מתהפך בלי בידוד כיוון
+    .replace(/\d{1,2}:\d{2}\s*[–-]\s*\d{1,2}:\d{2}/g, m => `<span dir="ltr" class="nowrap">${m}</span>`)
     .replace(/(\*\d{3,5}|\b0\d{1,2}-?\d{3}-?\d{4}\b|\b1-?[78]00-?\d{2,3}-?\d{3,4}\b)/g, m => `<a href="tel:${m.replace(/[^\d*]/g, "")}" dir="ltr" class="nowrap">${m}</a>`)
     .replace(/([\w.+-]+@[\w-]+\.[\w.]+)/g, m => `<a href="mailto:${m}" dir="ltr">${m}</a>`);
   const heDate = d => { const m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? `${+m[2]}/${m[1]}` : d; };
