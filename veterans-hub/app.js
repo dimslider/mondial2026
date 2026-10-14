@@ -1140,6 +1140,13 @@
           <li>ולסיום, המשוב כאן למטה.</li>
         </ol>
 
+        <h2 class="section-title">לאנשי מקצוע</h2>
+        <ul class="ticks plain">
+          <li>${TICK}<span><strong>עם מטופלים:</strong> אפשר למלא את ההתאמה יחד בפגישה, או לשלוח את הקישור. התשובות נשמרות רק בטלפון של מי שממלא.</span></li>
+          <li>${TICK}<span><strong>מכירים מקום שחסר,</strong> או יודעים כמה מחכים במקום מסוים? זה הידע שהכי חסר לנו. כפתור ה-+ למעלה, או "יודעים כמה מחכים כאן?" בכל כרטיס.</span></li>
+          <li>${TICK}<span><strong>רוצים לעזור יותר?</strong> לבדוק את המקומות באזור שלכם, או להצטרף לצוות. <a href="mailto:idomayraz@gmail.com">idomayraz@gmail.com</a></span></li>
+        </ul>
+
         <h2 class="section-title">משוב בעילום שם</h2>
         <p class="note"><strong>בעילום שם:</strong> לא שואלים ולא שומרים שם, טלפון, מייל או כתובת IP. בבקשה לא לכתוב פרטים מזהים, לא שלכם ולא של אחרים. שמות של מקומות ותוכניות מצוינים.</p>
         <form id="pilot-fb" class="form">
@@ -1168,6 +1175,7 @@
       ["relevant", "would", "missing", "stuck", "add", "wait", "more"].forEach(k => data[k] = (fd.get(k) || "").trim());
       if (!Object.values(data).some(Boolean)) { msg.textContent = "אפשר לענות רק על שאלה אחת, אבל צריך לפחות אחת."; return; }
       if (p && fd.get("ctx")) data.ctx = [...p.statuses, ...p.regions, p.era, p.age].filter(Boolean).join(",");
+      data.more = [data.more, "v" + VERSION].filter(Boolean).join(" · ");
       try {
         const r = await Store.submit("feedback", data, { token: token ? token() : "" });
         f.innerHTML = `<p class="form-msg">${r && r.local ? "אין חיבור לשרת כרגע, המשוב נשמר במכשיר וננסה שוב." : "תודה רבה! כל תשובה מדייקת את זה למי שיבוא אחריך."}</p>`;
@@ -1528,7 +1536,9 @@
 
   const bl = document.getElementById("brand-logo");
   if (bl) bl.innerHTML = LOGO(30, false);
-  document.getElementById("data-stamp").textContent = window.SERVICES_UPDATED ? "המאגר עודכן: " + window.SERVICES_UPDATED : "";
+  // מספר גרסה: כדי שמשוב יתייחס לגרסה מסוימת
+  const VERSION = "0.9";
+  document.getElementById("data-stamp").textContent = `גרסה ${VERSION}` + (window.SERVICES_UPDATED ? " · המאגר עודכן: " + window.SERVICES_UPDATED : "");
   route().then(() => {
     // פעם ראשונה: הדגמה קצרה. לא בעמוד "עזרה עכשיו" (מי שמגיע לשם צריך עזרה, לא הדרכה)
     let seen = true;
