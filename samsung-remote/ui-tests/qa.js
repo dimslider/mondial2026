@@ -57,19 +57,6 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     check('app launch', JSON.stringify(await sent('launch')) === JSON.stringify([['3201901017640', 2]]));
     check('apps closes after launch', (await open()) === 'none', await open());
 
-    // deep app scan (Samsung): start, progress, finish
-    await reset(); await p.tap('.app [data-sheet="apps"]'); await p.waitForTimeout(450);
-    check('deep scan visible on samsung', await p.evaluate(() => getComputedStyle(document.getElementById('deepScan')).display !== 'none'));
-    await p.tap('#deepScanBtn'); check('deep scan starts', (await sent('deepScanApps')).length === 1);
-    await p.evaluate(() => onTv({ type: 'appScan', done: 120, total: 76065, found: 0, finished: false, msPerCheck: 80 }));
-    check('deep scan shows counts', (await p.textContent('#deepScanText')).includes('נבדקו 120 מתוך 76,065'), await p.textContent('#deepScanText'));
-    check('deep scan shows eta', (await p.textContent('#deepScanText')).includes('שעות') || (await p.textContent('#deepScanText')).includes('דק'), await p.textContent('#deepScanText'));
-    await p.evaluate(() => { onTv({ type: 'apps', apps: S.apps.concat([{ appId: '3202009021600', name: 'STING+ by yes', app_type: 2 }]) }); onTv({ type: 'appScan', done: 4000, total: 4000, found: 1, finished: true, msPerCheck: 80 }); });
-    check('deep scan result text', (await p.textContent('#deepScanText')).includes('נמצאו 1 אפליקציות'), await p.textContent('#deepScanText'));
-    check('found app listed', await p.evaluate(() => !!document.querySelector('#applist [data-launch="3202009021600"]')));
-    await p.tap('#deepScanBtn'); await p.tap('#deepScanBtn');
-    check('deep scan stop', (await sent('stopAppScan')).length === 1);
-
     // numpad keys keep the sheet open
     await reset(); await p.tap('.app [data-sheet="numpad"]'); await p.waitForTimeout(450);
     await p.tap('#sheet-numpad [data-key="KEY_7"]'); await p.tap('#sheet-numpad [data-key="KEY_CYAN"]');

@@ -49,7 +49,6 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
 
     override fun close() {
         closedByUs = true
-        scanning = false
         ws?.cancel()
     }
 
@@ -168,26 +167,8 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
         }.start()
     }
 
-    /** Apps found by the quick check and the deep scan, merged with ones remembered from earlier scans. */
+    /** Apps the quick check found installed. */
     private val quickFound = org.json.JSONArray()
-
-    private fun foundApps(): org.json.JSONArray = try {
-        org.json.JSONArray(session.load("foundApps") ?: "[]")
-    } catch (_: Exception) {
-        org.json.JSONArray()
-    }
-
-    private fun merged(): org.json.JSONArray {
-        val out = org.json.JSONArray()
-        val ids = HashSet<String>()
-        for (list in listOf(quickFound, foundApps())) synchronized(list) {
-            for (i in 0 until list.length()) {
-                val a = list.getJSONObject(i)
-                if (ids.add(a.getString("appId"))) out.put(a)
-            }
-        }
-        return out
-    }
 
     /** Status of one app over REST: its name if installed, null if not (or no answer). */
     private fun probe(id: String): String? {
@@ -231,112 +212,13 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
             }
             pool.shutdown()
             pool.awaitTermination(60, java.util.concurrent.TimeUnit.SECONDS)
-            session.log("app list: no answer from the TV; ${quickFound.length()} known apps installed, ${foundApps().length()} from deep scans")
-            if (!appsAnswered && !closedByUs) session.apps(merged())
+            session.log("app list: no answer from the TV; ${quickFound.length()} known apps installed")
+            if (!appsAnswered && !closedByUs) session.apps(synchronized(quickFound) { org.json.JSONArray(quickFound.toString()) })
         }.start()
-    }
-
-    @Volatile
-    private var scanning = false
-    private val foundLock = Any()
-
-    override fun stopScan() {
-        scanning = false
-    }
-
-    override fun deepScanApps(onProgress: (ScanProgress) -> Unit): Boolean = deepScan(SAMSUNG_ID_RANGES, onProgress)
-
-    /**
-     * Tizen store app ids are "320" + yymm (registration month) + a 6-digit counter that grows over
-     * time, so each month's counters fall in a narrow range. [ranges] lists those ranges
-     * ("yymm:first:last ..."); every id in them is checked over REST.
-     */
-    internal fun deepScan(ranges: String, onProgress: (ScanProgress) -> Unit): Boolean {
-        if (scanning) return true
-        scanning = true
-        Thread {
-            val ids = ArrayList<String>()
-            for (r in ranges.trim().split(Regex("\\s+"))) {
-                val (m, lo, hi) = r.split(":").map { it.toInt() }
-                for (seq in lo..hi) ids.add("320%04d%06d".format(m, seq))
-            }
-            val known = HashSet<String>()
-            merged().let { for (i in 0 until it.length()) known.add(it.getJSONObject(i).getString("appId")) }
-            for ((_, id) in KNOWN_APPS) known.add(id)
-            // Resume where an earlier scan of the same ranges stopped.
-            val key = "scanPos:" + ranges.hashCode()
-            val resumeAt = (session.load(key)?.toIntOrNull() ?: 0).coerceIn(0, ids.size)
-            val next = java.util.concurrent.atomic.AtomicInteger(resumeAt)
-            val done = java.util.concurrent.atomic.AtomicInteger(resumeAt)
-            val failures = java.util.concurrent.atomic.AtomicInteger(0)
-            val foundCount = java.util.concurrent.atomic.AtomicInteger(0)
-            val totalMs = java.util.concurrent.atomic.AtomicLong(0)
-            val started = System.currentTimeMillis()
-            var lastReport = 0L
-            fun report(finished: Boolean) {
-                val d = done.get()
-                // Wall-clock time per check, all workers together: what the user actually waits.
-                val checked = d - resumeAt
-                val ms = if (checked <= 0) 0 else ((System.currentTimeMillis() - started) / checked).toInt()
-                onProgress(ScanProgress(d, ids.size, foundCount.get(), finished, ms))
-            }
-            session.log("deep scan: ${ids.size} ids, starting at $resumeAt")
-            onProgress(ScanProgress(resumeAt, ids.size, 0, false, 0))
-            val workers = (1..WORKERS).map {
-                Thread {
-                    while (scanning && !closedByUs) {
-                        val i = next.getAndIncrement()
-                        if (i >= ids.size) break
-                        val id = ids[i]
-                        val t0 = System.currentTimeMillis()
-                        val (code, body) = Net.httpGet("http://$ip:8001/api/v2/applications/$id")
-                        val took = System.currentTimeMillis() - t0
-                        totalMs.addAndGet(took)
-                        if (done.get() < 3) session.log("deep scan: $id -> $code in ${took}ms")
-                        if (code == -1) {
-                            // The TV stopped answering altogether: give up rather than hammer it.
-                            if (failures.incrementAndGet() > 100) scanning = false
-                        } else failures.set(0)
-                        if (code in 200..299 && known.add(id)) {
-                            val name = try {
-                                JSONObject(body).optString("name")
-                            } catch (_: Exception) {
-                                ""
-                            }.ifEmpty { id }
-                            synchronized(foundLock) {
-                                val all = foundApps()
-                                all.put(JSONObject().put("appId", id).put("name", name).put("app_type", 2))
-                                session.store("foundApps", all.toString())
-                            }
-                            foundCount.incrementAndGet()
-                            session.log("deep scan found $id $name")
-                            session.apps(merged())
-                        }
-                        done.incrementAndGet()
-                        val now = System.currentTimeMillis()
-                        if (now - lastReport > 1000) {
-                            lastReport = now
-                            // Everything below next - WORKERS has been checked: safe resume point.
-                            session.store(key, maxOf(resumeAt, next.get() - WORKERS).toString())
-                            report(false)
-                        }
-                    }
-                }.apply { start() }
-            }
-            workers.forEach { it.join() }
-            val stoppedEarly = scanning.not() && done.get() < ids.size
-            scanning = false
-            session.store(key, if (stoppedEarly) maxOf(resumeAt, next.get() - WORKERS).coerceAtMost(ids.size).toString() else null)
-            val avg = if (done.get() == 0) 0 else totalMs.get() / done.get()
-            session.log("deep scan ${if (stoppedEarly) "stopped" else "finished"} after ${done.get()} ids, ${foundCount.get()} found, avg ${avg}ms per request")
-            report(true)
-        }.start()
-        return true
     }
 
     companion object {
         private const val APP_NAME = "Home Remote"
-        private const val WORKERS = 8
 
         /** Tizen app ids of popular apps (some apps have several ids across model years). */
         val KNOWN_APPS = listOf(

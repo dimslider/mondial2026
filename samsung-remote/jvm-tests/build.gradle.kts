@@ -6,7 +6,7 @@ sourceSets {
     main {
         kotlin.srcDir("../app/src/main/java/com/home/tvremote")
         // Only the protocol code: everything else uses Android APIs.
-        kotlin.include("**/Proto.kt", "**/Certs.kt", "**/Net.kt", "**/Driver.kt", "**/*Driver.kt", "**/SamsungIdRanges.kt")
+        kotlin.include("**/Proto.kt", "**/Certs.kt", "**/Net.kt", "**/Driver.kt", "**/*Driver.kt")
     }
 }
 
