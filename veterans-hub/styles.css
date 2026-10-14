@@ -661,3 +661,18 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .first-step strong { font-weight: 700; }
 .crisis-inline { margin: 10px 0 0; font-size: 15px; }
 .crisis-inline a { font-weight: 700; }
+
+/* ---------- "ההצעות מתאימות לך?" ---------- */
+.rate-box { margin: 18px 0 6px; padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--glass); }
+.rate-q { margin: 0 0 10px; font-weight: 700; font-size: 16.5px; }
+.rate-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.rate-btns button { min-height: 48px; min-width: 88px; padding: 0 16px; font: inherit; font-weight: 600; font-size: 16px; color: var(--ink); background: var(--paper); border: 1px solid var(--line-strong); border-radius: 12px; cursor: pointer; }
+.rate-btns button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.rate-btns button:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+.rate-more { margin-top: 12px; }
+.rate-sub { margin: 0; font-size: 15px; }
+.rate-text { display: block; margin: 8px 0 10px; font-size: 14.5px; }
+.rate-text input { display: block; width: 100%; margin-top: 4px; min-height: 44px; }
+.rate-note { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+.rate-msg { margin: 6px 0 0; font-weight: 600; }
+.rate-msg:empty { display: none; }

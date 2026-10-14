@@ -801,6 +801,7 @@
               </li>`;
             }).join("")}
           </ol>
+          <div id="rate-results"></div>
           <p class="note avail-note">כל המקומות כאן קיימים, אבל לא תמיד יש מקום מיד. כדאי לפנות לשניים או שלושה במקביל, ולשאול בשיחה הראשונה אם יש המתנה.${isForces(p.statuses) ? ` מה שמסומן <span class="maybe-tag">אולי מתאים</span> לא כותב במפורש שהוא פתוח ${forcesWord(p.statuses)}. שווה לשאול.` : ""}</p>` : `<p class="empty">נסו לסמן פחות סינונים, או <a href="#/">לבחור תחום</a>.</p>`}
       </section>
       ${order.length ? `
@@ -816,6 +817,8 @@
       <section class="pilot-cta">
         <p><strong>גרסת ניסיון.</strong> הרשימה טובה כמו מה שכולנו יודעים. מה היה מדויק, מה חסר, איפה נתקעת? <a class="link-u" href="#/pilot">משוב אנונימי · דקה</a></p>
       </section>`;
+    rateBox(document.getElementById("rate-results"), "results", "r:" + hashStr(JSON.stringify(p)),
+      () => Object.assign(profileCtx(p), { stations: first.map(r => r.s.id).join(",") }));
     $main.querySelectorAll("[data-area-list]").forEach(el => pagedList(el, byArea[el.dataset.areaList],
       r => { const f = facts(r.s, p); return card(r.s, f.length ? [f.join(" · ")] : r.why.filter(w => w !== "מתאים לסטטוס שלך"), true); }));
   }
@@ -900,9 +903,11 @@
         </form>
         <p class="count" id="count"></p>
         <div class="grid" id="list"></div>
+        <div id="rate-search"></div>
         <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>לא מצאת?</strong><br>להוסיף מקום או שירות</span></a>
       </section>`;
     const form = document.getElementById("filters");
+    let rateTimer = null;
     const run = () => {
       const fd = new FormData(form);
       // קיצורים עם גרשיים שבלי הגרשיים הופכים למילה אחרת ("עו״ד" → "עוד")
@@ -929,6 +934,22 @@
         : `${out.length} תוצאות`;
       const list = document.getElementById("list");
       if (out.length) pagedList(list, out, s => card(s)); else list.innerHTML = `<p class="empty">אין תוצאות. נסו חיפוש אחר.</p>`;
+      // אחרי שהחיפוש נרגע (לא בכל הקשה): שאלה קצרה. בלי תוצאות: הצעה לשלוח את החיפוש, כדי שנחפש ונוסיף
+      clearTimeout(rateTimer);
+      const raw = (fd.get("q") || "").trim(), rs = document.getElementById("rate-search");
+      rs.innerHTML = "";
+      if (raw.length >= 2) rateTimer = setTimeout(() => {
+        const key = "s:" + hashStr(normQ(raw));
+        if (out.length) return rateBox(rs, "search", key, () => ({ query: raw, stations: out.slice(0, 5).map(s => s.id).join(",") }));
+        if (ratedGet()[key]) return;
+        rs.innerHTML = `<div class="rate-box"><p class="rate-q">לא מצאנו את "${esc(raw)}". לשלוח לנו את החיפוש, כדי שנחפש ונוסיף?</p>
+          <div class="rate-btns"><button type="button" id="send-q">לשלוח, בעילום שם</button></div><p class="rate-msg" role="status" aria-live="polite"></p></div>`;
+        document.getElementById("send-q").onclick = async ev => {
+          ev.target.disabled = true; ratedSet(key);
+          rs.querySelector(".rate-msg").textContent = "תודה! נחפש ונוסיף.";
+          try { await Store.submit("rate", { where: "search-empty", rating: "empty", query: raw, v: VERSION }); } catch (e) { /* ignore */ }
+        };
+      }, 1500);
       const qs = new URLSearchParams();
       for (const [k, v] of fd.entries()) if (v) qs.set(k, v);
       history.replaceState(null, "", "#/browse" + (qs.toString() ? "?" + qs : ""));
@@ -1161,6 +1182,62 @@
         <p class="actions"><a class="btn btn-ink" href="#/pilot">לקחת חלק</a> <a class="link-u" href="#/match">למצוא מה מתאים לי</a></p>
       </section>`;
   }
+  // ---------- "ההצעות מתאימות לך?": דירוג מהיר במקום שבו נוצרת הדעה ----------
+  // שורה בתוך העמוד, לא חלון קופץ. לחיצה אחת שולחת. "חלקית" / "לא ממש" פותחות שאלה אחת עם בחירות.
+  // נשאל פעם אחת לכל מצב (אותן תשובות בשאלון / אותו חיפוש), ו"לא עכשיו" לא חוזר.
+  const RATED_KEY = "vh-rated";
+  const ratedGet = () => { try { return JSON.parse(localStorage.getItem(RATED_KEY)) || {}; } catch (e) { return {}; } };
+  const ratedSet = k => { try { const o = ratedGet(); o[k] = Date.now(); localStorage.setItem(RATED_KEY, JSON.stringify(o)); } catch (e) { /* storage blocked */ } };
+  const hashStr = t => { let h = 0; for (const c of String(t)) h = (h * 31 + c.charCodeAt(0)) | 0; return (h >>> 0).toString(36); };
+  const RATE_REASONS = {
+    results: ["כבר מכיר/ה את רובם", "רחוק ממני", "לא מתאים למצב שלי", "חסר לי משהו ספציפי", "לא ברור מה עושים"],
+    search: ["התוצאות לא קשורות", "חסר מקום שאני מכיר/ה", "רחוק ממני", "לא ברור מה עושים"]
+  };
+  function rateBox(el, where, key, ctx) {
+    if (!el) return;
+    if (ratedGet()[key]) { el.innerHTML = ""; return; }
+    const q = where === "results" ? "ההצעות האלה מתאימות לך?" : "מצאת את מה שחיפשת?";
+    const [good, mid, bad] = where === "results" ? ["כן, מדויק", "חלקית", "לא ממש"] : ["כן", "חלקית", "לא"];
+    el.innerHTML = `<div class="rate-box" role="group" aria-labelledby="rq-${where}">
+        <p class="rate-q" id="rq-${where}">${q}</p>
+        <div class="rate-btns">
+          <button type="button" data-r="good">${good}</button><button type="button" data-r="partial">${mid}</button><button type="button" data-r="bad">${bad}</button>
+        </div>
+        <form class="rate-more" hidden>
+          <p class="rate-sub">מה לא התאים? אפשר לבחור כמה</p>
+          <div class="chips small">${RATE_REASONS[where].map(r => `<label class="chip"><input type="checkbox" name="r" value="${esc(r)}"><span>${esc(r)}</span></label>`).join("")}</div>
+          <label class="rate-text">מה חיפשת, או מה היה חסר? (לא חובה)<input name="txt" maxlength="300" autocomplete="off"></label>
+          <button class="btn btn-ink" type="submit">לשלוח</button>
+        </form>
+        <p class="rate-note">בעילום שם. נשלח רק סוג ההתאמה, בלי פרטים מזהים. <button type="button" class="link-u" data-r="skip">לא עכשיו</button></p>
+        <p class="rate-msg" role="status" aria-live="polite"></p>
+      </div>`;
+    const box = el.querySelector(".rate-box"), more = box.querySelector(".rate-more"), msg = box.querySelector(".rate-msg");
+    let rating = "";
+    const send = async extra => {
+      ratedSet(key);
+      box.querySelectorAll("button,input").forEach(x => x.disabled = true);
+      msg.textContent = "תודה! זה בדיוק מה שעוזר לנו לדייק.";
+      try { await Store.submit("rate", Object.assign({ where, rating, v: VERSION }, ctx(), extra || {})); }
+      catch (e) { /* לא מטרידים את המשתמש: התודה כבר נאמרה */ }
+      setTimeout(() => { more.hidden = true; }, 300);
+    };
+    box.addEventListener("click", e => {
+      const b = e.target.closest("[data-r]"); if (!b) return;
+      if (b.dataset.r === "skip") { ratedSet(key); el.innerHTML = ""; return; }
+      rating = b.dataset.r;
+      box.querySelectorAll(".rate-btns button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      if (rating === "good") return send();
+      more.hidden = false; more.querySelector("input").focus();
+    });
+    more.addEventListener("submit", e => {
+      e.preventDefault();
+      const fd = new FormData(more);
+      send({ reasons: fd.getAll("r").join(" | "), text: (fd.get("txt") || "").trim() });
+    });
+  }
+  const profileCtx = p => ({ ctx: [...p.statuses, ...p.regions, p.goal && "goal:" + p.goal, p.era, p.age, ...p.difficulties.map(d => "d:" + d), ...p.interests.map(i => "i:" + i)].filter(Boolean).join(",") });
+
   // גרסת ניסיון: למה זה קיים, מה עוד חסר, ומשוב בעילום שם
   function viewPilot() {
     const p = loadProfile();
@@ -1244,7 +1321,7 @@
         <ul class="ticks plain">
           <li>${TICK}<span><strong>"שיחזרו אליי":</strong> השם, הטלפון או המייל, ומה שכתבת. משמש רק כדי שהגוף שבחרת יחזור אליך. אנחנו מעבירים לגוף הזה בלבד, ולא לאף אחד אחר.</span></li>
           <li>${TICK}<span><strong>הוספת מקום ותיקון פרטים:</strong> מה שכתבת בטופס. פרטי קשר שלך הם לא חובה, ומשמשים רק אם נצטרך לשאול משהו. לא מתפרסמים.</span></li>
-          <li>${TICK}<span><strong>משוב ודיווח על המתנה:</strong> בעילום שם. רק התשובות שבחרת, בלי שם, טלפון או מייל. אם סימנת, מצורף גם סוג ההתאמה (למשל "משטרה, צפון"), בלי שום פרט מזהה.</span></li>
+          <li>${TICK}<span><strong>משוב, דירוג מהיר ("ההצעות מתאימות לך?") ודיווח על המתנה:</strong> בעילום שם. בדירוג נשלחים גם סוג ההתאמה והמקומות שהוצעו, ובחיפוש בלי תוצאות נשלח החיפוש עצמו, רק אם לחצת "לשלוח". רק התשובות שבחרת, בלי שם, טלפון או מייל. אם סימנת, מצורף גם סוג ההתאמה (למשל "משטרה, צפון"), בלי שום פרט מזהה.</span></li>
           <li>${TICK}<span><strong>"ממליץ/ה":</strong> רק איזה שירות, וקוד אקראי של המכשיר כדי שלא ייספר פעמיים. בלי שם ובלי פרטים.</span></li>
         </ul>
 

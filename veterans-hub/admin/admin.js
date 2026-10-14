@@ -89,16 +89,16 @@
   }
 
   // משוב מהפיילוט: בעילום שם, רק לקריאה
-  const FB_LABELS = { relevant: "ההצעות רלוונטיות?", would: "היה פונה?", missing: "מה חסר", stuck: "איפה נתקע/ה", add: "מקום שמכירים", wait: "המתנה וזמינות", more: "עוד", ctx: "סוג התאמה" };
+  const FB_LABELS = { where: "איפה", rating: "דירוג", reasons: "מה לא התאים", text: "מילים שלו/ה", query: "חיפוש", stations: "התחנות שקיבל/ה", relevant: "ההצעות רלוונטיות?", would: "היה פונה?", missing: "מה חסר", stuck: "איפה נתקע/ה", add: "מקום שמכירים", wait: "המתנה וזמינות", more: "עוד", ctx: "סוג התאמה" };
   function feedbackCard(g) {
     const i = g.items[0];
     return `<article class="adm-card" data-key="${esc(g.key)}">
       <p class="adm-meta">${day(i.created_at)}</p>
-      ${Object.entries(FB_LABELS).filter(([k]) => i.data[k]).map(([k, l]) => `<p class="adm-quote"><strong>${l}:</strong> ${esc(i.data[k])}</p>`).join("")}
+      ${Object.entries(FB_LABELS).filter(([k]) => i.data[k]).map(([k, l]) => `<p class="adm-quote"><strong>${l}:</strong> ${esc(k === "stations" ? i.data[k].split(",").map(id => (S.find(x => x.id === id) || {}).name || id).join(" · ") : i.data[k])}</p>`).join("")}
       <form class="form"><div class="adm-actions"><button class="btn btn-ink" data-act="done" type="button">נקרא</button></div></form></article>`;
   }
   function feedbackCsv() {
-    const gs = Q.groups.filter(g => g.kind === "feedback");
+    const gs = Q.groups.filter(g => g.kind === "feedback" || g.kind === "rate");
     const rows = [["date", ...Object.keys(FB_LABELS)], ...gs.map(g => [day(g.items[0].created_at), ...Object.keys(FB_LABELS).map(k => g.items[0].data[k] || "")])];
     const csv = "\ufeff" + rows.map(r => r.map(x => `"${String(x).replace(/"/g, '""')}"`).join(",")).join("\n");
     const a = document.createElement("a");
@@ -119,7 +119,7 @@
     const nNew = Q.groups.filter(g => g.kind === "new").length, nFix = Q.groups.filter(g => g.kind === "fix").length;
     document.getElementById("n-new").textContent = nNew || "";
     document.getElementById("n-fix").textContent = nFix || "";
-    document.getElementById("n-feedback").textContent = Q.groups.filter(g => g.kind === "feedback").length || "";
+    document.getElementById("n-feedback").textContent = Q.groups.filter(g => g.kind === "feedback" || g.kind === "rate").length || "";
     render();
   }
 
@@ -145,7 +145,7 @@
     document.querySelectorAll("[data-tab]").forEach(a => a.classList.toggle("active", a.dataset.tab === tab));
     if (tab === "leads") return renderLeads();
     if (tab === "live") return renderLive();
-    const gs = Q.groups.filter(g => g.kind === tab);
+    const gs = Q.groups.filter(g => g.kind === tab || (tab === "feedback" && g.kind === "rate"));
     $m.innerHTML = gs.length ? gs.map(tab === "new" ? newCard : tab === "feedback" ? feedbackCard : fixCard).join("") : `<p class="empty">אין כרגע מה לבדוק.</p>`;
     if (tab === "feedback" && gs.length) { const b = document.createElement("button"); b.className = "btn"; b.textContent = "להוריד הכול כ-CSV"; b.onclick = feedbackCsv; $m.prepend(b); }
     $m.querySelectorAll("[data-act]").forEach(b => b.onclick = () => act(b));

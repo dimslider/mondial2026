@@ -12,7 +12,9 @@ const FIX_FIELDS = { text: 1000, contact: 120, avail: 40 };
 // משוב מהפיילוט: בעילום שם. אין שדה לפרטי קשר בכלל
 const FEEDBACK_FIELDS = { relevant: 20, would: 20, missing: 800, stuck: 800, add: 800, wait: 800, more: 800, ctx: 200 };
 const LEAD_FIELDS = { name: 80, contact: 120, message: 600, consent: true, serviceName: 200 };
-const LIMIT_PER_DAY = { new: 15, fix: 20, lead: 10, recommend: 60, feedback: 10 };
+// דירוג מהיר ("ההצעות מתאימות לך?"): בלחיצה אחת, בלי בדיקת רובוט, עם הגבלת קצב. בעילום שם.
+const RATE_FIELDS = { where: 20, rating: 20, reasons: 300, text: 300, query: 120, ctx: 300, stations: 300, v: 10 };
+const LIMIT_PER_DAY = { new: 15, fix: 20, lead: 10, recommend: 60, feedback: 10, rate: 40 };
 
 export async function onRequestPost({ request, env }) {
   let body;
@@ -35,6 +37,16 @@ export async function onRequestPost({ request, env }) {
     if (n >= LIMIT_PER_DAY.recommend) return json({ error: "rate" }, 429);
     await d.prepare("INSERT OR IGNORE INTO recs (service_id, device, ip_hash, created_at) VALUES (?, ?, ?, ?)")
       .bind(sid, await sha(device), ip, now).run();
+    return json({ ok: true });
+  }
+
+  if (kind === "rate") {
+    const data = clean(body.data, RATE_FIELDS);
+    if (!data.rating) return json({ error: "bad-input" }, 400);
+    const n = await d.prepare("SELECT COUNT(*) AS n FROM submissions WHERE ip_hash = ? AND kind = 'rate' AND created_at > ?").bind(ip, now - 864e5).first("n");
+    if (n >= LIMIT_PER_DAY.rate) return json({ error: "rate" }, 429);
+    await d.prepare("INSERT INTO submissions (kind, service_id, dedupe, data, status, created_at, ip_hash) VALUES ('rate', NULL, NULL, ?, 'pending', ?, ?)")
+      .bind(JSON.stringify(data), now, ip).run();
     return json({ ok: true });
   }
 
