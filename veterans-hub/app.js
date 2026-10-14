@@ -163,6 +163,8 @@
   }
   // פעילות קבועה (שבועית / מזדמנת) רחוקה מדי לא מעשית. תוכנית מרוכזת או שהייה עם לינה: אפשר לנסוע.
   const tooFar = (s, p) => { const km = kmTo(s, p); return km != null && km > 110 && ["weekly", "light", "oneoff", "unknown", undefined].includes(s.intensity) && !arr(s.regions).some(r => r === "nationwide" || r === "online"); };
+  // שירות שמיועד לבני משפחה (לא לפגוע/ה עצמו/ה)
+  const familyTarget = s => s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון|למשפחות|לנשות|לאמהות/.test(s.name);
   function score(s, p) {
     let sc = 0;
     const why = [];
@@ -185,6 +187,8 @@
     const modFree = s.cost === "mod-funded" && p.statuses.some(x => x === "mod-recognized" || x === "mod-in-process");
     if (p.maxCost != null && s.cost && !modFree && cr > p.maxCost) sc -= 4;
     if (/ניסוי קליני|ניסוי\s/.test(s.name)) sc -= 3;   // ניסויים קליניים: לא בראש הרשימה
+    // מסגרת שעיקרה גמילה, למי שלא סימן התמכרות
+    if (/רטורנו|גמילה|התמכרו/.test(s.name) && !p.difficulties.includes("addiction")) sc -= 5;
     const myStatuses = expandStatuses(p.statuses);
     const el = arr(s.eligibility).filter(x => myStatuses.includes(x));
     if (el.length) { sc += 1; why.unshift("מתאים לסטטוס שלך"); }
@@ -194,7 +198,7 @@
     if (isForces(p.statuses) && s.police === "yes") { sc += 1; if (!el.length) why.unshift("פתוח גם לשוטרים ולכוחות הביטחון"); }
     if (infoItem(s)) sc -= 2;
     // שירות לבני משפחה או לשכול, למי שלא סימן משפחה, שכול או זוגיות
-    const forFamily = s.category === "family-support" || /בני משפחה|לבני זוג|בנות זוג|לאחים|ליתומי|לאלמנות|ימי הזיכרון|למשפחות|לנשות|לאמהות/.test(s.name);
+    const forFamily = familyTarget(s);
     if (forFamily && !p.statuses.some(x => x === "families" || x === "bereaved") && !p.difficulties.some(x => x === "family-relations" || x === "grief")) sc -= 3;
     // כאב כרוני: ריצה ואקסטרים בלי התאמה לכאב הם לא ההמלצה הראשונה
     if (p.difficulties.includes("chronic-pain") && !arr(s.difficulties).some(x => x === "chronic-pain" || x === "physical-disability") &&
@@ -328,7 +332,8 @@
     const take = (r, role) => { if (r && first.length < 3 && !first.includes(r) && !first.some(f => f.s.category === r.s.category)) { r.role = role; first.push(r); } };
     // בין שתי אפשרויות קרובות, עדיפות למה שאפשר לפנות אליו ישירות (טלפון, אתר, מייל)
     const reach = r => r.s.phone || r.s.website || r.s.email ? 1.5 : 0;
-    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && !isSupplier(r.s) && pred(r)).sort((a, b) => rank(b) + reach(b) - rank(a) - reach(a))[0];
+    const notMine = r => familyTarget(r.s) && !p.statuses.some(x => x === "families" || x === "bereaved") && !p.difficulties.includes("family-relations");
+    const best = (pred, rank = r => r.sc) => res.filter(r => !first.includes(r) && !infoItem(r.s) && !isSupplier(r.s) && !notMine(r) && pred(r)).sort((a, b) => rank(b) + reach(b) - rank(a) - reach(a))[0];
     const tx = r => r.sc + (arr(r.s.eligibility).length <= 5 ? 2 * arr(r.s.eligibility).filter(x => p.statuses.includes(x) && x !== "combat-soldiers" && x !== "reservists").length : 0) +
       (p.statuses.includes("mod-in-process") && /תהליך ההכרה/.test(r.s.name) ? 3 : 0) + (openToAll(r.s) ? -2 : 0) +
       (p.statuses.some(x => x === "police" || x === "security-forces") ? (r.s.police === "yes" ? 3 : r.s.police === "no" ? -4 : 0) : 0) -
@@ -344,14 +349,17 @@
       // "אנשים שמבינים": עדיפות לקהילה של אנשים במצב שלו (הורים שכולים, שוטרים, לוחמים מהתקופה שלו)
       people: () => best(r => r.s.kind === "peer" || r.s.kind === "family" && r.s.format !== "individual" || r.s.kind === "activity" && r.s.format === "group",
         r => r.sc + (likesIt(r) ? 3 : 0) + (p.era === "older" && r.s.era === "older" ? 9 : 0) +
-          (arr(r.s.eligibility).length <= 4 && arr(r.s.eligibility).some(x => p.statuses.includes(x) && !["combat-soldiers", "reservists", "civilians"].includes(x)) ? 5 : 0)),
+          (arr(r.s.eligibility).length <= 4 && arr(r.s.eligibility).some(x => p.statuses.includes(x) && !["combat-soldiers", "reservists", "civilians"].includes(x)) ? 5 : 0) +
+          (p.relation === "partner" && /בנות זוג|בני זוג|נשות|זוגות|לבנות הזוג/.test(r.s.name) ? 6 : 0)),
       rights: () => best(r => r.s.kind === "rights" || r.s.kind === "money", r => r.sc + (starred(r.s) ? 4 : 0) + (/ליווי|ייצוג/.test(r.s.name) ? 3 : 0))
     };
     const GOAL_ROLE = { talk: "לדבר עם מישהו", do: "לעשות משהו", people: "אנשים שמבינים", rights: "לסדר את הזכויות" };
     if (p.goal && GOAL_PICK[p.goal]) take(GOAL_PICK[p.goal](), GOAL_ROLE[p.goal]);
     // מענה ייעודי לפגיעה: עדיפות לשירות שזה עיקרו
     for (const k of injuryOf(p.difficulties))
-      take(best(r => arr(r.s.difficulties).some(x => INJURY[k].includes(x)) && r.s.category !== "rights-legal",
+      take(best(r => arr(r.s.difficulties).some(x => INJURY[k].includes(x)) && r.s.category !== "rights-legal" && !["housing", "work", "money"].includes(r.s.kind) &&
+          (injuryFocus(r.s).includes(k) || r.s.category === "medical-rehab" && r.s.kind === "treatment" ||
+           (k === "tbi" && /פגיע(?:ת|ות) ראש|פגיעה מוחית|נוירו|קוגניטיב|זעזוע מוח/.test(r.s.name))),
         r => r.sc + (injuryFocus(r.s).includes(k) ? 4 : 0) + (r.s.category === "medical-rehab" ? 2 : 0) +
           (k === "tbi" ? (/נוירו|קוגניטיב/.test(r.s.name + " " + r.s.description) ? 6 : 0) + (/פגיעות ראש|פגיעה מוחית/.test(r.s.name) ? 3 : 0) : 0)),
         k === "tbi" ? "שיקום אחרי פגיעת ראש" : "שיקום הגוף");
@@ -371,7 +379,12 @@
     // תחום עניין: שירות שזה עיקרו (ים לגלישה, טבע לחווה), לא שירות שמזכיר את זה בדרך אגב
     if (p.interests.length)
       take(best(r => arr(r.s.interests).some(i => p.interests.includes(i)) && p.interests.some(i => (INTEREST_CATS[i] || []).includes(r.s.category))), "משהו שהוא לא טיפול");
-    const pool = res.filter(r => !infoItem(r.s) && !isSupplier(r.s));
+    // השלמה לשלוש תחנות: רק מה שעונה על קושי (לא רק "פוסט טראומה" הכללי) או על תחום עניין, ובלי כלבים/סוסים למי שלא בחר בעלי חיים
+    const relevant = r => (arr(r.s.difficulties).some(d => d !== "ptsd" && p.difficulties.includes(d)) || likesIt(r)) &&
+      (r.s.category !== "animal-therapy" || p.interests.includes("animals"));
+    // משפחה או שכול בלבד: לא תוכנית שבשמה "ללוחמים" או "לפצועים"
+    const familyOnly = p.statuses.length && p.statuses.every(x => x === "families" || x === "bereaved");
+    const pool = res.filter(r => !infoItem(r.s) && !isSupplier(r.s) && !notMine(r) && relevant(r) && !(familyOnly && /ללוחמי|ללוחמות|לפצועי|לנכי/.test(r.s.name)));
     for (const r of pool) if (first.length < 3 && !first.includes(r) && !first.some(f => areaOf(f.s.category) === areaOf(r.s.category))) first.push(r);
     for (const r of pool) take(r);
     for (const r of pool) if (first.length < 3 && !first.includes(r)) first.push(r);
@@ -435,7 +448,13 @@
     return f.slice(0, 3);
   }
   // הצעד הראשון: המשפט הראשון של "איך מתחילים"
-  const firstStep = s => { const t = (s.how_to_apply || "").trim(); if (!t) return ""; const m = t.match(/^.{10,160}?[.!?](?=\s|$)/); return m ? m[0] : t.length > 160 ? shortDesc(t, 150) : t; };
+  // משפט שמתאר למי זה מתאים ("מתאים למי ש...") הוא לא צעד. לוקחים את המשפט הבא.
+  const firstStep = s => {
+    const t = (s.how_to_apply || "").trim(); if (!t) return "";
+    const parts = t.split(/(?<=[.!?])\s+/);   // רק נקודה שאחריה רווח: לא שוברים מייל או אתר
+    const step = parts.map(x => x.trim()).find(x => x.length > 8 && !/^(?:מתאים|מיועד|רק ל|הזכאות|זכאים)/.test(x)) || parts[0].trim();
+    return step.length > 160 ? shortDesc(step, 150) : step;
+  };
   const distinctWhy = list => new Set(list.map(whyText)).size > 1;
   const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
 
