@@ -90,11 +90,13 @@
 
   // משוב מהפיילוט: בעילום שם, רק לקריאה
   const FB_LABELS = { where: "איפה", rating: "דירוג", reasons: "מה לא התאים", text: "מילים שלו/ה", query: "חיפוש", stations: "התחנות שקיבל/ה", relevant: "ההצעות רלוונטיות?", would: "היה פונה?", missing: "מה חסר", stuck: "איפה נתקע/ה", add: "מקום שמכירים", wait: "המתנה וזמינות", more: "עוד", ctx: "סוג התאמה" };
+  const RATING_HE = { good: "מדויק", partial: "חלקית", bad: "לא ממש", empty: "חיפוש בלי תוצאות", started: "התקבל/ה, התחיל/ה", waiting: "ברשימת המתנה",
+    "no-answer": "לא חזרו אליו/ה", "not-fit": "לא התאים", "not-yet": "עוד לא פנה/תה", results: "תוצאות", search: "חיפוש", "search-empty": "חיפוש ריק", followup: "שאלת המשך אחרי שבועיים" };
   function feedbackCard(g) {
     const i = g.items[0];
     return `<article class="adm-card" data-key="${esc(g.key)}">
       <p class="adm-meta">${day(i.created_at)}</p>
-      ${Object.entries(FB_LABELS).filter(([k]) => i.data[k]).map(([k, l]) => `<p class="adm-quote"><strong>${l}:</strong> ${esc(k === "stations" ? i.data[k].split(",").map(id => (S.find(x => x.id === id) || {}).name || id).join(" · ") : i.data[k])}</p>`).join("")}
+      ${Object.entries(FB_LABELS).filter(([k]) => i.data[k]).map(([k, l]) => `<p class="adm-quote"><strong>${l}:</strong> ${esc(k === "stations" ? i.data[k].split(",").map(id => (S.find(x => x.id === id) || {}).name || id).join(" · ") : RATING_HE[i.data[k]] || i.data[k])}</p>`).join("")}
       <form class="form"><div class="adm-actions"><button class="btn btn-ink" data-act="done" type="button">נקרא</button></div></form></article>`;
   }
   function feedbackCsv() {

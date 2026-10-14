@@ -562,6 +562,7 @@
     const soon = upcoming(null, 3);
     $main.innerHTML = `
       <section class="home">
+        <div id="followup"></div>
         <div class="glass hero">
           <div class="lockup">${LOGO(56)}<div class="wordmark">אזימוט</div></div>
           <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
@@ -574,12 +575,14 @@
         <p class="note quiet center">נבנה בהתנדבות, מתוך רצון לעזור. בלי פרסומות, ואף אחד לא מרוויח מזה. <a class="link-u" href="#/about">למה אזימוט קיים</a></p>
       </section>`;
     bindHomeSearch();
+    followupCard(document.getElementById("followup"));
   }
   function viewReturning(p) {
     const first = pickStations(p, match(p, { all: true }));   // אותן תחנות כמו בדף התוצאות
     const soon = upcoming(p, 3);
     $main.innerHTML = `
       <section class="home">
+        <div id="followup"></div>
         <h1 class="h-title">שלום שוב. מה צריך היום?</h1>
         ${homeSearch()}${needChips()}
         ${first.length ? `<h2 class="h-sec">התחנות שלך <a href="#/match">לשנות</a></h2>
@@ -591,6 +594,7 @@
         <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>מכירים מקום שעוזר ולא מופיע?</strong><br>להוסיף בדקה</span></a>
       </section>`;
     bindHomeSearch();
+    followupCard(document.getElementById("followup"));
   }
   // לפי צורך: רשימה מסוננת. עם שאלון: לפי ההתאמה האישית. בלי: לפי מה שמומלץ ונבדק
   // בלי שאלון: קודם הקווים המרכזיים, מה שמומלץ בקהילה, ומה שמיועד לכלל הלוחמים, ולא לקבוצה צרה (נפגעי טרור, תקיפה מינית)
@@ -1392,6 +1396,7 @@
         <ul class="ticks plain">
           <li>${TICK}<span><strong>"שיחזרו אליי":</strong> השם, הטלפון או המייל, ומה שכתבת. משמש רק כדי שהגוף שבחרת יחזור אליך. אנחנו מעבירים לגוף הזה בלבד, ולא לאף אחד אחר.</span></li>
           <li>${TICK}<span><strong>הוספת מקום ותיקון פרטים:</strong> מה שכתבת בטופס. פרטי קשר שלך הם לא חובה, ומשמשים רק אם נצטרך לשאול משהו. לא מתפרסמים.</span></li>
+          <li>${TICK}<span><strong>"פנית? איך הלך?":</strong> הטלפון שלך בלבד זוכר לאיזה מקום פנית (התקשרת, כתבת או ביקשת שיחזרו אליך), כדי לשאול אחרי שבועיים איך זה הלך. זה לא נשלח לשום מקום. אם בחרת לענות, נשלחים רק התשובה ושם המקום, בעילום שם.</span></li>
           <li>${TICK}<span><strong>משוב, דירוג מהיר ("ההצעות מתאימות לך?") ודיווח על המתנה:</strong> בעילום שם. בדירוג נשלחים גם סוג ההתאמה והמקומות שהוצעו, ובחיפוש בלי תוצאות נשלח החיפוש עצמו, רק אם לחצת "לשלוח". רק התשובות שבחרת, בלי שם, טלפון או מייל. אם סימנת, מצורף גם סוג ההתאמה (למשל "משטרה, צפון"), בלי שום פרט מזהה.</span></li>
           <li>${TICK}<span><strong>"ממליץ/ה":</strong> רק איזה שירות, וקוד אקראי של המכשיר כדי שלא ייספר פעמיים. בלי שם ובלי פרטים.</span></li>
         </ul>
@@ -1440,7 +1445,78 @@
     .replace(/([\w.+-]+@[\w-]+\.[\w.]+)/g, m => `<a href="mailto:${m}" dir="ltr">${m}</a>`);
   const heDate = d => { const m = String(d || "").match(/^(\d{4})-(\d{2})/); return m ? `${+m[2]}/${m[1]}` : d; };
   const WAIT_OPTS = ["אין המתנה", "עד חודש", "1 עד 3 חודשים", "3 עד 6 חודשים", "חצי שנה ויותר", "לא מקבלים כרגע", "לא הצלחתי ליצור קשר"];
+  // ---------- "פנית? איך הלך?": שאלת המשך אחרי שבועיים ----------
+  // רק בטלפון: לאיזה מקום פנית ומתי (בלי שום שליחה). אחרי 14 יום שואלים פעם אחת בדף הבית. התשובה נשלחת רק אם בוחרים לענות.
+  const CONTACT_KEY = "vh-contacted";
+  const contactsGet = () => { try { return JSON.parse(localStorage.getItem(CONTACT_KEY)) || []; } catch (e) { return []; } };
+  const contactsSet = l => { try { localStorage.setItem(CONTACT_KEY, JSON.stringify(l.slice(-12))); } catch (e) { /* storage blocked */ } };
+  function rememberContact(id) {
+    const s = SERVICES.find(x => x.id === id);
+    if (!s || s.category === "hotlines") return;   // קו תמיכה: אין "התקבלת?"
+    const l = contactsGet();
+    if (l.some(c => c.id === id)) return;
+    l.push({ id, at: Date.now() });
+    contactsSet(l);
+  }
+  let openId = null;
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="tel:"], a[href*="wa.me"], a[href^="mailto:"], a[target="_blank"]');
+    if (!a || a.closest(".footer") || a.closest(".card-help")) return;
+    const modalOpen = !$modal.hidden;
+    const host = a.closest("[data-sid], li");
+    const id = modalOpen ? openId : host && (host.dataset.sid || (host.querySelector("[data-open]") || {}).dataset?.open);
+    if (id) rememberContact(id);
+  }, true);
+  const DAY = 864e5;
+  function followupDue() {
+    return contactsGet().find(c => !c.asked && (!c.snooze || c.snooze < Date.now()) && Date.now() - c.at >= 14 * DAY && SERVICES.some(s => s.id === c.id));
+  }
+  function followupCard(el) {
+    const c = followupDue();
+    if (!el || !c) return;
+    const s = SERVICES.find(x => x.id === c.id);
+    const OUT = [["started", "התקבלתי / התחלתי"], ["waiting", "אני ברשימת המתנה"], ["no-answer", "לא חזרו אליי"], ["not-fit", "לא התאים לי"], ["not-yet", "עוד לא פניתי בפועל"]];
+    el.innerHTML = `<div class="rate-box followup-box" role="group" aria-labelledby="fu-q">
+        <p class="rate-q" id="fu-q">לפני כשבועיים פנית ל<strong>${esc(splitName(s.name).main)}</strong>. איך זה הלך?</p>
+        <div class="rate-btns">${OUT.map(([k, l]) => `<button type="button" data-o="${k}">${l}</button>`).join("")}</div>
+        <form class="rate-more" hidden>
+          <p class="rate-sub">כמה זמן לקח מהפנייה? (לא חובה)</p>
+          <div class="chips small">${WAIT_OPTS.slice(0, 5).map(w => `<label class="chip"><input type="radio" name="w" value="${esc(w)}"><span>${esc(w)}</span></label>`).join("")}</div>
+          <label class="rate-text">משהו שיעזור לבא אחריך? (לא חובה)<input name="txt" maxlength="300" autocomplete="off"></label>
+          <button class="btn btn-ink" type="submit">לשלוח</button>
+        </form>
+        <p class="rate-note">בעילום שם. רק הטלפון שלך זוכר שפנית. <button type="button" class="link-u" data-o="later">לא עכשיו</button> · <button type="button" class="link-u" data-o="never">לא לשאול</button></p>
+        <p class="rate-msg" role="status" aria-live="polite"></p>
+      </div>`;
+    const box = el.querySelector(".followup-box"), more = box.querySelector(".rate-more"), msg = box.querySelector(".rate-msg");
+    const mark = patch => contactsSet(contactsGet().map(x => x.id === c.id ? Object.assign(x, patch) : x));
+    let outcome = "";
+    const send = async extra => {
+      mark({ asked: true });
+      box.querySelectorAll("button,input").forEach(x => x.disabled = true);
+      msg.textContent = "תודה! זה המידע הכי חשוב שיש לנו.";
+      try { await Store.submit("rate", Object.assign({ where: "followup", rating: outcome, stations: c.id, v: VERSION }, extra || {})); } catch (e) { /* ignore */ }
+      more.hidden = true;
+    };
+    box.addEventListener("click", e => {
+      const b = e.target.closest("[data-o]"); if (!b) return;
+      const o = b.dataset.o;
+      if (o === "later") { mark({ snooze: Date.now() + 7 * DAY }); el.innerHTML = ""; return; }
+      if (o === "never") { mark({ asked: true }); el.innerHTML = ""; return; }
+      outcome = o;
+      box.querySelectorAll(".rate-btns button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      more.hidden = false;
+      more.querySelector(".rate-sub").hidden = more.querySelector(".chips").hidden = !(o === "started" || o === "waiting");
+    });
+    more.addEventListener("submit", e => {
+      e.preventDefault();
+      const fd = new FormData(more);
+      send({ reasons: fd.get("w") || "", text: (fd.get("txt") || "").trim() });
+    });
+  }
+
   function openService(id) {
+    openId = id;
     const s = SERVICES.find(x => x.id === id);
     if (!s) return;
     const prof = loadProfile();
@@ -1537,6 +1613,7 @@
           message: (fd.get("message") || "").trim(), consent: true
         }, { service_id: s.id, token: leadToken ? leadToken() : "" });
         f.querySelectorAll("input,textarea,button").forEach(x => x.disabled = true);
+        rememberContact(s.id);
         msg.textContent = r && r.local ? "לא הצלחנו לשלוח עכשיו (אין חיבור לשרת). הכי בטוח להתקשר או לכתוב להם ישירות."
           : "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.";
       } catch (err) {
