@@ -14000,7 +14000,7 @@ window.SERVICES = [
   ],
   "interests": [],
   "cost": "free",
-  "cost_notes": "בהפניה מרופא משפחה ו'טופס 17' מקופת החולים; העלות לא מפורטת באתר, כדאי לוודא מול המרפאה",
+  "cost_notes": "ללא עלות לחברי כל קופות החולים, בהפניה ו'טופס 17'. אפשר להגיע גם בהפניה של משרד הביטחון או של ביטוח לאומי.",
   "regions": [
    "sharon"
   ],
@@ -14008,7 +14008,7 @@ window.SERVICES = [
   "phone": "09-7470250 (וואטסאפ: 050-6191023)",
   "email": "kamaclinic@clalit.org.il",
   "website": "https://hospitals.clalit.co.il/shalvata/he/adults/community_clinics/Pages/kama.aspx",
-  "how_to_apply": "לקבל מרופא המשפחה הפניה ו'טופס 17', ולשלוח את שניהם למייל המרפאה. אחר כך המרפאה קובעת שיחת קבלה.",
+  "how_to_apply": "לקבל מרופא המשפחה הפניה ו'טופס 17' (או הפניה ממשרד הביטחון או מביטוח לאומי), ולשלוח למייל המרפאה או להתקשר ל-09-7470250. אחר כך המרפאה קובעת שיחת קבלה.",
   "source_url": "https://hospitals.clalit.co.il/shalvata/he/adults/community_clinics/Pages/kama.aspx",
   "confidence": "high",
   "reviewed_at": "2026-10-08",
@@ -27116,6 +27116,67 @@ window.SERVICES = [
   ],
   "supplier": true,
   "no_contact": true
+ },
+ {
+  "id": "sheba-co-il-ead73e",
+  "name": "האלמנט החמישי – מרחב טיפולי בטבע לגוף ונפש, מרכז שיבא תל השומר",
+  "category": "yoga-mind-body",
+  "description": "מרחב בטבע במרכז השיקום של שיבא, לעבודה טיפולית של גוף ונפש בקבוצות. מיועד לכל מי שמתמודד עם השפעות של אירועים משמעותיים וטראומה. יש כמה מסלולים, והתנאים משתנים לפי המסלול.",
+  "provider_type": "government",
+  "eligibility": [
+   "civilians",
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "not-recognized",
+   "police",
+   "reservists",
+   "security-forces",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "anxiety",
+   "depression",
+   "ptsd"
+  ],
+  "interests": [
+   "mind-body",
+   "nature"
+  ],
+  "cost": "",
+  "cost_notes": "לפי המסלול: יש מסלולים שונים ודרכי תשלום שונות, כדאי לברר מול המרכז.",
+  "regions": [
+   "center"
+  ],
+  "location": "מרכז רפואי שיבא, תל השומר",
+  "phone": "03-5309666",
+  "email": "",
+  "website": "https://www.sheba.co.il/rehabilitation/info/fifth-element-new",
+  "how_to_apply": "מתקשרים ל-03-5309666 ושואלים על המסלולים, או נכנסים לעמוד התוכנית באתר שיבא.",
+  "source_url": "https://www.sheba.co.il/rehabilitation/info/fifth-element-new",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "הוצע ע\"י איש צוות במקום",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "group",
+  "town": "רמת גן",
+  "avail": "",
+  "avail_src": "",
+  "status": "",
+  "next_cycle": "",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   32.046,
+   34.843
+  ],
+  "supplier": false
  },
  {
   "id": "s-cb1a53",

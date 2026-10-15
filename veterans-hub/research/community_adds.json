@@ -1,0 +1,51 @@
+[
+ {
+  "name": "האלמנט החמישי – מרחב טיפולי בטבע לגוף ונפש, מרכז שיבא תל השומר",
+  "category": "yoga-mind-body",
+  "description": "מרחב בטבע במרכז השיקום של שיבא, לעבודה טיפולית של גוף ונפש בקבוצות. מיועד לכל מי שמתמודד עם השפעות של אירועים משמעותיים וטראומה. יש כמה מסלולים, והתנאים משתנים לפי המסלול.",
+  "provider_type": "government",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "not-recognized",
+   "security-forces",
+   "police",
+   "civilians",
+   "terror-victims"
+  ],
+  "difficulties": [
+   "ptsd",
+   "anxiety",
+   "depression"
+  ],
+  "interests": [
+   "nature",
+   "mind-body"
+  ],
+  "cost": "",
+  "cost_notes": "לפי המסלול: יש מסלולים שונים ודרכי תשלום שונות, כדאי לברר מול המרכז.",
+  "regions": [
+   "center"
+  ],
+  "location": "מרכז רפואי שיבא, תל השומר",
+  "phone": "03-5309666",
+  "email": "",
+  "website": "https://www.sheba.co.il/rehabilitation/info/fifth-element-new",
+  "how_to_apply": "מתקשרים ל-03-5309666 ושואלים על המסלולים, או נכנסים לעמוד התוכנית באתר שיבא.",
+  "source_url": "https://www.sheba.co.il/rehabilitation/info/fifth-element-new",
+  "confidence": "medium",
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "not_required",
+  "police": "yes",
+  "format": "group",
+  "town": "רמת גן",
+  "lat": 32.046,
+  "lng": 34.843,
+  "unit_only": false,
+  "war_only": null,
+  "community_note": "הוצע ע\"י איש צוות במקום"
+ }
+]

@@ -187,6 +187,13 @@
     const modFree = s.cost === "mod-funded" && p.statuses.some(x => x === "mod-recognized" || x === "mod-in-process");
     if (p.maxCost != null && s.cost && !modFree && cr > p.maxCost) sc -= 4;
     if (/ניסוי קליני|ניסוי\s/.test(s.name)) sc -= 3;   // ניסויים קליניים: לא בראש הרשימה
+    // מי שלא סימן פוסט טראומה, פציעה או הכרה (למשל מילואימניק עם קשיי הסתגלות): שירות שבשמו "פוסט טראומה", "שיקום" או "פצועים" הוא לא הכתובת הראשונה
+    // רק כשסימנו מילואים (בלי לוחם/ת, שוטר/ת, הכרה), ובלי פוסט טראומה או פציעה
+    const lightReservist = p.statuses.includes("reservists") && p.statuses.every(x => ["reservists", "not-recognized", "families", "civilians"].includes(x)) &&
+      !p.difficulties.some(x => ["ptsd", "tbi", "amputation", "physical-disability", "moral-injury"].includes(x));
+    if (lightReservist && /פוסט.?טראומ|הלומי קרב|PTSD|לפצועי|לנכי|שיקומי|שיקום|תגובות קרב/.test(s.name)) sc -= 4;
+    // ולו: מה שמיועד במפורש למשרתי מילואים קודם
+    if (lightReservist && /מילואים|מילואימניק/.test(s.name)) { sc += 2; why.unshift("מיועד למשרתי מילואים"); }
     // מסגרת שעיקרה גמילה, למי שלא סימן התמכרות
     if (/רטורנו|גמילה|התמכרו/.test(s.name) && !p.difficulties.includes("addiction")) sc -= 5;
     const myStatuses = expandStatuses(p.statuses);
