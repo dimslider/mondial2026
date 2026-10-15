@@ -31,10 +31,15 @@
     const dups = similar(d("name"));
     const regions = [...new Set(it.flatMap(i => i.data.regions || []))];
     const desc = [d("what"), d("notes")].filter(Boolean).join("\n");
+    // כמה תחומים ועלויות (מרכז עם מסלולים רבים): מוצגים, והראשון נבחר כראשי
+    const cats = [...new Set(it.flatMap(i => i.data.categories || [i.data.category]).filter(Boolean))];
+    const costs = [...new Set(it.flatMap(i => i.data.costs || [i.data.cost]).filter(Boolean))];
+    const costNote = costs.length > 1 ? costs.map(c => (T.cost[c] || {}).label || c).join(" / ") + ", לפי המסלול" : "";
     return `<article class="adm-card" data-key="${esc(g.key)}">
       <h2>${esc(d("name"))}</h2>
       <p class="adm-meta">${it.length} הצעות · ${recs} ממליצים · ${it.map(i => rel[i.data.relation] || "").filter(Boolean).join(", ")} · ${day(it[0].created_at)}</p>
       ${it.map(i => i.data.what || i.data.notes ? `<p class="adm-quote">${esc([i.data.what, i.data.notes].filter(Boolean).join("\n"))}${i.data.contact ? `\n— ליצירת קשר: ${esc(i.data.contact)}` : ""}</p>` : "").join("")}
+      ${cats.length > 1 || costs.length > 1 ? `<p class="adm-meta">תחומים שסומנו: ${esc(cats.map(c => (T.categories[c] || {}).label || c).join(" · "))}${costs.length ? ` · עלויות: ${esc(costs.map(c => (T.cost[c] || {}).label || c).join(" · "))}` : ""}</p>` : ""}
       ${dups.length ? `<p class="adm-dup">אולי כבר קיים: ${dups.map(s => esc(s.name)).join(" · ")}</p>` : ""}
       <form class="form">
         <label>שם<input name="name" value="${esc(d("name"))}"></label>
@@ -51,7 +56,7 @@
         </div>
         <div class="two">
           <label>מיקום<input name="location" value="${esc(d("location"))}"></label>
-          <label>פירוט עלות<input name="cost_notes"></label>
+          <label>פירוט עלות<input name="cost_notes" value="${esc(costNote)}"></label>
         </div>
         <label>איך מתחילים<input name="how_to_apply"></label>
         <div class="adm-actions">

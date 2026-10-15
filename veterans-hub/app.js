@@ -1171,22 +1171,22 @@
   function viewAdd(params) {
     const pre = AREAS[params.get("a")] ? AREAS[params.get("a")].cats : [];
     const cats = Object.keys(T.categories);
-    const COSTS = { free: "ללא עלות", "mod-funded": "במימון משרד הביטחון", partial: "השתתפות חלקית", paid: "בתשלום", "": "לא יודע/ת" };
+    const COSTS = { free: "ללא עלות", "mod-funded": "במימון משרד הביטחון", partial: "השתתפות חלקית", paid: "בתשלום" };
     $main.innerHTML = `
       <section class="form-page add-page">
         <h1 class="page-title">להוסיף מקום</h1>
         <p class="lead">עמותה, חווה, קבוצה, מטפל/ת דרך גוף, פעילות, מענק. כל דבר שעזר לך או למישהו שאת/ה מכיר/ה. אנחנו בודקים ומוסיפים.</p>
         <form id="add" class="form" novalidate>
           <label class="big">איך קוראים לזה? *<input name="name" required maxlength="120" autocomplete="off" placeholder="למשל: חוות הגליל לוחמים"></label>
-          <fieldset><legend>באיזה תחום?</legend>
-            <div class="chips small">${cats.map(k => radioChip("category", k, SHORT_CAT[k] || (k === "hotlines" ? "קו סיוע" : catLabel(k)), pre[0] === k)).join("")}</div>
+          <fieldset><legend>באיזה תחום? אפשר לבחור כמה</legend>
+            <div class="chips small">${cats.map(k => chip("category", k, SHORT_CAT[k] || (k === "hotlines" ? "קו סיוע" : catLabel(k)), pre[0] === k)).join("")}</div>
           </fieldset>
           <label>מה עושים שם, במשפט או שניים<textarea name="what" rows="3" maxlength="800"></textarea></label>
           <fieldset><legend>איפה?</legend>
             <div class="chips small">${Object.keys(T.regions).map(k => chip("regions", k, T.regions[k])).join("")}</div>
           </fieldset>
-          <fieldset><legend>כמה זה עולה?</legend>
-            <div class="chips small">${Object.keys(COSTS).map(k => radioChip("cost", k, COSTS[k], k === "")).join("")}</div>
+          <fieldset><legend>כמה זה עולה? אפשר לבחור כמה, או לדלג אם לא יודעים</legend>
+            <div class="chips small">${Object.keys(COSTS).map(k => chip("cost", k, COSTS[k], false)).join("")}</div>
           </fieldset>
           <div class="row">
             <label>אתר או עמוד<input name="website" maxlength="300" inputmode="url" placeholder="קישור"></label>
@@ -1216,8 +1216,10 @@
       const fd = new FormData(f);
       const name = (fd.get("name") || "").trim();
       if (name.length < 2) { msg.textContent = "צריך לפחות שם."; f.name.focus(); return; }
-      const data = { name, recommend: !!fd.get("recommend"), regions: fd.getAll("regions") };
-      ["category", "what", "cost", "website", "phone", "relation", "notes", "location", "contact"].forEach(k => data[k] = (fd.get(k) || "").toString().trim());
+      // מרכז גדול: כמה תחומים וכמה מסלולי תשלום. הראשון נשמר כ"ראשי", וכולם נשלחים לבדיקה
+      const data = { name, recommend: !!fd.get("recommend"), regions: fd.getAll("regions"), categories: fd.getAll("category"), costs: fd.getAll("cost") };
+      data.category = data.categories[0] || ""; data.cost = data.costs.length === 1 ? data.costs[0] : "";
+      ["what", "website", "phone", "relation", "notes", "location", "contact"].forEach(k => data[k] = (fd.get(k) || "").toString().trim());
       const btn = f.querySelector("button[type=submit]");
       btn.disabled = true;
       try {

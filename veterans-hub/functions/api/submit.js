@@ -6,7 +6,7 @@ export const onRequestOptions = options;
 const NEW_FIELDS = {
   name: 120, category: 40, what: 800, cost: 20, cost_notes: 200, location: 120,
   phone: 40, website: 300, relation: 20, recommend: true, notes: 800, contact: 120,
-  regions: [9], eligibility: [11]
+  regions: [9], eligibility: [11], categories: [8], costs: [5]
 };
 const FIX_FIELDS = { text: 1000, contact: 120, avail: 40 };
 // משוב מהפיילוט: בעילום שם. אין שדה לפרטי קשר בכלל
