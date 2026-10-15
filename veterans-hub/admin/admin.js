@@ -152,6 +152,7 @@
     document.querySelectorAll("[data-tab]").forEach(a => a.classList.toggle("active", a.dataset.tab === tab));
     if (tab === "leads") return renderLeads();
     if (tab === "live") return renderLive();
+    if (tab === "sync") return renderSync();
     const gs = Q.groups.filter(g => g.kind === tab || (tab === "feedback" && g.kind === "rate"));
     $m.innerHTML = gs.length ? gs.map(tab === "new" ? newCard : tab === "feedback" ? feedbackCard : fixCard).join("") : `<p class="empty">אין כרגע מה לבדוק.</p>`;
     if (tab === "feedback" && gs.length) { const b = document.createElement("button"); b.className = "btn"; b.textContent = "להוריד הכול כ-CSV"; b.onclick = feedbackCsv; $m.prepend(b); }
@@ -189,6 +190,70 @@
       Q.groups = Q.groups.filter(x => x !== g);
       card.remove();
     } catch (e) { b.disabled = false; alert("לא נשמר: " + e.message); }
+  }
+
+  // ---------- סנכרון עם Claude: ייצוא התור לקובץ, וייבוא החלטות ----------
+  // הייצוא כולל רק תוכן. בלי פניות "שיחזרו אליי" ובלי פרטי קשר שאנשים השאירו.
+  const KIND_HE = { new: "מקום חדש", fix: "תיקון / זמינות", feedback: "משוב", rate: "דירוג" };
+  const svcName = id => (S.find(x => x.id === id) || {}).name || "";
+  const summary = g => {
+    const d = g.items[0].data;
+    if (g.kind === "new") return d.name || "";
+    if (g.kind === "fix") return (svcName(g.service_id) || g.service_id) + ": " + (d.text || "").slice(0, 80);
+    if (g.kind === "rate") return [d.where, d.rating, d.reasons, d.query, d.text].filter(Boolean).join(" · ").slice(0, 100);
+    return [d.relevant, d.missing, d.stuck, d.add].filter(Boolean).join(" · ").slice(0, 100);
+  };
+  function exportQueue(groups) {
+    const clean = d => { const o = Object.assign({}, d); delete o.contact; return o; };
+    const out = { app: "azimut", exported_at: new Date().toISOString(), version: 1,
+      items: groups.map(g => ({ ids: g.items.map(i => i.id), kind: g.kind, service_id: g.service_id || null, service_name: g.service_id ? svcName(g.service_id) : null,
+        count: g.items.length, created_at: new Date(g.items[0].created_at).toISOString().slice(0, 10), data: g.items.map(i => clean(i.data)) })) };
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1)], { type: "application/json" }));
+    a.download = `azimut-queue-${new Date().toISOString().slice(0, 10)}.json`; a.click();
+  }
+  function renderSync() {
+    const gs = Q.groups.filter(g => g.kind !== "lead");
+    $m.innerHTML = `<section class="form-page">
+      <h1 class="page-title">סנכרון עם Claude</h1>
+      <p class="note">1. מסמנים מה לשלוח (או לא מסמנים כלום, ואז נשלח הכול) ומורידים קובץ. 2. שולחים אותו ל-Claude. 3. מקבלים בחזרה קובץ החלטות ומייבאים אותו כאן, כדי לסגור בבת אחת את מה שטופל.<br>בקובץ אין פניות "שיחזרו אליי" ואין פרטי קשר.</p>
+      <h2 class="section-title">1. ייצוא (${gs.length} ממתינים)</h2>
+      ${gs.length ? `<p><label class="check"><input type="checkbox" id="sync-all"> לסמן הכול</label></p>
+      <div class="sync-list">${gs.map((g, i) => `<label class="check sync-row"><input type="checkbox" data-i="${i}"> <span><strong>${KIND_HE[g.kind] || g.kind}</strong>${g.items.length > 1 ? ` (×${g.items.length})` : ""} · ${esc(summary(g))} <span class="adm-meta">${day(g.items[0].created_at)}</span></span></label>`).join("")}</div>
+      <p><button class="btn btn-ink" id="sync-export" type="button">להוריד קובץ לשליחה ל-Claude</button></p>` : `<p class="empty">אין כרגע מה לייצא.</p>`}
+      <h2 class="section-title">2. ייבוא החלטות</h2>
+      <p><input type="file" id="sync-file" accept=".json,application/json"></p>
+      <div id="sync-preview"></div>
+    </section>`;
+    const boxes = () => [...$m.querySelectorAll(".sync-row input")];
+    const all = document.getElementById("sync-all");
+    if (all) all.onchange = () => boxes().forEach(b => b.checked = all.checked);
+    const ex = document.getElementById("sync-export");
+    if (ex) ex.onclick = () => { const sel = boxes().filter(b => b.checked).map(b => gs[+b.dataset.i]); exportQueue(sel.length ? sel : gs); };
+    document.getElementById("sync-file").onchange = async ev => {
+      const prev = document.getElementById("sync-preview");
+      let dec;
+      try { dec = JSON.parse(await ev.target.files[0].text()); } catch (e) { prev.innerHTML = `<p class="callout">הקובץ לא נקרא. ודאו שזה קובץ ההחלטות מ-Claude.</p>`; return; }
+      const list = (dec.decisions || []).filter(d => Array.isArray(d.ids) && ["done", "reject"].includes(d.action));
+      const byId = new Map(); Q.groups.forEach(g => g.items.forEach(i => byId.set(i.id, g)));
+      const rows = list.map(d => ({ d, g: byId.get(+d.ids[0]) }));
+      const pending = rows.filter(r => r.g);
+      prev.innerHTML = list.length ? `<p class="note">${pending.length} החלטות על פריטים שעדיין ממתינים${rows.length > pending.length ? `, ו-${rows.length - pending.length} שכבר טופלו (ידולגו)` : ""}.</p>
+        <ul class="sync-dec">${pending.map(r => `<li><strong>${r.d.action === "done" ? "טופל" : "נדחה"}</strong> · ${esc(KIND_HE[r.g.kind] || "")}: ${esc(summary(r.g))}${r.d.note ? `<br><span class="adm-meta">${esc(r.d.note)}</span>` : ""}</li>`).join("")}</ul>
+        ${pending.length ? `<p><button class="btn btn-ink" id="sync-apply" type="button">לאשר ולסגור ${pending.length} פריטים</button></p>` : ""}` : `<p class="callout">אין בקובץ החלטות.</p>`;
+      const ap = document.getElementById("sync-apply");
+      if (ap) ap.onclick = async () => {
+        ap.disabled = true;
+        const done = pending.filter(r => r.d.action === "done").flatMap(r => r.d.ids.map(Number));
+        const rej = pending.filter(r => r.d.action === "reject").flatMap(r => r.d.ids.map(Number));
+        try {
+          if (done.length) await api("lead-status", { ids: done, status: "done" });
+          if (rej.length) await api("reject", { ids: rej });
+          prev.innerHTML = `<p class="callout">נסגרו ${done.length + rej.length} פריטים.</p>`;
+          await load(); location.hash = "#sync";
+        } catch (e) { ap.disabled = false; alert("לא נשמר: " + e.message); }
+      };
+    };
   }
 
   async function renderLeads() {

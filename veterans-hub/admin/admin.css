@@ -9,3 +9,9 @@
 .adm-table td, .adm-table th { border-bottom: 1px dashed var(--ink); padding: 6px 4px; text-align: start; vertical-align: top; }
 .form .two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 520px) { .form .two { grid-template-columns: 1fr; } }
+
+/* סנכרון עם Claude */
+.sync-list { display: grid; gap: 6px; margin: 8px 0 14px; }
+.sync-row { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border: 1px solid rgba(21,21,21,.12); border-radius: 10px; }
+.sync-row input { margin-top: 4px; }
+.sync-dec { padding-inline-start: 18px; line-height: 1.6; }
