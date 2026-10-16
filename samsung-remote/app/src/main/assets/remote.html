@@ -1163,6 +1163,7 @@
   /* ---------- quick access (notification, lock-screen volume, calls) ---------- */
   let pendingCall = 'off';
   function renderQuick() {
+    pref.quick = A.getPref('quickControls', '0') === '1'; // may be switched off from the notification
     $('prefQuick').checked = pref.quick;
     document.querySelectorAll('#callSeg [data-call]').forEach((b) => b.classList.toggle('on', b.dataset.call === pref.callAction));
   }

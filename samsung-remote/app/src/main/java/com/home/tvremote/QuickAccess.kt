@@ -31,6 +31,7 @@ object QuickActions {
     const val EXTRA_KEY = "key"
     const val POWER = "@power"
     const val PLAY_PAUSE = "@playpause"
+    const val HIDE = "@hide"
 
     private val main = Handler(Looper.getMainLooper())
 
@@ -107,6 +108,13 @@ object QuickActions {
 class ActionReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val key = intent.getStringExtra(QuickActions.EXTRA_KEY) ?: return
+        if (key == QuickActions.HIDE) {
+            // "Hide" on the notification: same as switching the setting off in the app.
+            QuickActions.ui(context).edit().putString("quickControls", "0").apply()
+            TvClient.get(context).log("quick controls hidden from the notification")
+            RemoteService.sync(context)
+            return
+        }
         // Android hands this receiver one tap at a time, so it must let go as soon as the key is
         // out: holding it longer queues the following taps, which then trickle in long after.
         val done = goAsync()
@@ -257,6 +265,7 @@ class RemoteService : Service() {
             v.setTextViewText(R.id.q_title, tv.displayName + if (state == "connected") "" else " · לא מחובר")
             QuickActions.bindButtons(this, v)
             b.setStyle(Notification.DecoratedCustomViewStyle()).setCustomContentView(v)
+                .addAction(Notification.Action.Builder(null, "הסתר", QuickActions.intent(this, QuickActions.HIDE, 6)).build())
         } else {
             b.setContentTitle("השתקה בזמן שיחה פעילה").setContentText(tv.displayName)
         }
