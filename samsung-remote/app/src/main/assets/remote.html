@@ -452,11 +452,14 @@
 <div class="sheet" id="sheet-keyboard">
   <div class="handle"></div>
   <h2>הקלדה לטלוויזיה</h2>
-  <p class="note">הקלדה עובדת כשבטלוויזיה פתוחה מקלדת (למשל בשדה חיפוש ביוטיוב). בסמסונג החלון הזה נפתח לבד ברגע שהטלוויזיה פותחת מקלדת.</p>
+  <p class="note">הקלדה עובדת כשבטלוויזיה פתוחה מקלדת של המערכת (למשל בדפדפן או בנטפליקס). ביוטיוב יש מקלדת משלה – לחיפוש ביוטיוב השתמשו בכפתור "חפש ביוטיוב".</p>
   <div class="inrow">
     <input type="text" id="kbText" placeholder="טקסט לשליחה" autocomplete="off" enterkeyhint="send">
     <button class="btn ghost" onclick="A.voice()" aria-label="דבר">🎤</button>
     <button class="btn" onclick="sendText()">שלח</button>
+  </div>
+  <div class="inrow" style="margin-top:10px">
+    <button class="btn ghost full" id="kbYt" onclick="kbYoutube()">▶ חפש ביוטיוב</button>
   </div>
   <div class="inrow" style="margin-top:10px">
     <button class="btn ghost full" data-key="KEY_ENTER">Enter בטלוויזיה</button>
@@ -728,6 +731,7 @@
     if (name === 'settings') renderSettings();
     if (name === 'tvs') renderTvs();
     if (name === 'sleep') renderSleep();
+    if (name === 'keyboard') $('kbYt').style.display = ytSearchOk() ? '' : 'none';
   }
   function closeSheets(keepScrim) {
     document.querySelectorAll('.sheet.show').forEach((s) => s.classList.remove('show'));
@@ -956,10 +960,19 @@
     if (hit) { A.launch(String(hit.appId), Number(hit.app_type) || 2); toast('פותח ' + hit.name); return; }
     voiceQuery = text;
     $('voiceText').textContent = text;
-    $('voiceYt').style.display = S.tvType === 'androidtv' ? '' : 'none';
+    $('voiceYt').style.display = ytSearchOk() ? '' : 'none';
     openSheet('voice');
   }
   function voiceType() { A.text(voiceQuery); toast('נשלח לטלוויזיה'); closeSheets(); }
+  function ytSearchOk() { return S.tvType === 'androidtv' || S.tvType === 'samsung'; }
+  function kbYoutube() {
+    const q = $('kbText').value.trim();
+    if (!q) { toast('כתבו קודם מה לחפש'); return; }
+    voiceQuery = q;
+    $('kbText').value = '';
+    voiceYoutube();
+  }
+  window.kbYoutube = kbYoutube;
   function voiceYoutube() {
     A.launch('https://www.youtube.com/results?search_query=' + encodeURIComponent(voiceQuery), 0);
     toast('מחפש ביוטיוב…');

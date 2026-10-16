@@ -73,6 +73,10 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     await p.tap('#sheet-sleep [data-sleep="30"]'); await p.waitForTimeout(300);
     check('sleep set 30', JSON.stringify(await sent('sleepTimer')) === '[[30]]');
     check('sleep closes', (await open()) === 'none', await open());
+    // keyboard -> YouTube search (Samsung: YouTube's own keyboard ignores remote text)
+    await reset(); await p.evaluate(() => openSheet('keyboard')); await p.waitForTimeout(300);
+    await p.fill('#kbText', 'חתולים'); await p.tap('#kbYt'); await p.waitForTimeout(300);
+    check('keyboard youtube search', JSON.stringify(await sent('launch')) === JSON.stringify([['https://www.youtube.com/results?search_query=' + encodeURIComponent('חתולים'), 0]]));
     // custom sleep minutes (1 minute, for testing)
     await reset(); await p.tap('.app [data-sheet="more"]'); await p.waitForTimeout(450);
     await p.tap('#sheet-more [data-sheet="sleep"]'); await p.waitForTimeout(450);

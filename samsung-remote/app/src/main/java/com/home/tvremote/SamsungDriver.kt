@@ -145,6 +145,18 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
 
     /** appType 2 = web/Tizen app (DEEP_LINK), 4 = native app (NATIVE_LAUNCH). */
     override fun launch(appId: String, appType: Int) {
+        // YouTube's own on-screen keyboard ignores text from remotes, so a search opens YouTube
+        // with the query as launch parameters instead (the parameter names YouTube TV reads).
+        if (appId.startsWith(YT_SEARCH)) {
+            val q = appId.removePrefix(YT_SEARCH)
+            session.log("youtube search: $q")
+            launchWith(YOUTUBE, "search_query=$q&vq=$q&q=$q")
+            return
+        }
+        launchWith(appId, "", appType)
+    }
+
+    private fun launchWith(appId: String, metaTag: String, appType: Int = 2) {
         send(
             JSONObject()
                 .put("method", "ms.channel.emit")
@@ -156,11 +168,12 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
                             "data", JSONObject()
                                 .put("appId", appId)
                                 .put("action_type", if (appType == 4) "NATIVE_LAUNCH" else "DEEP_LINK")
-                                .put("metaTag", "")
+                                .put("metaTag", metaTag)
                         )
                 )
         )
         // Many Tizen firmwares ignore the WebSocket launch; the REST endpoint is more reliable.
+        if (metaTag.isNotEmpty()) return
         Thread {
             val body = ByteArray(0).toRequestBody("application/json".toMediaType())
             for (base in listOf("http://$ip:8001", "https://$ip:8002")) {
@@ -234,6 +247,8 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
     }
 
     companion object {
+        private const val YOUTUBE = "111299001912"
+        private const val YT_SEARCH = "https://www.youtube.com/results?search_query="
         private const val APP_NAME = "Home Remote"
 
         /** Tizen app ids of popular apps (some apps have several ids across model years). */
