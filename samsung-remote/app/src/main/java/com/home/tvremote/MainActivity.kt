@@ -57,6 +57,8 @@ class MainActivity : Activity() {
 
     override fun onStop() {
         super.onStop()
+        // Never leave a held button repeating while the app isn't visible.
+        web.evaluateJavascript("window.stopRepeat&&stopRepeat()", null)
         tv.removeListener(listener)
         tv.release("screen")
     }

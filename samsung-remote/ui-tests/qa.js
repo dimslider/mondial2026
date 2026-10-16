@@ -88,6 +88,21 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     await p.tap('#sheet-more [data-key="KEY_SOURCE"]');
     check('more key', JSON.stringify(await sent('key')) === '[["KEY_SOURCE"]]');
 
+    // 3b. voice from the main screen, TV keyboard opens the typing panel, hold-to-repeat is capped
+    await reset(); await p.tap('.top [data-action="voice"]'); await p.waitForTimeout(150);
+    check('voice button on main screen', (await sent('voice')).length === 1);
+    await p.evaluate(() => onTv({ type: 'keyboard' })); await p.waitForTimeout(350);
+    check('tv keyboard opens typing panel', (await open()) === 'keyboard', await open());
+    await reset();
+    await p.dispatchEvent('[data-key="KEY_VOLUP"]', 'pointerdown'); await p.waitForTimeout(6000);
+    const held = (await sent('key')).length;
+    check('hold-to-repeat stops by itself', held > 5 && held <= 32, String(held));
+    await p.dispatchEvent('[data-key="KEY_VOLUP"]', 'pointerup'); await calls();
+    await p.dispatchEvent('[data-key="KEY_VOLDOWN"]', 'pointerdown'); await p.waitForTimeout(700);
+    await p.evaluate(() => stopRepeat()); await calls(); await p.waitForTimeout(600);
+    check('stopRepeat stops immediately', (await sent('key')).length === 0);
+    await p.dispatchEvent('[data-key="KEY_VOLDOWN"]', 'pointerup');
+
     // 4. voice results
     await reset();
     await p.evaluate(() => onTv({ type: 'voice', text: 'נטפליקס' }));
@@ -145,7 +160,7 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     check('switch tv', JSON.stringify(await sent('switchTv')) === '[["10.0.0.6"]]');
 
     // 7. settings: gear, scan, quick access
-    await reset(); await p.tap('.gear'); await p.waitForTimeout(450);
+    await reset(); await p.tap('.gear[aria-label="הגדרות"]'); await p.waitForTimeout(450);
     check('gear opens settings', (await open()) === 'settings');
     await p.tap('#scanBtn'); check('scan', (await sent('scan')).length === 1);
     await p.evaluate(() => { onTv({ type: 'scanFound', device: { type: 'lg', ip: '10.0.0.9', name: 'LG', model: '', mac: '' } }); onTv({ type: 'scanDone', ok: true, count: 1 }); });

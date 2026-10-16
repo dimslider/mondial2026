@@ -205,6 +205,8 @@ class TvClient private constructor(private val context: Context) {
 
     fun submitPin(pin: String) = post { driver?.submitPin(pin) }
 
+    fun log(line: String) = addLog(line)
+
     fun sendKey(key: String) = command { d ->
         if (!d.key(key)) toast("הכפתור הזה לא נתמך בטלוויזיה הזו")
     }
@@ -304,6 +306,11 @@ class TvClient private constructor(private val context: Context) {
         }
 
         override fun toast(text: String) = onMain { this@TvClient.toast(text) }
+
+        override fun keyboardShown() = onMain {
+            addLog("tv keyboard opened")
+            emit(JSONObject().put("type", "keyboard"))
+        }
 
         override fun log(line: String) = addLog(line)
 

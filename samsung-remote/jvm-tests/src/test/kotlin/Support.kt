@@ -18,6 +18,7 @@ class TestSession : Session {
     override fun apps(list: JSONArray) { apps = list; events.add("apps:${list.length()}") }
     override fun macAddress(mac: String) { events.add("mac:$mac") }
     override fun toast(text: String) { events.add("toast:$text") }
+    override fun keyboardShown() { events.add("keyboard") }
     override fun load(key: String): String? = storage[key]
     override fun store(key: String, value: String?) { if (value == null) storage.remove(key) else storage[key] = value }
 

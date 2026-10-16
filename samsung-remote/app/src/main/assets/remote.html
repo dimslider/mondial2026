@@ -246,6 +246,9 @@
       <i class="dot"></i><span id="statusText">מתחבר…</span>
       <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </button>
+    <button class="gear" data-action="voice" aria-label="חיפוש קולי">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+    </button>
     <button class="gear" onclick="openSheet('settings')" aria-label="הגדרות">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
     </button>
@@ -444,7 +447,7 @@
 <div class="sheet" id="sheet-keyboard">
   <div class="handle"></div>
   <h2>הקלדה לטלוויזיה</h2>
-  <p class="note">פתח קודם שדה חיפוש בטלוויזיה (למשל ביוטיוב), ואז הקלד כאן.</p>
+  <p class="note">הקלדה עובדת כשבטלוויזיה פתוחה מקלדת (למשל בשדה חיפוש ביוטיוב). בסמסונג החלון הזה נפתח לבד ברגע שהטלוויזיה פותחת מקלדת.</p>
   <div class="inrow">
     <input type="text" id="kbText" placeholder="טקסט לשליחה" autocomplete="off" enterkeyhint="send">
     <button class="btn ghost" onclick="A.voice()" aria-label="דבר">🎤</button>
@@ -505,7 +508,6 @@
   <h3>גישה מהירה מחוץ לאפליקציה</h3>
   <div class="card" style="padding:0 14px">
     <label class="sw">כפתורי שליטה בהתראות ובמסך הנעילה<input type="checkbox" id="prefQuick"></label>
-    <label class="sw">כפתורי הווליום של הטלפון שולטים בטלוויזיה גם כשהאפליקציה סגורה (רק כשהטלוויזיה מחוברת)<input type="checkbox" id="prefLockVol"></label>
     <div class="sw">כשנכנסת שיחה
       <div class="seg mini" id="callSeg">
         <button data-call="off">כלום</button><button data-call="mute">השתק</button><button data-call="pause">השהה</button>
@@ -573,7 +575,6 @@
     touchpad: A.getPref('touchpad', '0') === '1',
     simple: A.getPref('simple', '0') === '1',
     quick: A.getPref('quickControls', '0') === '1',
-    lockVol: A.getPref('lockVolume', '1') !== '0',
     callAction: A.getPref('callAction', 'off'),
   };
 
@@ -600,7 +601,9 @@
   }
 
   /* ---------- buttons: tap, hold-to-repeat ---------- */
-  let repeatTimer = null, repeatEl = null;
+  let repeatTimer = null, repeatEl = null, repeatCount = 0;
+  const MAX_REPEATS = 30; // ~4 s of hold-to-repeat at most, so a missed finger-up can't run away
+  window.stopRepeat = stopRepeat;
   function stopRepeat() {
     clearTimeout(repeatTimer); clearInterval(repeatTimer); repeatTimer = null;
     if (repeatEl) repeatEl.classList.remove('pressed');
@@ -619,8 +622,12 @@
     send(el.dataset.key);
     if ('repeat' in el.dataset) {
       const key = el.dataset.key;
+      repeatCount = 0;
       repeatTimer = setTimeout(() => {
-        repeatTimer = setInterval(() => { send(key); }, 130);
+        repeatTimer = setInterval(() => {
+          if (++repeatCount > MAX_REPEATS || document.hidden) { stopRepeat(); return; }
+          send(key);
+        }, 130);
       }, 420);
     }
   });
@@ -647,6 +654,8 @@
   ['pointerup', 'pointercancel'].forEach((ev) => document.addEventListener(ev, stopRepeat, true));
   document.addEventListener('pointerleave', (e) => { if (e.target === repeatEl) stopRepeat(); }, true);
   window.addEventListener('blur', stopRepeat);
+  document.addEventListener('visibilitychange', stopRepeat);
+  window.addEventListener('pagehide', stopRepeat);
   document.addEventListener('contextmenu', (e) => e.preventDefault());
 
   function runAction(a) {
@@ -1044,7 +1053,8 @@
   function renderStatus() {
     const [cls, text] = STATUS[S.state] || ['', S.state];
     $('status').className = 'status ' + cls;
-    $('statusText').textContent = text || (S.label || S.name || S.ip);
+    $('statusText').textContent = text || (S.label || String(S.name || '').replace(/^\[TV\]\s*/, '') || S.ip);
+    $('statusText').dir = text ? 'rtl' : 'auto';
   }
   function renderSettings() {
     const has = !!S.ip;
@@ -1116,8 +1126,6 @@
   let pendingCall = 'off';
   function renderQuick() {
     $('prefQuick').checked = pref.quick;
-    $('prefLockVol').checked = pref.lockVol;
-    $('prefLockVol').disabled = !pref.quick;
     document.querySelectorAll('#callSeg [data-call]').forEach((b) => b.classList.toggle('on', b.dataset.call === pref.callAction));
   }
   $('prefQuick').addEventListener('change', (e) => {
@@ -1126,11 +1134,6 @@
     A.setPref('quickControls', '0');
     A.applyQuickSettings();
     renderQuick();
-  });
-  $('prefLockVol').addEventListener('change', (e) => {
-    pref.lockVol = e.target.checked;
-    A.setPref('lockVolume', pref.lockVol ? '1' : '0');
-    A.applyQuickSettings();
   });
   $('callSeg').addEventListener('click', (e) => {
     const b = e.target.closest('[data-call]');
@@ -1204,6 +1207,13 @@
         break;
       case 'toast':
         toast(m.text);
+        break;
+      case 'keyboard':
+        if (!$('sheet-keyboard').classList.contains('show')) {
+          openSheet('keyboard');
+          setTimeout(() => $('kbText').focus(), 250);
+          toast('הטלוויזיה מחכה לטקסט');
+        }
         break;
       case 'permission':
         onPermission(m);

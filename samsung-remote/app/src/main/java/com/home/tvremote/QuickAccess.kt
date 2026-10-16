@@ -13,10 +13,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ServiceInfo
-import android.media.AudioManager
-import android.media.VolumeProvider
-import android.media.session.MediaSession
-import android.media.session.PlaybackState
 import android.os.Build
 import android.os.Handler
 import android.os.IBinder
@@ -47,6 +43,7 @@ object QuickActions {
     fun perform(context: Context, key: String) {
         instanceContext = context.applicationContext
         val tv = TvClient.get(context)
+        tv.log("quick button: $key (connected=${tv.isConnected})")
         tv.acquire("quick")
         when (key) {
             POWER -> tv.power()
@@ -97,9 +94,7 @@ class ActionReceiver : BroadcastReceiver() {
 }
 
 /**
- * Optional always-on service: the control notification, the phone's volume keys
- * (through a remote-volume media session, only while the TV is connected) and the
- * mute-on-call feature.
+ * Optional always-on service: the control notification and the mute-on-call feature.
  */
 class RemoteService : Service() {
 
@@ -124,7 +119,6 @@ class RemoteService : Service() {
 
     private lateinit var tv: TvClient
     private val main = Handler(Looper.getMainLooper())
-    private var session: MediaSession? = null
     private var calls: CallWatcher? = null
     private var state = ""
     private var actedOnCall = ""
@@ -159,8 +153,6 @@ class RemoteService : Service() {
     override fun onDestroy() {
         tv.removeListener(listener)
         tv.release("service")
-        session?.release()
-        session = null
         calls?.stop()
         calls = null
         super.onDestroy()
@@ -169,21 +161,11 @@ class RemoteService : Service() {
     private fun onStatus(s: String) {
         if (s == state) return
         state = s
-        session?.isActive = s == "connected"
         showNotification()
     }
 
     private fun applySettings() {
         val p = QuickActions.ui(this)
-        val quick = p.getString("quickControls", "0") == "1"
-        val volume = quick && p.getString("lockVolume", "1") != "0"
-        if (volume && session == null) session = createSession()
-        if (!volume) {
-            session?.release()
-            session = null
-        }
-        session?.isActive = state == "connected"
-
         val callAction = p.getString("callAction", "off") ?: "off"
         val allowed = checkSelfPermission(android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
         if (callAction != "off" && allowed && calls == null) calls = CallWatcher(this) { onCallState(it) }.also { it.start() }
@@ -192,20 +174,6 @@ class RemoteService : Service() {
             calls = null
         }
         showNotification()
-    }
-
-    private fun createSession() = MediaSession(this, "TvRemote").apply {
-        setPlaybackToRemote(object : VolumeProvider(VOLUME_CONTROL_RELATIVE, 100, 50) {
-            override fun onAdjustVolume(direction: Int) {
-                when (direction) {
-                    AudioManager.ADJUST_RAISE -> tv.sendKey("KEY_VOLUP")
-                    AudioManager.ADJUST_LOWER -> tv.sendKey("KEY_VOLDOWN")
-                    AudioManager.ADJUST_TOGGLE_MUTE, AudioManager.ADJUST_MUTE, AudioManager.ADJUST_UNMUTE -> tv.sendKey("KEY_MUTE")
-                }
-            }
-        })
-        // The system routes volume keys to an active session that reports playback.
-        setPlaybackState(PlaybackState.Builder().setState(PlaybackState.STATE_PLAYING, 0, 1f).build())
     }
 
     private fun onCallState(callState: Int) {

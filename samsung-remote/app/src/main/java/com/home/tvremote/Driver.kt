@@ -20,6 +20,9 @@ interface Session {
     fun macAddress(mac: String)
     fun toast(text: String)
 
+    /** The TV opened its on-screen keyboard and is waiting for text. */
+    fun keyboardShown() {}
+
     /** Diagnostic log line (shown under "copy diagnostics" in settings). */
     fun log(line: String) {}
 

@@ -22,6 +22,9 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
     @Volatile
     private var appsAnswered = false
 
+    @Volatile
+    private var imeOpen = false
+
     override fun connect() {
         val appName = Base64.getEncoder().encodeToString(APP_NAME.toByteArray())
         val url = StringBuilder("wss://$ip:8002/api/v2/channels/samsung.remote.control?name=")
@@ -72,6 +75,14 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
                 session.denied()
             }
 
+            // The TV opened its on-screen keyboard: text sent now goes into that field.
+            "ms.remote.imeStart" -> {
+                imeOpen = true
+                session.keyboardShown()
+            }
+
+            "ms.remote.imeEnd" -> imeOpen = false
+
             "ed.installedApp.get" -> {
                 val list = parseAppList(msg.opt("data"))
                 if (list != null && list.length() > 0) {
@@ -116,6 +127,9 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
 
     override fun text(text: String): Boolean {
         val b64 = Base64.getEncoder().encodeToString(text.toByteArray(Charsets.UTF_8))
+        if (!imeOpen) session.log("text sent while the TV keyboard is not open")
+        // Some models only accept text after this broadcast (as samsungtvws does).
+        send(JSONObject().put("method", "ms.channel.emit").put("params", JSONObject().put("event", "custom.remote.textReceived").put("to", "broadcast")))
         send(
             JSONObject()
                 .put("method", "ms.remote.control")

@@ -153,6 +153,7 @@ class LgAndSamsungDriverTest {
         server.enqueue(MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
             override fun onOpen(webSocket: WebSocket, response: Response) {
                 webSocket.send(JSONObject().put("event", "ms.channel.connect").put("data", JSONObject().put("token", "T1")).toString())
+                webSocket.send(JSONObject().put("event", "ms.remote.imeStart").put("data", JSONObject()).toString())
             }
             override fun onMessage(webSocket: WebSocket, text: String) { msgs.add(JSONObject(text)) }
         }))
@@ -165,9 +166,17 @@ class LgAndSamsungDriverTest {
             paths.add(server.takeRequest(5, TimeUnit.SECONDS)!!.path!!)
             assertTrue(paths.peek().contains("token=T0"), paths.peek())
             assertEquals("T1", s.storage["token"])
+            s.await("keyboard")
             d.key("KEY_HOME")
             msgs.poll(5, TimeUnit.SECONDS)!!.getJSONObject("params").let {
                 assertEquals("KEY_HOME", it.getString("DataOfCmd")); assertEquals("Click", it.getString("Cmd"))
+            }
+            // typing: "text received" broadcast first, then the base64 text
+            d.text("שלום")
+            msgs.poll(5, TimeUnit.SECONDS)!!.let { assertEquals("custom.remote.textReceived", it.getJSONObject("params").getString("event")) }
+            msgs.poll(5, TimeUnit.SECONDS)!!.getJSONObject("params").let {
+                assertEquals("SendInputString", it.getString("TypeOfRemote"))
+                assertEquals("שלום", String(java.util.Base64.getDecoder().decode(it.getString("Cmd"))))
             }
             d.launch("111299001912", 2)
             msgs.poll(5, TimeUnit.SECONDS)!!.getJSONObject("params").getJSONObject("data").let {
