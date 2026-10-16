@@ -74,11 +74,17 @@ class SleepService : Service() {
 
     private val tick = object : Runnable {
         override fun run() {
-            val at = SleepTimer.endsAt(getSharedPreferences("tv", MODE_PRIVATE))
+            // The raw value: once the time has passed, endsAt() would already say "no timer".
+            val at = getSharedPreferences("tv", MODE_PRIVATE).getLong("sleepAt", 0L)
             when {
                 firing -> return
                 at == 0L -> {
                     TvClient.get(this@SleepService).log("sleep service: no timer, stopping")
+                    stopSelf()
+                }
+                System.currentTimeMillis() - at > 120_000 -> {
+                    // Long overdue (the phone was off, say): don't switch the TV off out of the blue.
+                    getSharedPreferences("tv", MODE_PRIVATE).edit().remove("sleepAt").apply()
                     stopSelf()
                 }
                 at - System.currentTimeMillis() <= 1_000 -> {

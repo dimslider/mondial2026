@@ -147,6 +147,8 @@ class RemoteService : Service() {
     private var state = ""
     private var actedOnCall = ""
     private var callPending = false
+    private var callsAllowed = false
+    private var inCallNow = false
 
     private val listener: (JSONObject) -> Unit = { m ->
         if (m.optString("type") == "status") main.post { onStatus(m.optString("state")) }
@@ -193,10 +195,16 @@ class RemoteService : Service() {
         val p = QuickActions.ui(this)
         val callAction = p.getString("callAction", "off") ?: "off"
         val allowed = checkSelfPermission(android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
-        if (callAction != "off" && !allowed) tv.log("phone: no permission to see calls")
-        if (callAction != "off" && allowed && calls == null) {
-            calls = CallWatcher(this) { onCallState(it) }.also { it.start() }
-            tv.log("phone: watching calls ($callAction)")
+        if (callAction != "off" && !allowed) tv.log("phone: no phone permission, only internet calls are seen")
+        // Permission granted after the watcher started: restart it so it also listens to the phone.
+        if (calls != null && allowed && !callsAllowed) {
+            calls?.stop()
+            calls = null
+        }
+        if (callAction != "off" && calls == null) {
+            callsAllowed = allowed
+            calls = CallWatcher(this) { active, why -> onCallState(active, why) }.also { it.start() }
+            tv.log("phone: watching calls ($callAction) via ${calls?.sources}")
         }
         if (callAction == "off" && calls != null) {
             calls?.stop()
@@ -205,38 +213,32 @@ class RemoteService : Service() {
         showNotification()
     }
 
-    private fun onCallState(callState: Int) {
+    private fun onCallState(inCall: Boolean, why: String) {
         val action = QuickActions.ui(this).getString("callAction", "off") ?: "off"
-        val name = when (callState) {
-            TelephonyManager.CALL_STATE_RINGING -> "ringing"
-            TelephonyManager.CALL_STATE_OFFHOOK -> "in call"
-            else -> "idle"
-        }
-        tv.log("phone: $name (action=$action, tv=${tv.stateName})")
-        when (callState) {
-            TelephonyManager.CALL_STATE_RINGING, TelephonyManager.CALL_STATE_OFFHOOK -> {
-                if (actedOnCall.isEmpty() && !callPending && action != "off") {
-                    // Connects if needed; remember the action only once the key really reached the TV,
-                    // so the end of the call never toggles back something that was never done.
-                    callPending = true
-                    tv.acquire("call")
-                    tv.sendKey(if (action == "pause") "KEY_PAUSE" else "KEY_MUTE", 10_000) {
-                        actedOnCall = action
-                        tv.log("phone: TV ${if (action == "pause") "paused" else "muted"}")
-                    }
-                    main.postDelayed({ callPending = false }, 10_000)
+        tv.log("phone: ${if (inCall) "call" else "no call"} ($why, action=$action, tv=${tv.stateName})")
+        inCallNow = inCall
+        if (inCall) {
+            if (actedOnCall.isEmpty() && !callPending && action != "off") {
+                // Connects if needed; remember the action only once the key really reached the TV,
+                // so the end of the call never toggles back something that was never done.
+                callPending = true
+                tv.acquire("call")
+                tv.sendKey(if (action == "pause") "KEY_PAUSE" else "KEY_MUTE", 10_000) {
+                    tv.log("phone: TV ${if (action == "pause") "paused" else "muted"}")
+                    // The call already ended while we were connecting: undo right away.
+                    if (inCallNow) actedOnCall = action
+                    else tv.sendKey(if (action == "pause") "KEY_PLAY" else "KEY_MUTE", 10_000)
                 }
+                main.postDelayed({ callPending = false }, 10_000)
             }
-
-            TelephonyManager.CALL_STATE_IDLE -> {
-                when (actedOnCall) {
-                    "pause" -> tv.sendKey("KEY_PLAY", 10_000)
-                    "mute" -> tv.sendKey("KEY_MUTE", 10_000)
-                }
-                actedOnCall = ""
-                callPending = false
-                main.postDelayed({ tv.release("call") }, 15_000)
+        } else {
+            when (actedOnCall) {
+                "pause" -> tv.sendKey("KEY_PLAY", 10_000)
+                "mute" -> tv.sendKey("KEY_MUTE", 10_000)
             }
+            actedOnCall = ""
+            callPending = false
+            main.postDelayed({ tv.release("call") }, 15_000)
         }
     }
 
@@ -264,39 +266,109 @@ class RemoteService : Service() {
     }
 }
 
-/** Phone call state, through the API each Android version supports. */
-class CallWatcher(private val context: Context, private val onChange: (Int) -> Unit) {
+/**
+ * "Is the phone in a call?" from every source available, since each one misses some cases:
+ * the telephony callback (default SIM), the phone-state broadcast (any SIM), and the audio
+ * mode (also WhatsApp and other internet calls; needs no permission, Android 12+).
+ * Reports changes only: true when a call starts ringing or is answered, false when all is quiet.
+ */
+class CallWatcher(private val context: Context, private val onChange: (Boolean, String) -> Unit) {
     private val tm = context.getSystemService(TelephonyManager::class.java)
+    private val audio = context.getSystemService(android.media.AudioManager::class.java)
+    private val main = Handler(Looper.getMainLooper())
     private var callback: Any? = null
+    private var receiver: BroadcastReceiver? = null
+    private var modeListener: Any? = null
+
+    private var telephony = false
+    private var broadcast = false
+    private var audioCall = false
+    private var active = false
+
+    private fun update(why: String) {
+        val now = telephony || broadcast || audioCall
+        if (now == active) return
+        active = now
+        onChange(now, why)
+    }
 
     fun start() {
-        try {
-            if (Build.VERSION.SDK_INT >= 31) {
-                val c = object : TelephonyCallback(), TelephonyCallback.CallStateListener {
-                    override fun onCallStateChanged(state: Int) = onChange(state)
+        val allowed = context.checkSelfPermission(android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
+        if (allowed) {
+            try {
+                if (Build.VERSION.SDK_INT >= 31) {
+                    val c = object : TelephonyCallback(), TelephonyCallback.CallStateListener {
+                        override fun onCallStateChanged(state: Int) {
+                            telephony = state != TelephonyManager.CALL_STATE_IDLE
+                            update("phone state $state")
+                        }
+                    }
+                    tm.registerTelephonyCallback(context.mainExecutor, c)
+                    callback = c
+                } else {
+                    @Suppress("DEPRECATION")
+                    val l = object : PhoneStateListener() {
+                        @Deprecated("Deprecated in Java")
+                        override fun onCallStateChanged(state: Int, phoneNumber: String?) {
+                            telephony = state != TelephonyManager.CALL_STATE_IDLE
+                            update("phone state $state")
+                        }
+                    }
+                    @Suppress("DEPRECATION")
+                    tm.listen(l, PhoneStateListener.LISTEN_CALL_STATE)
+                    callback = l
                 }
-                tm.registerTelephonyCallback(context.mainExecutor, c)
-                callback = c
-            } else {
-                @Suppress("DEPRECATION")
-                val l = object : PhoneStateListener() {
-                    @Deprecated("Deprecated in Java")
-                    override fun onCallStateChanged(state: Int, phoneNumber: String?) = onChange(state)
-                }
-                @Suppress("DEPRECATION")
-                tm.listen(l, PhoneStateListener.LISTEN_CALL_STATE)
-                callback = l
+            } catch (_: Exception) {
             }
-        } catch (_: SecurityException) {
+            val r = object : BroadcastReceiver() {
+                override fun onReceive(c: Context, intent: Intent) {
+                    val st = intent.getStringExtra(TelephonyManager.EXTRA_STATE) ?: return
+                    broadcast = st != TelephonyManager.EXTRA_STATE_IDLE
+                    update("call broadcast $st")
+                }
+            }
+            try {
+                val filter = android.content.IntentFilter(TelephonyManager.ACTION_PHONE_STATE_CHANGED)
+                if (Build.VERSION.SDK_INT >= 33) context.registerReceiver(r, filter, Context.RECEIVER_EXPORTED)
+                else context.registerReceiver(r, filter)
+                receiver = r
+            } catch (_: Exception) {
+            }
+        }
+        if (Build.VERSION.SDK_INT >= 31) {
+            val l = android.media.AudioManager.OnModeChangedListener { mode ->
+                main.post {
+                    audioCall = mode != android.media.AudioManager.MODE_NORMAL
+                    update("audio mode $mode")
+                }
+            }
+            try {
+                audio.addOnModeChangedListener(context.mainExecutor, l)
+                modeListener = l
+            } catch (_: Exception) {
+            }
         }
     }
 
+    /** Which sources are listening, for the diagnostics log. */
+    val sources: String
+        get() = listOfNotNull(
+            callback?.let { "phone" }, receiver?.let { "broadcast" }, modeListener?.let { "audio" }
+        ).joinToString("+").ifEmpty { "none" }
+
     fun stop() {
-        val c = callback ?: return
-        @Suppress("DEPRECATION")
-        if (c is PhoneStateListener) tm.listen(c, PhoneStateListener.LISTEN_NONE)
-        else if (Build.VERSION.SDK_INT >= 31 && c is TelephonyCallback) tm.unregisterTelephonyCallback(c)
+        when (val c = callback) {
+            is PhoneStateListener -> @Suppress("DEPRECATION") tm.listen(c, PhoneStateListener.LISTEN_NONE)
+            null -> {}
+            else -> if (Build.VERSION.SDK_INT >= 31 && c is TelephonyCallback) tm.unregisterTelephonyCallback(c)
+        }
         callback = null
+        receiver?.let { try { context.unregisterReceiver(it) } catch (_: Exception) {} }
+        receiver = null
+        if (Build.VERSION.SDK_INT >= 31) (modeListener as? android.media.AudioManager.OnModeChangedListener)?.let {
+            audio.removeOnModeChangedListener(it)
+        }
+        modeListener = null
     }
 }
 
