@@ -423,6 +423,11 @@
     <button data-sleep="90"><b>90</b>דקות</button>
     <button data-sleep="120"><b>120</b>דקות</button>
   </div>
+  <h3 style="margin-top:14px">או זמן אחר (בדקות)</h3>
+  <div class="inrow">
+    <input type="text" id="sleepCustom" placeholder="למשל: 1" inputmode="numeric" autocomplete="off" enterkeyhint="done">
+    <button class="btn" onclick="setSleepCustom()">הפעל</button>
+  </div>
   <button class="btn ghost full" id="sleepCancel" style="margin-top:12px" data-sleep="0">בטל טיימר</button>
 </div>
 
@@ -910,6 +915,7 @@
     toast('נשלח');
   }
   $('kbText').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendText(); } });
+  $('sleepCustom').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); setSleepCustom(); } });
 
   /* ---------- voice: open an app by name, otherwise offer to type it ---------- */
   const VOICE_KNOWN = [
@@ -966,6 +972,13 @@
     toast(minutes ? 'הטלוויזיה תכבה בעוד ' + minutes + ' דקות' : 'הטיימר בוטל');
     closeSheets();
   }
+  function setSleepCustom() {
+    const n = parseInt(($('sleepCustom').value || '').replace(/[^0-9]/g, ''), 10);
+    if (!n || n < 1 || n > 600) { toast('הזן מספר דקות בין 1 ל-600'); return; }
+    $('sleepCustom').value = '';
+    setSleep(n);
+  }
+  window.setSleepCustom = setSleepCustom;
   function sleepLeft() { return S.sleepAt ? Math.max(1, Math.round((S.sleepAt - Date.now()) / 60000)) : 0; }
   function renderSleep() {
     const left = sleepLeft();

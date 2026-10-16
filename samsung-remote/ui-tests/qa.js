@@ -73,6 +73,14 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     await p.tap('#sheet-sleep [data-sleep="30"]'); await p.waitForTimeout(300);
     check('sleep set 30', JSON.stringify(await sent('sleepTimer')) === '[[30]]');
     check('sleep closes', (await open()) === 'none', await open());
+    // custom sleep minutes (1 minute, for testing)
+    await reset(); await p.tap('.app [data-sheet="more"]'); await p.waitForTimeout(450);
+    await p.tap('#sheet-more [data-sheet="sleep"]'); await p.waitForTimeout(450);
+    await p.fill('#sleepCustom', 'abc'); await p.tap('#sheet-sleep .inrow .btn'); await p.waitForTimeout(200);
+    check('sleep custom rejects junk', JSON.stringify(await sent('sleepTimer')) === '[]' && (await open()) === 'sleep', await sent('sleepTimer'));
+    await p.fill('#sleepCustom', '1'); await p.tap('#sheet-sleep .inrow .btn'); await p.waitForTimeout(300);
+    check('sleep custom 1 minute', JSON.stringify(await sent('sleepTimer')) === '[[1]]', await sent('sleepTimer'));
+    check('sleep custom closes', (await open()) === 'none', await open());
     // more -> keyboard
     await reset(); await p.tap('.app [data-sheet="more"]'); await p.waitForTimeout(450);
     await p.tap('#sheet-more [data-action="keyboard"]'); await p.waitForTimeout(450);

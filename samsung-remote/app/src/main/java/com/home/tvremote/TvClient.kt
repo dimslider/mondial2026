@@ -16,6 +16,11 @@ import java.util.concurrent.CopyOnWriteArrayList
 class TvClient private constructor(private val context: Context) {
 
     companion object {
+        private val REPEATABLE = setOf(
+            "KEY_VOLUP", "KEY_VOLDOWN", "KEY_MUTE", "KEY_CHUP", "KEY_CHDOWN",
+            "KEY_UP", "KEY_DOWN", "KEY_LEFT", "KEY_RIGHT", "KEY_REWIND", "KEY_FF"
+        )
+
         @Volatile
         private var instance: TvClient? = null
 
@@ -31,7 +36,10 @@ class TvClient private constructor(private val context: Context) {
     private var generation = 0
     private var attempt = 0
     private var state = "idle"
-    private val pending = ArrayList<Pair<Long, (Driver) -> Unit>>()
+    /** A command waiting for the connection: dropped once older than [maxAge]; one per [tag] at most. */
+    private class Pending(val at: Long, val maxAge: Long, val tag: String?, val action: (Driver) -> Unit)
+
+    private val pending = ArrayList<Pending>()
     private val logLines = java.util.ArrayDeque<String>()
 
     private fun addLog(line: String) = synchronized(logLines) {
@@ -207,8 +215,19 @@ class TvClient private constructor(private val context: Context) {
 
     fun log(line: String) = addLog(line)
 
-    fun sendKey(key: String) = command { d ->
-        if (!d.key(key)) toast("הכפתור הזה לא נתמך בטלוויזיה הזו")
+    /**
+     * Sends a key. While (re)connecting, keys wait in a short queue. Keys that are pressed
+     * repeatedly (volume, channel, arrows, mute) keep only their latest press and expire fast,
+     * so presses made while the TV was unreachable never arrive later as a burst.
+     * [onSent] runs on the main thread once the key actually went out.
+     */
+    fun sendKey(key: String, maxAgeMs: Long = 0, onSent: (() -> Unit)? = null) {
+        val repeatable = key in REPEATABLE
+        val age = if (maxAgeMs > 0) maxAgeMs else if (repeatable) 2_500L else 8_000L
+        command(age, if (repeatable) key else null) { d ->
+            if (!d.key(key)) toast("הכפתור הזה לא נתמך בטלוויזיה הזו")
+            else onSent?.invoke()
+        }
     }
 
     fun sendText(text: String) = command { d ->
@@ -235,26 +254,29 @@ class TvClient private constructor(private val context: Context) {
             toast("שולח הדלקה לטלוויזיה…")
         }
         // Android TVs often keep the remote service alive in standby: queue a power key.
-        if (type == Driver.ANDROID_TV) queue { it.key("KEY_POWER") }
+        if (type == Driver.ANDROID_TV) queue({ it.key("KEY_POWER") })
         attempt = 0
         if (state != "connecting") connect()
     }
 
-    private fun command(action: (Driver) -> Unit) = post {
+    private fun command(action: (Driver) -> Unit) = command(8_000L, null, action)
+
+    private fun command(maxAge: Long, tag: String?, action: (Driver) -> Unit) = post {
         val d = driver
         if (isConnected && d != null) {
             action(d)
             return@post
         }
-        queue(action)
+        queue(action, maxAge, tag)
         if (driver == null || state == "denied") {
             attempt = 0
             connect()
         }
     }
 
-    private fun queue(action: (Driver) -> Unit) {
-        pending.add(SystemClock.elapsedRealtime() to action)
+    private fun queue(action: (Driver) -> Unit, maxAge: Long = 8_000L, tag: String? = null) {
+        if (tag != null) pending.removeAll { it.tag == tag }
+        pending.add(Pending(SystemClock.elapsedRealtime(), maxAge, tag, action))
         while (pending.size > 10) pending.removeAt(0)
     }
 
@@ -326,7 +348,8 @@ class TvClient private constructor(private val context: Context) {
 
     private fun flushPending() {
         val now = SystemClock.elapsedRealtime()
-        val toRun = pending.filter { now - it.first < 8000 }.map { it.second }
+        val toRun = pending.filter { now - it.at < it.maxAge }.map { it.action }
+        if (pending.isNotEmpty()) addLog("sending ${toRun.size} queued (${pending.size - toRun.size} expired)")
         pending.clear()
         driver?.let { d -> toRun.forEach { it(d) } }
     }

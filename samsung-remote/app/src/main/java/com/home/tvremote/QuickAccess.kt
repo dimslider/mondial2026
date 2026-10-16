@@ -37,21 +37,35 @@ object QuickActions {
     @Volatile
     private var nextIsPause = true
 
+    private var lastKey = ""
+    private var lastAt = 0L
+
     fun ui(context: Context) = context.getSharedPreferences("ui", Context.MODE_PRIVATE)
 
     /** Sends [key] to the current TV, connecting first if needed, then lets go of the connection. */
     fun perform(context: Context, key: String) {
         instanceContext = context.applicationContext
         val tv = TvClient.get(context)
-        tv.log("quick button: $key (connected=${tv.isConnected})")
+        // The lock screen sometimes delivers one tap twice: ignore an identical press within 400 ms.
+        val now = android.os.SystemClock.elapsedRealtime()
+        synchronized(this) {
+            if (key == lastKey && now - lastAt < 400) {
+                tv.log("quick button: $key ignored (double tap)")
+                return
+            }
+            lastKey = key
+            lastAt = now
+        }
+        tv.log("quick button: $key (state=${tv.stateName})")
         tv.acquire("quick")
         when (key) {
             POWER -> tv.power()
             PLAY_PAUSE -> {
-                tv.sendKey(if (nextIsPause) "KEY_PAUSE" else "KEY_PLAY")
-                nextIsPause = !nextIsPause
+                val k = if (nextIsPause) "KEY_PAUSE" else "KEY_PLAY"
+                tv.sendKey(k, 4_000) { nextIsPause = k == "KEY_PLAY" }
             }
-            else -> tv.sendKey(key)
+            // A press waits at most 4 s for the connection, then it is dropped (never sent late).
+            else -> tv.sendKey(key, 4_000)
         }
         main.removeCallbacks(releaseQuick)
         main.postDelayed(releaseQuick, 60_000)
@@ -122,6 +136,7 @@ class RemoteService : Service() {
     private var calls: CallWatcher? = null
     private var state = ""
     private var actedOnCall = ""
+    private var callPending = false
 
     private val listener: (JSONObject) -> Unit = { m ->
         if (m.optString("type") == "status") main.post { onStatus(m.optString("state")) }
@@ -168,7 +183,11 @@ class RemoteService : Service() {
         val p = QuickActions.ui(this)
         val callAction = p.getString("callAction", "off") ?: "off"
         val allowed = checkSelfPermission(android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
-        if (callAction != "off" && allowed && calls == null) calls = CallWatcher(this) { onCallState(it) }.also { it.start() }
+        if (callAction != "off" && !allowed) tv.log("phone: no permission to see calls")
+        if (callAction != "off" && allowed && calls == null) {
+            calls = CallWatcher(this) { onCallState(it) }.also { it.start() }
+            tv.log("phone: watching calls ($callAction)")
+        }
         if (callAction == "off" && calls != null) {
             calls?.stop()
             calls = null
@@ -178,20 +197,35 @@ class RemoteService : Service() {
 
     private fun onCallState(callState: Int) {
         val action = QuickActions.ui(this).getString("callAction", "off") ?: "off"
+        val name = when (callState) {
+            TelephonyManager.CALL_STATE_RINGING -> "ringing"
+            TelephonyManager.CALL_STATE_OFFHOOK -> "in call"
+            else -> "idle"
+        }
+        tv.log("phone: $name (action=$action, tv=${tv.stateName})")
         when (callState) {
             TelephonyManager.CALL_STATE_RINGING, TelephonyManager.CALL_STATE_OFFHOOK -> {
-                if (actedOnCall.isEmpty() && tv.isConnected && action != "off") {
-                    tv.sendKey(if (action == "pause") "KEY_PAUSE" else "KEY_MUTE")
-                    actedOnCall = action
+                if (actedOnCall.isEmpty() && !callPending && action != "off") {
+                    // Connects if needed; remember the action only once the key really reached the TV,
+                    // so the end of the call never toggles back something that was never done.
+                    callPending = true
+                    tv.acquire("call")
+                    tv.sendKey(if (action == "pause") "KEY_PAUSE" else "KEY_MUTE", 10_000) {
+                        actedOnCall = action
+                        tv.log("phone: TV ${if (action == "pause") "paused" else "muted"}")
+                    }
+                    main.postDelayed({ callPending = false }, 10_000)
                 }
             }
 
             TelephonyManager.CALL_STATE_IDLE -> {
                 when (actedOnCall) {
-                    "pause" -> tv.sendKey("KEY_PLAY")
-                    "mute" -> tv.sendKey("KEY_MUTE")
+                    "pause" -> tv.sendKey("KEY_PLAY", 10_000)
+                    "mute" -> tv.sendKey("KEY_MUTE", 10_000)
                 }
                 actedOnCall = ""
+                callPending = false
+                main.postDelayed({ tv.release("call") }, 15_000)
             }
         }
     }
