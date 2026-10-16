@@ -243,6 +243,7 @@ class TvClient private constructor(private val context: Context) {
     fun powerOff() = command { it.powerOff() }
 
     fun power() = post {
+        addLog("power: state=$state, mac=${mac.orEmpty().ifEmpty { "unknown" }}")
         if (isConnected) {
             driver?.key("KEY_POWER")
             return@post
@@ -253,8 +254,9 @@ class TvClient private constructor(private val context: Context) {
             Thread { Net.wakeOnLan(m, target) }.start()
             toast("שולח הדלקה לטלוויזיה…")
         }
-        // Android TVs often keep the remote service alive in standby: queue a power key.
-        if (type == Driver.ANDROID_TV) queue({ it.key("KEY_POWER") })
+        // Android TVs often keep the remote service alive in standby: queue a wake-up key
+        // (it only ever turns the TV on, so it is safe if the TV turns out to be on already).
+        if (type == Driver.ANDROID_TV) queue({ it.key("KEY_WAKEUP") }, 15_000L)
         attempt = 0
         if (state != "connecting") connect()
     }

@@ -319,7 +319,7 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
             "KEY_PLAY" to 126, "KEY_PAUSE" to 127, "KEY_STOP" to 86, "KEY_REWIND" to 89, "KEY_FF" to 90,
             "KEY_REC" to 130, "KEY_INFO" to 165, "KEY_GUIDE" to 172, "KEY_EXIT" to 4,
             "KEY_CAPTION" to 175, "KEY_TOOLS" to 82, "KEY_SOURCE" to 178, "KEY_SLEEP" to 223,
-            "KEY_ALL_APPS" to 284,
+            "KEY_ALL_APPS" to 284, "KEY_WAKEUP" to 224,
         ) + (0..9).associate { "KEY_$it" to 7 + it }
     }
 }
