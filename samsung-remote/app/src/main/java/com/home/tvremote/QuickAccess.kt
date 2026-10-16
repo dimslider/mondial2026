@@ -186,7 +186,7 @@ class RemoteService : Service() {
         tv = TvClient.get(this)
         getSystemService(NotificationManager::class.java).createNotificationChannels(listOf(
             NotificationChannel(CHANNEL, "שליטה מהירה", NotificationManager.IMPORTANCE_LOW).apply { setShowBadge(false) },
-            NotificationChannel(WAIT_CHANNEL, "ממתין לרשת הבית", NotificationManager.IMPORTANCE_MIN).apply {
+            NotificationChannel(WAIT_CHANNEL, "פעילות ברקע", NotificationManager.IMPORTANCE_MIN).apply {
                 setShowBadge(false)
                 lockscreenVisibility = Notification.VISIBILITY_SECRET
             }
@@ -326,7 +326,9 @@ class RemoteService : Service() {
         // Controls on but away from Wi-Fi, no call muting: keep a minimised, silent placeholder
         // (no lock screen, no status icon) so the controls can come back when Wi-Fi does.
         val waiting = controls && !onWifi && !calls
-        val b = Notification.Builder(this, if (waiting) WAIT_CHANNEL else CHANNEL)
+        // Without the controls, the notification only exists because Android requires one for
+        // background work (call muting / waiting for Wi-Fi): keep it minimised, off the lock screen.
+        val b = Notification.Builder(this, if (quick) CHANNEL else WAIT_CHANNEL)
             .setSmallIcon(R.drawable.ic_stat_remote)
             .setContentIntent(QuickActions.openApp(this))
             .setOngoing(true)
@@ -343,7 +345,7 @@ class RemoteService : Service() {
         } else if (waiting) {
             b.setContentTitle("השלט יחזור כשתתחבר ל-Wi-Fi").setVisibility(Notification.VISIBILITY_SECRET)
         } else {
-            b.setContentTitle("השתקה בזמן שיחה פעילה").setContentText(tv.displayName)
+            b.setContentTitle("השתקה בזמן שיחה פעילה").setContentText(tv.displayName).setVisibility(Notification.VISIBILITY_SECRET)
         }
         val n = b.build()
         if (Build.VERSION.SDK_INT >= 29) startForeground(NOTIFICATION_ID, n, ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE)
