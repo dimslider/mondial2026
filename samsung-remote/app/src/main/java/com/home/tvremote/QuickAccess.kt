@@ -109,10 +109,8 @@ class ActionReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val key = intent.getStringExtra(QuickActions.EXTRA_KEY) ?: return
         if (key == QuickActions.HIDE) {
-            // "Hide" on the notification: same as switching the setting off in the app.
-            QuickActions.ui(context).edit().putString("quickControls", "0").apply()
-            TvClient.get(context).log("quick controls hidden from the notification")
-            RemoteService.sync(context)
+            // The X on the notification: hide the controls until the app is opened again.
+            RemoteService.hideUntilAppOpens(context, "closed with X")
             return
         }
         // Android hands this receiver one tap at a time, so it must let go as soon as the key is
@@ -134,9 +132,28 @@ class RemoteService : Service() {
         private const val CHANNEL = "quick"
         private const val NOTIFICATION_ID = 1
 
-        fun wanted(context: Context): Boolean {
+        private const val WAIT_CHANNEL = "quick_wait"
+
+        /** Controls switched on in settings and not closed (X / app swiped away) since the app was last opened. */
+        fun controlsOn(context: Context): Boolean {
             val p = QuickActions.ui(context)
-            return p.getString("quickControls", "0") == "1" || p.getString("callAction", "off") != "off"
+            return p.getString("quickControls", "0") == "1" && p.getString("quickHidden", "0") != "1"
+        }
+
+        fun wanted(context: Context): Boolean =
+            controlsOn(context) || QuickActions.ui(context).getString("callAction", "off") != "off"
+
+        fun hideUntilAppOpens(context: Context, why: String) {
+            if (QuickActions.ui(context).getString("quickControls", "0") != "1") return
+            QuickActions.ui(context).edit().putString("quickHidden", "1").apply()
+            TvClient.get(context).log("quick controls hidden: $why")
+            sync(context)
+        }
+
+        /** The app was opened: bring the controls back if they are switched on. */
+        fun appOpened(context: Context) {
+            QuickActions.ui(context).edit().remove("quickHidden").apply()
+            sync(context)
         }
 
         /** Starts or stops the service to match the settings. */
@@ -167,12 +184,63 @@ class RemoteService : Service() {
     override fun onCreate() {
         super.onCreate()
         tv = TvClient.get(this)
-        getSystemService(NotificationManager::class.java).createNotificationChannel(
-            NotificationChannel(CHANNEL, "שליטה מהירה", NotificationManager.IMPORTANCE_LOW).apply { setShowBadge(false) }
-        )
+        getSystemService(NotificationManager::class.java).createNotificationChannels(listOf(
+            NotificationChannel(CHANNEL, "שליטה מהירה", NotificationManager.IMPORTANCE_LOW).apply { setShowBadge(false) },
+            NotificationChannel(WAIT_CHANNEL, "ממתין לרשת הבית", NotificationManager.IMPORTANCE_MIN).apply {
+                setShowBadge(false)
+                lockscreenVisibility = Notification.VISIBILITY_SECRET
+            }
+        ))
         showNotification()
         tv.addListener(listener)
         tv.acquire("service")
+        watchWifi()
+    }
+
+    // ------------------------------------------------------------ Wi-Fi: controls only make sense at home
+
+    private var onWifi = true
+    private var wifiCallback: android.net.ConnectivityManager.NetworkCallback? = null
+
+    private fun watchWifi() {
+        val cm = getSystemService(android.net.ConnectivityManager::class.java)
+        onWifi = cm.getNetworkCapabilities(cm.activeNetwork)?.hasTransport(android.net.NetworkCapabilities.TRANSPORT_WIFI) == true
+        val wifiNets = HashSet<android.net.Network>()
+        val cb = object : android.net.ConnectivityManager.NetworkCallback() {
+            override fun onAvailable(network: android.net.Network) {
+                main.post {
+                    wifiNets.add(network)
+                    setWifi(true)
+                }
+            }
+
+            override fun onLost(network: android.net.Network) {
+                main.post {
+                    wifiNets.remove(network)
+                    setWifi(wifiNets.isNotEmpty())
+                }
+            }
+        }
+        try {
+            cm.registerNetworkCallback(
+                android.net.NetworkRequest.Builder().addTransportType(android.net.NetworkCapabilities.TRANSPORT_WIFI).build(), cb
+            )
+            wifiCallback = cb
+        } catch (_: Exception) {
+        }
+    }
+
+    private fun setWifi(on: Boolean) {
+        if (on == onWifi) return
+        onWifi = on
+        tv.log("wifi: ${if (on) "connected" else "lost"}")
+        showNotification()
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        // The app was swiped away: the user is done with the remote for now.
+        hideUntilAppOpens(this, "app closed")
+        super.onTaskRemoved(rootIntent)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -188,6 +256,7 @@ class RemoteService : Service() {
     override fun onDestroy() {
         tv.removeListener(listener)
         tv.release("service")
+        wifiCallback?.let { try { getSystemService(android.net.ConnectivityManager::class.java).unregisterNetworkCallback(it) } catch (_: Exception) {} }
         calls?.stop()
         calls = null
         super.onDestroy()
@@ -251,8 +320,13 @@ class RemoteService : Service() {
     }
 
     private fun showNotification() {
-        val quick = QuickActions.ui(this).getString("quickControls", "0") == "1"
-        val b = Notification.Builder(this, CHANNEL)
+        val controls = controlsOn(this)
+        val quick = controls && onWifi
+        val calls = QuickActions.ui(this).getString("callAction", "off") != "off"
+        // Controls on but away from Wi-Fi, no call muting: keep a minimised, silent placeholder
+        // (no lock screen, no status icon) so the controls can come back when Wi-Fi does.
+        val waiting = controls && !onWifi && !calls
+        val b = Notification.Builder(this, if (waiting) WAIT_CHANNEL else CHANNEL)
             .setSmallIcon(R.drawable.ic_stat_remote)
             .setContentIntent(QuickActions.openApp(this))
             .setOngoing(true)
@@ -264,8 +338,10 @@ class RemoteService : Service() {
             val v = RemoteViews(packageName, R.layout.notification_remote)
             v.setTextViewText(R.id.q_title, tv.displayName + if (state == "connected") "" else " · לא מחובר")
             QuickActions.bindButtons(this, v)
+            v.setOnClickPendingIntent(R.id.q_close, QuickActions.intent(this, QuickActions.HIDE, 6))
             b.setStyle(Notification.DecoratedCustomViewStyle()).setCustomContentView(v)
-                .addAction(Notification.Action.Builder(null, "הסתר", QuickActions.intent(this, QuickActions.HIDE, 6)).build())
+        } else if (waiting) {
+            b.setContentTitle("השלט יחזור כשתתחבר ל-Wi-Fi").setVisibility(Notification.VISIBILITY_SECRET)
         } else {
             b.setContentTitle("השתקה בזמן שיחה פעילה").setContentText(tv.displayName)
         }

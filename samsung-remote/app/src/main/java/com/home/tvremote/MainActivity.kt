@@ -53,6 +53,7 @@ class MainActivity : Activity() {
         super.onStart()
         tv.addListener(listener)
         tv.acquire("screen")
+        RemoteService.appOpened(this)
     }
 
     override fun onStop() {
