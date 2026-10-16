@@ -452,7 +452,7 @@
 <div class="sheet" id="sheet-keyboard">
   <div class="handle"></div>
   <h2>הקלדה לטלוויזיה</h2>
-  <p class="note">הקלדה עובדת כשבטלוויזיה פתוחה מקלדת של המערכת (למשל בדפדפן או בנטפליקס). ביוטיוב יש מקלדת משלה – לחיפוש ביוטיוב השתמשו בכפתור "חפש ביוטיוב".</p>
+  <p class="note">הקלדה עובדת כשבטלוויזיה פתוחה מקלדת של המערכת (למשל בדפדפן או בנטפליקס). ביוטיוב בטלוויזיות סמסונג יש מקלדת משלה שלא מקבלת הקלדה מהטלפון.</p>
   <div class="inrow">
     <input type="text" id="kbText" placeholder="טקסט לשליחה" autocomplete="off" enterkeyhint="send">
     <button class="btn ghost" onclick="A.voice()" aria-label="דבר">🎤</button>
@@ -486,6 +486,8 @@
     <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="requestApps();renderApps()">רענן</button>
   </div>
   <div class="applist" id="applist"></div>
+  <button class="btn ghost full" style="margin-top:14px" onclick="allAppsOnTv()">📺 פתח את כל האפליקציות בטלוויזיה</button>
+  <p class="note" id="appsNote" style="margin-top:10px"></p>
   <p class="note" style="margin-top:14px">טיפ: לחיצה ארוכה על כפתור קיצור בתחתית השלט מאפשרת לבחור איזו אפליקציה הוא פותח. חסרה אפליקציה? אפשר להקליט אליה קיצור: לחיצה ארוכה ← "הקלט רצף מקשים".</p>
 </div>
 
@@ -764,8 +766,18 @@
       if ($('sheet-pick').classList.contains('show')) renderPicker();
     }, 9000);
   }
+  function allAppsOnTv() {
+    send(S.tvType === 'androidtv' ? 'KEY_ALL_APPS' : 'KEY_HOME');
+    closeSheets();
+  }
+  window.allAppsOnTv = allAppsOnTv;
   function renderApps() {
     const box = $('applist');
+    $('appsNote').textContent = S.tvType === 'androidtv'
+      ? 'אנדרואיד TV לא משתפת את רשימת האפליקציות המותקנות, לכן מוצגות כאן אפליקציות פופולריות. אפליקציה שלא מותקנת פשוט לא תיפתח.'
+      : S.tvType === 'samsung'
+        ? 'סמסונג לא משתפת את הרשימה המלאה, לכן מוצגות האפליקציות המוכרות שזוהו בטלוויזיה. לכל השאר – הכפתור למעלה.'
+        : '';
     $('appsRefresh').style.display = S.tvType === 'androidtv' ? 'none' : '';
     if (!appList().length) {
       const waiting = !appsAnswered && Date.now() - appsAskedAt < 8500;
@@ -964,7 +976,7 @@
     openSheet('voice');
   }
   function voiceType() { A.text(voiceQuery); toast('נשלח לטלוויזיה'); closeSheets(); }
-  function ytSearchOk() { return S.tvType === 'androidtv' || S.tvType === 'samsung'; }
+  function ytSearchOk() { return S.tvType === 'androidtv'; }
   function kbYoutube() {
     const q = $('kbText').value.trim();
     if (!q) { toast('כתבו קודם מה לחפש'); return; }

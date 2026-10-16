@@ -149,7 +149,9 @@ class AndroidTvDriverTest {
         d.launch("https://www.netflix.com/title", 0)
         assertEquals("https://www.netflix.com/title", nextNonPing().msg(90)!!.string(1))
         d.launch("com.spotify.tv.android", 0)
-        assertEquals("market://launch?id=com.spotify.tv.android", nextNonPing().msg(90)!!.string(1))
+        assertEquals("spotify://", nextNonPing().msg(90)!!.string(1))
+        d.launch("org.xbmc.kodi", 0)
+        assertEquals("market://launch?id=org.xbmc.kodi", nextNonPing().msg(90)!!.string(1))
         d.text("hi")
         nextNonPing().msg(21)!!.msg(3)!!.msg(2)!!.let { assertEquals("hi", it.string(3)); assertEquals(1L, it.int(1)) }
         assertEquals(false, d.key("KEY_AMBIENT"))

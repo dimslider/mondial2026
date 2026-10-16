@@ -201,7 +201,10 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
 
     /** [appId] is an app link ("https://www.netflix.com/title") or a package name. */
     override fun launch(appId: String, appType: Int) {
-        val link = if (appId.contains(":")) appId else "market://launch?id=$appId"
+        // A package name: prefer the app's own link. "market://launch" opens the Play Store
+        // page instead of the app on many Google TV models.
+        val link = if (appId.contains(":")) appId else APP_LINKS[appId] ?: "market://launch?id=$appId"
+        session.log("launch: $link")
         send(ProtoWriter().message(90, ProtoWriter().string(1, link)))
     }
 
@@ -292,6 +295,20 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
             return id
         }
 
+        /** Links that open each app directly (package name -> link). */
+        val APP_LINKS: Map<String, String> = mapOf(
+            "com.netflix.ninja" to "https://www.netflix.com/title",
+            "com.google.android.youtube.tv" to "https://www.youtube.com",
+            "com.google.android.youtube.tvmusic" to "https://music.youtube.com",
+            "com.spotify.tv.android" to "spotify://",
+            "com.disney.disneyplus" to "https://www.disneyplus.com",
+            "com.amazon.amazonvideo.livingroom" to "https://app.primevideo.com",
+            "com.apple.atve.androidtv.appletv" to "https://tv.apple.com",
+            "com.wbd.stream" to "https://play.max.com",
+            "tv.twitch.android.app" to "twitch://home",
+            "com.plexapp.android" to "plex://",
+        )
+
         /** Android KeyEvent codes. */
         val KEYCODES: Map<String, Int> = mapOf(
             "KEY_UP" to 19, "KEY_DOWN" to 20, "KEY_LEFT" to 21, "KEY_RIGHT" to 22, "KEY_ENTER" to 23,
@@ -302,6 +319,7 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
             "KEY_PLAY" to 126, "KEY_PAUSE" to 127, "KEY_STOP" to 86, "KEY_REWIND" to 89, "KEY_FF" to 90,
             "KEY_REC" to 130, "KEY_INFO" to 165, "KEY_GUIDE" to 172, "KEY_EXIT" to 4,
             "KEY_CAPTION" to 175, "KEY_TOOLS" to 82, "KEY_SOURCE" to 178, "KEY_SLEEP" to 223,
+            "KEY_ALL_APPS" to 284,
         ) + (0..9).associate { "KEY_$it" to 7 + it }
     }
 }

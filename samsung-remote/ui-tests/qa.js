@@ -75,8 +75,13 @@ function check(name, ok, info = '') { if (ok) pass++; else { fail++; console.log
     check('sleep closes', (await open()) === 'none', await open());
     // keyboard -> YouTube search (Samsung: YouTube's own keyboard ignores remote text)
     await reset(); await p.evaluate(() => openSheet('keyboard')); await p.waitForTimeout(300);
-    await p.fill('#kbText', 'חתולים'); await p.tap('#kbYt'); await p.waitForTimeout(300);
+    check('keyboard youtube hidden on samsung', await p.evaluate(() => getComputedStyle(document.getElementById('kbYt')).display === 'none'));
+    await p.fill('#kbText', 'חתולים'); await p.evaluate(() => kbYoutube()); await p.waitForTimeout(300);
     check('keyboard youtube search', JSON.stringify(await sent('launch')) === JSON.stringify([['https://www.youtube.com/results?search_query=' + encodeURIComponent('חתולים'), 0]]));
+    // apps sheet: open the TV's own app screen
+    await reset(); await p.evaluate(() => openSheet('apps')); await p.waitForTimeout(300);
+    await p.tap('#sheet-apps button[onclick="allAppsOnTv()"]'); await p.waitForTimeout(250);
+    check('all apps on tv (samsung -> home)', JSON.stringify(await sent('key')) === '[["KEY_HOME"]]');
     // custom sleep minutes (1 minute, for testing)
     await reset(); await p.tap('.app [data-sheet="more"]'); await p.waitForTimeout(450);
     await p.tap('#sheet-more [data-sheet="sleep"]'); await p.waitForTimeout(450);
