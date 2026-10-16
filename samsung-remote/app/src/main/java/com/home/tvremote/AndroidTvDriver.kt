@@ -145,7 +145,12 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
                 markStarted()
             }
 
-            m.has(40) -> markStarted() // remote_start
+            m.has(40) -> { // remote_start: tells whether the screen is on
+                val on = (m.msg(40)?.int(1) ?: 0L) == 1L
+                if (screenOn != on) session.log("tv screen: ${if (on) "on" else "off"}")
+                screenOn = on
+                markStarted()
+            }
             m.has(21) -> { // remote_ime_batch_edit
                 val b = m.msg(21)
                 imeCounter = b?.int(1) ?: imeCounter
@@ -180,8 +185,15 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
         }
     }
 
+    /** The TV's own report of its screen state; null until it says. */
+    @Volatile
+    private var screenOn: Boolean? = null
+
     override fun key(key: String): Boolean {
-        val code = KEYCODES[key] ?: return false
+        // In standby some TVs keep this connection but ignore POWER; WAKEUP only ever turns on.
+        val wake = key == "KEY_POWER" && screenOn == false
+        if (key == "KEY_POWER" || key == "KEY_WAKEUP") session.log("power key: ${if (wake) "WAKEUP (screen is off)" else key} screen=$screenOn")
+        val code = (if (wake) KEYCODES["KEY_WAKEUP"] else KEYCODES[key]) ?: return false
         send(ProtoWriter().message(10, ProtoWriter().int(1, code).int(2, DIRECTION_SHORT)))
         return true
     }
