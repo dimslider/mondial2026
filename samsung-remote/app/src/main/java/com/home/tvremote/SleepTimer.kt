@@ -77,7 +77,10 @@ class SleepService : Service() {
             val at = SleepTimer.endsAt(getSharedPreferences("tv", MODE_PRIVATE))
             when {
                 firing -> return
-                at == 0L -> stopSelf()
+                at == 0L -> {
+                    TvClient.get(this@SleepService).log("sleep service: no timer, stopping")
+                    stopSelf()
+                }
                 at - System.currentTimeMillis() <= 1_000 -> {
                     firing = true
                     show("מכבה את הטלוויזיה…")
@@ -85,6 +88,7 @@ class SleepService : Service() {
                 }
                 else -> {
                     val left = (at - System.currentTimeMillis() + 59_999) / 60_000
+                    TvClient.get(this@SleepService).log("sleep service: ${(at - System.currentTimeMillis()) / 1000}s left")
                     show("הטלוויזיה תכבה בעוד $left דק׳")
                     main.postDelayed(this, minOf(30_000L, at - System.currentTimeMillis()))
                 }
@@ -103,6 +107,7 @@ class SleepService : Service() {
         val at = SleepTimer.endsAt(getSharedPreferences("tv", MODE_PRIVATE))
         show("טיימר שינה")
         if (at == 0L && !firing) {
+            TvClient.get(this).log("sleep service: started without a timer")
             stopSelf()
             return START_NOT_STICKY
         }
@@ -157,6 +162,7 @@ class SleepReceiver : BroadcastReceiver() {
         val prefs = context.getSharedPreferences("tv", Context.MODE_PRIVATE)
         val at = prefs.getLong("sleepAt", 0L)
         if (at == 0L || at - System.currentTimeMillis() > 60_000) return
+        TvClient.get(context).log("sleep alarm (backup) fired")
         val done = goAsync()
         SleepTimer.fire(context) { done.finish() }
     }

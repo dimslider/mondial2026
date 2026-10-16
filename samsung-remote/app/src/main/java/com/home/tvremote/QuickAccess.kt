@@ -43,7 +43,7 @@ object QuickActions {
     fun ui(context: Context) = context.getSharedPreferences("ui", Context.MODE_PRIVATE)
 
     /** Sends [key] to the current TV, connecting first if needed, then lets go of the connection. */
-    fun perform(context: Context, key: String) {
+    fun perform(context: Context, key: String, onDone: () -> Unit = {}) {
         instanceContext = context.applicationContext
         val tv = TvClient.get(context)
         // The lock screen sometimes delivers one tap twice: ignore an identical press within 400 ms.
@@ -51,6 +51,7 @@ object QuickActions {
         synchronized(this) {
             if (key == lastKey && now - lastAt < 400) {
                 tv.log("quick button: $key ignored (double tap)")
+                onDone()
                 return
             }
             lastKey = key
@@ -59,13 +60,19 @@ object QuickActions {
         tv.log("quick button: $key (state=${tv.stateName})")
         tv.acquire("quick")
         when (key) {
-            POWER -> tv.power()
+            POWER -> {
+                tv.power()
+                onDone()
+            }
             PLAY_PAUSE -> {
                 val k = if (nextIsPause) "KEY_PAUSE" else "KEY_PLAY"
-                tv.sendKey(k, 4_000) { nextIsPause = k == "KEY_PLAY" }
+                tv.sendKey(k, 4_000) {
+                    nextIsPause = k == "KEY_PLAY"
+                    onDone()
+                }
             }
             // A press waits at most 4 s for the connection, then it is dropped (never sent late).
-            else -> tv.sendKey(key, 4_000)
+            else -> tv.sendKey(key, 4_000) { onDone() }
         }
         main.removeCallbacks(releaseQuick)
         main.postDelayed(releaseQuick, 60_000)
@@ -100,10 +107,13 @@ object QuickActions {
 class ActionReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val key = intent.getStringExtra(QuickActions.EXTRA_KEY) ?: return
+        // Android hands this receiver one tap at a time, so it must let go as soon as the key is
+        // out: holding it longer queues the following taps, which then trickle in long after.
         val done = goAsync()
-        QuickActions.perform(context, key)
-        // Give the connection a few seconds to open and deliver the key.
-        Handler(Looper.getMainLooper()).postDelayed({ done.finish() }, 8_000)
+        val finished = java.util.concurrent.atomic.AtomicBoolean(false)
+        val finish = { if (finished.compareAndSet(false, true)) done.finish() }
+        QuickActions.perform(context, key) { finish() }
+        Handler(Looper.getMainLooper()).postDelayed({ finish() }, 4_500)
     }
 }
 

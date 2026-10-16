@@ -177,7 +177,9 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
         // KEY_POWER toggles, and some models keep this socket open in standby: check first.
         Thread {
             val power = Net.samsungInfo(ip)?.optString("power").orEmpty()
-            if (power.isEmpty() || power == "on") key("KEY_POWER")
+            val send = power.isEmpty() || power == "on"
+            session.log("power off: TV reports power='$power' -> ${if (send) "sending KEY_POWER" else "already off"}")
+            if (send) key("KEY_POWER")
         }.start()
     }
 
