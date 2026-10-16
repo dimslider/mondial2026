@@ -258,8 +258,12 @@ class TvClient private constructor(private val context: Context) {
         // (it only ever turns the TV on, so it is safe if the TV turns out to be on already).
         if (type == Driver.ANDROID_TV) queue({ it.key("KEY_WAKEUP") }, 15_000L)
         attempt = 0
+        // The TV takes a while to come back on the network: keep trying every 1.5 s for a bit.
+        wakingUntil = SystemClock.elapsedRealtime() + 45_000
         if (state != "connecting") connect()
     }
+
+    private var wakingUntil = 0L
 
     private fun command(action: (Driver) -> Unit) = command(8_000L, null, action)
 
@@ -305,6 +309,7 @@ class TvClient private constructor(private val context: Context) {
 
         override fun connected() = onMain {
             attempt = 0
+            wakingUntil = 0L
             setState("connected")
             flushPending()
             driver?.requestApps()
@@ -368,7 +373,8 @@ class TvClient private constructor(private val context: Context) {
         setState("reconnecting")
         // On screen: retry quickly. Background only (notification, call mute): go easy on the battery.
         val cap = if ("screen" in holders) 8_000L else 60_000L
-        val delay = minOf(cap, 500L shl minOf(attempt, 7))
+        val waking = SystemClock.elapsedRealtime() < wakingUntil
+        val delay = if (waking) 1_500L else minOf(cap, 500L shl minOf(attempt, 7))
         main.postDelayed(retry, delay)
     }
 
