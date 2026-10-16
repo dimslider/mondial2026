@@ -64,6 +64,12 @@ class MainActivity : Activity() {
         tv.release("screen")
     }
 
+    override fun onDestroy() {
+        // Exited for good (not just sent to the background, not rotated): same as swiping it away.
+        if (isFinishing && !isChangingConfigurations) RemoteService.appClosed(this)
+        super.onDestroy()
+    }
+
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         val key = when (event.keyCode) {
             KeyEvent.KEYCODE_VOLUME_UP -> "KEY_VOLUP"

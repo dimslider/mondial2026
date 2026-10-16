@@ -140,8 +140,15 @@ class RemoteService : Service() {
             return p.getString("quickControls", "0") == "1" && p.getString("quickHidden", "0") != "1"
         }
 
-        fun wanted(context: Context): Boolean =
-            controlsOn(context) || QuickActions.ui(context).getString("callAction", "off") != "off"
+        /** Closing the app (not just leaving it) switches all background features off until it is opened again. */
+        fun wanted(context: Context): Boolean = QuickActions.ui(context).getString("appClosed", "0") != "1" &&
+            (controlsOn(context) || QuickActions.ui(context).getString("callAction", "off") != "off")
+
+        fun appClosed(context: Context) {
+            QuickActions.ui(context).edit().putString("appClosed", "1").apply()
+            TvClient.get(context).log("app closed: background features off until it is opened")
+            sync(context)
+        }
 
         fun hideUntilAppOpens(context: Context, why: String) {
             if (QuickActions.ui(context).getString("quickControls", "0") != "1") return
@@ -152,7 +159,7 @@ class RemoteService : Service() {
 
         /** The app was opened: bring the controls back if they are switched on. */
         fun appOpened(context: Context) {
-            QuickActions.ui(context).edit().remove("quickHidden").apply()
+            QuickActions.ui(context).edit().remove("quickHidden").remove("appClosed").apply()
             sync(context)
         }
 
@@ -239,7 +246,7 @@ class RemoteService : Service() {
 
     override fun onTaskRemoved(rootIntent: Intent?) {
         // The app was swiped away: the user is done with the remote for now.
-        hideUntilAppOpens(this, "app closed")
+        appClosed(this)
         super.onTaskRemoved(rootIntent)
     }
 
