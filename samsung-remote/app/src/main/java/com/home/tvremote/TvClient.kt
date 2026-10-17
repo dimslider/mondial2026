@@ -271,6 +271,7 @@ class TvClient private constructor(private val context: Context) {
         val d = driver
         if (isConnected && d != null) {
             action(d)
+            Rating.keyDelivered(context)
             return@post
         }
         queue(action, maxAge, tag)
@@ -362,6 +363,7 @@ class TvClient private constructor(private val context: Context) {
     }
 
     private fun dropped() {
+        Rating.problem()
         driver?.close()
         driver = null
         if (holders.isEmpty() || state == "denied") {
@@ -401,6 +403,7 @@ class TvClient private constructor(private val context: Context) {
 
     /** [text] is shown as is, or, when it starts with "@", is the name of a string resource. */
     fun toast(text: String) {
+        Rating.problem()
         val shown = if (text.startsWith("@")) {
             val id = context.resources.getIdentifier(text.substring(1), "string", context.packageName)
             if (id != 0) Lang.s(context, id) else text

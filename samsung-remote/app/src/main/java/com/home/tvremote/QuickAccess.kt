@@ -47,6 +47,12 @@ object QuickActions {
     fun perform(context: Context, key: String, onDone: () -> Unit = {}) {
         instanceContext = context.applicationContext
         val tv = TvClient.get(context)
+        if (!Store.isPro(context)) {
+            // Widget / tile buttons are Pro: they open the app instead (where the upsell is).
+            tv.log("quick button: $key ignored (Pro)")
+            onDone()
+            return
+        }
         // The lock screen sometimes delivers one tap twice: ignore an identical press within 400 ms.
         val now = android.os.SystemClock.elapsedRealtime()
         synchronized(this) {
@@ -137,12 +143,16 @@ class RemoteService : Service() {
         /** Controls switched on in settings and not closed (X / app swiped away) since the app was last opened. */
         fun controlsOn(context: Context): Boolean {
             val p = QuickActions.ui(context)
-            return p.getString("quickControls", "0") == "1" && p.getString("quickHidden", "0") != "1"
+            return Store.isPro(context) && p.getString("quickControls", "0") == "1" && p.getString("quickHidden", "0") != "1"
         }
+
+        /** The call setting in effect: "off", "mute" or "pause" (a Pro feature). */
+        fun callAction(context: Context): String =
+            if (Store.isPro(context)) QuickActions.ui(context).getString("callAction", "off") ?: "off" else "off"
 
         /** Closing the app (not just leaving it) switches all background features off until it is opened again. */
         fun wanted(context: Context): Boolean = QuickActions.ui(context).getString("appClosed", "0") != "1" &&
-            (controlsOn(context) || QuickActions.ui(context).getString("callAction", "off") != "off")
+            (controlsOn(context) || callAction(context) != "off")
 
         fun appClosed(context: Context) {
             QuickActions.ui(context).edit().putString("appClosed", "1").apply()
@@ -277,7 +287,7 @@ class RemoteService : Service() {
 
     private fun applySettings() {
         val p = QuickActions.ui(this)
-        val callAction = p.getString("callAction", "off") ?: "off"
+        val callAction = callAction(this)
         val allowed = checkSelfPermission(android.Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
         if (callAction != "off" && !allowed) tv.log("phone: no phone permission, only internet calls are seen")
         // Permission granted after the watcher started: restart it so it also listens to the phone.
@@ -298,7 +308,7 @@ class RemoteService : Service() {
     }
 
     private fun onCallState(inCall: Boolean, why: String) {
-        val action = QuickActions.ui(this).getString("callAction", "off") ?: "off"
+        val action = callAction(this)
         tv.log("phone: ${if (inCall) "call" else "no call"} ($why, action=$action, tv=${tv.stateName})")
         inCallNow = inCall
         if (inCall) {
@@ -329,7 +339,7 @@ class RemoteService : Service() {
     private fun showNotification() {
         val controls = controlsOn(this)
         val quick = controls && onWifi
-        val calls = QuickActions.ui(this).getString("callAction", "off") != "off"
+        val calls = callAction(this) != "off"
         // Controls on but away from Wi-Fi, no call muting: keep a minimised, silent placeholder
         // (no lock screen, no status icon) so the controls can come back when Wi-Fi does.
         val waiting = controls && !onWifi && !calls
@@ -484,7 +494,10 @@ class RemoteWidget : AppWidgetProvider() {
             val v = RemoteViews(context.packageName, R.layout.widget_remote)
             v.setTextViewText(R.id.q_title, TvClient.get(context).displayName)
             v.setOnClickPendingIntent(R.id.q_title, QuickActions.openApp(context))
-            QuickActions.bindButtons(context, v)
+            if (Store.isPro(context)) QuickActions.bindButtons(context, v)
+            else for (id in intArrayOf(R.id.q_power, R.id.q_voldown, R.id.q_mute, R.id.q_volup, R.id.q_playpause)) {
+                v.setOnClickPendingIntent(id, QuickActions.openApp(context)) // Pro: opens the app (upsell)
+            }
             return v
         }
 
@@ -526,6 +539,17 @@ class MuteTile : TileService() {
     }
 
     override fun onClick() {
-        QuickActions.perform(this, "KEY_MUTE")
+        if (Store.isPro(this)) {
+            QuickActions.perform(this, "KEY_MUTE")
+            return
+        }
+        // Pro feature: open the app instead.
+        val i = Intent(this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        if (Build.VERSION.SDK_INT >= 34) {
+            startActivityAndCollapse(PendingIntent.getActivity(this, 0, i, PendingIntent.FLAG_IMMUTABLE))
+        } else {
+            @Suppress("DEPRECATION")
+            startActivityAndCollapse(i)
+        }
     }
 }

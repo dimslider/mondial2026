@@ -24,7 +24,15 @@ class MainActivity : Activity() {
     private lateinit var tv: TvClient
     private val ui by lazy { getSharedPreferences("ui", MODE_PRIVATE) }
     private val vibrator by lazy { getSystemService(Vibrator::class.java) }
-    private val listener: (JSONObject) -> Unit = { msg -> toJs(msg) }
+    private var ratingChecked = false
+    private val listener: (JSONObject) -> Unit = { msg ->
+        toJs(msg)
+        // A few seconds into a working session: maybe show Google Play's rating card (once per launch).
+        if (!ratingChecked && msg.optString("type") == "status" && msg.optString("state") == "connected") {
+            ratingChecked = true
+            web.postDelayed({ if (tv.isConnected && !isFinishing) Rating.maybeAsk(this) }, 20_000)
+        }
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +61,12 @@ class MainActivity : Activity() {
             onBackInvokedDispatcher.registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT) { goBack() }
         }
         web.loadUrl("file:///android_asset/remote.html")
-        Store.start(this) { toJs(JSONObject(Store.licenseJson(this)).put("type", "license")) }
+        Store.start(this) {
+            toJs(JSONObject(Store.licenseJson(this)).put("type", "license"))
+            // Pro on/off changes what the notification, widget and call muting may do.
+            RemoteService.sync(this)
+            RemoteWidget.refresh(this)
+        }
         // The Android TV client certificate takes a moment to generate; do it ahead of time.
         Thread { tv.identity() }.start()
         RemoteService.sync(this)
@@ -69,6 +82,7 @@ class MainActivity : Activity() {
         tv.acquire("screen")
         RemoteService.appOpened(this)
         Store.refresh()
+        Rating.opened(this)
     }
 
     override fun onStop() {
@@ -91,7 +105,7 @@ class MainActivity : Activity() {
             KeyEvent.KEYCODE_VOLUME_DOWN -> "KEY_VOLDOWN"
             else -> null
         }
-        if (key != null && ui.getString("hwVolume", "1") != "0" && tv.ip != null) {
+        if (key != null && ui.getString("hwVolume", "1") != "0" && tv.ip != null && Store.isPro(this)) {
             if (event.action == KeyEvent.ACTION_DOWN) tv.sendKey(key)
             return true
         }
@@ -222,6 +236,7 @@ class MainActivity : Activity() {
 
         @JavascriptInterface
         fun sleepTimer(minutes: Int) {
+            if (minutes > 0 && !Store.isPro(this@MainActivity)) return // Pro feature
             if (minutes > 0) SleepTimer.set(this@MainActivity, minutes) else SleepTimer.cancel(this@MainActivity)
             tv.requestStatus()
         }

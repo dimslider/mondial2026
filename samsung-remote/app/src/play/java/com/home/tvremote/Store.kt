@@ -18,9 +18,9 @@ import com.android.billingclient.api.QueryPurchasesParams
 import org.json.JSONObject
 
 /**
- * Google Play build: a free trial with everything unlocked, then a one-time purchase
- * (in-app product [PRODUCT]). The last known purchase state is cached so the remote keeps
- * working offline.
+ * Google Play build: the basic remote is free forever. "Pro" features are unlocked for a
+ * [TRIAL_DAYS]-day trial, then by a one-time purchase (in-app product [PRODUCT]). The last known
+ * purchase state is cached so Pro keeps working offline.
  */
 object Store {
     private const val PRODUCT = "full_unlock"
@@ -66,12 +66,15 @@ object Store {
         return (TRIAL_DAYS - used).coerceAtLeast(0)
     }
 
+    /** Pro features available: bought, or still in the trial. */
+    fun isPro(c: Context): Boolean = prefs(c).getBoolean("purchased", false) || daysLeft(c) > 0
+
     fun licenseJson(c: Context): String {
         val left = daysLeft(c)
         val state = when {
             prefs(c).getBoolean("purchased", false) -> "purchased"
             left > 0 -> "trial"
-            else -> "expired"
+            else -> "free"
         }
         return JSONObject()
             .put("state", state)
@@ -171,6 +174,14 @@ object Store {
             .setProductDetailsParamsList(listOf(BillingFlowParams.ProductDetailsParams.newBuilder().setProductDetails(d).build()))
             .build()
         c.launchBillingFlow(activity, params)
+    }
+
+    /** Google Play's in-app rating card (Google decides whether it actually appears). */
+    fun askReview(activity: Activity) {
+        val manager = com.google.android.play.core.review.ReviewManagerFactory.create(activity)
+        manager.requestReviewFlow().addOnCompleteListener { task ->
+            if (task.isSuccessful && !activity.isFinishing) manager.launchReviewFlow(activity, task.result)
+        }
     }
 
     fun restore(activity: Activity) {

@@ -69,4 +69,5 @@ android {
 dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     "playImplementation"("com.android.billingclient:billing:8.0.0")
+    "playImplementation"("com.google.android.play:review:2.0.2")
 }
