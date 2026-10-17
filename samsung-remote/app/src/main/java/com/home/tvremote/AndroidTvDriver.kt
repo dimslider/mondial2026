@@ -245,7 +245,7 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
                 val m = ProtoMsg.parse(ProtoWriter.readFrame(input) ?: return false)
                 val status = m.int(2) ?: STATUS_OK
                 if (status != STATUS_OK) {
-                    session.toast(if (status == STATUS_BAD_SECRET) "הקוד שגוי – נסה שוב" else "הצימוד נכשל")
+                    session.toast(if (status == STATUS_BAD_SECRET) "@pin_wrong_retry" else "@pairing_failed")
                     return false
                 }
                 when {
@@ -259,7 +259,7 @@ class AndroidTvDriver(ip: String, session: Session) : Driver(ip, session) {
                             if (closedByUs || pin.isEmpty()) return false
                             val secret = Certs.pairingSecret(identity.publicKey, serverKey, pin)
                             if (secret == null) {
-                                session.toast("הקוד שגוי – בדוק את הקוד שעל המסך")
+                                session.toast("@pin_wrong_check")
                                 session.waitingForUser("pin")
                                 continue
                             }

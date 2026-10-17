@@ -192,8 +192,8 @@ class RemoteService : Service() {
         super.onCreate()
         tv = TvClient.get(this)
         getSystemService(NotificationManager::class.java).createNotificationChannels(listOf(
-            NotificationChannel(CHANNEL, "שליטה מהירה", NotificationManager.IMPORTANCE_LOW).apply { setShowBadge(false) },
-            NotificationChannel(WAIT_CHANNEL, "פעילות ברקע", NotificationManager.IMPORTANCE_MIN).apply {
+            NotificationChannel(CHANNEL, Lang.s(this, R.string.ch_quick), NotificationManager.IMPORTANCE_LOW).apply { setShowBadge(false) },
+            NotificationChannel(WAIT_CHANNEL, Lang.s(this, R.string.ch_background), NotificationManager.IMPORTANCE_MIN).apply {
                 setShowBadge(false)
                 lockscreenVisibility = Notification.VISIBILITY_SECRET
             }
@@ -345,14 +345,14 @@ class RemoteService : Service() {
             .setCategory(Notification.CATEGORY_SERVICE)
         if (quick) {
             val v = RemoteViews(packageName, R.layout.notification_remote)
-            v.setTextViewText(R.id.q_title, tv.displayName + if (state == "connected") "" else " · לא מחובר")
+            v.setTextViewText(R.id.q_title, tv.displayName + if (state == "connected") "" else " · " + Lang.s(this, R.string.not_connected))
             QuickActions.bindButtons(this, v)
             v.setOnClickPendingIntent(R.id.q_close, QuickActions.intent(this, QuickActions.HIDE, 6))
             b.setStyle(Notification.DecoratedCustomViewStyle()).setCustomContentView(v)
         } else if (waiting) {
-            b.setContentTitle("השלט יחזור כשתתחבר ל-Wi-Fi").setVisibility(Notification.VISIBILITY_SECRET)
+            b.setContentTitle(Lang.s(this, R.string.wait_wifi)).setVisibility(Notification.VISIBILITY_SECRET)
         } else {
-            b.setContentTitle("השתקה בזמן שיחה פעילה").setContentText(tv.displayName).setVisibility(Notification.VISIBILITY_SECRET)
+            b.setContentTitle(Lang.s(this, R.string.call_mute_active)).setContentText(tv.displayName).setVisibility(Notification.VISIBILITY_SECRET)
         }
         val n = b.build()
         if (Build.VERSION.SDK_INT >= 29) startForeground(NOTIFICATION_ID, n, ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE)

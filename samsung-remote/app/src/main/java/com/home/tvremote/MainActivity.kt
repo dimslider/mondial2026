@@ -39,7 +39,21 @@ class MainActivity : Activity() {
         tv = TvClient.get(this)
         web.addJavascriptInterface(Bridge(), "Android")
         setContentView(web)
+        if (Build.VERSION.SDK_INT >= 30) {
+            // Edge-to-edge (enforced from Android 15): keep the page clear of the system bars and keyboard.
+            web.setOnApplyWindowInsetsListener { v, insets ->
+                val bars = insets.getInsets(android.view.WindowInsets.Type.systemBars())
+                val ime = insets.getInsets(android.view.WindowInsets.Type.ime())
+                v.setPadding(bars.left, bars.top, bars.right, maxOf(bars.bottom, ime.bottom))
+                insets
+            }
+        }
+        if (Build.VERSION.SDK_INT >= 33) {
+            // Predictive back (Android 13+; the only way back reaches us when targeting Android 16).
+            onBackInvokedDispatcher.registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT) { goBack() }
+        }
         web.loadUrl("file:///android_asset/remote.html")
+        Store.start(this) { toJs(JSONObject(Store.licenseJson(this)).put("type", "license")) }
         // The Android TV client certificate takes a moment to generate; do it ahead of time.
         Thread { tv.identity() }.start()
         RemoteService.sync(this)
@@ -54,6 +68,7 @@ class MainActivity : Activity() {
         tv.addListener(listener)
         tv.acquire("screen")
         RemoteService.appOpened(this)
+        Store.refresh()
     }
 
     override fun onStop() {
@@ -84,22 +99,25 @@ class MainActivity : Activity() {
     }
 
     @Deprecated("Deprecated in Java")
-    override fun onBackPressed() {
+    override fun onBackPressed() = goBack()
+
+    /** Back closes an open panel; on the main screen it only sends the app to the background. */
+    private fun goBack() {
         web.evaluateJavascript("window.handleBack?handleBack():false") { result ->
-            if (result != "true") finish()
+            if (result != "true") moveTaskToBack(true)
         }
     }
 
     private fun startVoice() {
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
             .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-            .putExtra(RecognizerIntent.EXTRA_PROMPT, "מה לחפש בטלוויזיה?")
+            .putExtra(RecognizerIntent.EXTRA_PROMPT, Lang.s(this, R.string.voice_prompt))
             .putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1)
         try {
             @Suppress("DEPRECATION")
             startActivityForResult(intent, VOICE_REQUEST)
         } catch (e: ActivityNotFoundException) {
-            toJs(JSONObject().put("type", "toast").put("text", "זיהוי דיבור לא זמין בטלפון הזה"))
+            tv.toast("@voice_unavailable")
         }
     }
 
@@ -122,6 +140,24 @@ class MainActivity : Activity() {
 
     @Suppress("unused")
     inner class Bridge {
+        /** Trial / purchase state as JSON: {"state": family|trial|purchased|expired, "daysLeft", "price"}. */
+        @JavascriptInterface
+        fun license(): String = Store.licenseJson(this@MainActivity)
+
+        @JavascriptInterface
+        fun buy() = runOnUiThread { Store.buy(this@MainActivity) }
+
+        @JavascriptInterface
+        fun restore() = runOnUiThread { Store.restore(this@MainActivity) }
+
+        /** The page's language switch: native texts (notifications, toasts) follow it. */
+        @JavascriptInterface
+        fun setLang(code: String) = runOnUiThread {
+            Lang.set(this@MainActivity, if (code == "he") "he" else "en")
+            RemoteService.sync(this@MainActivity)
+            RemoteWidget.refresh(this@MainActivity)
+        }
+
         /** "notifications" or "phone"; answers through a "permission" message. */
         @JavascriptInterface
         fun requestPermission(what: String) = runOnUiThread {
@@ -197,7 +233,7 @@ class MainActivity : Activity() {
                 if (info != null) {
                     tv.setTv(info.getString("ip"), info.getString("type"), info.optString("name"), info.optString("mac"))
                 } else {
-                    toJs(JSONObject().put("type", "toast").put("text", "לא נמצאה טלוויזיה בכתובת הזו (היא דלוקה?)"))
+                    tv.toast("@no_tv_at_ip")
                 }
             }.start()
         }
@@ -222,7 +258,7 @@ class MainActivity : Activity() {
             val text = tv.diagnostics(version())
             val cm = getSystemService(android.content.ClipboardManager::class.java)
             cm?.setPrimaryClip(android.content.ClipData.newPlainText("TV Remote diagnostics", text))
-            toJs(JSONObject().put("type", "toast").put("text", "המידע הועתק – אפשר להדביק בצ'אט"))
+            tv.toast("@diagnostics_copied")
         }
 
         /** Keeps the screen on (long app scans stop when the phone goes to sleep). */

@@ -7,19 +7,19 @@
             android:textSize="13sp" android:maxLines="1" android:ellipsize="end"
             android:textAppearance="@android:style/TextAppearance.Material.Notification.Title" />
         <ImageButton android:id="@+id/q_close" android:layout_width="36dp" android:layout_height="30dp"
-            android:background="@android:color/transparent" android:src="@drawable/ic_q_close" android:contentDescription="סגור את השלט" />
+            android:background="@android:color/transparent" android:src="@drawable/ic_q_close" android:contentDescription="@string/q_close" />
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
         android:layoutDirection="ltr">
         <ImageButton android:id="@+id/q_power" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
-            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_power" android:contentDescription="הפעלה" />
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_power" android:contentDescription="@string/q_power" />
         <ImageButton android:id="@+id/q_voldown" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
-            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_voldown" android:contentDescription="הנמך" />
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_voldown" android:contentDescription="@string/q_voldown" />
         <ImageButton android:id="@+id/q_mute" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
-            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_mute" android:contentDescription="השתק" />
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_mute" android:contentDescription="@string/q_mute" />
         <ImageButton android:id="@+id/q_volup" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
-            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_volup" android:contentDescription="הגבר" />
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_volup" android:contentDescription="@string/q_volup" />
         <ImageButton android:id="@+id/q_playpause" android:layout_width="0dp" android:layout_height="38dp" android:layout_weight="1"
-            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_playpause" android:contentDescription="נגן או השהה" />
+            android:layout_margin="3dp" android:background="@drawable/quick_btn_bg" android:src="@drawable/ic_q_playpause" android:contentDescription="@string/q_playpause" />
     </LinearLayout>
 </LinearLayout>

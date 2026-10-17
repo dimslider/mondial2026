@@ -225,13 +225,13 @@ class TvClient private constructor(private val context: Context) {
         val repeatable = key in REPEATABLE
         val age = if (maxAgeMs > 0) maxAgeMs else if (repeatable) 2_500L else 8_000L
         command(age, if (repeatable) key else null) { d ->
-            if (!d.key(key)) toast("הכפתור הזה לא נתמך בטלוויזיה הזו")
+            if (!d.key(key)) toast("@key_unsupported")
             else onSent?.invoke()
         }
     }
 
     fun sendText(text: String) = command { d ->
-        if (!d.text(text)) toast("הקלדה לא נתמכת בטלוויזיה הזו")
+        if (!d.text(text)) toast("@text_unsupported")
     }
 
     fun launchApp(appId: String, appType: Int) = command { it.launch(appId, appType) }
@@ -252,7 +252,7 @@ class TvClient private constructor(private val context: Context) {
         val target = ip
         if (!m.isNullOrEmpty()) {
             Thread { Net.wakeOnLan(m, target) }.start()
-            toast("שולח הדלקה לטלוויזיה…")
+            toast("@waking_tv")
         }
         // Android TVs often keep the remote service alive in standby: queue a wake-up key
         // (it only ever turns the TV on, so it is safe if the TV turns out to be on already).
@@ -399,7 +399,12 @@ class TvClient private constructor(private val context: Context) {
         )
     }
 
-    private fun toast(text: String) {
-        emit(JSONObject().put("type", "toast").put("text", text))
+    /** [text] is shown as is, or, when it starts with "@", is the name of a string resource. */
+    fun toast(text: String) {
+        val shown = if (text.startsWith("@")) {
+            val id = context.resources.getIdentifier(text.substring(1), "string", context.packageName)
+            if (id != 0) Lang.s(context, id) else text
+        } else text
+        emit(JSONObject().put("type", "toast").put("text", shown))
     }
 }

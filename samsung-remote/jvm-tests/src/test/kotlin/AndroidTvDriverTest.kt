@@ -131,7 +131,7 @@ class AndroidTvDriverTest {
         // a mistyped code is caught locally and asked again
         val wrong = "%02X".format((code.substring(0, 2).toInt(16) + 1) % 256) + code.substring(2)
         d.submitPin(wrong)
-        session.await("toast:הקוד שגוי")
+        session.await("toast:@pin_wrong")
         session.await("wait:pin")
 
         d.submitPin(code.lowercase())

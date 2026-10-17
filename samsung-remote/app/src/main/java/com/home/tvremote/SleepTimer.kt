@@ -89,13 +89,13 @@ class SleepService : Service() {
                 }
                 at - System.currentTimeMillis() <= 1_000 -> {
                     firing = true
-                    show("מכבה את הטלוויזיה…")
+                    show(Lang.s(this@SleepService, R.string.sleep_turning_off))
                     SleepTimer.fire(this@SleepService) { stopSelf() }
                 }
                 else -> {
                     val left = (at - System.currentTimeMillis() + 59_999) / 60_000
                     TvClient.get(this@SleepService).log("sleep service: ${(at - System.currentTimeMillis()) / 1000}s left")
-                    show("הטלוויזיה תכבה בעוד $left דק׳")
+                    show(Lang.s(this@SleepService, R.string.sleep_left, left.toInt()))
                     main.postDelayed(this, minOf(30_000L, at - System.currentTimeMillis()))
                 }
             }
@@ -106,12 +106,12 @@ class SleepService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent?.action == ACTION_CANCEL) {
-            show("הטיימר בוטל")
+            show(Lang.s(this, R.string.sleep_cancelled))
             SleepTimer.cancel(this)
             return START_NOT_STICKY
         }
         val at = SleepTimer.endsAt(getSharedPreferences("tv", MODE_PRIVATE))
-        show("טיימר שינה")
+        show(Lang.s(this, R.string.sleep_title))
         if (at == 0L && !firing) {
             TvClient.get(this).log("sleep service: started without a timer")
             stopSelf()
@@ -136,7 +136,7 @@ class SleepService : Service() {
 
     private fun show(text: String) {
         val nm = getSystemService(NotificationManager::class.java)
-        nm.createNotificationChannel(NotificationChannel(CHANNEL, "טיימר שינה", NotificationManager.IMPORTANCE_LOW))
+        nm.createNotificationChannel(NotificationChannel(CHANNEL, Lang.s(this, R.string.ch_sleep), NotificationManager.IMPORTANCE_LOW))
         val cancel = PendingIntent.getService(
             this, 1, Intent(this, SleepService::class.java).setAction(ACTION_CANCEL),
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
@@ -149,7 +149,7 @@ class SleepService : Service() {
             .setOngoing(true)
             .setOnlyAlertOnce(true)
             .setShowWhen(false)
-            .addAction(Notification.Action.Builder(null, "בטל", cancel).build())
+            .addAction(Notification.Action.Builder(null, Lang.s(this, R.string.cancel), cancel).build())
             .build()
         if (Build.VERSION.SDK_INT >= 29) startForeground(NOTIFICATION_ID, n, ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE)
         else startForeground(NOTIFICATION_ID, n)

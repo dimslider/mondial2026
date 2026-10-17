@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">שלט לטלוויזיה</string>
+    <string name="widget_description">כפתורי שליטה מהירה בטלוויזיה</string>
+    <string name="tile_open">שלט</string>
+    <string name="tile_mute">השתק TV</string>
+
+    <string name="q_close">סגור את השלט</string>
+    <string name="q_power">הפעלה</string>
+    <string name="q_voldown">הנמך</string>
+    <string name="q_mute">השתק</string>
+    <string name="q_volup">הגבר</string>
+    <string name="q_playpause">נגן או השהה</string>
+
+    <string name="ch_quick">שליטה מהירה</string>
+    <string name="ch_background">פעילות ברקע</string>
+    <string name="ch_sleep">טיימר שינה</string>
+    <string name="not_connected">לא מחובר</string>
+    <string name="wait_wifi">השלט יחזור כשתתחבר ל-Wi-Fi</string>
+    <string name="call_mute_active">השתקה בזמן שיחה פעילה</string>
+
+    <string name="sleep_title">טיימר שינה</string>
+    <string name="sleep_turning_off">מכבה את הטלוויזיה…</string>
+    <string name="sleep_left">הטלוויזיה תכבה בעוד %1$d דק׳</string>
+    <string name="sleep_cancelled">הטיימר בוטל</string>
+    <string name="cancel">בטל</string>
+
+    <string name="voice_prompt">מה לעשות בטלוויזיה?</string>
+    <string name="voice_unavailable">זיהוי דיבור לא זמין בטלפון הזה</string>
+    <string name="no_tv_at_ip">לא נמצאה טלוויזיה בכתובת הזו (היא דלוקה?)</string>
+    <string name="diagnostics_copied">המידע הועתק – אפשר להדביק בהודעה לתמיכה</string>
+    <string name="key_unsupported">הכפתור הזה לא נתמך בטלוויזיה הזו</string>
+    <string name="text_unsupported">הקלדה לא נתמכת בטלוויזיה הזו</string>
+    <string name="waking_tv">שולח הדלקה לטלוויזיה…</string>
+    <string name="pin_wrong_retry">הקוד שגוי – נסה שוב</string>
+    <string name="pairing_failed">הצימוד נכשל</string>
+    <string name="pin_wrong_check">הקוד שגוי – בדוק את הקוד שעל המסך</string>
+
+    <string name="purchase_done">תודה! הגרסה המלאה נפתחה</string>
+    <string name="purchase_pending">התשלום בהמתנה – הגרסה תיפתח כשיושלם</string>
+    <string name="purchase_unavailable">החיוב של Google Play לא זמין כרגע</string>
+    <string name="restore_none">לא נמצאה רכישה קודמת בחשבון Google הזה</string>
+    <string name="restore_done">הרכישה שוחזרה</string>
+</resources>

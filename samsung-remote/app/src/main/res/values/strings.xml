@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">שלט לטלוויזיה</string>
-    <string name="widget_description">כפתורי שליטה מהירה בטלוויזיה</string>
-    <string name="tile_open">שלט</string>
-    <string name="tile_mute">השתק TV</string>
+    <string name="app_name">TV Remote</string>
+    <string name="widget_description">Quick TV controls</string>
+    <string name="tile_open">Remote</string>
+    <string name="tile_mute">Mute TV</string>
+
+    <string name="q_close">Close the remote</string>
+    <string name="q_power">Power</string>
+    <string name="q_voldown">Volume down</string>
+    <string name="q_mute">Mute</string>
+    <string name="q_volup">Volume up</string>
+    <string name="q_playpause">Play or pause</string>
+
+    <string name="ch_quick">Quick controls</string>
+    <string name="ch_background">Background activity</string>
+    <string name="ch_sleep">Sleep timer</string>
+    <string name="not_connected">not connected</string>
+    <string name="wait_wifi">The remote will return on Wi-Fi</string>
+    <string name="call_mute_active">Call auto-mute is on</string>
+
+    <string name="sleep_title">Sleep timer</string>
+    <string name="sleep_turning_off">Turning the TV off…</string>
+    <string name="sleep_left">The TV turns off in %1$d min</string>
+    <string name="sleep_cancelled">Timer cancelled</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="voice_prompt">What should the TV do?</string>
+    <string name="voice_unavailable">Speech recognition isn\'t available on this phone</string>
+    <string name="no_tv_at_ip">No TV found at that address (is it on?)</string>
+    <string name="diagnostics_copied">Copied – paste it in a message to support</string>
+    <string name="key_unsupported">This button isn\'t supported by this TV</string>
+    <string name="text_unsupported">Typing isn\'t supported by this TV</string>
+    <string name="waking_tv">Waking up the TV…</string>
+    <string name="pin_wrong_retry">Wrong code – try again</string>
+    <string name="pairing_failed">Pairing failed</string>
+    <string name="pin_wrong_check">Wrong code – check the code on the TV screen</string>
+
+    <string name="purchase_done">Thank you! The full version is unlocked</string>
+    <string name="purchase_pending">Payment pending – it will unlock once it completes</string>
+    <string name="purchase_unavailable">Google Play billing isn\'t available right now</string>
+    <string name="restore_none">No previous purchase found for this Google account</string>
+    <string name="restore_done">Purchase restored</string>
 </resources>
