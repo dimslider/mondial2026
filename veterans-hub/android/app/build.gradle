@@ -4,26 +4,38 @@ plugins {
 
 android {
     namespace "il.magialecha.app"
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
-        applicationId "il.magialecha.app"
+        // מזהה החבילה בחנות. קבוע לתמיד אחרי ההעלאה הראשונה ל-Google Play
+        applicationId "il.azimut.app"
         minSdk 24
-        targetSdk 34
+        // Google Play דורש מאפליקציות חדשות לכוון לגרסת אנדרואיד עדכנית
+        targetSdk 36
         // מספר גרסה עולה בכל בנייה ב-GitHub, כדי שגרסה חדשה תותקן מעל הקודמת
         versionCode((System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInteger() + 100)
-        versionName "0.2." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
+        versionName "1.0." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
     }
 
-    // מפתח חתימה קבוע לגרסאות הבדיקה. בלי זה כל בנייה נחתמת במפתח אקראי אחר,
-    // ואנדרואיד מסרב לעדכן ("החבילה מתנגשת עם חבילה קיימת").
-    // זה מפתח בדיקות בלבד, גלוי בכוונה. לחנות Google Play ייווצר מפתח נפרד ושמור.
     signingConfigs {
+        // מפתח חתימה קבוע לגרסאות הבדיקה. בלי זה כל בנייה נחתמת במפתח אקראי אחר,
+        // ואנדרואיד מסרב לעדכן ("החבילה מתנגשת עם חבילה קיימת").
+        // זה מפתח בדיקות בלבד, גלוי בכוונה.
         test {
             storeFile file("test-signing.jks")
             storePassword "magialecha-test"
             keyAlias "magialecha-test"
             keyPassword "magialecha-test"
+        }
+        // מפתח ההעלאה ל-Google Play. מגיע מהסודות של GitHub, אף פעם לא נשמר במאגר
+        upload {
+            def ks = System.getenv("UPLOAD_KEYSTORE_PATH")
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv("UPLOAD_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("UPLOAD_KEY_ALIAS")
+                keyPassword System.getenv("UPLOAD_KEY_PASSWORD")
+            }
         }
     }
 
@@ -31,6 +43,10 @@ android {
         debug {
             applicationIdSuffix ".beta"
             signingConfig signingConfigs.test
+        }
+        release {
+            minifyEnabled false
+            if (System.getenv("UPLOAD_KEYSTORE_PATH")) signingConfig signingConfigs.upload
         }
     }
 
@@ -44,7 +60,7 @@ android {
 tasks.register("copyWeb", Copy) {
     def web = rootProject.file("..")
     from(web) {
-        include "index.html", "app.js", "styles.css", "store.js", "config.js", "data/**"
+        include "index.html", "i18n.js", "app.js", "styles.css", "store.js", "config.js", "data/**"
     }
     into layout.projectDirectory.dir("src/main/assets/www")
 }

@@ -3,7 +3,11 @@ package il.magialecha.app;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowInsets;
+import android.widget.FrameLayout;
+import android.window.OnBackInvokedDispatcher;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -25,7 +29,27 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         web = new WebView(this);
-        setContentView(web);
+        // WebView לא מכבד ריפוד, לכן הוא עטוף במסגרת שמקבלת את המרווחים
+        FrameLayout root = new FrameLayout(this);
+        root.addView(web);
+        setContentView(root);
+
+        // מאנדרואיד 15 האפליקציה נפרשת עד קצה המסך. מרווח בגודל שורת המצב, סרגל הניווט והמקלדת,
+        // כדי שהכותרת והכפתורים לא יוסתרו מתחתם
+        if (Build.VERSION.SDK_INT >= 35) {
+            root.setOnApplyWindowInsetsListener((v, insets) -> {
+                android.graphics.Insets i = insets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout() | WindowInsets.Type.ime());
+                v.setPadding(i.left, i.top, i.right, i.bottom);
+                return WindowInsets.CONSUMED;
+            });
+        }
+
+        // כפתור "חזרה" (וגם מחוות החזרה של אנדרואיד 13 ומעלה): קודם אחורה בתוך האפליקציה
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(OnBackInvokedDispatcher.PRIORITY_DEFAULT, () -> {
+                if (web.canGoBack()) web.goBack(); else finish();
+            });
+        }
 
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);

@@ -1,0 +1,60 @@
+name: Android AAB לחנות (אזימוט)
+
+# קובץ AAB חתום להעלאה ל-Google Play. רץ רק ידנית: Actions → "Android AAB לחנות" → Run workflow.
+# צריך ארבעה סודות ב-Settings → Secrets and variables → Actions:
+#   UPLOAD_KEYSTORE_B64, UPLOAD_KEYSTORE_PASSWORD, UPLOAD_KEY_ALIAS, UPLOAD_KEY_PASSWORD
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.14.3"
+
+      - name: Restore the upload key
+        env:
+          UPLOAD_KEYSTORE_B64: ${{ secrets.UPLOAD_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$UPLOAD_KEYSTORE_B64" ]; then echo "::error::חסר הסוד UPLOAD_KEYSTORE_B64"; exit 1; fi
+          echo "$UPLOAD_KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          echo "UPLOAD_KEYSTORE_PATH=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
+
+      - name: Build release AAB
+        working-directory: veterans-hub/android
+        env:
+          UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.UPLOAD_KEYSTORE_PASSWORD }}
+          UPLOAD_KEY_ALIAS: ${{ secrets.UPLOAD_KEY_ALIAS }}
+          UPLOAD_KEY_PASSWORD: ${{ secrets.UPLOAD_KEY_PASSWORD }}
+        run: gradle bundleRelease --no-daemon
+
+      - name: Name the AAB
+        run: cp veterans-hub/android/app/build/outputs/bundle/release/app-release.aab azimut-${{ github.run_number }}.aab
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: azimut-aab
+          path: azimut-*.aab
+
+      # קישור הורדה קבוע, כדי להעלות לחנות גם מהטלפון
+      - name: Publish to the "play-latest" release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: play-latest
+          name: אזימוט, קובץ לחנות
+          body: "AAB חתום להעלאה ל-Google Play (commit ${{ github.sha }}, גרסה 1.0.${{ github.run_number }})."
+          prerelease: true
+          files: azimut-*.aab
