@@ -64,16 +64,18 @@
 
   <h2>3. What the app does with data on your device</h2>
   <ul>
-    <li><strong>Communication with your TV.</strong> To find and control your TV, the app communicates on your local network (Wi-Fi). Button presses, text you type or dictate for the TV, and app-launch commands are sent directly from your phone to the TV you selected. They do not pass through any server of ours.</li>
-    <li><strong>Stored locally.</strong> The app saves on your phone the list of TVs you added (name, network address and the pairing token or certificate the TV issues), your settings, shortcuts and recorded macros, and the trial/purchase status. This data never leaves your device through us. You can delete it at any time by clearing the app's data or uninstalling the app.</li>
-    <li><strong>Phone call state (optional).</strong> If you turn on auto-mute for calls, the app needs to know when a call starts ringing, is answered or ends, including internet calls such as WhatsApp. It does not read phone numbers, contacts, call logs or call content, and it records nothing.</li>
+    <li><strong>Communication with your TV.</strong> To find and control your TV, the app communicates on your local network (Wi-Fi). To find TVs, it scans only your own home network (it checks the addresses on your Wi-Fi subnet for the network ports smart TVs use, and listens for TV announcements on the local network); the results – a TV's network address, name, model and network (MAC) address, as reported by the TV itself – are stored only on your phone. Button presses, text you type or dictate for the TV, and app-launch commands are sent directly from your phone to the TV you selected. They do not pass through any server of ours.</li>
+    <li><strong>Stored locally.</strong> The app saves on your phone the list of TVs you added (name, network address and the pairing token or certificate the TV issues), your settings, shortcuts and recorded macros, and the trial/purchase status. This data never leaves your device through us. You can delete it at any time by clearing the app's data or uninstalling the app. If Android backup is turned on for your Google account, Android may include this app data in your own device backup; that backup is managed by Android and Google under your account settings, not by us.</li>
+    <li><strong>Phone call state (optional).</strong> If you turn on auto-mute for calls, the app needs to know when a call starts ringing, is answered or ends, including internet calls such as WhatsApp. The phone-state permission is requested only when you turn this feature on; internet calls are detected from the phone's audio mode, which needs no permission. It does not read phone numbers, contacts, call logs or call content, and it records nothing.</li>
+    <li><strong>Diagnostic info (optional).</strong> The "Copy diagnostic info" button copies a short technical log (for example your TV's network address and connection events) to your phone's clipboard – only when you tap it. Nothing is sent automatically; you decide whether to paste it into a message to us.</li>
   </ul>
 
   <h2>4. Speech recognition</h2>
   <p>The app does not request microphone access. When you use a voice command, the app asks your phone's built-in speech recognition service (for example, Google's) to listen. That service is provided by your device's operating system under its own privacy terms; the app only receives the recognised text and uses it on your device or sends it to your TV.</p>
 
-  <h2>5. Purchases</h2>
-  <p>The app offers a free 7-day trial and a one-time purchase. Payments are processed entirely by Google Play. We do not receive your payment details. Google Play's handling of purchase information is covered by Google's privacy policy. The app only checks with Google Play whether the purchase was made.</p>
+  <h2>5. Purchases and ratings</h2>
+  <p>The app is free to download and the basic remote is free forever. Pro features are a one-time purchase and are unlocked free for the first 7 days. Payments are processed entirely by Google Play. We do not receive your payment details. Google Play's handling of purchase information is covered by Google's privacy policy. The app only receives the purchase status from Google Play on your phone and stores a "purchased" flag locally.</p>
+  <p>The app may show Google Play's in-app rating card. Any rating or review you give there is submitted to Google Play under Google's terms; the app does not receive it.</p>
 
   <h2>6. Permissions and why they are used</h2>
   <div class="table-wrap">
@@ -86,7 +88,7 @@
     <tr><td>Run at start-up</td><td>Restore the notification remote after the phone restarts, if you enabled it.</td></tr>
     <tr><td>Prevent phone from sleeping (wake lock)</td><td>Make the sleep timer turn the TV off on time.</td></tr>
     <tr><td>Vibration</td><td>Haptic feedback on button presses.</td></tr>
-    <tr><td>Google Play billing</td><td>The one-time purchase.</td></tr>
+    <tr><td>Google Play billing</td><td>The one-time Pro purchase.</td></tr>
   </table>
   </div>
   <p>Closing the app turns off all its background features. The lock-screen controls also disappear when you leave your home Wi-Fi.</p>
@@ -127,16 +129,18 @@
 
   <h2>3. מה קורה עם מידע בתוך המכשיר</h2>
   <ul>
-    <li><strong>תקשורת עם הטלוויזיה.</strong> כדי למצוא את הטלוויזיה ולשלוט בה, האפליקציה מתקשרת ברשת המקומית (Wi-Fi). לחיצות על כפתורים, טקסט שהקלדתם או הכתבתם לטלוויזיה ופקודות לפתיחת אפליקציות נשלחים ישירות מהטלפון לטלוויזיה שבחרתם, ולא עוברים דרך שום שרת שלנו.</li>
-    <li><strong>נשמר בטלפון בלבד.</strong> האפליקציה שומרת בטלפון את רשימת הטלוויזיות שהוספתם (שם, כתובת ברשת, ואסימון או אישור הצימוד שהטלוויזיה מנפיקה), את ההגדרות, הקיצורים והמאקרו שהקלטתם, ואת מצב תקופת הניסיון והרכישה. המידע הזה לא מגיע אלינו. אפשר למחוק אותו בכל רגע על ידי ניקוי נתוני האפליקציה או הסרתה.</li>
-    <li><strong>מצב שיחה (לבחירתכם).</strong> אם הפעלתם השתקה אוטומטית בשיחות, האפליקציה צריכה לדעת מתי שיחה מצלצלת, נענית או מסתיימת – כולל שיחות אינטרנט כמו וואטסאפ. היא לא קוראת מספרי טלפון, אנשי קשר, היסטוריית שיחות או תוכן שיחות, ולא מקליטה דבר.</li>
+    <li><strong>תקשורת עם הטלוויזיה.</strong> כדי למצוא את הטלוויזיה ולשלוט בה, האפליקציה מתקשרת ברשת המקומית (Wi-Fi). כדי לאתר טלוויזיות היא סורקת רק את הרשת הביתית שלכם (בודקת את הכתובות ברשת ה-Wi-Fi שלכם בפורטים שטלוויזיות חכמות משתמשות בהם, ומאזינה להודעות של טלוויזיות ברשת המקומית); התוצאות – כתובת הרשת של הטלוויזיה, השם, הדגם וכתובת ה-MAC, כפי שהטלוויזיה עצמה מדווחת – נשמרות רק בטלפון. לחיצות על כפתורים, טקסט שהקלדתם או הכתבתם לטלוויזיה ופקודות לפתיחת אפליקציות נשלחים ישירות מהטלפון לטלוויזיה שבחרתם, ולא עוברים דרך שום שרת שלנו.</li>
+    <li><strong>נשמר בטלפון בלבד.</strong> האפליקציה שומרת בטלפון את רשימת הטלוויזיות שהוספתם (שם, כתובת ברשת, ואסימון או אישור הצימוד שהטלוויזיה מנפיקה), את ההגדרות, הקיצורים והמאקרו שהקלטתם, ואת מצב תקופת הניסיון והרכישה. המידע הזה לא מגיע אלינו. אפשר למחוק אותו בכל רגע על ידי ניקוי נתוני האפליקציה או הסרתה. אם הגיבוי של Android מופעל בחשבון Google שלכם, ייתכן ש-Android יכלול את נתוני האפליקציה בגיבוי המכשיר שלכם; הגיבוי הזה מנוהל על ידי Android ו-Google לפי הגדרות החשבון שלכם, ולא על ידינו.</li>
+    <li><strong>מצב שיחה (לבחירתכם).</strong> אם הפעלתם השתקה אוטומטית בשיחות, האפליקציה צריכה לדעת מתי שיחה מצלצלת, נענית או מסתיימת – כולל שיחות אינטרנט כמו וואטסאפ. הרשאת מצב הטלפון מתבקשת רק כשמפעילים את הפיצ'ר; שיחות אינטרנט מזוהות לפי מצב השמע של הטלפון, בלי הרשאה. היא לא קוראת מספרי טלפון, אנשי קשר, היסטוריית שיחות או תוכן שיחות, ולא מקליטה דבר.</li>
+    <li><strong>מידע לאבחון תקלות (לבחירתכם).</strong> הכפתור "העתק מידע לאבחון תקלות" מעתיק ללוח של הטלפון יומן טכני קצר (למשל כתובת הרשת של הטלוויזיה ואירועי חיבור) – רק כשלוחצים עליו. שום דבר לא נשלח אוטומטית; אתם מחליטים אם להדביק אותו בהודעה אלינו.</li>
   </ul>
 
   <h2>4. זיהוי דיבור</h2>
   <p>האפליקציה לא מבקשת הרשאת מיקרופון. כשמשתמשים בפקודה קולית, האפליקציה מבקשת משירות זיהוי הדיבור המובנה בטלפון (למשל של Google) להאזין. השירות הזה שייך למערכת ההפעלה ופועל לפי תנאי הפרטיות שלה; האפליקציה מקבלת רק את הטקסט שזוהה, ומשתמשת בו בטלפון או שולחת אותו לטלוויזיה.</p>
 
-  <h2>5. רכישות</h2>
-  <p>האפליקציה מציעה 7 ימי ניסיון בחינם ורכישה חד-פעמית. התשלום מתבצע כולו דרך Google Play, ופרטי התשלום לא מגיעים אלינו. הטיפול של Google Play במידע על רכישות כפוף למדיניות הפרטיות של Google. האפליקציה רק בודקת מול Google Play אם בוצעה רכישה.</p>
+  <h2>5. רכישות ודירוגים</h2>
+  <p>ההורדה בחינם, והשלט הבסיסי חינמי לתמיד. אפשרויות ה-Pro הן רכישה חד-פעמית, והן פתוחות בחינם ב-7 הימים הראשונים. התשלום מתבצע כולו דרך Google Play, ופרטי התשלום לא מגיעים אלינו. הטיפול של Google Play במידע על רכישות כפוף למדיניות הפרטיות של Google. האפליקציה מקבלת מ-Google Play בטלפון רק את מצב הרכישה, ושומרת בטלפון סימון "נרכש".</p>
+  <p>ייתכן שהאפליקציה תציג את חלון הדירוג של Google Play. דירוג או ביקורת שתכתבו שם נשלחים ל-Google Play לפי התנאים של Google; האפליקציה לא מקבלת אותם.</p>
 
   <h2>6. הרשאות ולמה הן נחוצות</h2>
   <div class="table-wrap">
@@ -149,7 +153,7 @@
     <tr><td>הפעלה עם עליית המכשיר</td><td>החזרת השלט בהתראות אחרי הפעלה מחדש של הטלפון, אם בחרתם בכך.</td></tr>
     <tr><td>מניעת מצב שינה (wake lock)</td><td>כדי שטיימר השינה יכבה את הטלוויזיה בזמן.</td></tr>
     <tr><td>רטט</td><td>משוב רטט בלחיצה על כפתורים.</td></tr>
-    <tr><td>חיוב של Google Play</td><td>הרכישה החד-פעמית.</td></tr>
+    <tr><td>חיוב של Google Play</td><td>רכישת ה-Pro החד-פעמית.</td></tr>
   </table>
   </div>
   <p>סגירת האפליקציה מכבה את כל הפעולות שלה ברקע. גם השלט במסך הנעילה נעלם כשיוצאים מה-Wi-Fi של הבית.</p>

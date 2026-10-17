@@ -4,6 +4,8 @@ Package: `com.dimslider.tvremote` · In-app name: "TV Remote"
 
 Character counts below were checked with Python `len()` (the same way Play Console counts: every letter, space, symbol and line break counts as 1). Copy only the text inside the grey boxes.
 
+Business model (must match the app): free to download; the **basic remote is free forever**; **Pro** is a one-time in-app purchase (`full_unlock`) – no subscription, no ads; all Pro features are unlocked free for the first 7 days (a trial counter is shown in the app from day one); after that the app falls back to the free version. Every Pro feature in the texts below is marked as Pro – never present a Pro feature as free.
+
 Policy notes that shaped these texts:
 - No brand names in the title, icon or feature graphic. Brands appear only in the description as compatibility ("Works with…"), plus the disclaimer at the end.
 - Play's metadata policy does not allow promotional words such as "free", "no ads", "best", "#1" or prices in the **title** (or in the icon and graphics). They are fine in the descriptions.
@@ -28,61 +30,56 @@ Smart TV Remote: Fast & Clean
 
 ## 2. Short description — max 80 characters
 
-Option 1 — recommended (76 / 80 chars)
+Option 1 — recommended (79 / 80 chars)
 ```text
-Fast, clean universal remote for smart TVs – many TVs, smart extras, no ads.
+Free Wi-Fi remote for smart TVs. No ads, no account. Pro mutes the TV on calls.
 ```
 
-Option 2 (77 / 80 chars)
+Option 2 (74 / 80 chars)
 ```text
-The advanced Wi-Fi TV remote: fast, clean, multi-TV – and it mutes for calls.
+One remote for all your smart TVs – free basics, no ads, pay once for Pro.
 ```
 
 ---
 
 ## 3. Full description — max 4000 characters
 
-(3976 / 4000 chars)
+(3979 / 4000 chars)
 ```text
-The advanced universal remote for your smart TV: fast, clean, packed with smart features – one app for all the TVs in your home.
+The fair remote for your smart TV: a free basic remote, no ads, no account, no subscription – one app for all the TVs in your home.
 
 ★ WHY THIS REMOTE IS DIFFERENT
+• The basic remote is free forever – not a trial that locks you out.
 • No ads. Ever. No pop-ups between button presses.
-• No subscription. Try everything free for 7 days, then unlock it forever with one small one-time purchase.
-• Auto-mute for calls: the TV mutes or pauses when a call rings or is answered – including WhatsApp and other internet calls – and un-mutes when you hang up.
-• A remote on your lock screen and in the notification: power, volume, mute and play/pause without unlocking.
-• Private by design: no account, no tracking, no internet servers. Everything stays on your home network.
+• No subscription. Pro extras are one small one-time purchase – pay once, keep it.
 • Several TV brands in one app – one remote for the whole house.
-• Simple mode: fewer, bigger buttons for grandparents, guests and anyone who wants it easy.
+• No account, no sign-in, no tracking. Everything stays on your home network.
 
-FULL CONTROL
-• Power, volume, channels, arrows/OK and a touchpad mode
-• Number pad, colour keys, media keys, Source, Menu, Home and Back
-• Type text straight into the TV's on-screen keyboard
-• Use your phone's volume buttons for the TV (optional)
-• Haptic feedback on every press
-• Turn the TV on over the network (Wake-on-LAN / network standby – depends on your TV's settings)
+Why not the official app? One remote for every TV in the house – no account, no ads, and it mutes the TV when your phone rings. The official apps exist and are fine. We differ by: one app for several brands, no sign-in, and Pro extras like call auto-mute, a lock-screen remote and a sleep timer.
 
-VOICE, APPS & MACROS
-• Say an app name to open it – "Netflix", "YouTube" and more
-• Speak a search or text and send it to the TV
-• 3 shortcut buttons for your favourite apps (long-press to change) plus a full apps panel
-• Macros: record a sequence of button presses and replay it with one tap – or by voice
-
-SLEEP TIMER
-• Choose a preset or any number of minutes
-• Turns the TV off on time, even while your phone is locked
-• Countdown notification with a Cancel button
-
-ALWAYS AT HAND
-• Finds TVs on your network automatically
-• Several TVs? Rename them and switch in one tap
-• Home-screen widget
-• Quick Settings tiles: open the remote, mute the TV
-• Lock-screen controls disappear automatically when you leave your home Wi-Fi
-• Closing the app turns off all background features
+✔ FREE FOREVER – THE BASIC REMOTE
+• Power, volume, mute and channels
+• Arrows/OK and a touchpad mode
+• Back, Home, Menu and Source
+• Number pad, colour keys and media keys
+• 3 app shortcut buttons plus a full apps panel to open your apps
+• Simple mode: fewer, bigger buttons for grandparents, guests and anyone who wants it easy
+• Finds TVs on your network automatically – connect one TV
+• Turn the TV on over Wi-Fi (if the TV supports it)
 • English and Hebrew, switchable inside the app
-• Dark, modern design
+
+★ PRO – ONE-TIME PURCHASE (free for your first 7 days – the app shows the days left)
+• Call auto-mute: the TV mutes or pauses when a call rings or is answered – regular phone calls and WhatsApp/internet calls – and comes back when you hang up
+• Lock-screen and notification remote: power, volume, mute, play/pause
+• Home-screen widget buttons and a "mute TV" Quick Settings tile
+• Sleep timer: turns the TV off on time, even with the phone locked, with a countdown and Cancel
+• Voice: say an app name to open it, or dictate a search to the TV
+• Type text straight into the TV's on-screen keyboard
+• Macros: record a sequence of presses and replay it with one tap – or by voice
+• Change what the shortcut buttons open
+• Multiple TVs: rename them and switch in one tap
+• Use your phone's volume buttons for the TV
+After 7 days without buying, the app goes back to the free version – the basic remote keeps working.
 
 WORKS WITH
 • Samsung Smart TVs (Tizen, 2016 and newer)
@@ -91,44 +88,44 @@ WORKS WITH
 Not supported: Roku, Fire TV, Apple TV and older non-smart TVs.
 
 REQUIREMENTS
-• Your phone and your TV must be connected to the same Wi-Fi network
-• No IR blaster needed
+• Phone and TV on the same Wi-Fi network – no IR blaster needed
 
 PRICE
-Every feature is free for 7 days. Then a single one-time purchase unlocks it for good – no subscription, no ads, nothing else to buy.
+Free to download; the basic remote is free forever. Pro is a single one-time purchase – no subscription, nothing else to buy.
 
 FAQ
+Q: Is it really free?
+A: Yes. The basic remote is free forever for one TV. Pro extras are a one-time purchase, free to try for 7 days.
+
 Q: The app doesn't find my TV.
-A: Check that the phone and the TV are on the same Wi-Fi network (not a guest network) and that the TV is on. Some routers block devices from seeing each other ("AP isolation" / "client isolation") – turn that off. The first time you connect, accept the request on the TV screen or enter the code it shows.
+A: Check that the phone and the TV are on the same Wi-Fi network (not a guest network) and that the TV is on. Turn off "AP isolation" on the router. First connection: Samsung and LG show an "Allow" prompt on the TV – accept it with the TV's remote or its button. Android TV shows a code – type it on your phone.
 
 Q: The TV won't turn on from the app.
-A: Turn on network standby in the TV settings. On Samsung it is usually called "Power On with Mobile"; on LG "Turn on via Wi-Fi" or "Mobile TV On"; on Android TV / Google TV look for network standby or "Wake on network". Some TVs can only be woken when connected by network cable.
+A: Turn on network standby in the TV settings ("Power On with Mobile" on Samsung, "Turn on via Wi-Fi" on LG).
 
 Q: Does it need internet access?
 A: No. Only your home Wi-Fi. Commands go straight from your phone to your TV.
 
 Q: Does it listen to my calls?
-A: No. Auto-mute only needs to know that a call is ringing or has ended. The app never reads phone numbers, contacts or call history, and the feature is optional.
+A: No. Call auto-mute (Pro, optional) only needs to know that a call is ringing or has ended. It never reads numbers, contacts or call history.
 
 Q: Does it use my microphone?
-A: The app itself does not ask for microphone access. Voice commands use your phone's built-in speech recognition, and the app only receives the recognised words.
+A: The app does not ask for microphone access. Voice commands (Pro) use your phone's built-in speech recognition, and the app only receives the recognised words.
 
-Samsung, LG, Android TV, Google TV, WhatsApp, Netflix, YouTube and other names are trademarks of their respective owners. This app is an independent product and is not affiliated with, endorsed or sponsored by any of them.
+Samsung, LG, Android TV, Google TV, WhatsApp and other names are trademarks of their respective owners. This app is independent and not affiliated with or endorsed by any of them.
 ```
 
 ---
 
 ## 4. What's new (release notes, first release) — max 500 characters
 
-(399 / 500 chars)
+(402 / 500 chars)
 ```text
 First release!
 • Wi-Fi remote for Samsung, LG and Android TV / Google TV
-• Auto-mute or pause the TV on phone and WhatsApp calls
-• Lock-screen and notification remote, widget and Quick Settings tiles
-• Voice commands, app shortcuts and macros
-• Sleep timer and simple mode
-• 7 days free, then a one-time purchase – no ads, no subscription
+• The basic remote is free forever – no ads, no account
+• Pro, one-time purchase: call auto-mute (phone and WhatsApp calls), lock-screen remote, widget, sleep timer, voice, typing, macros and multiple TVs
+• All Pro features free for your first 7 days – no subscription
 Feedback is welcome – write to us from the app's store page.
 ```
 
@@ -149,7 +146,7 @@ Feedback is welcome – write to us from the app's store page.
 5. Device connection (or "Wi-Fi")
 
 **Keywords to keep naturally present in the texts** (Play has no keyword field; it indexes the title, short and full description):
-tv remote, remote control, smart tv remote, wifi remote, universal remote, samsung tv remote, lg tv remote, android tv remote, google tv remote, tcl remote, mute tv on call, sleep timer tv, lock screen remote, widget remote, voice remote, no ads remote.
+tv remote, remote control, smart tv remote, wifi remote, universal remote, free tv remote, samsung tv remote, lg tv remote, android tv remote, google tv remote, tcl remote, mute tv on call, sleep timer tv, lock screen remote, widget remote, voice remote, no ads remote.
 
 Do not stuff keywords or repeat brand names beyond the compatibility list – Play treats that as a metadata violation.
 
@@ -157,4 +154,4 @@ Do not stuff keywords or repeat brand names beyond the compatibility list – Pl
 
 ## 6. Price
 
-Suggested: **US$5.99** one-time (Israel: **₪19.90**, VAT-inclusive). This is adjustable at any time in Play Console → Monetize → Products → In-app products → `full_unlock`. Let Play convert the other countries automatically, then round any odd local prices.
+The app is **free to download**; only Pro (`full_unlock`, one-time) has a price. Recommended launch price: **US$2.99** (Israel **₪12.90**, VAT-inclusive), with **US$3.99** as the later test price. Full reasoning, how Play pricing works and the per-country table: see **`pricing.md`**. The price can be changed at any time in Play Console → Monetize with Play → Products → One-time products → `full_unlock`.

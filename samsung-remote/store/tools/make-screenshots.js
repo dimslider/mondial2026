@@ -11,7 +11,7 @@ const TMP = path.join(OUT, '.raw');
 fs.mkdirSync(TMP, { recursive: true });
 
 const CAPTIONS = {
-  en: ['One fast remote for all your TVs', 'Phone rings? The TV hushes.', 'Remote right on your lock screen', 'Simple mode: big, clear buttons',
+  en: ['Your TV, right on your phone', 'Phone rings? The TV hushes.', 'Remote right on your lock screen', 'Simple mode: big, clear buttons',
     'Say an app – it opens', 'Many presses, one tap', 'Falls asleep? TV turns off.', 'All your TVs. No account. No tracking.'],
   he: ['הטלוויזיה שלכם, מהטלפון', 'מתקשרים? הטלוויזיה משתתקת', 'השלט כבר על מסך הנעילה', 'מצב פשוט: כפתורים גדולים וברורים',
     'אומרים אפליקציה – והיא נפתחת', 'הרבה לחיצות, נגיעה אחת', 'נרדמתם? הטלוויזיה נכבית', 'כל הטלוויזיות. בלי חשבון, בלי מעקב'],
