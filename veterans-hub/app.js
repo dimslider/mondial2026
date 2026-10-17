@@ -1,5 +1,16 @@
 (function () {
   const T = window.TAXONOMY;
+  // שפה: t() מחזיר את הטקסט העברי, או את התרגום כשנבחרה אנגלית (i18n.js)
+  const I18N = window.I18N || { lang: "he", TAX: {} };
+  const t = window.t || (x => x);
+  const isEn = () => I18N.lang === "en";
+  // תווית של מפתח במילון התגיות (קטגוריה, סטטוס, אזור...), בשפה הנבחרת
+  const TX = (group, k) => {
+    const en = isEn() && I18N.TAX[group] && I18N.TAX[group][k];
+    if (en) return en;
+    const v = T[group] && T[group][k];
+    return v && typeof v === "object" ? v.label : v;
+  };
   const $main = document.getElementById("main");
   const $modal = document.getElementById("modal");
   const $modalBody = document.getElementById("modal-body");
@@ -14,9 +25,9 @@
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const arr = v => Array.isArray(v) ? v : (v ? [v] : []);
-  const catLabel = k => (T.categories[k] || { label: k }).label;
+  const catLabel = k => TX("categories", k) || k;
   const catIcon = k => (T.categories[k] || { icon: "•" }).icon;
-  const costLabel = k => (T.cost[k] || { label: k || "עלות: לברר" }).label;
+  const costLabel = k => TX("cost", k) || (k || t("עלות: לברר"));
   // שדה טלפון יכול להכיל כמה מספרים ("1201 | וואטסאפ 052-…", "*3362 / 1-800-…") — לחיוג לוקחים את הראשון.
   // "1111 שלוחה 6" מחויג כ-1111 ואז 6 (פסיק = המתנה בחיוג)
   const firstPhone = p => String(p).split(/\||\/|\bאו\b|,|\(|;/)[0].replace(/שלוחה\s*\d+/, "").trim();
@@ -64,7 +75,7 @@
       if (t) t.community_recs = (Number(t.community_recs) || 0) + n;
     }
     const mode = document.getElementById("store-mode");
-    if (mode) mode.textContent = Store.mode === "cloud" ? "" : "מצב הדגמה: מה ששולחים נשמר רק במכשיר";
+    if (mode) mode.textContent = Store.mode === "cloud" ? "" : t("מצב הדגמה: מה ששולחים נשמר רק במכשיר");
   }
 
   // הגנה מספאם (Cloudflare Turnstile). בלי מפתח או בלי שרת, מחזיר טוקן ריק.
@@ -79,13 +90,13 @@
       document.head.appendChild(sc);
     });
     return tsScript.then(() => {
-      const w = window.turnstile.render(el, { sitekey: key, language: "he", appearance: "interaction-only" });
+      const w = window.turnstile.render(el, { sitekey: key, language: I18N.lang, appearance: "interaction-only" });
       return () => window.turnstile.getResponse(w) || "";
     }).catch(() => () => "");
   }
-  const sendError = err => err && err.code === "rate" ? "שלחת הרבה הודעות היום. אפשר לנסות שוב מחר."
-    : err && err.code === "captcha" ? "לא הצלחנו לוודא שזה לא רובוט. נסו לרענן את העמוד."
-    : "השליחה לא הצליחה. נסו שוב בעוד רגע.";
+  const sendError = err => err && err.code === "rate" ? t("שלחת הרבה הודעות היום. אפשר לנסות שוב מחר.")
+    : err && err.code === "captcha" ? t("לא הצלחנו לוודא שזה לא רובוט. נסו לרענן את העמוד.")
+    : t("השליחה לא הצליחה. נסו שוב בעוד רגע.");
 
   // ---------- matching ----------
   // ציון התאמה: קשיים שווים יותר מתחומי עניין, אזור קרוב מוסיף, עלות נמוכה מוסיפה מעט.
@@ -109,8 +120,8 @@
     if (s.provider_type === "government" && el.some(e => (e === "mod-recognized" || e === "mod-in-process") && statuses.includes(e))) return false;
     return !el.some(e => statuses.includes(e) && e !== "mod-recognized" && e !== "mod-in-process");
   }
-  const forcesWord = statuses => arr(statuses).includes("police") ? "לשוטרים" : "לכוחות הביטחון";
-  const maybeTag = (s, p) => p && policeUnsure(s, p.statuses) ? `<span class="maybe-tag">אולי מתאים · לא בטוח שפתוח ${forcesWord(p.statuses)}</span>` : "";
+  const forcesWord = statuses => arr(statuses).includes("police") ? t("לשוטרים") : t("לכוחות הביטחון");
+  const maybeTag = (s, p) => p && policeUnsure(s, p.statuses) ? `<span class="maybe-tag">${esc(t("אולי מתאים · לא בטוח שפתוח {who}", { who: forcesWord(p.statuses) }))}</span>` : "";
   function eligible(s, statuses) {
     const el = arr(s.eligibility);
     statuses = expandStatuses(statuses);
@@ -407,7 +418,9 @@
   // ---------- components ----------
   const AREAS = window.AREAS || {};
   const areaOf = cat => Object.keys(AREAS).find(k => AREAS[k].cats.includes(cat)) || "soul";
-  const areaTag = s => { const a = areaOf(s.category); return `<span class="area-tag area-${a}">${esc(AREAS[a].label)}</span>`; };
+  const areaLabel = a => isEn() && I18N.TAX.areas && I18N.TAX.areas[a] ? I18N.TAX.areas[a][0] : AREAS[a].label;
+  const areaSub = a => isEn() && I18N.TAX.areas && I18N.TAX.areas[a] ? I18N.TAX.areas[a][1] : AREAS[a].sub;
+  const areaTag = s => { const a = areaOf(s.category); return `<span class="area-tag area-${a}">${esc(areaLabel(a))}</span>`; };
   // קווים שנמשכו ביד: אותו קו משמש לרשימות, לתחנות ולגל
   const HAND_LINE = `<svg class="hand-line" viewBox="0 0 24 400" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M12 0 C 4 40, 20 70, 12 110 C 4 150, 22 180, 12 220 C 2 260, 20 300, 12 340 C 6 370, 16 390, 12 400" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
   const WAVE = `<svg class="wave" viewBox="0 0 346 18" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M2 9 Q 22 1 43 9 T 86 9 T 129 9 T 172 9 T 215 9 T 258 9 T 301 9 T 344 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>`;
@@ -416,7 +429,7 @@
   const STAR_MIN = 3;
   const starred = s => (s.community_recs || 0) >= STAR_MIN;
   const STAR = `<svg class="star" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5 C 12.8 7, 14 9.6, 21.5 10.2 C 16 13, 15.6 15, 17.6 21.5 C 13.8 18, 10.4 18, 6.4 21.5 C 8.4 15, 8 13, 2.5 10.2 C 10 9.6, 11.2 7, 12 2.5 Z"/></svg>`;
-  const starTag = s => starred(s) ? `<span class="star-tag">${STAR}מומלץ בקהילה</span>` : "";
+  const starTag = s => starred(s) ? `<span class="star-tag">${STAR}${esc(t("מומלץ בקהילה"))}</span>` : "";
   // שם עם תוספת לועזית בסוגריים: עוטפים כדי שהסוגריים לא יתהפכו בשבירת שורה
   const nameHtml = n => esc(n).replace(/\(([A-Za-z][^()]*)\)/g, '(<bdi dir="ltr">$1</bdi>)');
   // שם ארוך ("אתגרים – ספורט אתגרי לפצועי חרבות ברזל (Etgarim)") מתפצל ברשימות לשם ראשי ולשורת משנה.
@@ -437,6 +450,17 @@
   };
   // סיבה שחוזרת זהה בכל התחנות היא רעש; מציגים אותה רק כשהיא מבחינה בין התחנות
   const whyText = r => r.why.filter(w => w !== "מתאים לסטטוס שלך")[0] || "";
+  // הסיבות נבנות בעברית בפונקציית הציון (שנבדקת גם בלי ממשק). כאן מתרגמים אותן לתצוגה.
+  const labelsEn = (group, list) => list.split(", ").map(l => { const k = Object.keys(T[group]).find(x => T[group][x] === l); return k ? TX(group, k) : l; }).join(", ");
+  const trWhy = w => {
+    if (!isEn() || !w) return w;
+    let m;
+    if ((m = w.match(/^עוזר ב: (.+)$/))) return t("עוזר ב: {x}", { x: labelsEn("difficulties", m[1]) });
+    if ((m = w.match(/^מתאים לתחומי עניין: (.+)$/))) return t("מתאים לתחומי עניין: {x}", { x: labelsEn("interests", m[1]) });
+    if ((m = w.match(/^קרוב אליך, כ-(\d+) ק"מ$/))) return t("קרוב אליך, כ-{n} ק\"מ", { n: m[1] });
+    if ((m = w.match(/^כ-(\d+) ק"מ ממך$/))) return t("כ-{n} ק\"מ ממך", { n: m[1] });
+    return t(w);
+  };
   // "למה זה מתאים לך": עובדות שמשנות את ההחלטה אם לפנות, לא חזרה על מה שסימנת
   function facts(s, p) {
     const f = [];
@@ -444,14 +468,14 @@
     const st = p ? p.statuses : [];
     const recognized = st.includes("mod-recognized");
     const text = [s.description, s.how_to_apply, s.cost_notes, s.avail].join(" ");
-    if (p && !recognized && s.kind !== "rights" && (s.recognition === "not_required" || /בלי הכרה|ללא הכרה|לא צריך הכרה|אין צורך בהכרה|גם למי שלא מוכר|גם בלי הכרה/.test(text))) f.push("לא צריך הכרה");
-    if (p && isForces(st) && s.police === "yes") f.push(st.includes("police") ? "פתוח לשוטרים" : "פתוח לכוחות הביטחון");
-    if (s.cost === "free") f.push("חינם");
-    else if (s.cost === "mod-funded" && (recognized || st.includes("mod-in-process"))) f.push("במימון משרד הביטחון");
-    if (/בלי תור|ללא תור|ללא המתנה|אין המתנה|בלי המתנה/.test(text)) f.push("בלי תור");
+    if (p && !recognized && s.kind !== "rights" && (s.recognition === "not_required" || /בלי הכרה|ללא הכרה|לא צריך הכרה|אין צורך בהכרה|גם למי שלא מוכר|גם בלי הכרה/.test(text))) f.push(t("לא צריך הכרה"));
+    if (p && isForces(st) && s.police === "yes") f.push(st.includes("police") ? t("פתוח לשוטרים") : t("פתוח לכוחות הביטחון"));
+    if (s.cost === "free") f.push(t("חינם"));
+    else if (s.cost === "mod-funded" && (recognized || st.includes("mod-in-process"))) f.push(t("במימון משרד הביטחון"));
+    if (/בלי תור|ללא תור|ללא המתנה|אין המתנה|בלי המתנה/.test(text)) f.push(t("בלי תור"));
     const km = p ? kmTo(s, p) : null;
-    if (km != null && km <= 60) f.push(`כ-${Math.max(km, 1)} ק"מ ממך`);
-    else if (arr(s.regions).includes("online") || s.format === "online") f.push("אפשר מהבית");
+    if (km != null && km <= 60) f.push(t("כ-{n} ק\"מ ממך", { n: Math.max(km, 1) }));
+    else if (arr(s.regions).includes("online") || s.format === "online") f.push(t("אפשר מהבית"));
     return f.slice(0, 3);
   }
   // הצעד הראשון: המשפט הראשון של "איך מתחילים"
@@ -472,24 +496,24 @@
   const hasWait = s => /המתנ|ארוך/.test(s.avail || "");
   // מחזורים: "נפתח ב-16.11" לקבוצה שעוד לא התחילה, "לא מקבלים כרגע" למה שסגור עכשיו
   const cycleLabel = s => {
-    if (s.status === "closed_now") return "לא מקבלים כרגע";
+    if (s.status === "closed_now") return t("לא מקבלים כרגע");
     if (s.status !== "future_cycle" || !s.next_cycle) return "";
     const m = String(s.next_cycle).match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
-    return m ? `מחזור חדש נפתח ${m[3] ? `ב-${+m[3]}.${+m[2]}` : `בחודש ${+m[2]}/${m[1]}`}` : `מחזור חדש: ${s.next_cycle}`;
+    return m ? (m[3] ? t("מחזור חדש נפתח ב-{d}", { d: `${+m[3]}.${+m[2]}` }) : t("מחזור חדש נפתח בחודש {d}", { d: `${+m[2]}/${m[1]}` })) : t("מחזור חדש: {d}", { d: s.next_cycle });
   };
   function card(s, why, noTag) {
-    const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => T.regions[r] || r)];
+    const meta = [costLabel(s.cost), ...arr(s.regions).slice(0, 1).map(r => TX("regions", r) || r)];
     if (cycleLabel(s)) meta.unshift("📅 " + cycleLabel(s));
-    if (hasWait(s)) meta.push("⏳ יש המתנה");
-    if (isSupplier(s)) meta.push("ספק בסל Shikum.Me");
-    if (s.source === "community") meta.push("נוסף ע״י הקהילה");
-    else if (s.verified_at) meta.push("✓ נבדק");
+    if (hasWait(s)) meta.push(t("⏳ יש המתנה"));
+    if (isSupplier(s)) meta.push(t("ספק בסל Shikum.Me"));
+    if (s.source === "community") meta.push(t("נוסף ע״י הקהילה"));
+    else if (s.verified_at) meta.push(t("✓ נבדק"));
     return `
       <article class="card" data-open="${esc(s.id)}" tabindex="0" role="button" aria-label="${esc(s.name)}">
         <div class="card-main">
-          ${nameBlock(s)}
-          ${splitName(s.name).sub ? "" : `<p class="teaser">${esc(shortDesc(s.description, 110))}</p>`}
-          ${why && why.length ? `<span class="why">← ${esc(why[0])}</span>` : ""}
+          <div class="he-wrap" lang="he" dir="rtl">${nameBlock(s)}
+          ${splitName(s.name).sub ? "" : `<p class="teaser">${esc(shortDesc(s.description, 110))}</p>`}</div>
+          ${why && why.length ? `<span class="why">${isEn() ? "→" : "←"} ${esc(trWhy(why[0]))}</span>` : ""}
           <span class="meta-line">${starTag(s)}${noTag ? "" : areaTag(s)}${esc(meta.join(" · "))}</span>
           ${maybeTag(s, loadProfile())}
         </div>
@@ -502,7 +526,7 @@
     let shown = PAGE;
     const draw = () => {
       el.innerHTML = items.slice(0, shown).map(render).join("") +
-        (items.length > shown ? `<button class="more-btn" type="button">עוד ${Math.min(PAGE * 2, items.length - shown)} מתוך ${items.length - shown}</button>` : "");
+        (items.length > shown ? `<button class="more-btn" type="button">${esc(t("עוד {n} מתוך {m}", { n: Math.min(PAGE * 2, items.length - shown), m: items.length - shown }))}</button>` : "");
       const b = el.querySelector(".more-btn");
       if (b) b.onclick = () => { shown += PAGE * 2; draw(); };
     };
@@ -539,15 +563,17 @@
     { k: "work", label: "עבודה ולימודים", test: s => s.category === "employment-education" || s.kind === "work" },
     { k: "money", label: "כסף ומענקים", test: s => s.category === "financial-grants" || s.kind === "money" }
   ];
-  const needChips = () => `<nav class="needs" aria-label="לפי צורך">${NEEDS.map(n => `<a href="#/need?n=${n.k}">${esc(n.label)}</a>`).join("")}</nav>`;
+  const needChips = () => `<nav class="needs" aria-label="${t("לפי צורך")}">${NEEDS.map(n => `<a href="#/need?n=${n.k}">${esc(t(n.label))}</a>`).join("")}</nav>`;
   const homeSearch = () => `<form class="h-search" id="h-search" role="search">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-      <input type="search" name="q" placeholder="מה מחפשים? למשל: גלישה, עורך דין, שינה" aria-label="חיפוש" autocomplete="off">
+      <input type="search" name="q" placeholder="${t("מה מחפשים? למשל: גלישה, עורך דין, שינה")}" aria-label="${t("חיפוש")}" autocomplete="off">
     </form>`;
   const bindHomeSearch = () => { const f = document.getElementById("h-search"); if (f) f.onsubmit = e => { e.preventDefault(); const q = new FormData(f).get("q").trim(); location.hash = "#/browse" + (q ? "?q=" + encodeURIComponent(q) : ""); }; };
 
   // "נפתח בקרוב": מחזורים שעוד לא התחילו. באזור שלך, וגם ארצי ומקוון
   const HE_MON = ["ינו׳", "פבר׳", "מרץ", "אפר׳", "מאי", "יוני", "יולי", "אוג׳", "ספט׳", "אוק׳", "נוב׳", "דצמ׳"];
+  const EN_MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const monName = i => (isEn() ? EN_MON : HE_MON)[i];
   function upcoming(p, n) {
     const today = new Date().toISOString().slice(0, 10);
     const regs = p && p.regions.length ? withNear(p.regions) : null;
@@ -560,8 +586,8 @@
       .slice(0, n || 99);
   }
   const upcomingList = items => `<ul class="mini">${items.map(({ s, m }) => `<li data-open="${esc(s.id)}" tabindex="0" role="button">
-      <span class="d">${m ? (m[3] ? `${+m[3]}<small>${HE_MON[+m[2] - 1]}</small>` : `${HE_MON[+m[2] - 1]}<small>${m[1]}</small>`) : `בקרוב`}</span>
-      <span class="t"><b>${esc(splitName(s.name).main)}</b><small>${esc([s.location || "", arr(s.regions).includes("online") ? "מקוון" : ""].filter(Boolean).join(" · ").slice(0, 60))}</small></span></li>`).join("")}</ul>`;
+      <span class="d">${m ? (m[3] ? `${+m[3]}<small>${monName(+m[2] - 1)}</small>` : `${monName(+m[2] - 1)}<small>${m[1]}</small>`) : t("בקרוב")}</span>
+      <span class="t"><b lang="he" dir="rtl">${esc(splitName(s.name).main)}</b><small>${s.location ? `<span lang="he" dir="rtl">${esc(s.location.slice(0, 60))}</span>` : ""}${s.location && arr(s.regions).includes("online") ? " · " : ""}${arr(s.regions).includes("online") ? t("מקוון") : ""}</small></span></li>`).join("")}</ul>`;
 
   function viewHome() {
     const prof = loadProfile();
@@ -571,15 +597,16 @@
       <section class="home">
         <div id="followup"></div>
         <div class="glass hero">
-          <div class="lockup">${LOGO(56)}<div class="wordmark">אזימוט</div></div>
-          <h1 class="welcome-title">מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.</h1>
-          <p class="welcome-sub">יותר מ-${Math.floor(SERVICES.length / 100) * 100} מקומות לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. בלי הרשמה.</p>
-          <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">יוצאים לדרך</span><span class="small">4 שאלות קצרות · תחנות שמתאימות לך</span></a>
+          <div class="lockup">${LOGO(56)}<div class="wordmark">${t("אזימוט")}</div></div>
+          <h1 class="welcome-title">${t("מוצאים מה יכול לעזור לך, ואיך מגיעים לשם.")}</h1>
+          <p class="welcome-sub">${t("יותר מ-{n} מקומות לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומי שעוד לא הוכר. בלי הרשמה.", { n: Math.floor(SERVICES.length / 100) * 100 })}</p>
+          <a class="btn btn-ink btn-wide welcome-cta" href="#/match"><span class="big">${t("יוצאים לדרך")}</span><span class="small">${t("4 שאלות קצרות · תחנות שמתאימות לך")}</span></a>
         </div>
-        <h2 class="h-sec">או לחפש לבד</h2>
+        ${isEn() ? `<p class="note quiet lang-note">${t("פרטי השירותים כתובים בעברית")}</p>` : ""}
+        <h2 class="h-sec">${t("או לחפש לבד")}</h2>
         ${homeSearch()}${needChips()}
-        ${soon.length ? `<h2 class="h-sec">נפתח בקרוב <a href="#/soon">הכול</a></h2>${upcomingList(soon)}` : ""}
-        <p class="note quiet center">נבנה בהתנדבות, מתוך רצון לעזור. בלי פרסומות, ואף אחד לא מרוויח מזה. <a class="link-u" href="#/about">למה אזימוט קיים</a></p>
+        ${soon.length ? `<h2 class="h-sec">${t("נפתח בקרוב")} <a href="#/soon">${t("הכול")}</a></h2>${upcomingList(soon)}` : ""}
+        <p class="note quiet center">${t("נבנה בהתנדבות, מתוך רצון לעזור. בלי פרסומות, ואף אחד לא מרוויח מזה.")} <a class="link-u" href="#/about">${t("למה אזימוט קיים")}</a></p>
       </section>`;
     bindHomeSearch();
     followupCard(document.getElementById("followup"));
@@ -590,15 +617,15 @@
     $main.innerHTML = `
       <section class="home">
         <div id="followup"></div>
-        <h1 class="h-title">שלום שוב. מה צריך היום?</h1>
+        <h1 class="h-title">${t("שלום שוב. מה צריך היום?")}</h1>
         ${homeSearch()}${needChips()}
-        ${first.length ? `<h2 class="h-sec">התחנות שלך <a href="#/match">לשנות</a></h2>
+        ${first.length ? `<h2 class="h-sec">${t("התחנות שלך")} <a href="#/match">${t("לשנות")}</a></h2>
         <ul class="mini">${first.map((r, n) => { const f = facts(r.s, p); return `<li data-open="${esc(r.s.id)}" tabindex="0" role="button">
-          <span class="n">${n + 1}</span><span class="t"><b>${esc(splitName(r.s.name).main)}</b><small>${esc([r.role, ...f.slice(0, 2)].filter(Boolean).join(" · "))}</small></span></li>`; }).join("")}</ul>
-        <p class="actions"><a class="link-u" href="#/results">לכל מה שמתאים לך ←</a></p>` : `<p class="empty">לא מצאנו התאמה. <a href="#/match">לשנות תשובות</a></p>`}
-        ${soon.length ? `<h2 class="h-sec">נפתח בקרוב באזור שלך <a href="#/soon">הכול</a></h2>${upcomingList(soon)}`
-          : `<p class="actions"><a class="link-u" href="#/soon">קבוצות ותוכניות שנפתחות בקרוב ←</a></p>`}
-        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>מכירים מקום שעוזר ולא מופיע?</strong><br>להוסיף בדקה</span></a>
+          <span class="n">${n + 1}</span><span class="t"><b lang="he" dir="rtl">${esc(splitName(r.s.name).main)}</b><small>${esc([t(r.role), ...f.slice(0, 2)].filter(Boolean).join(" · "))}</small></span></li>`; }).join("")}</ul>
+        <p class="actions"><a class="link-u" href="#/results">${t("לכל מה שמתאים לך ←")}</a></p>` : `<p class="empty">${t("לא מצאנו התאמה.")} <a href="#/match">${t("לשנות תשובות")}</a></p>`}
+        ${soon.length ? `<h2 class="h-sec">${t("נפתח בקרוב באזור שלך")} <a href="#/soon">${t("הכול")}</a></h2>${upcomingList(soon)}`
+          : `<p class="actions"><a class="link-u" href="#/soon">${t("קבוצות ותוכניות שנפתחות בקרוב ←")}</a></p>`}
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>${t("מכירים מקום שעוזר ולא מופיע?")}</strong><br>${t("להוסיף בדקה")}</span></a>
       </section>`;
     bindHomeSearch();
     followupCard(document.getElementById("followup"));
@@ -628,11 +655,11 @@
     if (p && list.length < 5) list = list.concat(SERVICES.filter(s => ok(s) && !list.includes(s) && eligible(s, p.statuses)));
     $main.innerHTML = `
       <section>
-        <h1 class="page-title">${esc(need.label)}</h1>
-        <p class="lead">${list.length} מקומות${p ? ", מסודרים לפי מה שהכי מתאים לך" : ""}. ${p ? "" : `<a class="link-u" href="#/match">לסדר לפי מה שמתאים לי</a>`}</p>
+        <h1 class="page-title">${esc(t(need.label))}</h1>
+        <p class="lead">${p ? t("{n} מקומות, מסודרים לפי מה שהכי מתאים לך.", { n: list.length }) : t("{n} מקומות.", { n: list.length }) + ` <a class="link-u" href="#/match">${t("לסדר לפי מה שמתאים לי")}</a>`}</p>
         ${needChips()}
         <div class="grid" id="need-list"></div>
-        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>חסר משהו?</strong><br>להוסיף מקום או שירות</span></a>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>${t("חסר משהו?")}</strong><br>${t("להוסיף מקום או שירות")}</span></a>
       </section>`;
     $main.querySelectorAll(".needs a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#/need?n=" + need.k));
     pagedList(document.getElementById("need-list"), list, s => { const f = facts(s, p); return card(s, f.length ? [f.join(" · ")] : null); });
@@ -644,11 +671,11 @@
     const rest = upcoming(null).filter(x => !ids.has(x.s.id));
     $main.innerHTML = `
       <section>
-        <h1 class="page-title">נפתח בקרוב</h1>
-        <p class="lead">קבוצות ותוכניות שהמחזור הבא שלהן מתחיל בקרוב. כדאי להירשם מראש.</p>
-        ${mine.length ? `<h2 class="h-sec">מתאים לך, באזור שלך וארצי</h2>${upcomingList(mine)}` : ""}
-        ${rest.length ? `<h2 class="h-sec">${p ? "עוד מחזורים (אולי לא מתאימים לסטטוס או לאזור שלך)" : "כל המחזורים"}</h2>${upcomingList(rest)}` : ""}
-        ${!mine.length && !rest.length ? `<p class="empty">כרגע אין מחזורים קרובים במאגר.</p>` : ""}
+        <h1 class="page-title">${t("נפתח בקרוב")}</h1>
+        <p class="lead">${t("קבוצות ותוכניות שהמחזור הבא שלהן מתחיל בקרוב. כדאי להירשם מראש.")}</p>
+        ${mine.length ? `<h2 class="h-sec">${t("מתאים לך, באזור שלך וארצי")}</h2>${upcomingList(mine)}` : ""}
+        ${rest.length ? `<h2 class="h-sec">${p ? t("עוד מחזורים (אולי לא מתאימים לסטטוס או לאזור שלך)") : t("כל המחזורים")}</h2>${upcomingList(rest)}` : ""}
+        ${!mine.length && !rest.length ? `<p class="empty">${t("כרגע אין מחזורים קרובים במאגר.")}</p>` : ""}
       </section>`;
   }
   function viewExplore() {
@@ -657,23 +684,23 @@
     SERVICES.forEach(s => { const a = areaOf(s.category); counts[a] = (counts[a] || 0) + 1; });
     $main.innerHTML = `
       <section>
-        <h1 class="page-title">מה מושך אותך?</h1>
-        <p class="lead">לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ולמי שעוד לא הוכר.</p>
+        <h1 class="page-title">${t("מה מושך אותך?")}</h1>
+        <p class="lead">${t("לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ולמי שעוד לא הוכר.")}</p>
         <ul class="areas lined">
           ${HAND_LINE}
           ${Object.keys(AREAS).map(k => `
             <li>
               <span class="node" aria-hidden="true"></span>
               <a href="#/area?a=${k}">
-                <span class="dabbed area-${k}"><span class="word${AREAS[k].label.length > 4 ? " long" : ""}">${esc(AREAS[k].label)}</span></span>
-                <span class="sub">${esc(AREAS[k].sub)}</span>
+                <span class="dabbed area-${k}"><span class="word${areaLabel(k).length > (isEn() ? 6 : 4) ? " long" : ""}">${esc(areaLabel(k))}</span></span>
+                <span class="sub">${esc(areaSub(k))}</span>
               </a>
             </li>`).join("")}
         </ul>
-        <a class="btn btn-wide home-cta" href="#/match">לא בטוח? 4 שאלות קצרות</a>
-        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>מכירים מקום שעוזר ולא מופיע כאן?</strong><br>להוסיף בדקה. ככה המאגר גדל.</span></a>
-        ${prof ? `<p class="saved-link"><a class="link-u" href="#/results">לתחנות שלי ←</a></p>` : ""}
-        <p class="note quiet">בלי הרשמה. מה שמסמנים נשאר רק במכשיר.</p>
+        <a class="btn btn-wide home-cta" href="#/match">${t("לא בטוח? 4 שאלות קצרות")}</a>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>${t("מכירים מקום שעוזר ולא מופיע כאן?")}</strong><br>${t("להוסיף בדקה. ככה המאגר גדל.")}</span></a>
+        ${prof ? `<p class="saved-link"><a class="link-u" href="#/results">${t("לתחנות שלי ←")}</a></p>` : ""}
+        <p class="note quiet">${t("בלי הרשמה. מה שמסמנים נשאר רק במכשיר.")}</p>
       </section>`;
   }
 
@@ -691,27 +718,27 @@
     $main.innerHTML = `
       <section class="area-${k}">
         <div class="area-hero">
-          <h1 class="dabbed"><span class="word${A.label.length > 4 ? " long" : ""}">${esc(A.label)}</span></h1>
-          <span class="note">${items.length} אפשרויות<br>${esc(A.sub)}</span>
+          <h1 class="dabbed"><span class="word${areaLabel(k).length > (isEn() ? 6 : 4) ? " long" : ""}">${esc(areaLabel(k))}</span></h1>
+          <span class="note">${t("{n} אפשרויות", { n: items.length })}<br>${esc(areaSub(k))}</span>
         </div>
         ${WAVE}
         ${top ? `
           <article class="sheet" style="margin-top: 16px">
-            <span class="note highlight">${p ? "הכי מתאים לך" : "כדאי להתחיל כאן"} · ${esc(costLabel(top.cost))}</span>
+            <span class="note highlight">${p ? t("הכי מתאים לך") : t("כדאי להתחיל כאן")} · ${esc(costLabel(top.cost))}</span>
             ${starTag(top)}
-            ${nameBlock(top, "h2")}
-            <p class="clamp-2">${esc(shortDesc(top.description, 140))}</p>
+            <div class="he-wrap" lang="he" dir="rtl">${nameBlock(top, "h2")}
+            <p class="clamp-2">${esc(shortDesc(top.description, 140))}</p></div>
             <div class="actions">
-              <button class="btn btn-ink" type="button" data-open="${esc(top.id)}">לפרטים וליצירת קשר</button>
+              <button class="btn btn-ink" type="button" data-open="${esc(top.id)}">${t("לפרטים וליצירת קשר")}</button>
             </div>
-          </article>` : `<p class="empty">עוד אין כאן שירותים. אפשר <a href="#/provider">להציע גוף</a>.</p>`}
-        ${cats.length > 1 ? `<nav class="subcats" aria-label="סינון">
-          <button type="button" class="active" data-cat="">הכל</button>
-          ${cats.map(c => `<button type="button" data-cat="${c}">${esc(SHORT_CAT[c] || catLabel(c))}</button>`).join("")}
+          </article>` : `<p class="empty">${t("עוד אין כאן שירותים.")} <a href="#/provider">${t("להציע גוף")}</a></p>`}
+        ${cats.length > 1 ? `<nav class="subcats" aria-label="${t("סינון")}">
+          <button type="button" class="active" data-cat="">${t("הכל")}</button>
+          ${cats.map(c => `<button type="button" data-cat="${c}">${esc(shortCat(c))}</button>`).join("")}
         </nav>` : ""}
         <div class="grid" id="area-list" style="margin-top: 6px"></div>
-        ${!p ? `<p class="actions"><a class="link-u" href="#/match">לסדר לפי מה שמתאים לי ←</a></p>` : ""}
-        <a class="add-row" href="#/add?a=${k}"><span class="plus" aria-hidden="true">+</span><span><strong>חסר כאן משהו?</strong><br>להוסיף מקום ל${esc(A.label)}</span></a>
+        ${!p ? `<p class="actions"><a class="link-u" href="#/match">${t("לסדר לפי מה שמתאים לי ←")}</a></p>` : ""}
+        <a class="add-row" href="#/add?a=${k}"><span class="plus" aria-hidden="true">+</span><span><strong>${t("חסר כאן משהו?")}</strong><br>${esc(t("להוסיף מקום ל{area}", { area: areaLabel(k) }))}</span></a>
       </section>`;
     const list = document.getElementById("area-list");
     const show = c => pagedList(list, rest.filter(s => !c || s.category === c), s => card(s, null, true));
@@ -725,6 +752,7 @@
     "yoga-mind-body": "יוגה וגוף-נפש", "medical-rehab": "שיקום רפואי", "mental-health": "טיפול", "peer-support": "עמיתים",
     "art-music": "יצירה", "family-support": "משפחה", "housing-daily": "דיור ויומיום", "community-volunteer": "קהילה",
     "rights-legal": "זכויות", "financial-grants": "מענקים", "employment-education": "עבודה ולימודים" };
+  const shortCat = c => SHORT_CAT[c] ? t(SHORT_CAT[c]) : catLabel(c);
 
   function progressLine(idx, total) {
     const xs = Array.from({ length: total }, (_, i) => 330 - i * (314 / (total - 1)));
@@ -740,13 +768,14 @@
 
   // השאלה "מה הכי חשוב לך עכשיו" קובעת את התחנה הראשונה
   const GOALS = { talk: "לדבר עם מישהו מקצועי", do: "לצאת ולעשות משהו", people: "להיות עם אנשים שמבינים", rights: "לסדר זכויות וכסף" };
+  const taxOpts = group => Object.fromEntries(Object.keys(T[group]).map(k => [k, TX(group, k)]));
   function viewMatch() {
     const p = loadProfile() || { statuses: [], difficulties: [], interests: [], regions: [], maxCost: null };
     const steps = [
-      { key: "statuses", title: "מה המצב שלך?", sub: "אפשר לסמן כמה. זה קובע למה יש לך זכאות.", opts: T.eligibility },
-      { key: "difficulties", title: "עם מה הכי קשה עכשיו?", sub: "אפשר לבחור כמה. אין תשובה לא נכונה.", opts: T.difficulties },
-      { key: "interests", title: "מה מדבר אליך?", sub: "דברים שאוהבים, או שתמיד רצית לנסות.", opts: T.interests },
-      { key: "regions", title: "איפה נוח לך?", sub: "שירותים ארציים ואונליין יופיעו תמיד.", opts: T.regions }
+      { key: "statuses", title: t("מה המצב שלך?"), sub: t("אפשר לסמן כמה. זה קובע למה יש לך זכאות."), opts: taxOpts("eligibility") },
+      { key: "difficulties", title: t("עם מה הכי קשה עכשיו?"), sub: t("אפשר לבחור כמה. אין תשובה לא נכונה."), opts: taxOpts("difficulties") },
+      { key: "interests", title: t("מה מדבר אליך?"), sub: t("דברים שאוהבים, או שתמיד רצית לנסות."), opts: taxOpts("interests") },
+      { key: "regions", title: t("איפה נוח לך?"), sub: t("שירותים ארציים ואונליין יופיעו תמיד."), opts: taxOpts("regions") }
     ];
     let idx = 0;
     function render() {
@@ -754,7 +783,7 @@
       const last = idx === steps.length - 1;
       $main.innerHTML = `
         <section class="wizard">
-          <p class="step-count">שלב ${idx + 1} מתוך ${steps.length}</p>
+          <p class="step-count">${t("שלב {n} מתוך {m}", { n: idx + 1, m: steps.length })}</p>
           <h1 class="page-title">${st.title}</h1>
           <p class="lead">${st.sub}</p>
           <form id="step-form">
@@ -763,22 +792,22 @@
                 .map(k => chip(st.key, k, st.opts[k], p[st.key].includes(k))).join("")}
             </div>
             ${st.key === "statuses" ? `<div id="followups"></div>` : ""}
-            ${st.key === "difficulties" ? `<fieldset class="followup goal-q"><legend>ומה הכי חשוב לך עכשיו?</legend><div class="chips small">${
-              Object.entries(GOALS).map(([k, l]) => `<label class="chip"><input type="radio" name="goal" value="${k}" ${p.goal === k ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>` : ""}
-            ${st.key === "regions" ? `<label class="town-q">היישוב שלך (לא חובה, כדי לחשב מרחק)
-              <input name="town" list="towns-list" autocomplete="off" value="${esc(p.town || "")}" placeholder="למשל: טבריה">
+            ${st.key === "difficulties" ? `<fieldset class="followup goal-q"><legend>${t("ומה הכי חשוב לך עכשיו?")}</legend><div class="chips small">${
+              Object.entries(GOALS).map(([k, l]) => `<label class="chip"><input type="radio" name="goal" value="${k}" ${p.goal === k ? "checked" : ""}><span>${esc(t(l))}</span></label>`).join("")}</div></fieldset>` : ""}
+            ${st.key === "regions" ? `<label class="town-q">${t("היישוב שלך (לא חובה, כדי לחשב מרחק)")}
+              <input name="town" list="towns-list" autocomplete="off" value="${esc(p.town || "")}" placeholder="${t("למשל: טבריה")}" lang="he" dir="auto">
               <datalist id="towns-list">${(window.TOWNS || []).map(t => `<option value="${esc(t[0])}">`).join("")}</datalist></label>` : ""}
             ${last ? `
               <fieldset class="cost-pref">
-                <legend>עלות</legend>
-                <label><input type="radio" name="maxCost" value="0" ${p.maxCost === 0 ? "checked" : ""}> רק ללא עלות</label>
-                <label><input type="radio" name="maxCost" value="3" ${p.maxCost === 3 ? "checked" : ""}> גם השתתפות חלקית</label>
-                <label><input type="radio" name="maxCost" value="" ${p.maxCost == null ? "checked" : ""}> לא משנה</label>
+                <legend>${t("עלות")}</legend>
+                <label><input type="radio" name="maxCost" value="0" ${p.maxCost === 0 ? "checked" : ""}> ${t("רק ללא עלות")}</label>
+                <label><input type="radio" name="maxCost" value="3" ${p.maxCost === 3 ? "checked" : ""}> ${t("גם השתתפות חלקית")}</label>
+                <label><input type="radio" name="maxCost" value="" ${p.maxCost == null ? "checked" : ""}> ${t("לא משנה")}</label>
               </fieldset>` : ""}
             <div class="wizard-nav">
-              ${idx > 0 ? `<button type="button" class="link-u" id="back">חזרה</button>` : ""}
-              <button type="button" class="link-u" id="skip">לדלג</button>
-              <button type="submit" class="btn btn-ink">${last ? "הראו לי" : "המשך"}</button>
+              ${idx > 0 ? `<button type="button" class="link-u" id="back">${t("חזרה")}</button>` : ""}
+              <button type="button" class="link-u" id="skip">${t("לדלג")}</button>
+              <button type="submit" class="btn btn-ink">${last ? t("הראו לי") : t("המשך")}</button>
             </div>
           </form>
         </section>`;
@@ -786,22 +815,22 @@
       // שאלות המשך קצרות, רק כשהן רלוונטיות: החמרה (למוכרים), תקופת השירות הקרבי (ללוחמים ומילואים), גיל (לא חובה)
       const fu = document.getElementById("followups");
       const radioRow = (name, legend, opts, cur) => `<fieldset class="followup"><legend>${legend}</legend><div class="chips small">${
-        Object.entries(opts).map(([k, l]) => `<label class="chip"><input type="radio" name="${name}" value="${k}" ${cur === k ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset>`;
+        Object.entries(opts).map(([k, l]) => `<label class="chip"><input type="radio" name="${name}" value="${k}" ${cur === k ? "checked" : ""}><span>${esc(t(l))}</span></label>`).join("")}</div></fieldset>`;
       const drawFollow = () => {
         if (!fu) return;
         const on = k => !!form.querySelector(`input[name="statuses"][value="${k}"]:checked`);
         const anyRec = on("mod-recognized") || on("mod-in-process") || on("not-recognized");
         fu.innerHTML =
-          (on("families") || on("bereaved") ? radioRow("relation", on("bereaved") ? "מה הקשר שלך לחלל/ה?" : "מה הקשר שלך?",
+          (on("families") || on("bereaved") ? radioRow("relation", on("bereaved") ? t("מה הקשר שלך לחלל/ה?") : t("מה הקשר שלך?"),
             { partner: "בן/בת זוג", parent: "הורה", child: "ילד/ה", sibling: "אח/ות" }, p.relation) : "") +
-          (on("families") && !on("bereaved") ? radioRow("famof", "בן/בת משפחה של מי?",
+          (on("families") && !on("bereaved") ? radioRow("famof", t("בן/בת משפחה של מי?"),
             { wounded: "פצוע/ה, נכה או מתמודד/ת עם פוסט טראומה", reservist: "משרת/ת מילואים", hostage: "חטוף/ה שחזר/ה" }, p.famof) : "") +
-          ((on("police") || on("security-forces")) && !anyRec ? radioRow("secrec", "ומה עם הכרה בנכות? (לשוטרים ולכוחות הביטחון זה דרך אגף השיקום)",
+          ((on("police") || on("security-forces")) && !anyRec ? radioRow("secrec", t("ומה עם הכרה בנכות? (לשוטרים ולכוחות הביטחון זה דרך אגף השיקום)"),
             { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך", "not-recognized": "לא הגשתי / לא יודע/ת" }, p.secrec) : "") +
-          (on("mod-recognized") ? radioRow("worsened", "ומאז ההכרה?", { yes: "המצב החמיר", no: "פחות או יותר אותו דבר" }, p.worsened === true ? "yes" : p.worsened === false ? "no" : "") : "") +
-          (on("combat-soldiers") || on("reservists") ? radioRow("era", "מתי היה עיקר השירות הקרבי?", { "iron-swords": "במלחמה הנוכחית, מאז 2023", "2000s": "בין 2000 ל-2023", older: "לפני 2000 (לבנון, רצועת הביטחון, יום כיפור)" }, p.era) : "") +
-          radioRow("age", "גיל (לא חובה)", { u30: "עד 30", "30-45": "30 עד 45", "45-60": "45 עד 60", "60+": "60 ומעלה" }, p.age) +
-          radioRow("gender", "איך לפנות אליך? (לא חובה, כדי להציג גם מסגרות לנשים בלבד)", { f: "אישה", m: "גבר" }, p.gender);
+          (on("mod-recognized") ? radioRow("worsened", t("ומאז ההכרה?"), { yes: "המצב החמיר", no: "פחות או יותר אותו דבר" }, p.worsened === true ? "yes" : p.worsened === false ? "no" : "") : "") +
+          (on("combat-soldiers") || on("reservists") ? radioRow("era", t("מתי היה עיקר השירות הקרבי?"), { "iron-swords": "במלחמה הנוכחית, מאז 2023", "2000s": "בין 2000 ל-2023", older: "לפני 2000 (לבנון, רצועת הביטחון, יום כיפור)" }, p.era) : "") +
+          radioRow("age", t("גיל (לא חובה)"), { u30: "עד 30", "30-45": "30 עד 45", "45-60": "45 עד 60", "60+": "60 ומעלה" }, p.age) +
+          radioRow("gender", t("איך לפנות אליך? (לא חובה, כדי להציג גם מסגרות לנשים בלבד)"), { f: "אישה", m: "גבר" }, p.gender);
       };
       if (fu) { drawFollow(); form.addEventListener("change", e => { if (e.target.name === "statuses") drawFollow(); }); }
       const collect = () => {
@@ -853,14 +882,15 @@
     const SHORT = { "mod-recognized": "מוכר/ת", "mod-in-process": "בתהליך הכרה", "not-recognized": "עוד לא מוכר/ת", "reservists": "מילואים",
       "combat-soldiers": "לוחם/ת", "police": "משטרה", "security-forces": "כוחות ביטחון", "families": "משפחה", "bereaved": "משפחה שכולה",
       "terror-victims": "נפגע/ת איבה", "civilians": "אזרח/ית" };
-    const who = [...p.statuses.map(s => SHORT[s]).slice(0, 2), ...p.regions.map(r => T.regions[r]).slice(0, 1)].filter(Boolean).join(" · ");
+    const who = [...p.statuses.map(s => SHORT[s] && t(SHORT[s])).slice(0, 2), ...p.regions.map(r => TX("regions", r)).slice(0, 1)].filter(Boolean).join(" · ");
     $main.innerHTML = `
       <section>
-        <h1 class="page-title">${first.length ? "התחנות שלך" : "לא מצאנו התאמה מדויקת"}</h1>
+        <h1 class="page-title">${first.length ? t("התחנות שלך") : t("לא מצאנו התאמה מדויקת")}</h1>
         ${who ? `<p class="lead">${esc(who)}</p>` : ""}
-        <p class="actions"><a class="link-u" href="#/match">לשנות תשובות</a></p>
-        ${noInput ? `<div class="callout">כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין. <a href="#/match">לסמן עכשיו</a></div>` : ""}
-        ${crisis ? `<p class="crisis-inline">קשה עכשיו? אפשר לדבר עם מישהו גם בלילה. <a href="#/help">עזרה עכשיו ←</a></p>` : ""}
+        <p class="actions"><a class="link-u" href="#/match">${t("לשנות תשובות")}</a></p>
+        ${isEn() ? `<p class="note quiet lang-note">${t("פרטי השירותים כתובים בעברית")}</p>` : ""}
+        ${noInput ? `<div class="callout">${t("כדי שהרשימה תהיה קצרה ומדויקת, כדאי לסמן לפחות קושי אחד או תחום עניין.")} <a href="#/match">${t("לסמן עכשיו")}</a></div>` : ""}
+        ${crisis ? `<p class="crisis-inline">${t("קשה עכשיו? אפשר לדבר עם מישהו גם בלילה.")} <a href="#/help">${t("עזרה עכשיו ←")}</a></p>` : ""}
         ${first.length ? `
           <ol class="stations lined">
             ${HAND_LINE}
@@ -868,33 +898,33 @@
               const s = r.s;
               return `<li>
                 <span class="st-node" aria-hidden="true">${n + 1}</span>
-                ${r.role ? `<p class="st-role">${esc(r.role)}</p>` : ""}
-                ${nameBlock(s, "h2", `data-open="${esc(s.id)}" tabindex="0" role="button"`)}
+                ${r.role ? `<p class="st-role">${esc(t(r.role))}</p>` : ""}
+                <div class="he-wrap" lang="he" dir="rtl">${nameBlock(s, "h2", `data-open="${esc(s.id)}" tabindex="0" role="button"`)}</div>
                 ${(() => { const f = facts(s, p); return f.length ? `<p class="facts">${f.map(x => `<span>${esc(x)}</span>`).join("")}</p>` : `<div class="tag-row">${starTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span></div>`; })()}
-                ${maybeTag(s, p)}${hasWait(s) && !cycleLabel(s) ? `<span class="wait-tag">⏳ ${esc(s.avail)}</span>` : ""}
-                ${firstStep(s) ? `<p class="first-step"><strong>הצעד הראשון:</strong> ${linkify(firstStep(s))}</p>` : `<p class="clamp-2">${esc(shortDesc(s.description, 120))}</p>`}
+                ${maybeTag(s, p)}${hasWait(s) && !cycleLabel(s) ? `<span class="wait-tag" lang="he" dir="rtl">⏳ ${esc(s.avail)}</span>` : ""}
+                ${firstStep(s) ? `<p class="first-step"><strong>${t("הצעד הראשון:")}</strong> <span lang="he" dir="rtl">${linkify(firstStep(s))}</span></p>` : `<p class="clamp-2" lang="he" dir="rtl">${esc(shortDesc(s.description, 120))}</p>`}
                 <div class="actions">
-                  ${s.phone ? `<a class="btn btn-ink" href="${telHref(s.phone)}">${esc(firstPhone(s.phone))}</a>` : ""}
-                  <button class="link-u" type="button" data-open="${esc(s.id)}">לפרטים</button>
+                  ${s.phone ? `<a class="btn btn-ink" href="${telHref(s.phone)}" dir="ltr">${esc(firstPhone(s.phone))}</a>` : ""}
+                  <button class="link-u" type="button" data-open="${esc(s.id)}">${t("לפרטים")}</button>
                 </div>
               </li>`;
             }).join("")}
           </ol>
           <div id="rate-results"></div>
-          <p class="note avail-note">כל המקומות כאן קיימים, אבל לא תמיד יש מקום מיד. כדאי לפנות לשניים או שלושה במקביל, ולשאול בשיחה הראשונה אם יש המתנה.${isForces(p.statuses) ? ` מה שמסומן <span class="maybe-tag">אולי מתאים</span> לא כותב במפורש שהוא פתוח ${forcesWord(p.statuses)}. שווה לשאול.` : ""}</p>` : `<p class="empty">נסו לסמן פחות סינונים, או <a href="#/">לבחור תחום</a>.</p>`}
+          <p class="note avail-note">${t("כל המקומות כאן קיימים, אבל לא תמיד יש מקום מיד. כדאי לפנות לשניים או שלושה במקביל, ולשאול בשיחה הראשונה אם יש המתנה.")}${isForces(p.statuses) ? " " + t("מה שמסומן {tag} לא כותב במפורש שהוא פתוח {who}. שווה לשאול.", { tag: `<span class="maybe-tag">${t("אולי מתאים")}</span>`, who: forcesWord(p.statuses) }) : ""}</p>` : `<p class="empty">${t("נסו לסמן פחות סינונים, או")} <a href="#/">${t("לבחור תחום")}</a>.</p>`}
       </section>
       ${order.length ? `
         <section class="more-areas">
-          <h2 class="section-title">עוד אפשרויות שמתאימות לך, לפי תחום</h2>
+          <h2 class="section-title">${t("עוד אפשרויות שמתאימות לך, לפי תחום")}</h2>
           ${order.map(a => `
             <details class="area-${a}">
-              <summary><span class="dabbed"><span class="display" style="font-size: 26px">${esc(AREAS[a].label)}</span></span><span class="hand">${byArea[a].length} אפשרויות</span></summary>
+              <summary><span class="dabbed"><span class="display" style="font-size: 26px">${esc(areaLabel(a))}</span></span><span class="hand">${t("{n} אפשרויות", { n: byArea[a].length })}</span></summary>
               <div class="grid" data-area-list="${a}"></div>
-              <p class="actions"><a class="link-u" href="#/area?a=${a}">לכל מה שיש ב${esc(AREAS[a].label)} ←</a></p>
+              <p class="actions"><a class="link-u" href="#/area?a=${a}">${esc(t("לכל מה שיש ב{area} ←", { area: areaLabel(a) }))}</a></p>
             </details>`).join("")}
         </section>` : ""}
       <section class="pilot-cta">
-        <p><strong>גרסת ניסיון.</strong> הרשימה טובה כמו מה שכולנו יודעים. מה היה מדויק, מה חסר, איפה נתקעת? <a class="link-u" href="#/pilot">משוב אנונימי · דקה</a></p>
+        <p><strong>${t("גרסת ניסיון.")}</strong> ${t("הרשימה טובה כמו מה שכולנו יודעים. מה היה מדויק, מה חסר, איפה נתקעת?")} <a class="link-u" href="#/pilot">${t("משוב אנונימי · דקה")}</a></p>
       </section>`;
     rateBox(document.getElementById("rate-results"), "results", "r:" + hashStr(JSON.stringify(p)),
       () => Object.assign(profileCtx(p), { stations: first.map(r => r.s.id).join(",") }));
@@ -940,8 +970,11 @@
     "שפלה": "shfela", "בשפלה": "shfela", "רחובות": "shfela", "מודיעין": "shfela", "בית שמש": "shfela", "רמלה": "shfela", "לוד": "shfela" };
   function searchScore(s, words) {
     const name = normQ(s.name);
-    const tags = [catLabel(s.category), ...arr(s.interests).map(x => T.interests[x]), ...arr(s.difficulties).map(x => T.difficulties[x]),
-      ...arr(s.regions).map(x => T.regions[x]), ...arr(s.eligibility).map(x => T.eligibility[x])].join(" ").toLowerCase().replace(/["״׳'`]/g, "");
+    const tags = [T.categories[s.category] ? T.categories[s.category].label : "", ...arr(s.interests).map(x => T.interests[x]), ...arr(s.difficulties).map(x => T.difficulties[x]),
+      ...arr(s.regions).map(x => T.regions[x]), ...arr(s.eligibility).map(x => T.eligibility[x]),
+      // באנגלית: גם התוויות המתורגמות, כדי ש-"surfing" או "PTSD" ימצאו משהו
+      ...(isEn() ? [catLabel(s.category), ...arr(s.interests).map(x => TX("interests", x)), ...arr(s.difficulties).map(x => TX("difficulties", x)), ...arr(s.regions).map(x => TX("regions", x))] : [])
+    ].join(" ").toLowerCase().replace(/["״׳'`]/g, "");
     const body = normQ([s.description, s.location, s.cost_notes, s.how_to_apply].join(" "));
     // מילה קצרה (כמו "ים") נחשבת רק כמילה שלמה, אחרת היא נמצאת בתוך "מילואימניקים"
     // מחפשים רק בתחילת מילה (מותר לפניה ה/ב/ל/ו/מ/כ; בלי ש, אחרת "חווה" נמצא ב"שחווה"), כדי ש"חוות" לא יימצא באמצע מילה אחרת
@@ -969,21 +1002,22 @@
       cost: params.get("cost") || ""
     };
     const opt = (obj, cur, getLabel) => Object.keys(obj).map(k =>
-      `<option value="${k}" ${cur === k ? "selected" : ""}>${esc(getLabel ? getLabel(obj[k]) : obj[k])}</option>`).join("");
+      `<option value="${k}" ${cur === k ? "selected" : ""}>${esc(getLabel ? getLabel(k) : obj[k])}</option>`).join("");
     $main.innerHTML = `
       <section>
-        <h1 class="page-title">חיפוש</h1>
+        <h1 class="page-title">${t("חיפוש")}</h1>
+        ${isEn() ? `<p class="note quiet lang-note">${t("פרטי השירותים כתובים בעברית. אפשר לחפש גם בעברית.")}</p>` : ""}
         <form class="filters" id="filters">
-          <input type="search" name="q" placeholder="חיפוש: גלישה, סוסים, EMDR, מלגה…" value="${esc(st.q)}" aria-label="חיפוש">
-          <select name="cat" aria-label="תחום"><option value="">כל התחומים</option>${opt(T.categories, st.cat, v => v.label)}</select>
-          <select name="el" aria-label="זכאות"><option value="">כל הסטטוסים</option>${opt(T.eligibility, st.el)}</select>
-          <select name="region" aria-label="אזור"><option value="">כל האזורים</option>${opt(T.regions, st.region)}</select>
-          <select name="cost" aria-label="עלות"><option value="">כל העלויות</option>${opt(T.cost, st.cost, v => v.label)}</select>
+          <input type="search" name="q" placeholder="${t("חיפוש: גלישה, סוסים, EMDR, מלגה…")}" value="${esc(st.q)}" aria-label="${t("חיפוש")}">
+          <select name="cat" aria-label="${t("תחום")}"><option value="">${t("כל התחומים")}</option>${opt(T.categories, st.cat, k => TX("categories", k))}</select>
+          <select name="el" aria-label="${t("זכאות")}"><option value="">${t("כל הסטטוסים")}</option>${opt(T.eligibility, st.el, k => TX("eligibility", k))}</select>
+          <select name="region" aria-label="${t("אזור")}"><option value="">${t("כל האזורים")}</option>${opt(T.regions, st.region, k => TX("regions", k))}</select>
+          <select name="cost" aria-label="${t("עלות")}"><option value="">${t("כל העלויות")}</option>${opt(T.cost, st.cost, k => TX("cost", k))}</select>
         </form>
         <p class="count" id="count"></p>
         <div class="grid" id="list"></div>
         <div id="rate-search"></div>
-        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>לא מצאת?</strong><br>להוסיף מקום או שירות</span></a>
+        <a class="add-row" href="#/add"><span class="plus" aria-hidden="true">+</span><span><strong>${t("לא מצאת?")}</strong><br>${t("להוסיף מקום או שירות")}</span></a>
       </section>`;
     const form = document.getElementById("filters");
     let rateTimer = null;
@@ -1009,24 +1043,25 @@
         out = hits.sort((a, b) => b.matched - a.matched || (isSupplier(a.s) ? 1 : 0) - (isSupplier(b.s) ? 1 : 0) || b.total - a.total).map(x => x.s);
       }
       document.getElementById("count").textContent = partial
-        ? `לא מצאנו התאמה לכל המילים. אלה ${out.length} תוצאות שמתאימות לחלק מהן:`
-        : `${out.length} תוצאות`;
+        ? t("לא מצאנו התאמה לכל המילים. אלה {n} תוצאות שמתאימות לחלק מהן:", { n: out.length })
+        : t("{n} תוצאות", { n: out.length });
       const list = document.getElementById("list");
-      if (out.length) pagedList(list, out, s => card(s)); else list.innerHTML = `<p class="empty">אין תוצאות. נסו חיפוש אחר.</p>`;
+      if (out.length) pagedList(list, out, s => card(s)); else list.innerHTML = `<p class="empty">${t("אין תוצאות. נסו חיפוש אחר.")}</p>`;
       // אחרי שהחיפוש נרגע (לא בכל הקשה): שאלה קצרה. בלי תוצאות: הצעה לשלוח את החיפוש, כדי שנחפש ונוסיף
       clearTimeout(rateTimer);
       const raw = (fd.get("q") || "").trim(), rs = document.getElementById("rate-search");
       rs.innerHTML = "";
       if (raw.length >= 2) rateTimer = setTimeout(() => {
+        if (!document.body.contains(rs)) return;   // כבר עברו לעמוד אחר
         const key = "s:" + hashStr(normQ(raw));
         if (out.length) return rateBox(rs, "search", key, () => ({ query: raw, stations: out.slice(0, 5).map(s => s.id).join(",") }));
         if (ratedGet()[key]) return;
-        rs.innerHTML = `<div class="rate-box"><p class="rate-q">לא מצאנו את "${esc(raw)}". לשלוח לנו את החיפוש, כדי שנחפש ונוסיף?</p>
-          <div class="rate-btns"><button type="button" id="send-q">לשלוח, בעילום שם</button></div><p class="rate-msg" role="status" aria-live="polite"></p></div>`;
+        rs.innerHTML = `<div class="rate-box"><p class="rate-q">${esc(t("לא מצאנו את \"{q}\". לשלוח לנו את החיפוש, כדי שנחפש ונוסיף?", { q: raw }))}</p>
+          <div class="rate-btns"><button type="button" id="send-q">${t("לשלוח, בעילום שם")}</button></div><p class="rate-msg" role="status" aria-live="polite"></p></div>`;
         document.getElementById("send-q").onclick = async ev => {
           ev.target.disabled = true; ratedSet(key);
-          rs.querySelector(".rate-msg").textContent = "תודה! נחפש ונוסיף.";
-          try { await Store.submit("rate", { where: "search-empty", rating: "empty", query: raw, v: VERSION }); } catch (e) { /* ignore */ }
+          rs.querySelector(".rate-msg").textContent = t("תודה! נחפש ונוסיף.");
+          try { await Store.submit("rate", { where: "search-empty", rating: "empty", query: raw, v: VERSION, lang: I18N.lang }); } catch (e) { /* ignore */ }
         };
       }, 1500);
       const qs = new URLSearchParams();
@@ -1046,7 +1081,7 @@
     const ALIAS = { "combat-soldiers": "not-recognized", "security-forces": "police", "bereaved": "families", "civilians": "terror-victims" };
     const pick = x => G[x] ? x : (G[ALIAS[x]] ? ALIAS[x] : null);
     const k = pick(params.get("s")) || (prof && prof.statuses.map(pick).find(Boolean)) || keys[0];
-    if (!k) { $main.innerHTML = `<section><h1 class="big-word">מה מגיע לי</h1></section>`; return; }
+    if (!k) { $main.innerHTML = `<section><h1 class="big-word">${t("מה מגיע לי")}</h1></section>`; return; }
     const g = G[k];
     const items = g.sections.flatMap(sec => sec.items.map(it => Object.assign({ section: sec.title }, it)));
     const [key, ...rest] = items;
@@ -1057,7 +1092,7 @@
       const m = t.match(/^(.{12,80}?[.!?])\s+(.+)$/);
       return m ? [m[1].replace(/\.$/, ""), m[2]] : [t, ""];
     };
-    const src = it => it.url ? `<a class="link-u src" href="${esc(it.url)}" target="_blank" rel="noopener">למקור ←</a>` : "";
+    const src = it => it.url ? `<a class="link-u src" href="${esc(it.url)}" target="_blank" rel="noopener">${t("למקור ←")}</a>` : "";
     const fold = it => {
       const [h, b] = split(it.text);
       if (!b) return `<li class="fold-flat">${TICK}<span>${esc(h)} ${src(it)}</span></li>`;
@@ -1069,24 +1104,27 @@
       .slice(0, 5);
     $main.innerHTML = `
       <section class="area-soul">
-        <h1 class="big-word">מה מגיע לי</h1>
-        <nav class="status-pick" aria-label="הסטטוס שלי">
-          ${keys.map(x => `<a href="#/rights?s=${x}" class="${x === k ? "active" : ""}" ${x === k ? 'aria-current="page"' : ""}>${esc(G[x].title)}</a>`).join("")}
+        <h1 class="big-word">${t("מה מגיע לי")}</h1>
+        ${isEn() ? `<p class="note quiet lang-note">${t("המדריכים כתובים בעברית")}</p>` : ""}
+        <nav class="status-pick" aria-label="${t("הסטטוס שלי")}">
+          ${keys.map(x => `<a href="#/rights?s=${x}" class="${x === k ? "active" : ""}" ${x === k ? 'aria-current="page"' : ""}>${esc(isEn() ? TX("eligibility", x) : G[x].title)}</a>`).join("")}
         </nav>
-        <div class="guide-intro"><p class="clamp-2" id="g-intro" role="button" tabindex="0" title="להרחבה">${esc(g.intro)}</p></div>
+        <div class="he-wrap" lang="he" dir="rtl">
+        <div class="guide-intro"><p class="clamp-2" id="g-intro" role="button" tabindex="0" title="${t("להרחבה")}">${esc(g.intro)}</p></div>
         ${key ? `
           <article class="sheet key-right">
-            <span class="area-tag badge">הכי חשוב</span>
+            <span class="area-tag badge">${t("הכי חשוב")}</span>
             <p class="clamp-2" id="key-text" role="button" tabindex="0">${esc(key.text)}</p>
-            <button class="link-u read-more" type="button" id="key-more">לקרוא הכול</button>
+            <button class="link-u read-more" type="button" id="key-more">${t("לקרוא הכול")}</button>
             <p>${src(key)}</p>
           </article>` : ""}
         ${g.sections.map(sec => {
           const its = sec.items.filter(it => it !== g.sections[0].items[0]);
           return its.length ? `<h2 class="section-title">${esc(sec.title)}</h2><ul class="ticks folds">${its.map(fold).join("")}</ul>` : "";
         }).join("")}
-        ${related.length ? `<h2 class="section-title">מי יכול לעזור עם זה</h2><div class="grid">${related.map(s => card(s, null, true)).join("")}</div>` : ""}
-        <p class="note quiet" style="margin-top: 18px">כל סעיף מקושר למקור שלו. זה לא ייעוץ משפטי.</p>
+        </div>
+        ${related.length ? `<h2 class="section-title">${t("מי יכול לעזור עם זה")}</h2><div class="grid">${related.map(s => card(s, null, true)).join("")}</div>` : ""}
+        <p class="note quiet" style="margin-top: 18px">${t("כל סעיף מקושר למקור שלו. זה לא ייעוץ משפטי.")}</p>
       </section>`;
     const intro = document.getElementById("g-intro");
     intro.onclick = () => intro.classList.remove("clamp-2");
@@ -1097,44 +1135,44 @@
 
   function viewHelp() {
     const lines = [
-      { name: "נפש אחת", what: "משרד הביטחון · 24/7 · גם בלי הכרה", num: "*8944" },
-      { name: "ער״ן", what: "24/7 · אפשר גם בוואטסאפ", num: "1201" },
-      { name: "נט״ל", what: "טראומה על רקע לאומי · 24/7", num: "*3362" }
+      { name: t("נפש אחת"), what: t("משרד הביטחון · 24/7 · גם בלי הכרה"), num: "*8944" },
+      { name: t("ער״ן"), what: t("24/7 · אפשר גם בוואטסאפ"), num: "1201" },
+      { name: t("נט״ל"), what: t("טראומה על רקע לאומי · 24/7"), num: "*3362" }
     ];
     $main.innerHTML = `
       <section class="help">
-        <p class="note">אף אחד לא רואה שנכנסת לכאן</p>
-        <h1>לא לבד. אפשר לדבר עכשיו.</h1>
-        <p class="crisis-line">יש מחשבות לפגוע בעצמך? מתקשרים עכשיו לער״ן <a href="tel:1201" dir="ltr">1201</a>, או במצב מסוכן ל-<a href="tel:101" dir="ltr">101</a>.</p>
+        <p class="note">${t("אף אחד לא רואה שנכנסת לכאן")}</p>
+        <h1>${t("לא לבד. אפשר לדבר עכשיו.")}</h1>
+        <p class="crisis-line">${t("יש מחשבות לפגוע בעצמך? מתקשרים עכשיו לער״ן {eran}, או במצב מסוכן ל-{mda}.", { eran: '<a href="tel:1201" dir="ltr">1201</a>', mda: '<a href="tel:101" dir="ltr">101</a>' })}</p>
                 <ul class="lines">
-          ${lines.map(l => `<li><a href="tel:${l.num}"><span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="num">${l.num}</span></a></li>`).join("")}
+          ${lines.map(l => `<li><a href="tel:${l.num}"><span><span class="name">${l.name}</span><span class="what">${l.what}</span></span><span class="num" dir="ltr">${l.num}</span></a></li>`).join("")}
         </ul>
-        <p class="emergency">אם יש סכנה מיידית: מד״א <a href="tel:101">101</a> · משטרה <a href="tel:100">100</a></p>
-        <p class="note">לא נוח לדבר? ער״ן גם בצ'אט כתוב: <a class="link-u" href="https://www.eran.org.il/" target="_blank" rel="noopener">eran.org.il</a></p>
-        <h2 class="section-title">ובינתיים, נושמים ביחד</h2>
+        <p class="emergency">${t("אם יש סכנה מיידית: מד״א {mda} · משטרה {police}", { mda: '<a href="tel:101">101</a>', police: '<a href="tel:100">100</a>' })}</p>
+        <p class="note">${t("לא נוח לדבר? ער״ן גם בצ'אט כתוב:")} <a class="link-u" href="https://www.eran.org.il/" target="_blank" rel="noopener">eran.org.il</a></p>
+        <h2 class="section-title">${t("ובינתיים, נושמים ביחד")}</h2>
         <div class="calm-tabs" role="tablist">
-          <button type="button" role="tab" class="active" data-tab="breath">נשימה</button>
-          <button type="button" role="tab" data-tab="ground">5 חושים</button>
+          <button type="button" role="tab" class="active" data-tab="breath">${t("נשימה")}</button>
+          <button type="button" role="tab" data-tab="ground">${t("5 חושים")}</button>
         </div>
         <div id="tab-breath">
           <div class="breath" aria-hidden="true">
             <span class="blob"></span>
             <svg viewBox="0 0 210 210" fill="none"><path d="M105 8 C 160 6, 204 48, 202 104 C 200 160, 158 204, 104 202 C 50 200, 8 158, 10 104 C 12 52, 54 10, 108 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-            <span class="phase"><span id="phase">שאיפה</span><span class="count" id="count-down">4</span></span>
+            <span class="phase"><span id="phase">${t("שאיפה")}</span><span class="count" id="count-down">4</span></span>
           </div>
-          <p class="breath-how" id="breath-how">שואפים לאט דרך האף, הבטן מתמלאת</p>
-          <p class="note" style="text-align: center">ממשיכים כמה סבבים, עד שהנשימה נרגעת.</p>
+          <p class="breath-how" id="breath-how">${t("שואפים לאט דרך האף, הבטן מתמלאת")}</p>
+          <p class="note" style="text-align: center">${t("ממשיכים כמה סבבים, עד שהנשימה נרגעת.")}</p>
         </div>
         <div id="tab-ground" hidden>
-          <p class="lead">כשהראש מוצף, מחזירים אותו לחדר. עוברים חוש אחרי חוש, לאט, ואפשר להגיד בקול.</p>
+          <p class="lead">${t("כשהראש מוצף, מחזירים אותו לחדר. עוברים חוש אחרי חוש, לאט, ואפשר להגיד בקול.")}</p>
           <div class="ground" id="ground"></div>
         </div>
-        <p class="actions"><a class="link-u" href="#/browse?cat=hotlines">כל קווי הסיוע</a></p>
+        <p class="actions"><a class="link-u" href="#/browse?cat=hotlines">${t("כל קווי הסיוע")}</a></p>
       </section>`;
     // הכיתוב מתחלף עם הנשימה (4 שאיפה, 4 עצירה, 6 נשיפה = 14 שניות, כמו האנימציה)
     // ספירה בתוך העיגול, כדי שיהיה למה להיצמד
     const el = document.getElementById("phase"), cd = document.getElementById("count-down"), how = document.getElementById("breath-how");
-    const seq = [["שאיפה", 4, "שואפים לאט דרך האף, הבטן מתמלאת"], ["עצירה", 4, "מחזיקים רגע, הכתפיים רפויות"], ["נשיפה", 6, "נושפים לאט דרך הפה, כמו דרך קשית"]];
+    const seq = [["שאיפה", 4, "שואפים לאט דרך האף, הבטן מתמלאת"], ["עצירה", 4, "מחזיקים רגע, הכתפיים רפויות"], ["נשיפה", 6, "נושפים לאט דרך הפה, כמו דרך קשית"]].map(([a, n, b]) => [t(a), n, t(b)]);
     let i = 0, n = 0;
     const tick = () => {
       if (!document.body.contains(el)) return;
@@ -1150,16 +1188,16 @@
       ["3", "דברים ששומעים", "מזגן, ציפורים, רכב רחוק, הנשימה של עצמך."],
       ["2", "דברים שמריחים", "אוויר, בגד, קפה, סבון. אפשר לקום ולחפש ריח."],
       ["1", "דבר אחד שטועמים", "לגימת מים, מסטיק, או פשוט הטעם שיש עכשיו בפה."]
-    ];
+    ].map(([n, a, b]) => [n, t(a), t(b)]);
     let g = 0;
     const ground = document.getElementById("ground");
     const drawG = () => {
       ground.innerHTML = g < G.length ? `
         <div class="ground-step"><span class="ground-n">${G[g][0]}</span><div><strong>${G[g][1]}</strong><p>${G[g][2]}</p></div></div>
         <div class="ground-dots" aria-hidden="true">${G.map((_, k) => `<span class="${k <= g ? "on" : ""}"></span>`).join("")}</div>
-        <button type="button" class="btn btn-ink" id="g-next">${g < G.length - 1 ? "הבא" : "סיימתי"}</button>` : `
-        <p class="lead">יפה. עכשיו נשימה אחת ארוכה. אם עדיין קשה, אפשר לדבר עם מישהו, כאן למטה.</p>
-        <button type="button" class="link-u" id="g-next">מההתחלה</button>`;
+        <button type="button" class="btn btn-ink" id="g-next">${g < G.length - 1 ? t("הבא") : t("סיימתי")}</button>` : `
+        <p class="lead">${t("יפה. עכשיו נשימה אחת ארוכה. אם עדיין קשה, אפשר לדבר עם מישהו, כאן למטה.")}</p>
+        <button type="button" class="link-u" id="g-next">${t("מההתחלה")}</button>`;
       document.getElementById("g-next").onclick = () => { g = g < G.length ? g + 1 : 0; drawG(); };
     };
     drawG();
@@ -1178,41 +1216,41 @@
   function viewAdd(params) {
     const pre = AREAS[params.get("a")] ? AREAS[params.get("a")].cats : [];
     const cats = Object.keys(T.categories);
-    const COSTS = { free: "ללא עלות", "mod-funded": "במימון משרד הביטחון", partial: "השתתפות חלקית", paid: "בתשלום" };
+    const COSTS = { free: t("ללא עלות"), "mod-funded": t("במימון משרד הביטחון"), partial: t("השתתפות חלקית"), paid: t("בתשלום") };
     $main.innerHTML = `
       <section class="form-page add-page">
-        <h1 class="page-title">להוסיף מקום</h1>
-        <p class="lead">עמותה, חווה, קבוצה, מטפל/ת דרך גוף, פעילות, מענק. כל דבר שעזר לך או למישהו שאת/ה מכיר/ה. אנחנו בודקים ומוסיפים.</p>
+        <h1 class="page-title">${t("להוסיף מקום")}</h1>
+        <p class="lead">${t("עמותה, חווה, קבוצה, מטפל/ת דרך גוף, פעילות, מענק. כל דבר שעזר לך או למישהו שאת/ה מכיר/ה. אנחנו בודקים ומוסיפים.")}</p>
         <form id="add" class="form" novalidate>
-          <label class="big">איך קוראים לזה? *<input name="name" required maxlength="120" autocomplete="off" placeholder="למשל: חוות הגליל לוחמים"></label>
-          <fieldset><legend>באיזה תחום? אפשר לבחור כמה</legend>
-            <div class="chips small">${cats.map(k => chip("category", k, SHORT_CAT[k] || (k === "hotlines" ? "קו סיוע" : catLabel(k)), pre[0] === k)).join("")}</div>
+          <label class="big">${t("איך קוראים לזה? *")}<input name="name" required maxlength="120" autocomplete="off" placeholder="${t("למשל: חוות הגליל לוחמים")}"></label>
+          <fieldset><legend>${t("באיזה תחום? אפשר לבחור כמה")}</legend>
+            <div class="chips small">${cats.map(k => chip("category", k, SHORT_CAT[k] ? shortCat(k) : (k === "hotlines" ? t("קו סיוע") : catLabel(k)), pre[0] === k)).join("")}</div>
           </fieldset>
-          <label>מה עושים שם, במשפט או שניים<textarea name="what" rows="3" maxlength="800"></textarea></label>
-          <fieldset><legend>איפה?</legend>
-            <div class="chips small">${Object.keys(T.regions).map(k => chip("regions", k, T.regions[k])).join("")}</div>
+          <label>${t("מה עושים שם, במשפט או שניים")}<textarea name="what" rows="3" maxlength="800"></textarea></label>
+          <fieldset><legend>${t("איפה?")}</legend>
+            <div class="chips small">${Object.keys(T.regions).map(k => chip("regions", k, TX("regions", k))).join("")}</div>
           </fieldset>
-          <fieldset><legend>כמה זה עולה? אפשר לבחור כמה, או לדלג אם לא יודעים</legend>
+          <fieldset><legend>${t("כמה זה עולה? אפשר לבחור כמה, או לדלג אם לא יודעים")}</legend>
             <div class="chips small">${Object.keys(COSTS).map(k => chip("cost", k, COSTS[k], false)).join("")}</div>
           </fieldset>
           <div class="row">
-            <label>אתר או עמוד<input name="website" maxlength="300" inputmode="url" placeholder="קישור"></label>
-            <label>טלפון של הגוף<input name="phone" type="tel" maxlength="40"></label>
+            <label>${t("אתר או עמוד")}<input name="website" maxlength="300" inputmode="url" placeholder="${t("קישור")}"></label>
+            <label>${t("טלפון של הגוף")}<input name="phone" type="tel" maxlength="40"></label>
           </div>
-          <fieldset><legend>מה הקשר שלך?</legend>
-            <div class="chips small">${radioChip("relation", "used", "הייתי שם / נעזרתי", true)}${radioChip("relation", "staff", "אני עובד/ת שם")}${radioChip("relation", "heard", "שמעתי עליו")}</div>
+          <fieldset><legend>${t("מה הקשר שלך למקום?")}</legend>
+            <div class="chips small">${radioChip("relation", "used", t("הייתי שם / נעזרתי"), true)}${radioChip("relation", "staff", t("אני עובד/ת שם"))}${radioChip("relation", "heard", t("שמעתי עליו"))}</div>
           </fieldset>
-          <label class="check star-check"><input type="checkbox" name="recommend"> ${STAR} אני ממליץ/ה בחום</label>
-          <details class="fold more-fields"><summary>עוד פרטים (לא חובה)</summary>
-            <label>למי זה מתאים, תנאים, איך נרשמים<textarea name="notes" rows="3" maxlength="800"></textarea></label>
-            <label>כתובת / יישוב<input name="location" maxlength="120"></label>
-            <label>אם נרצה לשאול משהו: טלפון או מייל שלך<input name="contact" maxlength="120"></label>
+          <label class="check star-check"><input type="checkbox" name="recommend"> ${STAR} ${t("אני ממליץ/ה בחום")}</label>
+          <details class="fold more-fields"><summary>${t("עוד פרטים (לא חובה)")}</summary>
+            <label>${t("למי זה מתאים, תנאים, איך נרשמים")}<textarea name="notes" rows="3" maxlength="800"></textarea></label>
+            <label>${t("כתובת / יישוב")}<input name="location" maxlength="120"></label>
+            <label>${t("אם נרצה לשאול משהו: טלפון או מייל שלך")}<input name="contact" maxlength="120"></label>
           </details>
           <div class="ts" id="add-ts"></div>
-          <button class="btn btn-ink btn-wide" type="submit">לשלוח</button>
+          <button class="btn btn-ink btn-wide" type="submit">${t("לשלוח")}</button>
           <p class="form-msg" id="add-msg" role="status"></p>
         </form>
-        <p class="note quiet">לא מפרסמים את הפרטים שלך. מה ששלחת נבדק לפני שמופיע במאגר. <a href="#/privacy">פרטיות</a></p>
+        <p class="note quiet">${t("לא מפרסמים את הפרטים שלך. מה ששלחת נבדק לפני שמופיע במאגר.")} <a href="#/privacy">${t("פרטיות")}</a></p>
       </section>`;
     const f = document.getElementById("add");
     const msg = document.getElementById("add-msg");
@@ -1222,17 +1260,17 @@
       e.preventDefault();
       const fd = new FormData(f);
       const name = (fd.get("name") || "").trim();
-      if (name.length < 2) { msg.textContent = "צריך לפחות שם."; f.name.focus(); return; }
+      if (name.length < 2) { msg.textContent = t("צריך לפחות שם."); f.name.focus(); return; }
       // מרכז גדול: כמה תחומים וכמה מסלולי תשלום. הראשון נשמר כ"ראשי", וכולם נשלחים לבדיקה
-      const data = { name, recommend: !!fd.get("recommend"), regions: fd.getAll("regions"), categories: fd.getAll("category"), costs: fd.getAll("cost") };
+      const data = { name, recommend: !!fd.get("recommend"), regions: fd.getAll("regions"), categories: fd.getAll("category"), costs: fd.getAll("cost"), lang: I18N.lang };
       data.category = data.categories[0] || ""; data.cost = data.costs.length === 1 ? data.costs[0] : "";
       ["what", "website", "phone", "relation", "notes", "location", "contact"].forEach(k => data[k] = (fd.get(k) || "").toString().trim());
       const btn = f.querySelector("button[type=submit]");
       btn.disabled = true;
       try {
         const r = await Store.submit("new", data, { token: token() });
-        f.innerHTML = `<div class="sheet thanks"><h2>תודה!</h2><p>${r.local ? "נשמר במכשיר (מצב הדגמה, עוד אין שרת)." : "קיבלנו. אחרי בדיקה קצרה זה יופיע במאגר לכולם."}</p>
-          <p class="actions"><a class="btn" href="#/add">להוסיף עוד מקום</a> <a class="link-u" href="#/">לדף הבית</a></p></div>`;
+        f.innerHTML = `<div class="sheet thanks"><h2>${t("תודה!")}</h2><p>${r.local ? t("נשמר במכשיר (מצב הדגמה, עוד אין שרת).") : t("קיבלנו. אחרי בדיקה קצרה זה יופיע במאגר לכולם.")}</p>
+          <p class="actions"><a class="btn" href="#/add">${t("להוסיף עוד מקום")}</a> <a class="link-u" href="#/">${t("לדף הבית")}</a></p></div>`;
       } catch (err) {
         btn.disabled = false;
         msg.textContent = sendError(err);
@@ -1245,25 +1283,25 @@
   function viewAbout() {
     $main.innerHTML = `
       <section class="form-page about">
-        <h1 class="page-title">למה אזימוט קיים</h1>
-        <p class="lead">יש הרבה עזרה, אבל קשה למצוא אותה. היא מפוזרת בין אתרים, קבוצות ושמועות, ולא תמיד ברור למי היא מיועדת וכמה מחכים.</p>
-        <p>אזימוט אוסף את כל מה שקיים למקום אחד, כדי שכל אחד ואחת ימצאו את הצעד הבא שמתאים להם.</p>
-        <h2 class="section-title">מה אנחנו בונים, יחד</h2>
+        <h1 class="page-title">${t("למה אזימוט קיים")}</h1>
+        <p class="lead">${t("יש הרבה עזרה, אבל קשה למצוא אותה. היא מפוזרת בין אתרים, קבוצות ושמועות, ולא תמיד ברור למי היא מיועדת וכמה מחכים.")}</p>
+        <p>${t("אזימוט אוסף את כל מה שקיים למקום אחד, כדי שכל אחד ואחת ימצאו את הצעד הבא שמתאים להם.")}</p>
+        <h2 class="section-title">${t("מה אנחנו בונים, יחד")}</h2>
         <ol class="about-list">
-          <li class="glass-sm"><span class="st-node area-sea">1</span><span><strong>כל המקומות במקום אחד.</strong> טיפול, ים, חוות, קבוצות וזכויות.</span></li>
-          <li class="glass-sm"><span class="st-node area-land">2</span><span><strong>מה זמין עכשיו.</strong> איפה מקבלים, כמה מחכים, ולמי זה פתוח.</span></li>
-          <li class="glass-sm"><span class="st-node area-soul">3</span><span><strong>קבוצות של שווים,</strong> קרוב לבית.</span></li>
-          <li class="glass-sm"><span class="st-node area-body">4</span><span><strong>מה עוד חסר, ואיפה,</strong> כדי שאפשר יהיה לבנות את זה.</span></li>
+          <li class="glass-sm"><span class="st-node area-sea">1</span><span>${t("<strong>כל המקומות במקום אחד.</strong> טיפול, ים, חוות, קבוצות וזכויות.")}</span></li>
+          <li class="glass-sm"><span class="st-node area-land">2</span><span>${t("<strong>מה זמין עכשיו.</strong> איפה מקבלים, כמה מחכים, ולמי זה פתוח.")}</span></li>
+          <li class="glass-sm"><span class="st-node area-soul">3</span><span>${t("<strong>קבוצות של שווים,</strong> קרוב לבית.")}</span></li>
+          <li class="glass-sm"><span class="st-node area-body">4</span><span>${t("<strong>מה עוד חסר, ואיפה,</strong> כדי שאפשר יהיה לבנות את זה.")}</span></li>
         </ol>
-        <h2 class="section-title">מי עומד מאחורי זה</h2>
-        <p>רק הרצון לעזור. אזימוט נבנה בהתנדבות. אין פרסומות, אין עלות, ואף אחד לא מרוויח מזה כסף. התשובות שלך נשארות אצלך בטלפון.</p>
-        <p>כל מה שיש כאן הגיע מאנשים שעברו את הדרך ורצו שגם אחרים ימצאו. ככה נמשיך לבנות.</p>
-        <h2 class="section-title">מי נכנס למאגר</h2>
-        <p>כל עמותה, תוכנית, קבוצה או שירות שעוזרים לנכי צה"ל, ללוחמים, למילואימניקים, לשוטרים ולכוחות הביטחון או למשפחות שלהם, ושיש להם דרך פנייה. בודקים כל מקום מול האתר או המקור הרשמי שלו. אף אחד לא משלם כדי להופיע, ואין סדר מועדף בתשלום.</p>
-        <p>"ספק בסל Shikum.Me" הוא עסק פרטי (מכון כושר, סטודיו, בריכה) שמאושר בסל הטיפולים המשלימים של אגף השיקום, ולכן המימון למוכרים מגיע ממשרד הביטחון. ספקים כאלה מסומנים, ובהתאמה האישית מופיעים מעט מהם, ורק קרובים.</p>
-        <h2 class="section-title">יצירת קשר</h2>
-        <p>רוצים להצטרף, לשאול או להציע? אפשר לכתוב ישירות: <a class="link-u" href="mailto:idomayraz@gmail.com" dir="ltr">idomayraz@gmail.com</a></p>
-        <p class="actions"><a class="btn btn-ink" href="#/pilot">לקחת חלק</a> <a class="link-u" href="#/match">למצוא מה מתאים לי</a></p>
+        <h2 class="section-title">${t("מי עומד מאחורי זה")}</h2>
+        <p>${t("רק הרצון לעזור. אזימוט נבנה בהתנדבות. אין פרסומות, אין עלות, ואף אחד לא מרוויח מזה כסף. התשובות שלך נשארות אצלך בטלפון.")}</p>
+        <p>${t("כל מה שיש כאן הגיע מאנשים שעברו את הדרך ורצו שגם אחרים ימצאו. ככה נמשיך לבנות.")}</p>
+        <h2 class="section-title">${t("מי נכנס למאגר")}</h2>
+        <p>${t("כל עמותה, תוכנית, קבוצה או שירות שעוזרים לנכי צה\"ל, ללוחמים, למילואימניקים, לשוטרים ולכוחות הביטחון או למשפחות שלהם, ושיש להם דרך פנייה. בודקים כל מקום מול האתר או המקור הרשמי שלו. אף אחד לא משלם כדי להופיע, ואין סדר מועדף בתשלום.")}</p>
+        <p>${t("\"ספק בסל Shikum.Me\" הוא עסק פרטי (מכון כושר, סטודיו, בריכה) שמאושר בסל הטיפולים המשלימים של אגף השיקום, ולכן המימון למוכרים מגיע ממשרד הביטחון. ספקים כאלה מסומנים, ובהתאמה האישית מופיעים מעט מהם, ורק קרובים.")}</p>
+        <h2 class="section-title">${t("יצירת קשר")}</h2>
+        <p>${t("רוצים להצטרף, לשאול או להציע? אפשר לכתוב ישירות: <a class=\"link-u\" href=\"mailto:idomayraz@gmail.com\" dir=\"ltr\">idomayraz@gmail.com</a>")}</p>
+        <p class="actions">${t("<a class=\"btn btn-ink\" href=\"#/pilot\">לקחת חלק</a> <a class=\"link-u\" href=\"#/match\">למצוא מה מתאים לי</a>")}</p>
       </section>`;
   }
   // ---------- "ההצעות מתאימות לך?": דירוג מהיר במקום שבו נוצרת הדעה ----------
@@ -1280,20 +1318,20 @@
   function rateBox(el, where, key, ctx) {
     if (!el) return;
     if (ratedGet()[key]) { el.innerHTML = ""; return; }
-    const q = where === "results" ? "ההצעות האלה מתאימות לך?" : "מצאת את מה שחיפשת?";
-    const [good, mid, bad] = where === "results" ? ["כן, מדויק", "חלקית", "לא ממש"] : ["כן", "חלקית", "לא"];
+    const q = where === "results" ? t("ההצעות האלה מתאימות לך?") : t("מצאת את מה שחיפשת?");
+    const [good, mid, bad] = (where === "results" ? ["כן, מדויק", "חלקית", "לא ממש"] : ["כן", "חלקית", "לא"]).map(x => t(x));
     el.innerHTML = `<div class="rate-box" role="group" aria-labelledby="rq-${where}">
         <p class="rate-q" id="rq-${where}">${q}</p>
         <div class="rate-btns">
           <button type="button" data-r="good">${good}</button><button type="button" data-r="partial">${mid}</button><button type="button" data-r="bad">${bad}</button>
         </div>
         <form class="rate-more" hidden>
-          <p class="rate-sub">מה לא התאים? אפשר לבחור כמה</p>
-          <div class="chips small">${RATE_REASONS[where].map(r => `<label class="chip"><input type="checkbox" name="r" value="${esc(r)}"><span>${esc(r)}</span></label>`).join("")}</div>
-          <label class="rate-text">מה חיפשת, או מה היה חסר? (לא חובה)<input name="txt" maxlength="300" autocomplete="off"></label>
-          <button class="btn btn-ink" type="submit">לשלוח</button>
+          <p class="rate-sub">${t("מה לא התאים? אפשר לבחור כמה")}</p>
+          <div class="chips small">${RATE_REASONS[where].map(r => `<label class="chip"><input type="checkbox" name="r" value="${esc(r)}"><span>${esc(t(r))}</span></label>`).join("")}</div>
+          <label class="rate-text">${t("מה חיפשת, או מה היה חסר? (לא חובה)")}<input name="txt" maxlength="300" autocomplete="off"></label>
+          <button class="btn btn-ink" type="submit">${t("לשלוח")}</button>
         </form>
-        <p class="rate-note">בעילום שם. נשלח רק סוג ההתאמה, בלי פרטים מזהים. <button type="button" class="link-u" data-r="skip">לא עכשיו</button></p>
+        <p class="rate-note">${t("בעילום שם. נשלח רק סוג ההתאמה, בלי פרטים מזהים.")} <button type="button" class="link-u" data-r="skip">${t("לא עכשיו")}</button></p>
         <p class="rate-msg" role="status" aria-live="polite"></p>
       </div>`;
     const box = el.querySelector(".rate-box"), more = box.querySelector(".rate-more"), msg = box.querySelector(".rate-msg");
@@ -1301,8 +1339,8 @@
     const send = async extra => {
       ratedSet(key);
       box.querySelectorAll("button,input").forEach(x => x.disabled = true);
-      msg.textContent = "תודה! זה בדיוק מה שעוזר לנו לדייק.";
-      try { await Store.submit("rate", Object.assign({ where, rating, v: VERSION }, ctx(), extra || {})); }
+      msg.textContent = t("תודה! זה בדיוק מה שעוזר לנו לדייק.");
+      try { await Store.submit("rate", Object.assign({ where, rating, v: VERSION, lang: I18N.lang }, ctx(), extra || {})); }
       catch (e) { /* לא מטרידים את המשתמש: התודה כבר נאמרה */ }
       setTimeout(() => { more.hidden = true; }, 300);
     };
@@ -1325,54 +1363,54 @@
   // גרסת ניסיון: למה זה קיים, מה עוד חסר, ומשוב בעילום שם
   function viewPilot() {
     const p = loadProfile();
-    const q = (name, label, opts) => `<fieldset class="pilot-q"><legend>${label}</legend><div class="chips">${opts.map(o =>
-      `<label class="chip"><input type="radio" name="${name}" value="${esc(o)}"><span>${esc(o)}</span></label>`).join("")}</div></fieldset>`;
+    const q = (name, label, opts) => `<fieldset class="pilot-q"><legend>${t(label)}</legend><div class="chips">${opts.map(o =>
+      `<label class="chip"><input type="radio" name="${name}" value="${esc(o)}"><span>${esc(t(o))}</span></label>`).join("")}</div></fieldset>`;
     $main.innerHTML = `
       <section class="form-page pilot">
-        <h1 class="page-title">גרסת ניסיון: בונים את זה יחד</h1>
-        <p class="lead">אזימוט נבנה מחוכמת ההמונים. המטרה היא לרכז במקום אחד את כל מה שאנשים יודעים: מה קיים, מה באמת עזר, כמה מחכים, ולמי זה פתוח בפועל.</p>
-        <p>המידע נאסף ממקורות רשמיים ונבדק מולם, אבל דברים משתנים מהר. מה שאתם יודעים מהשטח משלים את מה שאי אפשר למצוא באתרים.</p>
+        <h1 class="page-title">${t("גרסת ניסיון: בונים את זה יחד")}</h1>
+        <p class="lead">${t("אזימוט נבנה מחוכמת ההמונים. המטרה היא לרכז במקום אחד את כל מה שאנשים יודעים: מה קיים, מה באמת עזר, כמה מחכים, ולמי זה פתוח בפועל.")}</p>
+        <p>${t("המידע נאסף ממקורות רשמיים ונבדק מולם, אבל דברים משתנים מהר. מה שאתם יודעים מהשטח משלים את מה שאי אפשר למצוא באתרים.")}</p>
 
-        <h2 class="section-title">מה עוד חסר לנו</h2>
+        <h2 class="section-title">${t("מה עוד חסר לנו")}</h2>
         <ul class="ticks plain">
-          <li>${TICK}<span><strong>זמינות ורשימות המתנה.</strong> השירותים קיימים, אבל בחלק מהמקומות מחכים חודשים, ויש מקומות שקשה מאוד להתקבל אליהם. ברוב הכרטיסים עוד אין לנו את המידע הזה.</span></li>
-          <li>${TICK}<span><strong>למי זה פתוח בפועל.</strong> למשל, שירותים שלא כתוב בהם אם הם פתוחים גם לשוטרים ולכוחות הביטחון. אלה מסומנים "אולי מתאים".</span></li>
-          <li>${TICK}<span><strong>מקומות קטנים ומקומיים</strong> שלא מופיעים ברשימות מסודרות.</span></li>
+          <li>${TICK}<span>${t("<strong>זמינות ורשימות המתנה.</strong> השירותים קיימים, אבל בחלק מהמקומות מחכים חודשים, ויש מקומות שקשה מאוד להתקבל אליהם. ברוב הכרטיסים עוד אין לנו את המידע הזה.")}</span></li>
+          <li>${TICK}<span>${t("<strong>למי זה פתוח בפועל.</strong> למשל, שירותים שלא כתוב בהם אם הם פתוחים גם לשוטרים ולכוחות הביטחון. אלה מסומנים \"אולי מתאים\".")}</span></li>
+          <li>${TICK}<span>${t("<strong>מקומות קטנים ומקומיים</strong> שלא מופיעים ברשימות מסודרות.")}</span></li>
         </ul>
 
-        <h2 class="section-title">לבודקים: מה לנסות</h2>
+        <h2 class="section-title">${t("לבודקים: מה לנסות")}</h2>
         <ol class="pilot-steps">
-          <li>למלא את <a href="#/match">ההתאמה האישית</a>, כמו שאתם.</li>
-          <li>לפתוח את שלוש התחנות הראשונות. הייתם פונים אליהן?</li>
-          <li>לחפש מקום שאתם מכירים. הוא מופיע? הפרטים נכונים?</li>
-          <li>יודעים כמה מחכים במקום מסוים? בכל כרטיס יש "יודעים כמה מחכים כאן?".</li>
-          <li>חסר מקום? כפתור ה-+ למעלה.</li>
-          <li>ולסיום, המשוב כאן למטה.</li>
+          <li>${t("למלא את <a href=\"#/match\">ההתאמה האישית</a>, כמו שאתם.")}</li>
+          <li>${t("לפתוח את שלוש התחנות הראשונות. הייתם פונים אליהן?")}</li>
+          <li>${t("לחפש מקום שאתם מכירים. הוא מופיע? הפרטים נכונים?")}</li>
+          <li>${t("יודעים כמה מחכים במקום מסוים? בכל כרטיס יש \"יודעים כמה מחכים כאן?\".")}</li>
+          <li>${t("חסר מקום? כפתור ה-+ למעלה.")}</li>
+          <li>${t("ולסיום, המשוב כאן למטה.")}</li>
         </ol>
 
-        <h2 class="section-title">לאנשי מקצוע</h2>
+        <h2 class="section-title">${t("לאנשי מקצוע")}</h2>
         <ul class="ticks plain">
-          <li>${TICK}<span><strong>עם מטופלים:</strong> אפשר למלא את ההתאמה יחד בפגישה, או לשלוח את הקישור. התשובות נשמרות רק בטלפון של מי שממלא.</span></li>
-          <li>${TICK}<span><strong>מכירים מקום שחסר,</strong> או יודעים כמה מחכים במקום מסוים? זה הידע שהכי חסר לנו. כפתור ה-+ למעלה, או "יודעים כמה מחכים כאן?" בכל כרטיס.</span></li>
-          <li>${TICK}<span><strong>רוצים לעזור יותר?</strong> לבדוק את המקומות באזור שלכם, או להצטרף לצוות. <a href="mailto:idomayraz@gmail.com">idomayraz@gmail.com</a></span></li>
+          <li>${TICK}<span>${t("<strong>עם מטופלים:</strong> אפשר למלא את ההתאמה יחד בפגישה, או לשלוח את הקישור. התשובות נשמרות רק בטלפון של מי שממלא.")}</span></li>
+          <li>${TICK}<span>${t("<strong>מכירים מקום שחסר,</strong> או יודעים כמה מחכים במקום מסוים? זה הידע שהכי חסר לנו. כפתור ה-+ למעלה, או \"יודעים כמה מחכים כאן?\" בכל כרטיס.")}</span></li>
+          <li>${TICK}<span>${t("<strong>רוצים לעזור יותר?</strong> לבדוק את המקומות באזור שלכם, או להצטרף לצוות. <a href=\"mailto:idomayraz@gmail.com\">idomayraz@gmail.com</a>")}</span></li>
         </ul>
 
-        <h2 class="section-title">משוב בעילום שם</h2>
-        <p class="note"><strong>בעילום שם:</strong> לא שואלים ולא שומרים שם, טלפון, מייל או כתובת IP. בבקשה לא לכתוב פרטים מזהים, לא שלכם ולא של אחרים. שמות של מקומות ותוכניות מצוינים.</p>
+        <h2 class="section-title">${t("משוב בעילום שם")}</h2>
+        <p class="note">${t("<strong>בעילום שם:</strong> לא שואלים ולא שומרים שם, טלפון, מייל או כתובת IP. בבקשה לא לכתוב פרטים מזהים, לא שלכם ולא של אחרים. שמות של מקומות ותוכניות מצוינים.")}</p>
         <form id="pilot-fb" class="form">
           ${q("relevant", "ההצעות הראשונות שקיבלת רלוונטיות אליך?", ["כן", "חלקית", "לא", "לא מילאתי התאמה"])}
           ${q("would", "היית פונה לאחת מהן?", ["כבר פניתי", "כן, אפנה", "אולי", "לא"])}
-          <label>מה חסר? שירות, מקום או נושא שלא מצאת<textarea name="missing" rows="2" maxlength="800"></textarea></label>
-          <label>איפה נתקעת, או מה היה לא ברור?<textarea name="stuck" rows="2" maxlength="800"></textarea></label>
-          <label>מכירים מקום, קבוצה או יוזמה שעזרו לכם או למישהו שאתם מכירים? מה השם ואיך פונים<textarea name="add" rows="2" maxlength="800" placeholder="רק שם המקום ופרטים ציבוריים, בלי שמות של אנשים"></textarea></label>
-          <label>מה ידוע לכם על המתנה וזמינות? איפה מחכים הרבה, איפה קל להיכנס<textarea name="wait" rows="2" maxlength="800"></textarea></label>
-          <label>עוד משהו?<textarea name="more" rows="2" maxlength="800"></textarea></label>
-          ${p ? `<label class="check"><input type="checkbox" name="ctx" checked> לצרף את סוג ההתאמה בלבד (למשל: משטרה, מילואים, אזור), כדי שנבין למי ההצעות לא דייקו. בלי שום פרט מזהה.</label>` : ""}
+          <label>${t("מה חסר? שירות, מקום או נושא שלא מצאת")}<textarea name="missing" rows="2" maxlength="800"></textarea></label>
+          <label>${t("איפה נתקעת, או מה היה לא ברור?")}<textarea name="stuck" rows="2" maxlength="800"></textarea></label>
+          <label>${t("מכירים מקום, קבוצה או יוזמה שעזרו לכם או למישהו שאתם מכירים? מה השם ואיך פונים")}<textarea name="add" rows="2" maxlength="800" placeholder="${t("רק שם המקום ופרטים ציבוריים, בלי שמות של אנשים")}"></textarea></label>
+          <label>${t("מה ידוע לכם על המתנה וזמינות? איפה מחכים הרבה, איפה קל להיכנס")}<textarea name="wait" rows="2" maxlength="800"></textarea></label>
+          <label>${t("עוד משהו?")}<textarea name="more" rows="2" maxlength="800"></textarea></label>
+          ${p ? `<label class="check"><input type="checkbox" name="ctx" checked> ${t("לצרף את סוג ההתאמה בלבד (למשל: משטרה, מילואים, אזור), כדי שנבין למי ההצעות לא דייקו. בלי שום פרט מזהה.")}</label>` : ""}
           <div class="ts" id="pilot-ts"></div>
-          <button class="btn btn-ink">לשלוח משוב</button>
+          <button class="btn btn-ink">${t("לשלוח משוב")}</button>
           <p class="form-msg" role="status"></p>
         </form>
-        <p class="note quiet">רוצים לשתף יותר, או שנחזור אליכם? אפשר דרך <a href="#/privacy">טופס הפנייה</a> בעמוד הפרטיות.</p>
+        <p class="note quiet">${t("רוצים לשתף יותר, או שנחזור אליכם? אפשר דרך <a href=\"#/privacy\">טופס הפנייה</a> בעמוד הפרטיות.")}</p>
       </section>`;
     const f = document.getElementById("pilot-fb");
     let token = null;
@@ -1383,52 +1421,52 @@
       const msg = f.querySelector(".form-msg");
       const data = {};
       ["relevant", "would", "missing", "stuck", "add", "wait", "more"].forEach(k => data[k] = (fd.get(k) || "").trim());
-      if (!Object.values(data).some(Boolean)) { msg.textContent = "אפשר לענות רק על שאלה אחת, אבל צריך לפחות אחת."; return; }
+      if (!Object.values(data).some(Boolean)) { msg.textContent = t("אפשר לענות רק על שאלה אחת, אבל צריך לפחות אחת."); return; }
       if (p && fd.get("ctx")) data.ctx = [...p.statuses, ...p.regions, p.era, p.age].filter(Boolean).join(",");
-      data.more = [data.more, "v" + VERSION].filter(Boolean).join(" · ");
+      data.more = [data.more, "v" + VERSION, isEn() ? "lang:en" : ""].filter(Boolean).join(" · ");
       try {
         const r = await Store.submit("feedback", data, { token: token ? token() : "" });
-        f.innerHTML = `<p class="form-msg">${r && r.local ? "אין חיבור לשרת כרגע, המשוב נשמר במכשיר וננסה שוב." : "תודה רבה! כל תשובה מדייקת את זה למי שיבוא אחריך."}</p>`;
+        f.innerHTML = `<p class="form-msg">${r && r.local ? t("אין חיבור לשרת כרגע, המשוב נשמר במכשיר וננסה שוב.") : t("תודה רבה! כל תשובה מדייקת את זה למי שיבוא אחריך.")}</p>`;
       } catch (err) { msg.textContent = sendError(err); }
     });
   }
   function viewPrivacy() {
     $main.innerHTML = `
       <section class="form-page privacy">
-        <h1 class="page-title">פרטיות</h1>
-        <p class="lead">בקצרה: אין הרשמה, אין פרסומות, ואין מעקב. אנחנו שומרים רק מה שבחרת לשלוח, ורק כדי שהאתר יעבוד.</p>
+        <h1 class="page-title">${t("פרטיות")}</h1>
+        <p class="lead">${t("בקצרה: אין הרשמה, אין פרסומות, ואין מעקב. אנחנו שומרים רק מה שבחרת לשלוח, ורק כדי שהאתר יעבוד.")}</p>
 
-        <h2 class="section-title">מה נשאר רק אצלך במכשיר</h2>
-        <p>התשובות לשאלון, הבחירה במצב עמום, ואילו שירותים המלצת עליהם. הכול נשמר בדפדפן או באפליקציה שלך בלבד, ולא נשלח אלינו. אפשר למחוק את זה בניקוי נתוני האתר בדפדפן.</p>
+        <h2 class="section-title">${t("מה נשאר רק אצלך במכשיר")}</h2>
+        <p>${t("התשובות לשאלון, הבחירה במצב עמום, ואילו שירותים המלצת עליהם. הכול נשמר בדפדפן או באפליקציה שלך בלבד, ולא נשלח אלינו. אפשר למחוק הכול בכל רגע בעמוד <a href=\"#/settings\">ההגדרות</a>.")}</p>
 
-        <h2 class="section-title">מה מגיע אלינו, ורק כשבחרת לשלוח</h2>
+        <h2 class="section-title">${t("מה מגיע אלינו, ורק כשבחרת לשלוח")}</h2>
         <ul class="ticks plain">
-          <li>${TICK}<span><strong>"שיחזרו אליי":</strong> השם, הטלפון או המייל, ומה שכתבת. משמש רק כדי שהגוף שבחרת יחזור אליך. אנחנו מעבירים לגוף הזה בלבד, ולא לאף אחד אחר.</span></li>
-          <li>${TICK}<span><strong>הוספת מקום ותיקון פרטים:</strong> מה שכתבת בטופס. פרטי קשר שלך הם לא חובה, ומשמשים רק אם נצטרך לשאול משהו. לא מתפרסמים.</span></li>
-          <li>${TICK}<span><strong>"פנית? איך הלך?":</strong> הטלפון שלך בלבד זוכר לאיזה מקום פנית (התקשרת, כתבת או ביקשת שיחזרו אליך), כדי לשאול אחרי שבועיים איך זה הלך. זה לא נשלח לשום מקום. אם בחרת לענות, נשלחים רק התשובה ושם המקום, בעילום שם.</span></li>
-          <li>${TICK}<span><strong>משוב, דירוג מהיר ("ההצעות מתאימות לך?") ודיווח על המתנה:</strong> בעילום שם. בדירוג נשלחים גם סוג ההתאמה והמקומות שהוצעו, ובחיפוש בלי תוצאות נשלח החיפוש עצמו, רק אם לחצת "לשלוח". רק התשובות שבחרת, בלי שם, טלפון או מייל. אם סימנת, מצורף גם סוג ההתאמה (למשל "משטרה, צפון"), בלי שום פרט מזהה.</span></li>
-          <li>${TICK}<span><strong>"ממליץ/ה":</strong> רק איזה שירות, וקוד אקראי של המכשיר כדי שלא ייספר פעמיים. בלי שם ובלי פרטים.</span></li>
+          <li>${TICK}<span>${t("<strong>\"שיחזרו אליי\":</strong> השם, הטלפון או המייל, ומה שכתבת. משמש רק כדי שהגוף שבחרת יחזור אליך. אנחנו מעבירים לגוף הזה בלבד, ולא לאף אחד אחר.")}</span></li>
+          <li>${TICK}<span>${t("<strong>הוספת מקום ותיקון פרטים:</strong> מה שכתבת בטופס. פרטי קשר שלך הם לא חובה, ומשמשים רק אם נצטרך לשאול משהו. לא מתפרסמים.")}</span></li>
+          <li>${TICK}<span>${t("<strong>\"פנית? איך הלך?\":</strong> הטלפון שלך בלבד זוכר לאיזה מקום פנית (התקשרת, כתבת או ביקשת שיחזרו אליך), כדי לשאול אחרי שבועיים איך זה הלך. זה לא נשלח לשום מקום. אם בחרת לענות, נשלחים רק התשובה ושם המקום, בעילום שם.")}</span></li>
+          <li>${TICK}<span>${t("<strong>משוב, דירוג מהיר (\"ההצעות מתאימות לך?\") ודיווח על המתנה:</strong> בעילום שם. בדירוג נשלחים גם סוג ההתאמה והמקומות שהוצעו, ובחיפוש בלי תוצאות נשלח החיפוש עצמו, רק אם לחצת \"לשלוח\". רק התשובות שבחרת, בלי שם, טלפון או מייל. אם סימנת, מצורף גם סוג ההתאמה (למשל \"משטרה, צפון\"), בלי שום פרט מזהה.")}</span></li>
+          <li>${TICK}<span>${t("<strong>\"ממליץ/ה\":</strong> רק איזה שירות, וקוד אקראי של המכשיר כדי שלא ייספר פעמיים. בלי שם ובלי פרטים.")}</span></li>
         </ul>
 
-        <h2 class="section-title">מי רואה, ולכמה זמן</h2>
-        <p>רק מנהל/ת האתר, בעמוד ניהול שנעול בסיסמה. פניות "שיחזרו אליי" נמחקות אוטומטית אחרי חצי שנה. אנחנו לא מוכרים מידע, לא משתמשים בו לפרסום, ולא משתפים אותו.</p>
+        <h2 class="section-title">${t("מי רואה, ולכמה זמן")}</h2>
+        <p>${t("רק מנהל/ת האתר, בעמוד ניהול שנעול בסיסמה. פניות \"שיחזרו אליי\" נמחקות אוטומטית אחרי חצי שנה. אנחנו לא מוכרים מידע, לא משתמשים בו לפרסום, ולא משתפים אותו.")}</p>
 
-        <h2 class="section-title">טכני</h2>
-        <p>האתר מתארח ב-Cloudflare, והמידע שנשלח נשמר שם. כתובת ה-IP לא נשמרת: לצורך הגבלת הודעות ספאם שומרים רק קוד מוצפן שמתחלף כל יום. בטפסים יש בדיקה של Cloudflare (Turnstile) שמוודאת שלא מדובר ברובוט. הגופנים נטענים מ-Google Fonts. אין כלי מדידה, אין עוגיות פרסום.</p>
+        <h2 class="section-title">${t("טכני")}</h2>
+        <p>${t("האתר מתארח ב-Cloudflare, והמידע שנשלח נשמר שם. כתובת ה-IP לא נשמרת: לצורך הגבלת הודעות ספאם שומרים רק קוד מוצפן שמתחלף כל יום. בטפסים יש בדיקה של Cloudflare (Turnstile) שמוודאת שלא מדובר ברובוט. הגופנים נטענים מ-Google Fonts. אין כלי מדידה, אין עוגיות פרסום.")}</p>
 
-        <h2 class="section-title">חשוב לדעת</h2>
-        <p>המידע באתר נאסף ממקורות פתוחים ונבדק מול האתרים הרשמיים כשאפשר. הוא לא תחליף לייעוץ רפואי, נפשי או משפטי. כדאי לוודא תנאים ועלויות ישירות מול הגוף. אם יש סכנה מיידית: מד״א <a href="tel:101">101</a>, משטרה <a href="tel:100">100</a>, ובכל שעה <a href="#/help">עזרה עכשיו</a>.</p>
+        <h2 class="section-title">${t("חשוב לדעת")}</h2>
+        <p>${t("המידע באתר נאסף ממקורות פתוחים ונבדק מול האתרים הרשמיים כשאפשר. הוא לא תחליף לייעוץ רפואי, נפשי או משפטי. כדאי לוודא תנאים ועלויות ישירות מול הגוף. אם יש סכנה מיידית: מד״א <a href=\"tel:101\">101</a>, משטרה <a href=\"tel:100\">100</a>, ובכל שעה <a href=\"#/help\">עזרה עכשיו</a>.")}</p>
 
-        <h2 class="section-title">לבקש מחיקה או לשאול</h2>
-        <p>שלחת פנייה ורוצה שנמחק אותה? כתבו כאן מה שלחתם ומתי (בערך), ואיך לחזור אליכם אם צריך.</p>
+        <h2 class="section-title">${t("לבקש מחיקה או לשאול")}</h2>
+        <p>${t("שלחת פנייה ורוצה שנמחק אותה? כתבו כאן מה שלחתם ומתי (בערך), ואיך לחזור אליכם אם צריך.")}</p>
         <form id="contact" class="form">
-          <label>מה לבקש<textarea name="text" rows="3" maxlength="1000" required></textarea></label>
-          <label>טלפון או מייל (לא חובה)<input name="contact" maxlength="120"></label>
+          <label>${t("מה לבקש")}<textarea name="text" rows="3" maxlength="1000" required></textarea></label>
+          <label>${t("טלפון או מייל (לא חובה)")}<input name="contact" maxlength="120"></label>
           <div class="ts" id="contact-ts"></div>
-          <button class="btn btn-ink" type="submit">לשלוח</button>
+          <button class="btn btn-ink" type="submit">${t("לשלוח")}</button>
           <p class="form-msg" role="status"></p>
         </form>
-        <p class="note quiet">עודכן: אוקטובר 2026</p>
+        <p class="note quiet">${t("עודכן: אוקטובר 2026")}</p>
       </section>`;
     const f = document.getElementById("contact");
     let token = () => "";
@@ -1437,10 +1475,10 @@
       e.preventDefault();
       const fd = new FormData(f), msg = f.querySelector(".form-msg");
       const text = (fd.get("text") || "").trim();
-      if (text.length < 3) { msg.textContent = "כתבו כמה מילים."; return; }
+      if (text.length < 3) { msg.textContent = t("כתבו כמה מילים."); return; }
       try {
         await Store.submit("fix", { text, contact: (fd.get("contact") || "").trim() }, { service_id: "_contact", token: token() });
-        f.innerHTML = `<p class="form-msg">התקבל. נטפל בזה בהקדם.</p>`;
+        f.innerHTML = `<p class="form-msg">${t("התקבל. נטפל בזה בהקדם.")}</p>`;
       } catch (err) { msg.textContent = sendError(err); }
     });
   }
@@ -1486,15 +1524,15 @@
     const s = SERVICES.find(x => x.id === c.id);
     const OUT = [["started", "התקבלתי / התחלתי"], ["waiting", "אני ברשימת המתנה"], ["no-answer", "לא חזרו אליי"], ["not-fit", "לא התאים לי"], ["not-yet", "עוד לא פניתי בפועל"]];
     el.innerHTML = `<div class="rate-box followup-box" role="group" aria-labelledby="fu-q">
-        <p class="rate-q" id="fu-q">לפני כשבועיים פנית ל<strong>${esc(splitName(s.name).main)}</strong>. איך זה הלך?</p>
-        <div class="rate-btns">${OUT.map(([k, l]) => `<button type="button" data-o="${k}">${l}</button>`).join("")}</div>
+        <p class="rate-q" id="fu-q">${t("לפני כשבועיים פנית ל{name}. איך זה הלך?", { name: `<strong lang="he" dir="rtl">${esc(splitName(s.name).main)}</strong>` })}</p>
+        <div class="rate-btns">${OUT.map(([k, l]) => `<button type="button" data-o="${k}">${esc(t(l))}</button>`).join("")}</div>
         <form class="rate-more" hidden>
-          <p class="rate-sub">כמה זמן לקח מהפנייה? (לא חובה)</p>
-          <div class="chips small">${WAIT_OPTS.slice(0, 5).map(w => `<label class="chip"><input type="radio" name="w" value="${esc(w)}"><span>${esc(w)}</span></label>`).join("")}</div>
-          <label class="rate-text">משהו שיעזור לבא אחריך? (לא חובה)<input name="txt" maxlength="300" autocomplete="off"></label>
-          <button class="btn btn-ink" type="submit">לשלוח</button>
+          <p class="rate-sub">${t("כמה זמן לקח מהפנייה? (לא חובה)")}</p>
+          <div class="chips small">${WAIT_OPTS.slice(0, 5).map(w => `<label class="chip"><input type="radio" name="w" value="${esc(w)}"><span>${esc(t(w))}</span></label>`).join("")}</div>
+          <label class="rate-text">${t("משהו שיעזור לבא אחריך? (לא חובה)")}<input name="txt" maxlength="300" autocomplete="off"></label>
+          <button class="btn btn-ink" type="submit">${t("לשלוח")}</button>
         </form>
-        <p class="rate-note">בעילום שם. רק הטלפון שלך זוכר שפנית. <button type="button" class="link-u" data-o="later">לא עכשיו</button> · <button type="button" class="link-u" data-o="never">לא לשאול</button></p>
+        <p class="rate-note">${t("בעילום שם. רק הטלפון שלך זוכר שפנית.")} <button type="button" class="link-u" data-o="later">${t("לא עכשיו")}</button> · <button type="button" class="link-u" data-o="never">${t("לא לשאול")}</button></p>
         <p class="rate-msg" role="status" aria-live="polite"></p>
       </div>`;
     const box = el.querySelector(".followup-box"), more = box.querySelector(".rate-more"), msg = box.querySelector(".rate-msg");
@@ -1503,8 +1541,8 @@
     const send = async extra => {
       mark({ asked: true });
       box.querySelectorAll("button,input").forEach(x => x.disabled = true);
-      msg.textContent = "תודה! זה המידע הכי חשוב שיש לנו.";
-      try { await Store.submit("rate", Object.assign({ where: "followup", rating: outcome, stations: c.id, v: VERSION }, extra || {})); } catch (e) { /* ignore */ }
+      msg.textContent = t("תודה! זה המידע הכי חשוב שיש לנו.");
+      try { await Store.submit("rate", Object.assign({ where: "followup", rating: outcome, stations: c.id, v: VERSION, lang: I18N.lang }, extra || {})); } catch (e) { /* ignore */ }
       more.hidden = true;
     };
     box.addEventListener("click", e => {
@@ -1530,71 +1568,72 @@
     if (!s) return;
     const prof = loadProfile();
     const links = [];
-    if (s.phone && isMobile(s.phone)) links.push(`<a class="link-u" href="${waHref(s.phone)}" target="_blank" rel="noopener">וואטסאפ</a>`);
-    if (s.email) links.push(`<a class="link-u" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך אזימוט: " + s.name)}">מייל</a>`);
-    if (s.website) links.push(`<a class="link-u" href="${esc(safeUrl(s.website))}" target="_blank" rel="noopener">לאתר</a>`);
-    links.push(`<button class="link-u" type="button" id="lead-toggle">שיחזרו אליי</button>`);
-    const who = arr(s.eligibility).map(k => T.eligibility[k]).filter(Boolean);
-    const helps = arr(s.difficulties).map(k => T.difficulties[k]).filter(Boolean);
+    if (s.phone && isMobile(s.phone)) links.push(`<a class="link-u" href="${waHref(s.phone)}" target="_blank" rel="noopener">${t("וואטסאפ")}</a>`);
+    if (s.email) links.push(`<a class="link-u" href="mailto:${esc(s.email)}?subject=${encodeURIComponent("פנייה דרך אזימוט: " + s.name)}">${t("מייל")}</a>`);
+    if (s.website) links.push(`<a class="link-u" href="${esc(safeUrl(s.website))}" target="_blank" rel="noopener">${t("לאתר")}</a>`);
+    links.push(`<button class="link-u" type="button" id="lead-toggle">${t("שיחזרו אליי")}</button>`);
+    const who = arr(s.eligibility).map(k => TX("eligibility", k)).filter(Boolean);
+    const helps = arr(s.difficulties).map(k => TX("difficulties", k)).filter(Boolean);
     $modalBody.innerHTML = `
       <div class="svc">
         <div class="tag-row" style="margin-top: 12px">
           ${areaTag(s)}<span class="cost-tag">${esc(costLabel(s.cost))}</span>
-          <span class="verify">${s.verified_at ? "✓ נבדק מול המקור ב-" + esc(heDate(s.verified_at)) : "עוד לא נבדק. כדאי לוודא איתם."}</span>
+          <span class="verify">${s.verified_at ? t("✓ נבדק מול המקור ב-{d}", { d: esc(heDate(s.verified_at)) }) : t("עוד לא נבדק. כדאי לוודא איתם.")}</span>
         </div>
-        <h2 id="modal-title">${nameHtml(s.name)}</h2>
-        ${starred(s) ? `<p class="community">${STAR}<span><strong>${s.community_recs} המלצות בקבוצת הנכים והלוחמים</strong>${s.community_note ? " · " + esc(s.community_note) : ""}</span></p>` : ""}
-        <p class="desc clamp-3" id="svc-desc">${esc(s.description)}</p>
-        ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">לקרוא עוד</button>` : ""}
-        ${s.cost_notes ? `<p class="desc"><span class="highlight area-${areaOf(s.category)}">${linkify(s.cost_notes)}</span></p>` : ""}
-        ${prof && policeUnsure(s, prof.statuses) ? `<p class="callout maybe-callout"><strong>אולי מתאים, לא בטוח שפתוח ${forcesWord(prof.statuses)}.</strong> לא כתוב כאן במפורש שגם ${prof.statuses.includes("police") ? "שוטרים ושוטרות" : "אנשי כוחות הביטחון"} יכולים להצטרף. ייתכן שכן: כדאי לשאול כבר בשיחה הראשונה.</p>` : ""}
+        <h2 id="modal-title" lang="he" dir="rtl">${nameHtml(s.name)}</h2>
+        ${isEn() ? `<p class="note quiet lang-note">${t("פרטי השירותים כתובים בעברית")}</p>` : ""}
+        ${starred(s) ? `<p class="community">${STAR}<span><strong>${t("{n} המלצות בקבוצת הנכים והלוחמים", { n: s.community_recs })}</strong>${s.community_note ? ` · <span lang="he" dir="rtl">${esc(s.community_note)}</span>` : ""}</span></p>` : ""}
+        <p class="desc clamp-3" id="svc-desc" lang="he" dir="rtl">${esc(s.description)}</p>
+        ${(s.description || "").length > 150 ? `<button class="link-u read-more" type="button" id="svc-more">${t("לקרוא עוד")}</button>` : ""}
+        ${s.cost_notes ? `<p class="desc" lang="he" dir="rtl"><span class="highlight area-${areaOf(s.category)}">${linkify(s.cost_notes)}</span></p>` : ""}
+        ${prof && policeUnsure(s, prof.statuses) ? `<p class="callout maybe-callout"><strong>${esc(t("אולי מתאים, לא בטוח שפתוח {who}.", { who: forcesWord(prof.statuses) }))}</strong> ${prof.statuses.includes("police") ? t("לא כתוב כאן במפורש שגם שוטרים ושוטרות יכולים להצטרף. ייתכן שכן: כדאי לשאול כבר בשיחה הראשונה.") : t("לא כתוב כאן במפורש שגם אנשי כוחות הביטחון יכולים להצטרף. ייתכן שכן: כדאי לשאול כבר בשיחה הראשונה.")}</p>` : ""}
         <div class="avail-box">
           ${cycleLabel(s) ? `<p><strong>📅 ${esc(cycleLabel(s))}</strong></p>` : ""}
-          ${s.avail ? `<p><strong>⏳ זמינות והמתנה:</strong> ${esc(s.avail)} <span class="quiet">(${s.avail_src === "site" ? "לפי האתר שלהם" : "לפי דיווחים של אנשים בקהילה"})</span></p>`
-            : `<p class="quiet">אין לנו עדיין מידע על המתנה או על כמה קל להתקבל. כדאי לשאול בשיחה הראשונה.</p>`}
-          <button class="link-u" type="button" id="wait-toggle">יודעים כמה מחכים כאן? לשתף, בעילום שם</button>
+          ${s.avail ? `<p><strong>${t("⏳ זמינות והמתנה:")}</strong> <span lang="he" dir="rtl">${esc(s.avail)}</span> <span class="quiet">(${s.avail_src === "site" ? t("לפי האתר שלהם") : t("לפי דיווחים של אנשים בקהילה")})</span></p>`
+            : `<p class="quiet">${t("אין לנו עדיין מידע על המתנה או על כמה קל להתקבל. כדאי לשאול בשיחה הראשונה.")}</p>`}
+          <button class="link-u" type="button" id="wait-toggle">${t("יודעים כמה מחכים כאן? לשתף, בעילום שם")}</button>
           <form id="wait" class="form lead-form" hidden>
-            <fieldset class="chips">${WAIT_OPTS.map((o, i) => `<label class="chip"><input type="radio" name="w" value="${esc(o)}"${i ? "" : " required"}><span>${esc(o)}</span></label>`).join("")}</fieldset>
-            <label>משהו שכדאי לדעת? (לא חובה)<textarea name="note" rows="2" maxlength="400" placeholder="למשל: חזרו אליי אחרי שבוע, צריך הפניה מרופא"></textarea></label>
-            <p class="note">בעילום שם: לא שואלים ולא שומרים שם, טלפון או מייל. אחרי בדיקה זה יופיע כאן לכולם.</p>
+            <fieldset class="chips">${WAIT_OPTS.map((o, i) => `<label class="chip"><input type="radio" name="w" value="${esc(o)}"${i ? "" : " required"}><span>${esc(t(o))}</span></label>`).join("")}</fieldset>
+            <label>${t("משהו שכדאי לדעת? (לא חובה)")}<textarea name="note" rows="2" maxlength="400" placeholder="${t("למשל: חזרו אליי אחרי שבוע, צריך הפניה מרופא")}"></textarea></label>
+            <p class="note">${t("בעילום שם: לא שואלים ולא שומרים שם, טלפון או מייל. אחרי בדיקה זה יופיע כאן לכולם.")}</p>
             <div class="ts" id="wait-ts"></div>
-            <button class="btn btn-ink">לשתף</button>
+            <button class="btn btn-ink">${t("לשתף")}</button>
             <p class="form-msg" role="status"></p>
           </form>
         </div>
         <div class="contact">
-          ${s.phone ? `<a class="btn btn-ink btn-wide" href="${telHref(s.phone)}">להתקשר <span dir="ltr">${esc(firstPhone(s.phone))}</span></a>` : ""}
+          ${s.phone ? `<a class="btn btn-ink btn-wide" href="${telHref(s.phone)}">${t("להתקשר")} <span dir="ltr">${esc(firstPhone(s.phone))}</span></a>` : ""}
           <div class="links">${links.join("")}</div>
-          ${!s.phone && !s.email && !s.website ? `<p class="note">אין לנו עדיין טלפון או אתר ישיר. אפשר לבקש שיחזרו אליך, או לחפש את השם ברשת. מכירים את הפרטים? <button class="link-u" type="button" id="fix-toggle2">להוסיף</button></p>` : ""}
+          ${!s.phone && !s.email && !s.website ? `<p class="note">${t("אין לנו עדיין טלפון או אתר ישיר. אפשר לבקש שיחזרו אליך, או לחפש את השם ברשת. מכירים את הפרטים?")} <button class="link-u" type="button" id="fix-toggle2">${t("להוסיף")}</button></p>` : ""}
         </div>
-        ${who.length ? `<p class="for-whom"><strong>למי:</strong> ${esc(who.slice(0, 4).join(" · "))}${/לנשים/.test(s.name) ? " · לנשים בלבד" : ""}</p>` : ""}
+        ${who.length ? `<p class="for-whom"><strong>${t("למי:")}</strong> ${esc(who.slice(0, 4).join(" · "))}${/לנשים/.test(s.name) ? " · " + t("לנשים בלבד") : ""}</p>` : ""}
         <div class="folds-svc">
-          ${s.how_to_apply ? `<details class="fold" open><summary>איך מתחילים</summary><p>${linkify(s.how_to_apply)}</p></details>` : ""}
-          ${helps.length ? `<details class="fold"><summary>במה זה עוזר</summary><p>${esc(helps.join(" · "))}</p></details>` : ""}
-          ${s.location || arr(s.regions).length ? `<details class="fold"><summary>איפה</summary><p>${esc([s.location, arr(s.regions).map(r => T.regions[r]).join(", ")].filter(Boolean).join(" · "))}</p></details>` : ""}
+          ${s.how_to_apply ? `<details class="fold" open><summary>${t("איך מתחילים")}</summary><p lang="he" dir="rtl">${linkify(s.how_to_apply)}</p></details>` : ""}
+          ${helps.length ? `<details class="fold"><summary>${t("במה זה עוזר")}</summary><p>${esc(helps.join(" · "))}</p></details>` : ""}
+          ${s.location || arr(s.regions).length ? `<details class="fold"><summary>${t("איפה")}</summary><p>${s.location ? `<span lang="he" dir="rtl">${esc(s.location)}</span>` : ""}${s.location && arr(s.regions).length ? " · " : ""}${esc(arr(s.regions).map(r => TX("regions", r)).join(", "))}</p></details>` : ""}
         </div>
         <div class="svc-community">
-          <button class="chip-btn" type="button" id="rec-btn" aria-pressed="${Store.hasRecommended(s.id)}">${STAR}<span>${Store.hasRecommended(s.id) ? "המלצת. תודה" : "ממליץ/ה"}</span></button>
-          <button class="chip-btn" type="button" id="fix-toggle">משהו לא נכון? / להוסיף פרט</button>
+          <button class="chip-btn" type="button" id="rec-btn" aria-pressed="${Store.hasRecommended(s.id)}">${STAR}<span>${Store.hasRecommended(s.id) ? t("המלצת. תודה") : t("ממליץ/ה")}</span></button>
+          <button class="chip-btn" type="button" id="fix-toggle">${t("משהו לא נכון? / להוסיף פרט")}</button>
         </div>
         <form id="fix" class="form lead-form" hidden>
-          <label>מה לא נכון, או מה כדאי להוסיף?<textarea name="text" rows="3" maxlength="1000" required placeholder="למשל: הטלפון השתנה, יש המתנה של חודשיים, זה פתוח גם למי שלא מוכר"></textarea></label>
-          <label>אם נרצה לשאול משהו: טלפון או מייל (לא חובה)<input name="contact" maxlength="120"></label>
+          <label>${t("מה לא נכון, או מה כדאי להוסיף?")}<textarea name="text" rows="3" maxlength="1000" required placeholder="${t("למשל: הטלפון השתנה, יש המתנה של חודשיים, זה פתוח גם למי שלא מוכר")}"></textarea></label>
+          <label>${t("אם נרצה לשאול משהו: טלפון או מייל (לא חובה)")}<input name="contact" maxlength="120"></label>
           <div class="ts" id="fix-ts"></div>
-          <button class="btn btn-ink">לשלוח</button>
+          <button class="btn btn-ink">${t("לשלוח")}</button>
           <p class="form-msg" role="status"></p>
         </form>
         <form id="lead" class="form lead-form" hidden>
-          <p class="note">נעביר לגוף, והם יחזרו אליך. לא חובה לספר יותר ממה שנוח.</p>
-          <label>שם<input name="name" required maxlength="80"></label>
-          <label>טלפון או מייל<input name="contact" required maxlength="120"></label>
-          <label>משהו שחשוב שידעו? (לא חובה)<textarea name="message" rows="2" maxlength="600"></textarea></label>
-          <label class="check"><input type="checkbox" name="consent" required> אני מסכים/ה שהפרטים יועברו ל${esc(s.name)} רק כדי ליצור איתי קשר. <a href="#/privacy">פרטיות</a></label>
-          <button class="btn btn-ink">לשלוח</button>
+          <p class="note">${t("נעביר לגוף, והם יחזרו אליך. לא חובה לספר יותר ממה שנוח.")}</p>
+          <label>${t("שם")}<input name="name" required maxlength="80"></label>
+          <label>${t("טלפון או מייל")}<input name="contact" required maxlength="120"></label>
+          <label>${t("משהו שחשוב שידעו? (לא חובה)")}<textarea name="message" rows="2" maxlength="600"></textarea></label>
+          <label class="check"><input type="checkbox" name="consent" required> ${t("אני מסכים/ה שהפרטים יועברו ל{name} רק כדי ליצור איתי קשר.", { name: `<span lang="he" dir="rtl">${esc(s.name)}</span>` })} <a href="#/privacy">${t("פרטיות")}</a></label>
+          <button class="btn btn-ink">${t("לשלוח")}</button>
           <p class="form-msg" role="status"></p>
         </form>
-        <p class="note quiet card-help">קשה עכשיו? <a href="#/help">עזרה עכשיו</a> · ער״ן <a href="tel:1201" dir="ltr">1201</a></p>
-        ${s.source_url ? `<p class="source">מקור: <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a></p>` : ""}
+        <p class="note quiet card-help">${t("קשה עכשיו?")} <a href="#/help">${t("עזרה עכשיו")}</a> · ${t("ער״ן")} <a href="tel:1201" dir="ltr">1201</a></p>
+        ${s.source_url ? `<p class="source">${t("מקור:")} <a href="${esc(safeUrl(s.source_url))}" target="_blank" rel="noopener">${esc(s.source_url.replace(/^https?:\/\//, "").slice(0, 60))}</a></p>` : ""}
       </div>`;
     $modal.hidden = false;
     document.body.classList.add("no-scroll");
@@ -1623,10 +1662,10 @@
         }, { service_id: s.id, token: leadToken ? leadToken() : "" });
         f.querySelectorAll("input,textarea,button").forEach(x => x.disabled = true);
         rememberContact(s.id);
-        msg.textContent = r && r.local ? "לא הצלחנו לשלוח עכשיו (אין חיבור לשרת). הכי בטוח להתקשר או לכתוב להם ישירות."
-          : "הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.";
+        msg.textContent = r && r.local ? t("לא הצלחנו לשלוח עכשיו (אין חיבור לשרת). הכי בטוח להתקשר או לכתוב להם ישירות.")
+          : t("הפנייה נשלחה. אם לא חזרו אליך תוך כמה ימים, אפשר גם להתקשר ישירות.");
       } catch (err) {
-        msg.textContent = sendError(err) + " אפשר גם להתקשר ישירות.";
+        msg.textContent = sendError(err) + " " + t("אפשר גם להתקשר ישירות.");
       }
     });
     // המלצה בלחיצה אחת
@@ -1638,8 +1677,8 @@
         await Store.recommend(s.id);
         s.community_recs = (Number(s.community_recs) || 0) + 1;
         rec.setAttribute("aria-pressed", "true");
-        rec.querySelector("span").textContent = "המלצת. תודה";
-      } catch (err) { rec.querySelector("span").textContent = "לא נשמר, נסו שוב"; }
+        rec.querySelector("span").textContent = t("המלצת. תודה");
+      } catch (err) { rec.querySelector("span").textContent = t("לא נשמר, נסו שוב"); }
       rec.disabled = false;
     };
     // תיקון או פרט נוסף
@@ -1666,10 +1705,10 @@
       const fd = new FormData(wf);
       const msg = wf.querySelector(".form-msg");
       const w = fd.get("w"), note = (fd.get("note") || "").trim();
-      if (!w) { msg.textContent = "בחרו אחת מהאפשרויות."; return; }
+      if (!w) { msg.textContent = t("בחרו אחת מהאפשרויות."); return; }
       try {
         await Store.submit("fix", { text: "זמינות: " + w + (note ? ". " + note : ""), avail: w }, { service_id: s.id, token: waitToken ? waitToken() : "" });
-        wf.innerHTML = `<p class="form-msg">תודה! זה עוזר לבא אחריך.</p>`;
+        wf.innerHTML = `<p class="form-msg">${t("תודה! זה עוזר לבא אחריך.")}</p>`;
       } catch (err) { msg.textContent = sendError(err); }
     });
     fx.addEventListener("submit", async e => {
@@ -1677,10 +1716,10 @@
       const fd = new FormData(fx);
       const msg = fx.querySelector(".form-msg");
       const text = (fd.get("text") || "").trim();
-      if (text.length < 3) { msg.textContent = "כתבו כמה מילים."; return; }
+      if (text.length < 3) { msg.textContent = t("כתבו כמה מילים."); return; }
       try {
         await Store.submit("fix", { text, contact: (fd.get("contact") || "").trim() }, { service_id: s.id, token: fixToken ? fixToken() : "" });
-        fx.innerHTML = `<p class="form-msg">תודה! נבדוק ונעדכן.</p>`;
+        fx.innerHTML = `<p class="form-msg">${t("תודה! נבדוק ונעדכן.")}</p>`;
       } catch (err) { msg.textContent = sendError(err); }
     });
   }
@@ -1708,6 +1747,8 @@
     const [path, qs] = h.split("?");
     const params = new URLSearchParams(qs || "");
     document.querySelectorAll("[data-nav]").forEach(a => a.classList.toggle("active", path === "/" + a.dataset.nav || (a.dataset.nav === "explore" && path === "/area")));
+    const gear = document.getElementById("settings-btn");
+    if (gear) { if (path === "/settings") gear.setAttribute("aria-current", "page"); else gear.removeAttribute("aria-current"); }
     await ensureLive();
     if (path === "/match") viewMatch();
     else if (path === "/results") viewResults();
@@ -1721,6 +1762,7 @@
     else if (path === "/about") viewAbout();
     else if (path === "/need") viewNeed(params);
     else if (path === "/soon") viewSoon();
+    else if (path === "/settings") viewSettings();
     else if (path === "/add" || path === "/provider") viewAdd(params);
     else if (path === "/admin") { location.href = "admin/"; return; }
     else viewHome();
@@ -1738,11 +1780,80 @@
   let savedTheme = null;
   try { savedTheme = localStorage.getItem(THEME_KEY); } catch (e) { /* storage blocked */ }
   applyTheme(savedTheme);
-  if (dimBtn) dimBtn.onclick = () => {
-    const next = dimBtn.getAttribute("aria-pressed") === "true" ? "light" : "dark";
-    applyTheme(next);
-    try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage blocked */ }
+  // "light" / "dark", או null = לפי הגדרת המכשיר
+  const setTheme = th => {
+    savedTheme = th;
+    applyTheme(th);
+    try { if (th) localStorage.setItem(THEME_KEY, th); else localStorage.removeItem(THEME_KEY); } catch (e) { /* storage blocked */ }
   };
+  if (dimBtn) dimBtn.onclick = () => setTheme(dimBtn.getAttribute("aria-pressed") === "true" ? "light" : "dark");
+
+  // ---------- הגדרות ----------
+  // שפה, תצוגה, הדגמה, ומחיקת כל מה שנשמר במכשיר. בלי חלונות קופצים: אישור המחיקה הוא שורה בתוך העמוד.
+  function viewSettings() {
+    const seg = (name, cur, opts) => `<div class="seg" role="radiogroup">${opts.map(([v, l, lang]) =>
+      `<label><input type="radio" name="${name}" value="${v}" ${cur === v ? "checked" : ""}><span${lang ? ` lang="${lang}"` : ""}>${l}</span></label>`).join("")}</div>`;
+    $main.innerHTML = `
+      <section class="form-page settings">
+        <h1 class="page-title">${t("הגדרות")}</h1>
+        <fieldset class="set-row"><legend>${isEn() ? `Language · <span lang="he">שפה</span>` : `שפה · <span lang="en">Language</span>`}</legend>
+          ${seg("lang", I18N.lang, [["he", "עברית", "he"], ["en", "English", "en"]])}
+          <p class="note quiet">${t("שמות המקומות ופרטי השירותים כתובים בעברית, בכל שפה.")}</p>
+        </fieldset>
+        <fieldset class="set-row"><legend>${t("תצוגה")}</legend>
+          ${seg("theme", savedTheme || "system", [["light", t("בהיר")], ["dark", t("עמום")], ["system", t("לפי המכשיר")]])}
+        </fieldset>
+        <div class="set-row">
+          <h2 class="section-title">${t("איך משתמשים")}</h2>
+          <p>${t("הדגמה קצרה של הכפתורים העיקריים, חצי דקה.")}</p>
+          <p class="actions"><button class="btn" type="button" id="set-tour">${t("לראות שוב את ההדגמה")}</button></p>
+        </div>
+        <div class="set-row">
+          <h2 class="section-title">${t("המידע שלך במכשיר")}</h2>
+          <p>${t("התשובות לשאלון, ההמלצות שלך, המקומות שפנית אליהם ובחירת התצוגה נשמרים רק בטלפון הזה. אפשר למחוק הכול.")}</p>
+          <p class="actions"><button class="btn" type="button" id="set-wipe">${t("למחוק את המידע שלי מהמכשיר")}</button></p>
+          <div id="wipe-confirm" class="callout" hidden>
+            <p><strong>${t("למחוק הכול?")}</strong> ${t("זה לא מוחק פניות שכבר שלחת. אפשר לבקש את זה בעמוד הפרטיות.")}</p>
+            <p class="actions"><button class="btn btn-ink" type="button" id="wipe-yes">${t("כן, למחוק")}</button> <button class="link-u" type="button" id="wipe-no">${t("ביטול")}</button></p>
+          </div>
+          <p class="form-msg" id="wipe-msg" role="status" aria-live="polite"></p>
+        </div>
+        <p class="note quiet">${t("גרסה {v}", { v: VERSION })}</p>
+      </section>`;
+    $main.querySelectorAll('input[name="lang"]').forEach(i => i.onchange = () => { I18N.set(i.value); applyStatic(); route(); });
+    $main.querySelectorAll('input[name="theme"]').forEach(i => i.onchange = () => setTheme(i.value === "system" ? null : i.value));
+    document.getElementById("set-tour").onclick = () => { location.hash = "#/"; setTimeout(startTour, 80); };
+    const conf = document.getElementById("wipe-confirm");
+    document.getElementById("set-wipe").onclick = () => { conf.hidden = false; document.getElementById("wipe-no").focus(); };
+    document.getElementById("wipe-no").onclick = () => { conf.hidden = true; document.getElementById("set-wipe").focus(); };
+    document.getElementById("wipe-yes").onclick = () => {
+      try { Object.keys(localStorage).filter(k => k.startsWith("vh-")).forEach(k => localStorage.removeItem(k)); } catch (e) { /* storage blocked */ }
+      // ההדגמה כבר נראתה, ושפת הממשק נשארת כמו שהיא: רק המידע האישי נמחק
+      try { localStorage.setItem(TOUR_KEY, "1"); I18N.set(I18N.lang); } catch (e) { /* storage blocked */ }
+      savedTheme = null; applyTheme(null);
+      conf.hidden = true;
+      document.getElementById("wipe-msg").textContent = t("נמחק. המכשיר נקי.");
+      $main.querySelectorAll('input[name="theme"]').forEach(i => { i.checked = i.value === "system"; });
+    };
+  }
+
+  // טקסטים קבועים ב-index.html: הטקסט העברי המקורי נשמר כמפתח, ומוחלף לפי השפה
+  function applyStatic() {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      if (el.dataset.he == null) el.dataset.he = el.innerHTML.trim();
+      el.innerHTML = t(el.dataset.he);
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+      if (el.dataset.heAria == null) el.dataset.heAria = el.getAttribute("aria-label") || "";
+      el.setAttribute("aria-label", t(el.dataset.heAria));
+      if (el.title) el.title = t(el.dataset.heAria);
+    });
+    document.title = t("אזימוט · הכיוון הבא שלך");
+    const stamp = document.getElementById("data-stamp");
+    if (stamp) stamp.textContent = t("גרסה {v}", { v: VERSION }) + (window.SERVICES_UPDATED ? " · " + t("המאגר עודכן: {d}", { d: window.SERVICES_UPDATED }) : "");
+    const mode = document.getElementById("store-mode");
+    if (mode && mode.textContent) mode.textContent = Store.mode === "cloud" ? "" : t("מצב הדגמה: מה ששולחים נשמר רק במכשיר");
+  }
 
   // ---------- הדגמת ניווט בפתיחה ראשונה ----------
   // כמה צעדים קצרים שמאירים את הכפתורים האמיתיים. מוצג פעם אחת (נשמר במכשיר), ואפשר לראות שוב מתחתית העמוד.
@@ -1754,7 +1865,8 @@
     { sel: ".beta-strip", title: "משוב, בעילום שם", text: "כאן מספרים לנו מה עזר, מה חסר ואיפה נתקעת. בלי שם ובלי טלפון. ובכל כרטיס של מקום אפשר גם לשתף כמה מחכים שם, או לתקן פרט." },
     { sel: ".add-btn", title: "להוסיף מקום חדש", text: "מכירים מקום, קבוצה או יוזמה שעזרו לכם? לוחצים על הפלוס וממלאים כמה פרטים. אחרי בדיקה זה יופיע לכולם." },
     { sel: ".help-btn", title: "עזרה עכשיו", text: "כשקשה, כאן יש קווי תמיכה שעונים בכל שעה." },
-    { title: "רוצים לדבר איתנו?", html: `אפשר לכתוב ישירות: <a href="mailto:${CONTACT_EMAIL}" dir="ltr">${CONTACT_EMAIL}</a><br>את ההדגמה אפשר לראות שוב בתחתית כל עמוד.` }
+    { sel: "#settings-btn", title: "הגדרות", text: "שפה (עברית או English), תצוגה בהירה או עמומה, ומחיקת המידע שלך מהמכשיר." },
+    { title: "רוצים לדבר איתנו?", html: "אפשר לכתוב ישירות: {email}<br>את ההדגמה אפשר לראות שוב בתחתית כל עמוד." }
   ];
   function startTour() {
     if (document.querySelector(".tour")) return;
@@ -1768,8 +1880,8 @@
         <p id="tour-text" class="tour-text"></p>
         <div class="tour-nav">
           <button class="btn btn-ink" type="button" data-t="next"></button>
-          <button class="link-u" type="button" data-t="prev">הקודם</button>
-          <button class="link-u tour-skip" type="button" data-t="skip">דלג</button>
+          <button class="link-u" type="button" data-t="prev">${t("הקודם")}</button>
+          <button class="link-u tour-skip" type="button" data-t="skip">${t("דלג")}</button>
         </div>
       </div>`;
     document.body.appendChild(root);
@@ -1790,11 +1902,11 @@
     const show = n => {
       i = n;
       const st = TOUR[i];
-      root.querySelector(".tour-count").textContent = `${i + 1} מתוך ${TOUR.length}`;
-      root.querySelector("#tour-title").textContent = st.title;
-      const t = root.querySelector("#tour-text");
-      if (st.html) t.innerHTML = st.html; else t.textContent = st.text;
-      root.querySelector('[data-t="next"]').textContent = i === 0 ? "בואו נתחיל" : i === TOUR.length - 1 ? "סיום" : "הבא";
+      root.querySelector(".tour-count").textContent = t("{n} מתוך {m}", { n: i + 1, m: TOUR.length });
+      root.querySelector("#tour-title").textContent = t(st.title);
+      const tx = root.querySelector("#tour-text");
+      if (st.html) tx.innerHTML = t(st.html, { email: `<a href="mailto:${CONTACT_EMAIL}" dir="ltr">${CONTACT_EMAIL}</a>` }); else tx.textContent = t(st.text);
+      root.querySelector('[data-t="next"]').textContent = i === 0 ? t("בואו נתחיל") : i === TOUR.length - 1 ? t("סיום") : t("הבא");
       root.querySelector('[data-t="prev"]').hidden = i === 0;
       root.querySelector('[data-t="skip"]').hidden = i === TOUR.length - 1;
       window.scrollTo(0, 0);
@@ -1825,7 +1937,7 @@
   if (bl) bl.innerHTML = LOGO(30, false);
   // מספר גרסה: כדי שמשוב יתייחס לגרסה מסוימת
   const VERSION = "0.9";
-  document.getElementById("data-stamp").textContent = `גרסה ${VERSION}` + (window.SERVICES_UPDATED ? " · המאגר עודכן: " + window.SERVICES_UPDATED : "");
+  applyStatic();
   // פתיחה מחדש של האפליקציה: הדפדפן משחזר את העמוד האחרון. עמודי שיטוט (תחומים, אזור) לא אמורים להיות נקודת הכניסה.
   if (/^#\/(?:explore|area)\b/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search + "#/");
   route().then(() => {
