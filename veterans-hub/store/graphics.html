@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>אזימוט · גרפיקה לחנות</title>
+<!-- גרפיקה ל-Google Play, מרונדרת ע"י make_graphics.js:
+     ?k=icon (512×512) · ?k=feature&l=he|en (1024×500) · ?k=shot&l=he|en&img=...&cap=...&sub=... (1080×1920) -->
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper: #E4ECEC; --ink: #151515; --muted: #3E4A48; --sea: #9EC0C8; --land: #C3C29A; --soul: #C4BBDD; --body: #E7B48C; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: "Assistant", system-ui, sans-serif; position: relative; overflow: hidden; }
+  body[lang="en"] { direction: ltr; }
+  .topo { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5; }
+  .topo path { stroke: var(--sea); fill: none; }
+  .k { display: none; }
+  .serif { font-family: "Frank Ruhl Libre", serif; font-weight: 700; }
+
+  /* אייקון */
+  body.icon { width: 512px; height: 512px; }
+  body.icon .topo { display: none; }
+  body.icon .k-icon { display: grid; place-items: center; position: absolute; inset: 0; }
+
+  /* תמונה ראשית */
+  body.feature { width: 1024px; height: 500px; }
+  body.feature .k-feature { display: flex; position: relative; height: 100%; padding: 56px 72px; flex-direction: column; justify-content: center; }
+  .k-feature .lock { display: flex; align-items: center; gap: 18px; }
+  .k-feature .word { font-size: 60px; }
+  .k-feature h1 { font-size: 50px; line-height: 1.15; margin: 26px 0 16px; max-width: 760px; text-wrap: balance; }
+  .k-feature p { font-size: 26px; color: var(--muted); margin: 0; }
+  .chips { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+  .chips span { font-size: 21px; font-weight: 600; padding: 7px 18px; border-radius: 999px; border: 1.5px solid rgba(21,21,21,.18); background: rgba(250,252,251,.85); }
+
+  /* צילום מסך עם כותרת */
+  body.shot { width: 1080px; height: 1920px; }
+  body.shot .k-shot { display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; padding: 96px 70px 0; }
+  .k-shot h1 { font-size: 76px; line-height: 1.12; margin: 0; text-align: center; text-wrap: balance; }
+  .k-shot p { font-size: 38px; color: var(--muted); margin: 22px 0 0; text-align: center; text-wrap: balance; }
+  .phone { margin-top: 64px; width: 860px; flex: 1; border-radius: 64px 64px 0 0; background: #151515; padding: 22px 22px 0; box-shadow: 0 40px 80px -30px rgba(21,40,48,.45); overflow: hidden; }
+  .phone img { display: block; width: 100%; border-radius: 44px 44px 0 0; }
+</style>
+</head>
+<body>
+<svg class="topo" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+  <path stroke-width="3" d="M-40 90 C 200 40, 380 150, 640 90 C 880 40, 1000 130, 1240 80"/>
+  <path stroke-width="3" d="M-40 150 C 220 100, 400 210, 660 150 C 900 100, 1020 190, 1240 140"/>
+  <path stroke-width="3" d="M-40 860 C 200 810, 400 920, 660 860 C 900 810, 1020 900, 1240 850"/>
+  <path stroke-width="3" d="M-40 925 C 220 875, 420 980, 680 925 C 920 875, 1040 960, 1240 915"/>
+</svg>
+
+<template id="logo">
+  <svg viewBox="0 0 240 240" fill="none" aria-hidden="true"><defs><clipPath id="d"><circle cx="120" cy="120" r="93"/></clipPath></defs>
+    <path d="M120 22 C 176 20, 220 64, 218 121 C 216 175, 173 219, 118 217 C 64 215, 21 172, 23 118 C 25 64, 66 23, 123 24" fill="#9EC0C8" stroke="#151515" stroke-width="7" stroke-linecap="round"/>
+    <g clip-path="url(#d)" stroke="#151515" stroke-linecap="round" fill="none">
+      <path d="M14 128 C 40 116, 62 140, 92 128 C 120 116, 142 140, 172 126 C 196 116, 214 132, 232 124" stroke-width="5"/>
+      <path d="M40 160 C 66 150, 84 170, 110 160 C 136 150, 156 168, 200 156" stroke-width="3.6"/></g>
+    <path d="M120 24 L 120 44" stroke="#151515" stroke-width="7" stroke-linecap="round"/>
+    <path d="M116 124 C 132 108, 150 92, 170 72" stroke="#151515" stroke-width="10" stroke-linecap="round"/>
+    <path d="M150 70 C 160 69, 168 68, 175 67 C 174 74, 173 82, 173 90" stroke="#151515" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="116" cy="124" r="10" fill="#E4ECEC" stroke="#151515" stroke-width="5"/>
+  </svg>
+</template>
+
+<div class="k k-icon"><span class="logo" style="width:400px;height:400px"></span></div>
+
+<div class="k k-feature">
+  <div class="lock"><span class="logo" style="width:84px;height:84px"></span><span class="word serif" data-he="אזימוט" data-en="Azimut"></span></div>
+  <h1 class="serif" data-he="יש עזרה. לפעמים רק קשה למצוא אותה." data-en="Help exists. Sometimes it's just hard to find."></h1>
+  <p data-he="לנכי צה״ל, מילואימניקים, לוחמים, שוטרים ומשפחות" data-en="For Israeli veterans, reservists, fighters, police and families"></p>
+  <div class="chips">
+    <span data-he="540+ מקומות" data-en="540+ places"></span>
+    <span data-he="התאמה ב-4 שאלות" data-en="Matched in 4 questions"></span>
+    <span data-he="בלי הרשמה" data-en="No sign-up"></span>
+  </div>
+</div>
+
+<div class="k k-shot">
+  <h1 class="serif" id="cap"></h1>
+  <p id="sub"></p>
+  <div class="phone"><img id="img" alt=""></div>
+</div>
+
+<script>
+  const q = new URLSearchParams(location.search);
+  const k = q.get("k") || "icon", l = q.get("l") || "he";
+  document.body.className = k;
+  document.body.lang = l;
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === "en" ? "ltr" : "rtl";
+  const logo = document.getElementById("logo").innerHTML;
+  document.querySelectorAll(".logo").forEach(s => { s.innerHTML = logo; s.style.display = "block"; s.firstElementChild.style.cssText = "width:100%;height:100%"; });
+  document.querySelectorAll("[data-he]").forEach(e => { e.textContent = e.dataset[l]; });
+  if (k === "shot") {
+    document.getElementById("cap").textContent = q.get("cap") || "";
+    document.getElementById("sub").textContent = q.get("sub") || "";
+    document.getElementById("img").src = q.get("img");
+  }
+</script>
+</body>
+</html>

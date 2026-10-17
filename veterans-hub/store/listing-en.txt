@@ -1,0 +1,62 @@
+=== App name (max 30) ===
+Azimut: Support for Veterans
+
+=== Short description (max 80) ===
+540+ places helping Israeli fighters, reservists and police, matched to you.
+
+=== Full description (max 4000) ===
+Help exists. Sometimes it's just hard to find.
+
+Azimut brings together, in one place, everything that can help IDF disabled veterans, reservists, combat soldiers, police officers and security forces in Israel, and their families. Therapy, the sea, farms, sport, groups, work, housing and rights. Including people who are not yet officially recognized.
+
+Instead of searching dozens of websites, WhatsApp groups and word-of-mouth tips, answer 4 short questions and get three stops that fit you.
+
+🧭 A personal match, not a long list
+• 4 questions: your situation, where you live, what's hard and what does you good
+• Three stops, each with a clear role: someone to talk to, something for the body, a place to meet people
+• For every place: the first step to take, in plain words
+• What matters at a glance: "no recognition needed", "open to police", "free", "no waiting list", "from home", distance from you
+
+🌊 540+ places, most verified against the source
+• Mental health care, support groups and hotlines
+• Sea, surfing, diving, farms and nature, service dogs and animal-assisted therapy
+• Sport, body and mind, yoga and meditation
+• Work, studies, scholarships, housing and money
+• Rights guides: the MoD Rehabilitation Department, National Insurance, what you're entitled to and how to apply
+• All of Israel: north, center, Jerusalem, south, plus online services
+
+👮 For police and security forces too
+Places that explicitly welcome security forces are marked. When it isn't stated, we mark "may fit" so you know to ask, and don't waste your calls.
+
+⏳ Honest about availability
+Some places have long waiting lists. Azimut shows it up front: when the next cycle opens, where there's a queue, and where you can get in quickly. Some of this comes from people who have already been there.
+
+📅 Opening soon
+Groups and programs whose next cycle starts soon near you, nationwide or on Zoom.
+
+📞 One tap to get in touch
+Call, WhatsApp, email or "call me back". Two weeks later the app gently asks how it went. Your answer helps the next person know how long the wait is.
+
+🆘 Help now
+Having a hard time right now? One tap to ERAN, NATAL, Nefesh Achat and other lines that answer at night too.
+
+🔒 Real privacy
+• No sign-up, no ads, no tracking
+• Your answers stay on your phone only
+• Delete everything with one tap in Settings
+
+🤝 Built together
+Azimut is as good as what we all know. Know a place that helps and isn't listed? Add it in a minute. Know how long the wait is? Share it anonymously. Everything is reviewed before it goes live.
+
+✨ And also
+• Hebrew and English interface (service details are in Hebrew)
+• Dark mode
+• Works offline
+• Accessible, with clear text and large buttons
+• A short tour on first launch
+
+Azimut is an independent, volunteer-built project. It is not affiliated with the IDF, the Ministry of Defense, the Israel Police or any government body. Information is gathered from public sources, is not a substitute for medical, mental health or legal advice, and terms should be confirmed directly with each organization.
+
+In an emergency in Israel: ambulance 101, police 100, ERAN 1201.
+
+Questions, comments or a missing place: idomayraz@gmail.com
