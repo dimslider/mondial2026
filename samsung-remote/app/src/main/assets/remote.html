@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="he">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>שלט לטלוויזיה</title>
+<title>TV Remote</title>
 <style>
   :root {
     --bg: #0e1116;
@@ -34,6 +34,11 @@
     padding: 10px 16px 14px; gap: 10px;
   }
 
+  /* The remote keeps one physical layout in every language, like a real remote (power top-left,
+     volume left, channels right); only text runs right-to-left. Banners with sentences follow the language. */
+  .app { direction: ltr; }
+  [dir=rtl] .app .trialbar, [dir=rtl] .app .recbar { direction: rtl; }
+
   /* header: power · TV chip · settings */
   .top { display: flex; align-items: center; gap: 10px; min-height: 48px; }
   .pwr {
@@ -43,7 +48,7 @@
   .status {
     flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0;
     height: 44px; padding: 0 14px; border-radius: 22px; background: var(--surface);
-    font-size: 15px; color: var(--icon); direction: rtl;
+    font-size: 15px; color: var(--icon);
   }
   .status span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .status .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
@@ -81,7 +86,7 @@
   .seg {
     justify-self: center; display: flex; background: var(--surface); border-radius: 16px; padding: 4px; gap: 4px;
   }
-  .seg button { height: 44px; padding: 0 16px; border-radius: 12px; color: var(--muted); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  .seg button { height: 44px; padding: 0 14px; border-radius: 12px; color: var(--muted); font-size: 13px; display: flex; align-items: center; gap: 6px; }
   .seg button.on { background: var(--surface-3); color: var(--icon); }
 
   /* d-pad / touchpad */
@@ -120,7 +125,7 @@
   body.tp .dpad { display: none; }
   body.tp .touchpad { display: block; }
 
-  .media { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+  .media { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); direction: ltr; } /* transport keys follow the timeline, never mirrored */
   .media button { height: 48px; display: grid; place-items: center; border-radius: 14px; background: var(--surface); }
 
   .apps { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
@@ -139,7 +144,6 @@
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 11; max-width: 520px; margin: 0 auto;
     background: var(--surface); border-radius: 24px 24px 0 0; padding: 10px 18px 22px;
     transform: translateY(105%); transition: transform .22s ease; max-height: 86vh; overflow-y: auto;
-    direction: rtl;
   }
   .sheet.show { transform: none; }
   .sheet .handle { width: 42px; height: 5px; border-radius: 3px; background: var(--line); margin: 0 auto 12px; }
@@ -167,7 +171,7 @@
   .empty { color: var(--muted); font-size: 14px; text-align: center; padding: 20px 0; line-height: 1.6; }
 
   .card { background: var(--surface-2); border-radius: 16px; padding: 14px; }
-  .tvrow { display: flex; align-items: center; gap: 12px; width: 100%; text-align: right; padding: 12px; border-radius: 14px; background: var(--surface-2); margin-bottom: 8px; }
+  .tvrow { display: flex; align-items: center; gap: 12px; width: 100%; text-align: start; padding: 12px; border-radius: 14px; background: var(--surface-2); margin-bottom: 8px; }
   .tvrow .meta { flex: 1; min-width: 0; }
   .tvrow .meta div { font-size: 15px; color: #e8edf3; }
   .tvrow .meta small { color: var(--muted); font-size: 12px; direction: ltr; display: inline-block; }
@@ -187,9 +191,9 @@
   .sw { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
   .sw:last-child { border-bottom: 0; }
   .sw input { appearance: none; -webkit-appearance: none; width: 46px; height: 26px; border-radius: 13px; background: var(--line); position: relative; flex: none; transition: background .15s; }
-  .sw input::after { content: ""; position: absolute; top: 3px; right: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: right .15s; }
+  .sw input::after { content: ""; position: absolute; top: 3px; inset-inline-start: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: inset-inline-start .15s; }
   .sw input:checked { background: var(--accent); }
-  .sw input:checked::after { right: 23px; }
+  .sw input:checked::after { inset-inline-start: 23px; }
   .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
   .spinner { width: 18px; height: 18px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; display: inline-block; vertical-align: middle; }
   @keyframes spin { to { transform: rotate(360deg) } }
@@ -197,13 +201,14 @@
   .toast {
     position: fixed; left: 50%; bottom: 120px; transform: translateX(-50%) translateY(20px);
     background: #2a3240; color: #fff; padding: 10px 18px; border-radius: 20px; font-size: 14px;
-    opacity: 0; transition: all .2s; pointer-events: none; z-index: 20; direction: rtl; white-space: nowrap;
+    opacity: 0; transition: all .2s; pointer-events: none; z-index: 20;
+    width: max-content; max-width: calc(100vw - 32px); text-align: center; line-height: 1.4;
   }
   .toast.show { opacity: 1; transform: translateX(-50%); }
 
   .recbar {
     position: fixed; top: 0; left: 0; right: 0; z-index: 30; display: none; align-items: center; gap: 8px;
-    padding: 10px 14px; background: #3a1d22; color: #fff; font-size: 14px; direction: rtl;
+    padding: 10px 14px; background: #3a1d22; color: #fff; font-size: 14px;
   }
   .recbar.show { display: flex; }
   .recbar span:nth-child(2) { flex: 1; }
@@ -214,6 +219,44 @@
   .sw input:disabled { opacity: .35; }
   .tvrow .edit { display: flex; gap: 6px; margin-top: 8px; }
   .tvrow .icon-btn { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: var(--muted); background: var(--surface-3); flex: none; }
+
+  input.natural { direction: inherit; text-align: start; }
+
+  /* language switch */
+  .langbox { background: var(--surface-2); border-radius: 16px; padding: 12px 14px 14px; margin: 2px 0 14px; }
+  .langhead { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #e8edf3; margin-bottom: 10px; }
+  .langhead svg { color: var(--accent); flex: none; }
+  .langhead .alt { color: var(--muted); font-weight: 400; }
+  .langhead .alt::before { content: "·"; margin-inline-end: 8px; }
+  .langseg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: var(--bg); border-radius: 14px; padding: 4px; }
+  .langseg button { height: 46px; border-radius: 11px; font-size: 16px; font-weight: 600; color: var(--muted); }
+  .langseg button.on { background: var(--accent); color: var(--accent-ink); }
+
+  /* trial banner + license line */
+  .trialbar {
+    display: none; align-items: center; gap: 4px; flex: none;
+    background: #2ec4a614; border: 1px solid #2ec4a650; border-radius: 14px; padding-inline-start: 12px;
+  }
+  .trialbar.show { display: flex; }
+  .trialbar .tb-main { flex: 1; min-width: 0; text-align: start; font-size: 13px; line-height: 1.3; padding: 7px 0; color: var(--icon); }
+  .trialbar .tb-main b { color: var(--accent); font-weight: 600; }
+  .trialbar .tb-x { width: 36px; height: 36px; flex: none; display: grid; place-items: center; color: var(--muted); font-size: 14px; }
+  .licrow { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .licrow .lic-txt { flex: 1; min-width: 0; font-size: 15px; color: #e8edf3; line-height: 1.4; }
+  .licrow .lic-txt .note { display: block; }
+  .licrow .lic-full { color: var(--accent); font-weight: 600; font-size: 15px; }
+
+  /* paywall (blocking) */
+  .sheet.paywall { z-index: 12; max-height: 94vh; padding-top: 14px; }
+  .pw-hero { width: 52px; height: 52px; border-radius: 16px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; margin: 14px auto 8px; }
+  .paywall h2 { text-align: center; margin-bottom: 6px; }
+  .paywall .lead { text-align: center; margin: 0 0 12px; }
+  .benefits { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }
+  .benefits li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #e8edf3; line-height: 1.35; }
+  .benefits li::before { content: "✓"; color: var(--accent); font-weight: 700; flex: none; width: 16px; text-align: center; }
+  .btn.big { font-size: 17px; padding: 15px 16px; border-radius: 14px; }
+  .linkbtn { display: block; margin: 8px auto 2px; color: var(--accent); font-size: 15px; padding: 10px 14px; text-decoration: underline; }
+  .paywall .fine { text-align: center; font-size: 12px; margin: 4px 0 0; }
 
   /* simple mode: fewer, bigger buttons */
   body.simple { --key: min(21vw, 90px); }
@@ -233,116 +276,122 @@
     .media button { height: 40px; }
     .apps button { height: 46px; }
     .app { gap: 7px; }
+    .pw-hero { display: none; }
   }
 </style>
 </head>
 <body>
 <div class="app">
   <div class="top">
-    <button class="pwr" data-action="power" aria-label="הפעלה / כיבוי">
+    <button class="pwr" data-action="power" data-i18n-aria="a_power">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.6a8 8 0 1 0 11.4 0"/></svg>
     </button>
     <button class="status wait" id="status" onclick="statusTap()">
-      <i class="dot"></i><span id="statusText">מתחבר…</span>
+      <i class="dot"></i><span id="statusText"></span>
       <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
     </button>
-    <button class="gear" data-action="voice" aria-label="חיפוש קולי">
+    <button class="gear" data-action="voice" data-i18n-aria="a_voice">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
     </button>
-    <button class="gear" onclick="openSheet('settings')" aria-label="הגדרות">
+    <button class="gear" id="settingsBtn" onclick="openSheet('settings')" data-i18n-aria="a_settings">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
     </button>
   </div>
 
+  <div class="trialbar" id="trialBar">
+    <button class="tb-main" onclick="buy()"><span id="trialText"></span></button>
+    <button class="tb-x" onclick="dismissTrial()" data-i18n-aria="dismiss">✕</button>
+  </div>
+
   <div class="panel">
     <div class="bar vol">
-      <button data-key="KEY_VOLUP" data-repeat aria-label="הגבר">
+      <button data-key="KEY_VOLUP" data-repeat data-i18n-aria="a_volup">
         <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
       </button>
-      <div class="mid">קול</div>
-      <button data-key="KEY_VOLDOWN" data-repeat aria-label="הנמך">
+      <div class="mid" data-i18n="vol"></div>
+      <button data-key="KEY_VOLDOWN" data-repeat data-i18n-aria="a_voldown">
         <svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14"/></svg>
       </button>
     </div>
 
-    <button class="key" data-key="KEY_MUTE" aria-label="השתק">
+    <button class="key" data-key="KEY_MUTE" data-i18n-aria="mute">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9.5h3.5L11 5.5v13l-4.5-4H3z" fill="currentColor" stroke="none"/><path d="M15 9.5l5 5M20 9.5l-5 5"/></svg>
-      <small>השתק</small>
+      <small data-i18n="mute"></small>
     </button>
-    <button class="key" data-key="KEY_MENU" aria-label="הגדרות טלוויזיה">
+    <button class="key" data-key="KEY_MENU" data-i18n-aria="a_tvmenu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h8M17 8h4M3 16h4M13 16h8"/><circle cx="14" cy="8" r="2.5"/><circle cx="10" cy="16" r="2.5"/></svg>
-      <small>תפריט</small>
+      <small data-i18n="menu"></small>
     </button>
 
     <div class="bar ch">
-      <button data-key="KEY_CHUP" data-repeat aria-label="ערוץ למעלה">
+      <button data-key="KEY_CHUP" data-repeat data-i18n-aria="a_chup">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
       </button>
-      <div class="mid">ערוץ</div>
-      <button data-key="KEY_CHDOWN" data-repeat aria-label="ערוץ למטה">
+      <div class="mid" data-i18n="ch"></div>
+      <button data-key="KEY_CHDOWN" data-repeat data-i18n-aria="a_chdown">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
       </button>
     </div>
 
-    <button class="key" data-sheet="numpad" aria-label="מספרים">
+    <button class="key" data-sheet="numpad" data-i18n-aria="numbers">
       <span style="font-size:15px;font-weight:600;letter-spacing:1px">123</span>
-      <small>מספרים</small>
+      <small data-i18n="numbers"></small>
     </button>
-    <button class="key" data-sheet="more" aria-label="עוד">
+    <button class="key" data-sheet="more" data-i18n-aria="more">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
-      <small>עוד</small>
+      <small data-i18n="more"></small>
     </button>
   </div>
 
   <div class="row3">
-    <button class="key" data-key="KEY_RETURN" aria-label="חזור">
+    <button class="key" data-key="KEY_RETURN" data-i18n-aria="back">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6L4 11l5 5"/><path d="M4 11h11a5 5 0 0 1 0 10h-2"/></svg>
-      <small>חזור</small>
+      <small data-i18n="back"></small>
     </button>
     <div class="seg">
-      <button id="modePad" class="on" aria-label="חיצים">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3.4"/><path d="M12 2l3 3.5H9zM12 22l-3-3.5h6zM2 12l3.5-3v6zM22 12l-3.5 3V9z"/></svg>חיצים
+      <button id="modePad" class="on" data-i18n-aria="a_mode_pad">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3.4"/><path d="M12 2l3 3.5H9zM12 22l-3-3.5h6zM2 12l3.5-3v6zM22 12l-3.5 3V9z"/></svg><span data-i18n="mode_pad"></span>
       </button>
-      <button id="modeTp" aria-label="משטח מגע">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M12 14v-4"/></svg>מגע
+      <button id="modeTp" data-i18n-aria="a_mode_tp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M12 14v-4"/></svg><span data-i18n="mode_tp"></span>
       </button>
     </div>
-    <button class="key" data-key="KEY_HOME" aria-label="בית">
+    <button class="key" data-key="KEY_HOME" data-i18n-aria="home">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4z"/></svg>
-      <small>בית</small>
+      <small data-i18n="home"></small>
     </button>
   </div>
 
   <div class="padwrap">
     <div class="dpad">
-      <button class="arr up" data-key="KEY_UP" data-repeat aria-label="למעלה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
-      <button class="arr down" data-key="KEY_DOWN" data-repeat aria-label="למטה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-      <button class="arr left" data-key="KEY_LEFT" data-repeat aria-label="שמאלה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <button class="arr right" data-key="KEY_RIGHT" data-repeat aria-label="ימינה"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="arr up" data-key="KEY_UP" data-repeat data-i18n-aria="a_up"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+      <button class="arr down" data-key="KEY_DOWN" data-repeat data-i18n-aria="a_down"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="arr left" data-key="KEY_LEFT" data-repeat data-i18n-aria="a_left"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button class="arr right" data-key="KEY_RIGHT" data-repeat data-i18n-aria="a_right"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
       <button class="ok" data-key="KEY_ENTER">OK</button>
     </div>
-    <div class="touchpad" id="touchpad"><div class="hint">החלק לכיוון · הקש לאישור</div></div>
+    <div class="touchpad" id="touchpad"><div class="hint" data-i18n="tp_hint"></div></div>
   </div>
 
   <div class="media">
-    <button data-key="KEY_REWIND" data-repeat aria-label="אחורה"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M11 6v12L3 12zM20 6v12l-8-6z"/></svg></button>
-    <button data-key="KEY_PLAY" aria-label="נגן"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></button>
-    <button data-key="KEY_PAUSE" aria-label="השהה"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1.5"/><rect x="14" y="4" width="5" height="16" rx="1.5"/></svg></button>
-    <button data-key="KEY_FF" data-repeat aria-label="קדימה"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6v12l8-6zM13 6v12l8-6z"/></svg></button>
+    <button data-key="KEY_REWIND" data-repeat data-i18n-aria="a_rew"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M11 6v12L3 12zM20 6v12l-8-6z"/></svg></button>
+    <button data-key="KEY_PLAY" data-i18n-aria="a_play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></button>
+    <button data-key="KEY_PAUSE" data-i18n-aria="a_pause"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1.5"/><rect x="14" y="4" width="5" height="16" rx="1.5"/></svg></button>
+    <button data-key="KEY_FF" data-repeat data-i18n-aria="a_ff"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6v12l8-6zM13 6v12l8-6z"/></svg></button>
   </div>
 
   <div class="apps" id="shortcuts">
     <button data-slot="0"></button>
     <button data-slot="1"></button>
     <button data-slot="2"></button>
-    <button data-sheet="apps"><i style="background:var(--accent)"></i><span>אפליקציות</span></button>
+    <button data-sheet="apps"><i style="background:var(--accent)"></i><span data-i18n="apps"></span></button>
   </div>
 </div>
 
 <div class="recbar" id="recbar">
-  <span class="recdot"></span><span id="recText">מקליט… לחץ על הכפתורים בשלט</span>
-  <button class="btn" onclick="finishRecording()">סיום</button>
-  <button class="btn ghost" onclick="cancelRecording()">ביטול</button>
+  <span class="recdot"></span><span id="recText"></span>
+  <button class="btn" onclick="finishRecording()" data-i18n="done"></button>
+  <button class="btn ghost" onclick="cancelRecording()" data-i18n="cancel"></button>
 </div>
 
 <div class="scrim" id="scrim" onclick="closeSheets()"></div>
@@ -354,7 +403,7 @@
     <button data-key="KEY_1">1</button><button data-key="KEY_2">2</button><button data-key="KEY_3">3</button>
     <button data-key="KEY_4">4</button><button data-key="KEY_5">5</button><button data-key="KEY_6">6</button>
     <button data-key="KEY_7">7</button><button data-key="KEY_8">8</button><button data-key="KEY_9">9</button>
-    <button class="small" data-key="KEY_CH_LIST">רשימת ערוצים</button><button data-key="KEY_0">0</button><button class="small" data-key="KEY_PRECH">ערוץ קודם</button>
+    <button class="small" data-key="KEY_CH_LIST" data-i18n="ch_list"></button><button data-key="KEY_0">0</button><button class="small" data-key="KEY_PRECH" data-i18n="prev_ch"></button>
   </div>
   <div class="colors">
     <button data-key="KEY_RED"><i style="background:#ef5350"></i></button>
@@ -367,114 +416,115 @@
 <!-- more keys -->
 <div class="sheet tapkeys" id="sheet-more">
   <div class="handle"></div>
-  <h2>עוד מקשים</h2>
+  <h2 data-i18n="more_title"></h2>
   <div class="tiles">
-    <button data-action="voice"><b>🎤</b>חיפוש קולי</button>
-    <button data-action="keyboard"><b>⌨</b>הקלדת טקסט</button>
-    <button data-sheet="sleep"><b>☾</b><span id="sleepTile">טיימר שינה</span></button>
-    <button data-key="KEY_SOURCE"><b>⇥</b>מקור / HDMI</button>
-    <button data-key="KEY_INFO"><b>i</b>מידע</button>
-    <button data-key="KEY_GUIDE"><b>▤</b>מדריך שידורים</button>
-    <button data-key="KEY_TOOLS"><b>☰</b>אפשרויות</button>
-    <button data-key="KEY_EXIT"><b>✕</b>יציאה</button>
-    <button data-key="KEY_CAPTION"><b>CC</b>כתוביות</button>
-    <button data-key="KEY_STOP"><b>■</b>עצור</button>
-    <button data-key="KEY_REC"><b style="color:#ff4d4f">●</b>הקלטה</button>
-    <button data-key="KEY_PICTURE_SIZE"><b>▭</b>גודל תמונה</button>
+    <button data-action="voice"><b>🎤</b><span data-i18n="a_voice"></span></button>
+    <button data-action="keyboard"><b>⌨</b><span data-i18n="k_keyboard"></span></button>
+    <button data-sheet="sleep"><b>☾</b><span id="sleepTile"></span></button>
+    <button data-key="KEY_SOURCE"><b>⇥</b><span data-i18n="k_source"></span></button>
+    <button data-key="KEY_INFO"><b>i</b><span data-i18n="k_info"></span></button>
+    <button data-key="KEY_GUIDE"><b>▤</b><span data-i18n="k_guide"></span></button>
+    <button data-key="KEY_TOOLS"><b>☰</b><span data-i18n="k_tools"></span></button>
+    <button data-key="KEY_EXIT"><b>✕</b><span data-i18n="k_exit"></span></button>
+    <button data-key="KEY_CAPTION"><b>CC</b><span data-i18n="k_caption"></span></button>
+    <button data-key="KEY_STOP"><b>■</b><span data-i18n="k_stop"></span></button>
+    <button data-key="KEY_REC"><b style="color:#ff4d4f">●</b><span data-i18n="k_rec"></span></button>
+    <button data-key="KEY_PICTURE_SIZE"><b>▭</b><span data-i18n="k_picsize"></span></button>
     <button data-key="KEY_AMBIENT"><b>✦</b>Ambient</button>
+    <button data-action="lang" id="langToggle"><b><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9M12 3c-2.6 2.6-3.8 5.6-3.8 9s1.2 6.4 3.8 9"/></svg></b><span data-lang-name="other"></span></button>
   </div>
 </div>
 
 <!-- voice result -->
 <div class="sheet" id="sheet-voice">
   <div class="handle"></div>
-  <h2>שמעתי: <span id="voiceText" dir="auto"></span></h2>
-  <p class="note">לא מצאתי אפליקציה בשם הזה. מה לעשות?</p>
+  <h2><span data-i18n="heard"></span> <span id="voiceText" dir="auto"></span></h2>
+  <p class="note" data-i18n="voice_noapp"></p>
   <div class="tiles" style="grid-template-columns:1fr 1fr">
-    <button onclick="voiceType()"><b>⌨</b>להקליד בטלוויזיה</button>
-    <button id="voiceYt" onclick="voiceYoutube()"><b>▶</b>לחפש ביוטיוב</button>
+    <button onclick="voiceType()"><b>⌨</b><span data-i18n="voice_type"></span></button>
+    <button id="voiceYt" onclick="voiceYoutube()"><b>▶</b><span data-i18n="voice_yt"></span></button>
   </div>
-  <p class="note" style="margin-top:10px">הקלדה עובדת כשבטלוויזיה פתוח שדה חיפוש או מקלדת.</p>
-  <button class="btn ghost full" style="margin-top:6px" onclick="A.voice()">🎤 לדבר שוב</button>
+  <p class="note" style="margin-top:10px" data-i18n="voice_note"></p>
+  <button class="btn ghost full" style="margin-top:6px" onclick="startVoice()" data-i18n="voice_again"></button>
 </div>
 
 <!-- name a recorded shortcut -->
 <div class="sheet" id="sheet-macro">
   <div class="handle"></div>
-  <h2>שם לקיצור</h2>
+  <h2 data-i18n="macro_title"></h2>
   <p class="note" id="macroInfo"></p>
   <div class="inrow">
-    <input type="text" id="macroName" placeholder="למשל: STING" style="direction:rtl;text-align:right" autocomplete="off">
-    <button class="btn" onclick="saveMacro()">שמור</button>
+    <input type="text" id="macroName" class="natural" data-i18n-placeholder="macro_ph" autocomplete="off">
+    <button class="btn" onclick="saveMacro()" data-i18n="save"></button>
   </div>
-  <p class="note" style="margin-top:10px">לחיצה על הקיצור, או אמירת השם בחיפוש הקולי, תפעיל את אותו רצף מקשים.</p>
+  <p class="note" style="margin-top:10px" data-i18n="macro_note"></p>
 </div>
 
 <!-- sleep timer -->
 <div class="sheet" id="sheet-sleep">
   <div class="handle"></div>
-  <h2>טיימר שינה</h2>
-  <p class="note" id="sleepState">הטלוויזיה תכבה אוטומטית בעוד:</p>
-  <div class="tiles" style="direction:rtl">
-    <button data-sleep="15"><b>15</b>דקות</button>
-    <button data-sleep="30"><b>30</b>דקות</button>
-    <button data-sleep="45"><b>45</b>דקות</button>
-    <button data-sleep="60"><b>60</b>דקות</button>
-    <button data-sleep="90"><b>90</b>דקות</button>
-    <button data-sleep="120"><b>120</b>דקות</button>
+  <h2 data-i18n="sleep_timer"></h2>
+  <p class="note" id="sleepState"></p>
+  <div class="tiles">
+    <button data-sleep="15"><b>15</b><span data-i18n="minutes"></span></button>
+    <button data-sleep="30"><b>30</b><span data-i18n="minutes"></span></button>
+    <button data-sleep="45"><b>45</b><span data-i18n="minutes"></span></button>
+    <button data-sleep="60"><b>60</b><span data-i18n="minutes"></span></button>
+    <button data-sleep="90"><b>90</b><span data-i18n="minutes"></span></button>
+    <button data-sleep="120"><b>120</b><span data-i18n="minutes"></span></button>
   </div>
-  <h3 style="margin-top:14px">או זמן אחר (בדקות)</h3>
+  <h3 style="margin-top:14px" data-i18n="sleep_custom"></h3>
   <div class="inrow">
-    <input type="text" id="sleepCustom" placeholder="למשל: 1" inputmode="numeric" autocomplete="off" enterkeyhint="done">
-    <button class="btn" onclick="setSleepCustom()">הפעל</button>
+    <input type="text" id="sleepCustom" data-i18n-placeholder="sleep_ph" inputmode="numeric" autocomplete="off" enterkeyhint="done">
+    <button class="btn" onclick="setSleepCustom()" data-i18n="start"></button>
   </div>
-  <button class="btn ghost full" id="sleepCancel" style="margin-top:12px" data-sleep="0">בטל טיימר</button>
+  <button class="btn ghost full" id="sleepCancel" style="margin-top:12px" data-sleep="0" data-i18n="sleep_cancel"></button>
 </div>
 
 <!-- TV switcher -->
 <div class="sheet" id="sheet-tvs">
   <div class="handle"></div>
-  <h2>הטלוויזיות שלי</h2>
+  <h2 data-i18n="tvs_title"></h2>
   <div id="tvList"></div>
-  <button class="btn ghost full" onclick="openSheet('settings');startScan()">+ הוסף טלוויזיה</button>
+  <button class="btn ghost full" onclick="openSheet('settings');startScan()" data-i18n="add_tv"></button>
 </div>
 
 <!-- shortcut picker -->
 <div class="sheet" id="sheet-pick">
   <div class="handle"></div>
-  <h2>בחר אפליקציה לכפתור</h2>
-  <button class="btn ghost full" style="margin-bottom:14px" onclick="startRecording()">🎬 הקלט רצף מקשים (לכל אפליקציה)</button>
+  <h2 data-i18n="pick_title"></h2>
+  <button class="btn ghost full" style="margin-bottom:14px" onclick="startRecording()" data-i18n="pick_record"></button>
   <div class="applist" id="pickList"></div>
-  <button class="btn ghost full" style="margin-top:14px" onclick="resetSlot()">החזר לברירת המחדל</button>
+  <button class="btn ghost full" style="margin-top:14px" onclick="resetSlot()" data-i18n="pick_reset"></button>
 </div>
 
 <!-- keyboard -->
 <div class="sheet" id="sheet-keyboard">
   <div class="handle"></div>
-  <h2>הקלדה לטלוויזיה</h2>
-  <p class="note">הקלדה עובדת כשבטלוויזיה פתוחה מקלדת של המערכת (למשל בדפדפן או בנטפליקס). ביוטיוב בטלוויזיות סמסונג יש מקלדת משלה שלא מקבלת הקלדה מהטלפון.</p>
+  <h2 data-i18n="kb_title"></h2>
+  <p class="note" data-i18n="kb_note"></p>
   <div class="inrow">
-    <input type="text" id="kbText" placeholder="טקסט לשליחה" autocomplete="off" enterkeyhint="send">
-    <button class="btn ghost" onclick="A.voice()" aria-label="דבר">🎤</button>
-    <button class="btn" onclick="sendText()">שלח</button>
+    <input type="text" id="kbText" data-i18n-placeholder="kb_ph" autocomplete="off" enterkeyhint="send">
+    <button class="btn ghost" onclick="startVoice()" data-i18n-aria="a_speak">🎤</button>
+    <button class="btn" onclick="sendText()" data-i18n="send"></button>
   </div>
   <div class="inrow" style="margin-top:10px">
-    <button class="btn ghost full" id="kbYt" onclick="kbYoutube()">▶ חפש ביוטיוב</button>
+    <button class="btn ghost full" id="kbYt" onclick="kbYoutube()" data-i18n="kb_yt"></button>
   </div>
   <div class="inrow" style="margin-top:10px">
-    <button class="btn ghost full" data-key="KEY_ENTER">Enter בטלוויזיה</button>
-    <button class="btn ghost full" data-key="KEY_RETURN">סגור מקלדת</button>
+    <button class="btn ghost full" data-key="KEY_ENTER" data-i18n="kb_enter"></button>
+    <button class="btn ghost full" data-key="KEY_RETURN" data-i18n="kb_close"></button>
   </div>
 </div>
 
 <!-- Android TV pairing code -->
 <div class="sheet" id="sheet-pin">
   <div class="handle"></div>
-  <h2>קוד צימוד</h2>
-  <p class="note">בטלוויזיה מופיע עכשיו קוד בן 6 תווים (ספרות ואותיות A–F). הקלד אותו כאן:</p>
+  <h2 data-i18n="pin_title"></h2>
+  <p class="note" data-i18n="pin_note"></p>
   <div class="inrow">
     <input type="text" id="pinInput" class="pin" maxlength="6" placeholder="A1B2C3" autocomplete="off" autocapitalize="characters" spellcheck="false" enterkeyhint="done">
-    <button class="btn" onclick="submitPin()">אישור</button>
+    <button class="btn" onclick="submitPin()" data-i18n="ok"></button>
   </div>
 </div>
 
@@ -482,60 +532,89 @@
 <div class="sheet" id="sheet-apps">
   <div class="handle"></div>
   <div style="display:flex;align-items:center;justify-content:space-between">
-    <h2>אפליקציות</h2>
-    <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="requestApps();renderApps()">רענן</button>
+    <h2 data-i18n="apps"></h2>
+    <button class="btn ghost" id="appsRefresh" style="padding:8px 12px" onclick="requestApps();renderApps()" data-i18n="refresh"></button>
   </div>
   <div class="applist" id="applist"></div>
-  <button class="btn ghost full" style="margin-top:14px" onclick="allAppsOnTv()">📺 פתח את כל האפליקציות בטלוויזיה</button>
+  <button class="btn ghost full" style="margin-top:14px" onclick="allAppsOnTv()" data-i18n="all_apps_tv"></button>
   <p class="note" id="appsNote" style="margin-top:10px"></p>
-  <p class="note" style="margin-top:14px">טיפ: לחיצה ארוכה על כפתור קיצור בתחתית השלט מאפשרת לבחור איזו אפליקציה הוא פותח. חסרה אפליקציה? אפשר להקליט אליה קיצור: לחיצה ארוכה ← "הקלט רצף מקשים".</p>
+  <p class="note" style="margin-top:14px" data-i18n="apps_tip"></p>
 </div>
 
 <!-- settings -->
 <div class="sheet" id="sheet-settings">
   <div class="handle"></div>
-  <h2>חיבור לטלוויזיה</h2>
+  <div class="langbox">
+    <div class="langhead">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9M12 3c-2.6 2.6-3.8 5.6-3.8 9s1.2 6.4 3.8 9"/></svg>
+      <span data-i18n="lang_word"></span><span class="alt" data-i18n-other="lang_word"></span>
+    </div>
+    <div class="langseg"><button data-lang="en" data-lang-name="en"></button><button data-lang="he" data-lang-name="he"></button></div>
+  </div>
+  <div class="card licrow" id="licRow" style="display:none"></div>
+
+  <h2 data-i18n="set_title"></h2>
   <div class="card" id="curTv"></div>
 
-  <h3>טלוויזיות ברשת</h3>
+  <h3 data-i18n="tvs_on_net"></h3>
   <div id="scanList"></div>
-  <button class="btn full" id="scanBtn" onclick="startScan()">חפש טלוויזיות ברשת</button>
+  <button class="btn full" id="scanBtn" onclick="startScan()" data-i18n="scan_btn"></button>
 
-  <h3>או הזן כתובת IP ידנית</h3>
+  <h3 data-i18n="manual_ip"></h3>
   <div class="inrow">
     <input type="text" id="ipInput" placeholder="192.168.1.50" inputmode="decimal" autocomplete="off">
-    <button class="btn" onclick="connectIp()">התחבר</button>
+    <button class="btn" onclick="connectIp()" data-i18n="connect"></button>
   </div>
-  <p class="note">כתובת ה-IP מופיעה בהגדרות הרשת של הטלוויזיה (למשל: הגדרות ← כללי ← רשת ← מצב רשת).</p>
+  <p class="note" data-i18n="ip_note"></p>
 
-  <h3>הגדרות</h3>
+  <h3 data-i18n="prefs"></h3>
   <div class="card" style="padding:0 14px">
-    <label class="sw">כפתורי הווליום של הטלפון שולטים בטלוויזיה<input type="checkbox" id="prefHwVolume"></label>
-    <label class="sw">רטט בלחיצה<input type="checkbox" id="prefHaptic"></label>
-    <label class="sw">מצב פשוט – פחות כפתורים, כפתורים גדולים<input type="checkbox" id="prefSimple"></label>
+    <label class="sw"><span data-i18n="pref_hw"></span><input type="checkbox" id="prefHwVolume"></label>
+    <label class="sw"><span data-i18n="pref_haptic"></span><input type="checkbox" id="prefHaptic"></label>
+    <label class="sw"><span data-i18n="pref_simple"></span><input type="checkbox" id="prefSimple"></label>
   </div>
 
-  <h3>גישה מהירה מחוץ לאפליקציה</h3>
+  <h3 data-i18n="quick_title"></h3>
   <div class="card" style="padding:0 14px">
-    <label class="sw">כפתורי שליטה בהתראות ובמסך הנעילה<input type="checkbox" id="prefQuick"></label>
-    <div class="sw">כשנכנסת שיחה
+    <label class="sw"><span data-i18n="pref_quick"></span><input type="checkbox" id="prefQuick"></label>
+    <div class="sw"><span data-i18n="on_call"></span>
       <div class="seg mini" id="callSeg">
-        <button data-call="off">כלום</button><button data-call="mute">השתק</button><button data-call="pause">השהה</button>
+        <button data-call="off" data-i18n="call_off"></button><button data-call="mute" data-i18n="call_mute"></button><button data-call="pause" data-i18n="call_pause"></button>
       </div>
     </div>
   </div>
-  <p class="note">אפשר גם להוסיף <b>ווידג'ט</b> למסך הבית (לחיצה ארוכה על מסך הבית ← ווידג'טים ← שלט לטלוויזיה), ו<b>כפתורים להגדרות המהירות</b> (משיכה למטה מראש המסך ← עריכה ← "שלט" / "השתק TV").</p>
+  <p class="note" data-i18n-html="quick_note"></p>
 
-  <h3>פתרון בעיות</h3>
+  <h3 data-i18n="trouble"></h3>
   <div class="inrow">
-    <button class="btn ghost full" onclick="A.reconnect()">התחבר מחדש</button>
-    <button class="btn ghost full" onclick="A.resetPairing();toast('מצמד מחדש…')">צמד מחדש</button>
+    <button class="btn ghost full" onclick="A.reconnect()" data-i18n="reconnect"></button>
+    <button class="btn ghost full" onclick="A.resetPairing();toast(t('repairing'))" data-i18n="repair"></button>
   </div>
-  <button class="btn ghost full" style="margin-top:8px" onclick="A.copyDiagnostics()">📋 העתק מידע לאבחון תקלות</button>
+  <button class="btn ghost full" style="margin-top:8px" onclick="A.copyDiagnostics()" data-i18n="copy_diag"></button>
   <p class="note" id="helpText"></p>
-  <h3>פרטיות</h3>
-  <p class="note">בלי פרסומות, בלי מעקב, בלי חשבון. האפליקציה מדברת רק עם הטלוויזיה שלך ברשת הביתית ולא שולחת שום מידע לאינטרנט.</p>
+  <h3 data-i18n="privacy"></h3>
+  <p class="note" data-i18n="privacy_text"></p>
   <p class="note" id="ver" style="text-align:center;margin-top:16px"></p>
+</div>
+
+<!-- paywall: shown when the free trial has ended; cannot be dismissed -->
+<div class="sheet paywall" id="sheet-paywall" role="dialog" aria-modal="true">
+  <div class="langseg"><button data-lang="en" data-lang-name="en"></button><button data-lang="he" data-lang-name="he"></button></div>
+  <div class="pw-hero"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+  <h2 data-i18n="pw_title"></h2>
+  <p class="note lead" data-i18n="pw_text"></p>
+  <ul class="benefits">
+    <li data-i18n="pw_b_ads"></li>
+    <li data-i18n="pw_b_sub"></li>
+    <li data-i18n="pw_b_brands"></li>
+    <li data-i18n="pw_b_call"></li>
+    <li data-i18n="pw_b_lock"></li>
+    <li data-i18n="pw_b_sleep"></li>
+    <li data-i18n="pw_b_voice"></li>
+  </ul>
+  <button class="btn full big" id="pwBuy" onclick="buy()"></button>
+  <button class="linkbtn" id="pwRestore" onclick="restore()" data-i18n="pw_restore"></button>
+  <p class="note fine" data-i18n="pw_fine"></p>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -543,6 +622,349 @@
 <script>
   // Bridge to the Android app; a stub lets the page be previewed in a desktop browser.
   const A = window.Android || new Proxy({}, { get: (_, k) => (...a) => { console.log('Android.' + String(k), ...a); return k === 'getPref' ? a[1] : ''; } });
+
+  /* ---------- i18n: English is the base language, Hebrew is a full translation ---------- */
+  const I18N = {
+    en: {
+      app_name: 'TV Remote',
+      lang_word: 'Language', lang_self: 'English',
+      a_power: 'Power', a_voice: 'Voice search', a_settings: 'Settings',
+      a_volup: 'Volume up', a_voldown: 'Volume down', vol: 'VOL',
+      mute: 'Mute', a_tvmenu: 'TV menu', menu: 'Menu',
+      a_chup: 'Channel up', a_chdown: 'Channel down', ch: 'CH',
+      numbers: 'Numbers', more: 'More', back: 'Back', home: 'Home',
+      mode_pad: 'D-pad', a_mode_pad: 'Arrow keys', mode_tp: 'Touch', a_mode_tp: 'Touchpad',
+      a_up: 'Up', a_down: 'Down', a_left: 'Left', a_right: 'Right',
+      tp_hint: 'Swipe to move · Tap for OK',
+      a_rew: 'Rewind', a_play: 'Play', a_pause: 'Pause', a_ff: 'Fast forward',
+      apps: 'Apps',
+      rec_start: 'Recording… press buttons on the remote (e.g. Home → arrows → OK)',
+      rec_count: 'Recording… {n} keys',
+      done: 'Done', cancel: 'Cancel',
+      ch_list: 'Channel list', prev_ch: 'Prev. channel',
+      more_title: 'More keys', k_keyboard: 'Type text', sleep_timer: 'Sleep timer',
+      k_source: 'Source / HDMI', k_info: 'Info', k_guide: 'TV guide', k_tools: 'Options', k_exit: 'Exit',
+      k_caption: 'Subtitles', k_stop: 'Stop', k_rec: 'Record', k_picsize: 'Picture size',
+      heard: 'I heard:',
+      voice_noapp: "I couldn't find an app with that name. What would you like to do?",
+      voice_type: 'Type it on the TV', voice_yt: 'Search YouTube',
+      voice_note: 'Typing works when a search field or keyboard is open on the TV.',
+      voice_again: '🎤 Speak again',
+      macro_title: 'Name this shortcut', macro_ph: 'e.g. STING', save: 'Save',
+      macro_note: 'Tap the shortcut, or say its name in voice search, to play the same key sequence.',
+      macro_info: 'Recorded {n} keys.',
+      sleep_auto: 'The TV will turn off automatically in:',
+      sleep_left: 'The TV will turn off in {n} min. Change it?',
+      minutes: 'minutes', sleep_custom: 'Or another time (in minutes)', sleep_ph: 'e.g. 1',
+      start: 'Start', sleep_cancel: 'Cancel timer',
+      sleep_set: 'The TV will turn off in {n} minutes', sleep_off: 'Sleep timer canceled',
+      sleep_bad: 'Enter a number of minutes from 1 to 600', sleep_tile: 'Off in {n} min',
+      tvs_title: 'My TVs', add_tv: '+ Add a TV',
+      pick_title: 'Choose an app for this button',
+      pick_record: '🎬 Record a key sequence (works for any app)',
+      pick_reset: 'Restore default',
+      kb_title: 'Type on the TV',
+      kb_note: "Typing works when the TV's system keyboard is open (for example in the browser or in Netflix). YouTube on Samsung TVs uses its own keyboard, which doesn't accept text from the phone.",
+      kb_ph: 'Text to send', a_speak: 'Speak', send: 'Send', kb_yt: '▶ Search YouTube',
+      kb_enter: 'Enter on TV', kb_close: 'Close keyboard',
+      pin_title: 'Pairing code',
+      pin_note: 'Your TV is now showing a 6-character code (digits and letters A–F). Enter it here:',
+      ok: 'OK', refresh: 'Refresh', all_apps_tv: '📺 Open all apps on the TV',
+      apps_tip: 'Tip: long-press a shortcut button at the bottom of the remote to choose which app it opens. App missing? Record a shortcut to it: long-press → "Record a key sequence".',
+      apps_note_atv: "Android TV doesn't share its list of installed apps, so popular apps are shown here. An app that isn't installed simply won't open.",
+      apps_note_samsung: "Samsung doesn't share the full list, so the well-known apps found on your TV are shown. For everything else, use the button above.",
+      apps_connect: 'Connect to a TV to see its apps',
+      apps_loading: 'Loading apps…',
+      apps_none: 'No apps found.<br>Tap "Refresh" to try again.',
+      set_title: 'TV connection', tvs_on_net: 'TVs on your network', scan_btn: 'Search for TVs',
+      manual_ip: 'Or enter an IP address', connect: 'Connect',
+      ip_note: "You'll find the IP address in the TV's network settings (e.g. Settings → General → Network → Network Status).",
+      prefs: 'Preferences',
+      pref_hw: "Phone's volume buttons control the TV",
+      pref_haptic: 'Vibrate on tap',
+      pref_simple: 'Simple mode – fewer, bigger buttons',
+      quick_title: 'Quick access outside the app',
+      pref_quick: 'Controls in notifications and on the lock screen',
+      on_call: 'During a call', call_off: 'Nothing', call_mute: 'Mute', call_pause: 'Pause',
+      quick_note: 'You can also add a <b>widget</b> to your home screen (long-press the home screen → Widgets → TV Remote) and <b>Quick Settings tiles</b> (swipe down from the top of the screen → Edit → "Remote" / "Mute TV").',
+      trouble: 'Troubleshooting', reconnect: 'Reconnect', repair: 'Pair again', repairing: 'Pairing again…',
+      copy_diag: '📋 Copy diagnostic info',
+      privacy: 'Privacy',
+      privacy_text: 'No ads, no tracking, no account. The app collects no personal data – it talks only to your TV on your home network.',
+      version: 'Version {v}',
+      help_samsung: '• On first connection the TV shows a prompt – choose <b>Allow</b>.<br>' +
+        "• To let the power button turn on a TV that's off: on the TV, enable Settings → General → Network → Expert Settings → <b>Power On with Mobile</b>.",
+      help_lg: '• On first connection the TV shows a prompt – choose <b>Accept</b>.<br>' +
+        "• To let the power button turn on a TV that's off: on the TV, enable <b>TV On With Mobile / Turn on via Wi-Fi</b> (under Settings → General → Devices; the location varies by model).",
+      help_androidtv: '• On first connection the TV shows a 6-character code – type it on your phone.<br>' +
+        "• To let the power button turn on a TV that's off, the TV must stay on the network in standby: in the TV settings (usually under System → Power & Energy) look for an option like <b>Network standby</b>, <b>Wake on LAN / Wi-Fi</b> or <b>Google Cast – always available</b>, and turn it on.",
+      help_wifi: '• Your phone and TV must be on the same Wi-Fi network.',
+      no_tv_yet: 'No TV selected yet. Tap "Search for TVs".',
+      selected: 'Selected', scanning: 'Searching your network…',
+      connecting_to: 'Connecting to {name}', bad_ip: 'Invalid IP address',
+      st_idle: 'Ready', st_connecting: 'Connecting…', st_reconnecting: 'Reconnecting…',
+      st_pairing: 'Approve the connection on the TV (Allow)', st_pin: 'Enter the code shown on the TV',
+      st_denied: 'Connection refused – tap to retry', st_noTv: 'No TV selected – tap here', st_badIp: 'Invalid IP address',
+      tvs_empty: 'No saved TVs yet.', connected_now: 'Connected now',
+      rename: 'Rename', remove: 'Remove', remove_q: 'Remove?', removed: 'Removed',
+      rename_ph: 'e.g. Living room', saved: 'Saved', switching_to: 'Switching to {name}',
+      pin_bad: 'The code is 6 characters: digits and A to F', pin_checking: 'Checking the code…',
+      running: 'Running {name}…', rec_none: 'No keys were recorded', macro_need: 'Give the shortcut a name',
+      macro_saved: 'Shortcut "{name}" saved', slot_updated: 'Button updated',
+      sent: 'Sent', opening: 'Opening {name}', sent_tv: 'Sent to the TV',
+      kb_need: 'Type what to search for first', yt_searching: 'Searching YouTube…',
+      perm_notif: "Without notification permission, the controls won't appear in notifications",
+      call_pause_on: 'The TV will pause during calls', call_mute_on: 'The TV will mute during calls',
+      perm_phone: 'Permission is needed to detect incoming calls',
+      no_wifi: "Your phone isn't connected to Wi-Fi",
+      no_tv_found: "No TV found. Make sure it's on and on the same network",
+      tv_wants_text: 'The TV is waiting for text',
+      dismiss: 'Dismiss',
+      trial_left: 'Free trial: {n} days left', trial_left_one: 'Free trial: 1 day left', trial_last: 'Free trial: last day',
+      unlock_price: 'Unlock forever for {price}', unlock_forever: 'Unlock forever', unlock: 'Unlock',
+      full_version: 'Full version ✓',
+      pw_title: 'Your free trial has ended',
+      pw_text: 'Keep using TV Remote with a single one-time purchase. Pay once and it’s yours forever.',
+      pw_b_ads: 'No ads, ever', pw_b_sub: 'No subscription – pay once',
+      pw_b_brands: 'All supported TVs: Samsung, LG, Android TV / Google TV',
+      pw_b_call: 'Auto-mute or pause the TV when a call comes in',
+      pw_b_lock: 'Remote on the lock screen and in notifications',
+      pw_b_sleep: 'Sleep timer', pw_b_voice: 'Voice search and opening apps by voice',
+      pw_buy_price: 'Unlock for {price}', pw_buy: 'Unlock', pw_restore: 'Restore purchase',
+      pw_fine: 'One-time payment through Google Play. No subscription, no recurring charges.',
+      lic_thanks: 'Thank you! The full version is unlocked.',
+    },
+    he: {
+      app_name: 'שלט לטלוויזיה',
+      lang_word: 'שפה', lang_self: 'עברית',
+      a_power: 'הפעלה / כיבוי', a_voice: 'חיפוש קולי', a_settings: 'הגדרות',
+      a_volup: 'הגבר', a_voldown: 'הנמך', vol: 'קול',
+      mute: 'השתק', a_tvmenu: 'הגדרות טלוויזיה', menu: 'תפריט',
+      a_chup: 'ערוץ למעלה', a_chdown: 'ערוץ למטה', ch: 'ערוץ',
+      numbers: 'מספרים', more: 'עוד', back: 'חזור', home: 'בית',
+      mode_pad: 'חיצים', a_mode_pad: 'חיצים', mode_tp: 'מגע', a_mode_tp: 'משטח מגע',
+      a_up: 'למעלה', a_down: 'למטה', a_left: 'שמאלה', a_right: 'ימינה',
+      tp_hint: 'החלק לכיוון · הקש לאישור',
+      a_rew: 'אחורה', a_play: 'נגן', a_pause: 'השהה', a_ff: 'קדימה',
+      apps: 'אפליקציות',
+      rec_start: 'מקליט… לחץ על הכפתורים בשלט (למשל: בית ← חיצים ← OK)',
+      rec_count: 'מקליט… {n} מקשים',
+      done: 'סיום', cancel: 'ביטול',
+      ch_list: 'רשימת ערוצים', prev_ch: 'ערוץ קודם',
+      more_title: 'עוד מקשים', k_keyboard: 'הקלדת טקסט', sleep_timer: 'טיימר שינה',
+      k_source: 'מקור / HDMI', k_info: 'מידע', k_guide: 'מדריך שידורים', k_tools: 'אפשרויות', k_exit: 'יציאה',
+      k_caption: 'כתוביות', k_stop: 'עצור', k_rec: 'הקלטה', k_picsize: 'גודל תמונה',
+      heard: 'שמעתי:',
+      voice_noapp: 'לא מצאתי אפליקציה בשם הזה. מה לעשות?',
+      voice_type: 'להקליד בטלוויזיה', voice_yt: 'לחפש ביוטיוב',
+      voice_note: 'הקלדה עובדת כשבטלוויזיה פתוח שדה חיפוש או מקלדת.',
+      voice_again: '🎤 לדבר שוב',
+      macro_title: 'שם לקיצור', macro_ph: 'למשל: STING', save: 'שמור',
+      macro_note: 'לחיצה על הקיצור, או אמירת השם בחיפוש הקולי, תפעיל את אותו רצף מקשים.',
+      macro_info: 'הוקלטו {n} מקשים.',
+      sleep_auto: 'הטלוויזיה תכבה אוטומטית בעוד:',
+      sleep_left: 'הטלוויזיה תכבה בעוד {n} דקות. לשנות?',
+      minutes: 'דקות', sleep_custom: 'או זמן אחר (בדקות)', sleep_ph: 'למשל: 1',
+      start: 'הפעל', sleep_cancel: 'בטל טיימר',
+      sleep_set: 'הטלוויזיה תכבה בעוד {n} דקות', sleep_off: 'הטיימר בוטל',
+      sleep_bad: 'הזן מספר דקות בין 1 ל-600', sleep_tile: 'כיבוי בעוד {n} דק׳',
+      tvs_title: 'הטלוויזיות שלי', add_tv: '+ הוסף טלוויזיה',
+      pick_title: 'בחר אפליקציה לכפתור',
+      pick_record: '🎬 הקלט רצף מקשים (לכל אפליקציה)',
+      pick_reset: 'החזר לברירת המחדל',
+      kb_title: 'הקלדה לטלוויזיה',
+      kb_note: 'הקלדה עובדת כשבטלוויזיה פתוחה מקלדת של המערכת (למשל בדפדפן או בנטפליקס). ביוטיוב בטלוויזיות סמסונג יש מקלדת משלה שלא מקבלת הקלדה מהטלפון.',
+      kb_ph: 'טקסט לשליחה', a_speak: 'דבר', send: 'שלח', kb_yt: '▶ חפש ביוטיוב',
+      kb_enter: 'Enter בטלוויזיה', kb_close: 'סגור מקלדת',
+      pin_title: 'קוד צימוד',
+      pin_note: 'בטלוויזיה מופיע עכשיו קוד בן 6 תווים (ספרות ואותיות A–F). הקלד אותו כאן:',
+      ok: 'אישור', refresh: 'רענן', all_apps_tv: '📺 פתח את כל האפליקציות בטלוויזיה',
+      apps_tip: 'טיפ: לחיצה ארוכה על כפתור קיצור בתחתית השלט מאפשרת לבחור איזו אפליקציה הוא פותח. חסרה אפליקציה? אפשר להקליט אליה קיצור: לחיצה ארוכה ← "הקלט רצף מקשים".',
+      apps_note_atv: 'אנדרואיד TV לא משתפת את רשימת האפליקציות המותקנות, לכן מוצגות כאן אפליקציות פופולריות. אפליקציה שלא מותקנת פשוט לא תיפתח.',
+      apps_note_samsung: 'סמסונג לא משתפת את הרשימה המלאה, לכן מוצגות האפליקציות המוכרות שזוהו בטלוויזיה. לכל השאר – הכפתור למעלה.',
+      apps_connect: 'התחבר לטלוויזיה כדי לראות את האפליקציות',
+      apps_loading: 'טוען רשימת אפליקציות…',
+      apps_none: 'לא נמצאו אפליקציות.<br>אפשר ללחוץ "רענן" כדי לנסות שוב.',
+      set_title: 'חיבור לטלוויזיה', tvs_on_net: 'טלוויזיות ברשת', scan_btn: 'חפש טלוויזיות ברשת',
+      manual_ip: 'או הזן כתובת IP ידנית', connect: 'התחבר',
+      ip_note: 'כתובת ה-IP מופיעה בהגדרות הרשת של הטלוויזיה (למשל: הגדרות ← כללי ← רשת ← מצב רשת).',
+      prefs: 'הגדרות',
+      pref_hw: 'כפתורי הווליום של הטלפון שולטים בטלוויזיה',
+      pref_haptic: 'רטט בלחיצה',
+      pref_simple: 'מצב פשוט – פחות כפתורים, כפתורים גדולים',
+      quick_title: 'גישה מהירה מחוץ לאפליקציה',
+      pref_quick: 'כפתורי שליטה בהתראות ובמסך הנעילה',
+      on_call: 'כשנכנסת שיחה', call_off: 'כלום', call_mute: 'השתק', call_pause: 'השהה',
+      quick_note: 'אפשר גם להוסיף <b>ווידג\'ט</b> למסך הבית (לחיצה ארוכה על מסך הבית ← ווידג\'טים ← שלט לטלוויזיה), ו<b>כפתורים להגדרות המהירות</b> (משיכה למטה מראש המסך ← עריכה ← "שלט" / "השתק TV").',
+      trouble: 'פתרון בעיות', reconnect: 'התחבר מחדש', repair: 'צמד מחדש', repairing: 'מצמד מחדש…',
+      copy_diag: '📋 העתק מידע לאבחון תקלות',
+      privacy: 'פרטיות',
+      privacy_text: 'בלי פרסומות, בלי מעקב, בלי חשבון. האפליקציה לא אוספת שום מידע אישי – היא מדברת רק עם הטלוויזיה שלך ברשת הביתית.',
+      version: 'גרסה {v}',
+      help_samsung: '• בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Allow / אפשר</b>.<br>' +
+        '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל הגדרות ← כללי ← רשת ← הגדרות מומחה ← <b>הפעלה עם נייד (Power On with Mobile)</b>.',
+      help_lg: '• בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Accept / אישור</b>.<br>' +
+        '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל <b>הדלקה דרך Wi-Fi / TV On With Mobile</b> (בהגדרות ← כללי ← התקנים; המיקום משתנה לפי הדגם).',
+      help_androidtv: '• בחיבור הראשון יופיע בטלוויזיה קוד בן 6 תווים – הקלד אותו בטלפון.<br>' +
+        '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה, הטלוויזיה צריכה להישאר מחוברת לרשת במצב המתנה: חפשו בהגדרות הטלוויזיה (בדרך כלל תחת מערכת ← חשמל ואנרגיה) אפשרות כמו <b>המתנה ברשת / Network standby</b>, <b>Wake on LAN / Wi-Fi</b> או <b>Google Cast – זמין תמיד</b>, והפעילו אותה.',
+      help_wifi: '• הטלפון והטלוויזיה חייבים להיות מחוברים לאותה רשת Wi-Fi.',
+      no_tv_yet: 'עדיין לא נבחרה טלוויזיה. לחץ "חפש טלוויזיות ברשת".',
+      selected: 'נבחרה', scanning: 'מחפש ברשת…',
+      connecting_to: 'מתחבר ל-{name}', bad_ip: 'כתובת IP לא תקינה',
+      st_idle: 'מוכן', st_connecting: 'מתחבר…', st_reconnecting: 'מתחבר מחדש…',
+      st_pairing: 'אשר את החיבור בטלוויזיה (Allow)', st_pin: 'הקלד את הקוד שמופיע בטלוויזיה',
+      st_denied: 'החיבור נדחה – לחץ לניסיון חוזר', st_noTv: 'לא נבחרה טלוויזיה – לחץ כאן', st_badIp: 'כתובת IP לא תקינה',
+      tvs_empty: 'עדיין אין טלוויזיות שמורות.', connected_now: 'מחובר עכשיו',
+      rename: 'שנה שם', remove: 'הסר', remove_q: 'הסר?', removed: 'הוסרה',
+      rename_ph: 'למשל: סלון', saved: 'נשמר', switching_to: 'עובר ל-{name}',
+      pin_bad: 'הקוד הוא 6 תווים: ספרות ו-A עד F', pin_checking: 'בודק את הקוד…',
+      running: 'מפעיל {name}…', rec_none: 'לא הוקלטו מקשים', macro_need: 'צריך שם לקיצור',
+      macro_saved: 'הקיצור "{name}" נשמר', slot_updated: 'הכפתור עודכן',
+      sent: 'נשלח', opening: 'פותח {name}', sent_tv: 'נשלח לטלוויזיה',
+      kb_need: 'כתבו קודם מה לחפש', yt_searching: 'מחפש ביוטיוב…',
+      perm_notif: 'בלי הרשאת התראות הכפתורים לא יוצגו בהתראות',
+      call_pause_on: 'הטלוויזיה תעצור בזמן שיחה', call_mute_on: 'הטלוויזיה תושתק בזמן שיחה',
+      perm_phone: 'צריך הרשאה לזהות שיחות נכנסות',
+      no_wifi: 'הטלפון לא מחובר ל-Wi-Fi',
+      no_tv_found: 'לא נמצאה טלוויזיה. ודא שהיא דלוקה ובאותה רשת',
+      tv_wants_text: 'הטלוויזיה מחכה לטקסט',
+      dismiss: 'סגור',
+      trial_left: 'תקופת ניסיון: נותרו {n} ימים', trial_left_one: 'תקופת ניסיון: נותר יום אחד', trial_last: 'תקופת ניסיון: יום אחרון',
+      unlock_price: 'פתיחה לתמיד ב-{price}', unlock_forever: 'פתיחה לתמיד', unlock: 'פתיחה',
+      full_version: 'גרסה מלאה ✓',
+      pw_title: 'תקופת הניסיון הסתיימה',
+      pw_text: 'אפשר להמשיך להשתמש בשלט לטלוויזיה ברכישה חד-פעמית. משלמים פעם אחת – והוא שלכם לתמיד.',
+      pw_b_ads: 'בלי פרסומות, אף פעם', pw_b_sub: 'בלי מנוי – תשלום אחד',
+      pw_b_brands: 'כל הטלוויזיות הנתמכות: סמסונג, LG, Android TV / Google TV',
+      pw_b_call: 'השתקה או עצירה אוטומטית של הטלוויזיה כשנכנסת שיחה',
+      pw_b_lock: 'שלט במסך הנעילה ובהתראות',
+      pw_b_sleep: 'טיימר שינה', pw_b_voice: 'חיפוש קולי ופתיחת אפליקציות בקול',
+      pw_buy_price: 'פתיחה ב-{price}', pw_buy: 'פתיחת הגרסה המלאה', pw_restore: 'שחזור רכישה',
+      pw_fine: 'תשלום חד-פעמי דרך Google Play. בלי מנוי ובלי חיובים חוזרים.',
+      lic_thanks: 'תודה! הגרסה המלאה נפתחה.',
+    },
+  };
+  const LANGS = ['en', 'he'];
+  let LANG = 'en';
+  // Translate a key, filling {name} placeholders from vars. Falls back to English, then to the key itself.
+  function t(key, vars) {
+    let s = I18N[LANG][key];
+    if (s == null) s = I18N.en[key];
+    if (s == null) return key;
+    return vars ? s.replace(/\{(\w+)\}/g, (m, k) => (vars[k] != null ? String(vars[k]) : m)) : s;
+  }
+  function detectLang() {
+    const saved = String(A.getPref('lang', '') || '');
+    if (LANGS.includes(saved)) return saved;
+    const nl = String(navigator.language || '').toLowerCase();
+    return nl.startsWith('he') || nl.startsWith('iw') ? 'he' : 'en';
+  }
+  // Fill every static string on the page in the current language.
+  function applyLang() {
+    const html = document.documentElement;
+    html.lang = LANG;
+    html.dir = LANG === 'he' ? 'rtl' : 'ltr';
+    document.title = t('app_name');
+    const all = (sel, fn) => document.querySelectorAll(sel).forEach(fn);
+    all('[data-i18n]', (el) => { el.textContent = t(el.dataset.i18n); });
+    all('[data-i18n-html]', (el) => { el.innerHTML = t(el.dataset.i18nHtml); });
+    all('[data-i18n-aria]', (el) => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
+    all('[data-i18n-placeholder]', (el) => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+    const other = LANG === 'he' ? 'en' : 'he';
+    // The language's own name, always written in that language ("English" / "עברית").
+    all('[data-lang-name]', (el) => {
+      const code = el.dataset.langName === 'other' ? other : el.dataset.langName;
+      el.textContent = I18N[code].lang_self;
+      el.lang = code;
+      el.dir = code === 'he' ? 'rtl' : 'ltr';
+    });
+    all('[data-i18n-other]', (el) => { el.textContent = I18N[other][el.dataset.i18nOther]; el.lang = other; });
+    all('[data-lang]', (el) => el.classList.toggle('on', el.dataset.lang === LANG));
+  }
+  function setLanguage(code) {
+    if (!LANGS.includes(code)) return;
+    LANG = code;
+    A.setPref('lang', code);
+    if (typeof A.setLang === 'function') A.setLang(code); // native notifications follow the app language
+    applyLang();
+    rerender();
+  }
+  // Re-render every JS-built part after a language change.
+  function rerender() {
+    renderStatus();
+    renderShortcuts();
+    renderSleepTile();
+    renderLicense();
+    renderRecText();
+    $('ver').textContent = t('version', { v: A.version() || '' });
+    if (shown('settings')) renderSettings();
+    if (shown('tvs')) renderTvs();
+    if (shown('apps')) renderApps();
+    if (shown('pick')) renderPicker();
+    if (shown('sleep')) renderSleep();
+    if (shown('macro') && recording) $('macroInfo').textContent = t('macro_info', { n: recording.keys.length });
+  }
+
+  /* ---------- license: family build, free trial, purchased or expired ---------- */
+  let LIC = { state: 'family', daysLeft: 0, price: null };
+  let trialDismissed = false;
+  function normLicense(o) {
+    const state = ['family', 'trial', 'purchased', 'expired'].includes(o && o.state) ? o.state : 'family';
+    const price = o && o.price != null && String(o.price).trim() ? String(o.price) : null;
+    return { state, daysLeft: Math.max(0, Math.floor(Number(o && o.daysLeft) || 0)), price };
+  }
+  function readLicense() {
+    try {
+      if (typeof A.license !== 'function') return normLicense(null);
+      const v = A.license();
+      return normLicense(typeof v === 'string' ? (v ? JSON.parse(v) : null) : v);
+    } catch (e) { return normLicense(null); }
+  }
+  const isLocked = () => LIC.state === 'expired';
+  // Call before anything that controls the TV: while the trial is over, show the paywall instead.
+  function locked() {
+    if (!isLocked()) return false;
+    showPaywall();
+    return true;
+  }
+  function buy() { if (typeof A.buy === 'function') A.buy(); }
+  function restore() { if (typeof A.restore === 'function') A.restore(); }
+  function dismissTrial() { trialDismissed = true; renderLicense(); }
+  function trialLeftText(n) {
+    return n <= 0 ? t('trial_last') : n === 1 ? t('trial_left_one') : t('trial_left', { n });
+  }
+  function showPaywall() {
+    document.querySelectorAll('.sheet.show').forEach((s) => { if (s.id !== 'sheet-paywall') s.classList.remove('show'); });
+    if (!shown('paywall')) sheetOpenedAt = Date.now();
+    $('sheet-paywall').classList.add('show');
+    $('scrim').classList.add('show');
+  }
+  function renderLicense() {
+    const L = LIC;
+    const price = L.price ? '\u2068' + L.price + '\u2069' : null; // bidi-isolated, so "$4.99" reads right inside Hebrew
+    const unlockText = price ? t('unlock_price', { price }) : t('unlock_forever');
+    $('trialBar').classList.toggle('show', L.state === 'trial' && !trialDismissed);
+    $('trialText').innerHTML = esc(trialLeftText(L.daysLeft)) + ' · <b>' + esc(unlockText) + '</b>';
+    const row = $('licRow');
+    if (L.state === 'trial') {
+      row.style.display = '';
+      row.innerHTML = '<div class="lic-txt">' + esc(trialLeftText(L.daysLeft)) + '<span class="note">' + esc(unlockText) + '</span></div>' +
+        '<button class="btn" id="licBuy" onclick="buy()">' + esc(t('unlock')) + '</button>';
+    } else if (L.state === 'purchased') {
+      row.style.display = '';
+      row.innerHTML = '<div class="lic-full">' + esc(t('full_version')) + '</div>';
+    } else {
+      row.style.display = 'none';
+      row.innerHTML = '';
+    }
+    $('pwBuy').textContent = price ? t('pw_buy_price', { price }) : t('pw_buy');
+    if (L.state === 'expired') {
+      if (!shown('paywall')) { stopRepeat(); cancelRecording(); showPaywall(); }
+    } else if (shown('paywall')) {
+      $('sheet-paywall').classList.remove('show');
+      if (!document.querySelector('.sheet.show')) $('scrim').classList.remove('show');
+    }
+  }
 
   // Shortcut buttons: app ids per TV family (Android TV takes package names).
   const KNOWN_APPS = {
@@ -569,15 +991,6 @@
 
   const BRANDS = { samsung: 'Samsung', lg: 'LG', androidtv: 'Android TV' };
 
-  const HELP = {
-    samsung: '• בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Allow / אפשר</b>.<br>' +
-      '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל הגדרות ← כללי ← רשת ← הגדרות מומחה ← <b>הפעלה עם נייד (Power On with Mobile)</b>.',
-    lg: '• בחיבור הראשון תופיע בטלוויזיה הודעה – בחר <b>Accept / אישור</b>.<br>' +
-      '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה: בטלוויזיה הפעל <b>הדלקה דרך Wi-Fi / TV On With Mobile</b> (בהגדרות ← כללי ← התקנים; המיקום משתנה לפי הדגם).',
-    androidtv: '• בחיבור הראשון יופיע בטלוויזיה קוד בן 6 תווים – הקלד אותו בטלפון.<br>' +
-      '• כדי שכפתור ההדלקה ידליק טלוויזיה כבויה, הטלוויזיה צריכה להישאר מחוברת לרשת במצב המתנה: חפשו בהגדרות הטלוויזיה (בדרך כלל תחת מערכת ← חשמל ואנרגיה) אפשרות כמו <b>המתנה ברשת / Network standby</b>, <b>Wake on LAN / Wi-Fi</b> או <b>Google Cast – זמין תמיד</b>, והפעילו אותה.',
-  };
-
   const S = { state: 'idle', ip: '', tvType: '', name: '', label: '', mac: '', tvs: [], sleepAt: 0, apps: [], scanning: false, found: [] };
   const pref = {
     haptic: A.getPref('haptic', '1') !== '0',
@@ -590,24 +1003,33 @@
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const shown = (name) => $('sheet-' + name).classList.contains('show');
 
   function buzz() { if (pref.haptic) A.haptic(); }
   let recording = null; // { slot, keys: [] } while recording a shortcut
+  // The one path every remote key goes through.
   function send(key) {
+    if (locked()) return;
     A.key(key);
     if (recording) {
       recording.keys.push(key);
-      $('recText').textContent = 'מקליט… ' + recording.keys.length + ' מקשים';
+      renderRecText();
     }
   }
+  // Every app launch goes through here.
+  function launch(appId, type) {
+    if (locked()) return;
+    A.launch(appId, type);
+  }
+  function startVoice() { if (locked()) return; A.voice(); }
 
   let toastTimer;
   function toast(text) {
-    const t = $('toast');
-    t.textContent = text;
-    t.classList.add('show');
+    const el = $('toast');
+    el.textContent = text;
+    el.classList.add('show');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
   }
 
   /* ---------- buttons: tap, hold-to-repeat ---------- */
@@ -628,6 +1050,7 @@
     el.classList.add('pressed');
     // Keys in scrollable panels wait for a completed tap, so scrolling doesn't press them.
     if (!el.dataset.key || el.closest('.tapkeys')) return;
+    if (isLocked()) { locked(); return; }
     buzz();
     send(el.dataset.key);
     if ('repeat' in el.dataset) {
@@ -652,6 +1075,13 @@
     else if (el.dataset.sheet) openSheet(el.dataset.sheet);
     else if (el.dataset.sleep) setSleep(Number(el.dataset.sleep));
   });
+  // Language buttons (Settings and the paywall).
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-lang]');
+    if (!b) return;
+    buzz();
+    setLanguage(b.dataset.lang);
+  });
   // Swallow a stray click that arrives right after a panel opened (e.g. after a long-press).
   let sheetOpenedAt = 0;
   window.addEventListener('click', (e) => {
@@ -669,6 +1099,8 @@
   document.addEventListener('contextmenu', (e) => e.preventDefault());
 
   function runAction(a) {
+    if (a === 'lang') { setLanguage(LANG === 'he' ? 'en' : 'he'); return; }
+    if (locked()) return;
     if (a === 'power') A.power();
     else if (a === 'keyboard') { openSheet('keyboard'); setTimeout(() => $('kbText').focus(), 250); }
     else if (a === 'voice') { closeSheets(); A.voice(); }
@@ -699,7 +1131,8 @@
       setTimeout(() => d.remove(), 400);
     }
     pad.addEventListener('pointerdown', (e) => {
-      id = e.pointerId; pad.setPointerCapture(id);
+      id = e.pointerId;
+      try { pad.setPointerCapture(id); } catch (err) { /* synthetic or already-ended pointer */ }
       sx = ox = e.clientX; sy = oy = e.clientY; t0 = Date.now(); moved = false;
     });
     pad.addEventListener('pointermove', (e) => {
@@ -707,6 +1140,7 @@
       const dx = e.clientX - sx, dy = e.clientY - sy;
       if (Math.abs(dx) < STEP && Math.abs(dy) < STEP) return;
       moved = true;
+      // Physical directions: a swipe to the right is always KEY_RIGHT, in either language.
       if (Math.abs(dx) > Math.abs(dy)) send(dx > 0 ? 'KEY_RIGHT' : 'KEY_LEFT');
       else send(dy > 0 ? 'KEY_DOWN' : 'KEY_UP');
       buzz();
@@ -724,6 +1158,7 @@
 
   /* ---------- sheets ---------- */
   function openSheet(name) {
+    if (isLocked() && name !== 'paywall') { showPaywall(); return; }
     closeSheets(true);
     sheetOpenedAt = Date.now();
     $('sheet-' + name).classList.add('show');
@@ -735,12 +1170,15 @@
     if (name === 'sleep') renderSleep();
     if (name === 'keyboard') $('kbYt').style.display = ytSearchOk() ? '' : 'none';
   }
+  // Closes every panel except the paywall, which stays up for as long as the trial is over.
   function closeSheets(keepScrim) {
-    document.querySelectorAll('.sheet.show').forEach((s) => s.classList.remove('show'));
-    if (!keepScrim) $('scrim').classList.remove('show');
+    const keepPaywall = isLocked();
+    document.querySelectorAll('.sheet.show').forEach((s) => { if (!(keepPaywall && s.id === 'sheet-paywall')) s.classList.remove('show'); });
+    if (!keepScrim && !keepPaywall) $('scrim').classList.remove('show');
     if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
   }
   window.handleBack = function () {
+    if (isLocked()) return false; // the paywall can't be dismissed; Back leaves the app as usual
     if (recording && $('recbar').classList.contains('show')) { cancelRecording(); return true; }
     if (document.querySelector('.sheet.show')) { closeSheets(); return true; }
     return false;
@@ -748,11 +1186,12 @@
 
   /* ---------- apps ---------- */
   function launchKnown(key) {
+    if (locked()) return;
     const k = KNOWN_APPS[key];
     const type = S.tvType || 'samsung';
     const found = type !== 'androidtv' && S.apps.find((a) => k.names.some((n) => (a.name || '').toLowerCase().includes(n)));
-    if (found) A.launch(String(found.appId), Number(found.app_type) || 2);
-    else (k[type] || []).forEach((id) => A.launch(id, 2));
+    if (found) launch(String(found.appId), Number(found.app_type) || 2);
+    else (k[type] || []).forEach((id) => launch(id, 2));
   }
   function appList() { return S.tvType === 'androidtv' ? ANDROID_TV_APPS : S.apps; }
   const PALETTE = ['#3d8bff', '#9d5cf2', '#e04f3f', '#f3a03c', '#2bb673', '#f2546b', '#5fd3b0', '#c08b4a'];
@@ -762,8 +1201,8 @@
     appsAnswered = false;
     A.refreshApps();
     setTimeout(() => {
-      if ($('sheet-apps').classList.contains('show')) renderApps();
-      if ($('sheet-pick').classList.contains('show')) renderPicker();
+      if (shown('apps')) renderApps();
+      if (shown('pick')) renderPicker();
     }, 9000);
   }
   function allAppsOnTv() {
@@ -773,22 +1212,19 @@
   window.allAppsOnTv = allAppsOnTv;
   function renderApps() {
     const box = $('applist');
-    $('appsNote').textContent = S.tvType === 'androidtv'
-      ? 'אנדרואיד TV לא משתפת את רשימת האפליקציות המותקנות, לכן מוצגות כאן אפליקציות פופולריות. אפליקציה שלא מותקנת פשוט לא תיפתח.'
-      : S.tvType === 'samsung'
-        ? 'סמסונג לא משתפת את הרשימה המלאה, לכן מוצגות האפליקציות המוכרות שזוהו בטלוויזיה. לכל השאר – הכפתור למעלה.'
-        : '';
+    $('appsNote').textContent = S.tvType === 'androidtv' ? t('apps_note_atv')
+      : S.tvType === 'samsung' ? t('apps_note_samsung') : '';
     $('appsRefresh').style.display = S.tvType === 'androidtv' ? 'none' : '';
     if (!appList().length) {
       const waiting = !appsAnswered && Date.now() - appsAskedAt < 8500;
       box.innerHTML = '<div class="empty" style="grid-column:1/-1">' +
-        (S.state !== 'connected' && !waiting ? 'התחבר לטלוויזיה כדי לראות את האפליקציות'
-          : waiting ? '<span class="spinner"></span> טוען רשימת אפליקציות…'
-          : 'לא נמצאו אפליקציות.<br>אפשר ללחוץ "רענן" כדי לנסות שוב.') + '</div>';
+        (S.state !== 'connected' && !waiting ? esc(t('apps_connect'))
+          : waiting ? '<span class="spinner"></span> ' + esc(t('apps_loading'))
+          : t('apps_none')) + '</div>';
       return;
     }
     const apps = appList().slice().sort((a, b) => (a.name || '').localeCompare(b.name || ''));
-    box.innerHTML = apps.map((a, i) => {
+    box.innerHTML = apps.map((a) => {
       const name = a.name || a.appId;
       const color = PALETTE[[...name].reduce((s, c) => s + c.charCodeAt(0), 0) % PALETTE.length];
       return '<button data-launch="' + esc(a.appId) + '" data-type="' + (Number(a.app_type) || 2) + '">' +
@@ -813,54 +1249,61 @@
     });
   }
   function launchSlot(i) {
+    if (locked()) return;
     const slot = slots()[i];
     if (typeof slot === 'string') launchKnown(slot);
     else if (slot.macro) playMacro(slot.macro, slot.name);
-    else A.launch(String(slot.appId), Number(slot.appType) || 2);
+    else launch(String(slot.appId), Number(slot.appType) || 2);
   }
 
   /* ---------- recorded shortcuts (macros) ---------- */
   let macroPlaying = false;
   function playMacro(keys, name) {
-    if (macroPlaying) return;
+    if (macroPlaying || locked()) return;
     macroPlaying = true;
-    toast('מפעיל ' + name + '…');
-    let t = 0;
+    toast(t('running', { name }));
+    let delay = 0;
     keys.forEach((k, idx) => {
-      setTimeout(() => { A.key(k); if (idx === keys.length - 1) macroPlaying = false; }, t);
+      setTimeout(() => { if (!isLocked()) A.key(k); if (idx === keys.length - 1) macroPlaying = false; }, delay);
       // Home and Back redraw whole screens on the TV: give them time.
-      t += (k === 'KEY_HOME' || k === 'KEY_RETURN') ? 1800 : 550;
+      delay += (k === 'KEY_HOME' || k === 'KEY_RETURN') ? 1800 : 550;
     });
     if (!keys.length) macroPlaying = false;
   }
+  function renderRecText() {
+    if (!recording) return;
+    $('recText').textContent = recording.keys.length ? t('rec_count', { n: recording.keys.length }) : t('rec_start');
+  }
   function startRecording() {
+    if (locked()) return;
     recording = { slot: pickSlot, keys: [] };
     closeSheets();
-    $('recText').textContent = 'מקליט… לחץ על הכפתורים בשלט (למשל: בית ← חיצים ← OK)';
+    renderRecText();
     $('recbar').classList.add('show');
   }
   function cancelRecording() { recording = null; $('recbar').classList.remove('show'); }
   function finishRecording() {
     $('recbar').classList.remove('show');
-    if (!recording || !recording.keys.length) { recording = null; toast('לא הוקלטו מקשים'); return; }
-    $('macroInfo').textContent = 'הוקלטו ' + recording.keys.length + ' מקשים.';
+    if (!recording || !recording.keys.length) { recording = null; toast(t('rec_none')); return; }
+    $('macroInfo').textContent = t('macro_info', { n: recording.keys.length });
     $('macroName').value = '';
     openSheet('macro');
     setTimeout(() => $('macroName').focus(), 250);
   }
   function saveMacro() {
     const name = $('macroName').value.trim();
-    if (!name) { toast('צריך שם לקיצור'); return; }
+    if (!name) { toast(t('macro_need')); return; }
     const v = slots();
     v[recording.slot] = { name, macro: recording.keys.slice() };
     saveSlots(v);
     recording = null;
-    toast('הקיצור "' + name + '" נשמר');
+    toast(t('macro_saved', { name }));
     closeSheets();
   }
   $('macroName').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); saveMacro(); } });
   let pickSlot = 0;
   function openPicker(i) {
+    if (locked()) return;
     pickSlot = i;
     openSheet('pick');
     renderPicker();
@@ -883,7 +1326,7 @@
       const v = slots();
       v[pickSlot] = a.known ? a.known : { name: a.name || a.appId, appId: String(a.appId), appType: Number(a.app_type) || 2 };
       saveSlots(v);
-      toast('הכפתור עודכן');
+      toast(t('slot_updated'));
       closeSheets();
     };
   }
@@ -902,10 +1345,10 @@
         b.classList.add('pressed');
         timer = setTimeout(() => { longPressed = true; buzz(); b.classList.remove('pressed'); openPicker(i); }, 550);
       });
-      const end = (launch) => {
+      const end = (go) => {
         clearTimeout(timer);
         b.classList.remove('pressed');
-        if (launch && !longPressed) { buzz(); launchSlot(i); }
+        if (go && !longPressed) { buzz(); launchSlot(i); }
         longPressed = true;
       };
       b.addEventListener('pointerup', () => end(true));
@@ -918,22 +1361,23 @@
     const b = e.target.closest('[data-launch]');
     if (!b) return;
     buzz();
-    A.launch(b.dataset.launch, Number(b.dataset.type));
+    launch(b.dataset.launch, Number(b.dataset.type));
     closeSheets();
   });
 
   /* ---------- keyboard ---------- */
   function sendText() {
     const v = $('kbText').value;
-    if (!v) return;
+    if (!v || locked()) return;
     A.text(v);
     $('kbText').value = '';
-    toast('נשלח');
+    toast(t('sent'));
   }
   $('kbText').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); sendText(); } });
   $('sleepCustom').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); setSleepCustom(); } });
 
   /* ---------- voice: open an app by name, otherwise offer to type it ---------- */
+  // Voice data (not UI text): spoken names in Hebrew and English.
   const VOICE_KNOWN = [
     ['netflix', ['נטפליקס', 'נטפלקס', 'netflix']],
     ['youtube', ['יוטיוב', 'יו טיוב', 'יוטוב', 'youtube']],
@@ -954,52 +1398,54 @@
     return new RegExp('(^|[\\s,.!?])[והבלמשכ]?' + w + '($|[\\s,.!?])').test(text);
   }
   // Does the spoken text name this app/shortcut? Direct match, or a Hebrew alias of its English name.
-  function voiceMatches(t, name) {
+  function voiceMatches(text, name) {
     const n = String(name || '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
-    if (n.length >= 2 && t.length >= 2 && (hasWord(t, n) || hasWord(n, t))) return true;
-    return Object.entries(VOICE_ALIASES).some(([en, he]) => hasWord(n, en) && he.some((w) => hasWord(t, w)));
+    if (n.length >= 2 && text.length >= 2 && (hasWord(text, n) || hasWord(n, text))) return true;
+    return Object.entries(VOICE_ALIASES).some(([en, he]) => hasWord(n, en) && he.some((w) => hasWord(text, w)));
   }
   function onVoice(raw) {
     const text = String(raw || '').trim();
-    if (!text) return;
-    const t = text.toLowerCase().replace(/^(תפתח|פתח|תפעיל|הפעל|תעבור ל|open|launch|start)\s+(את\s+)?/, '').trim();
-    const macro = slots().find((sl) => sl && sl.macro && voiceMatches(t, sl.name));
+    if (!text || locked()) return;
+    const q = text.toLowerCase().replace(/^(תפתח|פתח|תפעיל|הפעל|תעבור ל|open|launch|start)\s+(את\s+)?/, '').trim();
+    const macro = slots().find((sl) => sl && sl.macro && voiceMatches(q, sl.name));
     if (macro) { playMacro(macro.macro, macro.name); return; }
     for (const [key, words] of VOICE_KNOWN) {
-      if (words.some((w) => hasWord(t, w))) { launchKnown(key); toast('פותח ' + KNOWN_APPS[key].label); return; }
+      if (words.some((w) => hasWord(q, w))) { launchKnown(key); toast(t('opening', { name: KNOWN_APPS[key].label })); return; }
     }
-    const hit = appList().find((a) => voiceMatches(t, a.name));
-    if (hit) { A.launch(String(hit.appId), Number(hit.app_type) || 2); toast('פותח ' + hit.name); return; }
+    const hit = appList().find((a) => voiceMatches(q, a.name));
+    if (hit) { launch(String(hit.appId), Number(hit.app_type) || 2); toast(t('opening', { name: hit.name })); return; }
     voiceQuery = text;
     $('voiceText').textContent = text;
     $('voiceYt').style.display = ytSearchOk() ? '' : 'none';
     openSheet('voice');
   }
-  function voiceType() { A.text(voiceQuery); toast('נשלח לטלוויזיה'); closeSheets(); }
+  function voiceType() { if (locked()) return; A.text(voiceQuery); toast(t('sent_tv')); closeSheets(); }
   function ytSearchOk() { return S.tvType === 'androidtv'; }
   function kbYoutube() {
     const q = $('kbText').value.trim();
-    if (!q) { toast('כתבו קודם מה לחפש'); return; }
+    if (!q) { toast(t('kb_need')); return; }
     voiceQuery = q;
     $('kbText').value = '';
     voiceYoutube();
   }
   window.kbYoutube = kbYoutube;
   function voiceYoutube() {
-    A.launch('https://www.youtube.com/results?search_query=' + encodeURIComponent(voiceQuery), 0);
-    toast('מחפש ביוטיוב…');
+    if (locked()) return;
+    launch('https://www.youtube.com/results?search_query=' + encodeURIComponent(voiceQuery), 0);
+    toast(t('yt_searching'));
     closeSheets();
   }
 
   /* ---------- sleep timer ---------- */
   function setSleep(minutes) {
+    if (locked()) return;
     A.sleepTimer(minutes);
-    toast(minutes ? 'הטלוויזיה תכבה בעוד ' + minutes + ' דקות' : 'הטיימר בוטל');
+    toast(minutes ? t('sleep_set', { n: minutes }) : t('sleep_off'));
     closeSheets();
   }
   function setSleepCustom() {
     const n = parseInt(($('sleepCustom').value || '').replace(/[^0-9]/g, ''), 10);
-    if (!n || n < 1 || n > 600) { toast('הזן מספר דקות בין 1 ל-600'); return; }
+    if (!n || n < 1 || n > 600) { toast(t('sleep_bad')); return; }
     $('sleepCustom').value = '';
     setSleep(n);
   }
@@ -1007,39 +1453,39 @@
   function sleepLeft() { return S.sleepAt ? Math.max(1, Math.round((S.sleepAt - Date.now()) / 60000)) : 0; }
   function renderSleep() {
     const left = sleepLeft();
-    $('sleepState').textContent = left ? 'הטלוויזיה תכבה בעוד ' + left + ' דקות. לשנות?' : 'הטלוויזיה תכבה אוטומטית בעוד:';
+    $('sleepState').textContent = left ? t('sleep_left', { n: left }) : t('sleep_auto');
     $('sleepCancel').style.display = left ? '' : 'none';
   }
   function renderSleepTile() {
     const left = sleepLeft();
-    $('sleepTile').textContent = left ? 'כיבוי בעוד ' + left + ' דק׳' : 'טיימר שינה';
+    $('sleepTile').textContent = left ? t('sleep_tile', { n: left }) : t('sleep_timer');
   }
   setInterval(renderSleepTile, 30000);
 
   /* ---------- TV switcher ---------- */
   function renderTvs() {
     const list = $('tvList');
-    if (!S.tvs.length) { list.innerHTML = '<div class="empty">עדיין אין טלוויזיות שמורות.</div>'; return; }
-    list.innerHTML = S.tvs.map((t) => {
-      const cur = t.ip === S.ip;
-      const title = t.label || t.name || 'TV';
-      return '<div class="tvrow' + (cur ? ' cur' : '') + '" data-tv="' + esc(t.ip) + '">' +
-        '<div class="meta" data-switch="1"><div>' + esc(title) + ' <span class="badge">' + esc(BRANDS[t.type] || '') + '</span></div>' +
-        '<small>' + esc(t.label ? t.name + ' · ' + t.ip : t.ip) + '</small>' +
-        (cur ? '<div class="note">' + (S.state === 'connected' ? 'מחובר עכשיו' : esc($('statusText').textContent)) + '</div>' : '') + '</div>' +
-        '<button class="icon-btn" data-rename="1" aria-label="שנה שם">✎</button>' +
-        '<button class="icon-btn" data-remove="1" aria-label="הסר">✕</button></div>';
+    if (!S.tvs.length) { list.innerHTML = '<div class="empty">' + esc(t('tvs_empty')) + '</div>'; return; }
+    list.innerHTML = S.tvs.map((tv) => {
+      const cur = tv.ip === S.ip;
+      const title = tv.label || tv.name || 'TV';
+      return '<div class="tvrow' + (cur ? ' cur' : '') + '" data-tv="' + esc(tv.ip) + '">' +
+        '<div class="meta" data-switch="1"><div><span dir="auto">' + esc(title) + '</span> <span class="badge">' + esc(BRANDS[tv.type] || '') + '</span></div>' +
+        '<small>' + esc(tv.label ? tv.name + ' · ' + tv.ip : tv.ip) + '</small>' +
+        (cur ? '<div class="note">' + esc(S.state === 'connected' ? t('connected_now') : $('statusText').textContent) + '</div>' : '') + '</div>' +
+        '<button class="icon-btn" data-rename="1" aria-label="' + esc(t('rename')) + '">✎</button>' +
+        '<button class="icon-btn" data-remove="1" aria-label="' + esc(t('remove')) + '">✕</button></div>';
     }).join('');
   }
   $('tvList').addEventListener('click', (e) => {
     const row = e.target.closest('[data-tv]');
     if (!row) return;
     const ip = row.dataset.tv;
-    const tvInfo = S.tvs.find((t) => t.ip === ip) || {};
+    const tvInfo = S.tvs.find((x) => x.ip === ip) || {};
     if (e.target.closest('[data-remove]')) {
-      if (row.dataset.confirm) { A.removeTv(ip); toast('הוסרה'); return; }
+      if (row.dataset.confirm) { A.removeTv(ip); toast(t('removed')); return; }
       row.dataset.confirm = '1';
-      e.target.closest('[data-remove]').textContent = 'הסר?';
+      e.target.closest('[data-remove]').textContent = t('remove_q');
       e.target.closest('[data-remove]').style.width = 'auto';
       e.target.closest('[data-remove]').style.padding = '0 10px';
       return;
@@ -1047,11 +1493,11 @@
     if (e.target.closest('[data-rename]')) {
       const meta = row.querySelector('.meta');
       meta.removeAttribute('data-switch');
-      meta.innerHTML = '<div class="inrow"><input type="text" class="renameInput" style="direction:rtl;text-align:right" placeholder="למשל: סלון" value="' +
-        esc(tvInfo.label || '') + '"><button class="btn" data-save="1">שמור</button></div>';
+      meta.innerHTML = '<div class="inrow"><input type="text" class="renameInput natural" placeholder="' + esc(t('rename_ph')) + '" value="' +
+        esc(tvInfo.label || '') + '"><button class="btn" data-save="1">' + esc(t('save')) + '</button></div>';
       const input = meta.querySelector('input');
       input.focus();
-      const save = () => { A.renameTv(ip, input.value); toast('נשמר'); };
+      const save = () => { A.renameTv(ip, input.value); toast(t('saved')); };
       meta.querySelector('[data-save]').onclick = (ev) => { ev.stopPropagation(); save(); };
       input.onkeydown = (ev) => { if (ev.key === 'Enter') save(); };
       return;
@@ -1060,7 +1506,7 @@
       buzz();
       A.switchTv(ip);
       S.apps = [];
-      toast('עובר ל-' + (tvInfo.label || tvInfo.name));
+      toast(t('switching_to', { name: tvInfo.label || tvInfo.name }));
       closeSheets();
     }
   });
@@ -1068,9 +1514,9 @@
   /* ---------- Android TV pairing code ---------- */
   function submitPin() {
     const v = $('pinInput').value.trim().toUpperCase();
-    if (!/^[0-9A-F]{6}$/.test(v)) { toast('הקוד הוא 6 תווים: ספרות ו-A עד F'); return; }
+    if (!/^[0-9A-F]{6}$/.test(v)) { toast(t('pin_bad')); return; }
     A.submitPin(v);
-    toast('בודק את הקוד…');
+    toast(t('pin_checking'));
     closeSheets();
   }
   $('pinInput').addEventListener('input', (e) => { e.target.value = e.target.value.toUpperCase().replace(/[^0-9A-F]/g, ''); });
@@ -1078,36 +1524,32 @@
 
   /* ---------- status & settings ---------- */
   const STATUS = {
-    idle: ['', 'מוכן'],
-    connecting: ['wait', 'מתחבר…'],
-    reconnecting: ['wait', 'מתחבר מחדש…'],
-    pairing: ['wait', 'אשר את החיבור בטלוויזיה (Allow)'],
-    pin: ['wait', 'הקלד את הקוד שמופיע בטלוויזיה'],
-    connected: ['ok', null],
-    denied: ['err', 'החיבור נדחה – לחץ לניסיון חוזר'],
-    noTv: ['err', 'לא נבחרה טלוויזיה – לחץ כאן'],
-    badIp: ['err', 'כתובת IP לא תקינה'],
+    idle: '', connecting: 'wait', reconnecting: 'wait', pairing: 'wait', pin: 'wait',
+    connected: 'ok', denied: 'err', noTv: 'err', badIp: 'err',
   };
   function renderStatus() {
-    const [cls, text] = STATUS[S.state] || ['', S.state];
-    $('status').className = 'status ' + cls;
+    const known = S.state in STATUS;
+    const text = !known ? String(S.state) : S.state === 'connected' ? null : t('st_' + S.state);
+    $('status').className = 'status ' + (STATUS[S.state] || '');
     $('statusText').textContent = text || (S.label || String(S.name || '').replace(/^\[TV\]\s*/, '') || S.ip);
-    $('statusText').dir = text ? 'rtl' : 'auto';
+    if (text) $('statusText').removeAttribute('dir'); else $('statusText').dir = 'auto';
   }
   function renderSettings() {
     const has = !!S.ip;
     $('curTv').innerHTML = has
-      ? '<div style="font-size:15px;color:#e6ebf1">' + esc(S.name || 'TV') + ' <span class="badge">' + esc(BRANDS[S.tvType] || '') + '</span></div>' +
-        '<div class="note" style="direction:ltr;text-align:right">' + esc(S.ip) + (S.mac ? ' · ' + esc(S.mac) : '') + '</div>' +
+      ? '<div style="font-size:15px;color:#e6ebf1"><span dir="auto">' + esc(S.name || 'TV') + '</span> <span class="badge">' + esc(BRANDS[S.tvType] || '') + '</span></div>' +
+        '<div class="note"><span dir="ltr">' + esc(S.ip) + (S.mac ? ' · ' + esc(S.mac) : '') + '</span></div>' +
         '<div class="note" style="margin-top:4px">' + esc(($('statusText').textContent)) + '</div>'
-      : '<div class="note">עדיין לא נבחרה טלוויזיה. לחץ "חפש טלוויזיות ברשת".</div>';
+      : '<div class="note">' + esc(t('no_tv_yet')) + '</div>';
     $('ipInput').value = $('ipInput').value || S.ip;
     $('prefHwVolume').checked = pref.hwVolume;
     $('prefHaptic').checked = pref.haptic;
     $('prefSimple').checked = pref.simple;
     renderQuick();
-    $('helpText').innerHTML = (S.tvType ? HELP[S.tvType] : Object.values(HELP).map((h) => h.split('<br>')[0]).join('<br>')) +
-      '<br>• הטלפון והטלוויזיה חייבים להיות מחוברים לאותה רשת Wi-Fi.';
+    renderLicense();
+    const brands = ['samsung', 'lg', 'androidtv'];
+    $('helpText').innerHTML = (S.tvType && brands.includes(S.tvType) ? t('help_' + S.tvType) : brands.map((k) => t('help_' + k).split('<br>')[0]).join('<br>')) +
+      '<br>' + t('help_wifi');
     renderScan();
   }
   function renderScan() {
@@ -1115,9 +1557,9 @@
     list.innerHTML = S.found.map((d) =>
       '<button class="tvrow' + (d.ip === S.ip ? ' cur' : '') + '" data-ip="' + esc(d.ip) + '">' +
       '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2ec4a6" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>' +
-      '<div class="meta"><div>' + esc(d.name) + ' <span class="badge">' + esc(BRANDS[d.type] || '') + '</span></div><small>' + esc(d.ip) + (d.model ? ' · ' + esc(d.model) : '') + '</small></div>' +
-      (d.ip === S.ip ? '<span class="note">נבחרה</span>' : '') + '</button>').join('') +
-      (S.scanning ? '<div class="empty"><span class="spinner"></span> מחפש ברשת…</div>' : '');
+      '<div class="meta"><div><span dir="auto">' + esc(d.name) + '</span> <span class="badge">' + esc(BRANDS[d.type] || '') + '</span></div><small>' + esc(d.ip) + (d.model ? ' · ' + esc(d.model) : '') + '</small></div>' +
+      (d.ip === S.ip ? '<span class="note">' + esc(t('selected')) + '</span>' : '') + '</button>').join('') +
+      (S.scanning ? '<div class="empty"><span class="spinner"></span> ' + esc(t('scanning')) + '</div>' : '');
     $('scanBtn').style.display = S.scanning ? 'none' : '';
   }
   $('scanList').addEventListener('click', (e) => {
@@ -1130,8 +1572,8 @@
     buzz();
     A.selectTv(d.ip, d.type || 'samsung', d.name || 'TV', d.mac || '');
     S.ip = d.ip; S.tvType = d.type || 'samsung'; S.name = d.name; S.mac = d.mac; S.apps = [];
-    toast('מתחבר ל-' + d.name);
-    setTimeout(() => { if ($('sheet-settings').classList.contains('show')) closeSheets(); }, 400);
+    toast(t('connecting_to', { name: d.name }));
+    setTimeout(() => { if (shown('settings')) closeSheets(); }, 400);
   }
   function startScan() {
     S.scanning = true; S.found = [];
@@ -1140,10 +1582,10 @@
   }
   function connectIp() {
     const ip = $('ipInput').value.trim();
-    if (!/^\d{1,3}(\.\d{1,3}){3}$/.test(ip)) { toast('כתובת IP לא תקינה'); return; }
+    if (!/^\d{1,3}(\.\d{1,3}){3}$/.test(ip)) { toast(t('bad_ip')); return; }
     A.connectIp(ip);
     S.apps = [];
-    toast('מתחבר ל-' + ip);
+    toast(t('connecting_to', { name: ip }));
     closeSheets();
   }
   $('prefHwVolume').addEventListener('change', (e) => { pref.hwVolume = e.target.checked; A.setPref('hwVolume', pref.hwVolume ? '1' : '0'); });
@@ -1192,14 +1634,14 @@
     if (m.what === 'notifications') {
       pref.quick = true;
       A.setPref('quickControls', '1');
-      if (!m.granted) toast('בלי הרשאת התראות הכפתורים לא יוצגו בהתראות');
+      if (!m.granted) toast(t('perm_notif'));
     } else if (m.what === 'phone') {
       if (m.granted) {
         pref.callAction = pendingCall;
         A.setPref('callAction', pendingCall);
-        toast(pendingCall === 'pause' ? 'הטלוויזיה תעצור בזמן שיחה' : 'הטלוויזיה תושתק בזמן שיחה');
+        toast(pendingCall === 'pause' ? t('call_pause_on') : t('call_mute_on'));
       } else {
-        toast('צריך הרשאה לזהות שיחות נכנסות');
+        toast(t('perm_phone'));
       }
     }
     A.applyQuickSettings();
@@ -1216,11 +1658,11 @@
         if (prevIp !== m.ip) { S.apps = []; renderShortcuts(); }
         renderStatus();
         renderSleepTile();
-        if ($('sheet-tvs').classList.contains('show')) renderTvs();
+        if (shown('tvs')) renderTvs();
         if (m.state === 'pin') openSheet('pin');
-        else if ($('sheet-pin').classList.contains('show')) closeSheets();
-        if ($('sheet-settings').classList.contains('show')) renderSettings();
-        if (m.state === 'noTv' && !autoScanned) {
+        else if (shown('pin')) closeSheets();
+        if (shown('settings')) renderSettings();
+        if (m.state === 'noTv' && !autoScanned && !isLocked()) {
           autoScanned = true;
           openSheet('settings');
           startScan();
@@ -1230,8 +1672,8 @@
       case 'apps':
         S.apps = m.apps || [];
         appsAnswered = true;
-        if ($('sheet-apps').classList.contains('show')) renderApps();
-        if ($('sheet-pick').classList.contains('show')) renderPicker();
+        if (shown('apps')) renderApps();
+        if (shown('pick')) renderPicker();
         break;
       case 'scanFound':
         S.found = S.found.filter((d) => d.ip !== m.device.ip).concat([m.device]);
@@ -1240,18 +1682,18 @@
       case 'scanDone':
         S.scanning = false;
         renderScan();
-        if (!m.ok) toast('הטלפון לא מחובר ל-Wi-Fi');
-        else if (!m.count) toast('לא נמצאה טלוויזיה. ודא שהיא דלוקה ובאותה רשת');
+        if (!m.ok) toast(t('no_wifi'));
+        else if (!m.count) toast(t('no_tv_found'));
         else if (m.count === 1 && !S.ip) selectTv(S.found[0]);
         break;
       case 'toast':
-        toast(m.text);
+        toast(m.text); // native toasts arrive already localized
         break;
       case 'keyboard':
-        if (!$('sheet-keyboard').classList.contains('show')) {
+        if (!shown('keyboard') && !isLocked()) {
           openSheet('keyboard');
           setTimeout(() => $('kbText').focus(), 250);
-          toast('הטלוויזיה מחכה לטקסט');
+          toast(t('tv_wants_text'));
         }
         break;
       case 'permission':
@@ -1260,14 +1702,26 @@
       case 'voice':
         onVoice(m.text);
         break;
+      case 'license': {
+        const was = LIC.state;
+        LIC = normLicense(m);
+        renderLicense();
+        if (LIC.state === 'purchased' && was !== 'purchased' && was !== 'family') toast(t('lic_thanks'));
+        break;
+      }
     }
   };
 
+  LANG = detectLang();
+  LIC = readLicense();
+  applyLang();
   document.body.classList.toggle('simple', pref.simple);
   setTouchpad(pref.touchpad && !pref.simple);
   renderShortcuts();
-  $('ver').textContent = 'גרסה ' + (A.version() || '');
+  $('ver').textContent = t('version', { v: A.version() || '' });
   renderStatus();
+  renderSleepTile();
+  renderLicense();
   A.status();
 </script>
 </body>
