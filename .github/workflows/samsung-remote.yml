@@ -47,20 +47,35 @@ jobs:
 
       - name: Upload key for Google Play (from repository secrets, if set)
         env:
-          UPLOAD_KEYSTORE_BASE64: ${{ secrets.UPLOAD_KEYSTORE_BASE64 }}
+          KS_B64: ${{ secrets.UPLOAD_KEYSTORE_BASE64 }}
+          KS_PASS: ${{ secrets.UPLOAD_KEYSTORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.UPLOAD_KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.UPLOAD_KEY_ALIAS }}
         run: |
-          if [ -n "$UPLOAD_KEYSTORE_BASE64" ]; then
-            echo "$UPLOAD_KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
-            echo "UPLOAD_KEYSTORE_FILE=$RUNNER_TEMP/upload.jks" >> "$GITHUB_ENV"
-          else
+          if [ -z "$KS_B64" ]; then
             echo "No upload key secret: the Google Play bundle will be unsigned."
+            exit 0
           fi
+          # Pasted secrets often carry stray spaces or line breaks: strip them.
+          trim() { printf '%s' "$1" | tr -d '\r\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//'; }
+          ks_pass=$(trim "$KS_PASS"); alias=$(trim "${KEY_ALIAS:-upload}")
+          # This key was created with the same password for the store and the key.
+          key_pass="$ks_pass"
+          echo "::add-mask::$ks_pass"; echo "::add-mask::$key_pass"
+          printf '%s' "$KS_B64" | tr -d ' \r\n' | base64 -d > "$RUNNER_TEMP/upload.jks"
+          if ! keytool -list -keystore "$RUNNER_TEMP/upload.jks" -storepass "$ks_pass" -alias "$alias" > /dev/null 2>&1; then
+            echo "::warning::The upload key secrets don't match (wrong password, alias or key text). Building the Google Play bundle unsigned."
+            exit 0
+          fi
+          {
+            echo "UPLOAD_KEYSTORE_FILE=$RUNNER_TEMP/upload.jks"
+            echo "UPLOAD_KEYSTORE_PASSWORD=$ks_pass"
+            echo "UPLOAD_KEY_PASSWORD=$key_pass"
+            echo "UPLOAD_KEY_ALIAS=$alias"
+          } >> "$GITHUB_ENV"
+          echo "Upload key OK: the Google Play bundle will be signed."
 
       - name: Build family APK and Google Play bundle
-        env:
-          UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.UPLOAD_KEYSTORE_PASSWORD }}
-          UPLOAD_KEY_ALIAS: ${{ secrets.UPLOAD_KEY_ALIAS }}
-          UPLOAD_KEY_PASSWORD: ${{ secrets.UPLOAD_KEY_PASSWORD }}
         run: gradle assembleFamilyRelease bundlePlayRelease --no-daemon --stacktrace
 
       - name: Collect outputs
