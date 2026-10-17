@@ -11,13 +11,13 @@ const TMP = path.join(OUT, '.raw');
 fs.mkdirSync(TMP, { recursive: true });
 
 const CAPTIONS = {
-  en: ['Your TV, from your phone', 'Phone rings? The TV hushes.', 'Remote right on your lock screen', 'Simple mode: big, clear buttons',
-    'Say an app – it opens', 'Many presses, one tap', 'Falls asleep? TV turns off.', 'Every TV. No account. No tracking.'],
+  en: ['One fast remote for all your TVs', 'Phone rings? The TV hushes.', 'Remote right on your lock screen', 'Simple mode: big, clear buttons',
+    'Say an app – it opens', 'Many presses, one tap', 'Falls asleep? TV turns off.', 'All your TVs. No account. No tracking.'],
   he: ['הטלוויזיה שלכם, מהטלפון', 'מתקשרים? הטלוויזיה משתתקת', 'השלט כבר על מסך הנעילה', 'מצב פשוט: כפתורים גדולים וברורים',
     'אומרים אפליקציה – והיא נפתחת', 'הרבה לחיצות, נגיעה אחת', 'נרדמתם? הטלוויזיה נכבית', 'כל הטלוויזיות. בלי חשבון, בלי מעקב'],
 };
 const FEATURE = {
-  en: { h: 'The TV remote that hushes for calls', s: 'Wi-Fi control · Lock-screen remote · Private' },
+  en: { h: 'The advanced remote for your smart TVs', s: 'Fast · Clean · Mutes the TV when you get a call' },
   he: { h: 'השלט שמשתיק את הטלוויזיה כשמתקשרים', s: 'שליטה ב-Wi-Fi · שלט במסך הנעילה · פרטי' },
 };
 const TEXT = {
@@ -195,7 +195,8 @@ async function frame(b, lang, shots) {
 
 (async () => {
   const b = await chromium.launch();
-  for (const lang of ['en', 'he']) await frame(b, lang, await scenes(b, lang));
+  // English images serve every store language (the listing text is localized).
+  for (const lang of ['en']) await frame(b, lang, await scenes(b, lang));
   await b.close();
   fs.rmSync(TMP, { recursive: true, force: true });
   console.log('done');

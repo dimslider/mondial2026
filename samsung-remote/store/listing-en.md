@@ -12,56 +12,49 @@ Policy notes that shaped these texts:
 
 ## 1. App name (title) — max 30 characters
 
-**Recommended: option 1.** It keeps the in-app name "TV Remote" and puts the headline feature (call auto-mute) right in the search result.
+The title carries the search keywords ("universal", "smart TV remote") and a short brand; the call auto-mute is the headline of the short description, the screenshots and the description instead — it sells, but people don't search for it.
 
-Option 1 — recommended (30 / 30 chars)
+Option 1 — recommended — a short brand people can remember, plus the words people actually search for ("universal", "TV remote"). Search on Google Play first that the name "Remoty" isn't taken. (27 / 30 chars)
 ```text
-TV Remote – Auto-Mute on Calls
+Remoty: Universal TV Remote
 ```
 
-Option 2 (29 / 30 chars)
+Option 2 — pure search keywords, no brand (25 / 30 chars)
 ```text
-Wi-Fi TV Remote: Calm Control
+Universal Smart TV Remote
 ```
 
-Option 3 (28 / 30 chars)
+Option 3 — describes the feel of the app (29 / 30 chars)
 ```text
-HushRemote – Wi-Fi TV Remote
+Smart TV Remote: Fast & Clean
 ```
 
-Option 4 (26 / 30 chars)
+Option 4 — brand + keywords, shorter (24 / 30 chars)
 ```text
-Smart TV Remote over Wi-Fi
-```
-
-Option 5 (26 / 30 chars)
-```text
-Couch Remote for Smart TVs
+Remoty – Smart TV Remote
 ```
 
 ---
 
 ## 2. Short description — max 80 characters
 
-**Recommended: option A.**
-
-Option A — recommended (79 / 80 chars)
+Option 1 — recommended (76 / 80 chars)
 ```text
-Wi-Fi remote for your smart TV. Mutes itself on calls. No ads, no subscription.
+Fast, clean universal remote for smart TVs – many TVs, smart extras, no ads.
 ```
 
-Option B (79 / 80 chars)
+Option 2 (77 / 80 chars)
 ```text
-Control your TV from your phone or lock screen. Private, ad-free, one-time buy.
+The advanced Wi-Fi TV remote: fast, clean, multi-TV – and it mutes for calls.
 ```
 
 ---
 
 ## 3. Full description — max 4000 characters
 
-(3977 / 4000 chars)
+(3976 / 4000 chars)
 ```text
-Turn your phone into a fast, private Wi-Fi remote for your smart TV – and let the TV go quiet by itself when your phone rings.
+The advanced universal remote for your smart TV: fast, clean, packed with smart features – one app for all the TVs in your home.
 
 ★ WHY THIS REMOTE IS DIFFERENT
 • No ads. Ever. No pop-ups between button presses.
