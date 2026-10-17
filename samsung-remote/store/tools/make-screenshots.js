@@ -16,6 +16,9 @@ const CAPTIONS = {
   he: ['הטלוויזיה שלכם, מהטלפון', 'מתקשרים? הטלוויזיה משתתקת', 'השלט כבר על מסך הנעילה', 'מצב פשוט: כפתורים גדולים וברורים',
     'אומרים אפליקציה – והיא נפתחת', 'הרבה לחיצות, נגיעה אחת', 'נרדמתם? הטלוויזיה נכבית', 'כל הטלוויזיות. בלי חשבון, בלי מעקב'],
 };
+// Screens that show Pro features carry a PRO badge (the listing must never pass Pro off as free).
+const PRO_SHOTS = [1, 2, 4, 5, 6, 7];
+
 const FEATURE = {
   en: { h: 'The advanced remote for your smart TVs', s: 'Fast · Clean · Mutes the TV when you get a call' },
   he: { h: 'השלט שמשתיק את הטלוויזיה כשמתקשרים', s: 'שליטה ב-Wi-Fi · שלט במסך הנעילה · פרטי' },
@@ -167,8 +170,9 @@ async function frame(b, lang, shots) {
     const img = 'data:image/png;base64,' + fs.readFileSync(shots[i]).toString('base64');
     await p.setContent(`<html dir="${dir}"><body style="margin:0;width:1080px;height:1920px;overflow:hidden;font-family:system-ui,sans-serif;
       background:radial-gradient(90% 60% at 50% 0%,#17324f 0%,#0b1220 55%,#070b12 100%)">
-      <div style="height:400px;display:flex;align-items:center;justify-content:center;padding:0 80px;text-align:center">
-        <div style="font-size:${CAPTIONS[lang][i].length > 26 ? 74 : 84}px;font-weight:800;line-height:1.12;color:#fff;letter-spacing:-0.5px">${CAPTIONS[lang][i]}</div></div>
+      <div style="height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:0 80px;text-align:center">
+        ${PRO_SHOTS.includes(i) ? '<div style="font-size:34px;font-weight:900;letter-spacing:3px;color:#06231d;background:#2EC4A6;border-radius:14px;padding:8px 22px;box-shadow:0 8px 30px #2EC4A655">PRO</div>' : ''}
+        <div style="font-size:${CAPTIONS[lang][i].length > 26 ? 70 : 80}px;font-weight:800;line-height:1.12;color:#fff;letter-spacing:-0.5px">${CAPTIONS[lang][i]}</div></div>
       <div style="position:absolute;left:50%;top:430px;transform:translateX(-50%);width:668px;height:1484px;border-radius:72px;background:#05080d;
         box-shadow:0 0 0 3px #2b3644, 0 40px 120px #000c, 0 0 160px #2EC4A633;padding:10px;box-sizing:border-box">
         <img src="${img}" style="width:648px;height:1440px;border-radius:62px;display:block;object-fit:cover;object-position:top"></div>
