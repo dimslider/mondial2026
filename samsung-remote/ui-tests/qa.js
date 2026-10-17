@@ -351,104 +351,180 @@ async function i18n(b, w, h) {
 // Free trial, purchase and the blocking paywall.
 async function license(b, w, h) {
   const tag = `[license ${w}] `;
-  const status = (p) => p.evaluate((tvs) => onTv({ type: 'status', state: 'connected', ip: '10.0.0.5', tvType: 'samsung', name: 'Samsung Q60', label: 'Living room', mac: 'aa', tvs, sleepAt: 0 }), TVS_EN);
+  const status = (p, extra = {}) => p.evaluate(([tvs, extra]) => onTv(Object.assign({ type: 'status', state: 'connected', ip: '10.0.0.5', tvType: 'samsung', name: 'Samsung Q60', label: 'Living room', mac: 'aa', tvs, sleepAt: 0 }, extra)), [TVS_EN, extra]);
+  const shownScrim = (p) => p.evaluate(() => document.getElementById('scrim').classList.contains('show'));
 
-  // family build (no license function result): nothing shown
+  // family build (no license function result): nothing shown, no PRO badges
   {
     const p = await newPage(b, { w, h });
     check(tag + 'family: no banner', !(await p.isVisible('#trialBar')));
     await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(300);
     check(tag + 'family: no license row', !(await p.isVisible('#licRow')));
+    check(tag + 'family: no PRO badges', !(await p.evaluate(() => document.body.classList.contains('free'))));
     await p.ctx.close();
   }
 
+  // trial: everything unlocked, banner with days left
   for (const lang of ['en', 'he']) {
-    const p = await newPage(b, { w, h, prefs: { lang }, license: { state: 'trial', daysLeft: 5, price: '$4.99' } });
+    const p = await newPage(b, { w, h, prefs: { lang }, license: { state: 'trial', daysLeft: 5, price: '$2.99' } });
     await status(p);
     const lt = `${tag}[${lang}] `;
     check(lt + 'trial banner visible', await p.isVisible('#trialBar'));
     const bt = await p.textContent('#trialBar');
-    check(lt + 'trial banner text', bt.includes('5') && bt.includes('$4.99') && (lang === 'he' ? HEB.test(bt) : /Free trial: 5 days left/.test(bt) && /Unlock forever for \u2068?\$4\.99/.test(bt)), bt);
+    check(lt + 'trial banner text', bt.includes('5') && (lang === 'he' ? HEB.test(bt) && bt.includes('Pro') : /Pro trial: 5 days left/.test(bt) && /Unlock Pro/.test(bt)), bt);
     check(lt + 'trial: no overflow', (await p.overflow()).length === 0, JSON.stringify(await p.overflow()));
     await p.calls();
     await p.tap('#trialBar .tb-main');
     check(lt + 'banner tap buys', (await p.sent('buy')).length === 1);
     await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(400);
     const row = await p.textContent('#licRow');
-    check(lt + 'settings trial line', await p.isVisible('#licRow') && row.includes('5') && row.includes('$4.99'), row);
-    await p.tap('#licBuy');
-    check(lt + 'settings unlock buys', (await p.sent('buy')).length === 1);
+    check(lt + 'settings trial line', await p.isVisible('#licRow') && row.includes('5') && row.includes('$2.99'), row);
+    await p.tap('#licBuy'); await p.waitForTimeout(300);
+    check(lt + 'settings unlock opens Pro panel', (await p.open()) === 'paywall', await p.open());
     await p.reset();
     await p.tap('#trialBar .tb-x');
     check(lt + 'banner dismiss', !(await p.isVisible('#trialBar')));
-    check(lt + 'remote still works in trial', (await p.tap('.app [data-key="KEY_MUTE"]'), JSON.stringify(await p.sent('key'))) === '[["KEY_MUTE"]]');
+    await p.evaluate(() => setSleep(30));
+    check(lt + 'trial: Pro works (sleep)', JSON.stringify(await p.sent('sleepTimer')) === '[[30]]');
     if (lang === 'en') {
       await p.evaluate(() => onTv({ type: 'license', state: 'trial', daysLeft: 1, price: null }));
       await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(300);
       const r1 = await p.textContent('#licRow');
-      check(lt + 'trial 1 day, no price', /1 day left/.test(r1) && /Unlock forever/.test(r1) && !/forever for/.test(r1), r1);
+      check(lt + 'trial last day, no price', /last day/.test(r1) && /one-time purchase/.test(r1), r1);
       await p.reset();
     }
-    // purchase arrives from native
-    await p.evaluate(() => onTv({ type: 'license', state: 'purchased', daysLeft: 0, price: '$4.99' }));
+    await p.evaluate(() => onTv({ type: 'license', state: 'purchased', daysLeft: 0, price: '$2.99' }));
     await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(300);
     const pr = await p.textContent('#licRow');
-    check(lt + 'purchased: full version line', pr.includes('✓') && (lang === 'he' ? HEB.test(pr) : pr.includes('Full version')), pr);
+    check(lt + 'purchased: Pro line', pr.includes('Pro ✓'), pr);
     check(lt + 'purchased: no banner', !(await p.isVisible('#trialBar')));
     check(lt + 'no JS errors', p.errs.length === 0, JSON.stringify(p.errs));
     await p.ctx.close();
   }
 
-  // expired at start-up: blocking paywall
-  const p = await newPage(b, { w, h, license: { state: 'expired', daysLeft: 0, price: '₪19.90' } });
-  await status(p);
-  await p.waitForTimeout(300);
-  check(tag + 'expired: paywall on start', (await p.open()) === 'paywall', await p.open());
-  check(tag + 'expired: buy button price', (await p.textContent('#pwBuy')).replace(/[\u2066-\u2069]/g, '') === 'Unlock for ₪19.90', await p.textContent('#pwBuy'));
-  check(tag + 'expired: benefits listed', await p.evaluate(() => document.querySelectorAll('#sheet-paywall .benefits li').length) === 7);
-  check(tag + 'expired: no Hebrew in paywall (en)', (await p.evaluate(hebrewIn, '#sheet-paywall')).length === 0, JSON.stringify(await p.evaluate(hebrewIn, '#sheet-paywall')));
-  await p.calls();
-  await p.tap('#scrim', { position: { x: 30, y: 30 } }); await p.waitForTimeout(300);
-  check(tag + 'expired: scrim does not dismiss', (await p.open()) === 'paywall');
-  check(tag + 'expired: back does not dismiss', await p.evaluate(() => handleBack()) === false && (await p.open()) === 'paywall');
-  await p.evaluate(() => closeSheets()); await p.waitForTimeout(100);
-  check(tag + 'expired: closeSheets keeps paywall', (await p.open()) === 'paywall' && await p.evaluate(() => document.getElementById('scrim').classList.contains('show')));
-  await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(100);
-  check(tag + 'expired: other sheets stay closed', (await p.open()) === 'paywall');
-  for (const k of ['KEY_MUTE', 'KEY_VOLUP', 'KEY_ENTER']) await p.dispatchEvent(`.app [data-key="${k}"]`, 'pointerdown');
-  await p.dispatchEvent('.app [data-key="KEY_VOLUP"]', 'pointerup');
-  await p.evaluate(() => { send('KEY_HOME'); launchSlot(0); runAction('power'); onTv({ type: 'voice', text: 'נטפליקס' }); onTv({ type: 'voice', text: 'open youtube' }); setSleep(30); });
-  await p.dispatchEvent('[data-slot="1"]', 'pointerdown'); await p.dispatchEvent('[data-slot="1"]', 'pointerup');
-  await p.waitForTimeout(700);
-  const blocked = (await p.calls()).filter(c => ['key', 'launch', 'power', 'text', 'sleepTimer', 'voice'].includes(c[0]));
-  check(tag + 'expired: remote sends nothing', blocked.length === 0, JSON.stringify(blocked));
-  await p.tap('#pwBuy');
-  check(tag + 'expired: buy', (await p.sent('buy')).length === 1);
-  await p.tap('#pwRestore');
-  check(tag + 'expired: restore', (await p.sent('restore')).length === 1);
-  // language is reachable on the paywall
-  await p.tap('#sheet-paywall [data-lang="he"]'); await p.waitForTimeout(150);
-  check(tag + 'expired: paywall in Hebrew', await p.evaluate(() => document.documentElement.dir) === 'rtl' && HEB.test(await p.textContent('#sheet-paywall h2')) && (await p.open()) === 'paywall');
-  check(tag + 'expired: Hebrew price button', (await p.textContent('#pwBuy')).includes('₪19.90') && HEB.test(await p.textContent('#pwBuy')));
-  check(tag + 'expired: setLang from paywall', (await p.sent('setLang')).some(a => a[0] === 'he'));
-  await p.tap('#sheet-paywall [data-lang="en"]'); await p.waitForTimeout(150);
-  // no price: plain "Unlock"
-  await p.evaluate(() => onTv({ type: 'license', state: 'expired', daysLeft: 0, price: null }));
-  check(tag + 'expired: no price -> Unlock', (await p.textContent('#pwBuy')) === 'Unlock' && (await p.open()) === 'paywall');
-  // purchase completes: paywall closes and the remote works again
-  await p.evaluate(() => onTv({ type: 'license', state: 'purchased', daysLeft: 0, price: '₪19.90' }));
-  await p.waitForTimeout(300);
-  check(tag + 'license event closes paywall', (await p.open()) === 'none' && !(await p.evaluate(() => document.getElementById('scrim').classList.contains('show'))));
-  check(tag + 'purchase thank-you toast', /Thank you/.test(await p.textContent('#toast')));
-  await p.calls();
-  await p.tap('.app [data-key="KEY_MUTE"]');
-  check(tag + 'keys work after purchase', JSON.stringify(await p.sent('key')) === '[["KEY_MUTE"]]');
-  // expiring while the app is open closes other panels and shows the paywall
-  await p.evaluate(() => openSheet('numpad')); await p.waitForTimeout(200);
-  await p.evaluate(() => onTv({ type: 'license', state: 'expired', daysLeft: 0, price: '₪19.90' }));
-  check(tag + 'expiry event shows paywall', (await p.open()) === 'paywall', await p.open());
-  check(tag + 'no JS errors', p.errs.length === 0, JSON.stringify(p.errs));
-  await p.ctx.close();
+  // free (trial over, not bought) – and legacy 'expired' behaves the same
+  for (const st of ['free', 'expired']) {
+    const p = await newPage(b, { w, h, license: { state: st, daysLeft: 0, price: '$2.99' } });
+    const ft = `${tag}[${st}] `;
+    await status(p, { tvs: [TVS_EN[0], TVS_EN[1]] });
+    await p.waitForTimeout(300);
+    check(ft + 'nothing pops up on start', (await p.open()) === 'none', await p.open());
+    check(ft + 'PRO badges shown', await p.evaluate(() => document.body.classList.contains('free')));
+    // the basic remote keeps working
+    await p.calls();
+    await p.tap('.app [data-key="KEY_MUTE"]');
+    await p.evaluate(() => { send('KEY_VOLUP'); runAction('power'); launchSlot(0); });
+    const basic = await p.calls();
+    check(ft + 'basic keys work', basic.filter(c => c[0] === 'key').length === 2, JSON.stringify(basic));
+    check(ft + 'power works', basic.some(c => c[0] === 'power'));
+    check(ft + 'shortcut app launch works', basic.some(c => c[0] === 'launch'));
+    // each Pro feature opens the Pro panel and does nothing else
+    const proActions = {
+      voice: () => runAction('voice'),
+      keyboardSheet: () => runAction('keyboard'),
+      keyboardSend: () => { document.getElementById('kbText').value = 'hi'; sendText(); },
+      sleepSheet: () => openSheet('sleep'),
+      sleepSet: () => setSleep(30),
+      record: () => startRecording(),
+      macroPlay: () => playMacro(['KEY_HOME'], 'x'),
+      picker: () => openPicker(0),
+      voiceText: () => onVoice('open netflix'),
+    };
+    for (const [name, fn] of Object.entries(proActions)) {
+      await p.reset();
+      await p.evaluate(fn);
+      await p.waitForTimeout(200);
+      const c = (await p.calls()).filter(x => ['voice', 'text', 'sleepTimer', 'key', 'launch'].includes(x[0]));
+      check(ft + `pro gate: ${name}`, (await p.open()) === 'paywall' && c.length === 0, (await p.open()) + ' ' + JSON.stringify(c));
+    }
+    // second TV switch
+    await p.reset();
+    await p.evaluate(() => openSheet('tvs')); await p.waitForTimeout(400);
+    const other = await p.$('#sheet-tvs .tvrow:not(.cur) [data-switch]');
+    if (other) { await other.click(); await p.waitForTimeout(200); }
+    check(ft + 'pro gate: switch TV', (await p.open()) === 'paywall' && (await p.sent('switchTv')).length === 0, await p.open());
+    // settings toggles
+    for (const sel of ['#prefHwVolume', '#prefQuick']) {
+      await p.reset();
+      await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(400);
+      await p.evaluate((s) => { const el = document.querySelector(s); el.checked = true; el.dispatchEvent(new Event('change')); }, sel);
+      await p.waitForTimeout(150);
+      const c = (await p.calls()).filter(x => ['setPref', 'requestPermission'].includes(x[0]) && x[1][0] !== 'lang');
+      check(ft + `pro gate: ${sel}`, (await p.open()) === 'paywall' && !(await p.evaluate((s) => document.querySelector(s).checked, sel)) && c.length === 0, JSON.stringify(c));
+    }
+    await p.reset();
+    await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(400);
+    await p.evaluate(() => document.querySelector('#callSeg [data-call="mute"]').click());
+    await p.waitForTimeout(150);
+    check(ft + 'pro gate: call mute', (await p.open()) === 'paywall' && (await p.sent('requestPermission')).length === 0);
+    // the Pro panel is dismissible: scrim, ✕, back
+    await p.waitForTimeout(400); // the scrim ignores taps right after a panel opens (stray-tap guard)
+    await p.tap('#scrim', { position: { x: 30, y: 30 } }); await p.waitForTimeout(300);
+    check(ft + 'panel closes on scrim', (await p.open()) === 'none' && !(await shownScrim(p)));
+    await p.evaluate(() => showUpsell()); await p.waitForTimeout(400);
+    await p.tap('#sheet-paywall .pw-close'); await p.waitForTimeout(300);
+    check(ft + 'panel closes on ✕', (await p.open()) === 'none');
+    await p.evaluate(() => showUpsell()); await p.waitForTimeout(400);
+    check(ft + 'panel closes on back', await p.evaluate(() => handleBack()) === true && (await p.open()) === 'none');
+    // panel content
+    await p.evaluate(() => showUpsell()); await p.waitForTimeout(400);
+    check(ft + 'panel buy price', (await p.textContent('#pwBuy')).replace(/[⁦-⁩]/g, '') === 'Unlock Pro – $2.99 one-time', await p.textContent('#pwBuy'));
+    check(ft + 'panel lists Pro features', await p.evaluate(() => document.querySelectorAll('#sheet-paywall .benefits li').length) === 7);
+    check(ft + 'panel no Hebrew (en)', (await p.evaluate(hebrewIn, '#sheet-paywall')).length === 0, JSON.stringify(await p.evaluate(hebrewIn, '#sheet-paywall')));
+    await p.calls();
+    await p.tap('#pwBuy');
+    check(ft + 'buy', (await p.sent('buy')).length === 1);
+    await p.tap('#pwRestore');
+    check(ft + 'restore', (await p.sent('restore')).length === 1);
+    await p.tap('#sheet-paywall [data-lang="he"]'); await p.waitForTimeout(150);
+    check(ft + 'panel in Hebrew', await p.evaluate(() => document.documentElement.dir) === 'rtl' && HEB.test(await p.textContent('#sheet-paywall h2')) && HEB.test(await p.textContent('#pwBuy')));
+    await p.tap('#sheet-paywall [data-lang="en"]'); await p.waitForTimeout(150);
+    await p.evaluate(() => onTv({ type: 'license', state: 'free', daysLeft: 0, price: null }));
+    check(ft + 'no price -> Unlock Pro', (await p.textContent('#pwBuy')) === 'Unlock Pro');
+    await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(300);
+    check(ft + 'settings free line', /Free version/.test(await p.textContent('#licRow')));
+    await p.evaluate(() => showUpsell()); await p.waitForTimeout(300);
+    await p.evaluate(() => onTv({ type: 'license', state: 'purchased', daysLeft: 0, price: '$2.99' }));
+    await p.waitForTimeout(300);
+    check(ft + 'purchase closes panel', (await p.open()) === 'none' && !(await shownScrim(p)));
+    check(ft + 'thank-you toast', /Thank you/.test(await p.textContent('#toast')));
+    await p.evaluate(() => setSleep(30));
+    check(ft + 'Pro works after purchase', JSON.stringify(await p.sent('sleepTimer')) === '[[30]]');
+    // trial ending while the app is open: no pop-up
+    await p.evaluate(() => onTv({ type: 'license', state: 'free', daysLeft: 0, price: '$2.99' }));
+    await p.waitForTimeout(200);
+    check(ft + 'expiry while open: no pop-up', (await p.open()) === 'none');
+    check(ft + 'free: no overflow', (await p.overflow()).length === 0, JSON.stringify(await p.overflow()));
+    check(ft + 'no JS errors', p.errs.length === 0, JSON.stringify(p.errs));
+    await p.ctx.close();
+  }
+
+  // connection help
+  for (const lang of ['en', 'he']) {
+    const p = await newPage(b, { w, h, prefs: { lang } });
+    const ct = `${tag}[${lang}] `;
+    await p.evaluate(() => { window.__connHintMs = 300; });
+    await status(p, { state: 'reconnecting' });
+    await p.waitForTimeout(1500);
+    check(ct + 'reconnecting hint appears', await p.isVisible('#connHint') && (lang === 'he' ? HEB.test(await p.textContent('#connHint')) : /Can't reach the TV/.test(await p.textContent('#connHint'))));
+    await p.tap('#connHintBtn'); await p.waitForTimeout(500);
+    check(ct + 'hint Help opens settings', (await p.open()) === 'settings');
+    await p.reset();
+    await status(p, { state: 'connected' });
+    check(ct + 'hint hides when connected', !(await p.isVisible('#connHint')));
+    await status(p, { state: 'pairing', tvType: 'lg' });
+    check(ct + 'pairing hint for LG', await p.isVisible('#connHint') && (lang === 'he' ? /Allow/.test(await p.textContent('#connHint')) : /press Allow/.test(await p.textContent('#connHint'))));
+    await status(p, { state: 'pairing', tvType: 'androidtv' });
+    check(ct + 'no Allow hint for Android TV', !(await p.isVisible('#connHint')));
+    await p.evaluate(() => { openSheet('settings'); startScan(); onTv({ type: 'scanDone', ok: true, count: 0 }); });
+    await p.waitForTimeout(400);
+    check(ct + 'no-TV checklist after empty scan', await p.isVisible('#scanHelp') && (lang === 'he' ? HEB.test(await p.textContent('#scanHelp')) : /same Wi-Fi network/.test(await p.textContent('#scanHelp'))));
+    await p.evaluate(() => { startScan(); });
+    check(ct + 'checklist hidden while scanning', !(await p.isVisible('#scanHelp')));
+    if (lang === 'en') check(ct + 'no Hebrew in help (en)', (await p.evaluate(hebrewIn, '#sheet-settings')).length === 0, JSON.stringify(await p.evaluate(hebrewIn, '#sheet-settings')));
+    check(ct + 'no JS errors', p.errs.length === 0, JSON.stringify(p.errs));
+    await p.ctx.close();
+  }
 }
 
 (async () => {

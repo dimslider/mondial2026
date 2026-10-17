@@ -246,8 +246,18 @@
   .licrow .lic-txt .note { display: block; }
   .licrow .lic-full { color: var(--accent); font-weight: 600; font-size: 15px; }
 
-  /* paywall (blocking) */
-  .sheet.paywall { z-index: 12; max-height: 94vh; padding-top: 14px; }
+  /* Pro panel (dismissible) and PRO badges, shown only in the free version */
+  .sheet.paywall { z-index: 12; max-height: 94vh; padding-top: 50px; }
+  .pw-close { position: absolute; top: 6px; inset-inline-end: 10px; width: 40px; height: 40px; display: grid; place-items: center; color: var(--muted); font-size: 18px; }
+  .pro-tag { display: none; font-size: 10px; font-weight: 800; letter-spacing: .5px; color: var(--accent-ink); background: var(--accent); border-radius: 6px; padding: 1px 5px; margin-inline-start: 6px; vertical-align: middle; }
+  body.free .pro-tag { display: inline-block; }
+  /* connection help under the header */
+  .connhint { display: none; align-items: center; gap: 10px; background: #2a1f12; border: 1px solid #5a4220; color: #f3d9a8; border-radius: 14px; padding: 9px 12px; font-size: 13px; line-height: 1.35; }
+  .connhint.show { display: flex; }
+  .connhint span { flex: 1; min-width: 0; }
+  .connhint button { color: var(--accent); font-weight: 700; font-size: 13px; padding: 4px 6px; flex: none; }
+  [dir=rtl] .app .connhint { direction: rtl; }
+  .scanhelp { background: var(--surface); border-radius: 14px; padding: 12px 14px; font-size: 14px; line-height: 1.5; color: #e8edf3; margin-top: 8px; }
   .pw-hero { width: 52px; height: 52px; border-radius: 16px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; margin: 14px auto 8px; }
   .paywall h2 { text-align: center; margin-bottom: 6px; }
   .paywall .lead { text-align: center; margin: 0 0 12px; }
@@ -302,6 +312,7 @@
     <button class="tb-main" onclick="buy()"><span id="trialText"></span></button>
     <button class="tb-x" onclick="dismissTrial()" data-i18n-aria="dismiss">✕</button>
   </div>
+  <div class="connhint" id="connHint"><span id="connHintText"></span><button id="connHintBtn" onclick="openHelp()" data-i18n="help_btn"></button></div>
 
   <div class="panel">
     <div class="bar vol">
@@ -419,8 +430,8 @@
   <h2 data-i18n="more_title"></h2>
   <div class="tiles">
     <button data-action="voice"><b>🎤</b><span data-i18n="a_voice"></span></button>
-    <button data-action="keyboard"><b>⌨</b><span data-i18n="k_keyboard"></span></button>
-    <button data-sheet="sleep"><b>☾</b><span id="sleepTile"></span></button>
+    <button data-action="keyboard"><b>⌨</b><span data-i18n="k_keyboard"></span><i class="pro-tag">PRO</i></button>
+    <button data-sheet="sleep"><b>☾</b><span id="sleepTile"></span><i class="pro-tag">PRO</i></button>
     <button data-key="KEY_SOURCE"><b>⇥</b><span data-i18n="k_source"></span></button>
     <button data-key="KEY_INFO"><b>i</b><span data-i18n="k_info"></span></button>
     <button data-key="KEY_GUIDE"><b>▤</b><span data-i18n="k_guide"></span></button>
@@ -569,15 +580,15 @@
 
   <h3 data-i18n="prefs"></h3>
   <div class="card" style="padding:0 14px">
-    <label class="sw"><span data-i18n="pref_hw"></span><input type="checkbox" id="prefHwVolume"></label>
+    <label class="sw"><span><span data-i18n="pref_hw"></span><i class="pro-tag">PRO</i></span><input type="checkbox" id="prefHwVolume"></label>
     <label class="sw"><span data-i18n="pref_haptic"></span><input type="checkbox" id="prefHaptic"></label>
     <label class="sw"><span data-i18n="pref_simple"></span><input type="checkbox" id="prefSimple"></label>
   </div>
 
   <h3 data-i18n="quick_title"></h3>
   <div class="card" style="padding:0 14px">
-    <label class="sw"><span data-i18n="pref_quick"></span><input type="checkbox" id="prefQuick"></label>
-    <div class="sw"><span data-i18n="on_call"></span>
+    <label class="sw"><span><span data-i18n="pref_quick"></span><i class="pro-tag">PRO</i></span><input type="checkbox" id="prefQuick"></label>
+    <div class="sw"><span><span data-i18n="on_call"></span><i class="pro-tag">PRO</i></span>
       <div class="seg mini" id="callSeg">
         <button data-call="off" data-i18n="call_off"></button><button data-call="mute" data-i18n="call_mute"></button><button data-call="pause" data-i18n="call_pause"></button>
       </div>
@@ -597,20 +608,21 @@
   <p class="note" id="ver" style="text-align:center;margin-top:16px"></p>
 </div>
 
-<!-- paywall: shown when the free trial has ended; cannot be dismissed -->
+<!-- Pro panel: what Pro adds; opened from a Pro feature in the free version, or from "Unlock Pro" -->
 <div class="sheet paywall" id="sheet-paywall" role="dialog" aria-modal="true">
+  <button class="pw-close" onclick="closeSheets()" data-i18n-aria="dismiss">✕</button>
   <div class="langseg"><button data-lang="en" data-lang-name="en"></button><button data-lang="he" data-lang-name="he"></button></div>
   <div class="pw-hero"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
   <h2 data-i18n="pw_title"></h2>
   <p class="note lead" data-i18n="pw_text"></p>
   <ul class="benefits">
-    <li data-i18n="pw_b_ads"></li>
-    <li data-i18n="pw_b_sub"></li>
-    <li data-i18n="pw_b_brands"></li>
     <li data-i18n="pw_b_call"></li>
     <li data-i18n="pw_b_lock"></li>
     <li data-i18n="pw_b_sleep"></li>
     <li data-i18n="pw_b_voice"></li>
+    <li data-i18n="pw_b_macro"></li>
+    <li data-i18n="pw_b_tvs"></li>
+    <li data-i18n="pw_b_hw"></li>
   </ul>
   <button class="btn full big" id="pwBuy" onclick="buy()"></button>
   <button class="linkbtn" id="pwRestore" onclick="restore()" data-i18n="pw_restore"></button>
@@ -720,19 +732,22 @@
       no_tv_found: "No TV found. Make sure it's on and on the same network",
       tv_wants_text: 'The TV is waiting for text',
       dismiss: 'Dismiss',
-      trial_left: 'Free trial: {n} days left', trial_left_one: 'Free trial: 1 day left', trial_last: 'Free trial: last day',
-      unlock_price: 'Unlock forever for {price}', unlock_forever: 'Unlock forever', unlock: 'Unlock',
-      full_version: 'Full version ✓',
-      pw_title: 'Your free trial has ended',
-      pw_text: 'Keep using TV Remote with a single one-time purchase. Pay once and it’s yours forever.',
-      pw_b_ads: 'No ads, ever', pw_b_sub: 'No subscription – pay once',
-      pw_b_brands: 'All supported TVs: Samsung, LG, Android TV / Google TV',
-      pw_b_call: 'Auto-mute or pause the TV when a call comes in',
-      pw_b_lock: 'Remote on the lock screen and in notifications',
-      pw_b_sleep: 'Sleep timer', pw_b_voice: 'Voice search and opening apps by voice',
-      pw_buy_price: 'Unlock for {price}', pw_buy: 'Unlock', pw_restore: 'Restore purchase',
-      pw_fine: 'One-time payment through Google Play. No subscription, no recurring charges.',
-      lic_thanks: 'Thank you! The full version is unlocked.',
+      trial_left: 'Pro trial: {n} days left – everything is unlocked', trial_last: 'Pro trial: last day – everything is unlocked',
+      unlock_pro: 'Unlock Pro', free_version: 'Free version – the basic remote is yours forever',
+      pro_once_price: 'Pro: {price}, one-time', pro_once: 'Pro: one-time purchase', pro_owned: 'Pro ✓',
+      pw_title: 'Unlock Pro',
+      pw_text: 'The basic remote stays free forever. Pro adds:',
+      pw_b_call: 'Auto-mute or pause the TV when a call comes in – WhatsApp too',
+      pw_b_lock: 'Remote on the lock screen, in notifications and as a widget',
+      pw_b_sleep: 'Sleep timer', pw_b_voice: 'Voice commands and typing to the TV',
+      pw_b_macro: 'Recorded shortcuts (macros) and custom shortcut buttons',
+      pw_b_tvs: 'Several TVs, switch in one tap', pw_b_hw: "Your phone's volume buttons control the TV",
+      pw_buy_price: 'Unlock Pro – {price} one-time', pw_buy: 'Unlock Pro', pw_restore: 'Restore purchase',
+      pw_fine: 'One payment through Google Play. No subscription. No ads.',
+      help_btn: 'Help', conn_hint: "Can't reach the TV. Is it on and on the same Wi-Fi as the phone?",
+      pair_hint: 'Look at the TV and press Allow / OK on the prompt (with the TV remote or the button on the TV).',
+      scan_help: '<b>No TV found.</b> Check that:<br>• the TV is on<br>• the phone and the TV are on the same Wi-Fi network – not a guest network (some routers separate 2.4 GHz and 5 GHz)<br>Then tap Scan again, or enter the TV’s IP address below (it’s in the TV’s network settings).',
+      lic_thanks: 'Thank you! Pro is unlocked.',
     },
     he: {
       app_name: 'שלט לטלוויזיה',
@@ -829,19 +844,22 @@
       no_tv_found: 'לא נמצאה טלוויזיה. ודא שהיא דלוקה ובאותה רשת',
       tv_wants_text: 'הטלוויזיה מחכה לטקסט',
       dismiss: 'סגור',
-      trial_left: 'תקופת ניסיון: נותרו {n} ימים', trial_left_one: 'תקופת ניסיון: נותר יום אחד', trial_last: 'תקופת ניסיון: יום אחרון',
-      unlock_price: 'פתיחה לתמיד ב-{price}', unlock_forever: 'פתיחה לתמיד', unlock: 'פתיחה',
-      full_version: 'גרסה מלאה ✓',
-      pw_title: 'תקופת הניסיון הסתיימה',
-      pw_text: 'אפשר להמשיך להשתמש בשלט לטלוויזיה ברכישה חד-פעמית. משלמים פעם אחת – והוא שלכם לתמיד.',
-      pw_b_ads: 'בלי פרסומות, אף פעם', pw_b_sub: 'בלי מנוי – תשלום אחד',
-      pw_b_brands: 'כל הטלוויזיות הנתמכות: סמסונג, LG, Android TV / Google TV',
-      pw_b_call: 'השתקה או עצירה אוטומטית של הטלוויזיה כשנכנסת שיחה',
-      pw_b_lock: 'שלט במסך הנעילה ובהתראות',
-      pw_b_sleep: 'טיימר שינה', pw_b_voice: 'חיפוש קולי ופתיחת אפליקציות בקול',
-      pw_buy_price: 'פתיחה ב-{price}', pw_buy: 'פתיחת הגרסה המלאה', pw_restore: 'שחזור רכישה',
-      pw_fine: 'תשלום חד-פעמי דרך Google Play. בלי מנוי ובלי חיובים חוזרים.',
-      lic_thanks: 'תודה! הגרסה המלאה נפתחה.',
+      trial_left: 'ניסיון Pro: נותרו {n} ימים – הכול פתוח', trial_last: 'ניסיון Pro: יום אחרון – הכול פתוח',
+      unlock_pro: 'שדרוג ל-\u2068Pro\u2069', free_version: 'גרסה חינמית – השלט הבסיסי שלכם לתמיד',
+      pro_once_price: 'Pro בתשלום חד-פעמי: {price}', pro_once: 'Pro: רכישה חד-פעמית', pro_owned: 'Pro ✓',
+      pw_title: 'שדרוג ל-\u2068Pro\u2069',
+      pw_text: 'השלט הבסיסי נשאר חינמי לתמיד. Pro מוסיף:',
+      pw_b_call: 'השתקה או עצירה אוטומטית כשנכנסת שיחה – גם בוואטסאפ',
+      pw_b_lock: 'שלט במסך הנעילה, בהתראות וכווידג׳ט',
+      pw_b_sleep: 'טיימר שינה', pw_b_voice: 'פקודות קוליות והקלדה לטלוויזיה',
+      pw_b_macro: 'קיצורים מוקלטים (רצפי מקשים) וכפתורי קיצור לבחירתכם',
+      pw_b_tvs: 'כמה טלוויזיות, מעבר בנגיעה', pw_b_hw: 'כפתורי הווליום של הטלפון שולטים בטלוויזיה',
+      pw_buy_price: 'שדרוג ל-\u2068Pro\u2069 – {price} חד-פעמי', pw_buy: 'שדרוג ל-\u2068Pro\u2069', pw_restore: 'שחזור רכישה',
+      pw_fine: 'תשלום אחד דרך Google Play. בלי מנוי. בלי פרסומות.',
+      help_btn: 'עזרה', conn_hint: 'אין חיבור לטלוויזיה. היא דלוקה ומחוברת לאותה רשת Wi-Fi כמו הטלפון?',
+      pair_hint: 'הסתכלו על הטלוויזיה ולחצו Allow / אישור בהודעה (עם השלט של הטלוויזיה או הכפתור שעליה).',
+      scan_help: '<b>לא נמצאה טלוויזיה.</b> בדקו ש:<br>• הטלוויזיה דלוקה<br>• הטלפון והטלוויזיה מחוברים לאותה רשת Wi-Fi – לא לרשת אורחים (יש נתבים שמפרידים בין 2.4GHz ל-5GHz)<br>ואז לחצו שוב על סריקה, או הזינו את כתובת ה-IP של הטלוויזיה למטה (היא מופיעה בהגדרות הרשת של הטלוויזיה).',
+      lic_thanks: 'תודה! Pro נפתח.',
     },
   };
   const LANGS = ['en', 'he'];
@@ -905,11 +923,15 @@
     if (shown('macro') && recording) $('macroInfo').textContent = t('macro_info', { n: recording.keys.length });
   }
 
-  /* ---------- license: family build, free trial, purchased or expired ---------- */
+  /* ---------- license: family build, Pro trial, purchased, or free ---------- */
+  // The basic remote is free forever. Pro features are unlocked during the trial, after a
+  // purchase, and always in the family build; in the free version they open the Pro panel.
   let LIC = { state: 'family', daysLeft: 0, price: null };
   let trialDismissed = false;
   function normLicense(o) {
-    const state = ['family', 'trial', 'purchased', 'expired'].includes(o && o.state) ? o.state : 'family';
+    let st = o && o.state;
+    if (st === 'expired') st = 'free'; // older native builds
+    const state = ['family', 'trial', 'purchased', 'free'].includes(st) ? st : 'family';
     const price = o && o.price != null && String(o.price).trim() ? String(o.price) : null;
     return { state, daysLeft: Math.max(0, Math.floor(Number(o && o.daysLeft) || 0)), price };
   }
@@ -920,51 +942,53 @@
       return normLicense(typeof v === 'string' ? (v ? JSON.parse(v) : null) : v);
     } catch (e) { return normLicense(null); }
   }
-  const isLocked = () => LIC.state === 'expired';
-  // Call before anything that controls the TV: while the trial is over, show the paywall instead.
-  function locked() {
-    if (!isLocked()) return false;
-    showPaywall();
+  const isFree = () => LIC.state === 'free';
+  // Call before a Pro feature: in the free version, show what Pro adds instead of doing it.
+  function needPro() {
+    if (!isFree()) return false;
+    showUpsell();
     return true;
   }
   function buy() { if (typeof A.buy === 'function') A.buy(); }
   function restore() { if (typeof A.restore === 'function') A.restore(); }
   function dismissTrial() { trialDismissed = true; renderLicense(); }
   function trialLeftText(n) {
-    return n <= 0 ? t('trial_last') : n === 1 ? t('trial_left_one') : t('trial_left', { n });
+    return n <= 1 ? t('trial_last') : t('trial_left', { n });
   }
-  function showPaywall() {
-    document.querySelectorAll('.sheet.show').forEach((s) => { if (s.id !== 'sheet-paywall') s.classList.remove('show'); });
-    if (!shown('paywall')) sheetOpenedAt = Date.now();
+  function showUpsell() {
+    stopRepeat();
+    closeSheets(true);
+    sheetOpenedAt = Date.now();
     $('sheet-paywall').classList.add('show');
     $('scrim').classList.add('show');
   }
   function renderLicense() {
     const L = LIC;
-    const price = L.price ? '\u2068' + L.price + '\u2069' : null; // bidi-isolated, so "$4.99" reads right inside Hebrew
-    const unlockText = price ? t('unlock_price', { price }) : t('unlock_forever');
+    const price = L.price ? '\u2068' + L.price + '\u2069' : null; // bidi-isolated, so "$2.99" reads right inside Hebrew
+    document.body.classList.toggle('free', L.state === 'free');
     $('trialBar').classList.toggle('show', L.state === 'trial' && !trialDismissed);
-    $('trialText').innerHTML = esc(trialLeftText(L.daysLeft)) + ' · <b>' + esc(unlockText) + '</b>';
+    $('trialText').innerHTML = esc(trialLeftText(L.daysLeft)) + ' · <b>' + esc(t('unlock_pro')) + '</b>';
     const row = $('licRow');
-    if (L.state === 'trial') {
+    if (L.state === 'trial' || L.state === 'free') {
       row.style.display = '';
-      row.innerHTML = '<div class="lic-txt">' + esc(trialLeftText(L.daysLeft)) + '<span class="note">' + esc(unlockText) + '</span></div>' +
-        '<button class="btn" id="licBuy" onclick="buy()">' + esc(t('unlock')) + '</button>';
+      const head = L.state === 'trial' ? trialLeftText(L.daysLeft) : t('free_version');
+      const sub = price ? t('pro_once_price', { price }) : t('pro_once');
+      row.innerHTML = '<div class="lic-txt">' + esc(head) + '<span class="note">' + esc(sub) + '</span></div>' +
+        '<button class="btn" id="licBuy" onclick="showUpsell()">' + esc(t('unlock_pro')) + '</button>';
     } else if (L.state === 'purchased') {
       row.style.display = '';
-      row.innerHTML = '<div class="lic-full">' + esc(t('full_version')) + '</div>';
+      row.innerHTML = '<div class="lic-full">' + esc(t('pro_owned')) + '</div>';
     } else {
       row.style.display = 'none';
       row.innerHTML = '';
     }
     $('pwBuy').textContent = price ? t('pw_buy_price', { price }) : t('pw_buy');
-    if (L.state === 'expired') {
-      if (!shown('paywall')) { stopRepeat(); cancelRecording(); showPaywall(); }
-    } else if (shown('paywall')) {
+    if (L.state !== 'free' && shown('paywall')) {
       $('sheet-paywall').classList.remove('show');
       if (!document.querySelector('.sheet.show')) $('scrim').classList.remove('show');
     }
   }
+  window.showUpsell = showUpsell;
 
   // Shortcut buttons: app ids per TV family (Android TV takes package names).
   const KNOWN_APPS = {
@@ -1009,7 +1033,6 @@
   let recording = null; // { slot, keys: [] } while recording a shortcut
   // The one path every remote key goes through.
   function send(key) {
-    if (locked()) return;
     A.key(key);
     if (recording) {
       recording.keys.push(key);
@@ -1018,10 +1041,9 @@
   }
   // Every app launch goes through here.
   function launch(appId, type) {
-    if (locked()) return;
     A.launch(appId, type);
   }
-  function startVoice() { if (locked()) return; A.voice(); }
+  function startVoice() { if (needPro()) return; A.voice(); }
 
   let toastTimer;
   function toast(text) {
@@ -1050,7 +1072,6 @@
     el.classList.add('pressed');
     // Keys in scrollable panels wait for a completed tap, so scrolling doesn't press them.
     if (!el.dataset.key || el.closest('.tapkeys')) return;
-    if (isLocked()) { locked(); return; }
     buzz();
     send(el.dataset.key);
     if ('repeat' in el.dataset) {
@@ -1100,10 +1121,9 @@
 
   function runAction(a) {
     if (a === 'lang') { setLanguage(LANG === 'he' ? 'en' : 'he'); return; }
-    if (locked()) return;
     if (a === 'power') A.power();
-    else if (a === 'keyboard') { openSheet('keyboard'); setTimeout(() => $('kbText').focus(), 250); }
-    else if (a === 'voice') { closeSheets(); A.voice(); }
+    else if (a === 'keyboard') { if (needPro()) return; openSheet('keyboard'); setTimeout(() => $('kbText').focus(), 250); }
+    else if (a === 'voice') { if (needPro()) return; closeSheets(); A.voice(); }
   }
 
   /* ---------- d-pad / touchpad toggle ---------- */
@@ -1158,7 +1178,7 @@
 
   /* ---------- sheets ---------- */
   function openSheet(name) {
-    if (isLocked() && name !== 'paywall') { showPaywall(); return; }
+    if ((name === 'sleep' || name === 'keyboard') && needPro()) return;
     closeSheets(true);
     sheetOpenedAt = Date.now();
     $('sheet-' + name).classList.add('show');
@@ -1170,15 +1190,12 @@
     if (name === 'sleep') renderSleep();
     if (name === 'keyboard') $('kbYt').style.display = ytSearchOk() ? '' : 'none';
   }
-  // Closes every panel except the paywall, which stays up for as long as the trial is over.
   function closeSheets(keepScrim) {
-    const keepPaywall = isLocked();
-    document.querySelectorAll('.sheet.show').forEach((s) => { if (!(keepPaywall && s.id === 'sheet-paywall')) s.classList.remove('show'); });
-    if (!keepScrim && !keepPaywall) $('scrim').classList.remove('show');
+    document.querySelectorAll('.sheet.show').forEach((s) => s.classList.remove('show'));
+    if (!keepScrim) $('scrim').classList.remove('show');
     if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
   }
   window.handleBack = function () {
-    if (isLocked()) return false; // the paywall can't be dismissed; Back leaves the app as usual
     if (recording && $('recbar').classList.contains('show')) { cancelRecording(); return true; }
     if (document.querySelector('.sheet.show')) { closeSheets(); return true; }
     return false;
@@ -1186,7 +1203,6 @@
 
   /* ---------- apps ---------- */
   function launchKnown(key) {
-    if (locked()) return;
     const k = KNOWN_APPS[key];
     const type = S.tvType || 'samsung';
     const found = type !== 'androidtv' && S.apps.find((a) => k.names.some((n) => (a.name || '').toLowerCase().includes(n)));
@@ -1249,7 +1265,6 @@
     });
   }
   function launchSlot(i) {
-    if (locked()) return;
     const slot = slots()[i];
     if (typeof slot === 'string') launchKnown(slot);
     else if (slot.macro) playMacro(slot.macro, slot.name);
@@ -1259,12 +1274,12 @@
   /* ---------- recorded shortcuts (macros) ---------- */
   let macroPlaying = false;
   function playMacro(keys, name) {
-    if (macroPlaying || locked()) return;
+    if (macroPlaying || needPro()) return;
     macroPlaying = true;
     toast(t('running', { name }));
     let delay = 0;
     keys.forEach((k, idx) => {
-      setTimeout(() => { if (!isLocked()) A.key(k); if (idx === keys.length - 1) macroPlaying = false; }, delay);
+      setTimeout(() => { A.key(k); if (idx === keys.length - 1) macroPlaying = false; }, delay);
       // Home and Back redraw whole screens on the TV: give them time.
       delay += (k === 'KEY_HOME' || k === 'KEY_RETURN') ? 1800 : 550;
     });
@@ -1275,7 +1290,7 @@
     $('recText').textContent = recording.keys.length ? t('rec_count', { n: recording.keys.length }) : t('rec_start');
   }
   function startRecording() {
-    if (locked()) return;
+    if (needPro()) return;
     recording = { slot: pickSlot, keys: [] };
     closeSheets();
     renderRecText();
@@ -1303,7 +1318,7 @@
   $('macroName').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); saveMacro(); } });
   let pickSlot = 0;
   function openPicker(i) {
-    if (locked()) return;
+    if (needPro()) return;
     pickSlot = i;
     openSheet('pick');
     renderPicker();
@@ -1368,7 +1383,7 @@
   /* ---------- keyboard ---------- */
   function sendText() {
     const v = $('kbText').value;
-    if (!v || locked()) return;
+    if (!v || needPro()) return;
     A.text(v);
     $('kbText').value = '';
     toast(t('sent'));
@@ -1405,7 +1420,7 @@
   }
   function onVoice(raw) {
     const text = String(raw || '').trim();
-    if (!text || locked()) return;
+    if (!text || needPro()) return;
     const q = text.toLowerCase().replace(/^(תפתח|פתח|תפעיל|הפעל|תעבור ל|open|launch|start)\s+(את\s+)?/, '').trim();
     const macro = slots().find((sl) => sl && sl.macro && voiceMatches(q, sl.name));
     if (macro) { playMacro(macro.macro, macro.name); return; }
@@ -1419,7 +1434,7 @@
     $('voiceYt').style.display = ytSearchOk() ? '' : 'none';
     openSheet('voice');
   }
-  function voiceType() { if (locked()) return; A.text(voiceQuery); toast(t('sent_tv')); closeSheets(); }
+  function voiceType() { if (needPro()) return; A.text(voiceQuery); toast(t('sent_tv')); closeSheets(); }
   function ytSearchOk() { return S.tvType === 'androidtv'; }
   function kbYoutube() {
     const q = $('kbText').value.trim();
@@ -1430,7 +1445,7 @@
   }
   window.kbYoutube = kbYoutube;
   function voiceYoutube() {
-    if (locked()) return;
+    if (needPro()) return;
     launch('https://www.youtube.com/results?search_query=' + encodeURIComponent(voiceQuery), 0);
     toast(t('yt_searching'));
     closeSheets();
@@ -1438,7 +1453,7 @@
 
   /* ---------- sleep timer ---------- */
   function setSleep(minutes) {
-    if (locked()) return;
+    if (minutes > 0 && needPro()) return;
     A.sleepTimer(minutes);
     toast(minutes ? t('sleep_set', { n: minutes }) : t('sleep_off'));
     closeSheets();
@@ -1503,6 +1518,7 @@
       return;
     }
     if (e.target.closest('[data-switch]') && ip !== S.ip) {
+      if (needPro()) return; // several TVs: Pro
       buzz();
       A.switchTv(ip);
       S.apps = [];
@@ -1527,7 +1543,27 @@
     idle: '', connecting: 'wait', reconnecting: 'wait', pairing: 'wait', pin: 'wait',
     connected: 'ok', denied: 'err', noTv: 'err', badIp: 'err',
   };
+  // Help line under the header: pairing instructions, or "can't reach the TV" after ~12 s without a connection.
+  let troubleSince = 0;
+  const CONN_HINT_MS = 12000;
+  function renderConnHint() {
+    const bad = S.ip && (S.state === 'connecting' || S.state === 'reconnecting');
+    if (!bad) troubleSince = 0; else if (!troubleSince) troubleSince = Date.now();
+    let text = '';
+    if (S.state === 'pairing' && (S.tvType === 'samsung' || S.tvType === 'lg')) text = t('pair_hint');
+    else if (bad && Date.now() - troubleSince >= (window.__connHintMs || CONN_HINT_MS)) text = t('conn_hint');
+    $('connHintText').textContent = text;
+    $('connHintBtn').style.display = S.state === 'pairing' ? 'none' : '';
+    $('connHint').classList.toggle('show', !!text);
+  }
+  setInterval(renderConnHint, 1000);
+  function openHelp() {
+    openSheet('settings');
+    setTimeout(() => { const h = $('helpText'); if (h) h.scrollIntoView({ block: 'center' }); }, 350);
+  }
+  window.openHelp = openHelp;
   function renderStatus() {
+    renderConnHint();
     const known = S.state in STATUS;
     const text = !known ? String(S.state) : S.state === 'connected' ? null : t('st_' + S.state);
     $('status').className = 'status ' + (STATUS[S.state] || '');
@@ -1559,7 +1595,8 @@
       '<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2ec4a6" stroke-width="1.8"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg>' +
       '<div class="meta"><div><span dir="auto">' + esc(d.name) + '</span> <span class="badge">' + esc(BRANDS[d.type] || '') + '</span></div><small>' + esc(d.ip) + (d.model ? ' · ' + esc(d.model) : '') + '</small></div>' +
       (d.ip === S.ip ? '<span class="note">' + esc(t('selected')) + '</span>' : '') + '</button>').join('') +
-      (S.scanning ? '<div class="empty"><span class="spinner"></span> ' + esc(t('scanning')) + '</div>' : '');
+      (S.scanning ? '<div class="empty"><span class="spinner"></span> ' + esc(t('scanning')) + '</div>' : '') +
+      (!S.scanning && S.scanDone && !S.found.length ? '<div class="scanhelp" id="scanHelp">' + t('scan_help') + '</div>' : '');
     $('scanBtn').style.display = S.scanning ? 'none' : '';
   }
   $('scanList').addEventListener('click', (e) => {
@@ -1569,6 +1606,8 @@
     if (d) selectTv(d);
   });
   function selectTv(d) {
+    // Free version: one TV (replacing it is fine); keeping a third one around is Pro.
+    if (d.ip !== S.ip && S.tvs.length >= 2 && !S.tvs.some((x) => x.ip === d.ip) && needPro()) return;
     buzz();
     A.selectTv(d.ip, d.type || 'samsung', d.name || 'TV', d.mac || '');
     S.ip = d.ip; S.tvType = d.type || 'samsung'; S.name = d.name; S.mac = d.mac; S.apps = [];
@@ -1576,7 +1615,7 @@
     setTimeout(() => { if (shown('settings')) closeSheets(); }, 400);
   }
   function startScan() {
-    S.scanning = true; S.found = [];
+    S.scanning = true; S.scanDone = false; S.found = [];
     renderScan();
     A.scan();
   }
@@ -1588,7 +1627,7 @@
     toast(t('connecting_to', { name: ip }));
     closeSheets();
   }
-  $('prefHwVolume').addEventListener('change', (e) => { pref.hwVolume = e.target.checked; A.setPref('hwVolume', pref.hwVolume ? '1' : '0'); });
+  $('prefHwVolume').addEventListener('change', (e) => { if (e.target.checked && needPro()) { e.target.checked = false; return; } pref.hwVolume = e.target.checked; A.setPref('hwVolume', pref.hwVolume ? '1' : '0'); });
   $('prefHaptic').addEventListener('change', (e) => { pref.haptic = e.target.checked; A.setPref('haptic', pref.haptic ? '1' : '0'); });
   $('prefSimple').addEventListener('change', (e) => {
     pref.simple = e.target.checked;
@@ -1610,6 +1649,7 @@
     document.querySelectorAll('#callSeg [data-call]').forEach((b) => b.classList.toggle('on', b.dataset.call === pref.callAction));
   }
   $('prefQuick').addEventListener('change', (e) => {
+    if (e.target.checked && needPro()) { e.target.checked = false; return; }
     if (e.target.checked) { A.requestPermission('notifications'); return; }
     pref.quick = false;
     A.setPref('quickControls', '0');
@@ -1627,6 +1667,7 @@
       renderQuick();
       return;
     }
+    if (needPro()) return;
     pendingCall = b.dataset.call;
     A.requestPermission('phone');
   });
@@ -1662,7 +1703,7 @@
         if (m.state === 'pin') openSheet('pin');
         else if (shown('pin')) closeSheets();
         if (shown('settings')) renderSettings();
-        if (m.state === 'noTv' && !autoScanned && !isLocked()) {
+        if (m.state === 'noTv' && !autoScanned) {
           autoScanned = true;
           openSheet('settings');
           startScan();
@@ -1681,6 +1722,7 @@
         break;
       case 'scanDone':
         S.scanning = false;
+        S.scanDone = true;
         renderScan();
         if (!m.ok) toast(t('no_wifi'));
         else if (!m.count) toast(t('no_tv_found'));
@@ -1690,7 +1732,7 @@
         toast(m.text); // native toasts arrive already localized
         break;
       case 'keyboard':
-        if (!shown('keyboard') && !isLocked()) {
+        if (!shown('keyboard') && !isFree()) {
           openSheet('keyboard');
           setTimeout(() => $('kbText').focus(), 250);
           toast(t('tv_wants_text'));
