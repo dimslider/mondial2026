@@ -37,7 +37,7 @@ Enter the public URL where `store/privacy-policy.html` is hosted (see the launch
 
 ## 2. Content rating (IARC questionnaire)
 
-- **Email for IARC:** the developer contact email (`[CONTACT_EMAIL]`).
+- **Email for IARC:** the developer contact email (`remotetvforall@gmail.com`).
 - **Category:** **"All Other App Types"** (also listed as *Utility, Productivity, Communication or Other*). Not a game, not social, not a reference/news app.
 - Answer **No** to every content question: violence, fear, sexuality, nudity, profanity/crude humour, drugs, alcohol, tobacco, gambling/simulated gambling, discrimination.
 - Interactive elements:
