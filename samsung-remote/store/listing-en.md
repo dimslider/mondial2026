@@ -12,26 +12,16 @@ Policy notes that shaped these texts:
 
 ## 1. App name (title) — max 30 characters
 
-The title carries the search keywords ("universal", "smart TV remote") and a short brand; the call auto-mute is the headline of the short description, the screenshots and the description instead — it sells, but people don't search for it.
+**Recommended: "Universal Smart TV Remote"** – it contains both phrases people search for ("smart TV remote" and "universal TV remote"). "Remoty" was dropped: an iPhone TV-remote app with that name already exists, which risks confusion and a trademark complaint.
 
-Option 1 — recommended — a short brand people can remember, plus the words people actually search for ("universal", "TV remote"). Search on Google Play first that the name "Remoty" isn't taken. (27 / 30 chars)
-```text
-Remoty: Universal TV Remote
-```
-
-Option 2 — pure search keywords, no brand (25 / 30 chars)
+Option 1 — recommended (25 / 30 chars)
 ```text
 Universal Smart TV Remote
 ```
 
-Option 3 — describes the feel of the app (29 / 30 chars)
+Option 2 (29 / 30 chars)
 ```text
 Smart TV Remote: Fast & Clean
-```
-
-Option 4 — brand + keywords, shorter (24 / 30 chars)
-```text
-Remoty – Smart TV Remote
 ```
 
 ---
