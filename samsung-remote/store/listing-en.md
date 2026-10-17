@@ -157,4 +157,4 @@ Do not stuff keywords or repeat brand names beyond the compatibility list – Pl
 
 ## 6. Price
 
-Suggested: **US$2.99** one-time (Israel: **₪11.90**, VAT-inclusive). This is adjustable at any time in Play Console → Monetize → Products → In-app products → `full_unlock`. Let Play convert the other countries automatically, then round any odd local prices.
+Suggested: **US$5.99** one-time (Israel: **₪19.90**, VAT-inclusive). This is adjustable at any time in Play Console → Monetize → Products → In-app products → `full_unlock`. Let Play convert the other countries automatically, then round any odd local prices.
