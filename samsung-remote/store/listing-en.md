@@ -44,7 +44,7 @@ One remote for all your smart TVs – free basics, no ads, pay once for Pro.
 
 ## 3. Full description — max 4000 characters
 
-(3979 / 4000 chars)
+(3990 / 4000 chars)
 ```text
 The fair remote for your smart TV: a free basic remote, no ads, no account, no subscription – one app for all the TVs in your home.
 
@@ -74,7 +74,7 @@ Why not the official app? One remote for every TV in the house – no account, n
 • Home-screen widget buttons and a "mute TV" Quick Settings tile
 • Sleep timer: turns the TV off on time, even with the phone locked, with a countdown and Cancel
 • Voice: say an app name to open it, or dictate a search to the TV
-• Type text straight into the TV's on-screen keyboard
+• Type into the TV's system keyboard (not YouTube on Samsung/LG)
 • Macros: record a sequence of presses and replay it with one tap – or by voice
 • Change what the shortcut buttons open
 • Multiple TVs: rename them and switch in one tap

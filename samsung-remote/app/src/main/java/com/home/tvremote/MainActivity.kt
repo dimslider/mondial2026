@@ -46,10 +46,14 @@ class MainActivity : Activity() {
 
         tv = TvClient.get(this)
         web.addJavascriptInterface(Bridge(), "Android")
-        setContentView(web)
+        // The page sits in a container: a WebView ignores its own padding, so the system-bar
+        // insets (edge-to-edge is enforced from Android 15) are applied to the container instead.
+        val root = android.widget.FrameLayout(this)
+        root.setBackgroundColor(0xFF0E1116.toInt())
+        root.addView(web, android.widget.FrameLayout.LayoutParams(-1, -1))
+        setContentView(root)
         if (Build.VERSION.SDK_INT >= 30) {
-            // Edge-to-edge (enforced from Android 15): keep the page clear of the system bars and keyboard.
-            web.setOnApplyWindowInsetsListener { v, insets ->
+            root.setOnApplyWindowInsetsListener { v, insets ->
                 val bars = insets.getInsets(android.view.WindowInsets.Type.systemBars())
                 val ime = insets.getInsets(android.view.WindowInsets.Type.ime())
                 v.setPadding(bars.left, bars.top, bars.right, maxOf(bars.bottom, ime.bottom))
