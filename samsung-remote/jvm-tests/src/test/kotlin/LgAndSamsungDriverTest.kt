@@ -66,6 +66,12 @@ class LgAndSamsungDriverTest {
             assertTrue(d.key("KEY_7"))
             assertEquals("type:button\nname:7\n\n", pointer.poll(5, TimeUnit.SECONDS))
             assertEquals(false, d.key("KEY_AMBIENT"))
+            assertTrue(d.pointerMove(12, -5))
+            assertEquals("type:move\ndx:12\ndy:-5\ndown:0\n\n", pointer.poll(5, TimeUnit.SECONDS))
+            assertTrue(d.pointerClick())
+            assertEquals("type:click\n\n", pointer.poll(5, TimeUnit.SECONDS))
+            assertTrue(d.pointerScroll(30))
+            assertEquals("type:scroll\ndx:0\ndy:30\n\n", pointer.poll(5, TimeUnit.SECONDS))
 
             d.key("KEY_POWER")
             d.launch("netflix", 0)
@@ -178,6 +184,14 @@ class LgAndSamsungDriverTest {
                 assertEquals("SendInputString", it.getString("TypeOfRemote"))
                 assertEquals("שלום", String(java.util.Base64.getDecoder().decode(it.getString("Cmd"))))
             }
+            assertTrue(d.pointerMove(7, -3))
+            msgs.poll(5, TimeUnit.SECONDS)!!.getJSONObject("params").let {
+                assertEquals("ProcessMouseDevice", it.getString("TypeOfRemote")); assertEquals("Move", it.getString("Cmd"))
+                assertEquals(7, it.getJSONObject("Position").getInt("x")); assertEquals(-3, it.getJSONObject("Position").getInt("y"))
+            }
+            assertTrue(d.pointerClick())
+            assertEquals("LeftClick", msgs.poll(5, TimeUnit.SECONDS)!!.getJSONObject("params").getString("Cmd"))
+            assertEquals(false, d.pointerScroll(10))
             d.launch("111299001912", 2)
             msgs.poll(5, TimeUnit.SECONDS)!!.getJSONObject("params").getJSONObject("data").let {
                 assertEquals("111299001912", it.getString("appId")); assertEquals("DEEP_LINK", it.getString("action_type"))

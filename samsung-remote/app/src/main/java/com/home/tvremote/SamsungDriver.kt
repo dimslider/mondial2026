@@ -125,6 +125,23 @@ class SamsungDriver(ip: String, session: Session) : Driver(ip, session) {
         return true
     }
 
+    // Mouse input: only some screens show the cursor (the browser and a few apps), hence "experimental" in the UI.
+    private fun mouse(cmd: String, position: JSONObject? = null) {
+        val params = JSONObject().put("Cmd", cmd).put("TypeOfRemote", "ProcessMouseDevice")
+        if (position != null) params.put("Position", position)
+        send(JSONObject().put("method", "ms.remote.control").put("params", params))
+    }
+
+    override fun pointerMove(dx: Int, dy: Int): Boolean {
+        mouse("Move", JSONObject().put("x", dx).put("y", dy).put("Time", System.currentTimeMillis().toString()))
+        return true
+    }
+
+    override fun pointerClick(): Boolean {
+        mouse("LeftClick")
+        return true
+    }
+
     override fun text(text: String): Boolean {
         val b64 = Base64.getEncoder().encodeToString(text.toByteArray(Charsets.UTF_8))
         if (!imeOpen) session.log("text sent while the TV keyboard is not open")

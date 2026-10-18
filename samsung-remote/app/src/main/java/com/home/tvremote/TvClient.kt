@@ -234,6 +234,16 @@ class TvClient private constructor(private val context: Context) {
         if (!d.text(text)) toast("@text_unsupported")
     }
 
+    /** Cursor input is live: it goes out only while connected and is never queued for later. */
+    fun pointer(action: (Driver) -> Unit) = post {
+        val d = driver
+        if (isConnected && d != null) action(d)
+        else if (d == null) {
+            attempt = 0
+            connect()
+        }
+    }
+
     fun launchApp(appId: String, appType: Int) = command { it.launch(appId, appType) }
 
     fun requestApps() = command { it.requestApps() }

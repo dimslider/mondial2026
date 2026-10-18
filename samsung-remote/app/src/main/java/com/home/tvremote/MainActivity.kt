@@ -203,6 +203,15 @@ class MainActivity : Activity() {
         fun text(text: String) = tv.sendText(text)
 
         @JavascriptInterface
+        fun pointerMove(dx: Int, dy: Int) = tv.pointer { it.pointerMove(dx, dy) }
+
+        @JavascriptInterface
+        fun pointerClick() = tv.pointer { it.pointerClick() }
+
+        @JavascriptInterface
+        fun pointerScroll(dy: Int) = tv.pointer { it.pointerScroll(dy) }
+
+        @JavascriptInterface
         fun launch(appId: String, appType: Int) = tv.launchApp(appId, appType)
 
         @JavascriptInterface

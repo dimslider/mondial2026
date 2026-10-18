@@ -174,6 +174,21 @@ class LgDriver(ip: String, session: Session) : Driver(ip, session) {
         return true
     }
 
+    override fun pointerMove(dx: Int, dy: Int): Boolean {
+        input?.send("type:move\ndx:$dx\ndy:$dy\ndown:0\n\n")
+        return true
+    }
+
+    override fun pointerClick(): Boolean {
+        input?.send("type:click\n\n")
+        return true
+    }
+
+    override fun pointerScroll(dy: Int): Boolean {
+        input?.send("type:scroll\ndx:0\ndy:$dy\n\n")
+        return true
+    }
+
     override fun text(text: String): Boolean {
         request("com.webos.service.ime/insertText", JSONObject().put("text", text).put("replace", false))
         return true

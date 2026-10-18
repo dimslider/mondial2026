@@ -381,7 +381,7 @@
       <button class="arr right" data-key="KEY_RIGHT" data-repeat data-i18n-aria="a_right"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
       <button class="ok" data-key="KEY_ENTER">OK</button>
     </div>
-    <div class="touchpad" id="touchpad"><div class="hint" data-i18n="tp_hint"></div></div>
+    <div class="touchpad" id="touchpad"><div class="hint" id="tpHint"></div></div>
   </div>
 
   <div class="media">
@@ -583,7 +583,9 @@
     <label class="sw"><span><span data-i18n="pref_hw"></span><i class="pro-tag">PRO</i></span><input type="checkbox" id="prefHwVolume"></label>
     <label class="sw"><span data-i18n="pref_haptic"></span><input type="checkbox" id="prefHaptic"></label>
     <label class="sw"><span data-i18n="pref_simple"></span><input type="checkbox" id="prefSimple"></label>
+    <label class="sw" id="rowMouse"><span id="mouseLabel"></span><input type="checkbox" id="prefMouse"></label>
   </div>
+  <p class="note" id="mouseNote" data-i18n="mouse_note"></p>
 
   <h3 data-i18n="quick_title"></h3>
   <div class="card" style="padding:0 14px">
@@ -648,6 +650,12 @@
       mode_pad: 'D-pad', a_mode_pad: 'Arrow keys', mode_tp: 'Touch', a_mode_tp: 'Touchpad',
       a_up: 'Up', a_down: 'Down', a_left: 'Left', a_right: 'Right',
       tp_hint: 'Swipe to move · Tap for OK',
+      tp_hint_atv: 'Android TV has no on-screen cursor',
+      tp_hint_mouse: 'Drag to move the cursor · Tap to click · Two fingers to scroll',
+      tp_hint_mouse_s: 'Drag to move the cursor · Tap to click',
+      pref_mouse: 'Touchpad moves a cursor',
+      mouse_exp: '(experimental)',
+      mouse_note: 'Samsung shows the cursor only in the browser and some apps. If nothing moves, turn this off.',
       a_rew: 'Rewind', a_play: 'Play', a_pause: 'Pause', a_ff: 'Fast forward',
       apps: 'Apps',
       rec_start: 'Recording… press buttons on the remote (e.g. Home → arrows → OK)',
@@ -760,6 +768,12 @@
       mode_pad: 'חיצים', a_mode_pad: 'חיצים', mode_tp: 'מגע', a_mode_tp: 'משטח מגע',
       a_up: 'למעלה', a_down: 'למטה', a_left: 'שמאלה', a_right: 'ימינה',
       tp_hint: 'החלק לכיוון · הקש לאישור',
+      tp_hint_atv: 'בטלוויזיית Android אין סמן על המסך',
+      tp_hint_mouse: 'גרור להזזת הסמן · הקש ללחיצה · שתי אצבעות לגלילה',
+      tp_hint_mouse_s: 'גרור להזזת הסמן · הקש ללחיצה',
+      pref_mouse: 'משטח המגע מזיז סמן',
+      mouse_exp: '(ניסיוני)',
+      mouse_note: 'בסמסונג הסמן מופיע רק בדפדפן ובחלק מהאפליקציות. אם שום דבר לא זז, כבה את האפשרות.',
       a_rew: 'אחורה', a_play: 'נגן', a_pause: 'השהה', a_ff: 'קדימה',
       apps: 'אפליקציות',
       rec_start: 'מקליט… לחץ על הכפתורים בשלט (למשל: בית ← חיצים ← OK)',
@@ -914,6 +928,7 @@
     renderSleepTile();
     renderLicense();
     renderRecText();
+    renderTpHint();
     $('ver').textContent = t('version', { v: A.version() || '' });
     if (shown('settings')) renderSettings();
     if (shown('tvs')) renderTvs();
@@ -1137,6 +1152,20 @@
   $('modeTp').addEventListener('click', () => { buzz(); setTouchpad(true); });
   $('modePad').addEventListener('click', () => { buzz(); setTouchpad(false); });
 
+  // Touchpad as a mouse: on by default for LG (real cursor); Samsung only when asked, as few screens show it.
+  // Android TV has no cursor, so swipes stay arrow keys there.
+  function mouseOn() {
+    if (S.tvType !== 'lg' && S.tvType !== 'samsung') return false;
+    return A.getPref('mouse_' + S.tvType, S.tvType === 'lg' ? '1' : '0') === '1';
+  }
+  function renderTpHint() {
+    const on = mouseOn();
+    const h = $('tpHint');
+    if (on) h.textContent = t(S.tvType === 'lg' ? 'tp_hint_mouse' : 'tp_hint_mouse_s');
+    else h.innerHTML = esc(t('tp_hint')) + (S.tvType === 'androidtv' ? '<br>' + esc(t('tp_hint_atv')) : '');
+    $('touchpad').classList.toggle('mouse', on);
+  }
+
   (function touchpad() {
     const pad = $('touchpad');
     const STEP = 42;
@@ -1150,12 +1179,55 @@
       pad.appendChild(d);
       setTimeout(() => d.remove(), 400);
     }
+
+    // Mouse mode: finger deltas are summed and sent every 30 ms, so the TV gets a steady stream, not a flood.
+    let mouse = false, travel = 0, multi = false, flushT = null;
+    let accX = 0, accY = 0, accS = 0;
+    const fingers = new Map(); // pointerId -> { x, y, at }
+    function flush() {
+      flushT = null;
+      const dx = Math.round(accX), dy = Math.round(accY), ds = Math.round(accS);
+      accX -= dx; accY -= dy; accS -= ds;
+      if (dx || dy) A.pointerMove(dx, dy);
+      if (ds) A.pointerScroll(ds);
+    }
+    function mouseDown(e) {
+      if (!fingers.size) { t0 = Date.now(); travel = 0; multi = false; accX = accY = accS = 0; }
+      else multi = true;
+      fingers.set(e.pointerId, { x: e.clientX, y: e.clientY, at: e.timeStamp });
+    }
+    function mouseMove(e) {
+      const f = fingers.get(e.pointerId);
+      if (!f) return;
+      const dx = e.clientX - f.x, dy = e.clientY - f.y;
+      const dist = Math.hypot(dx, dy);
+      const speed = dist / Math.max(1, e.timeStamp - f.at); // px per ms
+      f.x = e.clientX; f.y = e.clientY; f.at = e.timeStamp;
+      travel += dist;
+      if (multi) accS -= dy / fingers.size; // two fingers: natural scrolling, like a phone
+      else {
+        const gain = 1.4 + Math.min(2.6, speed * 1.2); // slow = precise, fast = across the screen
+        accX += dx * gain; accY += dy * gain;
+      }
+      if (!flushT) flushT = setTimeout(flush, 30);
+    }
+    function mouseUp(e, cancelled) {
+      if (!fingers.delete(e.pointerId) || fingers.size) return;
+      if (flushT) { clearTimeout(flushT); flush(); }
+      if (!cancelled && !multi && travel < 12 && Date.now() - t0 < 350) {
+        A.pointerClick(); buzz(); ripple(e.clientX, e.clientY);
+      }
+    }
+
     pad.addEventListener('pointerdown', (e) => {
+      try { pad.setPointerCapture(e.pointerId); } catch (err) { /* synthetic or already-ended pointer */ }
+      if (!fingers.size && id == null) mouse = mouseOn();
+      if (mouse) { mouseDown(e); return; }
       id = e.pointerId;
-      try { pad.setPointerCapture(id); } catch (err) { /* synthetic or already-ended pointer */ }
       sx = ox = e.clientX; sy = oy = e.clientY; t0 = Date.now(); moved = false;
     });
     pad.addEventListener('pointermove', (e) => {
+      if (mouse) { mouseMove(e); return; }
       if (e.pointerId !== id) return;
       const dx = e.clientX - sx, dy = e.clientY - sy;
       if (Math.abs(dx) < STEP && Math.abs(dy) < STEP) return;
@@ -1167,13 +1239,17 @@
       sx = e.clientX; sy = e.clientY;
     });
     pad.addEventListener('pointerup', (e) => {
+      if (mouse) { mouseUp(e, false); return; }
       if (e.pointerId !== id) return;
       id = null;
       if (!moved && Math.hypot(e.clientX - ox, e.clientY - oy) < 12 && Date.now() - t0 < 400) {
         send('KEY_ENTER'); buzz(); ripple(e.clientX, e.clientY);
       }
     });
-    pad.addEventListener('pointercancel', () => { id = null; });
+    pad.addEventListener('pointercancel', (e) => {
+      if (mouse) mouseUp(e, true);
+      else if (e.pointerId === id) id = null;
+    });
   })();
 
   /* ---------- sheets ---------- */
@@ -1581,6 +1657,11 @@
     $('prefHwVolume').checked = pref.hwVolume;
     $('prefHaptic').checked = pref.haptic;
     $('prefSimple').checked = pref.simple;
+    const canMouse = S.tvType === 'lg' || S.tvType === 'samsung';
+    $('rowMouse').style.display = canMouse ? '' : 'none';
+    $('mouseNote').style.display = S.tvType === 'samsung' ? '' : 'none';
+    $('mouseLabel').textContent = t('pref_mouse') + (S.tvType === 'samsung' ? ' ' + t('mouse_exp') : '');
+    $('prefMouse').checked = mouseOn();
     renderQuick();
     renderLicense();
     const brands = ['samsung', 'lg', 'androidtv'];
@@ -1629,6 +1710,11 @@
   }
   $('prefHwVolume').addEventListener('change', (e) => { if (e.target.checked && needPro()) { e.target.checked = false; return; } pref.hwVolume = e.target.checked; A.setPref('hwVolume', pref.hwVolume ? '1' : '0'); });
   $('prefHaptic').addEventListener('change', (e) => { pref.haptic = e.target.checked; A.setPref('haptic', pref.haptic ? '1' : '0'); });
+  $('prefMouse').addEventListener('change', (e) => {
+    if (S.tvType !== 'lg' && S.tvType !== 'samsung') return;
+    A.setPref('mouse_' + S.tvType, e.target.checked ? '1' : '0');
+    renderTpHint();
+  });
   $('prefSimple').addEventListener('change', (e) => {
     pref.simple = e.target.checked;
     A.setPref('simple', pref.simple ? '1' : '0');
@@ -1699,6 +1785,7 @@
         if (prevIp !== m.ip) { S.apps = []; renderShortcuts(); }
         renderStatus();
         renderSleepTile();
+        renderTpHint();
         if (shown('tvs')) renderTvs();
         if (m.state === 'pin') openSheet('pin');
         else if (shown('pin')) closeSheets();
@@ -1759,6 +1846,7 @@
   applyLang();
   document.body.classList.toggle('simple', pref.simple);
   setTouchpad(pref.touchpad && !pref.simple);
+  renderTpHint();
   renderShortcuts();
   $('ver').textContent = t('version', { v: A.version() || '' });
   renderStatus();

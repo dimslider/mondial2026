@@ -47,6 +47,10 @@ abstract class Driver(protected val ip: String, protected val session: Session) 
     abstract fun launch(appId: String, appType: Int)
     open fun requestApps() {}
 
+    /** Touchpad as a mouse, in phone pixels. Each returns false if this TV has no on-screen cursor. */
+    open fun pointerMove(dx: Int, dy: Int): Boolean = false
+    open fun pointerClick(): Boolean = false
+    open fun pointerScroll(dy: Int): Boolean = false
 
     /** Turns the TV off; must never turn it on (used by the sleep timer). */
     open fun powerOff() {

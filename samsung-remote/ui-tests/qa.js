@@ -258,6 +258,44 @@ async function suite(b, lang, w, h) {
   }, { x: tp.x + tp.width / 2, y: tp.y + tp.height / 2, dx });
   await swipe(80); await swipe(-80);
   check(tag + 'touchpad swipe right/left', JSON.stringify(await sent('key')) === '[["KEY_RIGHT"],["KEY_LEFT"]]');
+  check(tag + 'atv touchpad hint says no cursor', await p.evaluate(() => document.getElementById('tpHint').innerHTML.includes(t('tp_hint_atv'))));
+  // LG: the touchpad is a mouse
+  const status = (tvType) => p.evaluate((tvType) => onTv({ type: 'status', state: 'connected', ip: '10.0.0.9', tvType, name: 'TV', label: '', mac: '', tvs: [], sleepAt: 0 }), tvType);
+  const drag = (pts, fingers = 1) => p.evaluate(({ x, y, pts, fingers }) => {
+    const pad = document.getElementById('touchpad');
+    const ev = (type, id, cx, cy, ts) => pad.dispatchEvent(new PointerEvent(type, { pointerId: id, clientX: cx, clientY: cy, bubbles: true }));
+    for (let f = 0; f < fingers; f++) ev('pointerdown', 20 + f, x + f * 30, y);
+    for (const [dx, dy] of pts) for (let f = 0; f < fingers; f++) ev('pointermove', 20 + f, x + f * 30 + dx, y + dy);
+    const [lx, ly] = pts.length ? pts[pts.length - 1] : [0, 0];
+    for (let f = 0; f < fingers; f++) ev('pointerup', 20 + f, x + f * 30 + lx, y + ly);
+  }, { x: tp.x + tp.width / 3, y: tp.y + tp.height / 2, pts, fingers });
+  await status('lg'); await p.calls();
+  check(tag + 'lg touchpad hint = cursor', await p.evaluate(() => document.getElementById('tpHint').textContent === t('tp_hint_mouse')));
+  await drag([[10, 0], [30, 10], [60, 20]]);
+  let mv = await sent('pointerMove');
+  const sx = mv.reduce((a, m) => a + m[0], 0), sy = mv.reduce((a, m) => a + m[1], 0);
+  check(tag + 'lg drag moves the cursor right/down', mv.length >= 1 && sx >= 60 && sy >= 20 && sx > sy, JSON.stringify(mv));
+  await drag([]);
+  let c = await p.calls();
+  check(tag + 'lg tap = click, no OK key', c.filter(x => x[0] === 'pointerClick').length === 1 && !c.some(x => x[0] === 'key'));
+  await drag([[0, -40], [0, -80]], 2);
+  c = await p.calls();
+  const sc = c.filter(x => x[0] === 'pointerScroll').reduce((a, m) => a + m[1][0], 0);
+  check(tag + 'lg two-finger swipe up scrolls down, no move/click', sc === 80 && !c.some(x => x[0] === 'pointerMove' || x[0] === 'pointerClick'), JSON.stringify(c));
+  // Samsung: arrows unless the experimental switch is on
+  await status('samsung'); await p.calls();
+  await swipe(80);
+  check(tag + 'samsung touchpad = arrows by default', JSON.stringify(await sent('key')) === '[["KEY_RIGHT"]]');
+  await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(300);
+  check(tag + 'samsung mouse switch shown, off, marked experimental', await p.evaluate(() => $('rowMouse').style.display !== 'none' && !$('prefMouse').checked && $('mouseLabel').textContent.includes(t('mouse_exp')) && $('mouseNote').style.display !== 'none'));
+  await p.evaluate(() => $('prefMouse').click());
+  await p.reset();
+  await drag([[50, 0]]);
+  check(tag + 'samsung mouse when switched on', (await sent('pointerMove')).length >= 1);
+  await p.evaluate(() => { window.__prefs.mouse_samsung = '0'; });
+  await status('androidtv'); await p.evaluate(() => openSheet('settings')); await p.waitForTimeout(300);
+  check(tag + 'atv: no mouse switch', await p.evaluate(() => $('rowMouse').style.display === 'none'));
+  await p.reset();
   await p.evaluate(() => document.getElementById('modePad').click());
   check(tag + 'd-pad right arrow is on the right', await p.evaluate(() => document.querySelector('.dpad .right').getBoundingClientRect().left > document.querySelector('.dpad .left').getBoundingClientRect().left));
 
