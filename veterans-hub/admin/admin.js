@@ -40,7 +40,7 @@
       <p class="adm-meta">${it.length} הצעות · ${recs} ממליצים · ${it.map(i => rel[i.data.relation] || "").filter(Boolean).join(", ")} · ${day(it[0].created_at)}</p>
       ${it.map(i => i.data.what || i.data.notes ? `<p class="adm-quote">${esc([i.data.what, i.data.notes].filter(Boolean).join("\n"))}${i.data.contact ? `\n— ליצירת קשר: ${esc(i.data.contact)}` : ""}</p>` : "").join("")}
       ${cats.length > 1 || costs.length > 1 ? `<p class="adm-meta">תחומים שסומנו: ${esc(cats.map(c => (T.categories[c] || {}).label || c).join(" · "))}${costs.length ? ` · עלויות: ${esc(costs.map(c => (T.cost[c] || {}).label || c).join(" · "))}` : ""}</p>` : ""}
-      ${dups.length ? `<p class="adm-dup">אולי כבר קיים: ${dups.map(s => esc(s.name)).join(" · ")}</p>` : ""}
+      ${dups.length ? `<p class="adm-dup">שירותים דומים שכבר במאגר (לבדוק שזו לא כפילות): ${dups.map(s => esc(s.name)).join(" · ")}</p>` : ""}
       <form class="form">
         <label>שם<input name="name" value="${esc(d("name"))}"></label>
         <div class="two">
