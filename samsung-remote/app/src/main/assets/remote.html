@@ -1206,7 +1206,7 @@
       travel += dist;
       if (multi) accS -= dy / fingers.size; // two fingers: natural scrolling, like a phone
       else {
-        const gain = 1.4 + Math.min(2.6, speed * 1.2); // slow = precise, fast = across the screen
+        const gain = 1.6 + Math.min(3.4, speed * 1.4); // slow = precise, fast = across the screen
         accX += dx * gain; accY += dy * gain;
       }
       if (!flushT) flushT = setTimeout(flush, 30);
