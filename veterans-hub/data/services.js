@@ -1,5 +1,5 @@
 // נוצר אוטומטית ע"י tools/build_data.py — לא לערוך ידנית; לעדכן את קבצי המחקר ולהריץ מחדש.
-window.SERVICES_UPDATED = "2026-10-15";
+window.SERVICES_UPDATED = "2026-10-22";
 window.SERVICES = [
  {
   "id": "1202-org-il-0bf488",
@@ -6710,7 +6710,7 @@ window.SERVICES = [
   "town": "ירכא",
   "avail": "הקבוצה נפתחת ב-20.10.2026 בירכא.",
   "avail_src": "site",
-  "status": "future_cycle",
+  "status": "active",
   "next_cycle": "2026-10-20",
   "verified_at": "2026-10-14",
   "era": "",
@@ -7004,7 +7004,7 @@ window.SERVICES = [
   "town": "תל אביב",
   "avail": "הקבוצה נפתחת ב-20.10.2026 בתל אביב (9 מפגשים); הפרטים המדויקים יפורסמו.",
   "avail_src": "site",
-  "status": "future_cycle",
+  "status": "active",
   "next_cycle": "2026-10-20",
   "verified_at": "2026-10-14",
   "era": "",
@@ -10624,7 +10624,7 @@ window.SERVICES = [
   "town": "רחובות",
   "avail": "הקבוצה נפתחת ב-20.10.2026, בימי שלישי 17:00-18:30, 20 מפגשים.",
   "avail_src": "site",
-  "status": "future_cycle",
+  "status": "active",
   "next_cycle": "2026-10-20",
   "verified_at": "2026-10-13",
   "era": "",
@@ -13869,6 +13869,60 @@ window.SERVICES = [
   "supplier": false
  },
  {
+  "id": "hadassah-org-il-4838ac",
+  "name": "מרפאה פסיכיאטרית הדסה – היחידה לטיפול בחיילים ובכוחות הביטחון",
+  "category": "mental-health",
+  "description": "יחידה במרפאה הפסיכיאטרית של הדסה, לטיפול בחיילים ובאנשי כוחות הביטחון. טיפול בפוסט טראומה, כולל פסיכיאטר, טיפול רגשי, עבודה סוציאלית וליווי בחזרה לעבודה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "mod-in-process",
+   "mod-recognized",
+   "police",
+   "reservists",
+   "security-forces"
+  ],
+  "difficulties": [
+   "employment",
+   "ptsd"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון משרד הביטחון (לפי המדווח). כדאי לשאול בפנייה מה התנאים, ואם צריך הכרה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "הדסה, ירושלים",
+  "phone": "",
+  "email": "faxpsy@hadassah.org.il",
+  "website": "https://www.hadassah.org.il",
+  "how_to_apply": "עדיף לפנות במייל למרפאה: faxpsy@hadassah.org.il",
+  "source_url": "",
+  "confidence": "medium",
+  "reviewed_at": "",
+  "community_recs": "",
+  "community_note": "הוצע דרך טופס ההוספה. ממתין לאימות מול אתר הדסה",
+  "unit_only": false,
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "ירושלים",
+  "avail": "",
+  "avail_src": "",
+  "status": "",
+  "next_cycle": "",
+  "verified_at": "",
+  "era": "",
+  "age": [],
+  "geo": [
+   31.778,
+   35.235
+  ],
+  "supplier": false
+ },
+ {
   "id": "metiv-org-c26993",
   "name": "מרפאת מגדלור – מטיב והמרכז הרפואי הרצוג (לאנשי כוחות הביטחון מוכרי אגף השיקום)",
   "category": "mental-health",
@@ -14798,7 +14852,7 @@ window.SERVICES = [
   "town": "רחובות",
   "avail": "הקבוצה נפתחת ב-18.10.2026 במחוז רחובות, בימי ראשון 19:00-20:30.",
   "avail_src": "site",
-  "status": "future_cycle",
+  "status": "active",
   "next_cycle": "2026-10-18",
   "verified_at": "2026-10-13",
   "era": "",
@@ -25346,7 +25400,7 @@ window.SERVICES = [
   "town": "גינוסר",
   "avail": "הקבוצה נפתחת ב-19.10.2026 בגינוסר (12 מפגשים).",
   "avail_src": "site",
-  "status": "future_cycle",
+  "status": "active",
   "next_cycle": "2026-10-19",
   "verified_at": "2026-10-14",
   "era": "",

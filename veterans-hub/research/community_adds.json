@@ -47,5 +47,47 @@
   "unit_only": false,
   "war_only": null,
   "community_note": "הוצע ע\"י איש צוות במקום"
+ },
+ {
+  "name": "מרפאה פסיכיאטרית הדסה – היחידה לטיפול בחיילים ובכוחות הביטחון",
+  "category": "mental-health",
+  "description": "יחידה במרפאה הפסיכיאטרית של הדסה, לטיפול בחיילים ובאנשי כוחות הביטחון. טיפול בפוסט טראומה, כולל פסיכיאטר, טיפול רגשי, עבודה סוציאלית וליווי בחזרה לעבודה.",
+  "provider_type": "ngo",
+  "eligibility": [
+   "combat-soldiers",
+   "reservists",
+   "mod-recognized",
+   "mod-in-process",
+   "security-forces",
+   "police"
+  ],
+  "difficulties": [
+   "ptsd",
+   "employment"
+  ],
+  "interests": [],
+  "cost": "mod-funded",
+  "cost_notes": "במימון משרד הביטחון (לפי המדווח). כדאי לשאול בפנייה מה התנאים, ואם צריך הכרה.",
+  "regions": [
+   "jerusalem"
+  ],
+  "location": "הדסה, ירושלים",
+  "phone": "",
+  "email": "faxpsy@hadassah.org.il",
+  "website": "https://www.hadassah.org.il",
+  "how_to_apply": "עדיף לפנות במייל למרפאה: faxpsy@hadassah.org.il",
+  "source_url": "",
+  "confidence": "medium",
+  "kind": "treatment",
+  "intensity": "unknown",
+  "recognition": "unknown",
+  "police": "yes",
+  "format": "individual",
+  "town": "ירושלים",
+  "lat": 31.778,
+  "lng": 35.235,
+  "unit_only": false,
+  "war_only": null,
+  "community_note": "הוצע דרך טופס ההוספה. ממתין לאימות מול אתר הדסה"
  }
 ]
