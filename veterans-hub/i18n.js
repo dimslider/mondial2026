@@ -209,6 +209,7 @@
     "עוד אפשרויות שמתאימות לך, לפי תחום": "More options that fit you, by area",
     "לכל מה שיש ב{area} ←": "Everything in {area} →",
     "גרסת ניסיון.": "Beta version.",
+    "גרסת ניסיון": "Beta",
     "הרשימה טובה כמו מה שכולנו יודעים. מה היה מדויק, מה חסר, איפה נתקעת?": "The list is only as good as what we all know. What was spot on, what's missing, where did you get stuck?",
     "משוב אנונימי · דקה": "Anonymous feedback · 1 minute",
     "חיפוש: גלישה, סוסים, EMDR, מלגה…": "Search: surfing, horses, EMDR, scholarship…",

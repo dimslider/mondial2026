@@ -212,7 +212,7 @@ h1.big-word { font-family: var(--display); font-weight: 400; font-size: clamp(44
 .form { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
 .form label { display: flex; flex-direction: column; gap: 4px; font-weight: 700; }
 .form label.check { flex-direction: row; align-items: flex-start; gap: 8px; font-weight: 400; }
-.form label.check input { width: auto; min-height: auto; margin-top: 6px; accent-color: var(--ink); }
+.form label.check input { flex: none; width: 22px; height: 22px; min-height: auto; margin-top: 2px; accent-color: var(--ink); }
 .form fieldset { border: 2px dashed var(--ink); border-radius: var(--r-hand); padding: 8px 14px; }
 .form legend { font-family: var(--hand); font-weight: 800; }
 .form .chips { margin: 6px 0; }
@@ -277,14 +277,14 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .read-more { margin-top: 4px; font-size: 15px; }
 .star-tag { display: inline-flex; align-items: center; gap: 4px; font-family: var(--hand); font-weight: 800; font-size: 13px; padding: 0 8px; border: 2px solid var(--ink); border-radius: var(--r-blob); background: var(--t-home); color: var(--ink); }
 .star-tag .star { width: 13px; height: 13px; }
-.svc .community { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; padding: 8px 12px; background: var(--t-home); border: 2px solid var(--ink); border-radius: var(--r-hand); font-size: 15px; color: #151515; }
+.svc .community { display: flex; gap: 8px; align-items: flex-start; margin-top: 10px; padding: 8px 12px; background: var(--t-home); border: 2px solid var(--ink); border-radius: var(--r-hand); font-size: 15px; color: var(--ink); }
 .svc .community .star { flex: none; margin-top: 2px; }
 
 /* ---------- להוסיף מקום, להמליץ, לתקן ---------- */
 .add-btn { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); background: var(--t-home); border: var(--stroke) solid var(--ink); border-radius: 48% 54% 46% 52%; text-decoration: none; }
 .add-row { display: flex; gap: 14px; align-items: center; margin-top: 22px; padding: 14px 16px; text-decoration: none; background: var(--sheet); border: 2px dashed var(--ink); border-radius: var(--r-hand); font-size: 15px; line-height: 1.4; }
 .add-row strong { font-family: var(--hand); font-size: 17px; }
-.add-row .plus { flex: none; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 28px; background: var(--t-home); border: 2px solid var(--ink); border-radius: 50% 46% 54% 48%; color: #151515; }
+.add-row .plus { flex: none; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 28px; background: var(--t-home); border: 2px solid var(--ink); border-radius: 50% 46% 54% 48%; color: var(--ink); }
 .form .chip input { width: 1px; min-height: 0; padding: 0; }
 .form label.chip { font-weight: 400; }
 .chips.small { gap: 6px 10px; margin: 6px 0 4px; }
@@ -299,7 +299,7 @@ a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
 .thanks h2 { font-family: var(--display); font-weight: 400; font-size: 34px; }
 .svc-community { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .chip-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; font: inherit; font-family: var(--hand); font-size: 15px; font-weight: 600; color: var(--ink); background: transparent; border: 2px dashed var(--ink); border-radius: var(--r-blob); cursor: pointer; }
-.chip-btn[aria-pressed="true"] { border-style: solid; background: var(--t-home); color: #151515; }
+.chip-btn[aria-pressed="true"] { border-style: solid; background: var(--t-home); color: var(--ink); }
 .chip-btn .star { width: 16px; height: 16px; }
 .form[hidden], [hidden] { display: none !important; }
 .privacy p { margin-top: 8px; }
@@ -660,7 +660,7 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .first-step { margin: 10px 0 0; font-size: 15.5px; line-height: 1.5; }
 .first-step strong { font-weight: 700; }
 .crisis-inline { margin: 10px 0 0; font-size: 15px; }
-.crisis-inline a { font-weight: 700; }
+.crisis-inline a { font-weight: 700; white-space: nowrap; }
 
 /* ---------- "ההצעות מתאימות לך?" ---------- */
 .rate-box { margin: 18px 0 6px; padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--glass); }
@@ -681,7 +681,7 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .home .hero { margin-bottom: 4px; }
 .h-title { font-family: var(--display); font-weight: 700; font-size: 26px; line-height: 1.2; margin: 6px 0 12px; }
 .h-sec { font-family: var(--display); font-weight: 700; font-size: 19px; margin: 26px 0 8px; display: flex; justify-content: space-between; align-items: baseline; }
-.h-sec a { font-family: var(--body); font-size: 14px; font-weight: 600; }
+.h-sec a { font-family: var(--body); font-size: 14px; font-weight: 600; padding: 12px 10px; margin: -12px -10px; } /* שטח לחיצה גדול בלי לשנות את המראה */
 .h-search { display: flex; align-items: center; gap: 10px; padding: 0 16px; min-height: 56px; border-radius: 16px; background: var(--glass-strong); border: 1px solid var(--line-strong); color: var(--muted); }
 .h-search svg { flex: none; }
 .h-search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: 16.5px; color: var(--ink); min-height: 52px; outline: none; }
@@ -690,19 +690,19 @@ h1.big-word { font-family: var(--display); font-weight: 700; font-size: 30px; li
 .needs a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--line-strong); text-decoration: none; color: var(--ink); font-weight: 600; font-size: 15px; }
 .needs a.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .mini { list-style: none; padding: 0; margin: 0; border-radius: 16px; background: var(--glass); border: 1px solid var(--line); }
-.mini li { display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-top: 1px solid var(--line); cursor: pointer; }
-.mini li:first-child { border-top: 0; }
-.mini li:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; border-radius: 12px; }
+.mini > * { display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-top: 1px solid var(--line); cursor: pointer; }
+.mini > :first-child { border-top: 0; }
+.mini > :focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; border-radius: 12px; }
 .mini .n { flex: none; width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; font-weight: 700; font-size: 13px; }
 .mini .t { flex: 1; min-width: 0; }
 .mini .t b { display: block; font-size: 15.5px; line-height: 1.3; }
 .mini .t small { color: var(--muted); font-size: 13px; }
-.mini .d { flex: none; text-align: center; min-width: 46px; font-weight: 700; font-size: 15px; line-height: 1.1; padding: 6px 4px; border-radius: 10px; background: var(--t-sea); color: #151515; }
-.mini .d small { display: block; font-weight: 600; font-size: 11px; }
+.mini .d { flex: none; text-align: center; min-width: 46px; font-weight: 700; font-size: 15px; line-height: 1.1; padding: 6px 4px; border-radius: 10px; background: var(--t-sea); color: var(--ink); }
+.mini .d small { display: block; font-weight: 600; font-size: 12px; }
 
 /* ---------- הגדרות ושפה ---------- */
 .settings-btn { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); background: transparent; border: 1.5px solid var(--ink); border-radius: 12px; text-decoration: none; }
-.settings-btn[aria-current="page"] { background: var(--t-soul); color: #151515; }
+.settings-btn[aria-current="page"] { background: var(--t-soul); color: var(--ink); }
 @media (max-width: 380px) {
   .topbar { gap: 8px; padding-inline: 16px; }
   .top-actions { gap: 6px; }

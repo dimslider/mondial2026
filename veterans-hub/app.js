@@ -585,9 +585,9 @@
       .sort((a, b) => a.key < b.key ? -1 : a.key > b.key ? 1 : 0)
       .slice(0, n || 99);
   }
-  const upcomingList = items => `<ul class="mini">${items.map(({ s, m }) => `<li data-open="${esc(s.id)}" tabindex="0" role="button">
+  const upcomingList = items => `<div class="mini">${items.map(({ s, m }) => `<div data-open="${esc(s.id)}" tabindex="0" role="button">
       <span class="d">${m ? (m[3] ? `${+m[3]}<small>${monName(+m[2] - 1)}</small>` : `${monName(+m[2] - 1)}<small>${m[1]}</small>`) : t("בקרוב")}</span>
-      <span class="t"><b lang="he" dir="rtl">${esc(splitName(s.name).main)}</b><small>${s.location ? `<span lang="he" dir="rtl">${esc(s.location.slice(0, 60))}</span>` : ""}${s.location && arr(s.regions).includes("online") ? " · " : ""}${arr(s.regions).includes("online") ? t("מקוון") : ""}</small></span></li>`).join("")}</ul>`;
+      <span class="t"><b lang="he" dir="rtl">${esc(splitName(s.name).main)}</b><small>${s.location ? `<span lang="he" dir="rtl">${esc(s.location.slice(0, 60))}</span>` : ""}${s.location && arr(s.regions).includes("online") ? " · " : ""}${arr(s.regions).includes("online") ? t("מקוון") : ""}</small></span></div>`).join("")}</div>`;
 
   function viewHome() {
     const prof = loadProfile();
@@ -620,8 +620,8 @@
         <h1 class="h-title">${t("שלום שוב. מה צריך היום?")}</h1>
         ${homeSearch()}${needChips()}
         ${first.length ? `<h2 class="h-sec">${t("התחנות שלך")} <a href="#/match">${t("לשנות")}</a></h2>
-        <ul class="mini">${first.map((r, n) => { const f = facts(r.s, p); return `<li data-open="${esc(r.s.id)}" tabindex="0" role="button">
-          <span class="n">${n + 1}</span><span class="t"><b lang="he" dir="rtl">${esc(splitName(r.s.name).main)}</b><small>${esc([t(r.role), ...f.slice(0, 2)].filter(Boolean).join(" · "))}</small></span></li>`; }).join("")}</ul>
+        <div class="mini">${first.map((r, n) => { const f = facts(r.s, p); return `<div data-open="${esc(r.s.id)}" tabindex="0" role="button">
+          <span class="n">${n + 1}</span><span class="t"><b lang="he" dir="rtl">${esc(splitName(r.s.name).main)}</b><small>${esc([t(r.role), ...f.slice(0, 2)].filter(Boolean).join(" · "))}</small></span></div>`; }).join("")}</div>
         <p class="actions"><a class="link-u" href="#/results">${t("לכל מה שמתאים לך ←")}</a></p>` : `<p class="empty">${t("לא מצאנו התאמה.")} <a href="#/match">${t("לשנות תשובות")}</a></p>`}
         ${soon.length ? `<h2 class="h-sec">${t("נפתח בקרוב באזור שלך")} <a href="#/soon">${t("הכול")}</a></h2>${upcomingList(soon)}`
           : `<p class="actions"><a class="link-u" href="#/soon">${t("קבוצות ותוכניות שנפתחות בקרוב ←")}</a></p>`}
