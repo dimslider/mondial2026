@@ -108,7 +108,9 @@
   const expandStatuses = st => st.includes("police") && !st.includes("security-forces") ? [...st, "security-forces"] : st;
   // שוטרים ואנשי כוחות ביטחון: תוכניות ל"לוחמים" פתוחות להם לפעמים, אבל לא תמיד כתוב. מציגים, עם הערה לברר.
   const softEligible = (s, statuses) => statuses.some(x => x === "police" || x === "security-forces") && s.police !== "no" &&
-    (s.police === "yes" || arr(s.eligibility).some(e => e === "combat-soldiers" || e === "reservists")) && !needsRecognition(s);
+    (s.police === "yes" || arr(s.eligibility).some(e => e === "combat-soldiers" || e === "reservists")) && !needsRecognition(s) &&
+    // שירות של המשטרה בלבד (מערך מע"ן) לא פתוח לאנשי מד"א, כבאות או שב"ס
+    !(arr(s.eligibility).length && arr(s.eligibility).every(e => e === "police") && !statuses.includes("police"));
   // שוטר/ה או איש/אשת כוחות הביטחון: שירות שלא כתוב בו שהוא פתוח להם (וגם לא פתוח לכל הציבור).
   // מציגים, אבל עם סימון ברור "אולי מתאים, לא בטוח שפתוח" כדי לחסוך פנייה מיותרת.
   const isForces = statuses => arr(statuses).some(x => x === "police" || x === "security-forces");
@@ -316,6 +318,8 @@
       .filter(s => !s.no_contact)   // בלי שום דרך פנייה: רק בחיפוש, לא בהתאמה האישית
       .filter(s => s.status !== "closed_now")   // לא מקבלים כרגע: רק בחיפוש
       .filter(s => !womenOnly(s) || p.gender === "f")
+      // שירות לחטופים ולשבים מהשבי: רק למי שסימן/ה משפחה של חטוף/ה (שוטר או לוחם אחר קיבלו אותו בטעות)
+      .filter(s => !/חטופ|מהשבי/.test(s.name) || p.famof === "hostage")
       // כתוב במפורש שרק לחיילי צה"ל: לא מוצג לשוטר/ה, אלא אם סימנו גם לוחם/ת או מילואים
       .filter(s => !(s.police === "no" && isForces(p.statuses) && !p.statuses.some(x => x === "combat-soldiers" || x === "reservists")))
       // שירות למי שעוד לא מוכר (כתוב בשם) לא מתאים למי שכבר מוכר
@@ -484,7 +488,10 @@
     const t = (s.how_to_apply || "").trim(); if (!t) return "";
     const parts = t.split(/(?<=[.!?])\s+/);   // רק נקודה שאחריה רווח: לא שוברים מייל או אתר
     const step = parts.map(x => x.trim()).find(x => x.length > 8 && !/^(?:מתאים|מיועד|רק ל|הזכאות|זכאים)/.test(x)) || parts[0].trim();
-    return step.length > 160 ? shortDesc(step, 150) : step;
+    // "לחייג למרכז החוסן." בלי מספר: מוסיפים את המספר, כדי שהצעד יהיה משהו שאפשר לעשות עכשיו
+    const ph = (s.phone || "").split(/[\/,;]/)[0].trim();
+    const call = ph && !/\d{3,}|\*\d/.test(step) && /לחייג|מתקשרים|להתקשר|בטלפון|טלפונית/.test(step) ? step.replace(/[.\s]*$/, "") + " (טלפון: " + ph + ")" : step;
+    return call.length > 160 ? shortDesc(call, 150) : call;
   };
   const distinctWhy = list => new Set(list.map(whyText)).size > 1;
   const shortDesc = (t, n) => (t || "").length > n ? (t || "").slice(0, n).replace(/\s+\S*$/, "") + "…" : (t || "");
