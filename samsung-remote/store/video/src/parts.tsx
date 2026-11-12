@@ -127,40 +127,71 @@ export type TvState = {
   moon?: number; // 0..1
 };
 
-const TILE_COLORS = [
-  ['#ff6b6b', '#c0392b'], ['#4dabf7', '#1c5fa8'], ['#51cf66', '#2b8a3e'], ['#fcc419', '#e67700'], ['#cc5de8', '#862e9c'],
+const TILES: { label: string; icon: string; c: [string, string] }[] = [
+  { label: 'Movies', c: ['#ff6b6b', '#c0392b'], icon: 'M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z' },
+  { label: 'Series', c: ['#4dabf7', '#1c5fa8'], icon: 'M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z' },
+  { label: 'Music', c: ['#51cf66', '#2b8a3e'], icon: 'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z' },
+  { label: 'Sports', c: ['#fcc419', '#e67700'], icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4.2l3.3 2.4-1.3 3.9h-4l-1.3-3.9L12 6.2z' },
+  { label: 'Kids', c: ['#cc5de8', '#862e9c'], icon: 'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z' },
 ];
 
+/** A generic smart-TV home screen: menu bar, a featured title and a row of app tiles. */
 const Home: React.FC<{ focus: number; pressed: number }> = ({ focus, pressed }) => {
-  const W = 880, tileW = 140, gap = 24, left = 50;
+  const tileW = 140, tileH = 118, gap = 25, left = 40, top = 338;
   return (
-    <AbsoluteFill style={{ background: 'linear-gradient(180deg, #1b2735 0%, #0e141c 100%)' }}>
-      <div style={{ position: 'absolute', left, top: 40, width: W - left * 2, height: 210, borderRadius: 18, background: 'linear-gradient(120deg, #2d4f7c, #6a3d8f 60%, #c1567a)' }}>
-        <div style={{ position: 'absolute', left: 36, top: 60, width: 260, height: 26, borderRadius: 13, background: '#ffffffcc' }} />
-        <div style={{ position: 'absolute', left: 36, top: 104, width: 180, height: 18, borderRadius: 9, background: '#ffffff77' }} />
+    <AbsoluteFill style={{ background: 'linear-gradient(180deg, #121b28 0%, #0a0f16 100%)', fontFamily: C.font, color: '#fff' }}>
+      <div style={{ position: 'absolute', left, right: 40, top: 20, display: 'flex', alignItems: 'center', gap: 30, fontSize: 19, fontWeight: 600 }}>
+        <span style={{ borderBottom: `3px solid ${C.accent}`, paddingBottom: 4 }}>Home</span>
+        <span style={{ color: '#ffffff88' }}>Movies</span>
+        <span style={{ color: '#ffffff88' }}>Series</span>
+        <span style={{ color: '#ffffff88' }}>Apps</span>
+        <span style={{ marginLeft: 'auto', color: '#ffffffcc' }}>20:30</span>
       </div>
-      {TILE_COLORS.map((c, i) => (
-        <div
-          key={i}
-          style={{
-            position: 'absolute', left: left + i * (tileW + gap), top: 290, width: tileW, height: 140, borderRadius: 16,
-            background: `linear-gradient(135deg, ${c[0]}, ${c[1]})`,
-          }}
-        />
-      ))}
+      <div style={{ position: 'absolute', left, top: 66, width: 800, height: 228, borderRadius: 16, overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', left: -40, top: -150, width: 880, height: 495, transform: 'scale(1)' }}>
+          <Movie still />
+        </div>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, #0a0f16ee 0%, #0a0f1699 40%, transparent 70%)' }} />
+        <div style={{ position: 'absolute', left: 30, top: 40 }}>
+          <div style={{ fontSize: 15, fontWeight: 700, color: C.accent, letterSpacing: 2 }}>FEATURED</div>
+          <div style={{ fontSize: 40, fontWeight: 800, marginTop: 6 }}>Mountain Escape</div>
+          <div style={{ fontSize: 17, color: '#ffffffaa', marginTop: 6 }}>Nature · 2026 · 4K</div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 18, background: '#fff', color: '#0a0f16', fontWeight: 700, fontSize: 17, borderRadius: 999, padding: '9px 18px' }}>
+            ▶ Watch now
+          </div>
+        </div>
+      </div>
+      <div style={{ position: 'absolute', left, top: 306, fontSize: 17, fontWeight: 600, color: '#ffffff99' }}>Your apps</div>
+      {TILES.map((t, i) => {
+        const near = Math.max(0, 1 - Math.abs(focus - i));
+        return (
+          <div
+            key={t.label}
+            style={{
+              position: 'absolute', left: left + i * (tileW + gap), top, width: tileW, height: tileH, borderRadius: 16,
+              background: `linear-gradient(135deg, ${t.c[0]}, ${t.c[1]})`, transform: `scale(${1 + 0.08 * near})`,
+              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8,
+              boxShadow: near > 0.5 ? '0 10px 30px #000a' : 'none',
+            }}
+          >
+            <svg width={44} height={44} viewBox="0 0 24 24"><path fill="#fff" d={t.icon} /></svg>
+            <div style={{ fontSize: 19, fontWeight: 700 }}>{t.label}</div>
+          </div>
+        );
+      })}
       <div
         style={{
-          position: 'absolute', left: left + focus * (tileW + gap) - 8, top: 282, width: tileW + 16, height: 156, borderRadius: 22,
-          border: '5px solid #ffffff', boxShadow: `0 0 30px #ffffff88`, background: `rgba(255,255,255,${0.35 * pressed})`,
+          position: 'absolute', left: left + focus * (tileW + gap) - 12, top: top - 12, width: tileW + 24, height: tileH + 24, borderRadius: 22,
+          border: '4px solid #ffffff', boxShadow: '0 0 30px #ffffff77', background: `rgba(255,255,255,${0.3 * pressed})`,
         }}
       />
     </AbsoluteFill>
   );
 };
 
-const Movie: React.FC = () => {
+const Movie: React.FC<{ still?: boolean }> = ({ still }) => {
   const f = useCurrentFrame();
-  const pan = (f * 0.4) % 400;
+  const pan = still ? 120 : (f * 0.4) % 400;
   return (
     <AbsoluteFill style={{ background: 'linear-gradient(180deg, #ff9a5a 0%, #f7c873 35%, #8fb7d9 36%, #3e6d96 100%)' }}>
       <div style={{ position: 'absolute', left: 560, top: 70, width: 110, height: 110, borderRadius: '50%', background: '#fff3c4', boxShadow: '0 0 80px #ffe8a3' }} />
@@ -196,14 +227,28 @@ export const Svg: React.FC<{ d: string; size?: number; color?: string }> = ({ d,
 export const Tv: React.FC<{ state: TvState; width?: number }> = ({ state, width = 880 }) => {
   const h = width * (495 / 880);
   const s = width / 880;
+  const bez = 9 * s;
+  const glow = state.content === 'home' ? '#4f63ff' : '#ff9a5a';
   return (
-    <div style={{ position: 'relative', width, height: h + 60 * s }}>
-      <div style={{ width, height: h, borderRadius: 14 * s, background: '#05070a', padding: 10 * s, boxSizing: 'border-box', boxShadow: '0 30px 90px #000a, 0 0 0 2px #1e2631' }}>
-        <div style={{ width: '100%', height: '100%', borderRadius: 6 * s, overflow: 'hidden', position: 'relative' }}>
-          <div style={{ width: 880, height: 495, transform: `scale(${(width - 20 * s) / 880})`, transformOrigin: 'left top', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', width, height: h + 110 * s }}>
+      {/* light from the screen on the wall behind it */}
+      <div
+        style={{
+          position: 'absolute', left: -60 * s, top: -40 * s, width: width + 120 * s, height: h + 80 * s, borderRadius: 60 * s,
+          background: glow, filter: `blur(${70 * s}px)`, opacity: 0.32 * (1 - (state.off ?? 0)),
+        }}
+      />
+      <div
+        style={{
+          position: 'relative', width, height: h, borderRadius: 10 * s, padding: bez, boxSizing: 'border-box',
+          background: 'linear-gradient(180deg, #1a1f27, #07090c)', boxShadow: '0 30px 80px #000c, inset 0 0 0 1px #3a4350',
+        }}
+      >
+        <div style={{ width: '100%', height: '100%', borderRadius: 4 * s, overflow: 'hidden', position: 'relative', background: '#000' }}>
+          <div style={{ width: 880, height: 495, transform: `scale(${(width - bez * 2) / 880})`, transformOrigin: 'left top', position: 'relative', overflow: 'hidden' }}>
             {state.content === 'home' ? <Home focus={state.focus ?? 0} pressed={state.pressed ?? 0} /> : <Movie />}
             {state.volume && (
-              <div style={{ position: 'absolute', left: 40, top: 30, opacity: state.volume.show, display: 'flex', alignItems: 'center', gap: 16, background: '#000000aa', borderRadius: 16, padding: '14px 22px' }}>
+              <div style={{ position: 'absolute', right: 40, top: 96, opacity: state.volume.show, display: 'flex', alignItems: 'center', gap: 16, background: '#000000cc', borderRadius: 16, padding: '14px 22px' }}>
                 <Svg d={Icon.vol} size={34} />
                 <div style={{ width: 280, height: 10, borderRadius: 5, background: '#ffffff33' }}>
                   <div style={{ width: `${state.volume.level}%`, height: '100%', borderRadius: 5, background: C.accent }} />
@@ -218,9 +263,29 @@ export const Tv: React.FC<{ state: TvState; width?: number }> = ({ state, width 
               <div style={{ fontSize: 90 }}>☾</div>Good night
             </AbsoluteFill>
           </div>
+          {/* glass reflection */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(115deg, #ffffff14 0%, #ffffff05 30%, transparent 45%)', pointerEvents: 'none' }} />
         </div>
+        {/* standby light */}
+        <div style={{ position: 'absolute', left: width / 2 - 3 * s, bottom: 2 * s, width: 6 * s, height: 3 * s, borderRadius: 2, background: state.off ? '#e04f3f' : '#ffffff55' }} />
       </div>
-      <div style={{ position: 'absolute', left: width / 2 - 90 * s, top: h, width: 180 * s, height: 40 * s, background: 'linear-gradient(#11161d, #0a0e13)', clipPath: 'polygon(30% 0, 70% 0, 100% 100%, 0 100%)' }} />
+      {/* feet */}
+      {[0.12, 0.88].map((x) => (
+        <div
+          key={x}
+          style={{
+            position: 'absolute', left: width * x - 30 * s, top: h - 2 * s, width: 60 * s, height: 34 * s,
+            background: 'linear-gradient(#2a313b, #12161c)', clipPath: x < 0.5 ? 'polygon(45% 0, 65% 0, 100% 100%, 0 100%)' : 'polygon(35% 0, 55% 0, 100% 100%, 0 100%)',
+          }}
+        />
+      ))}
+      {/* TV cabinet */}
+      <div
+        style={{
+          position: 'absolute', left: -70 * s, top: h + 32 * s, width: width + 140 * s, height: 70 * s, borderRadius: 8 * s,
+          background: 'linear-gradient(180deg, #3a3129 0%, #241e19 100%)', boxShadow: 'inset 0 2px 0 #5a4c3e, 0 20px 50px #000a',
+        }}
+      />
     </div>
   );
 };

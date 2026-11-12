@@ -18,7 +18,7 @@ const Stage: React.FC<{ phone: React.ReactNode; caption: React.ReactNode; tv: Tv
     <AbsoluteFill>
       <div style={{ position: 'absolute', left: 240, top: 125, transform: `translateY(${(1 - p) * 80}px)`, opacity: p }}>{phone}</div>
       <div style={{ position: 'absolute', left: 820, top: 110, width: 960 }}>{caption}</div>
-      <div style={{ position: 'absolute', left: 860, top: 500, opacity: t, transform: `translateX(${(1 - t) * 60}px)` }}>
+      <div style={{ position: 'absolute', left: 860, top: 470, opacity: t, transform: `translateX(${(1 - t) * 60}px)` }}>
         <Tv state={tv} width={820} />
       </div>
     </AbsoluteFill>
@@ -74,7 +74,7 @@ const Remote: React.FC = () => {
 };
 
 const Chips: React.FC = () => {
-  const items = ['Finds your TV by itself', 'No account, no sign-in', 'Works with popular smart TVs', 'English & Hebrew'];
+  const items = ['Finds your TV by itself', 'No account, no sign-in', 'Works with popular smart TVs', 'No IR blaster needed'];
   return (
     <AbsoluteFill style={{ alignItems: 'center', justifyContent: 'center', fontFamily: C.font, gap: 60 }}>
       <Caption title="Set up in seconds" align="center" delay={2} />
