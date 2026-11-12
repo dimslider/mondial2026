@@ -197,6 +197,9 @@ async function frame(b, lang, shots) {
   await ctx.close();
 }
 
+module.exports = { appPage, scenes, TMP };
+if (require.main !== module) return;
+
 (async () => {
   const b = await chromium.launch();
   // English images serve every store language (the listing text is localized).
