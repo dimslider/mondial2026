@@ -4,11 +4,11 @@ import spots from './spots.json';
 import { Background, C, Caption, Phone, Pro, SceneFade, Svg, Icon, Tv, TvState, useIn } from './parts';
 
 // Scene lengths in frames (30 fps).
-const S = { hook: 90, remote: 210, chips: 90, call: 210, lock: 120, sleep: 120, more: 120, end: 120 };
+const S = { hook: 105, remote: 240, chips: 135, call: 240, lock: 165, sleep: 165, more: 180, end: 150 };
 export const PROMO_FRAMES = Object.values(S).reduce((a, b) => a + b, 0);
 
 const clamp = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
-const PHONE_W = 360;
+const PHONE_W = 400;
 
 /** Phone on the left, caption and TV on the right: the layout most scenes share. */
 const Stage: React.FC<{ phone: React.ReactNode; caption: React.ReactNode; tv: TvState }> = ({ phone, caption, tv }) => {
@@ -16,9 +16,9 @@ const Stage: React.FC<{ phone: React.ReactNode; caption: React.ReactNode; tv: Tv
   const t = useIn(8);
   return (
     <AbsoluteFill>
-      <div style={{ position: 'absolute', left: 240, top: 125, transform: `translateY(${(1 - p) * 80}px)`, opacity: p }}>{phone}</div>
-      <div style={{ position: 'absolute', left: 820, top: 110, width: 960 }}>{caption}</div>
-      <div style={{ position: 'absolute', left: 860, top: 470, opacity: t, transform: `translateX(${(1 - t) * 60}px)` }}>
+      <div style={{ position: 'absolute', left: 200, top: 83, transform: `translateY(${(1 - p) * 80}px)`, opacity: p }}>{phone}</div>
+      <div style={{ position: 'absolute', left: 790, top: 80, width: 1040 }}>{caption}</div>
+      <div style={{ position: 'absolute', left: 870, top: 480, opacity: t, transform: `translateX(${(1 - t) * 60}px)` }}>
         <Tv state={tv} width={820} />
       </div>
     </AbsoluteFill>
@@ -67,7 +67,7 @@ const Remote: React.FC = () => {
           ]}
         />
       }
-      caption={<Caption title="Your TV, right on your phone" sub="Volume, arrows, apps – instant, over your home Wi-Fi" />}
+      caption={<Caption title="Your TV, right on your phone" sub="Volume, arrows and apps over your home Wi-Fi" />}
       tv={tv}
     />
   );
@@ -91,7 +91,7 @@ const Chip: React.FC<{ delay: number; children: React.ReactNode }> = ({ delay, c
   return (
     <div
       style={{
-        opacity: a, transform: `scale(${0.85 + 0.15 * a})`, color: C.ink, fontSize: 38, fontWeight: 600, padding: '20px 34px',
+        opacity: a, transform: `scale(${0.85 + 0.15 * a})`, color: C.ink, fontSize: 46, fontWeight: 600, padding: '22px 40px',
         borderRadius: 999, background: '#ffffff0f', border: `2px solid ${C.accent}88`,
       }}
     >
@@ -128,7 +128,7 @@ const Call: React.FC = () => {
           <Phone screen="call" width={PHONE_W} shake={[ring, ring + 60]} />
         </div>
       }
-      caption={<Caption pro title="Phone rings? The TV hushes." sub="Phone and internet calls · the sound comes back when you hang up" />}
+      caption={<Caption pro title="Phone rings? The TV hushes." sub="Works for phone and internet calls" />}
       tv={{ content: 'movie', muted }}
     />
   );
@@ -141,7 +141,7 @@ const Lock: React.FC = () => {
   return (
     <Stage
       phone={<Phone screen="lock" width={PHONE_W} taps={[{ x: 0.845, y: 0.4075, at: tap }]} />}
-      caption={<Caption pro title="Remote on your lock screen" sub="Power, volume, mute and pause – no unlocking" />}
+      caption={<Caption pro title="Remote on your lock screen" sub="Power, volume, mute, pause – no unlocking" />}
       tv={{ content: 'movie', paused }}
     />
   );
@@ -154,7 +154,7 @@ const Sleep: React.FC = () => {
   return (
     <Stage
       phone={<Phone screen="sleep" width={PHONE_W} />}
-      caption={<Caption pro title="Fall asleep? The TV turns off." sub="Sleep timer – works even with the phone locked" />}
+      caption={<Caption pro title="Fall asleep? The TV turns off." sub="Works even with the phone locked" />}
       tv={{ content: 'movie', off, moon }}
     />
   );
@@ -163,16 +163,16 @@ const Sleep: React.FC = () => {
 const More: React.FC = () => {
   const cards: { screen: string; label: string; pro: boolean }[] = [
     { screen: 'simple', label: 'Simple mode', pro: false },
-    { screen: 'macro', label: 'One-tap macros', pro: true },
-    { screen: 'voice', label: 'Say an app – it opens', pro: true },
+    { screen: 'macro', label: 'Macros', pro: true },
+    { screen: 'voice', label: 'Voice', pro: true },
     { screen: 'tvs', label: 'All your TVs', pro: true },
   ];
   return (
     <AbsoluteFill style={{ fontFamily: C.font }}>
-      <div style={{ position: 'absolute', top: 70, width: '100%' }}>
+      <div style={{ position: 'absolute', top: 50, width: '100%' }}>
         <Caption title="And much more" align="center" delay={0} />
       </div>
-      <div style={{ position: 'absolute', top: 230, width: '100%', display: 'flex', justifyContent: 'center', gap: 70 }}>
+      <div style={{ position: 'absolute', top: 200, width: '100%', display: 'flex', justifyContent: 'center', gap: 44 }}>
         {cards.map((c, i) => (
           <MoreCard key={c.screen} delay={6 + i * 7} {...c} />
         ))}
@@ -184,10 +184,10 @@ const MoreCard: React.FC<{ screen: string; label: string; pro: boolean; delay: n
   const a = useIn(delay);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 26, opacity: a, transform: `translateY(${(1 - a) * 60}px)` }}>
-      <Phone screen={screen} width={290} />
-      <div style={{ display: 'flex', alignItems: 'center', gap: 14, color: C.ink, fontSize: 32, fontWeight: 700 }}>
+      <Phone screen={screen} width={330} />
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14, color: C.ink, fontSize: 40, fontWeight: 700 }}>
         {label}
-        {pro && <Pro size={22} />}
+        {pro && <Pro size={26} />}
       </div>
     </div>
   );
@@ -206,10 +206,12 @@ const End: React.FC = () => {
       <div style={{ marginTop: 50, color: C.ink, fontSize: 92, fontWeight: 800, letterSpacing: -2, opacity: b, transform: `translateY(${(1 - b) * 30}px)` }}>
         Universal Smart TV Remote
       </div>
-      <div style={{ marginTop: 26, color: C.muted, fontSize: 38, fontWeight: 500, opacity: c }}>
-        Basic remote included · <span style={{ color: C.accent, fontWeight: 700 }}>Pro</span> extras: one-time purchase · try Pro for 7 days
+      <div style={{ marginTop: 26, color: C.muted, fontSize: 42, fontWeight: 500, lineHeight: 1.45, opacity: c }}>
+        Basic remote included
+        <br />
+        <span style={{ color: C.accent, fontWeight: 700 }}>Pro</span> extras: one-time purchase · try Pro for 7 days
       </div>
-      <div style={{ marginTop: 40, display: 'flex', gap: 18, alignItems: 'center', opacity: c, color: C.muted, fontSize: 30 }}>
+      <div style={{ marginTop: 40, display: 'flex', gap: 18, alignItems: 'center', opacity: c, color: C.muted, fontSize: 34 }}>
         <Svg d={Icon.vol} size={30} color={C.accent} /> Over your home Wi-Fi · no account
       </div>
     </AbsoluteFill>

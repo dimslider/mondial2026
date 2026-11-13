@@ -4,10 +4,10 @@ import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, us
 export const C = {
   bg: '#0b1220',
   ink: '#ffffff',
-  muted: '#9aa4b2',
+  muted: '#b9c2cf',
   accent: '#2EC4A6',
   accentInk: '#06231d',
-  font: 'Inter, system-ui, sans-serif',
+  font: 'Poppins, Inter, sans-serif',
 };
 
 // Screens are 1030 x 2288 captures of the real app.
@@ -37,7 +37,7 @@ export const SceneFade: React.FC<{ len: number; children: React.ReactNode }> = (
   return <AbsoluteFill style={{ opacity: o }}>{children}</AbsoluteFill>;
 };
 
-export const Pro: React.FC<{ size?: number }> = ({ size = 30 }) => (
+export const Pro: React.FC<{ size?: number }> = ({ size = 34 }) => (
   <span
     style={{
       display: 'inline-block', fontFamily: C.font, fontWeight: 900, fontSize: size, letterSpacing: size * 0.1,
@@ -62,11 +62,11 @@ export const Caption: React.FC<{ title: string; sub?: string; pro?: boolean; del
           <Pro />
         </div>
       )}
-      <div style={{ color: C.ink, fontSize: 76, fontWeight: 800, lineHeight: 1.08, letterSpacing: -1.5, opacity: a, transform: `translateY(${(1 - a) * 30}px)` }}>
+      <div style={{ color: C.ink, fontSize: 88, fontWeight: 700, lineHeight: 1.1, letterSpacing: -1, opacity: a, transform: `translateY(${(1 - a) * 30}px)` }}>
         {title}
       </div>
       {sub && (
-        <div style={{ color: C.muted, fontSize: 34, fontWeight: 500, marginTop: 20, lineHeight: 1.3, opacity: b, transform: `translateY(${(1 - b) * 20}px)` }}>
+        <div style={{ color: C.muted, fontSize: 40, fontWeight: 500, marginTop: 22, lineHeight: 1.3, opacity: b, transform: `translateY(${(1 - b) * 20}px)` }}>
           {sub}
         </div>
       )}
